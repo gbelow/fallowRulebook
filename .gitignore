@@ -1,0 +1,52 @@
+### LaTeX core ###
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+
+### Bibliography ###
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+### Index / Glossary ###
+*.idx
+*.ilg
+*.ind
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+
+### LaTeX temporary files ###
+*.tmp
+*.bak
+*.sav
+*.swp
+
+### PDF output (optional — see note below) ###
+# Uncomment if you do NOT want to version PDFs
+# *.pdf
+
+### MiKTeX ###
+_miktex*
+*.xdv
+
+### Editor / OS ###
+.vscode/
+.cursor/
+.DS_Store
+Thumbs.db

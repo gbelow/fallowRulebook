@@ -1,0 +1,514 @@
+\chapter{Combat}
+
+\begin{multicols}{2}
+
+\section{How skills work}
+
+Skills are things a character can do and improve upon. To measure how good someone is, a skill value is calculated.
+
+\textbf{Skill test:} A skill test consists of a dice roll to determine the degree of success in performing an action. Tests are made by rolling a 10-sided die and adding the result to the skill value. This sum is compared to a difficulty level to determine the degree of success of the action.
+
+\textbf{Difficulty level (DL):} A level that defines how hard it is to overcome something. It is the number against which skill tests are made to determine the degree of success.
+
+\textbf{Degrees of success:} Critical, hit, graze, and failure are the degrees of success. Critical is the best success, and failure is the worst failure. Regardless of the type of skill test, a score that exceeds a DL or defense by 10 or more is a critical success, 5 or more is a hit, 0 or more is a graze, and anything less than that is a failure.
+
+\textbf{Target number (TN):} Works like the DL, but the action has a hit or miss. In this case, if the test value is greater than or equal to the TN, the action is a success; otherwise, it is a failure.
+
+\textbf{Exploding die:} In skill tests, if the result of the d10 is 10, roll 1d6 and add that to the score, continuing to add while the result is 6. If the result of the d10 is 1, do not add anything and then roll 1d6 and subtract the result instead of adding. Continue subtracting while rolling 6.
+
+\textbf{Safe and risky tests:} It is possible to perform some tests safely or riskily. In the safe form, roll 2 d10 and take the result closest to 5. Similarly, it is possible to perform tests in a risky manner. In this case, roll 2 d10 and take the result farthest from 5. This mechanic can only be used when indicated in the skill or ability or when the Master allows it.
+
+% \textbf{Special Failure:} If the total skill value is less than 5 due to a natural 1, something especially bad may happen, such as breaking a weapon, dropping all arrows from the quiver, or falling. This is an optional rule, and its application is entirely at the Master's discretion.
+
+\textbf{Note on difficulties:} When designing DLs, to put things in perspective, consider that a DL of -5 is trivial, 0 is average, 5 is difficult, and 10 is very difficult.
+
+\section{Turns and Actions}
+
+\textbf{Start:} Combat occurs when a group decides to fight against another. A combat is played in rounds, which represent 3 seconds of game time each.
+
+\textbf{Preparation:} At the start of combat, the miniatures are positioned in their locations, and each character starts with 6 AP by default. They also receive a turn token, which they can spend to take their turn.
+
+\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised begin the first round with 0 AP.
+
+\textbf{Turn order:} It is defined by a "first to ask, first to play" rule. If several players want to play at the same time, all interested make a cunning test, and the one who rolls the highest goes first.
+
+\textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want.
+
+\textbf{Action surge:} All characters are entitled to one action surge per round. There are 3 basic types of action surges: movement, combat, and reaction.
+
+\begin{itemize}
+    \item Movement: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
+    \item Combat: 3 STA to gain 6 AP that must be used immediately.
+    \item Reaction: 3 STA to gain 6 AP, but can only use reactions and rest until the end of the round. It is possible to rest and perform the reaction surge simultaneously, as long as AP and STA remain greater than or equal to 0 at the end of the action.
+\end{itemize}
+
+\textbf{End of the round:} A round ends when no one has AP left, nor action surge. When the round ends, all characters regain their AP. Any AP that was not spent in the previous round can be combined with that of the next round to rest, recovering STA.
+
+\textbf{Environmental and ongoing effects:} Any effect that occurs periodically per turn or is environmental has its effect applied at the beginning of the round.
+
+\textbf{Negative AP:} AP can become a negative number, but never as a result of performing an action or reaction. When the character recovers their AP, they must deduct the negative value from their maximum.
+
+\textbf{Suffocation:} If the character cannot breathe during the turn of a round, they lose 1 STA and cannot rest.
+
+% \textbf{Delay the turn:} The player can spend 1 AP during their turn to delay it. This allows the character to regain their token and play again within the same round. AP regeneration only occurs once per round.
+
+\textbf{Reactions:} These are actions that can be performed on another character's turn but must be triggered by something. An example is trying to evade an attack, which is triggered when being attacked. A reaction takes effect before the action that caused it.
+
+\textbf{Preparing a reaction:} Any action can be prepared on a player's turn, but doing so costs 1 AP. This allows the player to create any trigger they can imagine for a reaction. They must have enough AP to perform the reaction when the trigger occurs. A prepared action can consist of a movement and a use of skill and can be repeated multiple times as long as the trigger happens again.
+
+\textbf{Compulsions:} These are forced actions. They must occur immediately if there are enough AP. If not, they force action surges. If even that is not possible, the remaining AP are lost, and the compulsion ends. If the compulsion occurs during another character's action surge, it happens when the AP of the surge ends.
+
+% \textbf{Severe compulsions:} Whenever a compulsion forces a character to perform an act that they perceive will cause physical harm to themselves or someone they care about, the compulsion is severe. In this case, the character has +5 to resist the compulsion.
+
+% \textbf{Compulsions:} These are forced actions. When the compelled character has enough AP, the action is performed immediately; otherwise, it occurs at the start of their next turn, right after regenerating AP and processing effects per turn. The turn of the compelled character must start as soon as possible. If the compulsion requires a reaction, such as defending someone, it is not possible to end the turn with fewer AP than the compulsion requires. If it is not possible to fulfill the compulsion within a turn, lose the compelled AP to get rid of it. The most recent compulsion overrides the previous one if there are 2 compulsions stored for the next turn.
+
+\section{Movement}
+
+Movement actions spend AP in exchange for changing the character's position on the grid. A character must always end their turn in the center of a square or hexagon, which means that moving only a fraction of a space is impossible. It is possible to pass through a space occupied by another character as long as they do not resist the passage. Multiple characters can occupy the same space, depending on their sizes, but they may suffer from the grappled condition.
+
+Types of movement:
+\begin{itemize}
+\item \textbf{basic movement:} Simple walking movement.
+\item \textbf{careful movement:} Slow movement used to improve stealth and balance.
+\item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same.
+\item \textbf{getting up:} Removes the fallen condition.
+\item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the horizontal distance of a long jump to AGI/3. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backward, the horizontal distance is halved.
+\item \textbf{crawling:} is the only usable movement speed while \textbf{lying down}.
+\item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{lying down} condition.
+
+\item \textbf{trample:} The character attempts to pass through an occupied space. If the opponent does not move out of the way, they must perform a push action to stop the movement.
+\item \textbf{mounted movement:} A character needs minimum training to be able to use a mount. During mounted combat, the character's movement speed matches that of the mount, but they must spend an extra 1 AP to give a movement command, such as run and stop (not changing direction if the change is less than or equal to 60 degrees). Poorly trained mounts respond more slowly. Mounting and dismounting costs AP equal to standing up.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{| c c c|}
+\hline && \\
+Movement & Cost & Speed  \\
+\hline && \\
+Careful & AP & 0.5 m \\
+Basic & 1 AP & 1 m \\
+Run & 2AP & AGI/3m \\
+Jump & 1AP+1STA & AGI/4m \\
+Crawl & AP & 0.33 m \\
+Swim & AP & 0.33 m \\
+Swim Fast & AP & 0.5 m \\
+Stand up & 5 -AGI/5 AP & 0 \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\skill{Swimming}{AGI/2 -5}{ Represents the character's swimming ability. Make a swimming check. On a critical or success, they can swim quickly for 8 AP per STA. On a success, they spend 1 STA for every 4m of fast swimming. On a near miss, the speed is normal. On a failure, the character spends 1 STA per AP of swimming, falls 1m, and their speed is equal to that of a near miss.
+
+The swimming check should not be redone more than once per round unless the swimming conditions change.
+
+Characters attempting to swim with one hand receive a -3 penalty on the check.
+
+A swimming check in a deep pool is considered a DC of 8. Swimming at a beach with waves is 10. Swimming in a swift river or choppy sea would be 13.
+}
+
+\skill{Climbing}{AGI/2 -5}{ Make a climbing skill check to overcome a DC and climb a surface. Climbing checks can be made safely or recklessly.
+
+The climbing speed is equal to the crawling speed but costs 1 AP + 1 STA. On a critical, it does not cost STA. On a success, they climb normally. On a near miss, decide to go twice as slow or give up. On a failure, the character simply falls from the surface.
+
+A character who is climbing is considered lying down. An attack that interrupts the climber will require them to redo their climbing check with a -3 penalty. In the case of multiple climbing checks in a single turn, always take the worst result. Climbing with one hand incurs a -3 penalty.
+
+To determine the difficulty of climbing, consider whether the surface is moving, the quality of the grips, and the distance to be climbed. An easy climb, with minimal chances of falling, is considered a DC of 5. A DC of 15 is reasonable for out-of-combat situations but quite challenging in a difficult scenario. DCs greater than 20 will require equipped and specialized characters and are unlikely to be accomplished during combat. As a general rule, consider that for every meter, the difficulty increases by 1.}
+
+\skill{Balance}{AGI/2 -5}{ Skill to perform acrobatics, avoid falling, and mitigate damage from falling. Can be used actively with a skill check or passively when something tries to knock you down.
+
+\textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DC is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, moving at a normal speed is safe, but not jumping or running. On a near miss, moving at a careful speed is safe. On a failure, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
+
+When falling, the DC to fall properly is arbitrary, but is generally higher for low falls from bad positions, average for very high falls, and lower for small falls from a controlled position. DCs should be around 20 at most and 5 at least.
+
+\textbf{Fall damage} depends on the speed of the fall and the landing spot. The standard landing spot is a flat, hard surface. The speed of the fall can be considered instantaneous for falls below 2m, in which case it causes 10xDM of bludgeoning damage. 5m per second for the first 10m, causing 30xDM of bludgeoning damage. Then it increases to 15m per second up to 30m, causing 100xDM of damage. Anything above that causes 200xDM of damage. A critical on the balance check reduces the damage by 75\%, a success by 50\%, a near miss by 25\%, and a failure takes the full damage.
+}  
+
+\skill{Strength}{STR/2}{ Used to perform feats of strength, such as pushing, dragging, pulling, and lifting things. A Strength check costs 2 AP + 1 STA.
+
+\textbf{Push:} Can be used during a grapple. Make a strength check opposed by the opponent's strength or balance. The defender must also spend 2 AP + 1 STA to resist; otherwise, they receive -5 on the check. A success pushes the enemy 1 space, while a critical knocks them down. Gains +2 when performed during a run.
+
+Multiple characters can participate in a strength conflict. Any skill check made by multiple characters uses the best attributes of any of them, meaning that only one character's strength can be used, plus 4/3/2/1 for each additional character. All characters involved must spend the necessary AP. Smaller characters add a maximum of 2. }
+
+\section{Morale}
+
+Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using will proficiency.
+
+\skill{Will}{}{ Can be interpreted as the character's willpower. This is used passively and without AP cost as a defense against mind-altering effects.
+
+\textbf{Active test:} Will can also be used actively by spending 3 AP to attempt to overcome fear, anger, confusion, and effects that attack will defense. They become free from the effects on a critical or success. The DL is the same as that which caused the effect.
+
+The will test can be made if the character understands that they are under magical influence or if they are acting against their own interests due to emotion.
+}
+
+\textbf{Moral test:} At the beginning of each round, all characters make a will test against the terror of the moment. A graze leaves the character frightened, and a failure activates the character's limit stress action.
+
+DL = 0 + aggravating factors
+
+Aggravating factors: \\ 
+
+\begin{itemize}
+    \item Sensory deprivation +3
+    \item Higher enemy stress: Creature's stress
+    \item First ally surrenders or dies +3
+    \item Losing combat: +3
+    \item Seriously injured: +3
+\end{itemize}
+
+% Every time the character activates their limit stress action, they lose 2 XP from one of their convictions, at the character's choice.
+
+\section{Damage and Injuries}
+
+\subsection{Injuries and Death}
+
+\textbf{Injuries:} They are categorized as light, serious, and deadly. A character can acquire injuries by taking damage in any form. The amount of damage will determine the severity of the injury. The number of injuries a character can sustain before succumbing depends on their constitution and abilities.
+
+Humanoids can sustain 6 light injuries, 3 serious injuries, and 2 deadly injuries before succumbing.
+
+\textbf{Light:} Every 2 light injuries inflict a -1 injury affliction. A light injury takes 2 healing to be cured by default.
+
+\textbf{Serious:} Each serious injury inflicts a -1 injury affliction. A serious injury takes 10 healing to be cured by default.
+
+\textbf{Deadly:} A deadly injury inflicts a -2 injury affliction. At the beginning of each turn or when performing any physical action that costs STA, they receive a light injury or a more severe one if there is no more room for light injuries. These injuries only cost 1 healing to recover. This will continue to occur until healing is performed to stabilize the character. A deadly injury takes 20 healing to be cured by default.
+
+\textbf{Death:} occurs when the character receives 3 deadly injuries or when a deadly injury has its severity increased.
+
+\textbf{Increase in severity:} If the character has already reached their limit of light injuries, each additional light injury becomes serious, and so on. The amount of healing required to recover from these injuries is that of the original damage, before the increase.
+
+\textbf{Types of damage:} are: physical, burn, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage.
+
+\textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Attacks and effects that cause injuries will have some amount of each of these components.
+
+\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. If the PEN is greater than or equal to the armor's toughness (TGH), the injury is light. If it is greater than or equal to 2x TGH + TGH of the armor, it is serious. If it is greater than or equal to 3x TGH + TGH of the armor, it is deadly. If the total damage is greater than 6xTGH + TGH of the armor, the target dies instantly. If the attack causes an injury from penetration, it ignores the armor's insulation.
+
+\textbf{Impact:} is the component that represents the total force applied with the blow. If the impact is greater than or equal to natural RES + armor protection, the injury is light. If it is greater than or equal to 2x RES + armor protection, it is serious. If it is greater than or equal to 3x RES + armor protection, it is deadly. If the total impact is greater than 6xRES + armor protection, the target receives three deadly injuries.
+
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action or causes a minimum loss of 2 AP. Interruption occurs whenever a character receives an injury from impact or electric damage. Multiple simultaneous interruptions cause the greater of the loss of AP equal to 2x the number of interruptions or equal to the AP loss of the interrupted action.
+
+\textbf{Burn, radiant, and corrosive damage:} If the damage is greater than natural insulation + armor insulation, the target receives a light injury. If it is greater than 2x natural insulation + armor insulation, the target receives 2 light injuries, and so on.
+
+\textbf{Electric damage:} Attacks the same defenses as burn damage, but receiving a serious injury from electric damage causes an interruption of 5 AP, and deadly damage leaves the target unconscious.
+
+\textbf{Armor coverage and Precision:} Whenever an attack is a crit, it triggers the possibility of hitting an unprotected part of the body, having its PEN ignore armor toughness. To determine whether that happens, take all the overshoot of the attack's value over the crit threshold and add it to the weapon's precision bonus. If that value is greater than or equal to armor coverage, armor toughness is ignored.
+
+\textbf{Localized damage and vulnerability:} Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability.
+
+For humanoids, there are 3: hand, leg, and head.
+
+\textbf{Hand:} Has no armor unless it has gauntlets. A serious injury renders the hand useless. Deadly injuries or worse amputate the hand. Ranged attacks have -5 to hit.
+\textbf{Leg:} Cannot cause sudden death, but serious injuries leave the character lame. Deadly injuries or worse amputate the leg.
+\textbf{Head:} receives -5 to hit, but injuries caused are increased by 1 degree of severity. Attacks that cause interruption and are serious or deadly leave the character unconscious.
+
+Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the Master deems it makes sense.
+
+\textbf{Healing Injuries:} Injuries have a certain amount of healing required to recover. Generally, light injuries require 2, serious injuries require 10, and deadly injuries require 20. Healing is obtained by resting well and using healing magic or potions. Some injuries are very debilitating. These require some type of advanced alternative method to fix, such as a prosthetic or a high-level spell capable of growing or reconnecting limbs.
+
+\subsection{Afflictions}
+
+Afflictions are the negative conditions that can affect creatures. 
+
+There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Health. Each of them imposes penalties on a different list of skills.
+
+\textbf{Mobility:} Strike, Accuracy, Defend, Reflex, Climb, Balance, Stealth, and Swim.
+
+\textbf{Injury:} Strike, Accuracy, Defend, Reflex, Climb, Balance, Stealth, Swim, Sleight of Hand, Strength, and Grapple.
+
+\textbf{Vision:} Strike, Accuracy, Defend, Reflex, Climb, Balance, Stealth, Sleight of Hand, Grapple, Exploration, Cunning.
+
+\textbf{Mental:} Strike, Accuracy, Reflex, Climb, Balance, Stealth, Sleight of Hand, Exploration, Cunning, Spells, Will, Knowledge.
+
+The afflictions in the mental, mobility, and vision categories do not stack. Only the worst penalty is applied.
+
+The list of afflictions is:
+
+\begin{itemize}
+\item \textbf{Lame:} Cannot run, jump, or perform basic movement.
+\item \textbf{Prone:} -3 Mobility. Can only crawl and stand up.
+\item \textbf{Grappled:} -3 Mobility. Movement requires pushing, and attacks can only be made with short-range or small weapons.
+\item \textbf{Immobile:} Cannot move and cannot use any combat skill other than escape the grapple. The SD is reduced to -5 + SMx1. Armor coverage is reduced by an extra -3.
+\item \textbf{Dazzled:} Receives -3 Vision.
+\item \textbf{Blind:} -8 to vision. 
+% Requires a balance check for basic movement on any terrain.
+
+\item \textbf{Unconscious:} The character cannot do anything other than Will and Health checks. They can also make detection and sensing checks, but receive -10 on these checks. These checks can be made to wake up. The DL and the allowed check depend on the situation. 
+
+\item \textbf{Fear:} Receives -1 Mental and cannot make a fight surge. The fear ends when the character succeeds on their Will check or becomes angry. 
+\item \textbf{Anger:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will check or becomes afraid. 
+\item \textbf{Confused:} Receives -3 Mental. Becomes vulnerable to domination attacks. 
+\item \textbf{Seduced:} Receives -3 Mental against their charmer. 
+\item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will check whenever the compulsion is severe. Outside of combat, can make a check once per hour.
+\item \textbf{Distracted:} Receives -3 Mental. Occurs automatically when the character is in melee combat.
+
+\item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
+\item \textbf{Tired/Exhausted} Penalty of -1 mental/-2 mental. 
+\item \textbf{Weakened/Malnourished} -2/-4 Health.
+\item \textbf{Thirsty/Dehydrated} -2/-4 Health.
+\item \textbf{Sick} Counts as a serious injury. -2 Health.
+\end{itemize}
+
+\skill{Health}{ CON }{ Represents how strong the character's body is against diseases, poisons, exposure to the elements, and how quickly they recover from injuries and exhaustion. 
+
+The survival chapter describes how health works during rest.
+}
+
+\section{Combat Actions}
+
+\skill{Cunning}{Detection}{ Cunning is used to determine priority when competing for turns to act. 
+
+% \textbf{Sense Motivation:} Cunning can also be used as a defense against social actions. This is equivalent to perceiving if someone is lying, has ulterior motives, or is hiding or pretending something. 
+
+\textbf{Analyze Opponent:} Cunning can also be used during a fight to assess an enemy. Spend 3 AP to make a cunning check against an enemy within 30m to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
+}
+
+\subsection{Melee Combat}
+
+%---------------------ATTACK
+
+\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost depends on the weapon used and the type of attack performed. Hits deal full damage and Crits increase damage by 50\%. Glancing blows and misses have their effects determined by the type of defense used.
+
+\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. The deflection bonus is not added, and the impact is 150\%, 100\%, 50\%, and 0 in the case of critical, hit, glancing blow, and miss, respectively. The multiplied impact applies to the target object and the base damage to the weapon.
+
+Other types of melee attacks will be available depending on the type of weapon used. The type of attack must be declared when used. Opportunity, wide, and heavy attacks can be used together. The others must be used individually.
+
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I adds +0.5xSTR to the impact and increases the cost by +1AP+1STA. Heavy II adds +1xSTR to the impact, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR to the impact, costs +3AP+1STA, and gives a -3 penalty to hit.
+
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
+
+\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
+
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. It costs an additional +2AP and +1STA on top of the normal attack cost and gives a -2 penalty to hit. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 2x the target's natural RES. On a critical, it knocks down if impact > the target's natural RES.
+
+\textbf{Knockdown:} A melee attack with a hook weapon that attempts to knock down the opponent. The attack costs an additional +1STA. If it is a critical, it knocks down the opponent with impact > natural RES. If it is a hit, it knocks down with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to perform an evasive jump or is running. This can be used as a reaction against mounted targets that move away from the weapon within its melee range.
+}
+
+% \textbf{Disarm:} A melee attack that attempts to disarm the opponent. This attack does not deal damage, but if it is a critical, it disarms the opponent with impact > natural RES. If it is a hit, it disarms with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to block by redirecting.
+
+%-----------------------------------DEFEND
+
+\skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, the defend does nothing. If it glances or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Redirect, and Block.
+
+\textbf{Evade:} The defender spends 2AP to try to get out of the way of an attack. On a glancing blow, the attack has 50\% damage, and on misses, it has 0. If the character does not react to defend, they automatically use evade, but with the SD as the skill value. It is possible to receive -3 on the defend to evade with only 1 AP.
+
+\textbf{Block:} Costs 2 AP, but only shields can be used to block precise attacks. On a glancing blow or miss, it reduces the PEN by the TGH and the impact by the RES of the blocking object. The remainder is transferred to the character.
+
+\textbf{Redirect:} makes a defensive attack against a weapon by spending 3 AP. On a glancing blow, the attack impact is reduced by STR for one-handed weapons and by 2xSTR for two-handed weapons or shields. On a miss, the impact is further reduced by +1xSTR. The resulting impact hits the defender and is used to calculate the PEN. Redirect has a +3 bonus against long weapons if the characters are at close range.
+
+\textbf{Evasive Jump:} is the most defensive option. It costs an extra 1 STA and allows the character to jump back and away from the attack while blocking or evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump away from the source of the attack.
+
+\textbf{Protect:} It is possible to defend an ally by staying within their melee range and the attack at the same time. The defender can redirect or block an attack directed at an ally.}
+
+%----------------------- Grapple
+
+\skill{Grapple}{Melee}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
+
+\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that haS the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and the evasive jump movement is canceled. If the opponent does not attempt to defend the attack, grapple succeeds on a graze. Creatures 2 sizes larger do not suffer the effects of being grabbed by smaller ones. 
+
+\textbf{Attack and Defend:} Strike and defend can be used by the characters involved in the grapple against each other by using the grapple skill instead of strike and defend. Redirect can be used with 2 AP.
+
+\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
+
+\textbf{Drag and Push:} Grabbing someone enables the actions of dragging and pushing, which use strength as the skill.
+
+\textbf{Escape:} Escapes from the grab on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
+
+\textbf{Disarm:} Removes something from the opponent's hands on a critical. It is possible to grab the opponent's weapon on a hit, preventing them from using it until they manage to escape.
+
+\textbf{Knockdown:} The opponent falls to the ground on a critical. It is possible to throw oneself along to achieve a knockdown on a hit.
+
+\textbf{Immobilize:} The opponent becomes immobilized on a critical. It is possible to stay immobilized yourself to achieve immobilization on a hit.
+
+Multiple characters can assist each other in the grab. Any skill test made by several characters uses the highest skill value among them plus 4/3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters of a smaller size category add a maximum of 2.
+}
+
+%----------------------SHOOT
+
+\subsection{Ranged Combat}
+
+\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Hits deal full damage, and criticals increase all damage by 50\%. A graze incurs a -50\% penalty to damage. A miss does nothing.
+
+\textbf{Distance Penalties:} If the target is 10m away or less, there is no penalty. Beyond that, a cumulative penalty of -2 to the attack is applied for every additional 10m of distance. From 50m onwards, the penalty is -2 for every additional 50m. The vertical range of a ranged weapon is half the horizontal range.
+
+\textbf{Distance Measurement Recommendation:} Measuring distance is a time-consuming process, so it is more practical to estimate the distance intuitively and give the benefit of the doubt in favor of the shooter.
+
+\textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
+
+\textbf{Immobile Targets and Shooting Errors:} The DL to hit an immobile target occupying a space of 1m is equal to -5-2*SM. If a projectile misses the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
+
+\textbf{Moving Targets:} It is possible to shoot at moving targets as a reaction. The total amount of AP spent to shoot cannot exceed the amount of AP spent on movement. The AP count starts when the target becomes visible. The target's position at the moment of the shot is where it is at the end of the movement.
+
+\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes visible.
+
+\textbf{\large Types of Ranged Attacks:}
+
+Other types of ranged attacks will be available depending on the type of weapon used. The type of attack must be declared when used, and only one can be used at a time unless stated otherwise.
+
+\textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons gain range based on STR.
+
+\textbf{Shoot:} Basic ranged attack with a shooting weapon. It cannot be blocked without a large or tower shield.
+
+\textbf{Snipe:} Modifies the shot to cost an additional 2 AP to gain +2 in accuracy and shoot with a -1 distance penalty instead of -2 for the first 50m.
+
+\textbf{Quick Shot:} Modifies the shot to cost 1 AP less to shoot, but incurs a -3 penalty in accuracy and -3 in distance instead of -2.
+}
+
+\textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses strength with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
+
+Explosions have different magnitudes of effects depending on where things are in relation to the center. The center is where the axis of the spell's radius is located. For a circle, it is in the middle. For a cone or line, it is in the first space from where the explosion radiates. Anyone caught at the central 30\% of the radius receives the critical effect, while in the 30\% to 70\% range they are hit, and in the outer 30\% they are grazed. Always round the middle area up and the others down. If a creature occupies multiple spaces, apply the strongest effect. In most cases, only the central space will be a crit and only the outer ring will be a graze. It changes once radius goes over 7m, but most explosions are not that big.
+
+Effects of an explosion, such as pushing enemies, receive +5 against enemies in the critical area and -5 against those in the graze area. The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a graze, and 0 on a miss.
+
+\textbf{\large Sprays:} They are a type of explosion, with the same damage progression based on distance from the origin and the same DL definition mechanic. Sprays target all characters in a way that no two targets are more than 180 degrees apart in a circle centered at the origin of the spray. All targets make their reflex saves to escape, just like in explosions and move their characters according to their result. After the movement, the spray damages only one of the targets, at the attacker's choice.
+
+%--------------------- REFLEX
+
+\skill{Reflex}{ Ranged Combat }{ Used to react as quickly as possible to something. This can be used to avoid explosions, projectiles, and other effects that require quick reactions.
+
+\textbf{Evasion:} When the character is targeted by projectiles, they can spend 2 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze.
+
+\textbf{Guard:} If using a shield, they can spend 2 AP to guard against ranged attacks coming from one direction as a reaction. All ranged attacks within a 180-degree semicircle in front of the character are made against the DL of reflexes + shield deflection without additional AP cost. The guard is canceled if the character performs any action other than careful movement.
+
+\textbf{Avoiding an Explosion:} Spend 2 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they spend an extra STA to jump in any direction before the explosion occurs. On a graze or miss, they can move 2 AP after the explosion.
+
+\textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield deflection test against the DL of the explosion. If successful or critical, they have cover against the explosion and reduce its damage by RES, TGH, and INS from the shield.
+
+In all cases, if the character is interrupted, they cannot move after the interruption.
+}
+
+\subsection{Combat Positioning}
+
+\textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range or getting any closer. The action must be performed immediately before the opponent enters range. Only the AP gained from the movement surge can be used with this reaction. 
+
+\textbf{Follow:} A character can, as a reaction to any movement, follow another character who is within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
+
+\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses.
+
+\textbf{Visibility:} The levels of visibility are visible, obscured, and invisible. If something is invisible, it is impossible to react to anything it does unless it is detected in some other way. It is still possible to perform a targeted action in the place where they are if the character knows where it is. Even so, the action will have the effect of blindness applied to it. If the target is obscured, any attacks against them or reactions to their actions receive the obscured effect.
+
+\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source, having a good field of vision and a larger field of obscured vision. The rule works the same way if the light source is at a distance.
+
+\textbf{Mounted Combat:} Attacking in melee receives a mount-dependent penalty while mounted, usually around -2. Accuracy receives the penalty while the mount is moving, not when standing still. Moving while mounted is considered running to trigger reactions, unless stated otherwise. If the character is forcibly displaced while mounted, they will be dismounted.
+
+The only defenses against melee attacks allowed during mounted combat are block and redirect.
+
+\subsection{Stealth and Subterfuge}
+
+\skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against the cunning of opponents.
+
+When a triggering action occurs, the detector chooses a sense and adds the bonus from the triggering event. Normally, the senses to be used are vision and hearing. Vision can be used against targets to the front and have a small penalty from distance. Hearing is omnidirectional, but receives larger penalty from distance. If Cunning is equal or higher than stealth, the detector is considered alarmed.
+
+In the alarmed state, a character can search actively, looking around and using their best senses. They can roll detection against stealth. On a failure or a graze, nothing is noticed. A success identifies the general direction where it came from, but not exactly what it was. A critical success identifies what it is and where it came from. 
+
+Many items and conditions can increase stealth. A bonus of 0 happens in an open field in a clear day. Cover, Darkness, fog, muffled boots, and camouflage give bonuses to stealth and reduce sight radius.
+
+The triggering events are in the following list.
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item being in the field of vision: +8, triggers vision only
+    \item melee attack: +8 after the attack
+    \item careful movement and crawling: 0
+    \item running: +8
+    \item ranged attacks: +5 after the attack
+    \item basic movement: +2
+    \item -1 for every distance band for vision and -2 for hearing
+\end{itemize}
+
+Remaining unnoticed and out of sight for 1 round will make the character undetected again. To be out of sight, a character must be invisible, hidden behind something, camouflaged, or behind someone. The standard field of vision is considered to be 180 degrees. 
+
+\textbf{Distance bands:}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item melee
+    \item same room (within 10m)
+    \item at range (within 50m)
+    \item far (within 500 m)
+    \item horizon 
+\end{itemize}
+
+\textbf{Basic Stealth Bonuses:}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item camouflage: +2-5 vs vision,
+    \item Darkness: vision radius reduced to light source. 
+    \item : Muffled boots: +3 vs hearing
+    \item : Cover: +3 vs vision
+    \item : Fog: vision radius reduced to 3m.
+\end{itemize}
+
+Stealth bonuses apply to specific senses.}
+
+\skill{Sleight of Hand}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
+
+\textbf{Standard Action:} Consider that 1 AP is equal to half a second and estimate how long an action should take. In general, taking an item from a belt or strap around the armor should take about 3 AP, while opening a backpack and taking something costs about 5 seconds. The AP cost of a standard action is 3 AP.
+
+% \textbf{Conceal Objects:} Used as a standard action of defense against detection tests to identify objects carried by the character. Successes detect and criticals identify the object. On grazes and failures, nothing is noticed.
+
+\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a sleight of hand skill test against the opponent's cunning +5x the size category of the item (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
+
+\textbf{Pick Lock:} These tests require knowledge of mechanics and receive -5 for each level below the requirement. On criticals, it takes 5 AP. On successes, between 10 seconds and 1 minute. On a graze, it takes between 10 minutes and 1 hour, and on a failure, it is impossible to open.
+
+When sleight of hand reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If sleight of hand is less than -5, they cost 4 AP.
+}
+
+\section{Spells} 
+
+\subsection{Casting Spells}
+
+\skill{Sorcery}{Knowledge+Sorcery}{ Spells are special abilities that require a sorcery test to be used. The value of the sorcery skill is the sum of the sorcery proficiency and the knowledge related to the spell, but the test is the same for everyone. }
+
+Casting a spell costs AP and STA during combat or exhaustion during exploration. To cast any spell, make a sorcery test against the \textbf{Spell Casting DC} to determine if the spell was successfully cast or not. In case of failure, it fails and the AP and STA are lost. 
+
+\textbf{Concentration:} All sorcery tests require concentration. The only other action that can be performed while concentrating is careful movement. Being interrupted causes the loss of concentration. Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. Losing concentration causes all AP and STA spent to be lost. The character must interrupt concentration to be able to actively defend themselves.
+
+\textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. For these spells, the sorcery skill test needs to be redone periodically, as indicated in the spell. A failure in the sorcery test interrupts the sustained magic.
+
+\textbf{Charged:} can be charged into something and released when a trigger is activated. If the spell is not used within the duration of the charge, it dissipates. 
+
+\textbf{Delayed Spells:} Any spell can be delayed, meaning that the casting can be completed, but the release is postponed. The character must concentrate on the spell until the release, which can be triggered by a previously prepared action. If a trigger does not occur, release it in the next turn. 
+
+\textbf{Requirements:} Some spells may even be impossible to cast if the minimum conditions are not met. Making it rain in the desert is impossible if there is no water in the sky.
+
+\textbf{Stealth and Sorcery:} Spells are imperceptible before they have their effect, unless a skill is used to reveal them. Once their effect occurs, they can be identified with a test of the skill used to cast the spell.
+
+\subsection{Learning Spells}
+
+Spells are trained in the same way as skills, but using the knowledge related to the spell as talent. Each spell costs 4+spell level XP.
+
+They can also be learned with conviction XP or with devotion. In this case, they use their respective levels as talent.
+
+\subsection{Types of Spells and Modifications}
+
+Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. They are applied after making the sorcery test, but cannot cause the test to graze or fail.
+
+\textbf{Accelerate Spell:} Increases the sorcery DC by 3 to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
+
+\textbf{Extend Spell:} Increases the sorcery DC by 2 to increase the range of a spell according to the MM.
+
+\textbf{Enhance Spell:} Increases the sorcery DC by 4 to improve spells in a special way described in the spell.  \\
+
+\textbf{Increase Spell:} Increases the sorcery DC by 4 to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
+
+\textbf{Extend Charge Duration:} Increases the sorcery DC by 2 to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
+
+\textbf{Efficient Spell:} Increases the sorcery DC by 4 to reduce the exhaustion or STA cost of a spell by half. \\
+
+The types of spells are:
+
+\begin{itemize}[noitemsep]
+\item Environmental: The spell alters the environment.
+\item Effect: Spells that directly affect the target and have various effects. They have customized enhancements.
+\item Psychic: Spells that directly affect the target and have psychic effects. They use the Will, Charm, or Stress skill as the Difficulty Class (DC). Enhancing increases the DC by 2.
+\item Projectile: Spells that function as projectiles, using the shooting skill as the DC.
+\item Touch: Spells that function as strikes, using the striking skill as the DC. They do not trigger opportunity attacks.
+\end{itemize}
+
+
+
+%----------------
+
+\end{multicols}
+
+\subsection{Examples:}

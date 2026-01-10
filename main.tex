@@ -1,0 +1,98 @@
+\documentclass[letterpaper]{book}
+ 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float} 
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{pgf}
+\usepackage{pifont}
+\usepackage{pgf}
+
+\selectlanguage{english}
+% \captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
+
+\title{RPG Below}
+\author{Guilherme Below}
+\date{February 2024}
+
+% Set page geometry.
+\geometry
+  {
+    hmargin   = .75in, % Left and right margins
+    top       = .46in, % Top of text area to top of page
+    bottom    = .8in,  % Bottom of text area to bottom of page
+    footskip  = .32in, % Bottom of text area to bottom of footer text
+    columnsep = .33in, % Space between columns
+  }
+  
+% Adds background image to all pages
+\AddToHook{shipout/background}{%
+    \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{images/paper.jpg}}%
+}
+
+\newcommand{\skill}[3]{
+    \textbf{\large{Skill: #1}} \\
+    \textbf{Proficiency:}  #2\\
+     #3 \\
+  }
+
+  \newcommand{\abil}[5]{
+\textbf{\large{#1}} \\
+\textbf{Usage:} #2\\
+\textbf{Cost, Talent:} #3 \\
+\textbf{Requirements:} #4 \\
+\textbf{Description:} #5 \\
+}
+
+\newcommand{\inna}[7]{
+\textbf{\large{#1}} \\
+\textbf{Usage:} #2 \\
+\textbf{Cost:} #3 \\
+\textbf{Requirements} #4 \\
+\textbf{Range, Area:} #5 \\
+\textbf{Duration:} #6 \\
+\textbf{Effect:} #7 \\
+}
+
+\begin{document}
+
+\maketitle
+\clearpage
+
+\vspace*{\fill}
+% \includegraphics[height=2cm]{example-image}
+
+\begin{center}
+    gbelow.github.io \\
+    Copyright \textcopyright\ Guilherme Madalena Below \\
+    All rights reserved.
+\end{center}
+
+\clearpage
+
+\tableofcontents
+
+\include{intro}
+% \part{Part I - System Rules}
+\include{creating}
+\include{combat}
+\include{survival}
+\include{gear}
+% \part{Part II - Setting and adventure}
+\include{intrigue}
+\include{war}
+\include{abilities}
+\include{spells}
+% \include{monsters}
+
+\end{document}
+```

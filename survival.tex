@@ -1,0 +1,261 @@
+\chapter{Survival and Exploration}
+% \chapter{Survival in the cold}
+% \chapter{Survival in the hot}
+\begin{multicols}{2}
+
+\section{Character Conditions}
+
+\subsection{Basic Concepts}
+
+The survival markers are \textbf{Hunger, Thirst, and Exhaustion.} A character must eat to regain energy, drink water to stay hydrated, and rest to alleviate exhaustion.
+
+\textbf{Exploration Turn (ET):} It is convenient to divide a day into blocks of 4 hours because it splits a day into 6 parts. The day has 24 hours: 8 hours of travel, 8 hours of sleep, 4 hours to set up camp and search for food, and 4 hours to fix anything that goes wrong or do something else. Each block of 4 hours is considered an exploration turn.
+
+\textbf{Conceptual Map:} The system was designed so that exploration actions could be performed on a conceptual map. Such a map consists of nodes. Each of them can have several events attached. The events can be accessible to characters by being present in the node and achieving good results in exploration tests.
+
+\subsection{Simplified Survival}
+
+Using the complete survival system all the time is unnecessary. Not every situation is a survival situation.
+
+To simplify, allow bringing enough supplies for the journey, which eliminates the struggle to stay hydrated and fed. Consider that the camping supplies are sufficient to always provide the best possible sleep during rest time.
+
+\subsection{Exhaustion, Hunger, and Thirst}
+
+\textbf{\large Exhaustion}
+
+Exhaustion ranges from 0 to STA. The higher the value, the worse it is. Each additional point of exhaustion beyond the maximum becomes a light injury.
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item > STA = Exhausted
+    \item > STA/2 = Tired
+    \item > 0 = Everything is normal
+\end{itemize}
+
+\textbf{\large Hunger}
+
+Hunger represents the lack of nutrients in the body. Allowing hunger values to exceed certain levels will apply negative conditions:
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item > 60 = Becomes Malnourished
+    \item > 15 = Becomes Weakened
+    \item < 15 = Everything is normal
+\end{itemize}
+
+Every 5 hunger points above 60 counts as a light injury.
+
+The nutritional value of a portion of food is counted in hunger. Average characters of regular size can eat 4 portions per day.
+
+For role-playing purposes, consider that 1 meal is about 500g and that 1 portion of water is 500ml for a size 3 creature. The portion size varies with VM for each size category. The nutritional value of a portion ranges from 1 to 5 hunger, depending on the food and its preparation.
+
+\textbf{\large Thirst}
+
+Thirst starts at 0; the higher the character's thirst, the worse it is. Exceeding a certain limit causes the adverse effects below:
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item > 20 = Dehydrated and Confused
+    \item > 15 = Dehydrated
+    \item > 10 = Thirsty
+    \item > 0 = Everything is normal
+\end{itemize}
+
+Every 2 thirst points above 15 counts as a light injury.
+
+\subsection{Rest}
+
+Rest is an action that costs 2 exploration turns and can only be done once per day.
+
+\textbf{Rest Test} The rest value (RV) is equal to $(health-terrain)/2$. The character recovers 2+RV healing and 4+RV exhaustion. Each point of healing recovered consumes 1 hunger and 1 thirst. Healing is not possible if hunger or hydration values are at their limit.
+
+\textbf{Short Rest:} The character has the option to spend an exploration turn doing nothing, which recovers RV exhaustion.
+
+\textbf{Terrain Wear:} Each terrain has a value that represents how pleasant it is to spend time there. This value is used to determine the RV for resting. Generally, the value ranges from 0 to 5 but can even be negative.
+
+\section{Exploration}
+
+\textbf{Exploration Action:} There are 4 exploration actions: \textbf{Rest}, \textbf{Travel}, \textbf{Search}, and \textbf{Prepare}. The skill test is performed by only one character from the group. Roll individually for each separate group. Every exploration action causes wear on the character in the form of exhaustion, hunger, and thirst.
+
+\skill{Exploration}{ Knowledge + Detection }{ This skill is used to perform Travel and Search actions. Its value is equal to the specific knowledge about the location + the detection proficiency.
+
+\textbf{Travel:} Tries to move in the correct direction along the easiest path, avoiding accidents and dangers. The test is made against the DL of the path being attempted. A graze or mistake means that the search action is performed instead of traveling, triggering events within the node. A critical success or success means that no one got lost and the movement is as fast as possible. The test value used for traveling is also used against any events that are part of the path.
+
+\textbf{Search:} Attempts to find desired type events and avoid unwanted types without getting lost. The test is made against all DL of events in the node simultaneously. Events are triggered in random or arbitrary order. Many events do not consume the exploration action, allowing the second event to be activated and so on.
+}
+
+\textbf{Prepare:} Setting up camp can be time-consuming without proper equipment, but it is essential to avoid exposure and to be able to cook food. The skill used is survival knowledge.
+
+\textbf{Campfire:} Characters must perform an exploration action to search for dry firewood and light the campfire. The action cannot be performed if there is no firewood or fuel. On a critical success, they do not spend the exploration action and succeed. On a success, they succeed. On a graze, they can either give up or spend double the time. On a failure, the action fails. The campfire allows cooking and provides +3 on the test against exposure.
+
+\textbf{Cooking:} This test is made against the DL of the food and requires proper equipment for preparation. On a critical success, all food is utilized. On a success, only 75\%. On a graze, 50\%, and on a failure, 25\%.
+
+\textbf{Shelter:} Setting up camp can be time-consuming without proper equipment. Characters can bring their own tent and sleeping bag. These tools can largely serve as protection against the elements without taking much time. If these items are not available, an exploration action to build a natural shelter must be performed. The effectiveness of the shelter is described in the shelter event, if it has been activated, or in the natural event of the node.
+
+\textbf{Tracking} is done with an exploration test but requires a skill. When tracking someone, make an exploration test against the other’s exploration. Increase or decrease the tracking difficulty as desired, considering how old the trail is, if they tried to cover their tracks, how many creatures there were, and their size. A critical success or success means that a trail was found and something is known about the people. A graze or failure means that no trail or the wrong trail is found.
+
+\subsection{Night and Darkness}
+
+Traveling at night significantly reduces the team's visibility range, making exploration more difficult. If the group has an adequate light source or the ability to see in the dark, the DC for search actions is increased by +5. If the group is without vision, all exploration actions increase by +5 and search increases by +10.
+
+The day can have any number of periods of day and night. This depends on the season and the location on Earth. The standard is 3 periods of day and 3 of night.
+
+\subsection{Events and Wear}
+
+\textbf{Wear:} Performing any exploration action that is not resting causes wear. The standard wear is 1 exhaustion, 1 hunger, and 1 thirst, and it is applied at the end of the exploration action. It is possible for the exploration action to have increased wear depending on the terrain. For example, performing any exploration action in the desert causes +1 thirst.
+
+\textbf{Daily wear:} The character receives 2 exhaustion, 2 hunger, and 2 thirst every day in addition to the wear generated by the exploration action. This can also be increased by the terrain.
+
+\textbf{Event DC:} The DC of events varies between -5 and 15. The character can receive bonuses for traveling if they know the location they are heading to and for searching if they know where the item they are looking for is supposed to be.
+
+There are 8 types of events:
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item Active encounter
+    \item Passive encounter
+    \item Obstacle
+    \item Treasure
+    \item Wear
+    \item Food
+    \item Shelter
+    \item Water
+\end{itemize}
+
+\textbf{Active encounter:} It occurs against the group when they perform an exploration action in a node. It happens when the characters are being tracked, when there are patrols or predators in the area. It can occur with a luck roll.
+
+\textbf{Shelter:} Improves resting conditions, replacing the normal terrain values.
+
+\textbf{Water:} Provides a quantity of water or presents a test to obtain water.
+
+\textbf{Food:} Provides a quantity of food or presents a test to obtain food.
+
+\textbf{Wear:} It is an event that takes effect if the exploration test is lower than its DC, increasing wear.
+
+\textbf{Passive encounter:} The characters must find this. It can be anything that generates social interaction or combat.
+
+\textbf{Obstacle:} It can be a puzzle, a door, a physical challenge, a natural disaster, etc.
+
+\textbf{Treasure:} It can be anything of monetary or experience value.
+
+% \textbf{Natural Disasters} include: Snowstorm, Sandstorm, Storm, Hail, Earthquake, Eruption, Lightning, Flood, Wildfire, Landslide, Fog, Tornado, strong wind, being covered by insects during sleep, and entering a monster's den.
+
+% \textbf{Animal Encounters:} Here are some ideas for animal encounters: a large fresh carcass is found, but it belongs to a predator. A nest full of eggs is discovered. A large animal is found sleeping in a grove. Something is chasing the group. Hundreds of birds are crossing the sky. A goat is on the edge of a cliff. A whole herd of bison is near the river. The river is full of alligators.
+
+% \textbf{NPC Encounters:} The player characters are not the only ones in the wild. Here are some ideas of who they might encounter: A child is found alone in the forest. A cabin is found in the middle of the path during a snowstorm, but the owner does not want to let anyone in. A merchant is stuck on the road with a broken cart wheel. A werewolf is found camping in the forest and offers shelter in their camp.
+
+Examples of encounters:
+
+Shelter: DC 2, Reduces the terrain penalty to 0. DC for building natural shelter =0. \\
+Encounter: DC 5, A pack of 8 wolves is howling nearby. On a critical success, they can choose to outsmart them. On a success, everyone must make a stealth test to avoid the wolves. On a near miss, the wolves are aggressive and try to attack. On a failure, they are caught by surprise.\\
+Water: DC 3, A spring of water is found. \\
+Food: DC 5, a deer is nearby, but it will run away if it gets scared. The deer has enough meat for 80 portions worth 4 and has a DC of 4 for cooking.  
+Treasure: A map of the region and 3 GP were found in an abandoned camp. The map increases the effective survival knowledge level in the area by 1 level.
+Wear: Traveling causes 2 exhaustion to characters with STA lower than 12. Critical successes in exploration reduce the requirement to 10.
+
+\end{multicols}
+
+% \textbf{ \large Water Events}
+
+% Event table:
+
+% \noindent
+%
+
+% \begin{tabular}{| c c c |}
+% \hline
+% Environment & Name & Description \\
+% \hline && \\
+% Forest  & nothing & nothing \\ 
+% Forest  & water puddle & 1L of contaminated water \\ 
+% Forest  & stream & unlimited contaminated water \\ 
+% Forest & water spring & unlimited clean water \\ 
+% \hline
+% \end{tabular}
+
+
+
+% \textbf{ \large Food Events}
+
+% Event table:
+
+% \noindent
+% \begin{tabular}{| c c c |}
+% \hline
+% Environment & Name & Description \\
+% \hline && \\
+% Forest & Nothing & Nothing.  \\ 
+% Forest & poisoned fruit & 4 servings of 5 Life in fruit. DL 13 health to avoid losing HP instead of recovering.  \\ 
+% Forest & dead deer & Deer carcass with 10 servings of 5 Life. DL 15 preparation to make it edible. \\ 
+% Forest & wild boar & A wild boar appears. Eating it yields 50 servings of 5 Life. \\ 
+% Forest & dry tree & Can bloom with biomancy magic, yielding 20 servings of 10 Life. \\ 
+% Forest & fruit tree & Tree with 20 servings of 5 Life in fruit. \\ 
+% \hline
+% \end{tabular}
+
+% Obstacle Events
+
+% \noindent
+% \begin{tabular}{| c c c |}
+% \hline
+% Die & Name & Description \\
+% \hline && \\
+% Forest  & Fall & DL 13 balance to avoid falling 6m \\ 
+% Forest  & landslide & Rocks fall, DL 10 reflexes to avoid taking 15 bludgeoning damage \\ 
+% Forest  & hill & 2km to go around \\ 
+% Forest  & strong wind & Exposure DL increases by 5 \\ 
+% Forest  & treasure & A backpack with herbs is found  \\ 
+% \hline
+% \end{tabular}
+
+% Combat Events
+
+% \noindent
+% \begin{tabular}{| c c c |}
+% \hline
+% Die & Name & Description \\
+% \hline && \\
+% 1-10  & 1 Troll  & 1 Troll in the forest \\ 
+% 11-20  & 8 Wolves & 8 Wolves appear and may attack \\ 
+% 21-30  & Ambush & 3 people waiting for a trap to activate, detection 15 or 20 slashing damage\\ 
+% 31-40  & gelatinous worms & Hole with 3 gelatinous worms \\ 
+% 41-50  &  and   & \\ 
+% 76-90  & Spiders & 3 Spiders quietly in their web \\ 
+% 91-100  &  & Bumping into a smuggler named Wilson \\ 
+% \hline
+% \end{tabular}
+
+% Shelter Events
+
+% \noindent
+% \begin{tabular}{| c c c |}
+% \hline
+% Die & Name & Description \\
+% \hline && \\
+% 1-25  & Flood & +2 exposure. The shelter is destroyed within 4 hours. \\ 
+% 26-30  & Ant hill & +3 exposure. \\ 
+% 31-50  & Nothing & Does not provide protection from anything \\ 
+% 51-55  & Cave with bear & exposure DL 5, has a bear with 50 servings of 5 Life \\ 
+% 56-75  & Clearing & -3 exposure, -3 to be found \\ 
+% 76-100  & Cave & exposure DL 5, +5 DL to track \\ 
+% \hline
+% \end{tabular}
+
+% Social Events
+
+% \noindent
+% \begin{tabular}{| c c c |}
+% \hline
+% Die & Name & Description \\
+% \hline && \\
+% 1-25  & Evil wizard & The wizard controls your minds to steal from you. \\ 
+% 26-50  & Thief & Surbit tries to stealthily rob you \\ 
+% 51-60  & Merchant & merchant and his bodyguard \\ 
+% 61-75  & Pilgrims & 2 Pilgrims carrying 30 GP \\ 
+% 76-100  & Den & 1 mutant guernicora, 4 wolves, and 2 humans \\ 
+% \hline
+% \end{tabular}

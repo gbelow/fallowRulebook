@@ -1,0 +1,268 @@
+\chapter{Bestiário}
+
+\newcommand{\stats}[7]{
+
+    \hspace*{-0.5cm}\begin{tabular} { c c c c c c c}
+     STR & AGI & STA & INT & SPI & DEX & CON  \\[0.5em]
+     #1 & #2 & #3 & #4 & #5 & #6 & #7 \\
+     \hline
+     \end{tabular}
+}
+
+\newcommand{\rss}[5]{  
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c c c}
+     Leves & Sérios & Estamina & AP &  STA Reg.\\[0.5em]
+     #1 & #2 & #3 & #4 & #5 & \\
+     \hline
+     \end{tabular}
+}
+
+\newcommand{\figt}[7]{    
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c c c c}
+     \textbf{Golpe} & \textbf{Precis**} & \textbf{Evasão}* & \textbf{Reflex}* & \textbf{Bloq} & \textbf{Agarr} & \textbf{Astuc***} \\
+     \ding{117}  \ding{108} \ding{115} \ding{110} & \ding{117}  \ding{108} \ding{115} \ding{110} &  \ding{108} \ding{115} \ding{110} & \ding{117}  \ding{108} \ding{115} \ding{110} & \ding{115} \ding{110} & \ding{115} \ding{110}  & \ding{117} \ding{115}   \\   
+     #1 & #2 & #3 & #4 & #5 & #6 & #7 \\[0.5em]
+     \end{tabular}
+}
+
+\newcommand{\ath}[7]{
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c c c c}
+     \textbf{Escala*} & \textbf{Equilib.} & \textbf{Força} & \textbf{Furtiv*} & \textbf{Prest.**} & \textbf{Saúde} & \textbf{Nata.*}\\
+     \ding{117}  \ding{108} \ding{115} \ding{110} & \ding{117}  \ding{108} \ding{115} \ding{110} & \ding{110} & \ding{117}  \ding{108} \ding{115} \ding{110} & \ding{117}  \ding{115} \ding{110} & & \ding{108} \ding{115}  \\
+     #1 & #2 & #3 & #4 & #5 & #6 & #7 \\[0.5em]
+     \end{tabular}
+}
+
+\newcommand{\inte}[6]{
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c c c}
+     \textbf{Conhec} & \textbf{Devoção} & \textbf{Explor.}  & \textbf{Vont.} & \textbf{Encantar} & \textbf{Estressar} \\
+      \ding{117} &  \ding{117} &  \ding{117} \ding{115} & \ding{117}  &\ding{117} & \ding{117}  \\
+     #1 & #2 & #3 & #4 & #5 & #6 \\ [0.5em]
+     \hline
+     \end{tabular}
+}
+
+\newcommand{\magi}[7]{
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c c c c}
+     \textbf{Combus} & \textbf{Eletro} & \textbf{Entrop.} & \textbf{Radia} & \textbf{Animan} & \textbf{Telepat} & \textbf{Bioma} \\
+      \ding{117} &  \ding{117} &  \ding{117} & \ding{117} & \ding{117} & \ding{117}   & \ding{117}  \\
+     #1 & #2 & #3 & #4 & #5 & #6 & #7 \\ [0.5em]
+     \hline
+     \end{tabular}
+}
+
+\newcommand{\reductions}[9]{
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c }
+      & TGH & PROT & INS  \\[0.5em]
+     armadura & #1 & #2 & #3  \\
+     Light & \the\numexpr #1+#4\relax  & \the\numexpr #2+#5\relax  & \the\numexpr #3+#6\relax  \\
+     Severe & \the\numexpr #1+#4*2\relax  & \the\numexpr #2+#5*2\relax  & \the\numexpr #3+#6*2\relax  \\
+     Deadly & \the\numexpr #1+#4*3\relax  & \the\numexpr #2+#5*3\relax  & \the\numexpr #3+#6*3\relax  \\
+     Súbito & \the\numexpr #1+#4*6\relax  & \the\numexpr #2+#5*6\relax &  \\
+     \hline
+     \end{tabular} \\ [0.5em]
+     \textbf{RES armadura:} #7 \textbf{Cobertura:} #8 \textbf{Penal.:} #9 \\
+     \textbf{RES nat:} #4 \textbf{TGH nat:} #5 \textbf{INS nat:} #6 \\
+}
+
+\newcommand{\atk}[2]{    
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c c c c }
+    \textbf{#1} &&&&&\\
+    RES/TGH & imp/PEN & ATK & AP & alcance & tamanho & propriedades \\
+    #2 \\
+    \hline
+    \end{tabular}
+}
+
+\newcommand{\move}[8]{
+    \hspace*{-0.5cm}\begin{tabular}{ c c c c  }
+    básico & corrida & cuidadoso & rastejando \\
+    #1m & #2m & #3m & #4m \\
+    nadar & nadar rap. & saltar & levantar \\
+     #5m & #6m & #7m & #8 \\
+    \hline
+    \end{tabular}
+}
+
+
+\newcommand{\mname}[3]{
+    \textbf{ \large #1} \\ [0.5em]   
+    \textbf{\small #2 Tamanho #3} \\ [0.5em]  
+}
+
+\newcommand{\monster}[7]{
+\parbox{\textwidth}{
+    % \scriptsize
+    #1
+    \footnotesize
+    #2 \\
+    #3 \\
+    #4 \\
+    #5 \\    
+    \newline
+    #6 \\    
+    % \textbf{Ataques, movimento e equipamento:} \\
+    \textbf{Descrição:} \\
+    #7 \\
+    \newline
+    }
+}
+
+% \begin{multicols}{2}
+
+\section{Humanoides}
+
+\subsection{Humanoides comuns}
+
+\monster
+{\mname{Anão comum}{Anão}{3} }
+{\move{1}{4}{0.5}{1/3}{1/3}{0.5}{2}{4}}
+{\stats{11}{9}{11}{1}{1}{0}{0}}
+{
+    \figt{0}{0}{0}{1}{0}{0}{1} \\
+    \ath{0}{0}{1}{0}{0}{0}{0} \\
+    \inte{2}{0}{1}{0}{0}{0} \\
+    \magi{0}{0}{0}{0}{0}{0}{0} \\
+}
+{\reductions{2}{2}{3}{5}{5}{5}{10}{3}{0}}
+{
+    \atk{Adaga}{
+    20/40 & 6/12 & 0 & 2 & curto & pequeno & preciso, DEF \\
+    } \\
+    \textbf{Habilidades}: \\
+}
+{ Um anão qualquer encontrado no meio da rua. }
+
+\monster
+{\mname{Humano comum}{Humano}{3} }
+{\move{1}{5}{0.5}{1/3}{1/3}{0.5}{2}{3}}
+{\stats{10}{10}{10}{0}{0}{1}{0}}
+{
+    \figt{1}{1}{0}{0}{0}{0}{0} \\
+    \ath{0}{0}{0}{0}{1}{0}{0} \\
+    \inte{0}{0}{0}{0}{0}{0} \\
+    \magi{0}{0}{0}{0}{0}{0}{0} \\
+}
+{\reductions{2}{2}{3}{5}{5}{5}{10}{3}{0}}
+{
+    \atk{Adaga}{
+    20/40 & 6/12 & 0 & 2 & curto & pequeno & preciso, DEF \\
+    } \\
+    \textbf{Habilidades}: \\
+}
+{ Um humano qualquer encontrado no meio da rua. }
+
+
+\monster
+{\mname{Humano caçador}{Humano}{3} }
+{\move{1}{6}{0.5}{1/3}{1/3}{0.5}{3}{3}}
+{\stats{10}{12}{12}{0}{0}{1}{0}}
+{
+    \figt{2}{3}{2}{3}{2}{2}{4} \\
+    \ath{3}{3}{0}{4}{2}{2}{2} \\
+    \inte{0}{0}{3}{0}{0}{0} \\
+    \magi{0}{0}{0}{0}{0}{0}{0} \\
+}
+{\reductions{5}{5}{6}{5}{5}{5}{50}{+10}{0}}
+{
+    \atk{Espada curta}{
+    30/50 & 7+5/7+5 & 3 & 2 & curto & 1 mão & DEF, pesado I, sacar \\
+    20/50 & 7/14 & 3 & 2 & curto & 1 mão & preciso, DEF \\
+    } \\
+    \atk{Adaga}{
+    20/40 & 6/12 & 2 & 2 & curto & pequeno & preciso, DEF, sacar \\
+    } \\
+    \atk{Arco curto}{
+    10/10 & 7/21 & 1 & 2 & curto & pequeno & preciso \\
+    10/10 & 6/18 & 3 & 2 & curto & pequeno & preciso \\
+    } \\
+    \textbf{Habilidades}: \\
+}
+{ Um humano caçador. }
+
+\monster
+{\mname{Humano Bárbaro}{Humano}{3} }
+{\move{1}{6}{0.5}{1/3}{1/3}{0.5}{3}{3}}
+{\stats{13}{12}{13}{0}{0}{1}{3}}
+{
+    \figt{2}{1}{2}{1}{2}{3}{1} \\
+    \ath{1}{3}{5}{4}{2}{2}{2} \\
+    \inte{0}{0}{3}{0}{0}{2} \\
+    \magi{0}{0}{0}{0}{0}{0}{0} \\
+}
+{\reductions{15}{8}{6}{6}{6}{6}{50}{+12}{-1}}
+{
+    \atk{machado de batalha}{
+    40/50 & 10+13/10+13 & 2 & 3 & uma & curto & pesado II \\
+    30/20 & 0/0 & 2 & uma & curto & DEF \\
+    } \\
+    \atk{Escudo de madeira}{
+    50/30 & 5/0 & 2 & 2 & uma & curto  & DEF+3, penalidade -1 \\
+    }    
+}
+{ Um humano bárbaro de cota de malha. }
+
+\monster
+{\mname{Troll}{Humano}{5} }
+{\move{1}{7}{0.5}{0.5}{0.5}{2/3}{4}{1}}
+{\stats{11}{10}{12}{0}{0}{1}{3}}
+{
+    \figt{-3}{-3}{-3}{-3}{-3}{9}{-1} \\
+    \ath{-3}{1}{9}{-3}{-3}{2}{2} \\
+    \inte{0}{0}{2}{2}{0}{5} \\
+    \magi{0}{0}{0}{0}{0}{0}{0} \\
+}
+{\reductions{16}{16}{16}{10}{10}{10}{100}{+8}{-1}}
+{
+    \atk{clava}{
+    40/50 & 14+22/2+4 & 2 & 2 & uma & curto & pesado II, amplo \\
+    60/40 & 0/0 & 2 & uma & curto & DEF \\
+    } \\ 
+}
+{ Um Troll de armadura acolchoada. }
+
+
+
+\section{Animais}   
+
+\monster
+{\mname{Lobo}{Canideo}{2} }
+{\move{1}{8}{0.5}{1/3}{1/3}{0.5}{3}{1}}
+{\stats{12}{14}{14}{0}{-2}{0}{1}}
+{
+    \figt{3}{0}{3}{3}{0}{3}{4} \\
+    \ath{0}{6}{0}{0}{0}{1}{0} \\
+    \inte{0}{0}{0}{1}{0}{3} \\
+    \magi{0}{0}{0}{0}{0}{0}{0} \\
+}
+{\reductions{3}{3}{5}{5}{5}{5}{50}{+15}{0}}
+{
+    \atk{Mordida}{
+    15/15 & 5/10 & 3 & 3 & curto & pequeno & agarrar \\
+    } \\   
+}
+{ Um Troll de armadura acolchoada. }
+
+
+
+% \end{multicols}
+
+\atk{Mãos}{
+    18/18 & 0/0 & 7 & 2 & curto & 1 mão & agarrar, DEF \\
+    18/18 & 6/1 & 7 & 2 & curto & 1 mão & pesado I \\
+    } \\
+
+    \atk{Mordida}{
+    15/15 & 5/10 & 13 & 3 & curto & pequeno & agarrar \\
+    } \\
+
+    \atk{Espada curta}{
+    20/50 & 7/14 & 13 & 2 & curto & 1 mão & preciso, DEF \\
+    30/50 & 7/7 & 13 & 2 & curto & 1 mão & DEF, pesado I, sacar \\
+    } \\
+    \atk{Adaga}{
+    20/40 & 6/12 & 13 & 2 & curto & pequeno & preciso, DEF, sacar \\
+    } \\
+    \atk{Arco curto}{
+    10/10 & 6/18 & 14 & 2 & curto & pequeno & preciso \\
+    } \\
