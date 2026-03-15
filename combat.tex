@@ -189,7 +189,7 @@ Humanoids can sustain 6 light injuries, 3 serious injuries, and 2 deadly injurie
 
 \textbf{Electric damage:} Attacks the same defenses as burn damage, but receiving a serious injury from electric damage causes an interruption of 5 AP, and deadly damage leaves the target unconscious.
 
-\textbf{Armor coverage and Precision:} Whenever an attack is a crit, it triggers the possibility of hitting an unprotected part of the body, having its PEN ignore armor toughness. To determine whether that happens, take all the overshoot of the attack's value over the crit threshold and add it to the weapon's precision bonus. If that value is greater than or equal to armor coverage, armor toughness is ignored.
+\textbf{Armor coverage and Precision:} Attacks have the possibility of hitting an unprotected part of the body, having its PEN ignore armor toughness. To determine whether that happens, add the weapon's precision bonus and subtract the armor coverage from the attack test result. The new result is used to determine the degree of success of the attack. The decision to use this feature can be done after rolling the dice, but it is irrevocable. 
 
 \textbf{Localized damage and vulnerability:} Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability.
 
@@ -264,9 +264,9 @@ The survival chapter describes how health works during rest.
 
 %---------------------ATTACK
 
-\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost depends on the weapon used and the type of attack performed. Hits deal full damage and Crits increase damage by 50\%. Glancing blows and misses have their effects determined by the type of defense used.
+\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost depends on the weapon used and the type of attack performed. Hits deal full damage, and crits deal 150\%. Grazes and misses have their effects determined by the type of defense used.
 
-\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. The deflection bonus is not added, and the impact is 150\%, 100\%, 50\%, and 0 in the case of critical, hit, glancing blow, and miss, respectively. The multiplied impact applies to the target object and the base damage to the weapon.
+\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. The shield deflection bonus is not added, and the impact is 150\%, 100\%, 50\%, and 0 in the case of critical, hit, glancing blow, and miss, respectively. The multiplied impact applies to the target object and the base damage to the weapon.
 
 Other types of melee attacks will be available depending on the type of weapon used. The type of attack must be declared when used. Opportunity, wide, and heavy attacks can be used together. The others must be used individually.
 
@@ -299,11 +299,11 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 %----------------------- Grapple
 
-\skill{Grapple}{Melee}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
+\skill{Grapple}{Melee}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. It also receives mobility penalties associated with the grappled condition. Additionally, the list of things a grabbed character can do is limited to the points below:
 
-\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that haS the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and the evasive jump movement is canceled. If the opponent does not attempt to defend the attack, grapple succeeds on a graze. Creatures 2 sizes larger do not suffer the effects of being grabbed by smaller ones. 
+\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that haS the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and the evasive jump movement is canceled. If the opponent does not attempt to defend the attack, grapple succeeds on a graze. If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strike and defend can be used by the characters involved in the grapple against each other by using the grapple skill instead of strike and defend. Redirect can be used with 2 AP.
+\textbf{Attack and Defend:} Strikes against grappled opponents can be done with short range attacks.
 
 \textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
 
@@ -324,7 +324,7 @@ Multiple characters can assist each other in the grab. Any skill test made by se
 
 \subsection{Ranged Combat}
 
-\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Hits deal full damage, and criticals increase all damage by 50\%. A graze incurs a -50\% penalty to damage. A miss does nothing.
+\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Hits deal full damage, and crits deal 150\%. Grazes and misses have their effects determined by the type of defense used.
 
 \textbf{Distance Penalties:} If the target is 10m away or less, there is no penalty. Beyond that, a cumulative penalty of -2 to the attack is applied for every additional 10m of distance. From 50m onwards, the penalty is -2 for every additional 50m. The vertical range of a ranged weapon is half the horizontal range.
 
