@@ -179,11 +179,11 @@ Humanoids can sustain 6 light injuries, 3 serious injuries, and 2 deadly injurie
 
 \textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Attacks and effects that cause injuries will have some amount of each of these components.
 
-\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. If the PEN is greater than or equal to the armor's toughness (TGH), the injury is light. If it is greater than or equal to 2x TGH + TGH of the armor, it is serious. If it is greater than or equal to 3x TGH + TGH of the armor, it is deadly. If the total damage is greater than 6xTGH + TGH of the armor, the target dies instantly. If the attack causes an injury from penetration, it ignores the armor's insulation.
+\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. If the PEN is greater than or equal to the armor's toughness (TGH), the injury is light. If it is greater than or equal to 2x TGH + TGH of the armor, it is serious. If it is greater than or equal to 3x TGH + TGH of the armor, it is deadly. If the total damage is greater than 6xTGH + TGH of the armor, the target dies instantly. If the attack causes an injury from penetration, it ignores the armor's insulation and increases the DL of any poisons by 3 for serious injuries and by 5 for deadly ones.
 
 \textbf{Impact:} is the component that represents the total force applied with the blow. If the impact is greater than or equal to natural RES + armor protection, the injury is light. If it is greater than or equal to 2x RES + armor protection, it is serious. If it is greater than or equal to 3x RES + armor protection, it is deadly. If the total impact is greater than 6xRES + armor protection, the target receives three deadly injuries.
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action or causes a minimum loss of 2 AP. Interruption occurs whenever a character receives an injury from impact or electric damage. Multiple simultaneous interruptions cause the greater of the loss of AP equal to 2x the number of interruptions or equal to the AP loss of the interrupted action.
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action or causes a minimum loss of 2 AP. Interruption occurs whenever a character receives an injury from impact or electric damage. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
 
 \textbf{Burn, radiant, and corrosive damage:} If the damage is greater than natural insulation + armor insulation, the target receives a light injury. If it is greater than 2x natural insulation + armor insulation, the target receives 2 light injuries, and so on.
 
@@ -201,7 +201,7 @@ For humanoids, there are 3: hand, leg, and head.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the Master deems it makes sense.
 
-\textbf{Healing Injuries:} Injuries have a certain amount of healing required to recover. Generally, light injuries require 2, serious injuries require 10, and deadly injuries require 20. Healing is obtained by resting well and using healing magic or potions. Some injuries are very debilitating. These require some type of advanced alternative method to fix, such as a prosthetic or a high-level spell capable of growing or reconnecting limbs.
+\textbf{Healing Injuries:} Injuries have a certain amount of cures required to recover. Generally, light injuries require 2, serious injuries require 10, and deadly injuries require 20. Cures are obtained by resting well and using healing magic or potions. Any time a healing is gained, the character must spend 1 hunger and 1 thirst. Some injuries are very debilitating. These require some type of advanced alternative method to fix, such as a prosthetic or a high-level spell capable of growing or reconnecting limbs.
 
 \subsection{Afflictions}
 

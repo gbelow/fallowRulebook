@@ -495,19 +495,27 @@ Lifestyle:
 
 Potions require a standard action to be consumed. Taking multiple potions does not amplify the effect. The contents of a potion on the list are relative to a creature of size 3. A creature of a different size will consume an amount equivalent to 1x Volume Modifier.
 
-Healing Potion:
+Potions add an effect to the character for a certain duration. The effects of potions are not cumulative, but they can be refreshed by consuming another potion of the same type. The effects of potions are not amplified by consuming multiple potions of the same type. Healing through potions does not add hunger or thirst.
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Simple Healing: 4 heals over 1 exploration turn, 2 GP.
-    \item Medium Healing: 8 heals over 1 exploration turn, 6 GP.
-    \item Good Healing: 16 heals over 1 exploration turn, 16 GP.
+    \item Simple Healing: 4 cures over 1 exploration turn, 2 GP.
+    \item Medium Healing: 8 cures over 1 exploration turn, 6 GP.
+    \item Good Healing: 16 cures over 1 exploration turn, 16 GP.
     % \item Constitution: Increases constitution by +1 for 1 day, 4 GP.
     % \item Power: Increases power by +2 for 1 day, 4 GP.
-    \item Anticoagulant Poison: DC 10 health to apply bleeding on a hit when dealing serious wounds and also on a crit when dealing light wounds, 10 GP for a vial with 10 applications and weight 1.
+\end{itemize}
+
+Poisons apply an effect to the target. The magnitude of the effect is determined by the potency of the poison, the amount of poison applied and the target´s resistance to the poison, represented by Health. The amount of poison applied is determined by the method of application (some methods may increase the amount of poison applied) and the seriousness of the injury.
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item Anticoagulant Poison: DC 5 health to apply bleeding on a hit when dealing serious wounds and also on a crit when dealing light wounds, 10 GP for a vial with 10 applications and weight 1.
     % \item Paralytic Poison: DC 10 health to avoid being paralyzed and lose 100/50/25/0 \% of maximum AP for 1 hour or until receiving an antidote.
 \end{itemize}
+
 
 \subsection{Utility and Survival}
 
