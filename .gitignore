@@ -36,6 +36,7 @@
 *.bak
 *.sav
 *.swp
+main.pdf
 
 ### PDF output (optional — see note below) ###
 # Uncomment if you do NOT want to version PDFs

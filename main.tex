@@ -16,6 +16,9 @@
 \usepackage{pgf}
 \usepackage{pifont}
 \usepackage{pgf}
+\usepackage{microtype}
+\usepackage{etoolbox}
+\usepackage{ragged2e}
 
 \selectlanguage{english}
 % \captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
@@ -29,7 +32,7 @@
   {
     hmargin   = .75in, % Left and right margins
     top       = .46in, % Top of text area to top of page
-    bottom    = .8in,  % Bottom of text area to bottom of page
+    bottom    = .75in,  % Bottom of text area to bottom of page
     footskip  = .32in, % Bottom of text area to bottom of footer text
     columnsep = .33in, % Space between columns
   }
@@ -38,6 +41,22 @@
 \AddToHook{shipout/background}{%
     \put (0in,-\paperheight){\includegraphics[width=\paperwidth,height=\paperheight]{images/paper.jpg}}%
 }
+
+\microtypesetup{protrusion=true,expansion=false}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\raggedcolumns
+\hbadness=10000
+\vbadness=10000
+\hfuzz=1pt
+\vfuzz=5pt
+
+\AtBeginEnvironment{multicols}{%
+  \sloppy
+  \setlength{\parfillskip}{0pt plus 1fil}
+  \RaggedRight
+}
+\AtEndEnvironment{multicols}{\justifying\fussy}
 
 \newcommand{\skill}[3]{
     \textbf{\large{Skill: #1}} \\
