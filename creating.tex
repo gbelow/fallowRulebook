@@ -10,7 +10,7 @@
 
 \textbf{Skills and Proficiencies}: Skill values are determined by the sum of the skill bonus and the proficiency bonus. Each skill bonus only influences a single skill and can be trained individually. Proficiency bonuses, on the other hand, can affect multiple skills. The default values for all skills and proficiencies is 0.
 
-There are 27 skills, as described in the table:
+There are 26 skills, as described in the table:
 
 \end{multicols}
 
@@ -47,12 +47,11 @@ Radiation & Sorcery & Intellect & yes \\
 Animancy & Sorcery & Intellect & yes \\
 Telepathy & Sorcery & Intellect & yes \\
 Biomancy & Sorcery & Intellect & yes \\
+Devotion & Devotion & Spirit & yes \\
 
-Devotion & SPI+Devotion & Spirit & no \\
-Charm & 0 & Spirit & no \\
-Stress & 0 & Spirit & no \\
-Will & 0 & Spirit & no \\
-Acting & SPI & Intellect & no \\
+Rhetoric & 0 & Intellect & yes \\
+Manipulation & 0 & Intellect & yes \\
+Will & SPI & Spirit & no \\
 
 \hline
 \end{tabular}
@@ -70,9 +69,10 @@ The trainable proficiencies are as follows:
 \textbf{Melee (DEX)}: General skill in melee combat. Uses DEX as talent. \\
 \textbf{Ranged Combat (DEX)}: General skill in ranged combat. Uses DEX as talent. \\
 \textbf{Detection (INT)}: The character's ability to pay attention to what matters and not get distracted. Uses INT as talent.\\
-\textbf{Sorcery (INT)}: General skill in casting spells. Uses INT as talent. \\
-\textbf{Conviction (SPI)}: Ability to control emotions and use them effectively. Uses SPI as talent. \\
-\textbf{Devotion (SPI)}: Level of alignment with a deity. \\
+% \textbf{Charisma (INT)}: General skill of communication. Uses INT as talent. \\
+\textbf{Sorcery (SPI)}: General skill in casting spells. Uses SPI as talent. \\
+\textbf{Devotion (SPI)}: Level of alignment with a deity. Uses SPI as talent.\\
+\textbf{Conviction (SPI)}: Alignment of worldview and instinct. Uses SPI as talent. \\
 
 \subsection{Levels}
 
@@ -94,13 +94,13 @@ The expected levels for skills and proficiencies range from 0 to 5, but can be i
 
 A character has 4 talents that represent their potential for growth.
 
-\textbf{Constitution (CON)}: Represents the character's ability to adapt physically.
+\textbf{Constitution (CON)}: Represents the character's general health and ability to adapt physically.
 
 \textbf{Dexterity (DEX)}: Represents the character's motor skills and reaction time. Includes all skills related to athletics and combat. These are well explained in the chapter on combat.
 
 \textbf{Intellect (INT)}: Represents memory, logical reasoning, and attention management. Includes all knowledge, spells, exploration skills, and cunning in combat.
 
-\textbf{Spirit (SPI)}: Represents the character's ability to understand and control consciousness. Includes charisma and will, as well as abilities derived from conviction and spirituality.
+\textbf{Spirit (SPI)}: Represents the character's emotional self control, confidence, and ability to manifest its innate spiritual powers. It encompasses charisma, stress, will and acting, as well as abilities derived from conviction and devotions.
 
 \textbf{Improving Talents:} During character creation, the player must choose the character's talents in order of priority. After that, talents can only be increased by spending karma. The karma cost to increase a talent is equal to $4+4*n$, where n is the talent level one wishes to acquire. The maximum talent value is 5.
 
@@ -400,14 +400,25 @@ Each character must choose a limit action.
 
 \subsection{Social}
 
+Characters have skills that define how proficient they are in social situations. Charisma is the main proficiency that governs social skills.
 
-Neither charm nor stress are trainable as skills. The bonuses come from abilities and convictions.
+There are four skills relevant to social situations. Empathy, Composure, Rhetoric and Will.
 
-\skill{ Charm }{ 0 }{ It is used in all social actions and spells that involve making others feel comfortable and trusting the character. People with high charm make better first impressions and appear more trustworthy and competent. }
 
-\skill{ Stress }{ 0 }{ It is used in all social actions and spells that involve causing fear, anger, and conflict in general. People with high Stress make strong impressions. }
+\skill{ Empathy }{ Charisma }{ This is used to read character's intentions, understand their desires and emotions, as well their connection to behavior. Empathy can be used to detect when someone is lying, even when the logic makes sense.
 
-Each conviction provides bonuses to Charm, Stress, or Will based on its level.
+Conversely, it can be used to control facial expressions, body language, your accent, to know the appropriate things to say. This is the actor's skill. It is important for someone to make performances, impersonate someone, infiltrate environments without being noticed socially. This is the skill used to tell lies and not be noticed.
+    
+Empathy is used in spells that involve convincing others and reading their minds. It is a subtle kind of manipulation, which makes people think that an idea was their own.}
+
+\skill{ Will }{ SPI }{ Will is like the character's presence and its mental fortitude. A character with strong will is more resistant to emotional stress and to magical mind altering effects. In social situations, it is used to intimidate people and to resist being intimidated.
+    
+It is used in spells that involve causing fear, anger, and conflict in general. People with high Will make strong impressions and can be very intimidating. }
+
+\skill{Rhetoric}{Charisma+INT}{This is the ability to make an argument make sense and to notice inconsistencies in other's arguments. 
+
+It is used in social interactions when trying to convince someone of something logically and also to find inconsistencies in someone else's logic. Rhetoric is resisted by rhetoric. }
+
 
 % Fatalism: +5 Will \\
 % Stoicism: +3 Stress, +3 Will \\
