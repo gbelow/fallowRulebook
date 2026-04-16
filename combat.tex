@@ -150,73 +150,81 @@ Usual aggravating factors: \\
 
 \subsection{Injuries and Death}
 
-\textbf{Injuries:} They are categorized as light, serious, and deadly. A character can acquire injuries by taking damage in any form. The amount of damage will determine the severity of the injury. The number of injuries a character can sustain before succumbing depends on their constitution and abilities.
+\textbf{Injury level (IL):} Any time a character receives damage, they will increase their injury level. They will receive injury penalties for every multiple of their \textbf{injury tolerance (IT)}. The base value for injury tolerance is 5.
 
-Humanoids can sustain 6 light injuries, 3 serious injuries, and 2 deadly injuries before succumbing.
+\textbf{Injury Capacity:} is the maximum amount of injuries a character can take without collapsing and going unconscious. Its value is 8x IT.
 
-\textbf{Light:} Every 2 light injuries inflict a -1 injury affliction. A light injury takes 2 healing to be cured by default.
+\textbf{Death:} occurs when the character's injuries exceed 10x IT.
 
-\textbf{Serious:} Each serious injury inflicts a -1 injury affliction. A serious injury takes 10 healing to be cured by default.
+\textbf{Healing Injuries:} characters heal by resting well and using healing magic or potions. Any time the injury level is healed, the character must spend 1 hunger and 1 thirst unless otherwise stated by the specific healing method.
 
-\textbf{Deadly:} A deadly injury inflicts a -2 injury affliction. At the beginning of each turn or when performing any physical action that costs STA, they receive a light injury or a more severe one if there is no more room for light injuries. These injuries only cost 1 healing to recover. This will continue to occur until healing is performed to stabilize the character. A deadly injury takes 20 healing to be cured by default.
+\textbf{Damage:} Any time a character receives damage, it must compare the amount received with the respective threshold for the damage type to determine the injuries caused. 
 
-\textbf{Death:} occurs when the character receives 3 deadly injuries or when a deadly injury has its severity increased.
+\textbf{Damage Thresholds:} 
+\begin{itemize}
+    \item Tier 1. Damage is higher than the armor's protection to specific type of damage. Increases IL by +1.
+    \item Tier 2. Damage is higher than tier 1 + character's resistance to that kind of damage. Increases IL by +5.
+    \item Tier 3. Damage is higher than tier 1 + 2x character's resistance to that kind of damage. Increases IL by +10 and has a 25\% chance of causing a wound.
+    \item Tier 4. Damage is higher than tier 1 + 3x character's resistance to that kind of damage. Increases IL by +20 and is guaranteed to cause a wound.
+    \item Tier 5. Damage is higher than tier 1 + 5x character's resistance to that kind of damage. Causes instant death.
+\end{itemize}
 
-\textbf{Increase in severity:} If the character has already reached their limit of light injuries, each additional light injury becomes serious, and so on. The amount of healing required to recover from these injuries is that of the original damage, before the increase.
 
-\textbf{Types of damage:} are: physical, burn, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage.
+\textbf{Types of damage:} are: physical, burn, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds.
 
-\textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Attacks and effects that cause injuries will have some amount of each of these components.
+\textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Attacks and effects that cause injuries will have some amount of each of these components. 
 
-\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. If the PEN is greater than or equal to the armor's toughness (TGH), the injury is light. If it is greater than or equal to 2x TGH + TGH of the armor, it is serious. If it is greater than or equal to 3x TGH + TGH of the armor, it is deadly. If the total damage is greater than 6xTGH + TGH of the armor, the target dies instantly. If the attack causes an injury from penetration, it ignores the armor's insulation and increases the DL of any poisons by 3 for serious injuries and by 5 for deadly ones.
+\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. Its respective defense is TGH. If the attack causes an injury from penetration, it ignores the armor's insulation and increases the DL of any poisons by 3 for serious injuries and by 5 for deadly ones.
 
-\textbf{Impact:} is the component that represents the total force applied with the blow. If the impact is greater than or equal to natural RES + armor protection, the injury is light. If it is greater than or equal to 2x RES + armor protection, it is serious. If it is greater than or equal to 3x RES + armor protection, it is deadly. If the total impact is greater than 6xRES + armor protection, the target receives three deadly injuries.
+\textbf{Impact:} is the component that represents the total force applied with the blow. It s respective defense is RES.
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action or causes a minimum loss of 2 AP. Interruption occurs whenever a character receives an injury from impact or electric damage. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action or causes a minimum loss of 2 AP. Interruption occurs whenever a character receives a tier 2 or higher damage from impact or electric damage. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
 
-\textbf{Burn, radiant, and corrosive damage:} If the damage is greater than natural insulation + armor insulation, the target receives a light injury. If it is greater than 2x natural insulation + armor insulation, the target receives 2 light injuries, and so on.
+\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. These kinds of damage increase the IL by +5 for every damage tier. For example, tier 2 gives +5, tier 2 + INS gives +10, tier 2 + 2x INS gives +15 and so on. There is no sudden death.
 
-\textbf{Electric damage:} Attacks the same defenses as burn damage, but receiving a serious injury from electric damage causes an interruption of 5 AP, and deadly damage leaves the target unconscious.
+\textbf{Electric damage:} Also defended by INS, but receiving a tier 3 damage from electric damage causes an interruption of 5 AP, and tier 4 leaves the target unconscious.
+
+\textbf{Wounds:} can be caused by receiving tier 3 or 4 damage. Their healing counter is separate from the main ijury counter. 
+
+\begin{itemize}
+    \item Broken arm: makes the arm useless. Takes 10 cures to heal.
+    \item Broken leg: makes the leg lame and useless. Takes 15 cures to heal.
+    \item Hemorrhage: a special wound that requires 2 cures to stop bleeding. For every STA spent, the character receives +1 to their IL per hemorrhage cure untreated. It is caused by damage to the chest or head. Hemorrhages do not require the expense of hunger or thirst to be healed.
+    \item unconscious: causes unconsciousness.
+\end{itemize}
 
 \textbf{Armor coverage and Precision:} Attacks have the possibility of hitting an unprotected part of the body, having its PEN ignore armor toughness. To determine whether that happens, add the weapon's precision bonus and subtract the armor coverage from the attack test result. The new result is used to determine the degree of success of the attack. The decision to use this feature can be done after rolling the dice, but it is irrevocable. 
 
-\textbf{Localized damage and vulnerability:} Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability.
+\textbf{Localized damage and vulnerability:} Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. The standard place to hit if no location is specified is the chest.
 
 For humanoids, there are 3: hand, leg, and head.
 
-\textbf{Hand:} Has no armor unless it has gauntlets. A serious injury renders the hand useless. Deadly injuries or worse amputate the hand. Ranged attacks have -5 to hit.
-\textbf{Leg:} Cannot cause sudden death, but serious injuries leave the character lame. Deadly injuries or worse amputate the leg.
-\textbf{Head:} receives -5 to hit, but injuries caused are increased by 1 degree of severity. Attacks that cause interruption and are serious or deadly leave the character unconscious.
+\textbf{Hand:} Has no armor unless it has gauntlets. A wound renders the hand useless. Ranged attacks have -5 to hit. Maximum IL damage taken from this is 5. A tier 5 damage amputates.
+\textbf{Leg:} A wound leaves the character lame. Maximum IL damage from this is 10. A tier 5 damage amputates.
+\textbf{Head:} receives -5 to hit, but injuries caused deal double the amount of injury. Attacks that cause interruption and are serious or deadly leave the character unconscious.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the Master deems it makes sense.
-
-\textbf{Healing Injuries:} Injuries have a certain amount of cures required to recover. Generally, light injuries require 2, serious injuries require 10, and deadly injuries require 20. Cures are obtained by resting well and using healing magic or potions. Any time a healing is gained, the character must spend 1 hunger and 1 thirst. Some injuries are very debilitating. These require some type of advanced alternative method to fix, such as a prosthetic or a high-level spell capable of growing or reconnecting limbs.
 
 \subsection{Afflictions}
 
 Afflictions are the negative conditions that can affect creatures. 
 
-There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Health. Each of them imposes penalties on a different list of skills.
+There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Health. 
 
-\textbf{Mobility:} Strike, Accuracy, Defend, Reflex, Climb, Balance, Stealth, and Swim.
+\textbf{Injury:} penalties affect AGI, STR and half the value to Will. The penalties affect STR, AGI and all of its derived values, except for the damage thresholds and movement speeds.
 
-\textbf{Injury:} Strike, Accuracy, Defend, Reflex, Climb, Balance, Stealth, Swim, Prestidigitation, Strength, and Grapple.
-
-\textbf{Vision:} Strike, Accuracy, Defend, Reflex, Climb, Balance, Stealth, Prestidigitation, Grapple, Exploration, Cunning.
-
-\textbf{Mental:} Strike, Accuracy, Reflex, Climb, Balance, Stealth, Prestidigitation, Exploration, Cunning, Spells, Will, Knowledge.
-
-The afflictions in the mental, mobility, and vision categories do not stack. Only the worst penalty is applied.
+\textbf{Mental:} Penalties affect Exploration, Cunning, Sorceries, Will, Insight, and Knowledge.
 
 The list of afflictions is:
 
 \begin{itemize}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
-\item \textbf{Prone:} -3 Mobility. Can only crawl and stand up.
-\item \textbf{Grappled:} -3 Mobility. Movement requires pushing, and attacks can only be made with short-range or small weapons.
-\item \textbf{Immobile:} Cannot move and cannot use any combat skill other than escape the grapple. The SD is reduced to -5 + SMx1. Armor coverage is reduced by an extra -3.
-\item \textbf{Dazzled:} Receives -3 Vision.
-\item \textbf{Blind:} -8 to vision. 
+\item \textbf{Prone:} Can only crawl and stand up. Becomes vulnerable to crushing attacks.
+\item \textbf{Grappled:} Movement requires pushing, and attacks can only be made with short-range or small weapons.
+\item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape strength or grapple. The SD is reduced to -5 + SMx1. 
+\item \textbf{Dazzled:} Limits the radius of vision to 5m.
+\item \textbf{Blind:} Cannot use vision with Cunning.
+\item \textbf{Deaf:} Cannot use hearing with Cunning. 
 % Requires a balance check for basic movement on any terrain.
 
 \item \textbf{Unconscious:} The character cannot do anything other than Will and Health checks. They can also make detection and sensing checks, but receive -10 on these checks. These checks can be made to wake up. The DL and the allowed check depend on the situation. 
@@ -226,13 +234,13 @@ The list of afflictions is:
 \item \textbf{Confused:} Receives -3 Mental. Becomes vulnerable to domination attacks. 
 % \item \textbf{Charmed:} Receives -3 Mental against their charmer. 
 \item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will check whenever the compulsion is severe. Outside of combat, can make a check once per hour.
-\item \textbf{Distracted:} Receives -2 Mental. Occurs automatically when the character is in melee combat.
+\item \textbf{Distracted:} Receives -2 Cunning.
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
 \item \textbf{Tired/Exhausted} Penalty of -1 mental/-2 mental. 
-\item \textbf{Weakened/Malnourished} -2/-4 Health.
-\item \textbf{Thirsty/Dehydrated} -2/-4 Health.
-\item \textbf{Sick} Counts as a serious injury. -2 Health.
+\item \textbf{Weakened/Malnourished} -1/-2 Health. +5/10 to IL
+\item \textbf{Thirsty/Dehydrated} -1/-2 Health, +5/10 to IL
+\item \textbf{Sick} Counts as +10 to IL. -2 Health.
 \end{itemize}
 
 \skill{Health}{ CON }{ Represents how strong the character's body is against diseases, poisons, exposure to the elements, and how quickly they recover from injuries and exhaustion. 
@@ -242,7 +250,7 @@ The survival chapter describes how health works during rest.
 
 \section{Combat Actions}
 
-\skill{Cunning}{Detection}{ Cunning is used to determine priority when competing for turns to act. 
+\skill{Cunning}{Detection}{ Cunning is used to determine priority when competing for turns to act. It is also used to detect things in stealth.
 
 % \textbf{Sense Motivation:} Cunning can also be used as a defense against social actions. This is equivalent to perceiving if someone is lying, has ulterior motives, or is hiding or pretending something. 
 
@@ -432,7 +440,7 @@ An elephant bumping into a character at low speed will deal, at most, 12 damage.
 
 When a triggering action occurs, the detector chooses a sense and adds the bonus from the triggering event. Normally, the senses to be used are vision and hearing. Vision can be used against targets to the front and have a small penalty from distance. Hearing is omnidirectional, but receives larger penalty from distance. If Cunning is equal or higher than stealth, the detector is considered alarmed.
 
-In the alarmed state, a character can search actively, looking around and using their best senses. They can roll detection against stealth. On a failure or a graze, nothing is noticed. A success identifies the general direction where it came from, but not exactly what it was. A critical success identifies what it is and where it came from. 
+In the alarmed state, a character can search actively, looking around and using their best senses. They can roll detection against stealth. On a failure, nothing is noticed. On a graze, reactions to the stealthy characters are allowed at a -3 penalty. A hit allows reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. 
 
 Many items and conditions can increase stealth. A bonus of 0 happens in an open field in a clear day. Cover, Darkness, fog, muffled boots, and camouflage give bonuses to stealth and reduce sight radius.
 
@@ -450,9 +458,9 @@ The triggering events are in the following list.
     \item -1 for every distance band for vision and -2 for hearing
 \end{itemize}
 
-Remaining unnoticed and out of sight for 1 round will make the character undetected again. To be out of sight, a character must be invisible, hidden behind something, camouflaged, or behind someone. The standard field of vision is considered to be 180 degrees. 
+Remaining unnoticed for 1 round will make the character undetected again. To be undetected, a character must be out of the field of detection of another's dominant sense (usually vision).
 
-In darkness or when characters are blind and do not have any alternative sense for localization, every round in combat starts with everyone in stealth relative to each other. When a character is detected, they remain detected until the end of the round. Each character has their own list of detected characters.
+Every round in combat starts with everyone outside someone's the detection field in stealth relative to each other. When a character is detected, they remain detected until the end of the round. Each character has their own list of detected characters.
 
 \textbf{Distance bands:}
 \begin{itemize}
