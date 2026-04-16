@@ -166,7 +166,7 @@ Usual aggravating factors: \\
     \item Tier 2. Damage is higher than tier 1 + character's resistance to that kind of damage. Increases IL by +5.
     \item Tier 3. Damage is higher than tier 1 + 2x character's resistance to that kind of damage. Increases IL by +10 and has a 25\% chance of causing a wound.
     \item Tier 4. Damage is higher than tier 1 + 3x character's resistance to that kind of damage. Increases IL by +20 and is guaranteed to cause a wound.
-    \item Tier 5. Damage is higher than tier 1 + 5x character's resistance to that kind of damage. Causes instant death.
+    \item Tier 5. Damage is higher than tier 1 + 5x character's resistance to that kind of damage. Causes instant death or amputation.
 \end{itemize}
 
 
@@ -201,7 +201,7 @@ For humanoids, there are 3: hand, leg, and head.
 
 \textbf{Hand:} Has no armor unless it has gauntlets. A wound renders the hand useless. Ranged attacks have -5 to hit. Maximum IL damage taken from this is 5. A tier 5 damage amputates.
 \textbf{Leg:} A wound leaves the character lame. Maximum IL damage from this is 10. A tier 5 damage amputates.
-\textbf{Head:} receives -5 to hit, but injuries caused deal double the amount of injury. Attacks that cause interruption and are serious or deadly leave the character unconscious.
+\textbf{Head:} receives -5 to hit, but the injury tier is increased by 1, except if the increase is from 1 to 2. Attacks that cause interruption and are tier 3 or 4 after increased leave the character unconscious.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the Master deems it makes sense.
 
@@ -300,7 +300,9 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 \textbf{Initiate the Grab:} attackers must make a strike test with a weapon that haS the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and the evasive jump movement is canceled. If the opponent does not attempt to defend the attack, grapple succeeds on a graze. If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes against grappled opponents can be done with short range attacks.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. 
+
+\textbf{Blind fighting:} It is possible to attack an opponent involved in the grapple even without being able to see, but there is a -3 penalty to strike and to defend in that situation. That applies to all grappling maneuvres.
 
 \textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
 
@@ -377,15 +379,11 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \textbf{Follow:} A character can, as a reaction to any movement, follow another character who is within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
 
-\textbf{Flanking:} Whenever two characters are more than 90 degrees from each other relative to a target, the target must focus on one target at a time. Switching focus costs 1 AP and is necessary in order to react to the target. If the target of the attack moves as a part of its defense, like with evasive jump, the 1 AP cost is waived as long as the final destination reduces the angle back to 90 degrees or lower.
+\textbf{Flanking:} Whenever two characters cannot fit completely within a radius of 180 degrees relative to a target, the target must focus on one target at a time. Use 3 surrounding hexes for a hex grid. Switching focus costs 1 AP and is necessary in order to react to the target. If the target of the attack moves as a part of its defense, like with evasive jump, the 1 AP cost is waived as long as the final destination reduces the angle back to 180 degrees or lower.
 
 \textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. The reach is reduced by 1m unless the person on the lower ground targets the legs. The person on the high ground suffers the same penalty to hit the legs of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. Only long weapons can be used when the height difference is of 2m and so on. The high ground is a defensive position.
 
-\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses. Cover also provides +3 to stealth.
-
-\textbf{Visibility:} The levels of visibility are visible, obscured, and invisible. If something is invisible, it is impossible to react to anything it does unless it is detected in some other way. It is still possible to perform a targeted action in the place where they are if the character knows where it is. Even so, the action will have the effect of blindness applied to it. If the target is obscured, any attacks against them or reactions to their actions receive the obscured effect.
-
-\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source, having a good field of vision and a larger field of obscured vision. The rule works the same way if the light source is at a distance.
+\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses. 
 
 \textbf{Underwater Combat:} Any attack that does not have the precise tag or the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m for small objects (the size of arrows), 5m for medium ones (the size of spears) and 8m for large ones (the size of ballista shots, since larger projectiles decelerate less). All explosions have half the radius, but blunt damage is doubled.
 
@@ -438,37 +436,44 @@ An elephant bumping into a character at low speed will deal, at most, 12 damage.
 
 \skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against the cunning of opponents.
 
-When a triggering action occurs, the detector chooses a sense and adds the bonus from the triggering event. Normally, the senses to be used are vision and hearing. Vision can be used against targets to the front and have a small penalty from distance. Hearing is omnidirectional, but receives larger penalty from distance. If Cunning is equal or higher than stealth, the detector is considered alarmed.
+When a triggering action occurs, the detector chooses a sense and adds the bonus from the triggering event to their cunning. Normally, the senses to be used are vision and hearing. If Cunning is equal or higher than stealth, the detector is considered alarmed and a stealth test is called.
 
-In the alarmed state, a character can search actively, looking around and using their best senses. They can roll detection against stealth. On a failure, nothing is noticed. On a graze, reactions to the stealthy characters are allowed at a -3 penalty. A hit allows reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. 
+\textbf{Vision:} is an active sense. Stealth gains +2 from distance per distance band, but gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character.
 
-Many items and conditions can increase stealth. A bonus of 0 happens in an open field in a clear day. Cover, Darkness, fog, muffled boots, and camouflage give bonuses to stealth and reduce sight radius.
+\textbf{Hearing:} is a passive sense. Stealth gains +3 from each distance band and cannot be used to search actively. Hearing is omnidirectoinal.
 
-The triggering events are in the following list.
+\textbf{Smell:} is a passive sense. Stealth gains +3 from each distance band. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
+
+\textbf{Alarm:} In the alarmed state, a character can search actively, looking around and using their active senses. In this state, their field of vision is considered 360 degrees.
+
+\textbf{Stealth test:} Detection is rolled against stealth. On a failure, nothing is noticed. On a graze, reactions to the stealthy characters are allowed at a -3 penalty, but no actions are allowed to be taken against them. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. 
+
+The triggering events are in the following list. The bonuses are to the detector's cunning.
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item being in the field of vision: +8, triggers vision only
-    \item melee attack: +8 after the attack
-    \item careful movement and crawling: 0
-    \item running: +8
-    \item ranged attacks: +5 after the attack
-    \item basic movement: +2
-    \item -1 for every distance band for vision and -2 for hearing
+    \item being in the field of vision: +5
+    \item melee attack: +5 after the attack 
+    \item careful movement and crawling: 0 
+    \item running: +5
+    \item ranged attacks: +3 after the attack
+    \item basic movement: +2 hearing and vision
 \end{itemize}
 
-Remaining unnoticed for 1 round will make the character undetected again. To be undetected, a character must be out of the field of detection of another's dominant sense (usually vision).
+Many items and conditions can increase stealth. A bonus of 0 happens in an open field in a clear day. Cover, Darkness, fog, muffled boots, and camouflage give bonuses to stealth and reduce sight radius.
 
-Every round in combat starts with everyone outside someone's the detection field in stealth relative to each other. When a character is detected, they remain detected until the end of the round. Each character has their own list of detected characters.
+\textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of another character at the beginning of a round. The alarmed state does not wear off until the field of active senses is exited. Each character has their own list of detected characters. 
+
+\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible.
 
 \textbf{Distance bands:}
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item melee
-    \item same room (within 10m)
+    \item same room (within 10m) - no penalty
     \item at range (within 50m)
+    \item far range(within 150 m)
     \item far (within 500 m)
     \item horizon 
 \end{itemize}
