@@ -248,15 +248,6 @@ The list of afflictions is:
 The survival chapter describes how health works during rest.
 }
 
-\section{Combat Actions}
-
-\skill{Cunning}{Detection}{ Cunning is used to determine priority when competing for turns to act. It is also used to detect things in stealth.
-
-% \textbf{Sense Motivation:} Cunning can also be used as a defense against social actions. This is equivalent to perceiving if someone is lying, has ulterior motives, or is hiding or pretending something. 
-
-\textbf{Analyze Opponent:} Cunning can also be used during a fight to assess an enemy. Spend 3 AP to make a cunning check against an enemy within 30m to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
-}
-
 \subsection{Melee Combat}
 
 %---------------------ATTACK
@@ -298,11 +289,9 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 \skill{Grapple}{Melee}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. It also receives mobility penalties associated with the grappled condition. Additionally, the list of things a grabbed character can do is limited to the points below:
 
-\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that haS the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and the evasive jump movement is canceled. If the opponent does not attempt to defend the attack, grapple succeeds on a graze. If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
+\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that haS the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and the evasive jump movement is canceled. If the opponent does not attempt to defend the attack. If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. 
-
-\textbf{Blind fighting:} It is possible to attack an opponent involved in the grapple even without being able to see, but there is a -3 penalty to strike and to defend in that situation. That applies to all grappling maneuvres.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks.
 
 \textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
 
@@ -434,40 +423,59 @@ An elephant bumping into a character at low speed will deal, at most, 12 damage.
 
 \subsection{Stealth and Subterfuge}
 
-\skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against the cunning of opponents.
 
-When a triggering action occurs, the detector chooses a sense and adds the bonus from the triggering event to their cunning. Normally, the senses to be used are vision and hearing. If Cunning is equal or higher than stealth, the detector is considered alarmed and a stealth test is called.
+\skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against stealth events in the environment, which trigger cunning tests for those who will potentially detect.
 
-\textbf{Vision:} is an active sense. Stealth gains +2 from distance per distance band, but gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character.
+\textbf{Stealth test:} When a stealth event occurs, the character makes a stealth check against its DL. The result will trigger a cunning test to any characters capable of noticing the event. The DL of the cunning test has a base DL, based on the triggering event. That value is modified by the result of the stealth test. A crit adds +3 to the DL, a hit does not modify, a graze gives a -3 penalty and a miss gives a -5. Crits in stealth tests against passive senses give a +5 bonus to the DL and another +1 for the value that the stealth check goes over the crit threshold. 
+
+Optionally, the GM could roll the dice for the player and not tell them the result. This way, they have to interpret whether they are doing well of not with their stealth, instead of just relaxing and assuming that they won't be seen because they rolled well.
+
+\textbf{Stealth events:} are necessary for a character to remain undetected to another. Without one, characters are automatically detected by each other's active senses. Think about it like an environmental condition that makes stealth possible. A stealth event's DL targets a specific sense, which is the best available sense to use to detect someone in the situation. Normally, the senses to be used are vision and hearing. 
+
+The two big categories of stealth events are: hiding and sneaking. Hiding depends on line of sight and camouflage. Sneaking depends on making no noise when moving, which depends on what the floor is and what is stepping on it.
+
+Some common stealth events and their estimated stealth and cunning DLs are in the following list.}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item camouflage: stealth DL 0, cunning DL 2 vision
+    \item hiding in woods: stealth DL 5, cunning DL 2 vision
+    \item hiding in plain sight: stealth DL 8, cunning DL -5 vision
+    \item sneaking in the grass: stealth DL 5, cunning DL 0 hearing
+    \item sneaking in squeaking floorboards: stealth DL 8, cunning DL -2 hearing
+\end{itemize}
+
+\textbf{Remaking Stealth checks:} The stealth check is done once per round in combat, at the beginning of the round, or once per scene outside combat. A scene only changes if the conditions for stealth change significantly. That is a subjective call, but it is recommended that new rolls are not repeated for every action in stealth.
+
+\textbf{Event DL modifier:} Some actions will make the stealth test more difficult. If one of these aggravating events happen within the same scene or round, the last test score is reutilized, adding the new penalty.
+
+Here are the stealth DL modifications:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item attacking in melee: +3 hearing and vision
+    \item careful movement and crawling: 0 hearing and vision
+    \item running: +5 hearing and vision
+    \item ranged attacks: +2 to vision
+    \item basic movement: +2 hearing and vision
+\end{itemize}
+
+\skill{Cunning}{Detection}{ Cunning is used to determine priority when competing to take a combat turn first. It is also used to detect things in stealth or just for looking for things in general.
+
+\textbf{Detection:} Detection uses one of the senses. It uses the cunning skill passively, without adding dice rolls, against the DL of stealth events. On a failure, nothing is noticed. On a graze, reactions to the stealthy characters are allowed at a -3 penalty, but no actions are allowed to be taken against them. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately.
+
+\textbf{Senses:} The usable senses are vision, hearing and smell. Senses can be active or passive. Active senses are used to keep the detector in alarmed state, meaning that they don't forget your position, even if you move. Passive senses can detect position, but they can't track it or keep the character in alarmed state.
+
+\textbf{Vision:} is an active sense. Stealth event DLs gain +2 from distance per distance band. Vision gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character. In the alarmed state, it covers 360 degrees.
 
 \textbf{Hearing:} is a passive sense. Stealth gains +3 from each distance band and cannot be used to search actively. Hearing is omnidirectoinal.
 
 \textbf{Smell:} is a passive sense. Stealth gains +3 from each distance band. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
 
-\textbf{Alarm:} In the alarmed state, a character can search actively, looking around and using their active senses. In this state, their field of vision is considered 360 degrees.
+\textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed. Projectiles that hit the character have their direction identified, not necessarily their source. Fighting with touch only is only possible while grappling, and takes -2 to Strike and Defend.
 
-\textbf{Stealth test:} Detection is rolled against stealth. On a failure, nothing is noticed. On a graze, reactions to the stealthy characters are allowed at a -3 penalty, but no actions are allowed to be taken against them. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. 
-
-The triggering events are in the following list. The bonuses are to the detector's cunning.
-
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item being in the field of vision: +5
-    \item melee attack: +5 after the attack 
-    \item careful movement and crawling: 0 
-    \item running: +5
-    \item ranged attacks: +3 after the attack
-    \item basic movement: +2 hearing and vision
-\end{itemize}
-
-Many items and conditions can increase stealth. A bonus of 0 happens in an open field in a clear day. Cover, Darkness, fog, muffled boots, and camouflage give bonuses to stealth and reduce sight radius.
-
-\textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of another character at the beginning of a round. The alarmed state does not wear off until the field of active senses is exited. Each character has their own list of detected characters. 
-
-\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible.
-
-\textbf{Distance bands:}
+\textbf{Distance bands:} The DL from stealth events to cunning is penalized by distance. The magnitude of the modification depends on the specific sense used to detect.
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
@@ -478,18 +486,22 @@ Many items and conditions can increase stealth. A bonus of 0 happens in an open 
     \item horizon 
 \end{itemize}
 
-\textbf{Basic Stealth Bonuses:}
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item camouflage: +2-5 vs vision,
-    \item Darkness: vision radius reduced to light source. 
-    \item : Muffled boots: +3 vs hearing
-    \item : Cover: +3 vs vision
-    \item : Fog: vision radius reduced to 3m.
-\end{itemize}
+\textbf{Alarm:} When a character detects the other, they are alarmed to their presence and will not forget their position until they become undetectable to all active senses. Being alarmed is necessary to be able to target something or react to it.
 
-Stealth bonuses apply to specific senses.}
+\textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of all active senses of another character at the beginning of a round. The alarmed state does not wear off until the field of active senses is exited. Each character has their own list of detected characters. 
+
+\textbf{Blind Fighting:} if there are no active senses capable of detecting someone (not event touch), but a hit or crit were achieved in the detection check, it is possible to react or target them at -5 penalty.
+
+\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible.
+
+\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's TN. If cunning is equal or higher than TN, they find it. 
+
+\textbf{Focusing attention:} This can be used to get +3 to the detection test when looking attentively at one specific thing. It can be used when a player says they want to look at a specific place to see better detail or when someone points out a direction for others to focus. 
+
+\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of cunning as skill, but they can only find the object if they fulfill have a knowledge requirement.
+
+\textbf{Analyze Opponent:} Cunning can also be used during a fight to assess an enemy. Spend 3 AP to make a cunning check against an enemy within 30m to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
+}
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
