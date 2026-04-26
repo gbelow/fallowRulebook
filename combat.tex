@@ -219,7 +219,7 @@ The list of afflictions is:
 
 \begin{itemize}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
-\item \textbf{Prone:} Can only crawl and stand up. Becomes vulnerable to crushing attacks.
+\item \textbf{Prone:} Can only crawl and stand up. Becomes vulnerable to being crushed.
 \item \textbf{Grappled:} Movement requires pushing, and attacks can only be made with short-range or small weapons.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape strength or grapple. The SD is reduced to -5 + SMx1. 
 \item \textbf{Dazzled:} Limits the radius of vision to 5m.
@@ -386,9 +386,9 @@ The only defenses against melee attacks allowed during mounted combat are block 
 
 Multiple characters can participate in a strength conflict. Any skill check made by multiple characters uses the best attributes of any of them, meaning that only one character's strength can be used, plus 4/3/2/1 for each additional character. All characters involved must spend the necessary AP. Smaller characters add a maximum of 2. 
 
-\textbf{Interpreting strength:} The basic rule of strength is that you become 3.33x stronger for every 5 points in this skill, following the VM from the size categories. A STR 10 human can deadlift around 100kg. }
+\textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points in this skill, following the VM from the size categories. Consider that a character with STR 10 can lift 50kg within a strength test. A character with STR 15 can lift around 150kg with the same test, and a STR 20 can lift around 500kg. It is still possible to lift up to one size category higher than the character's by spending 5 AP + 2STA.  }
 
-\textbf{Impact from objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of damage it is supposed to deal if it hits a character or another object. This damage is always blunt and its used for non weapon objects, since the speed is relatively slow. 
+\textbf{Damage from Impact from objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of damage it is supposed to deal if it hits a character or another object. This damage is always blunt and its used for non weapon objects, since the speed is relatively slow. 
 
 This table assumes a solid object hitting the target full on. These numbers should be lower for softer materials, like a body, rotten wood or any other deformable object. The suggestion is to lower them by 75\% in the mentioned cases.
 
@@ -413,16 +413,16 @@ This table assumes a solid object hitting the target full on. These numbers shou
 \end{tabular}
 
 
-\textbf{Damage ceiling for impacts:} Strength is used as a ceiling to how much damage can be taken from low velocity projectiles. The maximum amount of blunt damage that can be taken from impact with a projectile is STR x DM x speed tier. Ex: for slow objects under 5 m/s, the ceiling is equal to 5xDM. For medium speed it is 10x STR and for fast ones it is 20x DM. The damage ceiling is applied before reducing damage for soft materials. 
+\textbf{Damage ceiling for impacts:} Strength is used as a ceiling to how much damage can be taken from low velocity projectiles. The maximum amount of blunt damage that can be taken from impact with a projectile is STR x DM x speed tier. The limit does not apply if the character getting crushed against a surface. Ex: for slow objects under 5 m/s, the ceiling is equal to 5xDM. For medium speed it is 10x STR and for fast ones it is 20x DM. The damage ceiling is applied before reducing damage for soft materials. 
 
 This damage can be defended against and is subject to modifications from attacks, as if they were melee or ranged attacks.
 
-An elephant bumping into a character at low speed will deal, at most, 12 damage.
+\textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is the same as the character's ability to lift weight plus 5 for every speed tier. This works exactly like the push action and trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
 
-\textbf{Crushing and being crushed:} Part of the damage a character can take is not from the impact itself, but from the structural force it imposes on the target. This check is called when a target is pinned against a surface, like when an object falls on top of another or in a hammer and anvil scenario. In that case, a Strength check is called to resist being injured or incapacitated by a heavy object. The check is statis, not rolled and costs no AP or STA and has a TN that increases or decreases by 5 by each weight class in the table above. TN 0 is for a 50kg object at low speeds. The TN increases or decreases by 5 for every speed category. A crit does nothing. A hit interrupts, but deals no damage. A graze knocks prone, interrupts and deals a light wound. A miss deals a serious injury, knocks prone and stuns for 5 AP. The injuries can be modified by the rules of locational damage.
+
+% \textbf{Crushing and being crushed:} Part of the damage a character can take is not from the impact itself, but from the structural force it imposes on the target. This check is called when a target is pinned against a surface, like when an object falls on top of another or in a hammer and anvil scenario. In that case, a Strength check is called to resist being injured or incapacitated by a heavy object. The check is static, not rolled and costs no AP or STA and has a TN that increases or decreases by 5 by each weight class in the table above. TN 0 is for a 50kg object at low speeds. The TN increases or decreases by 5 for every speed category. A crit does nothing. A hit interrupts, but deals no damage. A graze knocks prone, interrupts and deals a light wound. A miss deals a serious injury, knocks prone and stuns for 5 AP. The injuries can be modified by the rules of locational damage. For every 5 points the check goes under the TN, the injury tier increases by 1. If the check is 10 or more under the TN, the target is crushed and dies immediately.
 
 \subsection{Stealth and Subterfuge}
-
 
 \skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against stealth events in the environment, which trigger cunning tests for those who will potentially detect.
 
