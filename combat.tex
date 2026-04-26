@@ -16,7 +16,7 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{Exploding die:} In skill tests, if the result of the d10 is 10, roll 1d6 and add that to the score, continuing to add while the result is 6. If the result of the d10 is 1, do not add anything and then roll 1d6 and subtract the result instead of adding. Continue subtracting while rolling 6.
 
-\textbf{Safe and risky tests:} It is possible to perform some tests safely or riskily. In the safe form, roll 2 d10 and take the result closest to 5. Similarly, it is possible to perform tests in a risky manner. In this case, roll 2 d10 and take the result farthest from 5. This mechanic can only be used when indicated in the skill or ability or when the Master allows it.
+\textbf{Safe and risky tests:} It is possible to perform some tests safely or riskily. In the safe form, roll 2 d10 and take the result closest to 5. Similarly, it is possible to perform tests in a risky manner. In this case, roll 2 d10 and take the result farthest from 5. On a draw, use the average value or roll again. This mechanic can only be used when indicated in the skill or ability or when the Master allows it.
 
 % \textbf{Special Failure:} If the total skill value is less than 5 due to a natural 1, something especially bad may happen, such as breaking a weapon, dropping all arrows from the quiver, or falling. This is an optional rule, and its application is entirely at the Master's discretion.
 
@@ -213,18 +213,21 @@ There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Heal
 
 \textbf{Injury:} penalties affect AGI, STR and half the value to Will. The penalties affect STR, AGI and all of its derived values, except for the damage thresholds and movement speeds.
 
+\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Cunning, Balance, Climb, Exploration, Stealth and Prestidigitation.
+
 \textbf{Mental:} Penalties affect Exploration, Cunning, Sorceries, Will, Insight, and Knowledge.
 
 The list of afflictions is:
 
 \begin{itemize}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
-\item \textbf{Prone:} Can only crawl and stand up. Becomes vulnerable to being crushed.
+\item \textbf{Prone:} Can only crawl and stand up. Becomes vulnerable to the full damage of crushing attacks.
 \item \textbf{Grappled:} Movement requires pushing, and attacks can only be made with short-range or small weapons.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape strength or grapple. The SD is reduced to -5 + SMx1. 
-\item \textbf{Dazzled:} Limits the radius of vision to 5m.
-\item \textbf{Blind:} Cannot use vision with Cunning.
-\item \textbf{Deaf:} Cannot use hearing with Cunning. 
+\item \textbf{Disoriented:} Gives -2 to sensory penalties.
+\item \textbf{Oblivious:} Gives -5 to sensory penalties.
+\item \textbf{Blind:} Cannot use vision.
+\item \textbf{Deaf:} Cannot use hearing. 
 % Requires a balance check for basic movement on any terrain.
 
 \item \textbf{Unconscious:} The character cannot do anything other than Will and Health checks. They can also make detection and sensing checks, but receive -10 on these checks. These checks can be made to wake up. The DL and the allowed check depend on the situation. 
@@ -364,9 +367,9 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \subsection{Combat Positioning and Object Interaction}
 
-\textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range or getting any closer. The action must be performed immediately before the opponent enters range. Only the AP gained from the movement surge can be used with this reaction. 
+\textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
 
-\textbf{Follow:} A character can, as a reaction to any movement, follow another character who is within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
+\textbf{Follow:} A character can, as a reaction to any movement except running, follow another character who is already within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
 
 \textbf{Flanking:} Whenever two characters cannot fit completely within a radius of 180 degrees relative to a target, the target must focus on one target at a time. Use 3 surrounding hexes for a hex grid. Switching focus costs 1 AP and is necessary in order to react to the target. If the target of the attack moves as a part of its defense, like with evasive jump, the 1 AP cost is waived as long as the final destination reduces the angle back to 180 degrees or lower.
 
@@ -418,8 +421,6 @@ This table assumes a solid object hitting the target full on. These numbers shou
 This damage can be defended against and is subject to modifications from attacks, as if they were melee or ranged attacks.
 
 \textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is the same as the character's ability to lift weight plus 5 for every speed tier. This works exactly like the push action and trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
-
-
 % \textbf{Crushing and being crushed:} Part of the damage a character can take is not from the impact itself, but from the structural force it imposes on the target. This check is called when a target is pinned against a surface, like when an object falls on top of another or in a hammer and anvil scenario. In that case, a Strength check is called to resist being injured or incapacitated by a heavy object. The check is static, not rolled and costs no AP or STA and has a TN that increases or decreases by 5 by each weight class in the table above. TN 0 is for a 50kg object at low speeds. The TN increases or decreases by 5 for every speed category. A crit does nothing. A hit interrupts, but deals no damage. A graze knocks prone, interrupts and deals a light wound. A miss deals a serious injury, knocks prone and stuns for 5 AP. The injuries can be modified by the rules of locational damage. For every 5 points the check goes under the TN, the injury tier increases by 1. If the check is 10 or more under the TN, the target is crushed and dies immediately.
 
 \subsection{Stealth and Subterfuge}
@@ -428,13 +429,19 @@ This damage can be defended against and is subject to modifications from attacks
 
 \textbf{Stealth test:} When a stealth event occurs, the character makes a stealth check against its DL. The result will trigger a cunning test to any characters capable of noticing the event. The DL of the cunning test has a base DL, based on the triggering event. That value is modified by the result of the stealth test. A crit adds +3 to the DL, a hit does not modify, a graze gives a -3 penalty and a miss gives a -5. Crits in stealth tests against passive senses give a +5 bonus to the DL and another +1 for the value that the stealth check goes over the crit threshold. 
 
-Optionally, the GM could roll the dice for the player and not tell them the result. This way, they have to interpret whether they are doing well of not with their stealth, instead of just relaxing and assuming that they won't be seen because they rolled well.
+\textbf{Hidden roll:} Optionally, the GM could roll the dice for the player and not tell them the result. This way, they have to interpret whether they are doing well of not with their stealth, instead of just relaxing and assuming that they won't be seen because they rolled well.
+
+\textbf{Event Chaos modifier:} Some stealth events can have highly unpredictable outcomes and others can be the opposite. Use safe tests or risky tests to represent this fact.
+
+\textbf{Group roll:} It is possible to make a single roll for a whole group. Use the stealth skill of the worst stealth in the group. Take mounts into consideration. 
+
+\textbf{Large Items, large groups:} Wagons, Sleds, Carts, backpacks with jingly items should have their own stealth value. The default value is their size skill modifier, mut they could be different.
 
 \textbf{Stealth events:} are necessary for a character to remain undetected to another. Without one, characters are automatically detected by each other's active senses. Think about it like an environmental condition that makes stealth possible. A stealth event's DL targets a specific sense, which is the best available sense to use to detect someone in the situation. Normally, the senses to be used are vision and hearing. 
 
 The two big categories of stealth events are: hiding and sneaking. Hiding depends on line of sight and camouflage. Sneaking depends on making no noise when moving, which depends on what the floor is and what is stepping on it.
 
-Some common stealth events and their estimated stealth and cunning DLs are in the following list.}
+Some common stealth events and their estimated stealth and cunning DLs are in the following list.
 
 \begin{itemize}
     \setlength\itemsep{0em}
@@ -460,20 +467,23 @@ Here are the stealth DL modifications:
     \item ranged attacks: +2 to vision
     \item basic movement: +2 hearing and vision
 \end{itemize}
+ .}
 
 \skill{Cunning}{Detection}{ Cunning is used to determine priority when competing to take a combat turn first. It is also used to detect things in stealth or just for looking for things in general.
 
-\textbf{Detection:} Detection uses one of the senses. It uses the cunning skill passively, without adding dice rolls, against the DL of stealth events. On a failure, nothing is noticed. On a graze, reactions to the stealthy characters are allowed at a -3 penalty, but no actions are allowed to be taken against them. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately.
+\textbf{Detection:} the skill value used for detection is the cunning skill plus bonuses from one of the senses. The roll gets called when the added value is greater or equal to the DL of stealth events. The detection check is rolled once per character per round or scene for all events. On a failure or graze, nothing is noticed. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. The rolled value is used for all cunning checks for the entire round or scene.
 
-\textbf{Senses:} The usable senses are vision, hearing and smell. Senses can be active or passive. Active senses are used to keep the detector in alarmed state, meaning that they don't forget your position, even if you move. Passive senses can detect position, but they can't track it or keep the character in alarmed state.
+\textbf{Group detection:} optionally, preferrably outside of combat, a single cunning value can be used for a whole group of characters, using the best cunning in the group for everybody. The group can be separated as desired, but it is best if each group is within the same distance band.
+
+\textbf{Senses:} The usable senses are vision, hearing and smell. Senses can be active or passive. Active senses are used to keep the detector in alarmed state, meaning that they don't forget your position, even if you move. Passive senses can detect position, but they can't track it or keep the character in alarmed state. If the character has no active senses available, they are automatically oblivious.
 
 \textbf{Vision:} is an active sense. Stealth event DLs gain +2 from distance per distance band. Vision gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character. In the alarmed state, it covers 360 degrees.
 
-\textbf{Hearing:} is a passive sense. Stealth gains +3 from each distance band and cannot be used to search actively. Hearing is omnidirectoinal.
+\textbf{Hearing:} is a passive sense. Stealth events gain +3 from each distance band and cannot be used to search actively. Hearing is omnidirectoinal.
 
-\textbf{Smell:} is a passive sense. Stealth gains +3 from each distance band. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
+\textbf{Smell:} is a passive sense. Stealth events gain +3 from each distance band. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
 
-\textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed. Projectiles that hit the character have their direction identified, not necessarily their source. Fighting with touch only is only possible while grappling, and takes -2 to Strike and Defend.
+\textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed. Projectiles that hit the character have their direction identified, not necessarily their source. Fighting with touch makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
 
 \textbf{Distance bands:} The DL from stealth events to cunning is penalized by distance. The magnitude of the modification depends on the specific sense used to detect.
 \begin{itemize}
@@ -490,7 +500,7 @@ Here are the stealth DL modifications:
 
 \textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of all active senses of another character at the beginning of a round. The alarmed state does not wear off until the field of active senses is exited. Each character has their own list of detected characters. 
 
-\textbf{Blind Fighting:} if there are no active senses capable of detecting someone (not event touch), but a hit or crit were achieved in the detection check, it is possible to react or target them at -5 penalty.
+\textbf{Blind Fighting:} if there are no active senses capable of detecting someone (not event touch), but a hit or crit were achieved in the detection check, it is possible to react or target them, but the oblivious affliction is applied.
 
 \textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible.
 
@@ -498,9 +508,9 @@ Here are the stealth DL modifications:
 
 \textbf{Focusing attention:} This can be used to get +3 to the detection test when looking attentively at one specific thing. It can be used when a player says they want to look at a specific place to see better detail or when someone points out a direction for others to focus. 
 
-\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of cunning as skill, but they can only find the object if they fulfill have a knowledge requirement.
+\textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 3 AP to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 
-\textbf{Analyze Opponent:} Cunning can also be used during a fight to assess an enemy. Spend 3 AP to make a cunning check against an enemy within 30m to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
+\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of cunning as skill, but they can only find the object if they fulfill have a knowledge requirement.
 }
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
