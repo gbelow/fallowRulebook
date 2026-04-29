@@ -23,13 +23,15 @@ To simplify, allow bringing enough supplies for the journey, which eliminates th
 
 \textbf{\large Exhaustion}
 
-Exhaustion ranges from 0 to STA. The higher the value, the worse it is. Each additional point of exhaustion beyond the maximum becomes a light injury.
+Exhaustion ranges from 0 to 2*STA. The higher the value, the worse it is. Each additional point of exhaustion beyond the maximum becomes a light injury.
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
+    \item > 2 x STA = Unconscious
+    \item > 1.5 x STA = Confused and Exhausted
     \item > STA = Exhausted
-    \item > STA/2 = Tired
+    \item > 0.5 x STA = Tired
     \item > 0 = Everything is normal
 \end{itemize}
 
@@ -51,6 +53,8 @@ The nutritional value of a portion of food is counted in hunger. Average charact
 
 For role-playing purposes, consider that 1 meal is about 500g and that 1 portion of water is 500ml for a size 3 creature. The portion size varies with VM for each size category. The nutritional value of a portion ranges from 1 to 5 hunger, depending on the food and its preparation.
 
+Hunger does not go higher than 60, but for every hunger point above 60, IL is increased by 4 instead.
+
 \textbf{\large Thirst}
 
 Thirst starts at 0; the higher the character's thirst, the worse it is. Exceeding a certain limit causes the adverse effects below:
@@ -64,7 +68,7 @@ Thirst starts at 0; the higher the character's thirst, the worse it is. Exceedin
     \item > 0 = Everything is normal
 \end{itemize}
 
-Every 2 thirst points above 15 counts as a light injury.
+Thirst does not go higher than 20, but for every thirst point above 20, IL is increased by 4 instead.
 
 \subsection{Rest}
 
