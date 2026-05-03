@@ -20,9 +20,9 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{STR x:} Strength requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
 \item \textbf{Impact/PEN:} indicates the impact and its penetration. PEN is an estimate of penetration capability based on the speed of the attack, contact area, and hardness of the attacking material.
-\item \textbf{Small/One/Two hands:} Small weapons can be easily concealed and slipped into small cracks. One-handed weapons require only one hand to attack and defend. Two-handed weapons require both hands to attack and block.
+\item \textbf{Small/One/Two hands:} Small weapons can be easily concealed and give +2 to Strike during grapples. One-handed weapons require only one hand to attack and defend. Two-handed weapons require both hands to attack and block.
 \item \textbf{Heavy I/II/III:} Allows for heavy attacks.
-\item \textbf{Precise:} Increases the chance of overcoming armor coverage by +3 or by +6 in case of small weapons. The maximum IL damage that its PEN can cause is +5 and only causes instant death on criticals. Its PEN damage does not count for equipment breakage. It can only be blocked by shields.
+\item \textbf{Precise:} Increases the chance of overcoming armor coverage by +3 or by +5 in case of small weapons. The maximum IL damage that its PEN can cause is +5 unless the attack is a critical. Its PEN damage does not count for equipment breakage. It can only be blocked by shields.
 \item \textbf{Resistance/stiffness:} indicates the Resistance of the attack.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 \item \textbf{Shot:} indicates that the ranged attack can be used, as well as the precise shot and quick shot. It cannot be redirected, only absorbed.
@@ -68,7 +68,7 @@ Weapon & RES/TGH & impact/PEN & AP & hand & range & properties & price & weight 
 \textbf{Dagger} & 25/50 & 8/2x & 3 & small & short & draw, DEF, precise & 3 GP & 2\\
 & 20/40 & 6/2x & 3 & small & STR & draw, precise throw & 2\\ [5pt]
 \hline
-\textbf{Rondel} & 25/50 & 8/2x & 3 & small & short & draw, DEF, heavy I, precise & 3 GP & 2\\
+\textbf{Rondel} & 25/50 & 8/2x & 3 & small & short & draw, DEF, heavy I, precise & 5 GP & 2\\
 \hline
 \textbf{Whip} & 30/10 & 6/1x & 3 & small & long II & draw & 2 GP & 5\\
 & 10/30 & 0/4 & 3 & small & long II & grab & & \\[5pt]
@@ -211,17 +211,17 @@ Weapon & RES/TGH & impact/PEN & AP & hands & range & properties & price & weight
 \hline
 \textbf{Grappling Hook and Rope} & 10/30 & 0.5xSTR/4 & 4+4 & two & 2xSTR & throw, hook & 2 SP & 5 \\ [5pt]
 \hline
-\textbf{Grenade} & 20/10 & X & 3 & one & 2xSTR & throw & 2 GP & 2 \\
+\textbf{Grenade} & 20/10 & X & 3 & one & 2xSTR & throw & 2 GP & 2 \\ 
 \hline
-\textbf{Short Bow*} & 10/10 & 7/x & 4 & two & 100m & precise, shot & 5 GP & 5\\
+\textbf{Short Bow*} & 10/10 & 5/3x & 4 & two & 100m & precise, shot & 5 GP & 5\\
 \hline
-\textbf{Long Bow* **} & 10/10& 9/x & 5 & two & 150m & STR 13, precise, shot & 8 GP & 10\\
+\textbf{Long Bow*} & 10/10& 6/3x & 5 & two & 150m & STR 13, precise, shot & 8 GP & 10\\
 \hline
-\textbf{Heavy Bow* **} & 10/10 & 10/x & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
+\textbf{Heavy Bow* **} & 10/10 & 6/3x & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
 \hline
-\textbf{Crossbow} & 10/10 & 8/x & 3+5 & two & 150m & reload, precise, shot & 8 GP & 5 \\
+\textbf{Crossbow} & 10/10 & 6/3x & 3+5 & two & 150m & reload, precise, shot & 8 GP & 5 \\
 \hline
-\textbf{Ballista**} & 10/10 & 10/x & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
+\textbf{Arbalest**} & 10/10 & 6/3x & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
 \hline
 \end{tabular}
 \end{table}
@@ -234,9 +234,9 @@ Types of arrows:
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Bodkin: bodkin arrows have 3x penetration.
-    \item Broadhead: broadhead arrows provide +1 impact and 3x penetration, but have -2 in accuracy and -50m in range.
-    \item Artillery: provides +2 impact, 3x penetration, but has -2 in accuracy and -50m in range. Can only be used with weapons marked with **.
+    \item Bodkin: bodkin arrows have 4x penetration.
+    \item Broadhead: increase limit damage to IL from precise to +8.
+    \item Artillery: provides +2 impact, 4x penetration, but has -2 in accuracy and -50m in range. Can only be used with weapons marked with **.
     \item Explosive: gives the explosive effect to the arrow if ignited. Igniting is a standard action of prestidigitation.
 \end{itemize}
 
@@ -250,7 +250,7 @@ Types of arrows:
 Name & Penalty & Deflection & RES/TGH & Insulation & Weight & Value\\ [1ex]
 \hline \hline
 Wooden Shield & -1 & +3 & 30/25  & 10 & 10 & 1 GP\\
-Metal Shield & -2 & +3 &  100/100 & 10 & 25 & 15 GP\\
+Metal Shield & -2 & +3 &  60/60 & 10 & 25 & 15 GP\\
 Wooden Tower* & -2 & +4 & 30/25 & 15 & 20 & 2 GP\\
 \hline
 \end{tabular}
@@ -291,13 +291,13 @@ Padded Armor & 0/12 & 5  & 8  & +12 & -1 & 2 GP & 16\\
 \hline
 Metallic &&&&&&&\\
 \hline
-Chain Shirt & 0/12 & 3 & 5 & +10 & 0 & 20 GP & 10\\
+Chain Shirt & 0/15 & 3 & 5 & +10 & 0 & 20 GP & 10\\
 Hauberk & 0/20 & 5  & 6 & +12 & -1  & 30 GP & 40\\
 Brigandine & 0/25 & 10 & 8  & +12 & -2 &  50 GP & 60\\
 \hline
 Rigid &&&&&&&\\
 \hline
-Half Armor & 40/25 & 15 & 8  & +12 & -2 & 60 GP & 60\\
+Half Armor & 40/30 & 15 & 8  & +12 & -2 & 60 GP & 60\\
 Full Armor & 40/30 & 15 & 10  & +15 & -3 & 100 GP & 80\\
 Reinforced Armor & 50/40 & 20 & 10  & +15 & -4 & 150 GP & 140\\
 \hline
