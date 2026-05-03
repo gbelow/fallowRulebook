@@ -44,6 +44,8 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{End of the round:} A round ends when no one has AP left, nor action surge. When the round ends, all characters regain their AP. If anyone wants to end their turn without spending all AP, any AP that was not spent can be combined with that of the next round to rest, recovering STA.
 
+\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting, unless they rest in between rounds.
+
 \textbf{Environmental and ongoing effects:} Any effect that occurs periodically per turn or is environmental has its effect applied at the beginning of the round.
 
 \textbf{Negative AP:} AP can become a negative number, but never as a result of performing an action or reaction. When the character recovers their AP, they must deduct the negative value from their maximum.
@@ -71,7 +73,7 @@ Movement actions spend AP in exchange for changing the character's position on t
 Types of movement:
 \begin{itemize}
 \item \textbf{basic movement:} Simple walking movement.
-\item \textbf{careful movement:} Slow movement used to improve stealth and balance.
+\item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
 \item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same.
 \item \textbf{getting up:} Removes the fallen condition.
 \item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the horizontal distance of a long jump to AGI/3. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backward, the horizontal distance is halved.
@@ -385,19 +387,19 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 The only defenses against melee attacks allowed during mounted combat are block and redirect.
 
-\skill{Strength}{STR-10}{ Used to perform feats of strength, such as pushing, dragging, pulling, and lifting things. An active Strength check costs 2 AP + 1 STA. Strength can also be used passively to resist being crushed or moved.
+\skill{Strength}{STR-10}{ Used to perform feats of strength, such as pushing, dragging, pulling, and lifting things. An active Strength check costs 3 AP + 1 STA. Strength can also be used passively to resist being crushed or moved.
 
-\textbf{Push:} Can be used during a grapple. Make a strength check opposed by the opponent's strength or balance. The defender must also spend 2 AP + 1 STA to resist; otherwise, they receive -5 on the check. A success pushes the enemy 1 space, while a critical knocks them down. Gains +2 when performed during a run.
+\textbf{Push:} Make a strength check opposed by the opponent's strength. The defender must also spend 2 AP + 1 STA to resist; otherwise, they receive -5 on the check. A success pushes the enemy 1 space, while a critical knocks them down. Gains +2 when performed during a run. A push can be avoided automatically by performing an evasive jump.
 
 Multiple characters can participate in a strength conflict. Any skill check made by multiple characters uses the best attributes of any of them, meaning that only one character's strength can be used, plus 4/3/2/1 for each additional character. All characters involved must spend the necessary AP. Smaller characters add a maximum of 2. 
 
 \textbf{Lifting Weight:} A character with STR 10 can lift 50kg within a strength test. A character with STR 15 can lift around 150kg with the same test, and a STR 20 can lift around 500kg. It is still possible to lift up to one size category higher than the character's by spending 5 AP + 2STA. The basic rule of strength is that you become 3.33x stronger for every 5 points in this skill, following the VM from the size categories. }
 
-\textbf{Damage from Impact from objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of damage it is supposed to deal if it hits a character or another object. This damage is always blunt and ignores armor protection.
+\textbf{Damage from Impact with objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of damage it is supposed to deal if it hits a character or another object. This damage is always blunt and ignores armor protection.
 
 \textbf{Damage ceiling for impacts:} There is a ceiling to how much damage can be taken from low velocity impacts. The maximum amount of blunt damage that can be taken from impact with a low speed object is equal to 10xDM. For medium speed it is 20xDM and for fast ones it is 40x DM. Always apply the ceiling after any additive damage reductions and before multiplicative ones. The limit does not apply if the character getting crushed against a surface.
 
-This table assumes a solid object hitting the target full on. Lower the damage ceiling based on how soft the object is. Objects like a body, rotten wood or any other deformable object should have the damage ceiling reduced by 50\% or 75\% for objects with low hardness. The ceiling for soft materials applies even when crushing against a surface.
+\textbf{Projectile hardness and damage:} This table assumes a solid object hitting the target full on. Lower the damage ceiling based on how soft the object is. Objects like a body, rotten wood or any other deformable object should have the damage ceiling reduced by 50\% or 75\% for objects with low hardness. The ceiling for soft materials applies even when crushing against a surface.
 
 \begin{tabular}{| c c c c|}
     \hline &&& \\
@@ -420,10 +422,10 @@ This table assumes a solid object hitting the target full on. Lower the damage c
     \hline
 \end{tabular}
 
-
-This damage can be defended against and is subject to modifications from attacks, as if they were melee or ranged attacks. Trying to block is impossible, even with a shield. Use redirect instead, even when trying to stop the object. 
+\textbf{Resolving the impact:} This damage can be defended against with evasive jump or reflex as if they were melee or ranged attacks. Trying to block is impossible, even with a shield. Spend 3 PA +1 STA to use redirect instead. If the damage is reduced to 0, the object is stopped.
 
 \textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is 10 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
+
 
 % \textbf{Crushing and being crushed:} Part of the damage a character can take is not from the impact itself, but from the structural force it imposes on the target. This check is called when a target is pinned against a surface, like when an object falls on top of another or in a hammer and anvil scenario. In that case, a Strength check is called to resist being injured or incapacitated by a heavy object. The check is static, not rolled and costs no AP or STA and has a TN that increases or decreases by 5 by each weight class in the table above. TN 0 is for a 50kg object at low speeds. The TN increases or decreases by 5 for every speed category. A crit does nothing. A hit interrupts, but deals no damage. A graze knocks prone, interrupts and deals a light wound. A miss deals a serious injury, knocks prone and stuns for 5 AP. The injuries can be modified by the rules of locational damage. For every 5 points the check goes under the TN, the injury tier increases by 1. If the check is 10 or more under the TN, the target is crushed and dies immediately.
 
