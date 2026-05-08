@@ -76,12 +76,12 @@ Types of movement:
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
 \item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same.
 \item \textbf{getting up:} Removes the fallen condition.
-\item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the horizontal distance of a long jump to AGI/3. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backward, the horizontal distance is halved.
+\item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to AGI/3. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved.
 \item \textbf{crawling:} is the only usable movement speed while \textbf{lying down}.
 \item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{lying down} condition.
 
 \item \textbf{trample:} The character attempts to pass through an occupied space. If the opponent does not move out of the way, they must perform a push action to stop the movement.
-\item \textbf{mounted movement:} A character needs minimum training to be able to use a mount. During mounted combat, the character's movement speed matches that of the mount. Running and a movement surge do not spend character STA. Mounting and dismounting costs AP equal to standing up.
+\item \textbf{mounted movement:} A character needs minimum training to be able to give commands to a mount. During mounted combat, the character's movement speed matches that of the mount. Running and a movement surge do not spend character STA. Mounting and dismounting costs AP equal to standing up.
 \end{itemize}
 
 \begin{center}
@@ -93,25 +93,25 @@ Careful & AP & 0.5 m \\
 Basic & 1 AP & 1 m \\
 Run & 2AP & AGI/3m \\
 Jump & 1AP+1STA & AGI/4m \\
-Crawl & AP & 0.33 m \\
-Swim & AP & 0.33 m \\
-Swim Fast & AP & 0.5 m \\
+Crawl & 1 AP & 0.33 m \\
+Swim & 1 AP & 0.33 m \\
+% Swim Fast & 1 AP & 0.5 m \\
 Stand up & 5 -AGI/5 AP & 0 \\
 
 \hline
 \end{tabular}
 \end{center}
 
-\skill{Swimming}{AGI/2 -5}{ Represents the character's swimming ability. Make a swimming check. On a critical or success, they can swim quickly for 8 AP per STA. On a success, they spend 1 STA for every 4m of fast swimming. On a near miss, the speed is normal. On a failure, the character spends 1 STA per AP of swimming, falls 1m, and their speed is equal to that of a near miss.
+\skill{Swimming}{AGI - 10}{ Represents the character's swimming ability. While in the water, make a swimming check against the DC of the body of water. On a critical or hit, swim perfectly. On a graze, lose 2PA+1 STA just to stay composed. On a failure, the character must use their movement surge just to stay above water or fall 1m.
 
 The swimming check should not be redone more than once per round unless the swimming conditions change.
 
 Characters attempting to swim with one hand receive a -3 penalty on the check.
 
-A swimming check in a deep pool is considered a DC of 8. Swimming at a beach with waves is 10. Swimming in a swift river or choppy sea would be 13.
+A swimming check in a deep pool is considered a DC of -2. Swimming at a beach with waves is 0. Swimming in a swift river or choppy sea would be around 4. Swimming under a storm or in a raging river is around a 7.
 }
 
-\skill{Climbing}{AGI/2 -5}{ Make a climbing skill check to overcome a DC and climb a surface. Climbing checks can be made safely or recklessly.
+\skill{Climbing}{AGI - 10}{ Make a climbing skill check to overcome a DC and climb a surface. Climbing checks can be made safely or recklessly.
 
 The climbing speed is equal to the crawling speed but costs 1 AP + 1 STA. On a critical, it does not cost STA. On a success, they climb normally. On a near miss, decide to go twice as slow or give up. On a failure, the character simply falls from the surface.
 
@@ -119,9 +119,9 @@ A character who is climbing is considered lying down. An attack that interrupts 
 
 To determine the difficulty of climbing, consider whether the surface is moving, the quality of the grips, and the distance to be climbed. An easy climb, with minimal chances of falling, is considered a DC of 5. A DC of 15 is reasonable for out-of-combat situations but quite challenging in a difficult scenario. DCs greater than 20 will require equipped and specialized characters and are unlikely to be accomplished during combat. As a general rule, consider that for every meter, the difficulty increases by 1.}
 
-\skill{Balance}{AGI/2 -5}{ Skill to perform acrobatics, avoid falling, and mitigate damage from falling. Can be used actively with a skill check or passively when something tries to knock you down.
+\skill{Balance}{AGI - 10}{ Skill to perform acrobatics, avoid falling, and mitigate damage from falling. Can be used actively with a skill check or passively when something tries to knock you down.
 
-\textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DC is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, moving at a normal speed is safe, but not jumping or running. On a near miss, moving at a careful speed is safe. On a failure, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
+\textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DC is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a failure, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
 
 When falling, the DC to fall properly is arbitrary, but is generally higher for low falls from bad positions, average for very high falls, and lower for small falls from a controlled position. DCs should be around 20 at most and 5 at least.
 
@@ -183,7 +183,7 @@ Usual aggravating factors: \\
 
 \textbf{Impact:} is the component that represents the total force applied with the blow. It's respective defense is RES.
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action or causes a minimum loss of 2 AP. Interruption occurs whenever a character receives a tier 2 or higher damage from impact or electric damage. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. Interruption occurs whenever a character receives a tier 2 or higher damage from impact or electric damage, causing a minumum loss of 2 AP. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
 
 \textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. These kinds of damage increase the IL by +5 for every damage tier. For example, tier 2 gives +5, tier 2 + INS gives +10, tier 2 + 2x INS gives +15 and so on. There is no sudden death.
 
@@ -194,7 +194,7 @@ Usual aggravating factors: \\
 \begin{itemize}
     \item Broken arm: makes the arm useless. Takes 10 cures to heal.
     \item Broken leg: makes the leg lame and useless. Takes 15 cures to heal.
-    \item Hemorrhage: a special wound that requires 2 cures to stop bleeding. For every STA spent, the character receives +1 to their IL per hemorrhage cure untreated. It is caused by damage to the chest or head. Hemorrhages do not require the expense of hunger or thirst to be healed.
+    \item Hemorrhage: a special wound that requires cures to stop bleeding. For every STA spent, the character receives +1 to their IL per hemorrhage cure untreated. It is caused by damage to the chest or head. Hemorrhages do not require the expense of hunger or thirst to be healed. Hemorrhages caused by a T3 wound require 1 cure to be healed. Those caused by T4 require 2 and so on.
     \item unconscious: causes unconsciousness.
 \end{itemize}
 
@@ -226,7 +226,7 @@ The list of afflictions is:
 
 \begin{itemize}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
-\item \textbf{Prone:} Can only crawl and stand up. Becomes vulnerable to the full damage of crushing attacks.
+\item \textbf{Prone:} Can only crawl and stand up. Takes -3 to any attempt to evade.
 \item \textbf{Grappled:} Movement requires pushing. Focus is locked to the main grappler.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape strength or grapple. The SD is reduced to -5 + SMx1. 
 \item \textbf{Disoriented:} Gives -2 to sensory penalties.
@@ -269,7 +269,7 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
-\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
+\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
 \textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. It costs an additional +2AP and +1STA on top of the normal attack cost and gives a -2 penalty to hit. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 2x the target's natural RES. On a critical, it knocks down if impact > the target's natural RES.
 
@@ -282,13 +282,13 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 \skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, the defend does nothing. If it glances or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Redirect, and Block.
 
-\textbf{Evade:} The defender spends 2AP to try to get out of the way of an attack. On a glancing blow, the attack has 50\% damage, and on misses, it has 0. If the character does not react to defend, they automatically use evade, but with the SD as the skill value. It is possible to receive -3 on the defend to evade with only 1 AP.
+\textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a glancing blow, the attack has 50\% damage, and on misses, it has 0.
+
+\textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
 
 \textbf{Block:} Costs 2 AP, but only shields can be used to block precise attacks. On a glancing blow or miss, it reduces the PEN by the TGH and the impact by the RES of the blocking object. The remainder is transferred to the character.
 
 \textbf{Redirect:} makes a defensive attack against a weapon by spending 3 AP. On a glancing blow, the attack impact is reduced by STR for one-handed weapons and by 2xSTR for two-handed weapons or shields. On a miss, the impact is further reduced by +1xSTR. The resulting impact hits the defender and is used to calculate the PEN. Redirect has a +3 bonus against long weapons if the characters are at close range.
-
-\textbf{Evasive Jump:} is the most defensive option. It costs an extra 1 STA and allows the character to jump from the attack while blocking or evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
 
 \textbf{Protect:} It is possible to defend an ally by staying within their melee range and the attack at the same time. The defender can redirect or block an attack directed at an ally.}
 
@@ -298,7 +298,7 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 \textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand. If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only redirect. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking.
 
 \textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
 
