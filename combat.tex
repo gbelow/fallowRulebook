@@ -162,53 +162,60 @@ Usual aggravating factors: \\
 
 \textbf{Healing Injuries:} characters heal by resting well and using healing magic or potions. Any time the injury level is healed, the character must spend 1 hunger and 1 thirst unless otherwise stated by the specific healing method.
 
-\textbf{Damage:} Any time a character receives damage, it must compare the amount received with the respective threshold for the damage type to determine the injuries caused. 
+\textbf{Damage:} Any time a character receives damage, it must compare the amount received with the respective threshold for the damage type to determine the injuries caused. All attacks target the chest by default.
 
 \textbf{Damage Thresholds:} 
 \begin{itemize}
-    \item Tier 1. Damage is higher than the armor's damage reduction to specific type of damage. Increases IL by +1.
-    \item Tier 2. Damage is higher than tier 1 + character's resistance to that kind of damage. Increases IL by +5.
-    \item Tier 3. Damage is higher than tier 1 + 2x character's resistance to that kind of damage. Increases IL by +10 and has a 25\% chance of causing a wound.
-    \item Tier 4. Damage is higher than tier 1 + 3x character's resistance to that kind of damage. Increases IL by +20 and is guaranteed to cause a wound.
-    \item Tier 5+. increases damage to IL by +10 for every additional time the damage overcomes the character's resistance to the kind of damage. Causes amputations.
+    \item Tier 0. Damage is higher than the armor's damage reduction to specific type of damage. Increases IL by +1.
+    \item Tier 1. Damage is higher than tier 1 + character's resistance to that kind of damage. Increases IL by +5.
+    \item Tier 2. Damage is higher than tier 1 + 2x character's resistance to that kind of damage. Increases IL by +10 and has a 50\% chance of causing a wound.
+    \item Tier 3. Damage is higher than tier 1 + 3x character's resistance to that kind of damage. Increases IL by +20 and is guaranteed to cause a wound.
+    \item Tier 4+. increases damage to IL by +10 for every additional time the damage overcomes the character's resistance to the kind of damage. Causes amputations.
 \end{itemize}
 
-\textbf{Damage reductions:} are subtracted from the damage received before comparing it to the thresholds. All the additive damage reductions are always applied before multiplicative ones. 
+\textbf{Damage reductions:} are usually given by armor and are added to each of the damage thresholds.
 
 \textbf{Types of damage:} are: physical, burn, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds.
 
-\textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Attacks and effects that cause injuries will have some amount of each of these components. 
+\textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Any physical damage instance will have some amount of each of these components. 
 
-\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. Its respective defense is TGH. If the attack causes damage to IL from penetration, it ignores the armor's insulation and increases the DL of any poisons by 3 for serious injuries and by 5 for deadly ones.
+\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. Its respective defense is TGH. If the attack causes at least tier 0 damage from penetration, it ignores the armor's insulation and increases the DL of any poisons by 3 for serious injuries and by 5 for deadly ones. 
 
-\textbf{Impact:} is the component that represents the total force applied with the blow. It's respective defense is RES.
+\textbf{Impact:} is the component that represents the total force applied with the blow. It's respective defense is RES. Damage caused by impact can cause interruptions.
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. Interruption occurs whenever a character receives a tier 2 or higher damage from impact or electric damage, causing a minumum loss of 2 AP. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
+\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. These kinds of damage increase the IL by +5 for every damage tier. For example, tier 1 gives +5, tier 2 gives +10, tier 3 gives +15 and so on. There is no sudden death.
 
-\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. These kinds of damage increase the IL by +5 for every damage tier. For example, tier 2 gives +5, tier 2 + INS gives +10, tier 3 + 2x INS gives +15 and so on. There is no sudden death.
+\textbf{Electric damage:} It is also defended by INS, with a damage progression same as burn, but electric damage can cause interruptions. 
 
-\textbf{Electric damage:} Also defended by INS, but receiving a tier 3 damage from electric damage causes an interruption of 5 AP, and tier 4 leaves the target unconscious.
-
-\textbf{Wounds:} can be caused by receiving tier 3 or 4 damage. Their healing counter is separate from the main ijury counter. 
+\textbf{Wounds:} can be caused by receiving tier 2 or higher damage. Their healing counter is separate from the main injury counter. 
 
 \begin{itemize}
     \item Broken arm: makes the arm useless. Takes 10 cures to heal.
     \item Broken leg: makes the leg lame and useless. Takes 15 cures to heal.
-    \item Hemorrhage: a special wound that requires cures to stop bleeding. For every STA spent, the character receives +1 to their IL per hemorrhage cure untreated. It is caused by damage to the chest or head. Hemorrhages do not require the expense of hunger or thirst to be healed. Hemorrhages caused by a T3 wound require 1 cure to be healed. Those caused by T4 require 2 and so on.
-    \item unconscious: causes unconsciousness.
+    \item Hemorrhage: a special wound that requires cures to stop bleeding. For every STA spent, the character receives +1 to their IL per hemorrhage cure untreated. It is caused by damage to the chest or head. Hemorrhages do not require the expense of hunger or thirst to be healed. Hemorrhages caused by a T2 wound require 1 cure to be healed. Those caused by T3 require 2 and so on.
+    \item Unconscious: causes unconsciousness.
 \end{itemize}
 
-\textbf{Armor coverage and Precision:} Attacks have the possibility of hitting a weakly protected part of the armor, having its PEN ignore part of the armor toughness. Every armor has its own coverage value. This value is applied over the crit threshold. For every point over the coverage, ignore 2 points of TGH. Some weapons have the precise property and can lower the value of coverage.
+\subsection{Additional damage effects:}
 
-\textbf{Localized damage and vulnerability:} Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. The standard place to hit if no location is specified is the chest.
+When a character receives a tier 1+ of damage or receives a hit or crit from an attack, they may receive additional effects. Landing a crit automatically gives 5 points to cause additional effects. Each effect costs a number of points. The effects are:
 
-For humanoids, there are 3: hand, leg, and head.
+\textbf{Damage increase:} For 5 points, increase damage by 50\%. Can only be used once per attack and does not affect the PEN of precise attacks.
 
-\textbf{Hand:} Has no armor unless it has gauntlets. A wound renders the hand useless. Ranged attacks have -5 to hit. Maximum IL damage taken from this is 5. A tier 4 damage amputates.
-\textbf{Leg:} A wound leaves the character lame. Maximum IL damage from this is 10. A tier 5 damage amputates.
-\textbf{Head:} receives -5 to hit, but the injury tier is increased by 1, except if the increase is from 1 to 2. Attacks that cause interruption and are tier 3 or 4 after increased leave the character unconscious.
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. Interruption occurs whenever a character receives a tier 1 or higher damage from impact or electric damage, causing a minumum loss of 2 AP. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
 
-Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the Master deems it makes sense.
+\textbf{Armor Bypass:} This costs a number of points defined by the targets armor coverage and can only be used by precise attacks. One usage of this reduces armor TGH by 50\% and two reduces by 100\%. Some weapons can lower the cost of this effect with their precision bonus.
+
+\textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
+
+For humanoids, there are 4 locations: chest, hand, leg, and head.
+
+\textbf{Chest:} Costs 0 points. Standard location. 
+\textbf{Hand:} Costs 5 points for melee and 10 points for ranged attacks. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage taken from this is 5. A tier 3 damage amputates.
+\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. A tier 4 damage amputates.
+\textbf{Head:} Costs 10 points. The injury tier is increased by 1, except if the increase is from 0 to 1. Precise weapons can deal any tier of injury and receiving interruptions from attacks on the head leave the character unconscious.
+
+Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense.
 
 \subsection{Afflictions}
 
@@ -255,15 +262,15 @@ The list of afflictions is:
 The survival chapter describes how health works during rest.
 }
 
-\subsection{Melee Combat}
+\section{Melee Combat}
 
 %---------------------ATTACK
 
-\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost depends on the weapon used and the type of attack performed. Hits deal full damage, and crits deal 150\%. Grazes and misses have their effects determined by the type of defense used.
+\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits and crits deal full damage, but the attacker can use the extra points over a hit to cause additional effects.
 
-\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. The shield deflection bonus is not added, and the impact is 150\%, 100\%, 50\%, and 0 in the case of critical, hit, graze, and miss, respectively. The multiplied impact applies to the target object and the base damage to the weapon.
+\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. The shield deflection bonus is not added, and the impact dealt to both objects is 150\%, 100\%, 50\%, and 0 in the case of critical, hit, graze, and miss, respectively. Rules on equipement breakage can be found in the equipment chapter.
 
-Other types of melee attacks will be available depending on the type of weapon used. The type of attack must be declared when used. Opportunity, wide, and heavy attacks can be used together. The others must be used individually.
+Other types of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I adds +0.5xSTR to the impact and increases the cost by +1AP+1STA. Heavy II adds +1xSTR to the impact, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR to the impact, costs +3AP+1STA, and gives a -3 penalty to hit.
 
@@ -271,22 +278,22 @@ Other types of melee attacks will be available depending on the type of weapon u
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. It costs an additional +2AP and +1STA on top of the normal attack cost and gives a -2 penalty to hit. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 2x the target's natural RES. On a critical, it knocks down if impact > the target's natural RES.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. It costs an additional +2AP and +1STA on top of the normal attack cost and gives a -2 penalty to hit. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 4x the target's natural RES. On a critical, it knocks down if impact > 2x the target's natural RES.
 
-\textbf{Knockdown:} A melee attack with a hook weapon that attempts to knock down the opponent. The attack costs an additional +1STA. If it is a critical, it knocks down the opponent with impact > natural RES. If it is a hit, it knocks down with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to perform an evasive jump or is running. This can be used as a reaction against mounted targets that move away from the weapon within its melee range.
+\textbf{Knockdown:} A melee attack with a hook weapon that attempts to knock down the opponent. The attack costs an additional +1STA. If it is a critical, it knocks down the opponent with impact > 2x natural RES. If it is a hit, it knocks down with impact > 4x natural RES. Gains +0.5xSTR if the opponent attempts to perform an evasive jump or is running. This can be used as a reaction against mounted targets that move away from the weapon within its melee range.
 }
 
 % \textbf{Disarm:} A melee attack that attempts to disarm the opponent. This attack does not deal damage, but if it is a critical, it disarms the opponent with impact > natural RES. If it is a hit, it disarms with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to block by redirecting.
 
 %-----------------------------------DEFEND
 
-\skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, the defend does nothing. If it glances or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Redirect, and Block.
+\skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, damage is taken normally. If it grazes or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Redirect, and Block.
 
 \textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a glancing blow, the attack has 50\% damage, and on misses, it has 0.
 
 \textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
 
-\textbf{Block:} Costs 2 AP, but only shields can be used to block precise attacks. On a glancing blow or miss, it reduces the PEN by the TGH and the impact by the RES of the blocking object. The remainder is transferred to the character.
+\textbf{Block:} Costs 2 AP, but only shields can be used to block precise attacks. On a graze or miss, it reduces the PEN by the TGH and the impact by the RES of the blocking object. The remainder is transferred to the character.
 
 \textbf{Redirect:} makes a defensive attack against a weapon by spending 3 AP. On a graze, the attack impact is reduced by STR for one-handed weapons and by 2xSTR for two-handed weapons or shields. On a miss, the impact is further reduced by +1xSTR. The resulting impact hits the defender and is used to calculate the PEN. Redirect has a +3 bonus against long weapons if the characters are at close range.
 
@@ -317,9 +324,9 @@ Multiple characters can assist each other in the grab. Any skill test made by se
 
 %----------------------SHOOT
 
-\subsection{Ranged Combat}
+\section{Ranged Combat}
 
-\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Hits deal full damage, and crits deal 150\%. Grazes and misses have their effects determined by the type of defense used.
+\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits and crits deal full damage, but the attacker can use the extra points over a hit to cause additional effects.
 
 \textbf{Distance Penalties:} If the target is 10m away or less, there is no penalty. Beyond that, a cumulative penalty of -2 to the attack is applied for every additional 20m of distance. From 50m onwards, the penalty is -2 for every additional 50m. The vertical range of a ranged weapon is half the horizontal range.
 
@@ -369,7 +376,7 @@ Effects of an explosion, such as pushing enemies, receive +5 against enemies in 
 In all cases, if the character is interrupted, they cannot move after the interruption.
 }
 
-\subsection{Combat Positioning and Object Interaction}
+\section{Combat Positioning and Object Interaction}
 
 \textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
 
@@ -426,7 +433,7 @@ Multiple characters can participate in a strength conflict. Any skill check made
 
 \textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is 10 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
 
-\subsection{Stealth and Subterfuge}
+\section{Stealth and Subterfuge}
 
 \skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against stealth events in the environment, which trigger cunning tests for those who will potentially detect.
 
