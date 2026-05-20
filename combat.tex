@@ -179,9 +179,9 @@ Usual aggravating factors: \\
 
 \textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Any physical damage instance will have some amount of each of these components. 
 
-\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. Its respective defense is TGH. If the attack causes at least tier 0 damage from penetration, it ignores the armor's insulation and increases the DL of any poisons by 3 for serious injuries and by 5 for deadly ones. 
+\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. Its respective defense is RES. If the attack causes at least tier 0 damage from penetration, it ignores the armor's insulation.
 
-\textbf{Impact:} is the component that represents the total force applied with the blow. It's respective defense is RES. Damage caused by impact can cause interruptions.
+\textbf{Impact:} is the component that represents the total force applied with the blow. It's respective defense is TGH. Damage caused by impact can cause interruptions.
 
 \textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. These kinds of damage increase the IL by +5 for every damage tier. For example, tier 1 gives +5, tier 2 gives +10, tier 3 gives +15 and so on. There is no sudden death.
 
@@ -204,7 +204,7 @@ When a character receives a tier 1+ of damage or receives a hit from an attack, 
 
 \textbf{Damage increase:} For 5 points, increase physical damage by 50\%. Can only be used once per attack and does not affect the PEN of precise attacks.
 
-\textbf{Armor Bypass:} This costs a number of points defined by the targets armor coverage and can only be used by precise attacks. One usage of this reduces armor TGH by 50\% and two reduces by 100\%. Some weapons can lower the cost of this effect with their precision bonus.
+\textbf{Armor Bypass:} This costs a number of points defined by the targets armor coverage and can only be used by precise attacks. One usage of this reduces armor RES by 50\% and two reduces by 100\%. Some weapons can lower the cost of this effect with their precision bonus.
 
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
 
@@ -278,11 +278,11 @@ Other types of melee attacks are available depending on the type of weapon used.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within range. It costs an additional +2AP and +1STA on top of the normal attack cost. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 3x the target's natural RES.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within range. It costs an additional +2AP and +1STA on top of the normal attack cost. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 3x the target's natural TGH.
 
-\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with impact > 3x natural RES.  Gains +50\% damage if the opponent attempts to perform an evasive jump and +100\% if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
+\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with impact > 3x natural TGH.  Gains +50\% damage if the opponent attempts to perform an evasive jump and +100\% if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
 
-\textbf{ Assassinate :} Requires being in short range and having a free hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +2 precision. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
+\textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +2 precision. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
 }
 
 % \textbf{Disarm:} A melee attack that attempts to disarm the opponent. This attack does not deal damage, but if it is a critical, it disarms the opponent with impact > natural RES. If it is a hit, it disarms with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to block by redirecting.
@@ -295,9 +295,9 @@ Other types of melee attacks are available depending on the type of weapon used.
 
 \textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
 
-\textbf{Block:} Costs 2 AP and can be done using weapons, objects or shields, but only shields or large objects can be used to block precise attacks. On a graze or miss, the damage is 100\% - blocking object's defenses. The remainder is transferred to the character. 
+\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On a miss or graze, the attack impact is reduced by STR for one-handed weapons and by 2xSTR for two-handed weapons and shields. The blocked damage can break the blocking object. The remaining impact hits the defender and is used to calculate the PEN. 
 
-\textbf{Redirect:} makes a defensive attack against a weapon by spending 3 AP. On a graze, the attack impact is reduced by STR for one-handed weapons and by 2xSTR for two-handed weapons or shields. On a miss, the impact is further reduced by +1xSTR. The resulting impact hits the defender and is used to calculate the PEN. Redirect has a +3 bonus against long weapons if the characters are at close range.
+\textbf{Redirect:} uses 3 AP on block to double the amount of damage blocked. If the attack misses, there is no risk of gear breakage.
 
 \textbf{Protect:} It is possible to defend an ally by staying within their melee range and the attack at the same time. The defender can redirect or block an attack directed at an ally.}
 
@@ -305,9 +305,9 @@ Other types of melee attacks are available depending on the type of weapon used.
 
 \skill{Grapple}{Melee}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
 
-\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand. If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
+\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only redirect. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only redirect. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles.
 
 \textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
 
@@ -378,11 +378,13 @@ Effects of an explosion that have a DL, such as pushing enemies, receive +5 agai
 In all cases, if the character is interrupted, they cannot move after the interruption.
 }
 
-\section{Combat Positioning and Object Interaction}
+\section{Positioning, Tactics and Object Interaction}
 
 \textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
 
 \textbf{Follow:} A character can, as a reaction to any movement except running, follow another character who is already within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
+
+\textbf{ Feint :} if nobody wants to take their turn in melee, a feint can be performed. It is a cunning against cunning test between two characters in melee. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. The target cannot feint back with those AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP.
 
 \textbf{Flanking:} Whenever two characters cannot fit completely within a radius of 180 degrees relative to a target, the target must focus on one target at a time. Use 3 surrounding hexes for a hex grid. Switching focus costs 1 AP and is necessary in order to react to the target. If the target of the attack moves as a part of its defense, like with evasive jump, the 1 AP cost is waived as long as the final destination reduces the angle back to 180 degrees or lower.
 

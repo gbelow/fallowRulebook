@@ -125,7 +125,7 @@ Karma can also be subtracted as a penalty for acting against the principles of a
 
 Constitution governs the enhancement of attributes, health, and also mutation abilities.
 
-\textbf{Health:} The character's ability to heal wounds and resist toxins. The use of health is described in the chapter on survival.
+\textbf{Health:} The character's ability to heal wounds, recover from exhaustion, and resist toxins. The use of health is described in the chapter on survival.
 
 \subsection{Attributes}
 
@@ -139,7 +139,7 @@ Attributes represent the physical characteristics of the character. They are div
 
 Represents the weight and muscular strength of a character. Characters with higher STR can hit harder, resist damage better, and perform more impressive feats of strength.
 
-\textbf{Natural Toughness (TGH natural), Natural Resistance (RES natural), and Natural Insulation (INS natural)} define how much damage a character can withstand before receiving cuts, impact, and burn injuries, respectively. Their default value for all three is 0.5xSTR xDM.
+\textbf{Natural Toughness (TGH natural), Natural Resistance (RES natural), and Natural Insulation (INS natural)} define how much damage a character can withstand before receiving impact, cuts and burn injuries, respectively. Their default value for all three is 0.5xSTR xDM.
 
 \subsubsection{AGI}
 
@@ -153,13 +153,13 @@ Represents the total breath and physical energy of the character. It is used to 
 
 Size is a characteristic that defines how much space a creature occupies on the grid and modifies the physical qualities of characters, weapons, and armor.
 
-Consider that the weight of a creature increases 10 times every 2 categories or 3 times for each category. A human is a creature of size 3 and weighs about 50kg. Therefore, a creature of size 1 would be a cat weighing 5kg, and a horse would be a creature of size 5, as it weighs about 500kg.
+\textbf{Size interpretation:} Consider that the weight of a creature increases 10 times every 2 categories or 3 times for each category. A human is a creature of size 3 and weighs about 50kg. Therefore, a creature of size 1 would be a cat weighing 5kg, and a horse would be a creature of size 5, as it weighs about 500kg.
 
-A creature of size 3 in human form occupies 1 square or hexagon. For every 2 size categories, a character on a square grid will increase their dimensions by 1 square, and a hexagonal grid will occupy 3 spaces (placing the token in the middle of 3), then 7, then 19 (with the token in the central hexagon and expanding outward by 1 hexagon).
+\textbf{Size and Space Occupation: } A creature of size 3 in human form occupies 1 square or hexagon. For every 2 size categories, a character on a square grid will increase their dimensions by 1 square, and a hexagonal grid will occupy 3 spaces (placing the token in the middle of 3), then 7, then 19 (with the token in the central hexagon and expanding outward by 1 hexagon).
 
-Two creatures of size 3 can occupy the same hexagon, but both receive the grappled condition while doing so. The number of creatures increases by 1 for each size below 3, and the penalty only applies when the limit is reached. Larger creatures cannot occupy the same central space, but they can share the edge hexagons, also receiving the grappled condition. The condition does not apply to the larger creature if its size is 2 greater than that of the smaller.
+Two creatures of size 3 can occupy the same space, but cannot end a turn like that. A creature can occupy the same space as another of two sizes higher than itself.
 
-\textbf{Increasing a creature:} The strength of a creature increases with the cross-sectional area of a muscle, while weight increases with volume. Therefore, when increasing the size of a creature without changing its shape, it receives a penalty of -1 STR and -1 natural AGI.
+\textbf{Scaling a creature:} The strength of a creature increases with the cross-sectional area of a muscle, while weight increases with volume. Therefore, when increasing the size of a creature without changing its shape, it receives a penalty of -1 STR and -1 natural AGI.
 
 \textbf{Standard Deflection (SD):} is the standard difficulty to hit a target, which is based solely on its size and movement. The larger the target, the easier it is to hit. The standard deflection is equal to -5-1xSM for stationary targets and -2-1xSM for moving targets. It is impossible for any type of penalty to reduce a character's deflection to a value lower than the SD.
 
@@ -185,6 +185,8 @@ Climbing & -2x \\
 \end{center}
 
 \textbf{Movement Multiplier (MM):} multiplies all movement speeds and the range of all weapons.
+
+\textbf{Volume Multiplier (VM):} multiplies the weight of the character and items when scaling.
 
 \bigskip
 
@@ -252,7 +254,7 @@ Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\[0.5em]
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
-\item Can choose 2 talents to have +1.
+\item Increases one talent by 1 at creation.
 \item Can choose one from Tireless, Large Hands, and Beautiful.
 \end{itemize}
 

@@ -23,9 +23,9 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Small/One/Two hands:} Small weapons can be easily concealed and give +2 to Strike against oponents involved in the same grapple as oneself. One-handed weapons require only one hand to attack and defend. Two-handed weapons require both hands to attack and block.
 \item \textbf{Heavy I/II/III:} Allows for heavy attacks.
 \item \textbf{Precise:} weapons grazes behave like a miss. They cannot deal more than tier 2 damage unless targeting vulnerable areas. Their PEN damage does not count for equipment breakage. They can only be blocked by shields.
-\item \textbf{RES/TGH:} indicates the Resistance of the attack.
+\item \textbf{TGH/RES:} indicates TGH and RES of that part of the weapon, which are the thresholds for gear breakage.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
-\item \textbf{Shot:} indicates that the ranged attack can be used, as well as the precise shot and quick shot. It cannot be redirected, only blocked.
+\item \textbf{Shot:} indicates that the ranged attack can be used, as well as the precise shot and quick shot. This can only blocked with a shield.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
 \item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a -3 penalty to hit the attack, increases the cost of AP and STA for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
 \end{itemize}
@@ -55,20 +55,20 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Small Arms} } \\
 \hline
-Weapon & RES/TGH & impact/PEN & AP & hand & range & properties & price & weight \\
+Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight \\
 \hline
-\textbf{Unarmed} & STR/STR & 0/0 & 3 & small & short & sweep, grapple, DEF, draw & - & 0 \\
+\textbf{Unarmed} & 0.5x STR/0.5x STR & 0/0 & 3 & small & short & grapple, DEF, draw & - & 0 \\
 & STR/STR & 0.5x STR/0.2x & 3 & small & short & heavy I, draw & - & 0 \\[5pt]
 \hline
-\textbf{Claws} & STR/STR & 6/1x & 3 & small & short & heavy I, grapple, sweep, DEF & - & 0 \\[5pt]
+\textbf{Claws} & 10/10 & 6/1x & 3 & small & short & heavy I, grapple, DEF & - & 0 \\[5pt]
 \hline
-\textbf{Brass Knuckles} & 25/50 & 0/0 & 3 & small & short & grab, DEF & - & 15 GP \\
-& 50/40 & STR/0.2x & 3 & one & short & &&\\ [5pt]
+\textbf{Brass Knuckles} & 25/25 & 0/0 & 3 & small & short & grapple, DEF & - & 15 GP \\
+& 25/25 & STR/0.2x & 3 & one & short & &&\\ [5pt]
 \hline
-\textbf{Dagger} & 20/50 & 8/2x & 3 & small & short & draw, DEF, precise & 3 GP & 2\\
+\textbf{Dagger} & 15/50 & 8/2x & 3 & small & short & draw, DEF, precise & 3 GP & 2\\
 & 20/40 & 6/2x & 3 & small & STR & draw, precise throw & 2\\ [5pt]
 \hline
-\textbf{Rondel} & 20/50 & 8/2x & 3 & small & short & draw, DEF, heavy I, precise & 5 GP & 2\\
+\textbf{Rondel} & 15/50 & 8/2x & 3 & small & short & draw, heavy I, precise & 5 GP & 2\\
 \hline
 \textbf{Whip} & 0/10 & 6/1x & 3 & small & long II & draw & 2 GP & 5\\
 & 10/30 & 0/4 & 3 & small & long II & grab & & \\[5pt]
@@ -99,24 +99,24 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large One-Handed Weapons} } \\
 \hline
-Weapon & RES/TGH & impact/PEN & AP & hand & range & properties & price & weight \\
+Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight \\
 \hline
 \textbf{Short Sword}& 20/50 & 8/2x & 3 & one & short & precise, draw & 8 GP & 5\\
-& 25/50 & 10/1x & 3 & one & short & sweep, draw, DEF, heavy I  && \\ [5pt]
+& 15/50 & 10/1x & 3 & one & short & sweep, draw, DEF, heavy I  && \\ [5pt]
 \hline
-\textbf{Rapier} & 15/40 & 8/2x & 3 & one & long I & draw, precise & 10 GP & 5\\
- & 20/40 & 0/0 & 0 & one & long I & DEF & & \\[5pt]
+\textbf{Rapier} & 10/50 & 8/2x & 3 & one & long I & draw, precise & 10 GP & 5\\
+ & 10/50 & 0/0 & 0 & one & long I & DEF & & \\[5pt]
 \hline
 \textbf{Short Spear} & 20/50 & 8/2x & 4 & one & long I & braced, precise & 4 GP & 10 \\
 & 20/50 &  8/2x  & 3 & two & long I & braced, precise, heavy I && \\
-& 25/20 & 0/0.2X & 3 & two & short & DEF+0, Shaft, grab &  & \\
+& 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple &  & \\
 & 20/50 &  8/2x  & 5 & one & 2xSTR & throw, precise && \\[5pt]
 \hline
 \textbf{Mace} & 100/100 &  12/0.2x & 3 & one & short & heavy II & 4 GP & 5\\
-\textbf & 30/20 & 0/0 & 2 & one & short & DEF, shaft &  & \\[5pt]
+\textbf & 15/15 & 0/0 & 2 & one & short & DEF, shaft &  & \\[5pt]
 \hline
-\textbf{Battle Axe}& 40/50 & 14/1x & 4 & one & short & heavy I & 5 GP & 5\\
-& 30/20 & 0/0 & 2 & one & short & DEF+0 && \\ [5pt]
+\textbf{Battle Axe}& 25/50 & 14/1x & 4 & one & short & heavy I & 5 GP & 5\\
+& 15/15 & 0/0 & 2 & one & short & DEF && \\ [5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -145,32 +145,32 @@ Weapon & RES/TGH & impact/PEN & AP & hand & range & properties & price & weight 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Two-Handed Weapons} } \\
 \hline
-Weapon & RES/TGH & impact/PEN & AP & hand & range & properties & price & weight \\ 
+Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight \\ 
 \hline
 \textbf{Longsword} & 20/50 & 12/1x & 3 & two & long I & sweep, DEF, heavy I & 12GP & 10\\
 % & 40/x2 & STR/1x & 3 & two & short & heavy I && \\
-& 20/50 & 8/2x & 4 & two & short & precise, heavy I && \\
+& 30/50 & 8/2x & 4 & one & short & precise, heavy I && \\
 & 20/50 & 8/2x & 3 & two & long I & precise && \\[5pt]
 \hline
 \textbf{Pike} & 20/50  &  8/2x & 3 & two & long II & braced, precise, heavy I & 6 GP & 15\\ 
-& 30/25 & 0/0 & 2 & two & long I & Shaft & & \\ [5pt] 
+& 15/15 & 0/0 & 2 & two & long I & Shaft & & \\ [5pt] 
 \hline
 \textbf{Halberd} & 20/50  & 8/2x & 3 & two & long I & braced, precise, heavy I& 12GP & 15\\
 & 30/50 & STR/1x & 3 & two & long I & hook & & \\
-& 30/25 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
+& 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
 & 60/50 & 18/1x & 4 & two & long I & heavy II && \\ [5pt]
 \hline
 \textbf{Warhammer} & 50/20  & 8/2x & 3 & two & long I & braced, precise, heavy I & 12GP & 15\\
 & 30/50 & STR/1x & 3 & two & long I & hook& & \\
-& 30/20 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
+& 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
 & 200/200 & 20/0.2x & 4 & two & long I & heavy III&& \\ [5pt]
 \hline
 \textbf{Bardiche} & 40/50 & 18/1x & 4 & two & long I & heavy II, sweep & 10 GP & 5 \\
-\textbf & 30/25 & 0/0.2X & 3 & two & short & DEF, shaft, grapple & & \\ [5pt]
+\textbf & 15/15 & 0/0.2X & 3 & two & short & DEF, shaft, grapple & & \\ [5pt]
 \hline
 \textbf{Greatsword} & 30/50 & 14/1x & 4 & two & long I & sweep, DEF, heavy II & 18 GP & 20\\
 % & 100/x2 & STR/0 & 3 & two & short & heavy I && \\
-& 60/20 &  8/3x & 3 & two & long I & precise, braced && \\[5pt]
+& 20/50 &  8/3x & 3 & two & long I & precise, braced && \\[5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -205,7 +205,7 @@ Weapon & RES/TGH & impact/PEN & AP & hand & range & properties & price & weight 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Ranged Weapons} } \\
 \hline
-Weapon & RES/TGH & impact/PEN & AP & hands & range & properties & price & weight \\
+Weapon & TGH/RES & impact/PEN & AP & hands & range & properties & price & weight \\
 \hline
 \textbf{Net} & 60/15 & DL 13 grab & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & 5 \\ [5pt]
 \hline
@@ -217,11 +217,11 @@ Weapon & RES/TGH & impact/PEN & AP & hands & range & properties & price & weight
 \hline
 \textbf{Long Bow*} & 10/10 & 6/3x & 5 & two & 150m & STR 13, precise, shot & 8 GP & 10\\
 \hline
-\textbf{Heavy Bow* **} & 10/10 & 6/3x & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
+\textbf{Heavy Bow* **} & 10/10 & 7/3x & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
 \hline
 \textbf{Crossbow} & 10/10 & 6/3x & 3+5 & two & 150m & reload, precise, shot & 8 GP & 5 \\
 \hline
-\textbf{Arbalest**} & 10/10 & 6/3x & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
+\textbf{Arbalest**} & 10/10 & 7/3x & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
 \hline
 \end{tabular}
 \end{table}
@@ -247,11 +247,11 @@ Types of arrows:
 \begin{center}
 \begin{tabular}{||c c c c c c c||}
 \hline
-Name & Penalty & Deflection & RES/TGH & Insulation & Weight & Value\\ [1ex]
+Name & Penalty & Deflection & TGH/RES & Insulation & Weight & Value\\ [1ex]
 \hline \hline
-Wooden Shield & -1 & +3 & 30/25  & 10 & 10 & 1 GP\\
-Metal Shield & -2 & +3 &  60/60 & 10 & 25 & 15 GP\\
-Wooden Tower* & -2 & +4 & 30/25 & 15 & 20 & 2 GP\\
+Wooden Shield & -1 & +3 & 20/20  & 10 & 10 & 1 GP\\
+Metal Shield & -2 & +3 &  40/50 & 10 & 25 & 15 GP\\
+Wooden Tower* & -2 & +4 & 20/20 & 15 & 20 & 2 GP\\
 \hline
 \end{tabular}
 \end{center}
@@ -261,6 +261,8 @@ Body shields are marked with * in the table and can provide total cover.
 \begin{multicols}{2}
 
 \section{Armors}
+
+Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. PEN is both the armor breakage threshold and the damage reduction against PEN, since the armor must be destroyed to allow PEN damage to hit the wearer.
 
 \textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected in the AGI attribute values and as an increase in the action surge cost by penalty/3. During travel, it also affects the STA value used to determine wear. The penalties stack.
 
@@ -281,7 +283,7 @@ Body shields are marked with * in the table and can provide total cover.
 \begin{center}
 \begin{tabular}{||c c c c c c c c||}
 \hline
-Name & RES/TGH & Protection & Insulation  & Coverage & Penalty & Price & Weight \\ [1ex]
+Name & TGH/RES & Protection & Insulation & Coverage & Penalty & Price & Weight \\ [1ex]
 \hline\hline
 Cloth &&&&&&&\\
 \hline
@@ -297,9 +299,9 @@ Brigandine & 0/20 & 10 & 8  & +6 & -2 &  50 GP & 60\\
 \hline
 Rigid &&&&&&&\\
 \hline
-Half Armor & 40/30 & 15 & 7  & +5 & -2 & 60 GP & 60\\
-Full Armor & 40/30 & 15 & 10  & +7 & -3 & 100 GP & 80\\
-Reinforced Armor & 50/40 & 18 & 10  & +8 & -4 & 150 GP & 140\\
+Half Armor & 25/40 & 15 & 7  & +5 & -2 & 60 GP & 60\\
+Full Armor & 25/40 & 15 & 10  & +7 & -3 & 100 GP & 80\\
+Reinforced Armor & 30/50 & 18 & 10  & +8 & -4 & 150 GP & 140\\
 \hline
 \end{tabular}
 \end{center}
@@ -329,20 +331,20 @@ A high-quality padded armor would be much more expensive but would improve resis
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Condition: Sharp - Weapon has +25\% PEN until it collides 3 times with objects of hardness 3 or 4. It can be sharpened to a higher degree, increasing by an additional 25\%.
+    \item Condition: Sharp - Weapon has +25\% PEN until the end of the combat. It can be sharpened to a higher degree, increasing by an additional 25\%.
     \item Condition: Dull - Weapon loses 50\% of its PEN.
-    \item Characteristic: Hard: Absorption increases by 50\%, but PEN +25\%.
-    \item Condition/Characteristic: Pitted - Armor has its coverage reduced by 5.
-    \item Condition/Characteristic: Misaligned - Armor has its penalty increased by 2.
+    \item Characteristic: Hard: reduces RES by 25\%, but increases PEN +25\%.
+    \item Condition/Characteristic: Pitted - Armor has its coverage reduced by 3.
+    \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
     \item Characteristic: Insulating: Increases coverage against electric-type damage attacks by +5.
     \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
     \item Characteristic: Sealed: Has infinite coverage against corrosive-type damage attacks.
     % \item Characteristic: Liquid: Immune to damage from slashing and bludgeoning-type attacks.
-    \item Characteristic: Low-quality weapon - Weapon loses 25\% of its PEN and 25\% Resistance. -50\% cost.
-    \item Characteristic: Low-quality armor - Resistance reduced by 25\%. -50\% cost.
-    \item Characteristic: High-quality weapon - Weapon has +25\% Resistance. +200\% cost.
-    \item Characteristic: High-quality armor - Resistance increased by 25\%. +200\% cost.
+    \item Characteristic: Low-quality weapon - Weapon loses 25\% of its PEN and 25\% TGH. -50\% cost.
+    \item Characteristic: Low-quality armor - RES  reduced by 25\%. -50\% cost.
+    \item Characteristic: High-quality weapon - Weapon has +25\% TGH. +200\% cost.
+    \item Characteristic: High-quality armor - RES increased by 25\%. +200\% cost.
     \item Characteristic: Semi-automatic - Has multiple shots per reload.
     \item Characteristic: Air filter - Closed helmet that grants immunity to toxic gas effects.
     \item Characteristic: Magnetic - Allows the use of magnetic abilities with the equipment.
@@ -353,15 +355,15 @@ A high-quality padded armor would be much more expensive but would improve resis
 
 The equipment breakage function is optional.
 
-\textbf{Equipment Breakage:} Objects are composed of two components: Resistance and Toughness. They can deal and take damage whenever they collide with something else, whether the collision is caused by themselves or by the other object.
+\textbf{Equipment Breakage:} Objects can be destroyed by impact, cutting or burning. The object's RES and TGH represent their resistance to the first two. Destroying an object by burning is a special case that depends on the material. The order of manitude of burning damage is much higher than what would be lethal to a creature, so it is not necessary to have a specific value for it.
 
-\textbf{Thoughness:} is the ability to resist cuts, that is, PEN. Whenever a piece of equipment receives PEN damage > TGH, the equipment breaks.
+Objects can deal and take damage whenever they collide with something else, whether the collision is caused by themselves or by the other object. PEN damage is dealt exclusively by the attacking object to its target, while impact is dealt to both.
 
-\textbf{Resistance:} Is the ability to absorb impact. Whenever a piece of equipment causes an impact, both objects must check whether they receive impact > RES. If they do, the object breaks.
+\textbf{Breakage throuh physical damage:} compare impact and PEN from the attacking object to the TGH and RES of the receiving one. Whenever a piece of equipment receives impact/PEN damage > TGH/RES, the equipment has a 1 in 6 chance to break. If both thresholds are crossed, increase the chance to 3 in 6. If one of the thresholds is exceeded twice, the item breaks instantly.
 
-\textbf{Materials and Hardness:} There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, flexible armors, and similar materials. The third is for wood and horns. The fourth is for metals and rocks. Collisions involving materials of hardness 1 and 2 do not pose a risk of breakage from impact to any of the materials.
+\textbf{Materials and Hardness:} There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, flexible armors, and similar materials. The third is for wood and horns. The fourth is for metals and rocks. Collisions involving materials of hardness 1 and 2 do not pose a risk of breakage to other materials.
 
-\textbf{Weapon Breakage:} A broken weapon can no longer be used and costs 50\% of its original value to be repaired. Polearms only require the replacement of the pole.
+\textbf{Weapon Breakage:} A broken weapon can no longer be used and costs 50\% of its original value to be repaired. Weapons that have a shaft require the replacement of the shaft.
 
 \textbf{Armor Breakage:} When armor breaks, it is considered pitted. Repairing armor costs 20\% of the armor's value.
 
@@ -507,12 +509,14 @@ Potions add an effect to the character for a certain duration. The effects of po
     % \item Power: Increases power by +2 for 1 day, 4 GP.
 \end{itemize}
 
-Poisons apply an effect to the target. The magnitude of the effect is determined by the potency of the poison, the amount of poison applied and the target´s resistance to the poison, represented by Health. The amount of poison applied is determined by the method of application (some methods may increase the amount of poison applied) and the seriousness of the injury.
+\textbf{Poisons} apply an effect to the target. The magnitude of the effect is determined by the potency of the poison, the amount of poison applied and the target's resistance to the poison, represented by Health. The amount of poison applied is determined by the method of application (some methods may increase the amount of poison applied) and the seriousness of the injury.
+
+\textbf{Dosage:} Tier 1+ wounds from PEN apply the full effect of the poison. Tier 0 decrease DL by 3. Inhalation applies the normal DL, independent of creature size.
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Anticoagulant Poison: DC 5 health to apply bleeding on a hit when dealing serious wounds and also on a crit when dealing light wounds, 10 GP for a vial with 10 applications and weight 1.
+    \item Anticoagulant Poison: DL 5 health when applied to get 1 point in hemorrhage, 10 GP for a vial with 10 applications and weight 1.
     % \item Paralytic Poison: DC 10 health to avoid being paralyzed and lose 100/50/25/0 \% of maximum AP for 1 hour or until receiving an antidote.
 \end{itemize}
 
