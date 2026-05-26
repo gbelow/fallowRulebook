@@ -18,8 +18,6 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{Safe and risky tests:} It is possible to perform some tests safely or riskily. In the safe form, roll 2 d10 and take the result closest to 5. Similarly, it is possible to perform tests in a risky manner. In this case, roll 2 d10 and take the result farthest from 5. On a draw, use the average value or roll again. This mechanic can only be used when indicated in the skill or ability or when the GM allows it.
 
-% \textbf{Special Failure:} If the total skill value is less than 5 due to a natural 1, something especially bad may happen, such as breaking a weapon, dropping all arrows from the quiver, or falling. This is an optional rule, and its application is entirely at the Master's discretion.
-
 \textbf{Note on difficulties:} When designing DLs, to put things in perspective, consider that a DL of -5 is trivial, 0 is average, 5 is difficult, and 10 is very difficult.
 
 \section{Turns and Actions}
@@ -34,17 +32,17 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want.
 
-\textbf{Action surge:} All characters are entitled to one action surge per round. There are 3 basic types of action surges: movement, combat, and reaction.
+\textbf{Action surge:} All characters are entitled to one action surge per round. There are 5 basic types of action surges: movement, combat, shooting, sorcery, and reaction.
 
 \begin{itemize}
-    \item Movement: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
-    \item Combat: 3 STA to gain 6 AP that must be used immediately.
-    \item Reaction: 3 STA to gain 6 AP, but can only use reactions and rest until the end of the round. It is possible to rest and perform the reaction surge simultaneously, as long as AP and STA remain greater than or equal to 0 at the end of the action.
+    \item Movement surge: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
+    \item Combat surge: 3 STA to gain 6 AP that can be used for anything and must be used immediately.
+    \item Reaction surge: 3 STA to gain 6 AP, but can only use reactions and rest until the end of the round.
 \end{itemize}
 
-\textbf{End of the round:} A round ends when no one has AP left, nor action surge. When the round ends, all characters regain their AP. If anyone wants to end their turn without spending all AP, any AP that was not spent can be combined with that of the next round to rest, recovering STA.
+\textbf{End of the round:} A round ends when no one has AP left. When the round ends, all characters regain their AP.
 
-\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting, unless they rest in between rounds.
+\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting. Resting can leave the character with negative AP.
 
 \textbf{Environmental and ongoing effects:} Any effect that occurs periodically per turn or is environmental has its effect applied at the beginning of the round.
 
@@ -156,64 +154,88 @@ Usual aggravating factors: \\
 
 \textbf{Injury level (IL):} Any time a character receives damage, they will increase their injury level. They will receive injury penalties for every multiple of their \textbf{injury tolerance (IT)}. The base value for injury tolerance is 10.
 
-\textbf{Injury Capacity:} is the maximum amount of injuries a character can take without collapsing and going unconscious. Its value is 4x IT.
+\textbf{Injury Capacity:} is the maximum amount of injuries a character can take without collapsing and going immobile. Its value is 4x IT.
 
 \textbf{Death:} occurs when the character's injuries exceed 5x IT.
 
 \textbf{Healing Injuries:} characters heal by resting well and using healing magic or potions. Any time the injury level is healed, the character must spend 1 hunger and 1 thirst unless otherwise stated by the specific healing method.
 
-\textbf{Damage:} Any time a character receives damage, it must compare the amount received with the respective threshold for the damage type to determine the injuries caused. All attacks target the chest by default.
+\textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving wounds. The table shows how much IL they receive from injuries at each tier. 
 
 \textbf{Damage Thresholds:} 
 \begin{itemize}
-    \item Tier 0. Damage is higher than the armor's damage reduction to specific type of damage. Increases IL by +1.
-    \item Tier 1. Damage is higher than tier 1 + character's resistance to that kind of damage. Increases IL by +5.
-    \item Tier 2. Damage is higher than tier 1 + 2x character's resistance to that kind of damage. Increases IL by +10 and has a 50\% chance of causing a wound.
-    \item Tier 3. Damage is higher than tier 1 + 3x character's resistance to that kind of damage. Increases IL by +20 and is guaranteed to cause a wound.
-    \item Tier 4+. increases damage to IL by +10 for every additional time the damage overcomes the character's resistance to the kind of damage. Causes amputations.
+    \item Tier 0. Only cutting damage in any amount. Increases IL by +1.
+    \item Tier 1. Damage is higher than TGH. Increases IL by +5.
+    \item Tier 2. Damage is higher than 2x TGH. Increases IL by +10. 50\% chance of causing a wound.
+    \item Tier 3. Damage is higher than 3x TGH. Increases IL by +20. 100\% chance of causing a wound.
+    \item Tier 4. Damage is higher than 4x TGH. Increases IL by +30. Guaranteed to cause a wound.
+    \item Tier 5. Damage is higher than 5x TGH. Increases IL by +50.
 \end{itemize}
 
-\textbf{Damage reductions:} are usually given by armor and are added to each of the damage thresholds.
+\textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds. 
 
-\textbf{Types of damage:} are: physical, burn, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds.
+% \textbf{Multiple types:} Some attacks can cause multiple types of damage. In this case, the damage thresholds are calculated separately for each type of damage, and the injuries caused by each type are considered separately.
 
-\textbf{Physical damage:} There are two components to consider when receiving injuries from physical attacks: Impact (IMP) and penetration(PEN). Any physical damage instance will have some amount of each of these components. 
+\textbf{Physical attacks:} have energy as their main component. If the weapon is not capable of cutting its target, the damage is blunt and its value is equal to energy. If the weapon can cut its target, energy x SHP becomes cutting damage, where SHP is the sharpness of the attack.
 
-\textbf{Penetration:} is the component that represents the ability to cut the target. Sharper and harder weapons have greater penetration. Its respective defense is RES. If the attack causes at least tier 0 damage from penetration, it ignores the armor's insulation.
+\textbf{Blunt damage:} is defended by armor protection. So tier 1 injuries would require damage > prot + TGH and so on.
 
-\textbf{Impact:} is the component that represents the total force applied with the blow. It's respective defense is TGH. Damage caused by impact can cause interruptions.
+\textbf{Cutting damage:} is defended by armor RES, but differently. To cause a tier 0 injury, damage must be greater or equal to armor RES. Tier 1 and above also add RES, but only once for any tier. 
 
-\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. These kinds of damage increase the IL by +5 for every damage tier. For example, tier 1 gives +5, tier 2 gives +10, tier 3 gives +15 and so on. There is no sudden death.
+\textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of hardness, the details are explained in the gear section. The most glaring example: metal is hardness 4 and can cut everything except other metals, stone and a few more hard materials.
 
-\textbf{Electric damage:} It is also defended by INS, with a damage progression same as burn, but electric damage can cause interruptions. 
+\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. It works exactly like blunt damage, but uses armor INS.
 
-\textbf{Wounds:} can be caused by receiving tier 2 or higher damage. Their healing counter is separate from the main injury counter. 
+\textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage.
+
+\textbf{Wounds:} can be caused by receiving high tier damage. Their healing counter is separate from the main injury counter. 
 
 \begin{itemize}
-    \item Broken arm: makes the arm useless. Takes 10 cures to heal.
-    \item Broken leg: makes the leg lame and useless. Takes 15 cures to heal.
-    \item Hemorrhage: a special wound that requires cures to stop bleeding. For every STA spent, the character receives +1 to their IL per hemorrhage cure untreated. It is caused by damage to the chest or head. Hemorrhages do not require the expense of hunger or thirst to be healed. Hemorrhages caused by a T2 wound require 1 cure to be healed. Those caused by T3 require 2 and so on.
-    \item Unconscious: causes unconsciousness.
+    \item Broken arm: Makes the arm useless. Takes 10 cures to heal.
+    \item Broken leg: Makes the leg lame. Takes 10 cures to heal.
+    \item Bleed: a special wound that requires cures to stop bleeding. For every STA spent, the character receives +1 to their IL per Bleed cure untreated. Bleeds caused by a T2 wound require 1 cure to be healed. For every extra tier, they require 1 extra cure. They do not require the expense of hunger or thirst to be healed. It is caused by damage to the chest or head. 
+    \item Unconscious: causes unconsciousness. Happens when receiving damage in the head.
 \end{itemize}
 
-\subsection{Additional damage effects:}
+\subsection{Additional effects:}
 
-When a character receives a tier 1+ of damage or receives a hit from an attack, they may receive additional effects. Each effect costs a number of points. The effects are:
+\textbf{Force and poise:} Force is applied by all physical attacks that deal blunt damage. It can cause interruptions, pushes, knockdowns and such effects. The value of force is derived from energy, and equal to it unless otherwise stated in a weapon property.
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. Interruption occurs whenever a character receives a tier 1 or higher damage from impact or electric damage, causing a minumum loss of 2 AP. Multiple simultaneous interruptions cause the AP loss of all interruptions combined or the AP loss from the lost action, whichever is greater.
+\begin{itemize}
+    \item Force > Poise: Interrupt
+    \item Force > 2x Poise: Knockback
+    \item Force > 3x Poise: Knockdown
+    \item Force > 2x blocking force vs block: Disarm
+    % \item Force > 3x Poise: Stun
+\end{itemize}
 
-\textbf{Damage increase:} For 5 points, increase physical damage by 50\%. Can only be used once per attack and does not affect the PEN of precise attacks.
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP even when not done during an action. 
 
-\textbf{Armor Bypass:} This costs a number of points defined by the targets armor coverage and can only be used by precise attacks. One usage of this reduces armor RES by 50\% and two reduces by 100\%. Some weapons can lower the cost of this effect with their precision bonus.
+\textbf{Knockdown:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
 
+\textbf{Knockdown:} The victim fall to the floor and becomes prone. It is interrupted as well.
+
+% \textbf{Stun:} Receives an interrupt with a minimum loss of 5 AP and falls prone.
+
+\text{Attack bonuses:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overcomes the DL to hit posed by the defender during an attack can be used to activate these effects. The effects are:
+
+\textbf{Armor Bypass:} This costs a number of points defined by 2x the targets armor deflection. It removes RES from the damage calculation of cutting damage. Only attacks from weapons with the precise property can use this effect. If the weapon also has the penetrating property, the effect of penetrating attack happens as well.
+
+\textbf{Penetrating attack:} Costs a number of points equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property. 
+
+\textbf{ Extra cut:} Costs a number of points equal to the target's deflection to increase the amount of cutting damage dealt by 50\% of energy. Only weapons with the bladed property can use this. 
+    
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
 
 For humanoids, there are 4 locations: chest, hand, leg, and head.
 
 \textbf{Chest:} Costs 0 points. Standard location. 
-\textbf{Hand:} Costs 5 points for melee and 10 points for ranged attacks. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage taken from this is 5. A tier 3 damage amputates.
-\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. A tier 4 damage amputates.
-\textbf{Head:} Costs 10 points. The injury tier is increased by 1, except if the increase is from 0 to 1. Precise weapons can deal any tier of injury and receiving interruptions from attacks on the head leave the character unconscious.
+
+\textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage taken from this is 5. Taking 20 IL cutting damage amputates.
+
+\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. A tier 4 cutting damage amputates. Taking force equal to 2x Poise causes the character to lose their balance and fall prone.
+
+\textbf{Head:} Costs 5 points. Target has half the Poise. Tier 4 damage causes instant death.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense.
 
@@ -266,23 +288,23 @@ The survival chapter describes how health works during rest.
 
 %---------------------ATTACK
 
-\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
+\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost is 3 AP, but that may be modified by attack variations. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
 
-\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. The impact dealt to both weapon and target is 150\%, 100\%, 50\%, and 0 in the case of critical, hit, graze, and miss, respectively. Rules on equipement breakage can be found in the equipment chapter.
+\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. Objects break when their RES Rules on equipement breakage can be found in the equipment chapter.
 
-Other types of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
+Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I adds +0.5xSTR to the impact and increases the cost by +1AP+1STA. Heavy II adds +1xSTR to the impact, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR to the impact, costs +3AP+1STA, and gives a -3 penalty to hit.
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy and force of physical attacks by +0.5xSTR , but have an added cost of +1AP+1STA. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. 
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within range. It costs an additional +2AP and +1STA on top of the normal attack cost. The impact of this attack has a +STR bonus and knocks the opponent to the ground on hits if it is greater than 3x the target's natural TGH.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy and force of this attack gains a +STR bonus.
 
-\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with impact > 3x natural TGH.  Gains +50\% damage if the opponent attempts to perform an evasive jump and +100\% if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
+\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with force > 2x poise. Gains +50\% force if the opponent attempts to perform an evasive jump and +100\% if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
 
-\textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +2 precision. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
+\textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +4 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
 }
 
 % \textbf{Disarm:} A melee attack that attempts to disarm the opponent. This attack does not deal damage, but if it is a critical, it disarms the opponent with impact > natural RES. If it is a hit, it disarms with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to block by redirecting.
@@ -291,15 +313,17 @@ Other types of melee attacks are available depending on the type of weapon used.
 
 \skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, damage is taken normally. If it grazes or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Redirect, and Block.
 
-\textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a glancing blow, the attack has 50\% damage, and on misses, it has 0.
+\textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a graze, the attack has 50\% damage, and on misses, it has 0.
 
 \textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
 
-\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On a miss or graze, the attack impact is reduced by STR for one-handed weapons and by 2xSTR for two-handed weapons and shields. The blocked damage can break the blocking object. The remaining impact hits the defender and is used to calculate the PEN. 
+\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by RES of the weapon or shield. On a miss, the shield get +50\% RES bonus. A blocking object can break if damage is greater than RES.
 
-\textbf{Redirect:} uses 3 AP on block to double the amount of damage blocked. If the attack misses, there is no risk of gear breakage.
+\textbf{Redirect:} uses 3 AP to redirecting the blow. It requires the defender to be in short range and can be done with a shield or weapon with the DEF or grapple property. On a graze, cancels the attack if the defense's force is greater than that of the attack. On a miss, increases the defense's force by 100\%.
 
-\textbf{Protect:} It is possible to defend an ally by staying within their melee range and the attack at the same time. The defender can redirect or block an attack directed at an ally.}
+\textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or redirect an attack directed at an ally.}
+
+% \textbf{Flinch:} This is a reaction that costs 1 AP and only increases cover by 2. The attack is still made against the SD.
 
 %----------------------- Grapple
 
@@ -336,11 +360,11 @@ Multiple characters can assist each other in the grab. Any skill test made by se
 
 \textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
 
-\textbf{Immobile Targets and Shooting Errors:} The DL to hit an immobile target occupying a space of 1m is equal to -5-2*SM. If a projectile misses the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
+\textbf{Immobile Targets and Shooting Errors:} The DL to hit an immobile target occupying a space of 1m is equal to -5-1*SM. If a projectile misses the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
 
 \textbf{Moving Targets:} It is possible to shoot at moving targets as a reaction. The total amount of AP spent to shoot cannot exceed the amount of AP spent on movement. The AP count starts when the target becomes visible. The target's position at the moment of the shot is where it is at the end of the movement.
 
-\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes visible.
+\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes visible. It is possible to prepare to shoot the same target as an ally as a reaction to their ranged attack. The shot occurs at the same time as the ally's shot.
 
 \textbf{\large Types of Ranged Attacks:}
 
@@ -348,9 +372,9 @@ Other types of ranged attacks will be available depending on the type of weapon 
 
 \textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons gain range based on STR.
 
-\textbf{Shoot:} Basic ranged attack with a shooting weapon. It cannot be blocked without a large or tower shield.
+\textbf{Shoot:} Basic ranged attack with a shooting weapon.
 
-\textbf{Snipe:} Modifies the shot to cost an additional 2 AP to gain +2 in accuracy and shoot with a -1 distance penalty instead of -2 for the first 50m.
+\textbf{Snipe:} Modifies the shot to cost an additional 2 AP to shoot with a -1 distance penalty instead of -2 for the first 50m.
 
 \textbf{Quick Shot:} Modifies the shot to cost 1 AP less to shoot, but incurs a -3 penalty in accuracy and -3 in distance instead of -2.
 }
@@ -373,7 +397,7 @@ Effects of an explosion that have a DL, such as pushing enemies, receive +5 agai
 
 \textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they can spend an extra STA to jump in any direction before the explosion occurs. On a graze or miss, they can move 2 AP after the explosion.
 
-\textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield deflection test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal PEN damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
+\textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield deflection test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
 
 In all cases, if the character is interrupted, they cannot move after the interruption.
 }
@@ -383,8 +407,6 @@ In all cases, if the character is interrupted, they cannot move after the interr
 \textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
 
 \textbf{Follow:} A character can, as a reaction to any movement except running, follow another character who is already within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
-
-\textbf{ Feint :} if nobody wants to take their turn in melee, a feint can be performed. It is a cunning against cunning test between two characters in melee. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. The target cannot feint back with those AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP.
 
 \textbf{Flanking:} Whenever two characters cannot fit completely within a radius of 180 degrees relative to a target, the target must focus on one target at a time. Use 3 surrounding hexes for a hex grid. Switching focus costs 1 AP and is necessary in order to react to the target. If the target of the attack moves as a part of its defense, like with evasive jump, the 1 AP cost is waived as long as the final destination reduces the angle back to 180 degrees or lower.
 
@@ -435,7 +457,7 @@ Multiple characters can participate in a strength conflict. Any skill check made
 
 \textbf{Resolving the impact:} This damage can be defended against with evasive jump or reflex as if they were melee or ranged attacks. Trying to block is impossible, even with a shield. Spend 3 PA +1 STA to use redirect instead. If the damage is reduced to 0, the object is stopped.
 
-\textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is 10 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
+\textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is 0 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
 
 \section{Stealth and Subterfuge}
 
@@ -467,9 +489,9 @@ Some common stealth events and their estimated stealth and cunning DLs are in th
     \item sneaking in squeaking floorboards: stealth DL 8, cunning DL -2 hearing
 \end{itemize}
 
-\textbf{Remaking Stealth checks:} The stealth check is done once per round in combat, at the beginning of the round, or once per scene outside combat. A scene only changes if the conditions for stealth change significantly. That is a subjective call, but it is recommended that new rolls are not repeated for every action in stealth.
+\textbf{Remaking Stealth checks:} The stealth check is done once per round in combat, at the beginning of the round, or once per scene outside combat. A scene only changes if the conditions for stealth change significantly. That is a subjective call, but it is recommended that new rolls are not repeated often.
 
-\textbf{Event DL modifier:} Some actions will make the stealth test more difficult. If one of these aggravating events happen within the same scene or round, the last test score is reutilized, adding the new penalty.
+\textbf{Event DL modifier:} Some actions will make the stealth test more difficult. If one of these aggravating events happen within the same scene or round, a new cunning test is called, adding the modifier to the detector's cunning skill.
 
 Here are the stealth DL modifications:
 \begin{itemize}
@@ -478,12 +500,14 @@ Here are the stealth DL modifications:
     \item attacking in melee: +3 hearing and vision
     \item careful movement and crawling: 0 hearing and vision
     \item running: +5 hearing and vision
-    \item ranged attacks: +2 to vision
+    \item ranged attacks: +2 to hearing and vision
     \item basic movement: +2 hearing and vision
 \end{itemize}
  .}
 
 \skill{Cunning}{Detection}{ Cunning is used to determine priority when competing to take a combat turn first. It is also used to detect things in stealth or just for looking for things in general.
+
+\textbf{ Feint :} if nobody wants to take their turn in melee, a feint can be performed. It is a cunning against cunning test between two characters in melee. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. The target cannot feint back with those AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP.
 
 \textbf{Detection:} the skill value used for detection is the cunning skill plus bonuses from one of the senses. The roll gets called when the added value is greater or equal to the DL of stealth events. The detection check is rolled once per character per round or scene for all events. On a failure or graze, nothing is noticed. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. The rolled value is used for all cunning checks for the entire round or scene.
 
@@ -497,7 +521,7 @@ Here are the stealth DL modifications:
 
 \textbf{Smell:} is a passive sense. Stealth events gain +3 from each distance band. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
 
-\textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed. Projectiles that hit the character have their direction identified, not necessarily their source. Fighting with touch makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
+\textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed to it. Projectiles that hit the character have their direction identified, not necessarily their source. Using only touch as an active sense makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
 
 \textbf{Distance bands:} The DL from stealth events to cunning is penalized by distance. The magnitude of the modification depends on the specific sense used to detect.
 \begin{itemize}
@@ -520,9 +544,9 @@ Here are the stealth DL modifications:
 
 \textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's TN. If cunning is equal or higher than TN, they find it. 
 
-\textbf{Focusing attention:} This can be used to get +3 to the detection test when looking attentively at one specific thing. It can be used when a player says they want to look at a specific place to see better detail or when someone points out a direction for others to focus. 
+\textbf{Focusing attention:} This can be used to get +5 to the detection test when looking attentively at one specific thing. It can be used when a player says they want to look at a specific place to see better detail or when someone points out a direction for others to focus. 
 
-\textbf{Distraction:} A character can be distracted by something, reveiving -3 to cunning against everything other than the distraction. A character engaged in melee combat is automatically distracted.
+\textbf{Distraction:} A character can be distracted by something, receiving -3 to cunning against everything other than the distraction. A character engaged in melee combat is automatically distracted.
 
 \textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 3 AP to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 
@@ -572,26 +596,26 @@ They can also be learned with conviction XP or with devotion. In this case, they
 
 Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. They are applied after making the sorcery test, but cannot cause the test to graze or fail.
 
-\textbf{Accelerate Spell:} Increases the sorcery DC by 3 to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
+\textbf{Accelerate Spell:} Increases the sorcery DL by 3 to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
 
-\textbf{Extend Spell:} Increases the sorcery DC by 2 to increase the range of a spell according to the MM.
+\textbf{Extend Spell:} Increases the sorcery DL by 2 to increase the range of a spell according to the MM.
 
-\textbf{Enhance Spell:} Increases the sorcery DC by 4 to improve spells in a special way described in the spell.  \\
+\textbf{Enhance Spell:} Increases the sorcery DL by 4 to improve spells in a special way described in the spell.  \\
 
-\textbf{Amplify Spell:} Increases the sorcery DC by 4 to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
+\textbf{Amplify Spell:} Increases the sorcery DL by 4 to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
 
-\textbf{Extend Charge Duration:} Increases the sorcery DC by 2 to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
+\textbf{Extend Charge Duration:} Increases the sorcery DL by 2 to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
 
-\textbf{Efficient Spell:} Increases the sorcery DC by 4 to reduce the exhaustion or STA cost of a spell by half. \\
+\textbf{Effortless Spell:} Increases the sorcery DL by 4 to rest while casting a spell. The spell must spend the higher between the rest's AP cost and the spell's AP cost. If used outside combat, reduces the exhaustion cost of a spell by half.  \\
 
 The types of spells are:
 
 \begin{itemize}[noitemsep]
 \item Environmental: The spell alters the environment.
 \item Effect: Spells that directly affect the target and have various effects. They have customized enhancements.
-\item Psychic: Spells that directly affect the target and have psychic effects. They use the Charisma proficiency as the Difficulty Level (DL). Enhancing increases the DC by 2.
-\item Projectile: Spells that function as projectiles, using the shooting skill as the DC.
-\item Touch: Spells that function as strikes, using the striking skill as the DC. They do not trigger opportunity attacks.
+\item Psychic: Spells that directly affect the target and have psychic effects. They use the Charisma proficiency as the Difficulty Level (DL). Enhancing increases the DL by 2.
+\item Projectile: Spells that function as projectiles, using the shooting skill as the DL.
+\item Touch: Spells that function as strikes, using the striking skill as the DL. They do not trigger opportunity attacks.
 \end{itemize}
 
 

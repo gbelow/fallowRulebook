@@ -2,7 +2,7 @@
 
 \begin{multicols}{2}
 
-\section{Weapons and Shields}
+\section{Weapons Properties}
 
 A weapon is a tool used in combat to enhance the character's abilities. Each weapon or shield has at least one form of attack. Each form has its own properties: \\
 
@@ -10,7 +10,7 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
-\item \textbf{Grapple:} This attack is used for grappling actions.
+\item \textbf{Grapple:} This attack is used for grappling actions, its force is equal to STR.
 \item \textbf{Sweeping:} Allows for Sweeping attacks.
 \item \textbf{Braced:} This attack can be a braced attack.
 \item \textbf{Throw:} indicates that the throw attack can be used.
@@ -19,30 +19,36 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{DEF:} Attacks that have DEF can be used to block. 
 \item \textbf{STR x:} Strength requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
-\item \textbf{Impact/PEN:} indicates the impact and its penetration. PEN is an estimate of penetration capability based on the speed of the attack, contact area, and hardness of the attacking material.
-\item \textbf{Small/One/Two hands:} Small weapons can be easily concealed and give +2 to Strike against oponents involved in the same grapple as oneself. One-handed weapons require only one hand to attack and defend. Two-handed weapons require both hands to attack and block.
-\item \textbf{Heavy I/II/III:} Allows for heavy attacks.
-\item \textbf{Precise:} weapons grazes behave like a miss. They cannot deal more than tier 2 damage unless targeting vulnerable areas. Their PEN damage does not count for equipment breakage. They can only be blocked by shields.
-\item \textbf{TGH/RES:} indicates TGH and RES of that part of the weapon, which are the thresholds for gear breakage.
+% \item \textbf{BLT/CUT:} indicates the blunt and cut damage. CUT is always a multiple of BLT.
+\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands.
+\item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree.
+\item \textbf{Bladed:} allows using the extra cut and can be sharpened.
+\item \textbf{Penetrating:} allows using the penetrating attack.
+\item \textbf{Precise:} allows performing armor bypasses. Grazes behave like a miss.
+\item \textbf{Piercing:} Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
+\item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
+\item \textbf{Fast/UF:} Fast: can only blocked with a shield, force is 0.5x energy. Ultra fast(UF): like fast, but +3 vs reflex, and force is 0.1x energy. 
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
-\item \textbf{Shot:} indicates that the ranged attack can be used, as well as the precise shot and quick shot. This can only blocked with a shield.
+% \item \textbf{Shot:} This can only blocked with a shield.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
-\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a -3 penalty to hit the attack, increases the cost of AP and STA for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
+\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a -2 penalty to hit the attack, increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
 \end{itemize}
 
 Some human-sized versions of weapons are shown in the list. To create a version of a different size, adjust the DM to the appropriate size category. \\
 
+\section{ Weapons}
+
 \subsection{Melee Weapons}
 
-\textbf{ Unarmed:} Corresponds to the hands of a humanoid character. It has punch and grapple as attacks. The punch deals damage based on the character's strength. A punch is unlikely to damage another character wearing armor, but since it is a small weapon with short range, it can land vulnerable hits with some ease. A heavy attack that overcomes armor coverage may be enough to knock someone out. The grapple does not deal damage, but serves both to hold the opponent and perform grappling maneuvers as well as to block some damage.
+% \textbf{ Unarmed:} Corresponds to the hands of a humanoid character. It has punch and grapple as attacks. The punch deals damage based on the character's strength. A punch is unlikely to damage another character wearing armor, but since it is a small weapon with short range, it can land vulnerable hits with some ease. A heavy attack that overcomes armor coverage may be enough to knock someone out. The grapple does not deal damage, but serves both to hold the opponent and perform grappling maneuvers as well as to block some damage.
 
-\textbf{Brass Knuckles:} are a stronger version of the fists that are part of the armor. The character receives penalties for prestidigitation, accuracy, and climbing, but gains more coverage in the armor and has a much stronger and more resilient punch.
+% \textbf{Brass Knuckles:} are a stronger version of the fists that are part of the armor. The character receives penalties for prestidigitation, accuracy, and climbing, but gains more coverage in the armor and has a much stronger and more resilient punch.
 
-\textbf{Rondel:} is a dagger focused on destroying armored opponents. Its penetration is quite high, making opponents wearing a chain shirt or chainmail extremely vulnerable. Being a small weapon with short range, the rondel is ideal for grappling combat. Even when its penetration is insufficient against armor, the rondel, being a precise weapon, can devastate the opponent if it lands a vulnerable attack.
+% \textbf{Rondel:} is a dagger focused on destroying armored opponents. Its penetration is quite high, making opponents wearing a chain shirt or chainmail extremely vulnerable. Being a small weapon with short range, the rondel is ideal for grappling combat. Even when its penetration is insufficient against armor, the rondel, being a precise weapon, can devastate the opponent if it lands a vulnerable attack.
 
-\textbf{Dagger:} are extremely versatile weapons. They can be used as tools or as weapons and are easily concealed. Daggers are also used as defensive tools, making them useful when held in the non-dominant hand.
+% \textbf{Dagger:} are extremely versatile weapons. They can be used as tools or as weapons and are easily concealed. Daggers are also used as defensive tools, making them useful when held in the non-dominant hand.
 
-\textbf{Whip:} is the only light weapon with long range. Its damage and penetration are insufficient to injure any armored opponent, but its great advantage lies in the grapple attack. Keeping a target under control at a distance combined with the ability to drag it towards you can be a great strategic move against agile opponents, leaving them open to braced and opportunity attacks, as well as reducing their ability to defend. There are modified versions of whips, such as the electric whip, which allows electrical abilities to hit grappled opponents.
+% \textbf{Whip:} is the only light weapon with long range. Its damage and penetration are insufficient to injure any armored opponent, but its great advantage lies in the grapple attack. Keeping a target under control at a distance combined with the ability to drag it towards you can be a great strategic move against agile opponents, leaving them open to braced and opportunity attacks, as well as reducing their ability to defend. There are modified versions of whips, such as the electric whip, which allows electrical abilities to hit grappled opponents.
 
 \end{multicols}
 
@@ -55,20 +61,21 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Small Arms} } \\
 \hline
-Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight \\
+Weapon & RES & Energy & SHP & hand & range & properties & price & weight \\
 \hline
-\textbf{Unarmed} & 0.5x STR/0.5x STR & 0/0 & 3 & small & short & grapple, DEF, draw & - & 0 \\
-& STR/STR & 0.5x STR/0.2x & 3 & small & short & heavy I, draw & - & 0 \\[5pt]
+\textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & 0 \\
+& STR & 0.5x STR & 1 & small & short & draw & - & 0 \\[5pt]
 \hline
 \textbf{Claws} & 10/10 & 6/1x & 3 & small & short & heavy I, grapple, DEF & - & 0 \\[5pt]
 \hline
 \textbf{Brass Knuckles} & 25/25 & 0/0 & 3 & small & short & grapple, DEF & - & 15 GP \\
 & 25/25 & STR/0.2x & 3 & one & short & &&\\ [5pt]
 \hline
-\textbf{Dagger} & 15/50 & 8/2x & 3 & small & short & draw, DEF, precise & 3 GP & 2\\
-& 20/40 & 6/2x & 3 & small & STR & draw, precise throw & 2\\ [5pt]
+\textbf{Dagger} & 15/50 & 8/2x & 3 & small & short & draw, DEF, precise, bladed & 3 GP & 2\\
+& 15/50 & 6/2x & 3 & small & STR & draw, precise, throw & 2\\ [5pt]
 \hline
-\textbf{Rondel} & 15/50 & 8/2x & 3 & small & short & draw, heavy I, precise & 5 GP & 2\\
+\textbf{Rondel} & 15/50 & 8/2x & 3 & small & short & draw, penetrating, precise & 5 GP & 2\\
+& 15/50 & 0/0 & 2 & small & short & draw, DEF & 2\\ [5pt]
 \hline
 \textbf{Whip} & 0/10 & 6/1x & 3 & small & long II & draw & 2 GP & 5\\
 & 10/30 & 0/4 & 3 & small & long II & grab & & \\[5pt]
@@ -77,17 +84,17 @@ Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight 
 \end{table}
 \begin{multicols}{2}
 
-\textbf{Short Sword:} It is a larger version of a dagger, suitable for public use without drawing attention and easy to draw. Although it is too large to be ideal for grappling combat, it has stronger attacks and offers better defensive potential. It is a good secondary weapon or for urban and enclosed environments. 
+% \textbf{Short Sword:} It is a larger version of a dagger, suitable for public use without drawing attention and easy to draw. Although it is too large to be ideal for grappling combat, it has stronger attacks and offers better defensive potential. It is a good secondary weapon or for urban and enclosed environments. 
 
-A variation of the short sword is the scimitar, which receives +1 to damage on slashing attacks and -1 on thrusts.
+% A variation of the short sword is the scimitar, which receives +1 to damage on slashing attacks and -1 on thrusts.
 
-\textbf{Rapier:} It is the fastest one-handed long weapon available. They are excellent for duels against lightly armored opponents, as their flurries of strikes are very difficult to defend against, and their range provides a significant advantage over shorter weapons. Rapiers are commonly seen in urban settings and are easily carried in enclosed spaces. They are often used in conjunction with shields or daggers, as these enhance their defensive potential and open opponents up to counterattacks.
+% \textbf{Rapier:} It is the fastest one-handed long weapon available. They are excellent for duels against lightly armored opponents, as their flurries of strikes are very difficult to defend against, and their range provides a significant advantage over shorter weapons. Rapiers are commonly seen in urban settings and are easily carried in enclosed spaces. They are often used in conjunction with shields or daggers, as these enhance their defensive potential and open opponents up to counterattacks.
 
-\textbf{Short Spear:} The most common weapon on the battlefield. They can be used one-handed alongside shields or two-handed to increase strike speed. They can also be thrown, making them a very versatile weapon. Short spears are very cheap and common, but they are unusual in an urban environment and should be carried in one hand or strapped to the back. Due to being a wooden shaft weapon, the durability of spears can become an issue when used against highly rigid objects or when used to block cutting weapons.
+% \textbf{Short Spear:} The most common weapon on the battlefield. They can be used one-handed alongside shields or two-handed to increase strike speed. They can also be thrown, making them a very versatile weapon. Short spears are very cheap and common, but they are unusual in an urban environment and should be carried in one hand or strapped to the back. Due to being a wooden shaft weapon, the durability of spears can become an issue when used against highly rigid objects or when used to block cutting weapons.
 
-\textbf{Mace:} It is a weapon focused on taking down armored opponents. Its best feature is its heavy strike, which is relatively quick compared to the heavy strikes of other weapons. The durability of the mace is very high when used offensively, but its shaft makes it fragile defensively. Some maces can be made entirely of metal.
+% \textbf{Mace:} It is a weapon focused on taking down armored opponents. Its best feature is its heavy strike, which is relatively quick compared to the heavy strikes of other weapons. The durability of the mace is very high when used offensively, but its shaft makes it fragile defensively. Some maces can be made entirely of metal.
 
-\textbf{Battle Axe:} It is a very good option against wooden objects or opponents with low-rigidity armor. Its blade combined with its weight makes it an excellent weapon for destroying shields. The axe is slower than swords, and its attacks can leave the user open to enemy offensives, so it is wise to make each attack count. Its defensive potential is low, as it is a shaft weapon. It is better to use the axe alongside a shield to compensate. The battle axe has a spike on the back, which is a better option against opponents whose armor the blade cannot penetrate.  
+% \textbf{Battle Axe:} It is a very good option against wooden objects or opponents with low-rigidity armor. Its blade combined with its weight makes it an excellent weapon for destroying shields. The axe is slower than swords, and its attacks can leave the user open to enemy offensives, so it is wise to make each attack count. Its defensive potential is low, as it is a shaft weapon. It is better to use the axe alongside a shield to compensate. The battle axe has a spike on the back, which is a better option against opponents whose armor the blade cannot penetrate.  
 
 \end{multicols}
 \begin{table}[H]
@@ -99,23 +106,23 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large One-Handed Weapons} } \\
 \hline
-Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight \\
+Weapon & RES & Energy & AP & hand & range & properties & price & weight \\
 \hline
 \textbf{Short Sword}& 20/50 & 8/2x & 3 & one & short & precise, draw & 8 GP & 5\\
 & 15/50 & 10/1x & 3 & one & short & sweep, draw, DEF, heavy I  && \\ [5pt]
 \hline
-\textbf{Rapier} & 10/50 & 8/2x & 3 & one & long I & draw, precise & 10 GP & 5\\
- & 10/50 & 0/0 & 0 & one & long I & DEF & & \\[5pt]
+\textbf{Rapier} & 15/50 & 8/2x & 3 & one & long I & draw, precise & 10 GP & 5\\
+ & 15/50 & 0/0 & 0 & one & long I & DEF & & \\[5pt]
 \hline
 \textbf{Short Spear} & 20/50 & 8/2x & 4 & one & long I & braced, precise & 4 GP & 10 \\
 & 20/50 &  8/2x  & 3 & two & long I & braced, precise, heavy I && \\
 & 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple &  & \\
 & 20/50 &  8/2x  & 5 & one & 2xSTR & throw, precise && \\[5pt]
 \hline
-\textbf{Mace} & 100/100 &  12/0.2x & 3 & one & short & heavy II & 4 GP & 5\\
+\textbf{Mace} & 100/100 &  14/0.2x & 3 & one & short & heavy II & 4 GP & 5\\
 \textbf & 15/15 & 0/0 & 2 & one & short & DEF, shaft &  & \\[5pt]
 \hline
-\textbf{Battle Axe}& 25/50 & 14/1x & 4 & one & short & heavy I & 5 GP & 5\\
+\textbf{Battle Axe}& 25/50 & 12/1x & 3 & one & short & heavy II & 5 GP & 5\\
 & 15/15 & 0/0 & 2 & one & short & DEF && \\ [5pt]
 \hline
 \end{tabular}
@@ -123,17 +130,17 @@ Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight 
 
 \begin{multicols}{2}
 
-\textbf{Bardiche:} is a large axe with a long blade at the tip. It has much in common with the battle axe, but it is used with two hands, which greatly increases its destructive potential. Additionally, the size of the blade allows it to deliver sweeping attacks, hitting multiple opponents at once. The bardiche does not have a good option for attacking opponents with high rigidity armor. These characteristics make it a relatively specialized weapon. 
+% \textbf{Bardiche:} is a large axe with a long blade at the tip. It has much in common with the battle axe, but it is used with two hands, which greatly increases its destructive potential. Additionally, the size of the blade allows it to deliver sweeping attacks, hitting multiple opponents at once. The bardiche does not have a good option for attacking opponents with high rigidity armor. These characteristics make it a relatively specialized weapon. 
 
-\textbf{Longsword:} is the most iconic weapon of knights, marking its users as people of status. Its cuts with the blade are very quick and effective against lightly armored opponents, in addition to having good reach and being usable against several opponents at once. The blade can also be used defensively to block. The longsword also has a sharp tip, which provides an attack with more penetration than the blade's cut. Another option is to thrust while holding the blade, reducing the reach but increasing penetration and allowing for attacks during grappling. Its tip is a precise attack, making it good for hitting vulnerable points. Furthermore, the sword also has a pommel, which can be used as an alternative for blunt damage. Longswords truly shine in the hands of more skilled characters.
+% \textbf{Longsword:} is the most iconic weapon of knights, marking its users as people of status. Its cuts with the blade are very quick and effective against lightly armored opponents, in addition to having good reach and being usable against several opponents at once. The blade can also be used defensively to block. The longsword also has a sharp tip, which provides an attack with more penetration than the blade's cut. Another option is to thrust while holding the blade, reducing the reach but increasing penetration and allowing for attacks during grappling. Its tip is a precise attack, making it good for hitting vulnerable points. Furthermore, the sword also has a pommel, which can be used as an alternative for blunt damage. Longswords truly shine in the hands of more skilled characters.
 
-\textbf{Polearm:} is the melee weapon with the greatest reach. Being a weapon capable of delivering braced attacks, it is excellent for keeping opponents at bay and discouraging charges. They have a shaft of approximately 3m in length, making them very inconvenient in enclosed spaces.
+% \textbf{Polearm:} is the melee weapon with the greatest reach. Being a weapon capable of delivering braced attacks, it is excellent for keeping opponents at bay and discouraging charges. They have a shaft of approximately 3m in length, making them very inconvenient in enclosed spaces.
 
-\textbf{Halberd:} is a long-shafted weapon with a tip composed of an axe head, a spear point, and a hook. The axe head delivers devastating attacks against objects of low rigidity. The spear point allows the halberd to be used as a short spear with two hands. The hook is used to pull opponents, knocking them to the ground or disarming them. 
+% \textbf{Halberd:} is a long-shafted weapon with a tip composed of an axe head, a spear point, and a hook. The axe head delivers devastating attacks against objects of low rigidity. The spear point allows the halberd to be used as a short spear with two hands. The hook is used to pull opponents, knocking them to the ground or disarming them. 
 
-\textbf{Warhammer:} is the most reliable melee solution against heavily armored opponents. It is like a halberd, but the axe head is replaced with a heavy hammer. Attacking with the hammer consumes a lot of energy and time, but if it hits, a heavy blow will knock down most opponents. This weapon is best used in the hands of a strong character.
+% \textbf{Warhammer:} is the most reliable melee solution against heavily armored opponents. It is like a halberd, but the axe head is replaced with a heavy hammer. Attacking with the hammer consumes a lot of energy and time, but if it hits, a heavy blow will knock down most opponents. This weapon is best used in the hands of a strong character.
 
-\textbf{Greatsword:} is a larger and more robust version of a longsword. Although the weapon is quite heavy, it is balanced so that its attack can still be delivered with agility. The blade is very durable, making the weapon ideal for destroying other weapons that attempt to block it. Its sweeping attack with enhanced damage and long reach makes it excellent for dealing with many opponents at once. This sword is too large to be used in grappling combat, but it is still capable of thrusting at vulnerable points.
+% \textbf{Greatsword:} is a larger and more robust version of a longsword. Although the weapon is quite heavy, it is balanced so that its attack can still be delivered with agility. The blade is very durable, making the weapon ideal for destroying other weapons that attempt to block it. Its sweeping attack with enhanced damage and long reach makes it excellent for dealing with many opponents at once. This sword is too large to be used in grappling combat, but it is still capable of thrusting at vulnerable points.
 
 \end{multicols}
 \begin{table}[H]
@@ -145,7 +152,7 @@ Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Two-Handed Weapons} } \\
 \hline
-Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight \\ 
+Weapon & TGH/RES & BLT/CUT & AP & hand & range & properties & price & weight \\ 
 \hline
 \textbf{Longsword} & 20/50 & 12/1x & 3 & two & long I & sweep, DEF, heavy I & 12GP & 10\\
 % & 40/x2 & STR/1x & 3 & two & short & heavy I && \\
@@ -158,19 +165,19 @@ Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight 
 \textbf{Halberd} & 20/50  & 8/2x & 3 & two & long I & braced, precise, heavy I& 12GP & 15\\
 & 30/50 & STR/1x & 3 & two & long I & hook & & \\
 & 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
-& 60/50 & 18/1x & 4 & two & long I & heavy II && \\ [5pt]
+& 40/50 & 14/1x & 3 & two & long I & heavy III && \\ [5pt]
 \hline
 \textbf{Warhammer} & 50/20  & 8/2x & 3 & two & long I & braced, precise, heavy I & 12GP & 15\\
 & 30/50 & STR/1x & 3 & two & long I & hook& & \\
 & 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
 & 200/200 & 20/0.2x & 4 & two & long I & heavy III&& \\ [5pt]
 \hline
-\textbf{Bardiche} & 40/50 & 18/1x & 4 & two & long I & heavy II, sweep & 10 GP & 5 \\
+\textbf{Bardiche} & 40/50 & 18/1x & 4 & two & long I & heavy III, sweep & 10 GP & 5 \\
 \textbf & 15/15 & 0/0.2X & 3 & two & short & DEF, shaft, grapple & & \\ [5pt]
 \hline
 \textbf{Greatsword} & 30/50 & 14/1x & 4 & two & long I & sweep, DEF, heavy II & 18 GP & 20\\
 % & 100/x2 & STR/0 & 3 & two & short & heavy I && \\
-& 20/50 &  8/3x & 3 & two & long I & precise, braced && \\[5pt]
+& 20/50 &  8/2x & 3 & two & long I & precise, heavy I, braced && \\[5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -179,21 +186,21 @@ Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight 
 
 \subsection{Ranged Weapons}
 
-\textbf{Net:} it is a good weapon for ambushes or hunts. When thrown against groups of opponents, it can provide a decisive advantage by entangling several of them. Its preparation time is very long, making it impractical to throw multiple times in the same combat.
+% \textbf{Net:} it is a good weapon for ambushes or hunts. When thrown against groups of opponents, it can provide a decisive advantage by entangling several of them. Its preparation time is very long, making it impractical to throw multiple times in the same combat.
 
-\textbf{Grappling Hook and Rope:} it is a weapon that, when it hits, allows you to pull a target. It is also a weapon that requires reload time, making multiple shots difficult. The grappling hook and rope can also be used as a climbing tool.
+% \textbf{Grappling Hook and Rope:} it is a weapon that, when it hits, allows you to pull a target. It is also a weapon that requires reload time, making multiple shots difficult. The grappling hook and rope can also be used as a climbing tool.
 
-\textbf{Grenade:} it is a throwable explosive. The grenade can be magically activated in different ways to produce various effects.
+% \textbf{Grenade:} it is a throwable explosive. The grenade can be magically activated in different ways to produce various effects.
 
-\textbf{Short Bow:} it is the lightest bow. The strength required to draw it is low, allowing for faster shooting techniques. Short bows have a shorter range and deal less damage than other bows, making them poor choices against resilient opponents. Short bows can use broadhead arrows for more damage or bodkin arrows for better penetration.
+% \textbf{Short Bow:} it is the lightest bow. The strength required to draw it is low, allowing for faster shooting techniques. Short bows have a shorter range and deal less damage than other bows, making them poor choices against resilient opponents. Short bows can use broadhead arrows for more damage or bodkin arrows for better penetration.
 
-\textbf{Long Bow:} it is the most common bow on the battlefield. It has enough power to penetrate medium armor when it hits directly. Drawing a bow like this requires above-average muscle strength.
+% \textbf{Long Bow:} it is the most common bow on the battlefield. It has enough power to penetrate medium armor when it hits directly. Drawing a bow like this requires above-average muscle strength.
 
-\textbf{Heavy Bow:} this type of bow is so heavy that only the heaviest armors can stop its arrows. The strength required to draw such a bow is so great that very few humanoids are capable of using it. This weapon can use larger arrows, intended to take down large animals and heavily armored soldiers.
+% \textbf{Heavy Bow:} this type of bow is so heavy that only the heaviest armors can stop its arrows. The strength required to draw such a bow is so great that very few humanoids are capable of using it. This weapon can use larger arrows, intended to take down large animals and heavily armored soldiers.
 
-\textbf{Crossbow:} the crossbow is a weapon that can be fired quickly but requires reload time. The power of a crossbow shot is equivalent to that of a long bow.
+% \textbf{Crossbow:} the crossbow is a weapon that can be fired quickly but requires reload time. The power of a crossbow shot is equivalent to that of a long bow.
 
-\textbf{Ballista:} the ballista is an oversized crossbow that needs a lever-based reloading system to be drawn by an average person. The power of its shots is comparable to that of a heavy bow.
+% \textbf{Arbalest:} the arbalest is an oversized crossbow that needs a lever-based reloading system to be drawn by an average person. The power of its shots is comparable to that of a heavy bow.
 
 \end{multicols}
 \begin{table}[H]
@@ -205,23 +212,23 @@ Weapon & TGH/RES & impact/PEN & AP & hand & range & properties & price & weight 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Ranged Weapons} } \\
 \hline
-Weapon & TGH/RES & impact/PEN & AP & hands & range & properties & price & weight \\
+Weapon & TGH/RES & BLT/CUT & AP & hands & range & properties & price & weight \\
 \hline
-\textbf{Net} & 60/15 & DL 13 grab & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & 5 \\ [5pt]
+\textbf{Net} & 60/15 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & 5 \\ [5pt]
 \hline
 \textbf{Grappling Hook and Rope} & 10/30 & 0.5xSTR/4 & 4+4 & two & 2xSTR & throw, hook & 2 SP & 5 \\ [5pt]
 \hline
 \textbf{Grenade} & 20/10 & X & 3 & one & 2xSTR & throw & 2 GP & 2 \\ 
 \hline
-\textbf{Short Bow*} & 10/10 & 5/3x & 4 & two & 100m & precise, shot & 5 GP & 5\\
+\textbf{Short Bow*} & 10/10 & 5/10 & 4 & two & 100m & precise, shot & 5 GP & 5\\
 \hline
-\textbf{Long Bow*} & 10/10 & 6/3x & 5 & two & 150m & STR 13, precise, shot & 8 GP & 10\\
+\textbf{Long Bow*} & 10/10 & 6/15 & 5 & two & 150m & STR 13, precise, shot & 8 GP & 10\\
 \hline
-\textbf{Heavy Bow* **} & 10/10 & 7/3x & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
+\textbf{Heavy Bow* **} & 10/10 & 7/20 & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
 \hline
-\textbf{Crossbow} & 10/10 & 6/3x & 3+5 & two & 150m & reload, precise, shot & 8 GP & 5 \\
+\textbf{Crossbow} & 10/10 & 6/15 & 3+5 & two & 150m & reload, precise, shot & 8 GP & 5 \\
 \hline
-\textbf{Arbalest**} & 10/10 & 7/3x & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
+\textbf{Arbalest**} & 10/10 & 7/20 & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
 \hline
 \end{tabular}
 \end{table}
@@ -229,13 +236,15 @@ Weapon & TGH/RES & impact/PEN & AP & hands & range & properties & price & weight
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot.
 
+** Can use artillery arrows.
+
 Types of arrows:
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Bodkin: bodkin arrows have 4x penetration, but only 25\% chance to hemorrhage in tier 2 wounds.
-    \item Broadhead: has 50\% change to hemorrhage in tier 2 wounds.
+    \item Bodkin: bodkin arrows have 4x penetration, but halves the amount of hemorrhage that it causes.
+    \item Broadhead: has 25\% chance to hemorrhage in tier 1 wounds for 1 point.
     \item Artillery: provides +3 impact. Can only be used with weapons marked with **.
     \item Explosive: gives the explosive effect to the arrow if ignited. Igniting is a standard action of prestidigitation.
 \end{itemize}
@@ -262,46 +271,46 @@ Body shields are marked with * in the table and can provide total cover.
 
 \section{Armors}
 
-Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. PEN is both the armor breakage threshold and the damage reduction against PEN, since the armor must be destroyed to allow PEN damage to hit the wearer.
+Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow CUT damage to hit the wearer.
 
 \textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected in the AGI attribute values and as an increase in the action surge cost by penalty/3. During travel, it also affects the STA value used to determine wear. The penalties stack.
 
 \textbf{Cloth armors} require the user to defend against most attacks actively, but they prevent the damage from being severe if hit. Cloth armors have very few penalties and a hardness of 2.
 
-\textbf{Metal armors} cause the character to sink 1m per turn while swimming, on top of whatever they get in their swimming test. Their defense against penetration is much better than that of cloth armors.
+\textbf{Metallic armors} cause the character to sink 1m per turn while swimming, on top of whatever they get in their swimming test. Metal armors cannot be cut without the penetrating property.
 
 \textbf{Rigid armors:} they have the same penalties as metal armors and have a hardness of 3 or 4, which means they receive and deal damage from weapons that hit them, thus having a RES value. Their protection against impact is greater, as the armor absorbs a larger portion.
 
 \textbf{Gauntlets:} Gauntlets give -3 to prestidigitation, -3 to accuracy and climbing, but the armor protects the vulnerability of the hands. A pair of gauntlets costs 15 GP or 15\% of the armor's value.
 
-\textbf{Closed helmet:} gives -3 to reflexes, -3 to cunning, and -3 to swimming, but hitting the head does not increase the severity of injuries. A closed helmet costs 15 GP or 15\% of the armor's value.
+\textbf{Closed helmet:} gives -3 to reflexes, -3 to cunning, and -3 to swimming, but cover is doubled when hitting the head. A closed helmet costs 15 GP or 15\% of the armor's value.
 
 \textbf{Gauntlets and closed helmet:} It is possible to remove the gloves and closed helmets, but removing each of these eliminates their bonuses.
 
 \end{multicols}
 
 \begin{center}
-\begin{tabular}{||c c c c c c c c||}
+\begin{tabular}{||c c c c c c c c c||}
 \hline
-Name & TGH/RES & Protection & Insulation & Coverage & Penalty & Price & Weight \\ [1ex]
+Name & RES & Poise & Protection & Insulation & Deflection & Penalty & Price & Weight \\ [1ex]
 \hline\hline
-Cloth &&&&&&&\\
+Cloth &&&&&&&&\\
 \hline
-Clothing & 0/3 & 0  & 2 & +4 & 0 &  1 SP & 1\\
-Gambeson & 0/10 & 3 &  6 & +4 & 0 & 5 GP & 8\\
-Padded Armor & 0/12 & 8  & 8  & +5 & -1 & 2 GP & 16\\
+Clothing & 0/3 & 0 & 0  & 2 & +4 & 0 &  1 SP & 1\\
+Gambeson & 0/10 & 1 & 3 &  6 & +4 & 0 & 5 GP & 8\\
+Padded Armor & 0/12 & 2 & 8  & 8  & +5 & -1 & 2 GP & 16\\
 \hline
-Metallic &&&&&&&\\
+Metallic &&&&&&&&\\
 \hline
-Chain Shirt & 0/12 & 3 & 5 & +4 & 0 & 20 GP & 10\\
-Hauberk & 0/15 & 5  & 6 & +5 & -1  & 30 GP & 40\\
-Brigandine & 0/20 & 10 & 8  & +6 & -2 &  50 GP & 60\\
+Chain Shirt & 0/12 & 0 & 3 & 5 & +4 & 0 & 20 GP & 10\\
+Hauberk & 0/15 & 1 & 5 & 6 & +5 & -1  & 30 GP & 40\\
+Brigandine & 0/20 & 2 & 10 & 8  & +6 & -2 &  50 GP & 60\\
 \hline
-Rigid &&&&&&&\\
+Rigid &&&&&&&&\\
 \hline
-Half Armor & 25/40 & 15 & 7  & +5 & -2 & 60 GP & 60\\
-Full Armor & 25/40 & 15 & 10  & +7 & -3 & 100 GP & 80\\
-Reinforced Armor & 30/50 & 18 & 10  & +8 & -4 & 150 GP & 140\\
+Half Armor & 25/30 & 2 & 15 & 7  & +5 & -2 & 60 GP & 60\\
+Full Armor & 25/30 & 3 & 15 & 10  & +7 & -3 & 100 GP & 80\\
+Reinforced Armor & 30/40 & 3 & 18 & 10  & +8 & -4 & 150 GP & 140\\
 \hline
 \end{tabular}
 \end{center}
@@ -326,42 +335,17 @@ A high-quality padded armor would be much more expensive but would improve resis
 
 \textbf{Full Armor: } is the traditional armor of the medieval knight. Those who wear such armor want to survive a rain of steel or expend all their energy in attacking while letting the armor defend them. It comes standard with gauntlets and a closed helmet, providing superior coverage and preventing almost any attack from hitting a vulnerable point. Its thick steel plates offer high resistance against all types of damage, and its rigidity is so high that it is common for more fragile weapons, like swords, to break upon impact. Adventuring in this armor is extremely tiring. There is an even more exaggerated version of this armor, which is the reinforced one.
 
-\section{Characteristics and Conditions}
-
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item Condition: Sharp - Weapon has +25\% PEN until the end of the combat. It can be sharpened to a higher degree, increasing by an additional 25\%.
-    \item Condition: Dull - Weapon loses 50\% of its PEN.
-    \item Characteristic: Hard: reduces RES by 25\%, but increases PEN +25\%.
-    \item Condition/Characteristic: Pitted - Armor has its coverage reduced by 3.
-    \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1.
-    \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
-    \item Characteristic: Insulating: Increases coverage against electric-type damage attacks by +5.
-    \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
-    \item Characteristic: Sealed: Has infinite coverage against corrosive-type damage attacks.
-    % \item Characteristic: Liquid: Immune to damage from slashing and bludgeoning-type attacks.
-    \item Characteristic: Low-quality weapon - Weapon loses 25\% of its PEN and 25\% TGH. -50\% cost.
-    \item Characteristic: Low-quality armor - RES  reduced by 25\%. -50\% cost.
-    \item Characteristic: High-quality weapon - Weapon has +25\% TGH. +200\% cost.
-    \item Characteristic: High-quality armor - RES increased by 25\%. +200\% cost.
-    \item Characteristic: Semi-automatic - Has multiple shots per reload.
-    \item Characteristic: Air filter - Closed helmet that grants immunity to toxic gas effects.
-    \item Characteristic: Magnetic - Allows the use of magnetic abilities with the equipment.
-    \item Characteristic: Living steel - Can be magically sharpened.
-\end{itemize}
-
 \subsection{Breakage and Repair of Equipment}
 
 The equipment breakage function is optional.
 
-\textbf{Equipment Breakage:} Objects can be destroyed by impact, cutting or burning. The object's RES and TGH represent their resistance to the first two. Destroying an object by burning is a special case that depends on the material. The order of manitude of burning damage is much higher than what would be lethal to a creature, so it is not necessary to have a specific value for it.
+\textbf{Equipment Breakage:} Objects can be destroyed by BLT, CUT or BRN. The object's TGH and RES represent their resistance to the first two. Destroying an object by burning is a special case that depends on the material. The order of manitude of burning damage is much higher than what would be lethal to a creature, so it is not necessary to have a specific value for it.
 
-Objects can deal and take damage whenever they collide with something else, whether the collision is caused by themselves or by the other object. PEN damage is dealt exclusively by the attacking object to its target, while impact is dealt to both.
+Objects can deal and take damage whenever they collide with something else, whether the collision is caused by themselves or by the other object. CUT damage is dealt exclusively by the attacking object to its target, while impact is dealt to both.
 
-\textbf{Breakage throuh physical damage:} compare impact and PEN from the attacking object to the TGH and RES of the receiving one. Whenever a piece of equipment receives impact/PEN damage > TGH/RES, the equipment has a 1 in 6 chance to break. If both thresholds are crossed, increase the chance to 3 in 6. If one of the thresholds is exceeded twice, the item breaks instantly.
+\textbf{Breakage throuh physical damage:} compare BLT and CUT from the attacking object to the RES of the receiving one. Whenever a piece of equipment receives CUT >= RES, the equipment has a 1 in 6 chance to break. If it receives CUT and BLT >= RES, it has 50\% chance. If any damage exceeds RES twice, the item breaks instantly.
 
-\textbf{Materials and Hardness:} There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, flexible armors, and similar materials. The third is for wood and horns. The fourth is for metals and rocks. Collisions involving materials of hardness 1 and 2 do not pose a risk of breakage to other materials.
+\textbf{Materials and Hardness:} There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks. Collisions involving materials of hardness 1 and 2 do not pose a risk of breakage to other materials.
 
 \textbf{Weapon Breakage:} A broken weapon can no longer be used and costs 50\% of its original value to be repaired. Weapons that have a shaft require the replacement of the shaft.
 
@@ -369,17 +353,17 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Armorer:} Knowledge of armoring and the appropriate equipment are necessary to repair weapons and armor. Repairing metal objects requires a forge.
 
-\textbf{Sharpening:} Is an action that takes one exploration turn and increases the weapon's PEN by 25\%. On critical hits, it increases by 50\%. Requires a sharpening stone. This does not work on precise weapons, because they are already considered sharp.
+\textbf{Sharpening:} Is an action that takes one exploration turn and increases the weapon's CUT by 25\%. On critical hits, it increases by 50\%. Requires a sharpening stone. This does not work on precise weapons, because they are already considered sharp.
 
 % \subsection{Materials}
 
-% The table is a reference for the rigidity of materials. The table considers a solid piece of material. There may be objects made of a material with different rigidity.
+% The table is a reference for the hardness of materials. It is used to define what can be cut by what. A higher hardness can cut a lower hardness. 
 
 % \begin{center}
 % \label{materiais}
 % \begin{tabular}{||c c ||}
 % \hline
-% Name & Rigidity \\ [1ex]
+% Name & Hardness \\ [1ex]
 % \hline\hline
 % \hline
 % Water & 0 \\
@@ -387,6 +371,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 % Flesh & 2\\
 % Linen & 3 \\
 % Silk & 3\\
+% Chitin & 4-6  \\
 % Horn & 5  \\
 % Wood &  5-6  \\
 % Bone & 6\\
@@ -396,6 +381,32 @@ Objects can deal and take damage whenever they collide with something else, whet
 % \hline
 % \end{tabular}
 % \end{center}
+
+\section{Characteristics and Conditions}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item Condition: Sharp - Weapon has +25\% CUT until the end of the combat. It can be sharpened to a higher degree, increasing by an additional 25\%.
+    \item Condition: Dull - Weapon loses 50\% of its CUT.
+    \item Characteristic: Hard: reduces RES by 25\%, but increases CUT +25\%.
+    \item Condition/Characteristic: Pitted - Armor has its coverage reduced by 3.
+    \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1.
+    \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
+    \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
+    \item Characteristic: Insulating: Increases coverage against electric-type damage attacks by +5.
+    \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
+    \item Characteristic: Sealed: Has infinite coverage against corrosive-type damage attacks.
+    % \item Characteristic: Liquid: Immune to damage from slashing and bludgeoning-type attacks.
+    \item Characteristic: Low-quality weapon - Weapon loses 25\% of its CUT and 25\% TGH. -50\% cost.
+    \item Characteristic: Low-quality armor - RES  reduced by 25\%. -50\% cost.
+    \item Characteristic: High-quality weapon - Weapon has +25\% TGH. +200\% cost.
+    \item Characteristic: High-quality armor - RES increased by 25\%. +200\% cost.
+    \item Characteristic: Semi-automatic - Has multiple shots per reload.
+    \item Characteristic: Air filter - Closed helmet that grants immunity to toxic gas effects.
+    \item Characteristic: Magnetic - Allows the use of magnetic abilities with the equipment.
+    \item Characteristic: Living steel - Can be magically sharpened.
+\end{itemize}
 
 
 
