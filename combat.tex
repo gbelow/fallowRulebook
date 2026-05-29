@@ -163,14 +163,21 @@ Usual aggravating factors: \\
 \textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving wounds. The table shows how much IL they receive from injuries at each tier. 
 
 \textbf{Damage Thresholds:} 
-\begin{itemize}
-    \item Tier 0. Only cutting damage in any amount. Increases IL by +1.
-    \item Tier 1. Damage is higher than TGH. Increases IL by +5.
-    \item Tier 2. Damage is higher than 2x TGH. Increases IL by +10. 50\% chance of causing a wound.
-    \item Tier 3. Damage is higher than 3x TGH. Increases IL by +20. 100\% chance of causing a wound.
-    \item Tier 4. Damage is higher than 4x TGH. Increases IL by +30. Guaranteed to cause a wound.
-    \item Tier 5. Damage is higher than 5x TGH. Increases IL by +50.
-\end{itemize}
+
+\begin{center}
+\begin{tabular}{||c c c c||}
+\hline
+Name & Threshold & IL & Wound \\ [1ex]
+\hline \hline
+Tier 0 & armor & 1 & 0 \\
+Tier 1 & armor+TGH & 5 & 0 \\
+Tier 2 & armor+2xTGH & 10 & 50\% \\
+Tier 3 & armor+3xTGH & 20 & 100\% \\
+Tier 4 & armor+4xTGH & 30 & 200\% \\
+Tier 5 & armor+5xTGH & 50 & 300\% \\
+\hline
+\end{tabular}
+\end{center}
 
 \textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds. 
 
@@ -178,13 +185,13 @@ Usual aggravating factors: \\
 
 \textbf{Physical attacks:} have energy as their main component. If the weapon is not capable of cutting its target, the damage is blunt and its value is equal to energy. If the weapon can cut its target, energy x SHP becomes cutting damage, where SHP is the sharpness of the attack.
 
-\textbf{Blunt damage:} is defended by armor protection. So tier 1 injuries would require damage > prot + TGH and so on.
+\textbf{Blunt damage:} is defended by armor protection. 
 
-\textbf{Cutting damage:} is defended by armor RES, but differently. To cause a tier 0 injury, damage must be greater or equal to armor RES. Tier 1 and above also add RES, but only once for any tier. 
+\textbf{Cutting damage:} is defended by armor RES.  
 
 \textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of hardness, the details are explained in the gear section. The most glaring example: metal is hardness 4 and can cut everything except other metals, stone and a few more hard materials.
 
-\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS. It works exactly like blunt damage, but uses armor INS.
+\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS.
 
 \textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage.
 
@@ -205,13 +212,13 @@ Usual aggravating factors: \\
     \item Force > Poise: Interrupt
     \item Force > 2x Poise: Knockback
     \item Force > 3x Poise: Knockdown
-    \item Force > 2x blocking force vs block: Disarm
+    \item Force > 2x blocking force: Disarm
     % \item Force > 3x Poise: Stun
 \end{itemize}
 
 \textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP even when not done during an action. 
 
-\textbf{Knockdown:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
+\textbf{Knockback:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
 
 \textbf{Knockdown:} The victim fall to the floor and becomes prone. It is interrupted as well.
 
@@ -219,11 +226,12 @@ Usual aggravating factors: \\
 
 \text{Attack bonuses:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overcomes the DL to hit posed by the defender during an attack can be used to activate these effects. The effects are:
 
-\textbf{Armor Bypass:} This costs a number of points defined by 2x the targets armor deflection. It removes RES from the damage calculation of cutting damage. Only attacks from weapons with the precise property can use this effect. If the weapon also has the penetrating property, the effect of penetrating attack happens as well.
-
-\textbf{Penetrating attack:} Costs a number of points equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property. 
-
-\textbf{ Extra cut:} Costs a number of points equal to the target's deflection to increase the amount of cutting damage dealt by 50\% of energy. Only weapons with the bladed property can use this. 
+\begin{itemize}
+    \item \textbf{Armor Bypass:} Only attacks from weapons with the piercing property can use this effect. This costs a number of points defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the weapon has it.
+    \item \textbf{Penetrating:} Costs a number of points equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
+    \item \textbf{ Extra cut:} Costs a number of points equal to the target's deflection to double the sharpness bonus to cutting damage. Sharpness bonus is SHP-1. Only weapons with the bladed property can use this.
+    \item \textbf{Smash:} Costs a number of points equal to the target's deflection to increase the amount of blunt damage and force dealt by 25\%. Only weapons with the smash property can use this.
+\end{itemize}
     
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
 
@@ -235,7 +243,7 @@ For humanoids, there are 4 locations: chest, hand, leg, and head.
 
 \textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. A tier 4 cutting damage amputates. Taking force equal to 2x Poise causes the character to lose their balance and fall prone.
 
-\textbf{Head:} Costs 5 points. Target has half the Poise. Tier 4 damage causes instant death.
+\textbf{Head:} Costs 5 points. Target has half the Poise, and getting 4x Poise to the head causes unconsciousness. Tier 4+ damage has 50\% chance of  instant death. There is no inner layer of armor in the head.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense.
 
@@ -294,17 +302,17 @@ The survival chapter describes how health works during rest.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy and force of physical attacks by +0.5xSTR , but have an added cost of +1AP+1STA. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. 
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy and force of physical attacks by +0.5xSTR , but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. 
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy and force of this attack gains a +STR bonus.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy of this attack gains a +STR bonus.
 
-\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with force > 2x poise. Gains +50\% force if the opponent attempts to perform an evasive jump and +100\% if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
+\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with force > 2x poise, and on a crit it knocks down at force > poise. Gains +STR/2 energy if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
 
-\textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +4 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
+\textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
 }
 
 % \textbf{Disarm:} A melee attack that attempts to disarm the opponent. This attack does not deal damage, but if it is a critical, it disarms the opponent with impact > natural RES. If it is a hit, it disarms with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to block by redirecting.
@@ -319,7 +327,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by RES of the weapon or shield. On a miss, the shield get +50\% RES bonus. A blocking object can break if damage is greater than RES.
 
-\textbf{Redirect:} uses 3 AP to redirecting the blow. It requires the defender to be in short range and can be done with a shield or weapon with the DEF or grapple property. On a graze, cancels the attack if the defense's force is greater than that of the attack. On a miss, increases the defense's force by 100\%.
+\textbf{Redirect:} uses 3 AP to redirect the blow. It requires the defender to be in short range and can be done with a shield or weapon with the DEF or grapple property. On a graze, cancels the attack unless the attack's force is lower than 2x the defender's STR. On a miss, it is cancelled at Force < 3x STR:
 
 \textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or redirect an attack directed at an ally.}
 

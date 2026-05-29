@@ -20,18 +20,21 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{STR x:} Strength requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
 % \item \textbf{BLT/CUT:} indicates the blunt and cut damage. CUT is always a multiple of BLT.
-\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands.
-\item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree.
-\item \textbf{Bladed:} allows using the extra cut and can be sharpened.
-\item \textbf{Penetrating:} allows using the penetrating attack.
-\item \textbf{Precise:} allows performing armor bypasses. Grazes behave like a miss.
-\item \textbf{Piercing:} Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
+\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. If used with one hand, they cost +1 AP for both attack and defense.
+\item \textbf{Piercing:} Grazes behave like a miss. Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
+\item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum.
+\item \textbf{Smash:} allows using the smash additional effect.
+\item \textbf{Bladed:} allows using the extra cut additional effect and can be sharpened.
+\item \textbf{Penetrating:} allows using the penetrating additional effect.
+\item \textbf{Precise:} allows performing armor bypass additional effect.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
-\item \textbf{Fast/UF:} Fast: can only blocked with a shield, force is 0.5x energy. Ultra fast(UF): like fast, but +3 vs reflex, and force is 0.1x energy. 
+\item \textbf{Soft:} Blunt damage is half of the energy.
+\item \textbf{Fast, UF:} Slow: Force is 2x energy. Fast: can only blocked with a shield, force is 0.5x energy. Ultra fast(UF): like fast, but force is 0.1x energy. 
+% \item \textbf{Overpen:} Maximum IL damage is 10.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 % \item \textbf{Shot:} This can only blocked with a shield.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
-\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a -2 penalty to hit the attack, increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
+\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
 \end{itemize}
 
 Some human-sized versions of weapons are shown in the list. To create a version of a different size, adjust the DM to the appropriate size category. \\
@@ -64,21 +67,21 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 Weapon & RES & Energy & SHP & hand & range & properties & price & weight \\
 \hline
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & 0 \\
-& STR & 0.5x STR & 1 & small & short & draw & - & 0 \\[5pt]
+& STR & 0.5x STR & 0 & small & short & draw & soft, heavy I, smash & 0 \\[5pt]
 \hline
-\textbf{Claws} & 10/10 & 6/1x & 3 & small & short & heavy I, grapple, DEF & - & 0 \\[5pt]
+\textbf{Claws} & 10 & 0.5x STR & 1x & small & short & grapple, DEF & - & 0 \\[5pt]
 \hline
-\textbf{Brass Knuckles} & 25/25 & 0/0 & 3 & small & short & grapple, DEF & - & 15 GP \\
-& 25/25 & STR/0.2x & 3 & one & short & &&\\ [5pt]
+\textbf{Brass Knuckles} & 25 & 0 & 0 & small & short & grapple, DEF & - & 15 GP \\ 
+& 25 & 0.5x STR & 1x & one & short & heavy I, smash & &\\ [5pt]
 \hline
-\textbf{Dagger} & 15/50 & 8/2x & 3 & small & short & draw, DEF, precise, bladed & 3 GP & 2\\
-& 15/50 & 6/2x & 3 & small & STR & draw, precise, throw & 2\\ [5pt]
+\textbf{Dagger} & 15 & 8 & 2x & small & short & draw, DEF, piercing, bladed, precise & 3 GP & 2\\
+& 15 & 8 & 2x & small & STR & draw, precise, throw && 2 \\ [5pt]
 \hline
-\textbf{Rondel} & 15/50 & 8/2x & 3 & small & short & draw, penetrating, precise & 5 GP & 2\\
-& 15/50 & 0/0 & 2 & small & short & draw, DEF & 2\\ [5pt]
+\textbf{Stiletto} & 15 & 6 & 3x & small & short & draw, penetrating, precise, piercing & 5 GP & 2\\
+& 15 & 0 & 0 & small & short & draw, DEF && 2\\ [5pt]
 \hline
-\textbf{Whip} & 0/10 & 6/1x & 3 & small & long II & draw & 2 GP & 5\\
-& 10/30 & 0/4 & 3 & small & long II & grab & & \\[5pt]
+\textbf{Whip} & 10 & 4 & 1x & small & long II & draw & 2 GP & 5\\
+& 15 & 0/4 & 3 & small & long II & grapple & & \\[5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -106,24 +109,23 @@ Weapon & RES & Energy & SHP & hand & range & properties & price & weight \\
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large One-Handed Weapons} } \\
 \hline
-Weapon & RES & Energy & AP & hand & range & properties & price & weight \\
+Weapon & RES & Energy & SHP & hand & range & properties & price & weight \\
 \hline
-\textbf{Short Sword}& 20/50 & 8/2x & 3 & one & short & precise, draw & 8 GP & 5\\
-& 15/50 & 10/1x & 3 & one & short & sweep, draw, DEF, heavy I  && \\ [5pt]
+\textbf{Short Sword}& 20 & 8 & 2x & one & short & precise, draw & 8 GP & 5\\
+& 20 & 10 & 1.5x & one & short & sweep, draw, DEF, heavy I, bladed  && \\ [5pt]
 \hline
-\textbf{Rapier} & 15/50 & 8/2x & 3 & one & long I & draw, precise & 10 GP & 5\\
- & 15/50 & 0/0 & 0 & one & long I & DEF & & \\[5pt]
+\textbf{Rapier} & 15 & 8 & 2x & one & long I & draw, precise, piercing & 10 GP & 5\\
+ & 15 & 0 & 0 & one & long I & DEF & & \\[5pt]
 \hline
-\textbf{Short Spear} & 20/50 & 8/2x & 4 & one & long I & braced, precise & 4 GP & 10 \\
-& 20/50 &  8/2x  & 3 & two & long I & braced, precise, heavy I && \\
-& 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple &  & \\
-& 20/50 &  8/2x  & 5 & one & 2xSTR & throw, precise && \\[5pt]
+\textbf{Short Spear} & 20 & 8 & 2x & two & long I & braced, precise, piercing, heavy I & 1 & 10 \\
+& 15 & STR & 1x & two & short & DEF, shaft, grapple &  & \\
+& 20 &  8  & 2x & one & 2xSTR & throw, precise, heavy I-I && \\[5pt]
 \hline
-\textbf{Mace} & 100/100 &  14/0.2x & 3 & one & short & heavy II & 4 GP & 5\\
-\textbf & 15/15 & 0/0 & 2 & one & short & DEF, shaft &  & \\[5pt]
+\textbf{Mace} & 50 & 12 & 1x & one & short & heavy I-II, smash & 4 GP & 5\\
+\textbf & 15 & 0 & 2 & one & short & DEF, shaft &  & \\[5pt]
 \hline
-\textbf{Battle Axe}& 25/50 & 12/1x & 3 & one & short & heavy II & 5 GP & 5\\
-& 15/15 & 0/0 & 2 & one & short & DEF && \\ [5pt]
+\textbf{Battle Axe}& 25 & 10 & 1.5x & one & short & heavy I-II, bladed & 5 GP & 5\\
+& 15 & 0 & 2 & one & short & DEF && \\ [5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -152,32 +154,32 @@ Weapon & RES & Energy & AP & hand & range & properties & price & weight \\
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Two-Handed Weapons} } \\
 \hline
-Weapon & TGH/RES & BLT/CUT & AP & hand & range & properties & price & weight \\ 
+Weapon & RES & Energy & SHP & hand & range & properties & price & weight \\ 
 \hline
-\textbf{Longsword} & 20/50 & 12/1x & 3 & two & long I & sweep, DEF, heavy I & 12GP & 10\\
+\textbf{Longsword} & 20 & 12 & 1.5x & two & long I & sweep, DEF, heavy I, bladed & 12GP & 10\\
 % & 40/x2 & STR/1x & 3 & two & short & heavy I && \\
-& 30/50 & 8/2x & 4 & one & short & precise, heavy I && \\
-& 20/50 & 8/2x & 3 & two & long I & precise && \\[5pt]
+& 20 & 8 & 2x & one & short & piercing, penetrating, precise && \\
+& 20 & 8 & 2x & two & long I & piercing && \\[5pt]
 \hline
-\textbf{Pike} & 20/50  &  8/2x & 3 & two & long II & braced, precise, heavy I & 6 GP & 15\\ 
-& 15/15 & 0/0 & 2 & two & long I & Shaft & & \\ [5pt] 
+\textbf{Pike} & 20 & 8 & 2x & two & long II & braced, piercing, heavy I & 6 GP & 15\\ 
+& 20 & 0 & 1 & two & long I & shaft & & \\ [5pt] 
 \hline
-\textbf{Halberd} & 20/50  & 8/2x & 3 & two & long I & braced, precise, heavy I& 12GP & 15\\
-& 30/50 & STR/1x & 3 & two & long I & hook & & \\
-& 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
-& 40/50 & 14/1x & 3 & two & long I & heavy III && \\ [5pt]
+\textbf{Halberd} & 20 & 8 & 2x & two & long I & braced, piercing, heavy I & 12GP & 15\\
+& 30 & STR & 1.5x & two & long I & hook & & \\
+& 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
+& 30 & 12 & 1.5x & two & long I & heavy I-III, bladed && \\ [5pt]
 \hline
-\textbf{Warhammer} & 50/20  & 8/2x & 3 & two & long I & braced, precise, heavy I & 12GP & 15\\
-& 30/50 & STR/1x & 3 & two & long I & hook& & \\
-& 15/15 & 0/0.2X & 3 & two & short & DEF, Shaft, grapple & & \\
-& 200/200 & 20/0.2x & 4 & two & long I & heavy III&& \\ [5pt]
+\textbf{Warhammer} & 20 & 8 & 2x & two & long I & braced, piercing, heavy I & 12GP & 15\\
+& 30 & STR & 1.5x & two & long I & hook && \\
+& 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
+& 100 & 12 & 1x & two & long I & heavy I-III, smash && \\ [5pt]
 \hline
-\textbf{Bardiche} & 40/50 & 18/1x & 4 & two & long I & heavy III, sweep & 10 GP & 5 \\
-\textbf & 15/15 & 0/0.2X & 3 & two & short & DEF, shaft, grapple & & \\ [5pt]
+\textbf{Bardiche} & 30 & 12 & 1.5X & two & long I & heavy III, sweep, bladed & 10 GP & 5 \\
+\textbf & 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\ [5pt]
 \hline
-\textbf{Greatsword} & 30/50 & 14/1x & 4 & two & long I & sweep, DEF, heavy II & 18 GP & 20\\
+\textbf{Greatsword} & 30 & 12 & 1.5x & two & long I & sweep, DEF, heavy I-II, bladed & 18 GP & 20\\
 % & 100/x2 & STR/0 & 3 & two & short & heavy I && \\
-& 20/50 &  8/2x & 3 & two & long I & precise, heavy I, braced && \\[5pt]
+& 20 & 8 & 2x & two & long I & piercing, heavy I, braced && \\[5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -212,23 +214,23 @@ Weapon & TGH/RES & BLT/CUT & AP & hand & range & properties & price & weight \\
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Ranged Weapons} } \\
 \hline
-Weapon & TGH/RES & BLT/CUT & AP & hands & range & properties & price & weight \\
+Weapon & RES & Energy & AP & hands & range & properties & price & weight \\
 \hline
-\textbf{Net} & 60/15 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & 5 \\ [5pt]
+\textbf{Net} & 15 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & 5 \\ [5pt]
 \hline
-\textbf{Grappling Hook and Rope} & 10/30 & 0.5xSTR/4 & 4+4 & two & 2xSTR & throw, hook & 2 SP & 5 \\ [5pt]
+\textbf{Grappling Hook and Rope} & 10 & 0.5xSTR & 4+4 & two & 2xSTR & throw, hook & 2 SP & 5 \\ [5pt]
 \hline
-\textbf{Grenade} & 20/10 & X & 3 & one & 2xSTR & throw & 2 GP & 2 \\ 
+\textbf{Grenade} & 20 & X & 3 & one & 2xSTR & throw & 2 GP & 2 \\ 
 \hline
-\textbf{Short Bow*} & 10/10 & 5/10 & 4 & two & 100m & precise, shot & 5 GP & 5\\
+\textbf{Short Bow*} & 10 & 8 & 4 & two & 100m & piercing, fast & 5 GP & 5\\
 \hline
-\textbf{Long Bow*} & 10/10 & 6/15 & 5 & two & 150m & STR 13, precise, shot & 8 GP & 10\\
+\textbf{Long Bow*} & 10 & 10 & 5 & two & 150m & STR 13, piercing, fast & 8 GP & 10\\
 \hline
-\textbf{Heavy Bow* **} & 10/10 & 7/20 & 5 & two & 200m & STR 16, precise, shot & 10 GP & 10\\
+\textbf{Heavy Bow* } & 10 & 12 & 5 & two & 200m & STR 16, piercing, fast & 10 GP & 10\\
 \hline
-\textbf{Crossbow} & 10/10 & 6/15 & 3+5 & two & 150m & reload, precise, shot & 8 GP & 5 \\
+\textbf{Crossbow} & 10 & 10 & 3+5 & two & 150m & reload, piercing, fast & 8 GP & 5 \\
 \hline
-\textbf{Arbalest**} & 10/10 & 7/20 & 3+6 & two & 200m & reload, precise, shot & 12 GP & 5 \\
+\textbf{Arbalest} & 10 & 10 & 3+6 & two & 200m & reload, piercing, fast & 12 GP & 5 \\
 \hline
 \end{tabular}
 \end{table}
@@ -236,16 +238,15 @@ Weapon & TGH/RES & BLT/CUT & AP & hands & range & properties & price & weight \\
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot.
 
-** Can use artillery arrows.
+% ** Can use artillery arrows.
 
 Types of arrows:
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Bodkin: bodkin arrows have 4x penetration, but halves the amount of hemorrhage that it causes.
-    \item Broadhead: has 25\% chance to hemorrhage in tier 1 wounds for 1 point.
-    \item Artillery: provides +3 impact. Can only be used with weapons marked with **.
+    \item Bodkin: bodkin arrows have 3x SHP and is penetrating.
+    \item Broadhead: has 2x SHP and is bladed.
     \item Explosive: gives the explosive effect to the arrow if ignited. Igniting is a standard action of prestidigitation.
 \end{itemize}
 
@@ -256,11 +257,11 @@ Types of arrows:
 \begin{center}
 \begin{tabular}{||c c c c c c c||}
 \hline
-Name & Penalty & Deflection & TGH/RES & Insulation & Weight & Value\\ [1ex]
+Name & Penalty & Deflection & RES & Insulation & Weight & Value\\ [1ex]
 \hline \hline
-Wooden Shield & -1 & +3 & 20/20  & 10 & 10 & 1 GP\\
-Metal Shield & -2 & +3 &  40/50 & 10 & 25 & 15 GP\\
-Wooden Tower* & -2 & +4 & 20/20 & 15 & 20 & 2 GP\\
+Wooden Shield & -1 & +3 & 20  & 10 & 10 & 1 GP\\
+Metal Shield & -2 & +3 &  30 & 10 & 25 & 15 GP\\
+Wooden Tower* & -2 & +4 & 20 & 15 & 20 & 2 GP\\
 \hline
 \end{tabular}
 \end{center}
@@ -279,11 +280,11 @@ Armors have prot, which is used as damage reduction against impacts. The armor's
 
 \textbf{Metallic armors} cause the character to sink 1m per turn while swimming, on top of whatever they get in their swimming test. Metal armors cannot be cut without the penetrating property.
 
-\textbf{Rigid armors:} they have the same penalties as metal armors and have a hardness of 3 or 4, which means they receive and deal damage from weapons that hit them, thus having a RES value. Their protection against impact is greater, as the armor absorbs a larger portion.
+\textbf{Rigid armors:} are layered to allow mobility. When RES is described with two numbers, the second one is the inner layer. Rigid armors receive and deal damage from weapons that hit them, thus having a RES value. Their protection against impact is greater, as the armor absorbs a larger portion.
 
 \textbf{Gauntlets:} Gauntlets give -3 to prestidigitation, -3 to accuracy and climbing, but the armor protects the vulnerability of the hands. A pair of gauntlets costs 15 GP or 15\% of the armor's value.
 
-\textbf{Closed helmet:} gives -3 to reflexes, -3 to cunning, and -3 to swimming, but cover is doubled when hitting the head. A closed helmet costs 15 GP or 15\% of the armor's value.
+\textbf{Closed helmet:} gives -3 to reflexes, -3 to cunning, and -3 to swimming, but armor bypass is impossible in the head. A closed helmet costs 15 GP or 15\% of the armor's value.
 
 \textbf{Gauntlets and closed helmet:} It is possible to remove the gloves and closed helmets, but removing each of these eliminates their bonuses.
 
@@ -296,21 +297,21 @@ Name & RES & Poise & Protection & Insulation & Deflection & Penalty & Price & We
 \hline\hline
 Cloth &&&&&&&&\\
 \hline
-Clothing & 0/3 & 0 & 0  & 2 & +4 & 0 &  1 SP & 1\\
-Gambeson & 0/10 & 1 & 3 &  6 & +4 & 0 & 5 GP & 8\\
-Padded Armor & 0/12 & 2 & 8  & 8  & +5 & -1 & 2 GP & 16\\
+Clothing & 3 & +0 & 0 & 2 & +3 & 0 &  1 SP & 1\\
+Gambeson & 8 & +1 & 3 &  6 & +4 & 0 & 5 GP & 8\\
+Padded Armor & 12 & +2 & 5  & 8  & +4 & -1 & 2 GP & 16\\
 \hline
 Metallic &&&&&&&&\\
 \hline
-Chain Shirt & 0/12 & 0 & 3 & 5 & +4 & 0 & 20 GP & 10\\
-Hauberk & 0/15 & 1 & 5 & 6 & +5 & -1  & 30 GP & 40\\
-Brigandine & 0/20 & 2 & 10 & 8  & +6 & -2 &  50 GP & 60\\
+Chain Shirt & 10 & +0 & 3 & 5 & +4 & 0 & 20 GP & 10\\
+Hauberk & 12 & +1 & 4 & 6 & +5 & -1  & 30 GP & 40\\
+Brigandine & 15 & +2 & 6 & 8 & +6 & -2 &  50 GP & 60\\
 \hline
-Rigid &&&&&&&&\\
+Rigid and Metallic &&&&&&&&\\
 \hline
-Half Armor & 25/30 & 2 & 15 & 7  & +5 & -2 & 60 GP & 60\\
-Full Armor & 25/30 & 3 & 15 & 10  & +7 & -3 & 100 GP & 80\\
-Reinforced Armor & 30/40 & 3 & 18 & 10  & +8 & -4 & 150 GP & 140\\
+Half Armor & 20/10 & +2 & 10 & 7  & +5 & -2 & 60 GP & 60\\
+Full Armor & 20/10 & +3 & 10 & 8  & +7 & -3 & 100 GP & 80\\
+Reinforced Armor & 25/10 & +3 & 12 & 10  & +8 & -4 & 150 GP & 140\\
 \hline
 \end{tabular}
 \end{center}
