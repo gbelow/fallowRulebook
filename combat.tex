@@ -26,9 +26,16 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{Preparation:} At the start of combat, the miniatures are positioned in their locations, and each character starts with 6 AP by default. They also receive a turn token, which they can spend to take their turn.
 
-\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn.
+\skill{Cunning}{Awareness}{ Cunning is used to determine priority when competing to take a combat turn first. It is also used to gain tactical advantages in combat and assess danger.
 
 \textbf{Turn order:} It is defined by a "first to ask, first to play" rule. If several players want to play at the same time, all interested make a cunning test, and the one who rolls the highest goes first.
+
+\textbf{ Feint :} if nobody wants to take their turn in melee, a feint can be performed. It is a cunning against cunning test between two characters in melee. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. The target cannot feint back with those AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP.
+
+\textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 3 AP to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
+
+\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it does not detect its attacker before it begins attacking. It can also happen in a social situation if the oponent manages to hide its intentions before attacking. In those cases, use cunning can be used against deception to resist being surprised.
+}
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want.
 
@@ -185,6 +192,8 @@ Tier 5 & armor+5xTGH & 50 & 300\% \\
 
 \textbf{Physical attacks:} have energy as their main component. If the weapon is not capable of cutting its target, the damage is blunt and its value is equal to energy. If the weapon can cut its target, energy x SHP becomes cutting damage, where SHP is the sharpness of the attack.
 
+Note: The energy of a physical attack refers to the useful energy to cause deformation in the target. Harder objects will have more energy than softer ones, even if speed and mass are the same.
+
 \textbf{Blunt damage:} is defended by armor protection. 
 
 \textbf{Cutting damage:} is defended by armor RES.  
@@ -206,31 +215,30 @@ Tier 5 & armor+5xTGH & 50 & 300\% \\
 
 \subsection{Additional effects:}
 
-\textbf{Force and poise:} Force is applied by all physical attacks that deal blunt damage. It can cause interruptions, pushes, knockdowns and such effects. The value of force is derived from energy, and equal to it unless otherwise stated in a weapon property.
+\textbf{Force and poise:} Force is applied by all physical attacks. It can cause interruptions, pushes, knockdowns and such effects. The value of force is derived from energy, and equal to it unless otherwise stated in the particular attack.
 
-\begin{itemize}
-    \item Force > Poise: Interrupt
-    \item Force > 2x Poise: Knockback
-    \item Force > 3x Poise: Knockdown
-    \item Force > 2x blocking force: Disarm
-    % \item Force > 3x Poise: Stun
-\end{itemize}
+% \begin{itemize}
+%     \item Force > Poise: Interrupt
+%     \item Force > 1.5x Poise: Knockback
+%     \item Force > 2x Poise: Knockdown
+%     % \item Force > 3x Poise: Stun
+% \end{itemize}
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP even when not done during an action. 
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. Interrupt happens any time Force >= Poise.
 
-\textbf{Knockback:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
+% \textbf{Knockback:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
 
-\textbf{Knockdown:} The victim fall to the floor and becomes prone. It is interrupted as well.
+% \textbf{Knockdown:} The victim fall to the floor and becomes prone. It is interrupted as well.
 
 % \textbf{Stun:} Receives an interrupt with a minimum loss of 5 AP and falls prone.
 
-\text{Attack bonuses:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overcomes the DL to hit posed by the defender during an attack can be used to activate these effects. The effects are:
+\text{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overflows the DL to hit posed by the defender during an attack can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
 
 \begin{itemize}
-    \item \textbf{Armor Bypass:} Only attacks from weapons with the piercing property can use this effect. This costs a number of points defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the weapon has it.
-    \item \textbf{Penetrating:} Costs a number of points equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
-    \item \textbf{ Extra cut:} Costs a number of points equal to the target's deflection to double the sharpness bonus to cutting damage. Sharpness bonus is SHP-1. Only weapons with the bladed property can use this.
-    \item \textbf{Smash:} Costs a number of points equal to the target's deflection to increase the amount of blunt damage and force dealt by 25\%. Only weapons with the smash property can use this.
+    \item \textbf{Armor Bypass:} Only attacks from weapons with the piercing property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the weapon has it.
+    \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
+    \item \textbf{ Extra cut:} Costs a number of SOPs equal to the target's deflection to double the sharpness bonus to cutting damage. Sharpness bonus is SHP-1. Only weapons with the bladed property can use this.
+    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to increase the amount of blunt damage and force dealt by 25\%. Only weapons with the smash property can use this.
 \end{itemize}
     
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
@@ -243,9 +251,9 @@ For humanoids, there are 4 locations: chest, hand, leg, and head.
 
 \textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. A tier 4 cutting damage amputates. Taking force equal to 2x Poise causes the character to lose their balance and fall prone.
 
-\textbf{Head:} Costs 5 points. Target has half the Poise, and getting 4x Poise to the head causes unconsciousness. Tier 4+ damage has 50\% chance of  instant death. There is no inner layer of armor in the head.
+\textbf{Head:} Costs 5 points. Target has half the Poise, and getting 3x Poise to the head causes unconsciousness. Tier 3 damage causes unconsciousness and Tier 4+ damage has 50\% chance of instant death. There is no inner layer of armor in the head.
 
-Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense.
+Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
 
 \subsection{Afflictions}
 
@@ -255,7 +263,7 @@ There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Heal
 
 \textbf{Injury:} penalties affect Grapple, Strength, Climb, Swim, and Will. 
 
-\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Cunning, Balance, Climb, Exploration, Stealth and Prestidigitation.
+\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
 
 \textbf{Mental:} Penalties affect Exploration, Cunning, Sorceries, Will, Insight, and Knowledge.
 
@@ -308,14 +316,15 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy of this attack gains a +STR bonus.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy of this attack gains a +STR bonus on a hit.
 
 \textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with force > 2x poise, and on a crit it knocks down at force > poise. Gains +STR/2 energy if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
 
 \textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
+
+\textbf{Disarm:} Can be done when opponent tries to block or
 }
 
-% \textbf{Disarm:} A melee attack that attempts to disarm the opponent. This attack does not deal damage, but if it is a critical, it disarms the opponent with impact > natural RES. If it is a hit, it disarms with impact > 2x natural RES. Gains +0.5xSTR if the opponent attempts to block by redirecting.
 
 %-----------------------------------DEFEND
 
@@ -335,17 +344,17 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 %----------------------- Grapple
 
-\skill{Grapple}{Melee}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
+\skill{Grapple}{STR-10}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
 
 \textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only redirect. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only redirect. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles. Any weapons with the grappling property can use the grapple skill instead of strike to attack during a grapple.
 
-\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grab maneuver is used against the opponent.
+\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used against the opponent.
 
-\textbf{Drag and Push:} Grabbing someone enables the actions of dragging and pushing, which use strength as the skill.
+\textbf{Drag and Push:} On a hit, moves the opponent one space x MM. Can spend 3 SOPs to move an additional space. Pushing can be used simultaneously with initiating the grapple, sharing the AP cost, but spending the STA. It gets +3 if the grapple initiated while running. This method only works if the grapple is successfully initiated.
 
-\textbf{Escape:} Escapes from the grab on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
+\textbf{Escape:} Escapes from the grapple on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
 
 \textbf{Disarm:} Removes something from the opponent's hands on a critical. It is possible to grab the opponent's weapon on a hit, preventing them from using it until they manage to escape.
 
@@ -353,7 +362,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Immobilize:} The opponent becomes immobilized on a critical. It is possible to stay immobilized yourself to achieve immobilization on a hit.
 
-Multiple characters can assist each other in the grab. Any skill test made by several characters uses the highest skill value among them plus 4/3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters of a smaller size category add a maximum of 2.
+Multiple characters can assist each other in the grab. Any skill test made by several characters uses the highest skill value among them plus 3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters of a smaller size category add a maximum of 2.
 }
 
 %----------------------SHOOT
@@ -410,7 +419,7 @@ Effects of an explosion that have a DL, such as pushing enemies, receive +5 agai
 In all cases, if the character is interrupted, they cannot move after the interruption.
 }
 
-\section{Positioning, Tactics and Object Interaction}
+\section{Positioning and Tactics }
 
 \textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
 
@@ -418,29 +427,21 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \textbf{Flanking:} Whenever two characters cannot fit completely within a radius of 180 degrees relative to a target, the target must focus on one target at a time. Use 3 surrounding hexes for a hex grid. Switching focus costs 1 AP and is necessary in order to react to the target. If the target of the attack moves as a part of its defense, like with evasive jump, the 1 AP cost is waived as long as the final destination reduces the angle back to 180 degrees or lower.
 
-\textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. The reach is reduced by 1m unless the person on the lower ground targets the legs. The person on the high ground have the reach reduced to hit everything but the head of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. Only long weapons can be used when the height difference is of 2m and so on. The high ground is a defensive position.
+\textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. One character no longer offers cover against ranged attacks to another if one is in front of the other against shots from the high ground. The melee reach is reduced by 1m unless the person on the lower ground targets the legs. The one on the high ground has the reach reduced to hit the legs of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. A difference in elevation is a defensive tactical resource where whoever has the high ground has a slight advantage.
 
 \textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses. 
 
 \textbf{Underwater Combat:} Any attack that does not have the precise tag or the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m for small objects (the size of arrows), 5m for medium ones (the size of spears) and 8m for large ones (the size of ballista shots, since larger projectiles decelerate less). All explosions have half the radius, but blunt damage is doubled.
 
-\textbf{Mounted Combat:} Attacking in melee receives a mount-dependent penalty while mounted, usually around -2. Accuracy receives the penalty while the mount is moving, not when standing still. Any movement, except careful movement, is considered running to trigger reactions. If the character is forcibly displaced while mounted, they will be dismounted.
+\textbf{Mounted Combat:} Attacking in melee receives a mount-dependent penalty while mounted, usually around -2. Accuracy receives the penalty while the mount is moving, not when standing still. Any movement, except careful movement, is considered running to trigger reactions. If the character is forcibly displaced while mounted, they will be dismounted. The only defenses against melee attacks allowed during mounted combat are block and redirect.
 
-The only defenses against melee attacks allowed during mounted combat are block and redirect.
+\section{Interactions with objects}
 
-\skill{Strength}{STR-10}{ Used to perform feats of strength, such as pushing, dragging, pulling, and lifting things. An active Strength check costs 3 AP + 1 STA. Strength can also be used passively to resist being crushed or moved.
+\textbf{Lifting Weight:} A character with STR 10 can lift 50kg within an action that costs 3 AP +1STA. A character with STR 15 can lift around 150kg with the same test, and a STR 20 can lift around 500kg. It is still possible to lift up to one size category higher than the character's outside of combat in perfect conditions. The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. 
 
-\textbf{Push:} Make a strength check opposed by the opponent's strength. The defender must also spend 2 AP + 1 STA to resist; otherwise, they receive -5 on the check. A success pushes the enemy 1 space, while a critical knocks them down. Gains +2 when performed during a run. A push can be avoided automatically by performing an evasive jump.
+\textbf{Damage from Impact with objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of force it is supposed to apply when it hits a character or another object. The actual energy used for the damage depends on the material hardness, where hardness 4 gives energy = force; hardness 3 gives energy = force/2; hardness 2 gives energy = force/4 and hardness 1 gives energy = force/10. 
 
-Multiple characters can participate in a strength conflict. Any skill check made by multiple characters uses the best attributes of any of them, meaning that only one character's strength can be used, plus 4/3/2/1 for each additional character. All characters involved must spend the necessary AP. Smaller characters add a maximum of 2. 
-
-\textbf{Lifting Weight:} A character with STR 10 can lift 50kg within a strength test. A character with STR 15 can lift around 150kg with the same test, and a STR 20 can lift around 500kg. It is still possible to lift up to one size category higher than the character's outside of combat in perfect conditions. The basic rule of strength is that you become 3.33x stronger for every 5 points in this skill, following the VM from the size categories. }
-
-\textbf{Damage from Impact with objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of damage it is supposed to deal if it hits a character or another object. This damage is always blunt and ignores armor protection.
-
-\textbf{Damage ceiling for impacts:} There is a ceiling to how much damage can be taken from low velocity impacts. The maximum amount of blunt damage that can be taken from impact with a low speed object is equal to 10xDM. For medium speed it is 20xDM and for fast ones it is 40x DM. Always apply the ceiling after any additive damage reductions and before multiplicative ones. The limit does not apply if the character getting crushed against a surface.
-
-\textbf{Projectile hardness and damage:} This table assumes a solid object hitting the target full on. Lower the damage ceiling based on how soft the object is. Objects like a body, rotten wood or any other deformable object should have the damage ceiling reduced by 50\% or 75\% for objects with low hardness. The ceiling for soft materials applies even when crushing against a surface.
+\textbf{Damage ceiling for impacts:} There is a ceiling to how much damage can be taken from low velocity impacts. The maximum amount of blunt damage that can be taken from impact with a low speed object is equal to 10xDM. For medium speed it is 20xDM and for fast ones it is 40x DM. The limit does not apply if the character getting crushed against a surface.
 
 \begin{tabular}{| c c c c|}
     \hline &&& \\
@@ -463,15 +464,86 @@ Multiple characters can participate in a strength conflict. Any skill check made
     \hline
 \end{tabular}
 
-\textbf{Resolving the impact:} This damage can be defended against with evasive jump or reflex as if they were melee or ranged attacks. Trying to block is impossible, even with a shield. Spend 3 PA +1 STA to use redirect instead. If the damage is reduced to 0, the object is stopped.
+\textbf{Resolving the impact:} This damage can be defended against with evasive jump or reflex as if they were melee or ranged attacks. If the damage is reduced to 0, the object is stopped.
 
-\textbf{Pushing effect:} Heavy objects that hit a character also pushes them. The DL is 0 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
+\textbf{Pushing effect:} Heavy objects that hit a character also pushes them. Use STR-10 as the skill value. The DL is 0 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
+
+\section{Chases}
+
+A chase is an event to decide the increase or decrease of the distance between two parties while they fight.
+
+There are four distance tiers: Very close, close, far and very far.
+
+\begin{itemize}
+    \item \textbf{Combat:} This is under 50m distance, which is combat range. Can be smaller when indoors (a room) or in places with many obstacles.
+    \item \textbf{Close:} This is from around 50m to 200m distance. This range can be smaller in a city, a dense forest or any other place with lots of hiding spots and obstacles.
+    \item \textbf{Far:} This is from around 200m to 500m. This is the limit of what can be seen in many places. It will be smaller in places with many obstacles and hiding spots.
+    \item \textbf{ Very Far:} This is from 500m and beyond. This distance is only used in open terrain.
+\end{itemize}
+
+\textbf{Chase tests:} Chase actions are tests. On a success, decide to increase or decrease distance. On a failure, opponent decides. 
+
+\textbf{Escaping:} There are three ways to escape:
+\begin{itemize}
+    \item \textbf{Outrunning:} If the distance is already far or very far and the winner decides to increase the distance, the chase is over.
+    \item \textbf{Hiding:} If the distance is at least far and there is a stealth event, in which the quary succeeds, it escapes.
+    \item \textbf{Obstacle:} If there is an obstacle that the quary traverses and that the pursuers cannot or do not want to traverse.
+\end{itemize}
+
+\subsection{Running}
+
+The simplest case for a chase is running in an open field. This is the breakdown:
+
+\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint. Whoever has the highest running speed wins.
+
+\textbf{Running at longer ranges:} This is a sustained pace running. The running speed is STA + AGI. Whoever is higher wins. 50\% chance on a draw. If the character is bleeding, it bleeds 3x.
+
+\textbf{Catching:} The quary is caught when its does not have STA to run, when it voluntarily turns back to fight or when it ends its turn with any mobility affliction while in very close range. In this case, the chase ends and a combat or social situation starts.
+
+\textbf{Fight on the run:} When one side wins on a test, but the distance is already very close, all pursuers and defenders get 6 AP. It is considered that everyone has range against everyone. 
+
+\textbf{Shot and run:} Whichever side wins can get 6 AP to perform ranged attacks instead of changing the distance when winning in the chase. The quary can be allowed to increase distance and receive 6 AP, while the pursuers receive 12 AP to attack them. If the starting distance is combat, the distance penalty for ranged attacks is at 30m mark.
+
+\textbf{Group chase:} In a group chase, use the speeds of the slowest in each group as the speed for the other team to beat.
+
+\textbf{Pursuers win:} Not all the fugitives have to stay with their slow ally. In that case, they can leave them behind. From now on, they stay at 1 distance away from their slow integrant. They can come back to aid, but only in the next turn.
+
+\textbf{Fugitives win:} The pursuers can choose everyone who is faster than the slowest fugitive to catch up. The team is split and their slow integrants stay behind. They will catch up, but only when the chase ends or the vanguard decides to stay behind.
+
+Whenever a combat is going on and a detached party catches up, they do it at 30m distance from their ally.
+
+\subsection{Hiding}
+
+Hiding can be done at any distance greater than combat.
+
+The fugitives will look for a place to hide using their detection skill. It needs to make sense with the scene they are in. They will describe what they are looking for. The odds that such a place exists will be a test with TN between 0 and 30, where 0 is obvious, 5 is easy, 10 is difficult, 20 is near impossible and 30 is for the exploding dice to shine. 
+
+The fugitives can only describe one thing that they are looking for per round.
+
+If the place is not found, resume the chase with running.
+
+The stealth test is done by the lowest stealth in the group. The group can choose to hide partially to increase the stealth value and leave someone as bait.
+
+If the stealth test happens, nobody detects the fugitives and the distance is far or greater, the chase is over. It is recommended to only use the highest detection in the group. 
+
+If the distance is still at close when hiding, the oponent has the option of leaving. If they don't, the fugitives will have to risk being detected again to sneak away in another stealth event to end the chase.
+
+\subsection{Obstacles}
+
+Either the fugitives look for obstacles to traverse or the GM puts them in place. The fugitives can describe what they are looking for and make a detection test to find it, like with a hiding spot. The fugitives can also look for terrain that will give them advantages in a fight.
+
+The fugitives can only describe one thing that they are looking for per round.
+
+Traversing an obstacle works just like running, but with a balance, climb or swim check to define speed. Opponents can attack in melee if they win the chase during an obstacle and they can also decide not to traverse, but pepper them with ranged attacks.
+
+\textbf{Obstacles:} Use balance to run on rooftops. Use climb to go where you cant be followed. Jump out of high places and land safely while others cant. Swim when others cant follow. 
+
 
 \section{Stealth and Subterfuge}
 
-\skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against stealth events in the environment, which trigger cunning tests for those who will potentially detect.
+\skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against stealth events in the environment, which trigger Detection tests for those who will potentially detect.
 
-\textbf{Stealth test:} When a stealth event occurs, the character makes a stealth check against its DL. The result will trigger a cunning test to any characters capable of noticing the event. The DL of the cunning test has a base DL, based on the triggering event. That value is modified by the result of the stealth test. A crit adds +3 to the DL, a hit does not modify, a graze gives a -3 penalty and a miss gives a -5. Crits in stealth tests against passive senses give a +5 bonus to the DL and another +1 for the value that the stealth check goes over the crit threshold. 
+\textbf{Stealth test:} When a stealth event occurs, the character makes a stealth check against its DL. The result will trigger a Detection test to any characters capable of noticing the event. The DL of the Detection test has a base DL, based on the triggering event. That value is modified by the result of the stealth test. A crit adds +3 to the DL, a hit does not modify, a graze gives a -3 penalty and a miss gives a -5. Crits in stealth tests against passive senses give a +5 bonus to the DL and another +1 for the value that the stealth check goes over the crit threshold. 
 
 \textbf{Hidden roll:} Optionally, the GM could roll the dice for the player and not tell them the result. This way, they have to interpret whether they are doing well of not with their stealth, instead of just relaxing and assuming that they won't be seen because they rolled well.
 
@@ -485,21 +557,21 @@ Multiple characters can participate in a strength conflict. Any skill check made
 
 The two big categories of stealth events are: hiding and sneaking. Hiding depends on line of sight and camouflage. Sneaking depends on making no noise when moving, which depends on what the floor is and what is stepping on it.
 
-Some common stealth events and their estimated stealth and cunning DLs are in the following list.
+Some common stealth events and their estimated stealth and Detection DLs are in the following list.
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item camouflage: stealth DL 0, cunning DL 2 vision
-    \item hiding in woods: stealth DL 5, cunning DL 2 vision
-    \item hiding in plain sight: stealth DL 8, cunning DL -5 vision
-    \item sneaking in the grass: stealth DL 5, cunning DL 0 hearing
-    \item sneaking in squeaking floorboards: stealth DL 8, cunning DL -2 hearing
+    \item camouflage: stealth DL 0, Detection DL 2 vision
+    \item hiding in woods: stealth DL 5, Detection DL 2 vision
+    \item hiding in plain sight: stealth DL 8, Detection DL -5 vision
+    \item sneaking in the grass: stealth DL 5, Detection DL 0 hearing
+    \item sneaking in squeaking floorboards: stealth DL 8, Detection DL -2 hearing
 \end{itemize}
 
 \textbf{Remaking Stealth checks:} The stealth check is done once per round in combat, at the beginning of the round, or once per scene outside combat. A scene only changes if the conditions for stealth change significantly. That is a subjective call, but it is recommended that new rolls are not repeated often.
 
-\textbf{Event DL modifier:} Some actions will make the stealth test more difficult. If one of these aggravating events happen within the same scene or round, a new cunning test is called, adding the modifier to the detector's cunning skill.
+\textbf{Event DL modifier:} Some actions will make the stealth test more difficult. If one of these aggravating events happen within the same scene or round, a new Detection test is called, adding the modifier to the detector's Detection skill.
 
 Here are the stealth DL modifications:
 \begin{itemize}
@@ -511,15 +583,14 @@ Here are the stealth DL modifications:
     \item ranged attacks: +2 to hearing and vision
     \item basic movement: +2 hearing and vision
 \end{itemize}
- .}
+.}
 
-\skill{Cunning}{Detection}{ Cunning is used to determine priority when competing to take a combat turn first. It is also used to detect things in stealth or just for looking for things in general.
+\skill{Detection}{Awareness}{ Detection is used to detect things in stealth or just for looking for things in general.
 
-\textbf{ Feint :} if nobody wants to take their turn in melee, a feint can be performed. It is a cunning against cunning test between two characters in melee. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. The target cannot feint back with those AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP.
 
-\textbf{Detection:} the skill value used for detection is the cunning skill plus bonuses from one of the senses. The roll gets called when the added value is greater or equal to the DL of stealth events. The detection check is rolled once per character per round or scene for all events. On a failure or graze, nothing is noticed. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. The rolled value is used for all cunning checks for the entire round or scene.
+\textbf{Detection:} the skill value used for detection is the Awareness proficiency plus bonuses from one of the senses. The roll gets called when the added value is greater or equal to the DL of stealth events. The detection check is rolled once per character per round or scene for all events. On a failure or graze, nothing is noticed. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. 
 
-\textbf{Group detection:} optionally, preferrably outside of combat, a single cunning value can be used for a whole group of characters, using the best cunning in the group for everybody. The group can be separated as desired, but it is best if each group is within the same distance band.
+\textbf{Group detection:} optionally, preferrably outside of combat, a single Detection value can be used for a whole group of characters, using the best Detection in the group for everybody. The group can be separated as desired, but it is best if each group is within the same distance band.
 
 \textbf{Senses:} The usable senses are vision, hearing and smell. Senses can be active or passive. Active senses are used to keep the detector in alarmed state, meaning that they don't forget your position, even if you move. Passive senses can detect position, but they can't track it or keep the character in alarmed state. If the character has no active senses available, they are automatically oblivious.
 
@@ -531,7 +602,7 @@ Here are the stealth DL modifications:
 
 \textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed to it. Projectiles that hit the character have their direction identified, not necessarily their source. Using only touch as an active sense makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
 
-\textbf{Distance bands:} The DL from stealth events to cunning is penalized by distance. The magnitude of the modification depends on the specific sense used to detect.
+\textbf{Distance bands:} The DL from stealth events to Detection is penalized by distance. The magnitude of the modification depends on the specific sense used to detect.
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
@@ -550,15 +621,13 @@ Here are the stealth DL modifications:
 
 \textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible.
 
-\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's TN. If cunning is equal or higher than TN, they find it. 
+\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's TN. If Detection is equal or higher than TN, they find it. 
 
 \textbf{Focusing attention:} This can be used to get +5 to the detection test when looking attentively at one specific thing. It can be used when a player says they want to look at a specific place to see better detail or when someone points out a direction for others to focus. 
 
-\textbf{Distraction:} A character can be distracted by something, receiving -3 to cunning against everything other than the distraction. A character engaged in melee combat is automatically distracted.
+\textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection against everything other than the distraction. A character engaged in melee combat is automatically distracted.
 
-\textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 3 AP to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
-
-\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of cunning as skill, but they can only find the object if they have passed a knowledge test or if they have a minimum knowledge level in the field.
+\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of Detection as skill, but they can only find the object if they have passed a knowledge test or if they have a minimum knowledge level in the field.
 }
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
@@ -567,7 +636,7 @@ Here are the stealth DL modifications:
 
 % \textbf{Conceal Objects:} Used as a standard action of defense against detection tests to identify objects carried by the character. Successes detect and criticals identify the object. On grazes and failures, nothing is noticed.
 
-\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's cunning +5x the size category of the item (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
+\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's Detection +5x the size category of the item (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
 
 \textbf{Pick Lock:} These tests require knowledge of mechanics and receive -5 for each level below the requirement. On criticals, it takes 5 AP. On successes, between 10 seconds and 1 minute. On a graze, it takes between 10 minutes and 1 hour, and on a failure, it is impossible to open.
 
@@ -602,24 +671,24 @@ They can also be learned with conviction XP or with devotion. In this case, they
 
 \subsection{Types of Spells and Modifications}
 
-Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. They are applied after making the sorcery test, but cannot cause the test to graze or fail.
+Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. They follow the same logic of SOPs.
 
-\textbf{Accelerate Spell:} Increases the sorcery DL by 3 to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
+\textbf{Accelerate Spell:} Spend 3 SOPs to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
 
-\textbf{Extend Spell:} Increases the sorcery DL by 2 to increase the range of a spell according to the MM.
+\textbf{Extend Spell:} Spend 2 SOPs to increase the range of a spell according to the MM.
 
-\textbf{Enhance Spell:} Increases the sorcery DL by 4 to improve spells in a special way described in the spell.  \\
+\textbf{Enhance Spell:} Spend 4 SOPs to improve spells in a special way described in the spell.  \\
 
-\textbf{Amplify Spell:} Increases the sorcery DL by 4 to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
+\textbf{Amplify Spell:} Spend 4 SOPs to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
 
-\textbf{Extend Charge Duration:} Increases the sorcery DL by 2 to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
+\textbf{Extend Charge Duration:} Spend 2 SOPs to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
 
-\textbf{Effortless Spell:} Increases the sorcery DL by 4 to rest while casting a spell. The spell must spend the higher between the rest's AP cost and the spell's AP cost. If used outside combat, reduces the exhaustion cost of a spell by half.  \\
+\textbf{Effortless Spell:} Spend 4 SOPs to rest while casting a spell. The spell must spend the higher between the rest's AP cost and the spell's AP cost. If used outside combat, reduces the exhaustion cost of a spell by half.  \\
 
 The types of spells are:
 
 \begin{itemize}[noitemsep]
-\item Environmental: The spell alters the environment.
+\item Environmental: The spell alters the environment. They have customized enhancements.
 \item Effect: Spells that directly affect the target and have various effects. They have customized enhancements.
 \item Psychic: Spells that directly affect the target and have psychic effects. They use the Charisma proficiency as the Difficulty Level (DL). Enhancing increases the DL by 2.
 \item Projectile: Spells that function as projectiles, using the shooting skill as the DL.

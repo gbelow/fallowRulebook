@@ -20,24 +20,25 @@ There are 27 skills, as described in the table:
 Skill & Proficiency & Talent & Trainable \\
 \hline &&& \\
 Health & Constitution & Constitution & no\\
-Strength & STR-10 & Constitution & no \\
+% Strength & STR-10 & Constitution & no \\
 
 Strike & Melee & Dexterity  & yes \\
 Defend & Melee & Dexterity & yes \\
 Grapple & STR-10 & Dexterity & yes \\
 
 Accuracy & Ranged & Dexterity & yes\\
-Reflex & Ranged + Detection & Dexterity & no\\
+Reflex & Ranged + Awareness & Dexterity & no\\
 
 Balance & AGI-10 & Dexterity  & yes \\
 Climb & AGI-10 & Dexterity  & yes \\
 Swim & AGI-10 & Dexterity  & yes \\
 
 Prestidigitation & Dexterity & Dexterity & yes \\
-Stealth & Detection & Dexterity  & yes \\
+Stealth & Awareness & Dexterity  & yes \\
 
-Cunning & Detection+Sense & Intellect  & no \\
-Exploration & Detection & Intellect  & knowledge \\
+Cunning & Awareness & Intellect  & yes \\
+Detection & Awareness+Sense & Intellect  & no \\
+Exploration & Awareness & Intellect  & knowledge \\
 Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
 
 Combustion & Sorcery & Intellect & yes \\
@@ -59,7 +60,6 @@ Will & SPI & Spirit & no \\
 \end{center}
 
 \begin{multicols}{2}
-    
 
 Skills marked as trainable can be improved individually. The ones that are not can only get bonuses from their proficiency. Skills where trainable is "knowledge" mean that the skill value is trainable, but follows the rules of the knowledges.
 
@@ -69,7 +69,7 @@ The trainable proficiencies are as follows:
 
 \textbf{Melee (DEX)}: General skill in melee combat. Uses DEX as talent. \\
 \textbf{Ranged Combat (DEX)}: General skill in ranged combat. Uses DEX as talent. \\
-\textbf{Detection (INT)}: The character's ability to pay attention to what matters and not get distracted. Uses INT as talent.\\
+\textbf{Awareness (INT)}: The character's ability to pay attention to what matters and not get distracted. Uses INT as talent.\\
 \textbf{Charisma (INT)}: This is the baseline skill of communication and empathy, that is useful in any social situation. It includes both knowing what to communicate and knowing who to communicate it to in verbal and non verbal form. Uses INT as talent. \\
 \textbf{Sorcery (SPI)}: General skill in casting spells. Uses SPI as talent. \\
 \textbf{Devotion (SPI)}: Level of alignment with a deity. Uses SPI as talent.\\
@@ -131,6 +131,8 @@ Constitution governs the enhancement of attributes, health, and also mutation ab
 
 Attributes represent the physical characteristics of the character. They are divided into Strength (STR), Agility (AGI), and Stamina (STA). The common values for attributes for healthy young humans are 10.
 
+\textbf{Attributes as skills:} sometimes, an attribute can be used as a skill in case no skills fit an action. For example, strength for lifting weight, agility to outrunning someone and stamina for holding breath. In that case, use attribute -10 as the skill value.
+
 \textbf{Improving attributes:} The XP cost to improve attributes is equal to the target attribute value divided by 2. However, if the sum of the 3 attributes plus the target value exceeds $40+4*CON-4*SM$, the cost is doubled. For every 3 points higher, it triples, and so on for every 3 points.
 
 \textbf{Changing attributes:} It is possible to lose 1 point in one attribute to increase another, but this costs 2 XP.
@@ -165,7 +167,7 @@ Two creatures of size 3 can occupy the same space, but cannot end a turn like th
 
 \textbf{Standard Deflection (SD):} is the standard difficulty to hit a target, which is based solely on its size and movement. The larger the target, the easier it is to hit. The standard deflection is equal to -5-1xSM for stationary targets and -2-1xSM for moving targets. It is impossible for any type of penalty to reduce a character's deflection to a value lower than the SD.
 
-\textbf{Damage Multiplier (DM):} multiplies the HP of a character, the character's damage tolerances, and their armor, weapon damage, abilities, and spells.
+\textbf{Damage Multiplier (DM):} multiplies all values derived from STR of a character and their appropriately scaled gear. It's TGH and Poise, armor's defenses, weapon damage, abilities, and spells.
 
 \textbf{Skill Modifier (SM):} is a modifier added to or subtracted from the character's values, in the proportions shown in the table.
 
@@ -311,13 +313,14 @@ Very old & 80-death \\[0.5em]
 
 \section{Intellect}
 
-Intellect measures the logical capacity, planning, and decision-making abilities of characters. The skills governed by intellect involve exploration, knowledge, sorcery, and cunning. 
+Intellect measures the logical capacity, planning, and decision-making abilities of characters. The skills governed by intellect involve exploration, detection knowledge, sorcery, and cunning.
 
 \textbf{Exploration:} It is used in survival situations to determine the ability to travel without getting lost and to find things in varied terrains. The exploration skill is based on the sum of detection proficiency and specific knowledge of the area.
 
 \textbf{Sorcery:} Uses sorcery proficiency added to a related knowledge to cast spells. More details are in the combat section.
 
-\textbf{Cunning:} It is the ability to make good decisions quickly. It is the sum of detection and cunning skill. More details are in the combat section.
+\textbf{Cunning:} It is the ability to make good decisions quickly and be aware of danger. More details are in the combat section.
+
 
 \subsection{Knowledge}
 
@@ -330,12 +333,10 @@ It is equivalent to asking your character if they should know or understand some
 
 You use 2x the relevant knowledge as the skill value. If the necessary facts for deduction are already known, you can use 2x intellect as the value.
 
-Whenever a player claims that the character knows something, the Master can ask for a knowledge check to determine if the character really knows it.
+Whenever a player claims that the character knows something, the GM can ask for a knowledge check to determine if the character really knows it.
 
 To use this skill, make a knowledge check against an arbitrary difficulty, representing the challenge of reaching a good conclusion from the available information. Critical successes mean that the character can make the best deduction from the information they have, even determining what information is missing to make a better deduction and remembering everything they know. Successes mean they have a good guess and remember most of what they know. Grazes mean that you don't know or can't remember, but you might know where to look. Misses mean that you reach an incorrect conclusion or a different one from the correct one, or you can't remember anything.
 }
-
-% Skill used to learn and remember facts. It can be used to actively seek and acquire information of any kind from books, maps, artifacts, and similar sources. When using it, make a skill check to learn as much as possible from the available material, considering how good that material is and how much time you have to study.
 
 \textbf{Knowledge as a talent:} Knowledge can be used as a talent to learn spells. Spells have a knowledge requirement indicating the difficulty.
 
@@ -370,6 +371,8 @@ The formal areas of knowledge in which the character can be trained are:
 
 Informal knowledge is the result of the character's experiences and can be acquired by engaging in any activity. The categories can be diverse, created to represent the character's experiences.
 
+\textbf{Why have this?} This is a reward and a history tracker for everything the character knows about the world and their own story. 
+
 \textbf{Varying XP cost:} The amount of XP required to level up can also be arbitrary, depending on the difficulty of learning the knowledge. For example, knowing all the relevant people in a town of 400 inhabitants is much easier than learning a new language. INT is used as a talent for skills normally.
 
 Examples of varied knowledge:
@@ -380,6 +383,8 @@ Examples of varied knowledge:
 \textbf{Art - type:} Knowledge about a specific form of art, for example, music, its greatest artists, and works. \\
 \textbf{Faction - name:} Knowledge about the people of a faction, their history, politics, wealth, alliances, etiquette, etc. \\
 \textbf{Religion - name:} Knowledge about the gods of a religion and their domains. \\
+\textbf{Animal handling - animal:} Knowledge about taming and riding a specific animal or type of animal. Some animals may not be rideable without this. \\
+\textbf{Driving - vehicle:} May be necessary to be able to drive a special vehicle. \\
 
 \textbf{Receiving XP:} Downtime activities generate experience in knowledge. The character receives XP in knowledge simply by having access to related information. The amount generated will depend on the character's dedication and ability to learn. For example, if the character is in a town but spends all their time learning sorcery in a tower, they do not gain local knowledge. If they stay in the tavern meeting new people and celebrating, but do not know the language, they gain a lot of knowledge about the language, but less about the local area.
 
@@ -434,6 +439,8 @@ The active will test can be made if the character understands that they are unde
 
 
 \section{Spirit}
+
+Spirit is the main talent for Sorcery. It is also used to determine the character's power of Will.
 
 \subsection{Limit Actions:}
 

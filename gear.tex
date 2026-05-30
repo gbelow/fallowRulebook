@@ -67,7 +67,7 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 Weapon & RES & Energy & SHP & hand & range & properties & price & weight \\
 \hline
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & 0 \\
-& STR & 0.5x STR & 0 & small & short & draw & soft, heavy I, smash & 0 \\[5pt]
+& STR & 0.5x STR & 0 & small & short & draw & soft, smash & 0 \\[5pt]
 \hline
 \textbf{Claws} & 10 & 0.5x STR & 1x & small & short & grapple, DEF & - & 0 \\[5pt]
 \hline
@@ -218,7 +218,7 @@ Weapon & RES & Energy & AP & hands & range & properties & price & weight \\
 \hline
 \textbf{Net} & 15 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & 5 \\ [5pt]
 \hline
-\textbf{Grappling Hook and Rope} & 10 & 0.5xSTR & 4+4 & two & 2xSTR & throw, hook & 2 SP & 5 \\ [5pt]
+\textbf{Grappling Hook and Rope} & 10 & 6 & 4+4 & two & 2xSTR & throw, hook & 2 SP & 5 \\ [5pt]
 \hline
 \textbf{Grenade} & 20 & X & 3 & one & 2xSTR & throw & 2 GP & 2 \\ 
 \hline
@@ -259,7 +259,7 @@ Types of arrows:
 \hline
 Name & Penalty & Deflection & RES & Insulation & Weight & Value\\ [1ex]
 \hline \hline
-Wooden Shield & -1 & +3 & 20  & 10 & 10 & 1 GP\\
+Wooden Shield & -1 & +3 & 20 & 10 & 10 & 1 GP\\
 Metal Shield & -2 & +3 &  30 & 10 & 25 & 15 GP\\
 Wooden Tower* & -2 & +4 & 20 & 15 & 20 & 2 GP\\
 \hline
@@ -274,7 +274,7 @@ Body shields are marked with * in the table and can provide total cover.
 
 Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow CUT damage to hit the wearer.
 
-\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected in the AGI attribute values and as an increase in the action surge cost by penalty/3. During travel, it also affects the STA value used to determine wear. The penalties stack.
+\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack.
 
 \textbf{Cloth armors} require the user to defend against most attacks actively, but they prevent the damage from being severe if hit. Cloth armors have very few penalties and a hardness of 2.
 
