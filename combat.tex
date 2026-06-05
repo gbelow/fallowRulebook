@@ -198,7 +198,7 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
 
 \textbf{Cutting damage:} is defended by armor RES.  
 
-\textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of hardness, the details are explained in the gear section. The most glaring example: metal is hardness 4 and can cut everything except other metals, stone and a few more hard materials.
+\textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks. More details on the gear section.
 
 \textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS.
 
@@ -215,16 +215,12 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
 
 \subsection{Additional effects:}
 
-\textbf{Force and poise:} Force is applied by all physical attacks. It can cause interruptions, pushes, knockdowns and such effects. The value of force is derived from energy, and equal to it unless otherwise stated in the particular attack.
+\textbf{Force:} is applied by all physical attacks. It can cause interruptions, pushes, knockdowns and such effects. The value of force is derived from energy, and equal to it unless otherwise stated in the particular attack.
 
-% \begin{itemize}
-%     \item Force > Poise: Interrupt
-%     \item Force > 1.5x Poise: Knockback
-%     \item Force > 2x Poise: Knockdown
-%     % \item Force > 3x Poise: Stun
-% \end{itemize}
+\textbf{Poise:} is the defense to resist force. It is equal to character TGH by default, but gets additionals from armor.
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. Interrupt happens any time Force >= Poise.
+
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. Interrupt also happens any time Force >= 3x Poise or when a tier 1+ blunt or electric damage is inflicted.
 
 % \textbf{Knockback:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
 
@@ -247,11 +243,11 @@ For humanoids, there are 4 locations: chest, hand, leg, and head.
 
 \textbf{Chest:} Costs 0 points. Standard location. 
 
-\textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage taken from this is 5. Taking 20 IL cutting damage amputates.
+\textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage accounted from this is 5. Taking 20 IL damage amputates.
 
-\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. A tier 4 cutting damage amputates. Taking force equal to 2x Poise causes the character to lose their balance and fall prone.
+\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates. Taking force equal to 2x Poise causes the character to fall prone.
 
-\textbf{Head:} Costs 5 points. Target has half the Poise, and getting 3x Poise to the head causes unconsciousness. Tier 3 damage causes unconsciousness and Tier 4+ damage has 50\% chance of instant death. There is no inner layer of armor in the head.
+\textbf{Head:} Costs 5 points. Getting 3x Poise or a wound to the head causes unconsciousness. Tier 4+ damage has 50\% chance of instant death. There is no inner layer of armor in the head.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
 
@@ -316,13 +312,11 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy of this attack gains a +STR bonus on a hit.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy of this attack gains a +STR bonus on a hit and has force equal to 2x energy.
 
 \textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with force > 2x poise, and on a crit it knocks down at force > poise. Gains +STR/2 energy if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
 
 \textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
-
-\textbf{Disarm:} Can be done when opponent tries to block or
 }
 
 
@@ -470,9 +464,11 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \section{Chases}
 
-A chase is an event to decide the increase or decrease of the distance between two parties while they fight.
+The chase starts when everyone in a party decides to run away. It always starts at the beginning of a new round. Any character that cannot run for whatever reason at the beginning of the round will prevent the chase to begin, unless they get left behind.
 
-There are four distance tiers: Very close, close, far and very far.
+If a chase begins and a combat is still ongoing, the combat must end before resuming the chase.
+
+A chase is an event to decide the increase or decrease of the distance between two parties while they fight. There are four distance tiers: Very close, close, far and very far.
 
 \begin{itemize}
     \item \textbf{Combat:} This is under 50m distance, which is combat range. Can be smaller when indoors (a room) or in places with many obstacles.
@@ -530,7 +526,7 @@ If the distance is still at close when hiding, the oponent has the option of lea
 
 \subsection{Obstacles}
 
-Either the fugitives look for obstacles to traverse or the GM puts them in place. The fugitives can describe what they are looking for and make a detection test to find it, like with a hiding spot. The fugitives can also look for terrain that will give them advantages in a fight.
+Either the fugitives look for obstacles to traverse or the GM puts them in place. The fugitives can describe what they are looking for and make a detection test to find it, like with a hiding spot. The fugitives can also look for terrain that will give them advantages in a fight and reposition there. The players are encouraged to draw the map themselves on a success.
 
 The fugitives can only describe one thing that they are looking for per round.
 
@@ -636,7 +632,7 @@ Here are the stealth DL modifications:
 
 % \textbf{Conceal Objects:} Used as a standard action of defense against detection tests to identify objects carried by the character. Successes detect and criticals identify the object. On grazes and failures, nothing is noticed.
 
-\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's Detection +5x the size category of the item (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
+\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's Detection +5x for every item size category over small (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
 
 \textbf{Pick Lock:} These tests require knowledge of mechanics and receive -5 for each level below the requirement. On criticals, it takes 5 AP. On successes, between 10 seconds and 1 minute. On a graze, it takes between 10 minutes and 1 hour, and on a failure, it is impossible to open.
 
