@@ -24,7 +24,7 @@ Health & Constitution & Constitution & no\\
 
 Strike & Melee & Dexterity  & yes \\
 Defend & Melee & Dexterity & yes \\
-Grapple & STR-10 & Dexterity & yes \\
+Grapple & Melee + STR-10 & Dexterity & no \\
 
 Accuracy & Ranged & Dexterity & yes\\
 Reflex & Ranged + Awareness & Dexterity & no\\
@@ -91,7 +91,7 @@ The expected levels for skills and proficiencies range from 0 to 5, but can be i
 
 \textbf{Gaining Experience (XP):} Improving skills and proficiencies and learning abilities requires training during free time, which yields experience based on training time. A regular training session for skills and proficiencies takes 10 days for 1 XP and costs a certain amount of money based on the difficulty level of what one wants to learn.
 
-\textbf{Talent and XP Costs}: The cost of XP to improve a proficiency is equal to $4+4*n$, where n is the proficiency level one wishes to achieve. If the talent is lower than the level one wants to reach, this value is multiplied by $2^x$, where x is the difference between n and the talent, i.e., n-talent. The cost to increase a skill is equal to half the cost to increase the proficiency.
+\textbf{Talent and XP Costs}: The cost of XP to improve a proficiency is equal to $4+4*n$, where n is the proficiency level one wishes to achieve. If the talent is lower than the level one wants to reach, this value is multiplied by $2^x$, where x is the difference between n and the talent. The cost to increase a skill is equal to half the cost to increase the proficiency.
 
 A character has 4 talents that represent their potential for growth.
 
@@ -133,7 +133,7 @@ Attributes represent the physical characteristics of the character. They are div
 
 \textbf{Attributes as skills:} sometimes, an attribute can be used as a skill in case no skills fit an action. For example, strength for lifting weight, agility to outrunning someone and stamina for holding breath. In that case, use attribute -10 as the skill value.
 
-\textbf{Improving attributes:} The XP cost to improve attributes is equal to the target attribute value divided by 2. However, if the sum of the 3 attributes plus the target value exceeds $40+4*CON-4*SM$, the cost is doubled. For every 3 points higher, it triples, and so on for every 3 points.
+\textbf{Improving attributes:} The XP cost to improve attributes is equal to the target attribute value divided by 2. However, if the average of the 3 attributes exceeds $10+CON-SM$, the cost is doubled. For every point higher, it increases by +100\% again. It is impossible to have any attribute higher than 20.
 
 \textbf{Changing attributes:} It is possible to lose 1 point in one attribute to increase another, but this costs 2 XP.
 
@@ -142,8 +142,6 @@ Attributes represent the physical characteristics of the character. They are div
 Represents the weight and muscular strength of a character. Characters with higher STR can hit harder, resist damage better, and perform more impressive feats of strength.
 
 \textbf{ Natural Toughness (TGH)} define how much damage a character can withstand before receiving injuries. Their default value is 0.5xSTR xDM.  This can be interpreted as a larger body, tougher flesh or a stocky build.
-
-% \textbf{Natural Poise} is a value that is used to detemine the character's resistance to being interrupted or stunned. It's basic value is equal to the character's STR x DM.
 
 \subsubsection{AGI}
 
@@ -224,7 +222,7 @@ Race & STR & AGI & STA & INT & SPI & DEX & CON \\ [1em]
 \hline\hline
 Surbit & 1 & 2 & 2 & 0 & 0 & 1 & 1 \\[0.5em]
 \hline
-Dwarf & 1 & -1 & 0 & 1 & 1 & 0 & 0 \\[0.5em]
+Dwarf & 1 & -1 & 1 & 0 & 1 & 0 & 0 \\[0.5em]
 \hline
 Human & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\[0.5em]
 \hline
@@ -235,7 +233,7 @@ Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\[0.5em]
 \end{tabular}
 \end{center}
 
-\textbf{\large Surbita}
+\textbf{\large Surbit}
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
@@ -258,7 +256,7 @@ Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\[0.5em]
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
-\item Increases one talent by 1 at creation.
+\item Increases two talents by 1 at creation.
 \item Can choose one from Tireless, Large Hands, and Beautiful.
 \end{itemize}
 
@@ -542,7 +540,7 @@ Spells: telepathic link, scare, provoke, calm, visual interference, suggestion, 
 \textbf{Step 1:} Choose the character focus. Wealth, DEX, CON, INT, or SPI. Assign each focus a priority level, from A to E. \\
 It is possible to start at an older age and be allowed to select two focuses at A and none at E.
 
-\textbf{Step 2: Race.} Choose a race, which grants racial abilities and bonuses to attributes and skills. At this stage, you also choose the age. 
+\textbf{Step 2: Race.} Choose a race, which grants racial abilities and bonuses to attributes and talents. Add the attribute bonuses after step 4. At this stage, you also choose the age. 
 
 \textbf{Step 3: Wealth.} The character starts with \\
 A: 100 GP, \\

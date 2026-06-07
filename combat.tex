@@ -215,12 +215,7 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
 
 \subsection{Additional effects:}
 
-\textbf{Force:} is applied by all physical attacks. It can cause interruptions, pushes, knockdowns and such effects. The value of force is derived from energy, and equal to it unless otherwise stated in the particular attack.
-
-\textbf{Poise:} is the defense to resist force. It is equal to character TGH by default, but gets additionals from armor.
-
-
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. Interrupt also happens any time Force >= 3x Poise or when a tier 1+ blunt or electric damage is inflicted.
+\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed. 
 
 % \textbf{Knockback:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
 
@@ -234,20 +229,20 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
     \item \textbf{Armor Bypass:} Only attacks from weapons with the piercing property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the weapon has it.
     \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
     \item \textbf{ Extra cut:} Costs a number of SOPs equal to the target's deflection to double the sharpness bonus to cutting damage. Sharpness bonus is SHP-1. Only weapons with the bladed property can use this.
-    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to increase the amount of blunt damage and force dealt by 25\%. Only weapons with the smash property can use this.
+    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to increase the amount of energy by 25\%. Only weapons with the smash property can use this.
 \end{itemize}
     
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
 
-For humanoids, there are 4 locations: chest, hand, leg, and head.
+To illustrate, here are some targets for humanoids. There are 4 locations: chest, hand, leg, and head.
 
 \textbf{Chest:} Costs 0 points. Standard location. 
 
 \textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage accounted from this is 5. Taking 20 IL damage amputates.
 
-\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates. Taking force equal to 2x Poise causes the character to fall prone.
+\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates. 
 
-\textbf{Head:} Costs 5 points. Getting 3x Poise or a wound to the head causes unconsciousness. Tier 4+ damage has 50\% chance of instant death. There is no inner layer of armor in the head.
+\textbf{Head:} Costs 5 points. Getting a wound to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4+ damage has 50\% chance of instant death. Bypassing armor is possible with any weapon, unless the helmet is closed.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
 
@@ -257,7 +252,7 @@ Afflictions are the negative conditions that can affect creatures.
 
 There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Health. 
 
-\textbf{Injury:} penalties affect Grapple, Strength, Climb, Swim, and Will. 
+\textbf{Injury:} penalties affect Grapple, Climb, Swim, and Will. 
 
 \textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
 
@@ -269,7 +264,7 @@ The list of afflictions is:
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
 \item \textbf{Prone:} Can only crawl and stand up. Takes -3 to any attempt to evade.
 \item \textbf{Grappled:} Movement requires pushing. Focus is locked to the main grappler.
-\item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape strength or grapple. The SD is reduced to -5 + SMx1. 
+\item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The SD is reduced to -5 + SMx1. 
 \item \textbf{Disoriented:} Gives -2 to sensory penalties.
 \item \textbf{Oblivious:} Gives -5 to sensory penalties.
 \item \textbf{Blind:} Cannot use vision.
@@ -306,15 +301,15 @@ The survival chapter describes how health works during rest.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy and force of physical attacks by +0.5xSTR , but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. 
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy of physical attacks by +0.5xSTR , but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. 
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost. The energy of this attack gains a +STR bonus on a hit and has force equal to 2x energy.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has energy bonus of +STR on a hit. If the damage is blunt, this also pushes the target, but without initiating grapple.
 
-\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. If it is a hit, it knocks down the opponent with force > 2x poise, and on a crit it knocks down at force > poise. Gains +STR/2 energy if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range.
+\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. Gains +STR/2 energy if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. If the damage is blunt, this counts as a drag, from grappling.
 
 \textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
 }
@@ -322,7 +317,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 %-----------------------------------DEFEND
 
-\skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, damage is taken normally. If it grazes or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Redirect, and Block.
+\skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, damage is taken normally. If it grazes or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Intercept, and Block.
 
 \textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a graze, the attack has 50\% damage, and on misses, it has 0.
 
@@ -330,23 +325,23 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by RES of the weapon or shield. On a miss, the shield get +50\% RES bonus. A blocking object can break if damage is greater than RES.
 
-\textbf{Redirect:} uses 3 AP to redirect the blow. It requires the defender to be in short range and can be done with a shield or weapon with the DEF or grapple property. On a graze, cancels the attack unless the attack's force is lower than 2x the defender's STR. On a miss, it is cancelled at Force < 3x STR:
+\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 grapple higher than the defender. On a miss, stop it if the attacker has up to 8 grapple more than the defender.
 
-\textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or redirect an attack directed at an ally.}
+\textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
 
 % \textbf{Flinch:} This is a reaction that costs 1 AP and only increases cover by 2. The attack is still made against the SD.
 
 %----------------------- Grapple
 
-\skill{Grapple}{STR-10}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
+\skill{Grapple}{Melee + STR-10}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
 
 \textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only redirect. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles. Any weapons with the grappling property can use the grapple skill instead of strike to attack during a grapple.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles. Any weapons with the grappling property can use the grapple skill instead of strike to attack during a grapple.
 
 \textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used against the opponent.
 
-\textbf{Drag and Push:} On a hit, moves the opponent one space x MM. Can spend 3 SOPs to move an additional space. Pushing can be used simultaneously with initiating the grapple, sharing the AP cost, but spending the STA. It gets +3 if the grapple initiated while running. This method only works if the grapple is successfully initiated.
+\textbf{Drag and Push:} On a hit, moves the opponent one space x MM. A crit in the grapple check makes the opponent prone. Pushing can be used simultaneously, without exta AP cost and sharing the dice roll, with initiating the grapple if the strike test is a hit. It gets +3 to the grapple test if the grapple initiated while running or when the hooked or braced attacks get STR bonus.
 
 \textbf{Escape:} Escapes from the grapple on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
 
@@ -431,9 +426,11 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \section{Interactions with objects}
 
+This section is a guideline for interactions with objects in combat. The exact values can be modified by the GM. This is just a basis to work with.
+
 \textbf{Lifting Weight:} A character with STR 10 can lift 50kg within an action that costs 3 AP +1STA. A character with STR 15 can lift around 150kg with the same test, and a STR 20 can lift around 500kg. It is still possible to lift up to one size category higher than the character's outside of combat in perfect conditions. The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. 
 
-\textbf{Damage from Impact with objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of force it is supposed to apply when it hits a character or another object. The actual energy used for the damage depends on the material hardness, where hardness 4 gives energy = force; hardness 3 gives energy = force/2; hardness 2 gives energy = force/4 and hardness 1 gives energy = force/10. 
+\textbf{Damage from Impact with objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of energy it is supposed to apply when it hits a character or another object. The actual energy used for the damage depends on the material hardness, where hardness 4 is the standard shown in the table; hardness 3 gives energy/2; hardness 2 gives energy/4 and hardness 1 gives energy/10. 
 
 \textbf{Damage ceiling for impacts:} There is a ceiling to how much damage can be taken from low velocity impacts. The maximum amount of blunt damage that can be taken from impact with a low speed object is equal to 10xDM. For medium speed it is 20xDM and for fast ones it is 40x DM. The limit does not apply if the character getting crushed against a surface.
 

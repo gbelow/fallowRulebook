@@ -21,14 +21,13 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Hook:} This attack can be used to knock down.
 % \item \textbf{BLT/CUT:} indicates the blunt and cut damage. CUT is always a multiple of BLT.
 \item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. If used with one hand, they cost +1 AP for both attack and defense.
-\item \textbf{Piercing:} Grazes behave like a miss. Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
 \item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum.
+\item \textbf{Piercing:} Grazes behave like a miss. Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
 \item \textbf{Smash:} allows using the smash additional effect.
 \item \textbf{Bladed:} allows using the extra cut additional effect and can be sharpened.
 \item \textbf{Penetrating:} allows using the penetrating additional effect.
 \item \textbf{Precise:} allows performing armor bypass additional effect.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
-\item \textbf{Soft:} Blunt damage is half of the energy.
 \item \textbf{Fast, UF:} Slow: Force is 2x energy. Fast: can only blocked with a shield, force is 0.5x energy. Ultra fast(UF): like fast, but force is 0.1x energy. 
 % \item \textbf{Overpen:} Maximum IL damage is 10.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
@@ -67,7 +66,7 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 Weapon & RES & Energy & SHP & hand & range & properties & price & size \\
 \hline
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & small \\
-& STR & 0.5x STR & 0 & small & short & draw & soft, smash &  \\[5pt]
+& STR & 0.5x STR & 0 & small & short & draw & smash &  \\[5pt]
 \hline
 \textbf{Claws} & 10 & 0.5x STR & 1x & small & short & grapple, DEF & - & small \\[5pt]
 \hline
@@ -291,30 +290,30 @@ Armors have prot, which is used as damage reduction against impacts. The armor's
 \end{multicols}
 
 \begin{center}
-\begin{tabular}{||c c c c c c c c c||}
+\begin{tabular}{||c c c c c c c c||}
 \hline
-Name & RES & Poise & Protection & Insulation & Deflection & Penalty & Price & Weight \\ [1ex]
+Name & RES & Protection & Insulation & Deflection & Penalty & Price & Weight \\ [1ex]
 \hline\hline
-Fiber &&&&&&&&\\
+Fiber &&&&&&&\\
 \hline
-Skin & 0 & +0 & 0 & 0 & +3 & 0 & 0 & 0\\
-Clothing & 3 & +0 & 0 & 2 & +3 & 0 &  1 SP & 1\\
-Fur coat & 4 & +0 & 2 & 5 & +5 & 0 & 0 & 0\\
-Thick Hide & 6 & +0 & 4 & 7 & +6 & 0 & 0 & 0\\
-Gambeson & 8 & +1 & 3 &  6 & +5 & 0 & 5 GP & 8\\
-Padded Armor & 12 & +2 & 5  & 8  & +5 & -1 & 2 GP & 16\\
+Skin & 0  & 0 & 0 & +3 & 0 & 0 & 0\\
+Clothing & 3  & 0 & 2 & +3 & 0 &  1 SP & small\\
+Fur coat & 4  & 2 & 5 & +5 & 0 & 0 & medium\\
+Thick Hide & 6  & 4 & 7 & +6 & 0 & 0 & large\\
+Gambeson & 8 & 3 &  6 & +5 & 0 & 5 GP & medium\\
+Padded Armor & 12 & 5  & 8  & +5 & -1 & 2 GP & large\\
 \hline
-Metallic &&&&&&&&\\
+Metallic &&&&&&&\\
 \hline
-Chain Shirt & 10 & +0 & 3 & 5 & +5 & 0 & 20 GP & 10\\ 
-Hauberk & 12 & +1 & 4 & 6 & +5 & -1  & 30 GP & 40\\
-Brigandine & 15 & +2 & 6 & 8 & +6 & -2 &  50 GP & 60\\
+Chain Shirt & 10  & 3 & 5 & +5 & 0 & 20 GP & medium\\ 
+Hauberk & 12  & 4 & 6 & +5 & -1  & 30 GP & medium\\
+Brigandine & 15 & 6 & 8 & +6 & -2 &  50 GP & large\\
 \hline
-Rigid and Metallic &&&&&&&&\\
+Rigid and Metallic &&&&&&&\\
 \hline
-Half Armor & 20/10 & +2 & 10 & 7  & +5 & -2 & 60 GP & 60\\
-Full Armor & 20/10 & +3 & 10 & 8  & +7 & -3 & 100 GP & 80\\
-Reinforced Armor & 25/10 & +3 & 12 & 10  & +8 & -4 & 150 GP & 140\\
+Half Armor & 20/10 & 10 & 7  & +5 & -2 & 60 GP & large\\
+Full Armor & 20/10  & 10 & 8  & +7 & -3 & 100 GP & large\\
+Reinforced Armor & 25/10 & 12 & 10  & +8 & -4 & 150 GP & large\\
 \hline
 \end{tabular}
 \end{center}
