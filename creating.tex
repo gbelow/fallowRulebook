@@ -24,7 +24,7 @@ Health & Constitution & Constitution & no\\
 
 Strike & Melee & Dexterity  & yes \\
 Defend & Melee & Dexterity & yes \\
-Grapple & Melee + STR-10 & Dexterity & no \\
+Grapple & Melee + STR-10 & - & no \\
 
 Accuracy & Ranged & Dexterity & yes\\
 Reflex & Ranged + Awareness & Dexterity & no\\
@@ -34,10 +34,10 @@ Climb & AGI-10 & Dexterity  & yes \\
 Swim & AGI-10 & Dexterity  & yes \\
 
 Prestidigitation & Dexterity & Dexterity & yes \\
-Stealth & Awareness & Dexterity  & yes \\
+Stealth & Awareness & Dexterity & yes \\
 
 Cunning & Awareness & Intellect  & yes \\
-Detection & Awareness+Sense & Intellect  & no \\
+Detection & 2x Awareness & - & no \\
 Exploration & Awareness & Intellect  & knowledge \\
 Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
 
@@ -69,7 +69,7 @@ The trainable proficiencies are as follows:
 
 \textbf{Melee (DEX)}: General skill in melee combat. Uses DEX as talent. \\
 \textbf{Ranged Combat (DEX)}: General skill in ranged combat. Uses DEX as talent. \\
-\textbf{Awareness (INT)}: The character's ability to pay attention to what matters and not get distracted. Uses INT as talent.\\
+\textbf{Awareness (DEX)}: The character's ability to pay attention to what matters and not get distracted. Uses DEX as talent.\\
 \textbf{Charisma (INT)}: This is the baseline skill of communication and empathy, that is useful in any social situation. It includes both knowing what to communicate and knowing who to communicate it to in verbal and non verbal form. Uses INT as talent. \\
 \textbf{Sorcery (SPI)}: General skill in casting spells. Uses SPI as talent. \\
 \textbf{Devotion (SPI)}: Level of alignment with a deity. Uses SPI as talent.\\
@@ -97,7 +97,7 @@ A character has 4 talents that represent their potential for growth.
 
 \textbf{Constitution (CON)}: Represents the character's general health and ability to adapt physically.
 
-\textbf{Dexterity (DEX)}: Represents the character's motor skills and reaction time. Includes all skills related to athletics and combat. These are well explained in the chapter on combat.
+\textbf{Dexterity (DEX)}: Represents the character's motor skills, spacial intelligence and reaction time. Includes all skills related to athletics and combat. These are well explained in the chapter on combat.
 
 \textbf{Intellect (INT)}: Represents memory, logical reasoning, and attention management. Includes all knowledge, most social skills, exploration skills, and cunning in combat. 
 
@@ -172,13 +172,13 @@ Two creatures of size 3 can occupy the same space, but cannot end a turn like th
 \begin{center}
 \begin{tabular}{||c c ||}
 \hline
-Skill & Modifier   \\
+Skill & Modifier \\
 \hline
 Grapple & +5x \\ 
-Strength & +5x \\ 
+% Strength & +5x \\ 
 Reflex & -1x \\ 
-Armor Cover & -1x \\ 
-Weapon Precision & -1x \\ 
+% Deflection & -1x \\ 
+% Weapon Precision & -1x \\ 
 SD & -1x \\ 
 Stealth & -3x \\
 Climbing & -2x \\ 

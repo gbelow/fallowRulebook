@@ -12,7 +12,7 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{Degrees of success:} Critical, hit, graze, and failure are the degrees of success. Critical is the best success, and failure is the worst failure. Regardless of the type of skill test, a score that exceeds a DL or defense by 10 or more is a critical success, 5 or more is a hit, 0 or more is a graze, and anything less than that is a failure.
 
-\textbf{Target number (TN):} Works like the DL, but the action has a hit or miss. In this case, if the test value is greater than or equal to the TN, the action is a success; otherwise, it is a failure.
+\textbf{Target number (TN):} Works like the DL, but test just needs to match the TN. If the test value is greater than or equal to the TN, the action is a success; otherwise, it is a failure.
 
 \textbf{Exploding die:} In skill tests, if the result of the d10 is 10, roll 1d6 and add that to the score, continuing to add while the result is 6. If the result of the d10 is 1, do not add anything and then roll 1d6 and subtract the result instead of adding. Continue subtracting while rolling 6.
 
@@ -34,7 +34,7 @@ Skills are things a character can do and improve upon. To measure how good someo
 
 \textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 3 AP to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 
-\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it does not detect its attacker before it begins attacking. It can also happen in a social situation if the oponent manages to hide its intentions before attacking. In those cases, use cunning can be used against deception to resist being surprised.
+\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it does not detect its attacker before it begins attacking.
 }
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want.
@@ -428,42 +428,33 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 This section is a guideline for interactions with objects in combat. The exact values can be modified by the GM. This is just a basis to work with.
 
-\textbf{Lifting Weight:} A character with STR 10 can lift 50kg within an action that costs 3 AP +1STA. A character with STR 15 can lift around 150kg with the same test, and a STR 20 can lift around 500kg. It is still possible to lift up to one size category higher than the character's outside of combat in perfect conditions. The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. 
+\textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider for any random object that a regular human, with strength 10, can lift about its own body weight.
 
-\textbf{Damage from Impact with objects:} Objects fall and fly all the time. Here's a table relating object weight and speed and giving the amount of energy it is supposed to apply when it hits a character or another object. The actual energy used for the damage depends on the material hardness, where hardness 4 is the standard shown in the table; hardness 3 gives energy/2; hardness 2 gives energy/4 and hardness 1 gives energy/10. 
+\textbf{Pushing objects:} To push an object, or when struck by one, use the push action, as described in Grapple. In a graze, the object can be redirected by up to 60 degrees. A hit stops the object and accelerates it in any direction by 1m/s per SOP.
 
-\textbf{Damage ceiling for impacts:} There is a ceiling to how much damage can be taken from low velocity impacts. The maximum amount of blunt damage that can be taken from impact with a low speed object is equal to 10xDM. For medium speed it is 20xDM and for fast ones it is 40x DM. The limit does not apply if the character getting crushed against a surface.
+The push DL depends on weight and speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. A suggestion would be +1 per m/s for objects of size 3. Reduce it for smaller objects and increase it for larger ones.
 
-\begin{tabular}{| c c c c|}
-    \hline &&& \\
-    Speed & <3m/s & >3m/s & >10m/s \\
-    \hline &&& \\
-    0.5kg & 2 & 3 & 6\\ 
-    1.5kg & 3 & 4  & 8 \\
-    
-    5kg & 6 & 9 & 18 \\
-    15kg & 9 & 13 & 26 \\
-    
-    50kg & 12 & 18 & 36\\
-    150kg & 18 & 27 & 54\\
-    
-    500kg & 24 & 36  & 72 \\
-    1500kg & 36 & 54  & 108 \\
+\textbf{Dodging objects:} Large objects can be considered explosions on a line given by their path. Use reflex to dodge them. Consider how difficult it is to dodge subjectively, using the basic guidelines on how to choose a DL.
 
-    5000kg & 48 & 72  & 144 \\
-    
-    \hline
-\end{tabular}
+\textbf{Damage from Impact with objects:} Depends entirely on what is hitting what at what speed and whether one object is fixated or free. Estimate what tier of wound it would deal to a person and say it is 5 damage per tier. This way, a tougher person may resist the damage better.
 
-\textbf{Resolving the impact:} This damage can be defended against with evasive jump or reflex as if they were melee or ranged attacks. If the damage is reduced to 0, the object is stopped.
+\skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
-\textbf{Pushing effect:} Heavy objects that hit a character also pushes them. Use STR-10 as the skill value. The DL is 0 for a 50kg object at low speeds plus 5 for every speed tier and plus or minus 5 for every weight category. This works exactly like the push action. Trying to resist the movement while blocking or redirecting the weight costs 1 STA on top of the defense's AP cost. If the character falls to the ground and gets crushed in the same event, the damage ceiling does not apply.
+\textbf{Standard Action:} Consider that 1 AP is equal to half a second and estimate how long an action should take. In general, taking an item from a belt or strap around the armor should take about 3 AP, while opening a backpack and taking something costs about 5 seconds. The AP cost of a standard action is 3 AP.
+
+\textbf{Conceal Objects:} Used as a defense against detection tests to identify objects carried by the character. This is a detection vs prestidigitation test and works like a regular detection test. There is a -5 penalty to conceal items for every item size larger than small.
+
+\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's Detection +5x for every item size category over small (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
+
+\textbf{Pick Lock:} These tests require knowledge of mechanics and receive -5 for each level below the requirement. On criticals, it takes 5 AP. On successes, between 10 seconds and 1 minute. On a graze, it takes between 10 minutes and 1 hour, and on a failure, it is impossible to open.
+
+When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP.
+}
+
 
 \section{Chases}
 
-The chase starts when everyone in a party decides to run away. It always starts at the beginning of a new round. Any character that cannot run for whatever reason at the beginning of the round will prevent the chase to begin, unless they get left behind.
-
-If a chase begins and a combat is still ongoing, the combat must end before resuming the chase.
+The chase starts when everyone in a party decides to run away. It always starts at the beginning of a new round. Any character that cannot run for whatever reason at the beginning of the round will prevent the chase to begin, unless they get left behind. If they do, resume the fight before the chase.
 
 A chase is an event to decide the increase or decrease of the distance between two parties while they fight. There are four distance tiers: Very close, close, far and very far.
 
@@ -534,107 +525,106 @@ Traversing an obstacle works just like running, but with a balance, climb or swi
 
 \section{Stealth and Subterfuge}
 
-\skill{Stealth}{ - }{ Skill to remain unnoticed. The stealth skill is used against stealth events in the environment, which trigger Detection tests for those who will potentially detect.
 
-\textbf{Stealth test:} When a stealth event occurs, the character makes a stealth check against its DL. The result will trigger a Detection test to any characters capable of noticing the event. The DL of the Detection test has a base DL, based on the triggering event. That value is modified by the result of the stealth test. A crit adds +3 to the DL, a hit does not modify, a graze gives a -3 penalty and a miss gives a -5. Crits in stealth tests against passive senses give a +5 bonus to the DL and another +1 for the value that the stealth check goes over the crit threshold. 
+\skill{Stealth}{ 2x Awareness }{ Skill to remain unnoticed. It involvels stepping light, moving with appropriate timing, keeping to the shadow, avoiding making noise. 
 
-\textbf{Hidden roll:} Optionally, the GM could roll the dice for the player and not tell them the result. This way, they have to interpret whether they are doing well of not with their stealth, instead of just relaxing and assuming that they won't be seen because they rolled well.
+\textbf{Stealth test:} The player makes a stealth test against Detection to stay undetected. On hits or crits, the character stays unnoticed. On grazes, the character is detected. On misses, he character is detected and, if in combat, the opponent may take their turn immediately.
+
+\textbf{Stealth events:} are a description given by the player of what exactly the character is trying to do with their stealth, which sets a bonus or penalty to the stealth test. The values may range from +10 to -10, depending on how hard or easy the test is supposed to be. The usual values for fair propositions should stay between -5 and +5. The value of this test is used as a DL against the detection of every candidate detector.
+
+An event could be trying to hide in a specific spot, trying to pass through somewhere undetected or taking some kind of action without being identified or located. A stealth event should take into consideration what noise the footsteps make in a path (altered by how fast characters are moving), how difficult it is not to bump into anything, how hard it is to avoid line of sight, how hard it is to stop gear from making noise, how close to a detector the path lies, how good a hiding spot is and how long you will be searched for if staying there.
 
 \textbf{Event Chaos modifier:} Some stealth events can have highly unpredictable outcomes and others can be the opposite. Use safe tests or risky tests to represent this fact.
 
-\textbf{Group roll:} It is possible to make a single roll for a whole group. Use the stealth skill of the worst stealth in the group. Take mounts into consideration. 
+\textbf{Hidden roll:} Optionally, the GM could roll the dice for the player, add it to the character's stealth skill and keep the result, without revealing it. The player then describes what they are trying to do. For every major shift in event difficulty, the GM decides on a bonus and narrates what is happening. This is especially useful in situations where multiple stealth rolls would be called for. If the dice is rolled separately for each new description, the dice would eventually roll very badly.
 
-\textbf{Large Items, large groups:} Wagons, Sleds, Carts, backpacks with jingly items should have their own stealth value. The default value is their size skill modifier, mut they could be different.
-
-\textbf{Stealth events:} are necessary for a character to remain undetected to another. Without one, characters are automatically detected by each other's active senses. Think about it like an environmental condition that makes stealth possible. A stealth event's DL targets a specific sense, which is the best available sense to use to detect someone in the situation. Normally, the senses to be used are vision and hearing. 
-
-The two big categories of stealth events are: hiding and sneaking. Hiding depends on line of sight and camouflage. Sneaking depends on making no noise when moving, which depends on what the floor is and what is stepping on it.
-
-Some common stealth events and their estimated stealth and Detection DLs are in the following list.
-
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item camouflage: stealth DL 0, Detection DL 2 vision
-    \item hiding in woods: stealth DL 5, Detection DL 2 vision
-    \item hiding in plain sight: stealth DL 8, Detection DL -5 vision
-    \item sneaking in the grass: stealth DL 5, Detection DL 0 hearing
-    \item sneaking in squeaking floorboards: stealth DL 8, Detection DL -2 hearing
-\end{itemize}
-
-\textbf{Remaking Stealth checks:} The stealth check is done once per round in combat, at the beginning of the round, or once per scene outside combat. A scene only changes if the conditions for stealth change significantly. That is a subjective call, but it is recommended that new rolls are not repeated often.
-
-\textbf{Event DL modifier:} Some actions will make the stealth test more difficult. If one of these aggravating events happen within the same scene or round, a new Detection test is called, adding the modifier to the detector's Detection skill.
-
-Here are the stealth DL modifications:
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item attacking in melee: +3 hearing and vision
-    \item careful movement and crawling: 0 hearing and vision
-    \item running: +5 hearing and vision
-    \item ranged attacks: +2 to hearing and vision
-    \item basic movement: +2 hearing and vision
-\end{itemize}
-.}
+\textbf{Group roll:} Use the worst stealth value of any character in a group. Increase the penalty of the stealth event for the amount of characters, if necessary. Mounts, pets, cargo and vehicles should be taken into consideration. 
+}
 
 \skill{Detection}{Awareness}{ Detection is used to detect things in stealth or just for looking for things in general.
 
-
-\textbf{Detection:} the skill value used for detection is the Awareness proficiency plus bonuses from one of the senses. The roll gets called when the added value is greater or equal to the DL of stealth events. The detection check is rolled once per character per round or scene for all events. On a failure or graze, nothing is noticed. A hit allows acting and reacting normally and identifies the target. A critical success allows taking initiative and have your turn immediately. 
+\textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of all active senses of another character at the beginning of a round. Each character has their own list of detected characters. 
 
 \textbf{Group detection:} optionally, preferrably outside of combat, a single Detection value can be used for a whole group of characters, using the best Detection in the group for everybody. The group can be separated as desired, but it is best if each group is within the same distance band.
 
-\textbf{Senses:} The usable senses are vision, hearing and smell. Senses can be active or passive. Active senses are used to keep the detector in alarmed state, meaning that they don't forget your position, even if you move. Passive senses can detect position, but they can't track it or keep the character in alarmed state. If the character has no active senses available, they are automatically oblivious.
+\textbf{Senses:} The basic usable senses are vision, hearing and smell. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses can be active or passive. 
 
-\textbf{Vision:} is an active sense. Stealth event DLs gain +2 from distance per distance band. Vision gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character. In the alarmed state, it covers 360 degrees.
+\textbf{Active senses:} are used to keep the detector in aware, meaning that after detection, the target is tracked by the detector and can be reacted to until a new stealth event occurs.
 
-\textbf{Hearing:} is a passive sense. Stealth events gain +3 from each distance band and cannot be used to search actively. Hearing is omnidirectoinal.
+\textbf{Passive senses} can detect position, but they can't track it. If the character has no active senses available, they need to detect every event from a single source to be able to react to it. The character is considered disoriented for a reaction if only passive senses are available to detect. Detecting through a passive sense can focus any available active senses on the target, detecting them actively.
 
-\textbf{Smell:} is a passive sense. Stealth events gain +3 from each distance band. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
+\textbf{Vision:} is an active sense. Vision gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character.
+
+\textbf{Hearing:} is a passive sense and omnidirectoinal.
+
+\textbf{Smell:} is a passive sense. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
 
 \textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed to it. Projectiles that hit the character have their direction identified, not necessarily their source. Using only touch as an active sense makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
 
-\textbf{Distance bands:} The DL from stealth events to Detection is penalized by distance. The magnitude of the modification depends on the specific sense used to detect.
+\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. 
+
+\textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection against everything other than the distraction. A character that has used its action surge is automatically distracted.
+
+\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's TN. If Detection is equal or higher than TN, they find it. 
+
+\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of Detection as skill, but they can only find the object if they have passed a knowledge test or if they have a minimum knowledge level in the field. Alternatively, simply increase the detection difficulty to allow a lucky find.
+
+\textbf{Scanning:} Use detection to see how much you notice from a room. A good detection test reveals good paths for sneaking, hiding spots, dangers, and other information that will help players make good decisions when describing their stealth events.
+}
+
+
+\textbf{Guidelines on playing stealth}
+
+These guidelines exist to provide a physical basis to draw the stealth bonuses. It is not meant to be used as a table, but to ground difficulty decisions and provide common sense to everyone at the table. In practice, the bonuses should be chosen quickly and intuitively. The guidelines are meant to sharpen instincts.
+
+The dificulty to detect or perform stealth depend on which sense is the dominant one for detection. The sense that is effectively used should be the one with the lowest penalty among the available ones, or the active one on a draw. 
+
+It is important to let players know how difficult a stealth event is expected to be. It is not necessary to give them the exact number for the stealth test, but at least an idea of what their character should expect from attempting a test.
+
+If a player gives a description of something that absolutely should work, just let it work without a test. But also ask yourself if their character would come up with that. If the answer is more likely to be no, ask for a detection check, or another skill that may fit, like cunning or insight, to see if the character really would get that idea. If the character does not pass the test, they did not have that idea or they get a dumbed down version of it. 
+
+The factors that determine the difficulty to detect or hide are: distance, noise, signal strength and time.
+
+\textbf{Distance bands:} The DL from stealth events to Detection is penalized by distance. It is convenient to design distance bands, as shown in the list. For each band over the first, add -2 penalty to vision, -5 to hearing and -5 to smell.
+
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item same room (within 10m) - no penalty
-    \item at range (within 50m)
-    \item far range(within 150 m)
+    \item same room (within 10m), no penalty
+    \item close (within 50m), 
+    \item at range(within 200 m)
     \item far (within 500 m)
     \item horizon 
 \end{itemize}
 
-\textbf{Alarm:} When a character detects the other, they are alarmed to their presence and will not forget their position until they become undetectable to all active senses. Being alarmed is necessary to be able to target something or react to it.
+\textbf{Noise:} is the amount of conflicting signal in a given situation. For hearing, its the loudness and rythm of other sounds. For vision, it is the amount of camouflage, as well as the amount of cover and the presence of very bright nerby objects. For smell, it is the variety and intensity of other smells. 
 
-\textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of all active senses of another character at the beginning of a round. The alarmed state does not wear off until the field of active senses is exited. Each character has their own list of detected characters. 
+\textbf{Signal Strength:} This is what the character is trying to minimize with their stealth skill. It is based on the character's gear and behavior. Items that help with stealth should influence the signal strength component. The item should provide a description of how it helps.
 
-\textbf{Blind Fighting:} if there are no active senses capable of detecting someone (not event touch), but a hit or crit were achieved in the detection check, it is possible to react or target them, but the oblivious affliction is applied.
+Here's a list of possible modifiers. Many modifiers can be combined.
 
-\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible.
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item \textbf{Wearing camouflage:} +3 to Stealth vs. vision.
+    \item \textbf{Hiding behind a tree:} +3 to Stealth vs. vision (Requires active search to detect).
+    \item \textbf{Hiding inside a closed barrel:} +8 to Stealth vs. vision (Requires active search to detect).
+    \item \textbf{Complete hiding/Hunker down:} Automatically undetected to vision (Requires active search via other senses).
+    \item \textbf{Standing in front of someone in the open:} -10 to Stealth vs. vision.
+    \item \textbf{Wearing noisy gear or carrying jingly objects:} -3 to -5 to Stealth vs. hearing. 
+    \item \textbf{Movement in the grass:} 0 vs. vision, -2 to Stealth vs. hearing.
+    \item \textbf{Movement on marble floor with standard boots:} -2 to Stealth vs. hearing.
+    \item \textbf{Movement on marble floor with muffled boots:} +2 to Stealth vs. hearing.
+    \item \textbf{Moving on squeaking floorboards:} -3 to -5 to Stealth vs. hearing.
+    \item \textbf{Careful movement and crawling:} 0 to hearing and vision (Base Skill).
+    \item \textbf{Basic movement:} -2 to Stealth vs. hearing and vision.
+    \item \textbf{Running / Combat Sprint:} -5 to Stealth vs. hearing and vision.
+    \item \textbf{Attacking in melee:} -3 to Stealth vs. hearing; causes immediate automatic detection if within a detector's field of vision.
+    \item \textbf{Shooting a bow:} -3 to Stealth vs. hearing and vision.
+\end{itemize}
 
-\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's TN. If Detection is equal or higher than TN, they find it. 
+\textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection.
 
-\textbf{Focusing attention:} This can be used to get +5 to the detection test when looking attentively at one specific thing. It can be used when a player says they want to look at a specific place to see better detail or when someone points out a direction for others to focus. 
-
-\textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection against everything other than the distraction. A character engaged in melee combat is automatically distracted.
-
-\textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of Detection as skill, but they can only find the object if they have passed a knowledge test or if they have a minimum knowledge level in the field.
-}
-
-\skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
-
-\textbf{Standard Action:} Consider that 1 AP is equal to half a second and estimate how long an action should take. In general, taking an item from a belt or strap around the armor should take about 3 AP, while opening a backpack and taking something costs about 5 seconds. The AP cost of a standard action is 3 AP.
-
-% \textbf{Conceal Objects:} Used as a standard action of defense against detection tests to identify objects carried by the character. Successes detect and criticals identify the object. On grazes and failures, nothing is noticed.
-
-\textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's Detection +5x for every item size category over small (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
-
-\textbf{Pick Lock:} These tests require knowledge of mechanics and receive -5 for each level below the requirement. On criticals, it takes 5 AP. On successes, between 10 seconds and 1 minute. On a graze, it takes between 10 minutes and 1 hour, and on a failure, it is impossible to open.
-
-When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP.
-}
 
 \section{Spells} 
 
