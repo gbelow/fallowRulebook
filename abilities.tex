@@ -225,7 +225,7 @@ They understand that everything can be resolved with more strength.
 
 They believe that what exists should not be destroyed without reason.
 
-\textbf{Promoted Attitudes:} Gains 1 XP each time they use all AP of their protection surge.  
+\textbf{Promoted Attitudes:} Gains 2 XP each time they use all AP of their protection surge.  
 \textbf{Prohibited Attitudes:} Loses 4 XP whenever an ally within 10m is incapacitated.
 
 % Minala
@@ -233,7 +233,7 @@ They believe that what exists should not be destroyed without reason.
 
 \convic{3}{ Every ally gets +2 in their morale check any turn the guardian uses its protection surge.}
 
-\convic{2/4}{Gains +1/2 to block when making the protection surge to protect someone. Also gains +1/2 in sorcery for any healing action.}
+\convic{2/4}{Gains +1/2 to defend when making the protection surge to protect someone. Also gains +1/2 in sorcery for any healing action.}
 
 \convic{5}{ .}
 
@@ -295,11 +295,11 @@ They believe and find comfort in the belief in a good universal order. If everyo
 
 \subsection{Deities and Devotion}
 
-\abil{Cleric }{passive}{automatic at Devotion 2}{Devotion}{ The character becomes a cleric of a deity. It is only possible to become a cleric if the character is not devoted to another and shares a common conviction with the deity. This allows all abilities and skills from the deity's list to be learned using Devotion as the talent. The Devotion level + SPI is used as a skill instead of spellcasting to perform divine spells.}
+\abil{Cleric }{passive}{automatic at Devotion 2}{Devotion}{ The character becomes a cleric of a deity. It is only possible to become a cleric if the character is not devoted to another and shares a common conviction with the deity. This allows all abilities, spells and skills from the deity's list to be learned using Devotion as the talent. }
 
 % \abil{ Divine Guide }{passive}{4 XP, Devotion 3}{Cleric}{ Can cast a careful spell with only 1 additional AP for spells associated with the deity. }
 
-\abil{Miracle}{passive}{automatic at Devotion 3}{Cleric}{ Allows the casting of any spell contained within the deity's list, even without knowing it or having sufficient level, but incurs a -2 penalty on the spellcasting test for these and must perform them in a risky manner.  }
+\abil{Miracle}{passive}{automatic at Devotion 3}{Cleric}{ Allows asking a deity for a deal.  }
 
 \abil{Prayer}{1 AP}{automatic at Devotion 1}{}{ Focuses on the divine energy around, gaining +1 to any abilities or skills from the deity's list until the end of the turn. Costs 0 AP in a temple or sacred place. Cannot be used in a location outside divine influence.}
 
@@ -347,25 +347,15 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 
 \abil{Performance I/II/III}{passive}{4 XP, INT 2/4/6}{}{I. Allows the character to know a form of art, such as playing an instrument, magic tricks, jokes, etc. Gains +1/2/3 to tests to distract the audience.  }
 
-\subsection{Animancy}
-
-% \abil{Psychology I/II/III}{passive}{8 XP, INT 2/4/6}{}{I. Increases by +1/2/3 to your knowledge when trying to resist a social action. Allows for more elaborate opinions on the behavior of creatures in general. }
-
-% Medicine and botany / Biomancy
-
-\subsection{Biomancy}
+\subsection{Medicine}
 
 \abil{First Aid}{ritual}{automatic at Biomancy 1}{}{Learn to heal wounds, make splints, and fix broken bones. By spending an exploration turn, you can heal 2 IL to an injured creature if used within 4 hours after it has been hurt. }
 
-% Tools
-
 \subsection{Engineering and Alchemy}
-
 
 \abil{Armorer }{passive}{automatic at Armorer 1}{}{ I. Allows the character to make simple repairs and maintain weapons and armor.}
 
 \abil{Mechanic }{passive}{automatic at Mechanic 1}{}{ I. Allows the character to attempt to pick locks and set or disarm traps.}
-
 
 % Survival
 \subsection{Survival}
@@ -395,19 +385,34 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 
 \abil{Improved Feint}{passive}{6 XP, INT 2}{}{After feinting a character successfully, gains +1 in every reaction against them.}
 
-% Smell
+\subsection{Sorcery}
 
-\section{Sorcery}
+\subsubsection{ General }
 
-\subsection{ General }
+\abil{Magic Theory}{passive}{10 XP, INT 1}{Literacy}{ Allows learning and casting spells like a wizard. The descriptions are in the sorcery chapter. }
 
-\abil{Magic Theory}{passive}{10 XP, INT 1}{Literacy}{ Grants the wizard the ability to maintain a grimoire, which allows for precise spell instructions to be written. Enables learning spells from grimoires. Can attempt to cast any spell written in a grimoire in a risky manner if out of combat. The difficulty to cast the spell is increased by 3 for each point of knowledge below the requirement. }
+\abil{Battle Mage I/II/III}{passive}{6 XP, SPI 2/4/6}{}{I. Allows the caster to move while concentrating, repurposing the same action points used for the spell. II. The character can defend actively while concentrating, with AP costs paid separately. III. When interrupted, instead of losing the spell, redo the spellcasting test with a penalty of -3 and choose the worst result between the original and this one. }
 
-\abil{Battle Mage I/II/III}{passive}{6 XP, INT 2/4/6}{}{I. Allows the wizard to move while concentrating, repurposing the same action points used for the spell. II. The character can defend actively while concentrating, with AP costs paid separately. III. When interrupted, instead of losing the spell, redo the spellcasting test with a penalty of -3 and choose the worst result between the original and this one. }
+\subsubsection{Alchemy}
+%Combustão
+\abil{ intracellular Micro-combustion }{passive}{6 XP, Alchemy 2}{ intoxicated}{ Gains +5 to resist cold exposure while intoxicated. }
 
-\abil{ Favorite Spell }{passive}{6 XP, INT X}{}{ Choose a spell to reduce its difficulty by 2. The required talent is the same as that used to learn the spell. The spell can be performed safely. }
+\abil{Grenadier}{passive}{8 XP, Alchemy 3}{}{Learns to cast spells into grenades while throwing them, using the higher cost of AP between the throw and the spell. }
 
-\subsection{Animancy}
+
+% \abil{ Magnetic Shield }{ 1 AP + 1 STA }{6 XP, Alchemy 4}{ magnetic armor}{ Attracts metallic objects to the most resistant point of the armor. The opponent must make a strength test against the DL of sorcery to detach a metallic object from the armor. }
+
+\abil{Electric Skin}{passive}{6 XP, Electromagnetism 3}{Taser}{ Turns Taser into a favorite spell. Taser can be accelerated to cost 0 AP and can be used with the hands, allowing the electric object to be stored.}
+
+
+% \abil{ Walk on Water}{2 AP + 1 STA per turn}{6 XP, Entropy 2}{ Entropy 3}{ Can increase the surface tension of the water beneath your feet to walk on it. }
+
+% \abil{ Leidenfrost Barrier }{ 2 STA }{6 XP, Entropy 4}{ Alchemy 4, Medicine 1}{ During rest, protects the face and respiratory system from environmental burn effects for one turn, preventing 5 damage and allowing breathing and keeping eyes open if no damage is received. }
+
+
+% \abil{Sensory Practice}{passive}{4 XP, sorcery 3}{Radar}{ Radar becomes a favorite spell and can be kept active constantly for 2 Exhaustion per hour.}
+
+\subsubsection{Animancy}
 
 %Animancy
 \inna{Synesthesia I/II/III}{0 AP + 1 STA per turn or 2 exhaustion per turn}{6 XP, Animancy 1/3/5}{}{ Animancy+Sorcery meter radius}{instantaneous}{ I. Maintains an energy perimeter that amplifies perception. This character can see invisible things as if they were visible within a sphere around them. The volume of perception is filled as if it were gas. Solid impermeable objects block the radius of synesthesia. II. Can maintain synesthesia without spending STA per turn and allows extending the range of enhanced senses up to 2x Sensing by spending 1 STA per turn. III. Doubles the normal and increased radius. }
@@ -422,162 +427,120 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 
 \abil{Complete Possession}{passive}{x XP, INT 6}{ Possession}{ Can permanently possess a body. The XP cost of the ability is for possessing a body, where x represents the difficulty of possessing the body.}
 
-\abil{Avatar}{6 AP}{10 XP, INT 4}{Synesthesia}{Allows a spirit to possess the character's body. Can utilize all skill and proficiency bonuses of the spirit. Every time the spirit and the player disagree on an action or the player wants to expel the spirit from the body, a will test must be made. Whoever succeeds or crits will do things their way.}
+\abil{Avatar}{6 AP}{10 XP, INT 3}{Synesthesia}{Allows a spirit to possess the character's body. Can utilize all skill and proficiency bonuses of the spirit. Every time the spirit and the player disagree on an action or the player wants to expel the spirit from the body, a will test must be made. Whoever succeeds or crits will do things their way.}
+
+\abil{Universal Communication}{passive}{6 XP, Animancy 2}{}{Allows asking yes or no questions to any creature with 3 INT or more. The questions must be simple enough for the creature to understand.}
+
+\abil{Central Intelligence}{2 AP per round}{8 XP, Animancy 5}{Telepathic Link}{All characters connected by a telepathic link can choose to use the caster's cunning value instead of their own.}
+
+\abil{Mind Reading}{passive}{6 XP, Animancy 3}{Telepathic Link}{Allows reading the surface flow of thoughts in a telepathically connected mind, enabling the perception of images and hearing words they think and memories they recall. Gains +5 insight against anyone under the telepathic link.}
+
+\abil{Telepathic Suggestion}{passive}{6 XP, Animancy 3}{}{ Makes suggestion a favorite spell and allows making suggestions telepathically to any detectable target, without the need to speak or establish a telepathic link. }
 
 
 % end -----------------------------------------------------------------------
 
-\subsection{Combustion}
-%Combustão
-\abil{ intracellular Micro-combustion }{passive}{6 XP, Combustion 2}{ intoxicated}{ Gains +5 to resist cold exposure while intoxicated. }
-
-\abil{Grenadier}{passive}{8 XP, Combustion 5}{}{Learns to cast spells into grenades while throwing them, using the higher cost of AP between the throw and the spell. }
-
-\subsection{Electromagnetism}
-
-\abil{ Magnetic Shield }{ 1 AP + 1 STA }{6 XP, Electromagnetism 4}{ magnetic armor}{ Attracts metallic objects to the most resistant point of the armor. The opponent must make a strength test against the DL of sorcery to detach a metallic object from the armor. }
-
-\abil{Electric Skin}{passive}{6 XP, Electromagnetism 3}{Taser}{ Turns Taser into a favorite spell. Taser can be accelerated to cost 0 AP and can be used with the hands, allowing the electric object to be stored.}
-
-%Entropy
-\subsection{Entropy}
-
-\abil{ Walk on Water}{2 AP + 1 STA per turn}{6 XP, Entropy 2}{ Entropy 3}{ Can increase the surface tension of the water beneath your feet to walk on it. }
-
-\abil{ Leidenfrost Barrier }{ 2 STA }{6 XP, Entropy 4}{ Combustion 4, Medicine 1}{ During rest, protects the face and respiratory system from environmental burn effects for one turn, preventing 5 damage and allowing breathing and keeping eyes open if no damage is received. }
-
-\subsection{Radiation}
-
-\abil{Sensory Practice}{passive}{4 XP, sorcery 3}{Radar}{ Radar becomes a favorite spell and can be kept active constantly for 2 Exhaustion per hour.}
-
-\subsection{Biomancy}
+\subsubsection{Biomancy}
 %Biomancy
 
 \abil{Blood Magic}{4 IL}{6 XP, Biomancy 5}{}{Receive 4 IL in exchange for health/2 STA.}
 
-\abil{Cell Reconstruction I/II}{4 AP + 1 STA}{8 XP, Biomancy 2/4}{}{I. Spends 1 STA to accelerate the effect of a healing potion by an amount equal to health. This can be used to remove hemorrhage. II. Reduces the cost by 1 AP. }
+\abil{Cell Reconstruction }{1 AP + 1 STA}{8 XP, Biomancy 3}{}{I. Reduces bleed by 1 in self. }
+
+\abil{Amplified Pheromones}{passive}{6 XP, CON 3}{Biomancy 3}{ The character gains awareness and control over their pheromones, increasing the difficulty of any social test by +2 for anyone within 6m.}
 
 % \abil{Powerful Voice}{2 AP, 2 STA}{6 XP, Sorcery 2}{}{Speaks very loudly. }
 
 % \abil{Toxic Sweat}{passive}{6 XP, Sorcery 1}{ intoxicated, Entropy I}{ Gains +3 to resist exposure to insects while intoxicated. Receives +3 on any defense against swarm-type opponents, unless they have resistance to alcohol. }
 
-% \abil{Mutagenic Agents}{passive}{6 XP, Sorcery 4}{Medicine 5}{Allows learning metabolic mutation skills with sorcery, but only on oneself. }
+\section{Mutations}
 
-% \abil{Animal Grafts}{passive}{6 XP, Biomancy 4}{}{Allows performing grafts on plants and animals, enabling the learning of chimera mutation skills with sorcery.}
+Mutations are unusual physical transformations. They involve activating dormant genes and gardening growth to achieve a certain form. They are triggered in the body by traumatic events, scientific intervention, divine influence and sheer will to change.
 
+Usually, a mutation is learned by spending Karma, but can also be learned through Biomancy. Learning with biomancy removes the need for requirements and allows mutating with XP instead of Karma. 
 
-% Telepathy
-\subsection{Telepathy}
-
-\abil{Universal Communication}{passive}{6 XP, Telepathy 2}{}{Allows asking yes or no questions to any creature with 3 INT or more. The questions must be simple enough for the creature to understand.}
-
-\abil{Central Intelligence}{2 AP per round}{8 XP, Telepathy 5}{Telepathic Link}{All characters connected by a telepathic link can choose to use the caster's cunning value instead of their own.}
-
-\abil{Mind Reading}{passive}{6 XP, Telepathy 3}{Telepathic Link}{Allows reading the surface flow of thoughts in a telepathically connected mind, enabling the perception of images and hearing words they think and memories they recall. Gains +5 insight against anyone under the telepathic link.}
-
-\abil{Telepathic Suggestion}{passive}{6 XP, Telepathy 3}{}{ Makes suggestion a favorite spell and allows making suggestions telepathically to any detectable target, without the need to speak or establish a telepathic link. }
-
-% \subsection{Transfiguration}
-
-% Allows performing mutations on oneself and others.
-
-% \abil{Mutagenic Agents}{passive}{6 XP, Sorcery 4}{Medicine 5}{Allows learning metabolic mutation skills with sorcery, but only on oneself. }
-
-% \abil{Animal Grafts}{passive}{6 XP, Sorcery 4}{Medicine 5}{Allows performing grafts on plants and animals, enabling the learning of chimera mutation skills with sorcery.}
-
-\section{CON}
-
-% \textbf{Mutation Level:} Skills that have Mutation +x in their cost increase the character's Mutation level.
+It is also possible to pay for a biomancer to apply one of those mutations on a character, which allows learning without any requirements. This method works like the Biomancy route. 
 
 \subsection{Physical Transfiguration}
 
-These are mutations that involve resizing the body. They can be learned instinctively through athletics or intellectually trained with transfiguration magic. It is possible to train this skill on another character, like plastic surgery, but the wizard must have the talent, and both must spend the necessary time to gain XP.
+These are mutations that involve resizing the body. They can be learned instinctively through athletics or intellectually by knowing biomancy. 
 
-\abil {Grow! } {passive}{12 XP, CON 4}{STR > 15 }{ A humanoid character increases one size class and loses 3 STR and 1 AGI.}
+% It is possible to train this skill on another character, like plastic surgery, but the wizard must have the talent, and both must spend the necessary time to gain XP.
 
-\abil {Shrink! } {passive}{12 XP, CON 4}{ STR < 9}{ A humanoid character decreases one size class and gains 3 STR and 1 AGI.}
+\abil {Grow! } {passive}{12 Karma, Biomancy 4 }{STR > 15}{ A humanoid character increases one size class and loses 3 STR and 1 AGI.}
 
-\abil{Large Hands }{passive}{4 XP, CON 4 }{racial }{ Allows the use of melee weapons from a larger size category, but attacks cost +1 AP and have STR-3 in every move done with the weapon. The hands also count as a weapon of larger size, but dont get the AP cost increase. }
+\abil {Shrink! } {passive}{12 Karma, Biomancy 4}{ STR < 9 or Biomancy 4}{ A humanoid character decreases one size class and gains 3 STR and 1 AGI.}
 
-\abil{Keen Eyes I/II/III}{passive}{4 XP, CON 1/3/5}{}{Improves vision by +1/2/3. III. Reduces vision penalty from distance to -1 per band.}
+\abil{Large Hands }{passive}{6 Karma, Biomancy 3 }{STR > 12 or or Biomancy 3 }{ Allows the use of melee weapons from a larger size category, but attacks cost +1 AP and have STR-3 in every move done with the weapon. The hands also count as a weapon of larger size, but dont get the AP cost increase. }
 
-\abil{Acute Ears I/II/III}{passive}{4 XP, CON 1/3/5}{}{Improves hearing by +1/2/3.}
+\abil{Keen Eyes I/II/III}{passive}{4 Karma, Biomancy 3}{Awareness 2/4/5}{Improves vision by +1/2/3.}
 
-\abil{Sensitive Nose I/II}{passive}{4 XP, CON 1/3}{}{Improves smell by +1/2/3.}
+\abil{Acute Ears I/II/III}{passive}{4 Karma, Biomancy 3}{Awareness 2/4/5}{Improves hearing by +1/2/3.}
 
-% \abil{Agile Build}{passive}{16 karma }{racial }{ Running speed increases by 1m per AP and gains +1m in height and long jump distance. All bonuses are revoked when armor penalty is higher than 1.}
+\abil{Sensitive Nose I/II}{passive}{4 Karma, Biomancy 3}{Awareness 2/4/5}{Improves smell by +1/2/3.}
 
-% \abil{Strong Build}{passive}{16 karma}{racial}{Increases RES by 1, decreases armor penalties and maximum AP by 1. However, standing up costs 3 AP, and running and jumping have speed reduced by 1m.}
-
-\abil{Beautiful}{passive}{4 XP, CON 4}{chosen at character creation or ritual}{ This ability can be used to gain +1 on persuasion attemtps and +3 on seduction attempts when allowed. This ability is used when allowed by the GM, meaning that beauty may have no effect against animals or in other situations where the character's appearance is not relevant. }
+\abil{Beautiful}{passive}{4 Karma, Biomancy 3}{racial or ritual}{ This ability can be used to gain +1 on persuasion attemtps and between +1 and +5 on seduction attempts when allowed. This ability is used when allowed by the GM, meaning that beauty may have no effect against animals or in other situations where the character's appearance is not relevant. }
 
 % \abil{Ugly}{passive}{8 karma}{chosen at character creation or ritual}{ Gains -2 on seduction checks and +2 on intimidation in social actions. }
 
-\abil{Obese}{passive}{8 XP CON 1}{}{ Receives -1 load penalty to AGI. When Hunger reaches 45, the character loses this ability and their hunger resets to 15. }
+\abil{Obese}{passive}{0 XP}{ 2 months }{ Receives -1 load penalty to AGI. When Hunger reaches 30, the character loses this ability and their hunger resets to 15. Requires eating a lot. }
 
-\abil{ Visual Acuity }{passive}{8 XP, CON 5}{}{I. Reduces the distance penalty for detection by half. }
+\abil{Metabolic Control }{passive}{10 Karma, Biomancy 4}{ Biomancy 4}{ Learns to perform multiple rests per day.}
 
-\subsection{Implants}
+\abil{Regenerative Reservoir }{passive}{8 Karma, Biomancy 4 }{Cell Reconstruction}{ The character has an internal reservoir that functions like a potion that heals 6 IL. The reservoir is filled as if healing while they are resting and uninjured or when drinking a potion.  }
 
-The power of the abilities depends on the quality of the implant. Higher quality implants cost more.
+\abil{Resurrection}{ritual}{10 Karma, Biomancy 6 }{ Metabolic Control, Biomancy 5}{ The body performs rests after the character dies. If the character remains without deadly injuries during this time, they come back to life. Resurrection does not heal amputations. }
 
-\abil{Ignite Implant}{passive}{50 PO}{}{Allows the use of combustion abilities. }
+\abil{Glutton}{passive}{8 Karma, Biomancy 3}{ racial or training}{The character can eat 2x the normal amount per day.}
 
-\abil{Electricity Implant}{passive}{50 PO}{}{Allows the use of electricity abilities. }
+\abil{Tireless}{passive}{8 Karma, Biomancy 3}{racial or Biomancy 4}{ Recovers +50\% exhaustion.}
+
+\abil{Hibernation}{passive}{8 Karma, Biomancy 4}{racial or training}{ Can rest for long periods. The character only receives 1 hunger and 1 thirst every 2 days of sleep. }
+
+
+% \subsection{Implants}
+
+% The power of the abilities depends on the quality of the implant. Higher quality implants cost more.
+
+% \abil{Ignite Implant}{passive}{50 PO}{}{Allows the use of combustion abilities. }
+
+% \abil{Electricity Implant}{passive}{50 PO}{}{Allows the use of electricity abilities. }
 
 
 \subsection{Spiritual Mutation}
 
 These mutations are spiritual and require knowledge of Animancy or divine assistance to be acquired.
 
-\abil{Elf}{passive}{ 10 XP, SPI 6}{Devotion 5 }{ Gains the ability to meditate for 4 hours a day to gain +3 Devotion for the day. The bonus also applies if in a sacred place. The character must meditate every day; otherwise, they will become ill within 24 hours. The entity worshiped by the cleric has +10 on the DL of compulsions against the elf's will. }
+\abil{Elf}{passive}{ 12 Karma}{Devotion 4 or racial }{ Gains the ability to meditate for 4 hours a day to gain +2 Devotion for the day. The bonus applies automatically if in a sacred place. The character must meditate every day; otherwise, they will become ill within 24 hours. The entity worshiped by the cleric has +10 on the DL of compulsions against the elf's will. }
 
-
-% end -----------------------------------------------------------------------
-
-\subsection{Metabolic Mutations}
-
-These are mutations that occur at the cellular level. They can be learned instinctively through athletics or intellectually trained with transfiguration magic. 
-
-% \abil { Red Blood Cell Saturation I/II } {passive}{ 8 XP, CON 2/4} {} { Increases STA regeneration from resting by 1/2. }
-
-\abil{Metabolic Control I/II }{passive}{10 XP, CON 2/4}{}{ I. Learns to trade regenerating 1 exhaustion for 1 healing during rests. II. Learns to perform multiple rests per day.}
-
-\abil{Regenerative Reservoir }{passive}{8 XP, CON 4 }{Cell Reconstruction}{ The character has an internal reservoir that functions like a potion. The reservoir fills with rest while they are uninjured and can hold up to 6 heals.  }
-
-\abil{Resurrection}{ritual}{10 XP CON 6}{ Metabolic Control II, Health 5}{ The body performs rests after the character dies. If the character remains without deadly injuries during this time, they come back to life. Resurrection does not heal amputations. }
-
-\abil{Glutton}{passive}{8 XP CON 5}{ racial or training}{The character can eat 2x the normal amount per day.}
-
-\abil{Tireless}{passive}{8 XP CON 5}{racial or training}{ Can rest in only 1 exploration turn.}
-
-\abil{Hibernation}{passive}{8 XP CON 6}{racial or training}{ Can rest for long periods. The character only receives 1 hunger and 1 thirst every 2 days of sleep. }
-
-\abil{Amplified Pheromones}{passive}{6 XP, CON 3}{}{ The character gains awareness and control over their pheromones, increasing the difficulty of any social test by +2 for anyone within 6m.}
 
 \subsection{Chimerism}
 
-These are abilities that mix characteristics of other animals with those of humans. These mutations only occur when trained with transfiguration magic. It is possible to train this ability in another character, like a plastic surgery, but the wizard must have the talent and both must spend the necessary time to gain XP.
+These are abilities that mix characteristics of other animals with those of humans. These mutations only occur when trained with transfiguration magic. 
 
-\abil{Fur / Scales}{passive}{CON 3}{racial or ritual}{Choose Fur or Scales. Fur: Becomes Furry, granting +3 on tests to resist exposure to cold and increases natural INS by 2xDM. Scales: Makes the skin resemble that of a crocodile. Increases natural TGH by +2xDM.}
+It is possible to train this ability in another character, like a plastic surgery, but the wizard must have the talent and both must spend the necessary time to gain XP.
 
-\abil{Retractable Claws}{passive}{6 XP CON 3}{racial or ritual}{Gives an unarmed attack with a base damage of 6/1x and the properties of grappling and heavy I. Also improves climbing by +2 if not wearing gloves.}
+\abil{Fur }{passive}{6 Karma, Biomancy 3}{racial or ritual, not Scaly}{ Becomes Furry, granting +3 on tests to resist exposure to cold and gives a natural armor of 2xDM INS.  }
 
-\abil{Gills}{passive}{10 XP CON 6 }{racial or ritual}{Can rest with half the STA regeneration underwater and does not lose STA due to suffocation.}
+\abil{ Scales}{passive}{8 Karma, Biomancy 4}{racial or ritual, not Furry}{ Scales: Makes the skin resemble that of a crocodile. Gives a natural armor of +4xDM RES.}
 
-\abil{Tail I/II}{passive}{5 XP CON 3/4 }{racial or ritual}{+1/2 for balance and climbing. II. Can hold things and hang with the tail.}
+\abil{Claws}{passive}{6 Karma, Biomancy 3}{racial or ritual}{ Gives an unarmed attack with a base damage of 6 with sharpness of 2 and the property of grappling. This has hardness 3. Also improves climbing by +1 if not wearing gloves.}
 
-\abil{Bear Nose}{passive}{10 XP CON 5}{racial or ritual, sensitive nose II}{ Modifies the nose to become very sensitive and can transform it into a snout. Removes the -5 penalty to smell.}
+\abil{Gills}{passive}{10 Karma, Biomancy 4 }{racial or ritual}{Can rest with half the STA regeneration under water and does not lose STA due to suffocation under water.}
 
-\abil{Infrared Vision}{passive}{10 XP CON 5}{racial or ritual}{Modifies the eyes to be able to see infrared light, allowing aiming at heat sources even through fog or in the dark.}
+\abil{Tail I/II}{passive}{6 Karma }{racial or ritual}{+1/2 for balance and climbing. II. Can hold things and hang with the tail.}
 
-\abil{Owl eyes}{passive}{10 XP CON 5}{racial or ritual}{Modifies the eyes to be able to see well at night, but not absolute darkness. }
+\abil{Bear Nose}{passive}{10 Karma, Biomancy 4}{racial or ritual, sensitive nose II}{ Modifies the nose to become very sensitive and can transform it into a snout. Removes the -5 penalty to smell.}
 
-\abil{Bat Ears}{passive}{10 XP CON 5}{racial or ritual}{Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense. This is not as good as vision as a dominant sense, so it leaves the character disoriented when used as the only active sense. This does not work in complete silence. }
+\abil{Infrared Vision}{passive}{6 Karma, Biomancy 4}{racial or ritual}{Modifies the eyes to be able to see infrared light, allowing aiming at heat sources even through fog or in complete darkness.}
 
-\abil{Four Legs}{passive}{12 XP CON 5}{racial or ritual}{ Gains quadrupedal movement, gaining +3 on any balance test and its running speed is AGI/2. Cannot have anything in its hands while walking on four legs. }
+\abil{Owl eyes}{passive}{8 Karma, Biomancy 4}{racial or ritual}{Modifies the eyes to be able to see well at night, but not absolute darkness. }
 
-\abil{Venom Glands}{passive}{10 XP CON 5}{racial}{Allows for performing abilities with poison.}
+\abil{Bat Ears}{passive}{8 Karma, Biomancy 4}{racial or ritual}{Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense. This is not as good as vision as a dominant sense, so it leaves the character disoriented when used as the only active sense. This does not work in complete silence. }
+
+\abil{Four Legs}{passive}{12 Karma, Biomancy 6}{racial or ritual, Biomancy 5}{ Gains quadrupedal movement, gaining +3 on any balance test and its running speed is AGI/2. Cannot have anything in its hands while walking on four legs. }
+
+\abil{Venom Glands}{passive}{10 Karma, Biomancy 4}{racial, Biomancy 4}{Allows for performing abilities with poison.}
 
 % \inna{Blinding Spray}{4AP + 4 SP}{forest 3}{melee, range of 4.5m, arc of 180 degrees}{3 turns}{Sprays an acidic cloud that burns the eyes of anyone. If they fail a Health test, they will be blinded for the duration. Alternatively, they can try to escape with a reflex to leave the area.}
 

@@ -281,9 +281,9 @@ The list of afflictions is:
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
 \item \textbf{Tired/Exhausted} Penalty of -1 mental/-2 mental. 
-\item \textbf{Weakened/Malnourished} -1/-2 Health. +5/10 to IL
-\item \textbf{Thirsty/Dehydrated} -1/-2 Health, +5/10 to IL
-\item \textbf{Sick} Counts as +10 to IL. -2 Health.
+\item \textbf{Weakened/Malnourished} -1/-2 Health. -1/2 to IT.
+\item \textbf{Thirsty/Dehydrated} -1/-2 Health, -1/2 to IT
+\item \textbf{Sick} -2 Health. -2 to IT.
 \end{itemize}
 
 \skill{Health}{ CON }{ Represents how strong the character's body is against diseases, poisons, exposure to the elements, and how quickly they recover from injuries and exhaustion. 
@@ -624,60 +624,6 @@ Here's a list of possible modifiers. Many modifiers can be combined.
 \end{itemize}
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection.
-
-
-\section{Spells} 
-
-\subsection{Casting Spells} 
-
-\skill{Sorcery}{Knowledge+Sorcery}{ Spells are special abilities that require a sorcery test to be used. The value of the sorcery skill is the sum of the sorcery proficiency and the knowledge related to the spell, but the test works the same for every spell}
-
-Casting a spell costs AP and STA during combat or exhaustion during exploration. To cast any spell, make a sorcery test against the \textbf{Spell Casting DC} to determine if the spell was successfully cast or not. In case of failure, it fails and the AP and STA are lost. 
-
-\textbf{Concentration:} All sorcery tests require concentration. The only other action that can be performed while concentrating is careful movement. Being interrupted causes the loss of concentration. Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. Losing concentration causes all AP and STA spent to be lost. The character must interrupt concentration to be able to actively defend themselves.
-
-\textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. For these spells, the sorcery skill test needs to be redone periodically, as indicated in the spell. A failure in the sorcery test interrupts the sustained magic.
-
-\textbf{Charged:} can be charged into something and released when a trigger is activated. If the spell is not used within the duration of the charge, it dissipates. 
-
-\textbf{Delayed Spells:} Any spell can be delayed, meaning that the casting can be completed, but the release is postponed. The character must concentrate on the spell until the release, which can be triggered by a previously prepared action. If a trigger does not occur, release it in the next turn. 
-
-\textbf{Requirements:} Some spells may even be impossible to cast if the minimum conditions are not met. Making it rain in the desert is impossible if there is no water in the sky.
-
-\textbf{Stealth and Sorcery:} Spells are imperceptible before they have their effect, unless a skill is used to reveal them. Once their effect occurs, they can be identified with a test of the skill used to cast the spell.
-
-\subsection{Learning Spells}
-
-Spells are trained in the same way as skills, but using the knowledge related to the spell as talent. Each spell costs 4+spell level XP.
-
-They can also be learned with conviction XP or with devotion. In this case, they use their respective levels as talent.
-
-\subsection{Types of Spells and Modifications}
-
-Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. They follow the same logic of SOPs.
-
-\textbf{Accelerate Spell:} Spend 3 SOPs to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
-
-\textbf{Extend Spell:} Spend 2 SOPs to increase the range of a spell according to the MM.
-
-\textbf{Enhance Spell:} Spend 4 SOPs to improve spells in a special way described in the spell.  \\
-
-\textbf{Amplify Spell:} Spend 4 SOPs to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
-
-\textbf{Extend Charge Duration:} Spend 2 SOPs to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
-
-\textbf{Effortless Spell:} Spend 4 SOPs to rest while casting a spell. The spell must spend the higher between the rest's AP cost and the spell's AP cost. If used outside combat, reduces the exhaustion cost of a spell by half.  \\
-
-The types of spells are:
-
-\begin{itemize}[noitemsep]
-\item Environmental: The spell alters the environment. They have customized enhancements.
-\item Effect: Spells that directly affect the target and have various effects. They have customized enhancements.
-\item Psychic: Spells that directly affect the target and have psychic effects. They use the Charisma proficiency as the Difficulty Level (DL). Enhancing increases the DL by 2.
-\item Projectile: Spells that function as projectiles, using the shooting skill as the DL.
-\item Touch: Spells that function as strikes, using the striking skill as the DL. They do not trigger opportunity attacks.
-\end{itemize}
-
 
 
 %----------------

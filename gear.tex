@@ -28,7 +28,7 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Penetrating:} allows using the penetrating additional effect.
 \item \textbf{Precise:} allows performing armor bypass additional effect.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
-\item \textbf{Fast, UF:} Slow: Force is 2x energy. Fast: can only blocked with a shield, force is 0.5x energy. Ultra fast(UF): like fast, but force is 0.1x energy. 
+\item \textbf{Fast, UF:} Slow: Force is 2x energy. Fast: can only blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 % \item \textbf{Overpen:} Maximum IL damage is 10.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 % \item \textbf{Shot:} This can only blocked with a shield.
@@ -307,7 +307,7 @@ Metallic &&&&&&&\\
 \hline
 Chain Shirt & 10  & 3 & 5 & +5 & 0 & 20 GP & medium\\ 
 Hauberk & 12  & 4 & 6 & +5 & -1  & 30 GP & medium\\
-Brigandine & 15 & 6 & 8 & +6 & -2 &  50 GP & large\\
+Brigandine & 15/8 & 6 & 8 & +6 & -2 &  50 GP & large\\
 \hline
 Rigid and Metallic &&&&&&&\\
 \hline
@@ -401,7 +401,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
+    % \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
     \item Characteristic: Insulating: Increases coverage against electric-type damage attacks by +5.
     \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
@@ -479,12 +479,12 @@ Job & apprentice & specialist & master \\ [1ex]
 Worker & 1SP/day & - & - \\
 Infantry & 2SP/day & 4SP/day & - \\
 Archer & 2SP/day & 6SP/day & 12SP/day \\
-Knight & - & 8SP/day & 2 GP/day \\
+Knight & - & 8SP/day & 3 GP/day \\
 Armorer & 2SP/day & 5SP/day & 2 GP per day \\
 Carpenter & 2SP/day & 3SP/day & 5SP per day \\
 Mason & 2SP/day & 3SP/day & 5SP per day \\
 % Priest & 2SP/day & 4SP/day & 8s per day \\
-Doctor & 3SP/day & 5SP/day & 8SP per day \\
+Doctor & 3SP/day & 1 GP/day & 3 GP per day \\
 \hline
 \end{tabular}
 \end{center}
@@ -550,20 +550,20 @@ Potions add an effect to the character for a certain duration. The effects of po
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and reduces exposure by 3 - 1 GP - weight 10
-    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and reduces exposure by 3 - 2 GP - weight 15
-    \item Flint: Grants +5 on the test to light a campfire. 2 PP - Weight 1
-    \item Firewood: Wood ready to burn for 8 hours. Grants +5 on the test to light a campfire. - weighs 10.
-    \item Rope: Useful item. The weight is 1 per 5 meters. 1 PP per meter.
-    \item Canteen: Holds 2L of water. Weighs 4. 1 PP.
-    \item Jug: Holds 5L of water. Weighs 10. 1 PP.
-    \item Shovel: Used for digging. Weighs 10. 1 PP.
-    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2. Weighs 5. 5 PP.
-    \item Vial: Holds 250ml of any liquid. Weighs 1. 5 CP.
+    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and reduces exposure by 3 - 1 GP - medium
+    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and reduces exposure by 3 - 2 GP - large
+    \item Flint: Grants +5 on the test to light a campfire. 2 PP - small
+    \item Firewood: Wood ready to burn for 8 hours. Grants +5 on the test to light a campfire. - medium
+    \item Rope: Useful item. 1 PP per meter. Medium
+    \item Canteen: Holds 2L of water. 1 PP. Small.
+    \item Jug: Holds 5L of water.  1 PP. Medium.
+    \item Shovel: Used for digging. 1 PP. Large.
+    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 PP. Medium
+    \item Vial: Holds 50ml of any liquid. 5 CP. small
     \item Alcohol - Used for fire skills. 1 PP per 250ml (5 charges). 
     \item Oil - oil. 1 PP per 250ml (5 charges). 
-    \item Sharpening Stone - A sharpening stone. Weighs 1. 2 PP. 
-    \item Fur Cloak - Improves resistance to cold wear by +3. 1 GP.
+    \item Sharpening Stone - A sharpening stone. 2 PP. small 
+    \item Fur Cloak - Improves resistance to cold wear by +3. 1 GP. medium
     
 \end{itemize}
     
