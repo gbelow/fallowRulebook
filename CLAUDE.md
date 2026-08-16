@@ -1,4 +1,4 @@
-# Below v7 — System Rulebook
+# Fallow — System Rulebook
 
 This is the rulebook for a tabletop RPG (TTRPG) written in LaTeX. The rules are written to be efficient: stated as briefly and precisely as possible, with each piece of information stated only once and little explanation offered. Match this style when editing — concise, precise, no redundant explanation.
 
@@ -18,7 +18,7 @@ The system is designed to be played with or without magic.
 - `spells.tex` — spells characters can obtain, plus casting and learning rules.
 - `war.tex` — tools for a war-centered game.
 - `horror.tex` — tools for a horror game. Currently empty. Future work.
-- `monsters.tex` — list of NPCs to throw into the game.
+- `monsters.tex` — list of NPCs to throw into the game. Currently very limited and provisory.
 - `thinking.tex` — creation notes only. Disregard.
 
 ## Cross-cutting mechanics to know
