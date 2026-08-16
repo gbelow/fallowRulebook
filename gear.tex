@@ -16,19 +16,18 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Throw:} indicates that the throw attack can be used.
 \item \textbf{Handle:} This attack represents the handle of the weapon.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x MM. Long-range attacks have an extended range of 1m x MM per level and cannot be used in grappling combat.  
-\item \textbf{DEF:} Attacks that have DEF can be used to block. 
+\item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
 % \item \textbf{BLT/CUT:} indicates the blunt and cut damage. CUT is always a multiple of BLT.
-\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. If used with one hand, they cost +1 AP for both attack and defense.
+\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
 \item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum.
 \item \textbf{Piercing:} Grazes behave like a miss. Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
-\item \textbf{Smash:} allows using the smash additional effect.
 \item \textbf{Bladed:} allows using the extra cut additional effect and can be sharpened.
 \item \textbf{Penetrating:} allows using the penetrating additional effect.
 \item \textbf{Precise:} allows performing armor bypass additional effect.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
-\item \textbf{Fast, UF:} Slow: Force is 2x energy. Fast: can only blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
+\item \textbf{Fast, UF:} Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 % \item \textbf{Overpen:} Maximum IL damage is 10.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 % \item \textbf{Shot:} This can only blocked with a shield.
@@ -66,7 +65,7 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 Weapon & RES & Energy & SHP & hand & range & properties & price & size \\
 \hline
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & small \\
-& STR & 0.5x STR & 0 & small & short & draw & smash &  \\[5pt]
+& STR & 0.5x STR & 0 & small & short & draw & heavy I, smash &  \\[5pt]
 \hline
 \textbf{Claws} & 10 & 0.5x STR & 1x & small & short & grapple, DEF & - & small \\[5pt]
 \hline

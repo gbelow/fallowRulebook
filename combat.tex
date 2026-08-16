@@ -221,7 +221,7 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
 
 % \textbf{Knockdown:} The victim fall to the floor and becomes prone. It is interrupted as well.
 
-% \textbf{Stun:} Receives an interrupt with a minimum loss of 5 AP and falls prone.
+\textbf{Stun:} An interrupt that has minimum loss of 4 AP.
 
 \text{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overflows the DL to hit posed by the defender during an attack can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
 
@@ -229,7 +229,7 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
     \item \textbf{Armor Bypass:} Only attacks from weapons with the piercing property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the weapon has it.
     \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
     \item \textbf{ Extra cut:} Costs a number of SOPs equal to the target's deflection to double the sharpness bonus to cutting damage. Sharpness bonus is SHP-1. Only weapons with the bladed property can use this.
-    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to increase the amount of energy by 25\%. Only weapons with the smash property can use this.
+    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1 or interrupt if its over T0.
 \end{itemize}
     
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
@@ -242,7 +242,7 @@ To illustrate, here are some targets for humanoids. There are 4 locations: chest
 
 \textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates. 
 
-\textbf{Head:} Costs 5 points. Getting a wound to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4+ damage has 50\% chance of instant death. Bypassing armor is possible with any weapon, unless the helmet is closed.
+\textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4+ damage has 50\% chance of instant death. Bypassing armor is possible with any weapon, unless the helmet is closed.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
 
@@ -301,7 +301,7 @@ The survival chapter describes how health works during rest.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy of physical attacks by +0.5xSTR , but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. 
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit.
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
@@ -319,17 +319,17 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \skill{Defend}{Melee}{ This is the defense against the character's melee attacks. Whenever attacked, the character must spend AP to use the defend with some object or part of the body; otherwise, they use the SD. If the strike hits or crits, damage is taken normally. If it grazes or misses, the result depends on the type of defense chosen. There are four types of defense: Evade, Evasive Jump, Intercept, and Block.
 
+% \textbf{Flinch:} This is a reaction that costs 1 AP and increases deflection by 2. The attack is still made against the SD.
+
 \textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a graze, the attack has 50\% damage, and on misses, it has 0.
 
 \textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
 
-\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by RES of the weapon or shield. On a miss, the shield get +50\% RES bonus. A blocking object can break if damage is greater than RES.
+\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
 
 \textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 grapple higher than the defender. On a miss, stop it if the attacker has up to 8 grapple more than the defender.
 
 \textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
-
-% \textbf{Flinch:} This is a reaction that costs 1 AP and only increases cover by 2. The attack is still made against the SD.
 
 %----------------------- Grapple
 
@@ -428,15 +428,15 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 This section is a guideline for interactions with objects in combat. The exact values can be modified by the GM. This is just a basis to work with.
 
-\textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider for any random object that a regular human, with strength 10, can lift about its own body weight.
+\textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider for any random object that a regular human, with strength 10, can lift about 50kg.
 
-\textbf{Pushing objects:} To push an object, or when struck by one, use the push action, as described in Grapple. In a graze, the object can be redirected by up to 60 degrees. A hit stops the object and accelerates it in any direction by 1m/s per SOP.
+\textbf{Pushing objects:} To push an object, or when struck by one, use the push action, as described in Grapple. A hit stops the object and accelerates it in any direction by 1m/s per SOP. When struck by an object, in a graze, the object can be redirected by up to 60 degrees.
 
 The push DL depends on weight and speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. A suggestion would be +1 per m/s for objects of size 3. Reduce it for smaller objects and increase it for larger ones.
 
 \textbf{Dodging objects:} Large objects can be considered explosions on a line given by their path. Use reflex to dodge them. Consider how difficult it is to dodge subjectively, using the basic guidelines on how to choose a DL.
 
-\textbf{Damage from Impact with objects:} Depends entirely on what is hitting what at what speed and whether one object is fixated or free. Estimate what tier of wound it would deal to a person and say it is 5 damage per tier. This way, a tougher person may resist the damage better.
+\textbf{Damage from Impact with objects:} Depends entirely on what is hitting what at what speed and whether one object is fixated or free. Estimate what tier of injury the impact would cause and match the damage to correspond to it. Range between 5 to 10 damage per expected tier of injury. 
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
