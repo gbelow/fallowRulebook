@@ -155,7 +155,7 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 % Animancy requires some for of weakness of the mind to be used. Create relation with morale system.
 
-% Area effect magic
+% Area effect magic - synesthesia or telepathic link synergy
 
 % Spirit binding and resonance
 
@@ -163,57 +163,63 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 \spell{Anchor Soul}{Ritual}{Animancy 3}{Soul stone}{8}{melee, target}{Effect}{3 days, sustained}{Anchors a creature's soul to a soul stone, preventing it from disappearing. This can be done with the souls of creatures that have been dead for up to 10 minutes. If the soul is still present, resurrection is possible, but the soul will extinguish in 3 days without a body.}
 
-\spell{Spiritual Strike}{3 AP + 1 STA as a projectile}{Animancy 2}{ }{5}{15m}{Projectile}{}{Launches part of your soul violently at an enemy, interrupting them if the caster's animancy + 3 SM is greater than the target's will + 3 SM. If it is a critical hit, gain +3 animancy. The projectile is invisible to anyone who cannot detect spells.}
-
-\spell{Spiritual Walk}{5 AP + 2 STA, +2 STA per turn}{Animancy 3}{Synesthesia I}{8}{100m}{Effect}{sustained}{Exits the body in spirit form, leaving it unconscious. This form travels in any direction with a movement speed of 6m. It is invisible and immune to any type of damage and can cast spells normally, but the character spends 2 STA per turn while out of the body, or 1 STA per turn if perfected. The spirit's line of sight is equal to the basic version of the Synesthesia ability.}
-
-\spell{Ghost}{5 AP + x STA, 1 exhaustion}{Animancy 3}{Synesthesia I}{10}{self}{Effect}{instantaneous}{Can generate a ghost that behaves like the spiritual walk but has limited energy. The ghost receives x STA and disappears if STA reaches 0. All memories of the ghost are lost if it does not return to the original body. The ghost loses 2 STA per turn or 1 STA if the spell is perfected.}
+\spell{Alter Memories}{5 AP}{Animancy 4}{}{10}{melee, target}{Effect}{ }{ Touches the mind of a person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. In this case, a success or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
 
 \spell{Disintegrate Mind}{8 AP + 8 STA}{Animancy 4}{ }{10}{melee, target}{Effect}{}{Destroys a creature's mind permanently. Reduces SPI to 0 permanently and resets all convictions to 0. This can be done by clerics of Iskar even without having learned this ability, but the target's consent is required.}
 
-% \spell{Chaotic Thorn}{2 AP + 2 STA}{Animancy 1}{}{5}{30m}{Effect}{instantaneous}{As a reaction after seeing an enemy casting a spell, fires a chaotic thorn that increases the difficulty of casting the spell by +3.}
+% \spell{Mental Palace}{5 minutes}{Animancy 4}{}{5}{target, melee}{Effect}{5 minutes, sustained}{ Helps someone remember something, gaining +2 on any knowledge test. Additionally, they can recall all the details of anything they can perceive during the duration of the spell.}
 
+\spell{Sleep}{3 AP }{Animancy 2}{}{5}{15m}{Psychic}{instantaneous}{ Causes someone who is tired or exhausted, but not afraid, angry or in combat to fall asleep. Targets fall asleep on a miss if they are just tired and on a graze if they are exhausted.}
+
+\spell{Charm}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A psychic attempt to soothe a target's emotions and make them less suspicious. This test is made against insight and increases the DL of persuasion and deception attempts by 2 on a graze and 3 on a miss.}
+
+\spell{Rescue}{3 AP}{Animancy 2}{}{5}{15m, detectable and enchanted target}{Psychic}{instantaneous}{ Compels a charmed creature to use its reaction surge and defend the caster on a miss on a will test.  }
+
+%------
+\spell{Calm}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ Allows the target to remake a morale test and get rid of frightened and enraged. Adds the caster's psychic spell DL bonus as bonus to will.}
+
+\spell{Frighten}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A psychic intimidate that triggers an immediate morale test that makes the target frightened.}
+
+\spell{Offend}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A psychic taunt that triggers an immediate morale test that makes the target enraged. }
+
+\spell{Suggestion}{3 AP }{Animancy 2}{}{5}{15m target that can hear and understand the suggestion}{Psychic}{}{ Tells a creature that can hear and understand the words and is confused, enraged, or frightened to do something, which triggers make a morale check immediately, adding caster's charisma to the DL (plus any spell enhancements). The limit actions triggered can be either the target's natural one or violent when enraged, coward when frightened and all to confused. The exact action being suggested must match the available limit actions. }
+
+\spell{Overwhelming Terror}{5 AP}{Animancy 3}{}{8}{10m}{Psychic}{}{ Intimidates and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to run away from the caster on a limit break.}
+
+\spell{Provocative Mockery}{5 AP }{Animancy 3}{}{8}{15m}{Psychic}{}{ Taunts and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to attack the caster on a limit break.}
+
+\spell{Command}{6 AP +1STA}{Animancy 5}{Suggestion}{12}{15m}{Psychic}{up to unconscious}{ Gives a simple command to a confused target and leaves them Dominated if they miss on a will test. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it. }
+
+%------
 \spell{Interference Matrix}{3 AP + 3 STA or ritual 1 hunger for 5 minutes}{Animancy 4}{}{10}{6m radius, 10m range}{Effect}{5 turns}{Increases the difficulty of casting any spell within the area by 3.}
 
-\spell{Possession}{4 AP + 4 STA}{Animancy 4}{ }{10}{melee}{Effect}{sustained}{Attempts to enter and possess another body during the spiritual walk or as a ghost. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration. Each time the possessed makes a will test, the possessor must spend 1 STA to resist. Possession ends when the possessor's STA reaches 0 or the possessed succeeds on a will test.}
+\spell{Psychoactive Assistance}{3 AP + 1 STA}{Animancy 4}{Central Intelligence}{10}{15m}{Effect}{instantaneous}{ Focuses on a creature with whom they share a telepathic link. The caster can make an insight or will test to resist or remove a mental status effect or psychic ability on behalf of anyone connected by a telepathic link. }
 
-\spell{Sleep}{3 AP }{Animancy 2}{}{5}{15m}{Psychic}{instantaneous}{ Causes someone who is not afraid or angry to fall asleep or to be asleep in combat. Targets fall asleep on a failure or a graze on a will test against the charm.}
+\spell{Psychosis}{3 AP + 1 STA}{Animancy 4}{ }{10}{15m, detectable target}{Psychic}{ }{ Causes confusion in a target that is connected by telepathic link or possessed when they miss or graze on a will test. Breaking the link breaks the psychosis. }
 
-\spell{Alter Memories}{5 AP}{Animancy 4}{}{10}{melee, target}{Effect}{ }{ Touches the mind of a person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. The person can accept the ritual or resist it with will. In this case, a success or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
+\spell{Mental Paralysis}{5 AP + 2 STA}{Animancy 5}{}{10}{15m}{Psychic}{instant}{ Completely paralyzes the mind of a confused creature that grazes or fails on their will test, rendering them immobile and fallen (unless held up by something) until they can hit or crit the will test.}
 
-\spell{Psychoactive Assistance}{3 AP + 1 STA}{Animancy 4}{Central Intelligence}{10}{15m}{Effect}{instantaneous}{ Focuses on a creature with whom they share a telepathic link. The caster can make an insight or will test to resist or remove a mental status effect on behalf of anyone connected by a telepathic link. }
+\spell{Pain}{3 AP }{Animancy 3, Biomancy 1}{}{8}{15m}{Psychic}{instantaneous}{ Causes a great sensation of pain to a target connected by telepathic link. This causes a loss of 6 AP on a miss or 4 AP on a graze on a will test.}
 
-\spell{Frighten}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A spiritual attack that causes someone to become afraid if they fail or graze on a will test against the Stress.}
+\spell{Visual Interference}{3 AP }{Animancy 3, Biomancy 1}{}{8}{15m, detectable target}{Psychic}{1 turn}{ Causes blindness for a turn in a target connected by telepathic link that misses or grazes on a will test. }
 
-\spell{Calm}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A spiritual attack that removes fear or rage if they fail or graze on a will test against the Enchantment.}
+\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{3}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, interrupting them and draining 1 STA on a graze and stunning them and causing 2 STA on a miss. For every 3 points under a miss, lose another STA. This attack's DL is if the caster's will + 3 SM against the target's will + 3 SM. Enhancing increases the DL by 2. This can be used as a reaction against targets in the sinesthesia AoE.}
 
-\spell{Command}{6 AP +1STA}{Animancy 5}{Suggestion}{12}{15m}{Psychic}{up to unconscious}{ Gives a simple command to a confused target and leaves them Dominated if they graze or fail on a will test. They remain Dominated until they complete the task, become unconscious, or succeed on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it. }
+\spell{Telepathic Link}{3 AP}{Animancy 3}{}{5}{20m}{Psychic}{10 minutes}{ Creates a telepathic link with a nearby creature if they fail or graze on a will test or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. Each simultaneous link increases the difficulty of the spellcasting test by 3.}
 
-\spell{Pain}{3 AP }{Animancy 3, Biomancy 1}{}{8}{15m}{Psychic}{instantaneous}{ Causes a great sensation of pain, which paralyzes a target for 6 AP on a failure or 4 AP on a graze on a will test against the stress.}
 
-\spell{Charm}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A spiritual attack that leaves the target enchanted if they fail or graze on a will test against the Enchantment.}
+\spell{Spiritual Walk}{5 AP + 2 STA, +2 STA per turn}{Animancy 3}{Synesthesia I}{8}{100m}{Effect}{sustained}{Exits the body in spirit form, leaving it unconscious. This form travels in any direction with a movement speed of 6m. It is invisible and immune to any type of damage and can cast spells normally, but the character spends 2 STA per turn while out of the body, or 1 STA per turn if perfected. The spirit's line of sight is equal to the basic version of the Synesthesia ability.}
 
-\spell{Visual Interference}{3 AP }{Animancy 3, Biomancy 1}{}{8}{15m, detectable target}{Psychic}{1 turn}{ Causes blindness in a target that fails or grazes on a will test. }
+\spell{Ghost}{5 AP + x STA, or 1 exhaustion out of combat }{Animancy 3}{Synesthesia I}{10}{self}{Effect}{instantaneous}{Can generate a ghost that behaves like the spiritual walk but has limited energy. The ghost receives x STA and disappears if STA reaches 0. All memories of the ghost are lost if it does not return to the original body. The ghost loses 2 STA per turn or 1 STA if the spell is perfected.}
 
-\spell{Telepathic Link}{3 AP}{Animancy 3}{}{5}{20m}{Effect}{10 minutes}{ Creates a telepathic link with a nearby creature if they fail or graze on a will test or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell or until the maximum distance is exceeded, at which point the spell breaks. Each simultaneous link increases the difficulty of the spellcasting test by 2.}
+\spell{Possession}{4 AP + 4 STA}{Animancy 4}{ }{10}{melee}{Psychic}{sustained}{Attempts to enter and possess another body during the spiritual walk or as a ghost. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration and is vulnerable to spells that require connection by telepathic link. Each time the possessed makes a will test, the possessor must spend 1 STA to resist. The body and the ghost occupy the same space and can act independetly. Possession ends when the possessor's STA reaches 0 or the possessed succeeds on a will test.}
 
-\spell{Offend}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A spiritual attack that causes someone to become enraged if they fail or graze on a will test against Stress.}
+\spell{Torment}{8 AP + 3 STA}{Animancy 5}{}{12}{15m, direct target}{Effect}{until they wake up}{ Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a success or critical on a will test. They can attempt to wake up every hour. The victim does not heal from this sleep and receives 2 exhaustion for each hour they remain asleep.}
 
-\spell{Psychosis}{3 AP + 1 STA}{Animancy 4}{ }{10}{15m, detectable target}{Psychic}{ }{ Causes confusion in a target that fails or grazes on a will test against the Stress. }
-
-\spell{Mental Palace}{5 minutes}{Animancy 4}{}{5}{target, melee}{Effect}{5 minutes, sustained}{ Helps someone remember something, gaining +2 on any knowledge test. Additionally, they can recall all the details of anything they can perceive during the duration of the spell.}
-
-\spell{Mental Paralysis}{5 AP + 2 STA}{Animancy 5}{}{12}{15m}{Effect}{1 turn}{ Completely paralyzes the mind of a confused creature that grazes or fails on their will test against stress, rendering them immobile and possibly fallen.}
-
-\spell{Suggestion}{3 AP }{Animancy 2}{}{5}{15m target that can hear and understand the suggestion}{Psychic}{}{ Tells a creature that can hear and understand the words and is confused, enraged, enchanted, or frightened to do something, causing the compulsion to obey. If they fail or graze on a will test against Enchantment, they will obey. This compulsion should not cost more than 6 AP on a failure, 4 AP on a graze. }
-
-\spell{Rescue}{3 AP+ 1 STA}{Animancy 2}{}{5}{15m, detectable and enchanted target}{Psychic}{instantaneous}{ Compels an enchanted creature to protect its seducer for 8 AP on a failure in the will test against the Enchantment or for 6 AP on a graze. }
-
-\spell{Torment}{8 AP + 3 STA}{Animancy 5}{}{12}{15m, direct target}{Effect}{until they wake up}{ Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a success or critical on a will test against the Stress. They can attempt to wake up every hour. The victim does not heal from this sleep and receives 2 exhaustion for each hour they remain asleep.}
-
-\spell{Overwhelming Terror}{3 AP + 1 STA}{Animancy 3}{}{8}{10m}{Psychic}{}{ Forces all frightened enemies to make a Morale test and flee from the caster for 4 AP on a graze, 6 AP on a failure.}
-
-\spell{Provocative Mockery}{3 AP +1STA}{Animancy 3}{}{8}{15m}{Psychic}{}{ Forces enraged and confused targets to attack the caster for 6/4 AP on a failure and graze, respectively, on a will test against the stress.}
+% ideas: 
+% phantom sounds and images through telepathic link - one spell per specific image?
+% memory transplantations through telepathic link
+% 
 
 
 % Biological
