@@ -20,7 +20,7 @@ The system is designed to be played with or without magic.
 - `war.tex` — tools for a war-centered game.
 - `horror.tex` — tools for a horror game. Currently empty. Future work.
 - `monsters.tex` — list of NPCs to throw into the game. Currently very limited and provisory.
-- `thinking.tex` — creation notes only. Disregard.
+- `thinking.tex` — just a scratchpad. Not a part of the book. Disregard.
 
 ## Cross-cutting mechanics to know
 
