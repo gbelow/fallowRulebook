@@ -7,7 +7,7 @@
      \textbf{Cost:} #2 \\
      \textbf{Talent:} #3 \\
      \textbf{Requirements:} #4 \\
-     \textbf{TN:} #5  \\
+     \textbf{DL:} #5  \\
      \textbf{Range, Area:} #6 \\
      \textbf{Spell Type:} #7 \\
      \textbf{Duration:} #8 \\
@@ -44,9 +44,10 @@ Clerics can also attempt to cast miracles. When they do that, they use \textbf{2
 
 \subsection{Casting spells}
 
-Casting a spell is a skill test against a spell TN. Any points above the TN are converted into SOPs, which can be used to improve spells, as explained in the spell modifications. 
+%TN
+Casting a spell is a skill test against a spell DL. Any points above a hit against the DL are converted into SOPs, which can be used to improve spells, as explained in the spell modifications. 
 
-Casting a spell costs AP and STA during combat or exhaustion during exploration. To cast any spell, make a sorcery test against the \textbf{Spell Casting TN} to determine if the spell was successfully cast or not. In case of failure, it fails and the AP and STA are lost. 
+Casting a spell costs AP and STA during combat or exhaustion during exploration. To cast any spell, make a sorcery test against the \textbf{Spell Casting DL} to determine if the spell was successfully cast or not. In case of failure, it fails and the AP and STA are lost. 
 
 \textbf{Concentration:} All sorcery tests require concentration. No other action or reaction can be performed while concentrating. Being interrupted causes the loss of concentration. Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. Losing concentration causes all AP and STA spent to be lost. 
 
@@ -62,7 +63,7 @@ Casting a spell costs AP and STA during combat or exhaustion during exploration.
 
 \subsection{Types of Spells and Modifications}
 
-Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. For every point over the spell's TN, get SOPs that can be used to improve spells.
+Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. Each of them have a cost in SOPs to be used.
 
 \textbf{Accelerate Spell:} Spend 3 SOPs to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
 
@@ -91,25 +92,25 @@ The types of spells are:
 The art of giving life to objects and manipulating life in them. The power and efficacy of any alchemical spell is based on the gear used to perform it.
 
 
-\spell{Detonate Explosive}{1 charge, 2 AP + 1 STA}{Alchemy 2}{ explosive}{5}{15m}{Effect}{}{ Detonates an alchemical explosive that is already loaded, causing it to deal its damage and effects. }
+\spell{Detonate Explosive}{1 charge, 2 AP + 1 STA}{Alchemy 2}{ explosive}{0}{15m}{Effect}{}{ Detonates an alchemical explosive that is already loaded, causing it to deal its damage and effects. }
 
-\spell{Smoke Explosive}{1 grenade, 3 AP + 1 STA}{Alchemy 3}{ explosive}{10}{Explosion with a 5m xMM radius}{Effect}{loaded, 5 rounds}{ Loads explosives with the effect of producing smoke when activated, upon contact with fire or on impact. The smoke renders anyone within the fog invisible to the naked eye and obscures visibility to a radius of 1m. }
+\spell{Smoke Explosive}{1 grenade, 3 AP + 1 STA}{Alchemy 3}{ explosive}{5}{Explosion with a 5m xMM radius}{Effect}{loaded, 5 rounds}{ Loads explosives with the effect of producing smoke when activated, upon contact with fire or on impact. The smoke renders anyone within the fog invisible to the naked eye and obscures visibility to a radius of 1m. }
 
-\spell{Shock Explosive}{3 charges, 4 AP + 1 STA}{Alchemy 3}{ explosive}{10}{Explosion with a 3m xMM radius}{Effect}{loaded, 5 rounds}{ Loads explosives with alchemical energy to explode when activated, upon contact with fire or on impact, dealing 20xDM of impact damage and 20xDM PEN as an explosion.}
+\spell{Shock Explosive}{3 charges, 4 AP + 1 STA}{Alchemy 3}{ explosive}{5}{Explosion with a 3m xMM radius}{Effect}{loaded, 5 rounds}{ Loads explosives with alchemical energy to explode when activated, upon contact with fire or on impact, dealing 20xDM of impact damage and 20xDM PEN as an explosion.}
 
-\spell{Incendiary Explosive}{3 charges, 4 AP + 1 STA}{Alchemy 3}{explosive}{10}{Explosion with a 3m xMM radius}{Effect}{loaded, 5 rounds}{ Transforms the explosive into a sticky substance that ignites when activated, upon contact with fire or on impact, dealing 30xDM burn damage. }
+\spell{Incendiary Explosive}{3 charges, 4 AP + 1 STA}{Alchemy 3}{explosive}{5}{Explosion with a 3m xMM radius}{Effect}{loaded, 5 rounds}{ Transforms the explosive into a sticky substance that ignites when activated, upon contact with fire or on impact, dealing 30xDM burn damage. }
 
 % \spell{Extinguish Flames}{ 2 AP + 2 STA}{Alchemy 1}{ Alchemy 4}{8}{Touch}{Environmental}{instantaneous}{ Extinguishes the flames of any combustible material it can touch.}
 
 % \spell{Start Fire}{ 1 charge, 3 AP + 3 STA}{Alchemy 1}{igneous stone}{5}{Touch}{Environmental}{instantaneous}{ Sets fire to any combustible material it can touch. }
 
-\spell{Flamethrower}{6 AP + 1 STA, + 1 charge per activation}{Alchemy 3}{Flamethrower}{8}{Cone explosion of 4m xMM in length and 60 degrees in radius}{Projectile}{sustained}{ Creates flames from an igneous stone, dealing its base damage xDM in burn damage to all within a cone in front of the caster. The flamethrower can be sustained, dealing explosion damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage. }
+\spell{Flamethrower}{6 AP + 1 STA, + 1 charge per activation}{Alchemy 3}{Flamethrower}{3}{Cone explosion of 4m xMM in length and 60 degrees in radius}{Projectile}{sustained}{ Creates flames from an igneous stone, dealing its base damage xDM in burn damage to all within a cone in front of the caster. The flamethrower can be sustained, dealing explosion damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage. }
 
-\spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{8}{ Long I }{Touch}{instantaneous}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
+\spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{3}{ Long I }{Touch}{instantaneous}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
 
 
 
-\spell{Extract Water}{ritual, 1 Exhaustion}{ Alchemy 1 }{Condenser}{variable 0-15}{melee}{Ritual}{4 hours}{Extracts moisture from the air and directs it to a location, which can be a container. The amount of water extracted is 1L for matching the TN and another 1L for every point over it. Increase or decrease TN based on available humidity.}
+\spell{Extract Water}{ritual, 1 Exhaustion}{ Alchemy 1 }{Condenser}{variable -5 to 10}{melee}{Ritual}{4 hours}{Extracts moisture from the air and directs it to a location, which can be a container. The amount of water extracted is 1L at a hit and another 1L for every point over it. Increase or decrease DL based on available humidity.}
 
 
 % \spell{Toxic Gas}{6 AP + 3 STA}{ 3}{Medicine II}{14}{5m, radius of 3m}{Environmental}{3 turns, loaded}{Causes a corpse to release poisonous gas for the entire duration. Undead count as corpses. Anyone breathing within the area at the start of their turn makes a Health test against the spell's DC to avoid coughing. Loses 6/4/2/0 AP, depending on the test result.}
@@ -118,34 +119,34 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 % \spell{Caixão de Areia}{6AP + 8 STA}{ 4}{}{16}{directly from 30m}{Effect}{5 turns}{Attempts to cover a creature of size 4 or smaller with sand. The sand follows and grabs the target, paralyzing and suffocating for 1 turn if they fail or scratch their Strength or Evasion defense. The effect is reapplied each turn until the duration ends. Requires large amounts of sand.}
 
-\spell{Repair Metal}{ Ritual 1 min }{ 3}{ living steel }{3}{touch}{Effect}{ 1 min }{ Repairs cracks in metals. Works like a cold weld, removing negative conditions from equipment. }
+\spell{Repair Metal}{ Ritual 1 min }{ 3}{ living steel }{-2}{touch}{Effect}{ 1 min }{ Repairs cracks in metals. Works like a cold weld, removing negative conditions from equipment. }
 
-\spell{Metal Sharpening}{ 3 AP + 1 STA }{Alchemy 3}{living steel weapon}{5}{touch}{Effect}{charged}{ Performs a sharpening action on a weapon. Improving gives a critical hit on the sharpening.  }
+\spell{Metal Sharpening}{ 3 AP + 1 STA }{Alchemy 3}{living steel weapon}{0}{touch}{Effect}{charged}{ Performs a sharpening action on a weapon. Improving gives a critical hit on the sharpening.  }
 
 % \spell{Galvanic Corrosion}{3 AP + 1STA or 1 exhaustion for 4kg}{Alchemy 2}{electrite}{5}{melee, target}{Touch}{charged, 1 turn}{ Rusts an object that is susceptible to rust. Leaves armors pockmarked and weapons smaller than size 5 without wire. It is necessary to hit an attack against an object for the effect to occur.}
 
-\spell{Sustained Lightning}{4 AP + 1 STA, 3AP+1STA per activation, 1 charge per activation }{Alchemy 5}{electrite}{8}{9mxMM}{Projectile}{sustained}{The caster attempts to create a sustained electric arc between themselves and a target, causing the base damage of the electrite x2DM electric damage. Once the spell hits, it only ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}
+\spell{Sustained Lightning}{4 AP + 1 STA, 3AP+1STA per activation, 1 charge per activation }{Alchemy 5}{electrite}{3}{9mxMM}{Projectile}{sustained}{The caster attempts to create a sustained electric arc between themselves and a target, causing the base damage of the electrite x2DM electric damage. Once the spell hits, it only ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}
 
-\spell{ Taser }{2 AP +1 charge}{Alchemy 1}{electrite}{5}{touch}{Touch}{charged, 1 turn}{ Charges an object of electrite with electricity that discharges on the first object it comes into contact with, adding the electric damage of the material to the attack. }
+\spell{ Taser }{2 AP +1 charge}{Alchemy 1}{electrite}{0}{touch}{Touch}{charged, 1 turn}{ Charges an object of electrite with electricity that discharges on the first object it comes into contact with, adding the electric damage of the material to the attack. }
 
 
 % \spell{Phantom Sound}{3AP + 2 STA}{ 1}{}{15}{30m}{Environmental}{instantaneous}{The wizard makes a sound propagate from a point at a distance they do not need to see, only pointing in the general direction. The target must make a perception test to try to immediately know it is an illusion; otherwise, they will react normally to the sound. The sound can be as loud as a scream.}
 
-\spell{Recharge Stone}{1 charge per 10 minutes, 3 exhaustion per TE}{Alchemy 1}{stone}{5}{Effect}{}{charged}{ Recharges charges of a stone. Ateu devotees can cast this spell without Exhaustion cost.}
+\spell{Recharge Stone}{1 charge per 10 minutes, 3 exhaustion per TE}{Alchemy 1}{stone}{0}{Effect}{}{charged}{ Recharges charges of a stone. Ateu devotees can cast this spell without Exhaustion cost.}
 
-\spell{Darken}{3 AP+1 STA per turn }{Alchemy 3}{ Alchemical Prism}{8}{1m radius}{Environmental}{sustained}{Absorbs all light entering an area, making it difficult for those outside to see what is inside. Makes anyone inside invisible to those outside, who only see a large black circle.}
+\spell{Darken}{3 AP+1 STA per turn }{Alchemy 3}{ Alchemical Prism}{3}{1m radius}{Environmental}{sustained}{Absorbs all light entering an area, making it difficult for those outside to see what is inside. Makes anyone inside invisible to those outside, who only see a large black circle.}
 
-\spell{Lasers}{5 AP + 2 STA, 3 AP + 1 STA per activation}{ Alchemy 4}{ Alchemical Prism}{12}{200m xMM}{Projectile}{sustained}{Converges the rays of light from a large light source into a single point at a distance, causing 30xDM radiant damage to the target per activation. The laser is considered a projectile but does not receive any distance penalty up to 50m.}
+\spell{Lasers}{5 AP + 2 STA, 3 AP + 1 STA per activation}{ Alchemy 4}{ Alchemical Prism}{7}{200m xMM}{Projectile}{sustained}{Converges the rays of light from a large light source into a single point at a distance, causing 30xDM radiant damage to the target per activation. The laser is considered a projectile but does not receive any distance penalty up to 50m.}
 
 % \spell{Invisibility}{3 AP +1 STA}{Alchemy 4}{ Alchemical Prism}{12}{self}{Environmental}{sustained}{Bends the rays of light around the caster during the duration to make them invisible.}
 
 
 
-\spell{Lamp}{3AP or as a ritual 1 exhaustion per PV}{Alchemy 1}{ alchemical torch, }{5}{touch, 10m radius}{Environmental}{charged, 1 minute}{Creates a ball of light in a metallic object that you can touch. Otherwise, it makes the caster themselves glow, but costs double stamina and PV.}
+\spell{Lamp}{3AP or as a ritual 1 exhaustion per PV}{Alchemy 1}{ alchemical torch, }{0}{touch, 10m radius}{Environmental}{charged, 1 minute}{Creates a ball of light in a metallic object that you can touch. Otherwise, it makes the caster themselves glow, but costs double stamina and PV.}
 
-\spell{Dazzling Flash}{4AP+1STA}{Alchemy 2}{ alchemical torch}{8}{self, 6m radius cone at 30 degrees}{Environmental}{instantaneous}{Produces a powerful flash that blinds anyone in the area. Victims must make a reflex test, at no AP cost. On a failure or graze, they are dazzled for 1 round. The flash is blocked by fog, dust clouds, and magical darkening.}
+\spell{Dazzling Flash}{4AP+1STA}{Alchemy 2}{ alchemical torch}{3}{self, 6m radius cone at 30 degrees}{Environmental}{instantaneous}{Produces a powerful flash that blinds anyone in the area. Victims must make a reflex test, at no AP cost. On a failure or graze, they are dazzled for 1 round. The flash is blocked by fog, dust clouds, and magical darkening.}
 
-\spell{Revealing Light}{4AP or 1 exhaustion per TE }{Alchemy 2}{alchemical torch}{5}{touch, 10m radius}{Environmental}{charged, 1 minute}{A bluish light emanates, revealing all kinds of mysteries and invisible things. Transforms anything invisible within the area into something visible.}
+\spell{Revealing Light}{4AP or 1 exhaustion per TE }{Alchemy 2}{alchemical torch}{0}{touch, 10m radius}{Environmental}{charged, 1 minute}{A bluish light emanates, revealing all kinds of mysteries and invisible things. Transforms anything invisible within the area into something visible.}
 
 % \spell{Radar}{4AP }{Alchemy 5}{alchemical torch}{10}{touch, 200m radius}{Environmental}{instantaneous}{ Can see through walls and thin barriers in a large radius for an instant. Can see invisible things. Can be improved multiple times by spending 1 STA for each and to increase the radius by 200m.}
 
@@ -161,60 +162,60 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 % Scouting for spirits and communicating
 
-\spell{Anchor Soul}{Ritual}{Animancy 3}{Soul stone}{8}{melee, target}{Effect}{3 days, sustained}{Anchors a creature's soul to a soul stone, preventing it from disappearing. This can be done with the souls of creatures that have been dead for up to 10 minutes. If the soul is still present, resurrection is possible, but the soul will extinguish in 3 days without a body.}
+\spell{Anchor Soul}{Ritual}{Animancy 3}{Soul stone}{3}{melee, target}{Effect}{3 days, sustained}{Anchors a creature's soul to a soul stone, preventing it from disappearing. This can be done with the souls of creatures that have been dead for up to 10 minutes. If the soul is still present, resurrection is possible, but the soul will extinguish in 3 days without a body.}
 
-\spell{Alter Memories}{5 AP}{Animancy 4}{}{10}{melee, target}{Effect}{ }{ Touches the mind of a person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. In this case, a success or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
+\spell{Alter Memories}{5 AP}{Animancy 4}{}{5}{melee, target}{Effect}{ }{ Touches the mind of a person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. In this case, a success or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
 
-\spell{Disintegrate Mind}{8 AP + 8 STA}{Animancy 4}{ }{10}{melee, target}{Effect}{}{Destroys a creature's mind permanently. Reduces SPI to 0 permanently and resets all convictions to 0. This can be done by clerics of Iskar even without having learned this ability, but the target's consent is required.}
+\spell{Disintegrate Mind}{8 AP + 8 STA}{Animancy 4}{ }{5}{melee, target}{Effect}{}{Destroys a creature's mind permanently. Reduces SPI to 0 permanently and resets all convictions to 0. This can be done by clerics of Iskar even without having learned this ability, but the target's consent is required.}
 
 % \spell{Mental Palace}{5 minutes}{Animancy 4}{}{5}{target, melee}{Effect}{5 minutes, sustained}{ Helps someone remember something, gaining +2 on any knowledge test. Additionally, they can recall all the details of anything they can perceive during the duration of the spell.}
 
-\spell{Sleep}{3 AP }{Animancy 2}{}{5}{15m}{Psychic}{instantaneous}{ Causes someone who is tired or exhausted, but not afraid, angry or in combat to fall asleep. Targets fall asleep on a miss if they are just tired and on a graze if they are exhausted.}
+\spell{Sleep}{3 AP }{Animancy 2}{}{0}{15m}{Psychic}{instantaneous}{ Causes someone who is tired or exhausted, but not afraid, angry or in combat to fall asleep. Targets fall asleep on a miss if they are just tired and on a graze if they are exhausted.}
 
-\spell{Charm}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A psychic attempt to soothe a target's emotions and make them less suspicious. This test is made against insight and increases the DL of persuasion and deception attempts by 2 on a graze and 3 on a miss.}
+\spell{Charm}{3 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ A psychic attempt to soothe a target's emotions and make them less suspicious. This test is made against insight and increases the DL of persuasion and deception attempts by 2 on a graze and 3 on a miss.}
 
-\spell{Rescue}{3 AP}{Animancy 2}{}{5}{15m, detectable and enchanted target}{Psychic}{instantaneous}{ Compels a charmed creature to use its reaction surge and defend the caster on a miss on a will test.  }
-
-%------
-\spell{Calm}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ Allows the target to remake a morale test and get rid of frightened and enraged. Adds the caster's psychic spell DL bonus as bonus to will.}
-
-\spell{Frighten}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A psychic intimidate that triggers an immediate morale test that makes the target frightened.}
-
-\spell{Offend}{3 AP }{Animancy 1}{}{5}{15m, detectable target}{Psychic}{instantaneous}{ A psychic taunt that triggers an immediate morale test that makes the target enraged. }
-
-\spell{Suggestion}{3 AP }{Animancy 2}{}{5}{15m target that can hear and understand the suggestion}{Psychic}{}{ Tells a creature that can hear and understand the words and is confused, enraged, or frightened to do something, which triggers make a morale check immediately, adding caster's charisma to the DL (plus any spell enhancements). The limit actions triggered can be either the target's natural one or violent when enraged, coward when frightened and all to confused. The exact action being suggested must match the available limit actions. }
-
-\spell{Overwhelming Terror}{5 AP}{Animancy 3}{}{8}{10m}{Psychic}{}{ Intimidates and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to run away from the caster on a limit break.}
-
-\spell{Provocative Mockery}{5 AP }{Animancy 3}{}{8}{15m}{Psychic}{}{ Taunts and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to attack the caster on a limit break.}
-
-\spell{Command}{6 AP +1STA}{Animancy 5}{Suggestion}{12}{15m}{Psychic}{up to unconscious}{ Gives a simple command to a confused target and leaves them Dominated if they miss on a will test. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it. }
+\spell{Rescue}{3 AP}{Animancy 2}{}{0}{15m, detectable and enchanted target}{Psychic}{instantaneous}{ Compels a charmed creature to use its reaction surge and defend the caster on a miss on a will test.  }
 
 %------
-\spell{Interference Matrix}{3 AP + 3 STA or ritual 1 hunger for 5 minutes}{Animancy 4}{}{10}{6m radius, 10m range}{Effect}{5 turns}{Increases the difficulty of casting any spell within the area by 3.}
+\spell{Calm}{3 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ Allows the target to remake a morale test and get rid of frightened and enraged. Adds the caster's psychic spell DL bonus as bonus to will.}
 
-\spell{Psychoactive Assistance}{3 AP + 1 STA}{Animancy 4}{Central Intelligence}{10}{15m}{Effect}{instantaneous}{ Focuses on a creature with whom they share a telepathic link. The caster can make an insight or will test to resist or remove a mental status effect or psychic ability on behalf of anyone connected by a telepathic link. }
+\spell{Frighten}{3 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ A psychic intimidate that triggers an immediate morale test that makes the target frightened.}
 
-\spell{Psychosis}{3 AP + 1 STA}{Animancy 4}{ }{10}{15m, detectable target}{Psychic}{ }{ Causes confusion in a target that is connected by telepathic link or possessed when they miss or graze on a will test. Breaking the link breaks the psychosis. }
+\spell{Offend}{3 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ A psychic taunt that triggers an immediate morale test that makes the target enraged. }
 
-\spell{Mental Paralysis}{5 AP + 2 STA}{Animancy 5}{}{10}{15m}{Psychic}{instant}{ Completely paralyzes the mind of a confused creature that grazes or fails on their will test, rendering them immobile and fallen (unless held up by something) until they can hit or crit the will test.}
+\spell{Suggestion}{3 AP }{Animancy 2}{}{0}{15m target that can hear and understand the suggestion}{Psychic}{}{ Tells a creature that can hear and understand the words and is confused, enraged, or frightened to do something, which triggers make a morale check immediately, adding caster's charisma to the DL (plus any spell enhancements). The limit actions triggered can be either the target's natural one or violent when enraged, coward when frightened and all to confused. The exact action being suggested must match the available limit actions. }
 
-\spell{Pain}{3 AP }{Animancy 3, Biomancy 1}{}{8}{15m}{Psychic}{instantaneous}{ Causes a great sensation of pain to a target connected by telepathic link. This causes a loss of 6 AP on a miss or 4 AP on a graze on a will test.}
+\spell{Overwhelming Terror}{5 AP}{Animancy 3}{}{3}{10m}{Psychic}{}{ Intimidates and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to run away from the caster on a limit break.}
 
-\spell{Visual Interference}{3 AP }{Animancy 3, Biomancy 1}{}{8}{15m, detectable target}{Psychic}{1 turn}{ Causes blindness for a turn in a target connected by telepathic link that misses or grazes on a will test. }
+\spell{Provocative Mockery}{5 AP }{Animancy 3}{}{3}{15m}{Psychic}{}{ Taunts and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to attack the caster on a limit break.}
 
-\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{3}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, interrupting them and draining 1 STA on a graze and stunning them and causing 2 STA on a miss. For every 3 points under a miss, lose another STA. This attack's DL is if the caster's will + 3 SM against the target's will + 3 SM. Enhancing increases the DL by 2. This can be used as a reaction against targets in the sinesthesia AoE.}
+\spell{Command}{6 AP +1STA}{Animancy 5}{Suggestion}{7}{15m}{Psychic}{up to unconscious}{ Gives a simple command to a confused target and leaves them Dominated if they miss on a will test. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it. }
 
-\spell{Telepathic Link}{3 AP}{Animancy 3}{}{5}{20m}{Psychic}{10 minutes}{ Creates a telepathic link with a nearby creature if they fail or graze on a will test or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. Each simultaneous link increases the difficulty of the spellcasting test by 3.}
+%------
+\spell{Interference Matrix}{3 AP + 3 STA or ritual 1 hunger for 5 minutes}{Animancy 4}{}{5}{6m radius, 10m range}{Effect}{5 turns}{Increases the difficulty of casting any spell within the area by 3.}
+
+\spell{Psychoactive Assistance}{3 AP + 1 STA}{Animancy 4}{Central Intelligence}{5}{15m}{Effect}{instantaneous}{ Focuses on a creature with whom they share a telepathic link. The caster can make an insight or will test to resist or remove a mental status effect or psychic ability on behalf of anyone connected by a telepathic link. }
+
+\spell{Psychosis}{3 AP + 1 STA}{Animancy 4}{ }{5}{15m, detectable target}{Psychic}{ }{ Causes confusion in a target that is connected by telepathic link or possessed when they miss or graze on a will test. Breaking the link breaks the psychosis. }
+
+\spell{Mental Paralysis}{5 AP + 2 STA}{Animancy 5}{}{5}{15m}{Psychic}{instant}{ Completely paralyzes the mind of a confused creature that grazes or fails on their will test, rendering them immobile and fallen (unless held up by something) until they can hit or crit the will test.}
+
+\spell{Pain}{3 AP }{Animancy 3, Biomancy 1}{}{3}{15m}{Psychic}{instantaneous}{ Causes a great sensation of pain to a target connected by telepathic link. This causes a loss of 6 AP on a miss or 4 AP on a graze on a will test.}
+
+\spell{Visual Interference}{3 AP }{Animancy 3, Biomancy 1}{}{3}{15m, detectable target}{Psychic}{1 turn}{ Causes blindness for a turn in a target connected by telepathic link that misses or grazes on a will test. }
+
+\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{-2}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, interrupting them and draining 1 STA on a graze and stunning them and causing 2 STA on a miss. For every 3 points under a miss, lose another STA. This attack's DL is if the caster's will + 3 SM against the target's will + 3 SM. Enhancing increases the DL by 2. This can be used as a reaction against targets in the sinesthesia AoE.}
+
+\spell{Telepathic Link}{3 AP}{Animancy 3}{}{0}{20m}{Psychic}{10 minutes}{ Creates a telepathic link with a nearby creature if they fail or graze on a will test or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. Each simultaneous link increases the difficulty of the spellcasting test by 3.}
 
 
-\spell{Spiritual Walk}{5 AP + 2 STA, +2 STA per turn}{Animancy 3}{Synesthesia I}{8}{100m}{Effect}{sustained}{Exits the body in spirit form, leaving it unconscious. This form travels in any direction with a movement speed of 6m. It is invisible and immune to any type of damage and can cast spells normally, but the character spends 2 STA per turn while out of the body, or 1 STA per turn if perfected. The spirit's line of sight is equal to the basic version of the Synesthesia ability.}
+\spell{Spiritual Walk}{5 AP + 2 STA, +2 STA per turn}{Animancy 3}{Synesthesia I}{3}{100m}{Effect}{sustained}{Exits the body in spirit form, leaving it unconscious. This form travels in any direction with a movement speed of 6m. It is invisible and immune to any type of damage and can cast spells normally, but the character spends 2 STA per turn while out of the body, or 1 STA per turn if perfected. The spirit's line of sight is equal to the basic version of the Synesthesia ability.}
 
-\spell{Ghost}{5 AP + x STA, or 1 exhaustion out of combat }{Animancy 3}{Synesthesia I}{10}{self}{Effect}{instantaneous}{Can generate a ghost that behaves like the spiritual walk but has limited energy. The ghost receives x STA and disappears if STA reaches 0. All memories of the ghost are lost if it does not return to the original body. The ghost loses 2 STA per turn or 1 STA if the spell is perfected.}
+\spell{Ghost}{5 AP + x STA, or 1 exhaustion out of combat }{Animancy 3}{Synesthesia I}{5}{self}{Effect}{instantaneous}{Can generate a ghost that behaves like the spiritual walk but has limited energy. The ghost receives x STA and disappears if STA reaches 0. All memories of the ghost are lost if it does not return to the original body. The ghost loses 2 STA per turn or 1 STA if the spell is perfected.}
 
-\spell{Possession}{4 AP + 4 STA}{Animancy 4}{ }{10}{melee}{Psychic}{sustained}{Attempts to enter and possess another body during the spiritual walk or as a ghost. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration and is vulnerable to spells that require connection by telepathic link. Each time the possessed makes a will test, the possessor must spend 1 STA to resist. The body and the ghost occupy the same space and can act independetly. Possession ends when the possessor's STA reaches 0 or the possessed succeeds on a will test.}
+\spell{Possession}{4 AP + 4 STA}{Animancy 4}{ }{5}{melee}{Psychic}{sustained}{Attempts to enter and possess another body during the spiritual walk or as a ghost. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration and is vulnerable to spells that require connection by telepathic link. Each time the possessed makes a will test, the possessor must spend 1 STA to resist. The body and the ghost occupy the same space and can act independetly. Possession ends when the possessor's STA reaches 0 or the possessed succeeds on a will test.}
 
-\spell{Torment}{8 AP + 3 STA}{Animancy 5}{}{12}{15m, direct target}{Effect}{until they wake up}{ Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a success or critical on a will test. They can attempt to wake up every hour. The victim does not heal from this sleep and receives 2 exhaustion for each hour they remain asleep.}
+\spell{Torment}{8 AP + 3 STA}{Animancy 5}{}{7}{15m, direct target}{Effect}{until they wake up}{ Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a success or critical on a will test. They can attempt to wake up every hour. The victim does not heal from this sleep and receives 2 exhaustion for each hour they remain asleep.}
 
 % ideas: 
 % phantom sounds and images through telepathic link - one spell per specific image?
@@ -232,23 +233,23 @@ Manipulate drugs, cells, etc. Mutations, grafts.
 
 % healing
 
-\spell{Healing Food}{5 minutes}{Biomancy 4}{}{12}{touch}{Effect}{sustained}{ Modifies a portion of food to behave like a potion, giving half of its nutritional value as healing instead of hunger. }
+\spell{Healing Food}{5 minutes}{Biomancy 4}{}{7}{touch}{Effect}{sustained}{ Modifies a portion of food to behave like a potion, giving half of its nutritional value as healing instead of hunger. }
 
-\spell{Immune modulation}{ 1 Exhaustion }{Biomancy 3}{}{8}{melee, target}{ Effect }{ 10 minutes }{ Attempts to manipulate the body of a living being to metabolize poison. Allows a redo of a health test to resist poison using the target's health +2, and an additional +2 for each enhancement. }
+\spell{Immune modulation}{ 1 Exhaustion }{Biomancy 3}{}{3}{melee, target}{ Effect }{ 10 minutes }{ Attempts to manipulate the body of a living being to metabolize poison. Allows a redo of a health test to resist poison using the target's health +2, and an additional +2 for each enhancement. }
 
-\spell{Defibrillate}{3 AP + 1 STA}{Biomancy 2}{}{5}{melee, target}{Effect}{instantaneous}{ Wakes an unconscious target.}
+\spell{Defibrillate}{3 AP + 1 STA}{Biomancy 2}{}{0}{melee, target}{Effect}{instantaneous}{ Wakes an unconscious target.}
 
-\spell{Reattach Limb}{2 Exhaustion, 1 hour}{Biomancy 5}{}{12}{melee, target}{Effect}{}{Reattaches a limb to a body, adding a serious wound that requires 20 cures to function perfectly again.} 
+\spell{Reattach Limb}{2 Exhaustion, 1 hour}{Biomancy 5}{}{7}{melee, target}{Effect}{}{Reattaches a limb to a body, adding a serious wound that requires 20 cures to function perfectly again.} 
 
-\spell{Healing Touch}{4 AP + 1 STA}{Biomancy 2}{}{5}{melee, target}{Effect}{instantaneous}{ Clots 1 point of bleeding in a target that can be touched. Enhancing increases the amount of heals by 1. }
+\spell{Healing Touch}{4 AP + 1 STA}{Biomancy 2}{}{0}{melee, target}{Effect}{instantaneous}{ Clots 1 point of bleeding in a target that can be touched. Enhancing increases the amount of heals by 1. }
 
-\spell{Regenerate}{15 minutes/cure, 1 exhaustion/hour}{Biomancy 3}{Medicine 4}{10}{melee, target}{Effect}{sustained}{Actively manipulates the functions of a target's body to accelerate healing. Removes 1 IL or heals a wound by 1 for every 10 minutes.}
+\spell{Regenerate}{15 minutes/cure, 1 exhaustion/hour}{Biomancy 3}{Medicine 4}{5}{melee, target}{Effect}{sustained}{Actively manipulates the functions of a target's body to accelerate healing. Removes 1 IL or heals a wound by 1 for every 10 minutes.}
 
-\spell{Revitalize}{2 Exhaustion}{Biomancy 5, Animancy 3}{ }{15}{melee, target}{Effect}{5 minutes, sustained}{ Performs a 5-minute ritual to revive a creature within reach of the body, as long as the body is in a condition to be alive and there is a sample of the soul nearby. The body is revived with all its wounds. }
+\spell{Revitalize}{2 Exhaustion}{Biomancy 5, Animancy 3}{ }{10}{melee, target}{Effect}{5 minutes, sustained}{ Performs a 5-minute ritual to revive a creature within reach of the body, as long as the body is in a condition to be alive and there is a sample of the soul nearby. The body is revived with all its wounds. }
 
-\spell{Enhanced Sleep}{1 TE, 1 Exhaustion}{Biomancy 1}{}{8}{touch melee}{ Ritual}{4 hours}{Blesses the sleep of everyone in the area for 4 hours, allowing everyone except the caster to receive +2 health for resting and to complete it in 4h.}
+\spell{Enhanced Sleep}{1 TE, 1 Exhaustion}{Biomancy 1}{}{3}{touch melee}{ Ritual}{4 hours}{Blesses the sleep of everyone in the area for 4 hours, allowing everyone except the caster to receive +2 health for resting and to complete it in 4h.}
 
-\spell{Preserve Corpse}{10 minutes}{Biomancy 1}{}{5}{melee}{Effect}{1 day, charged}{Prevents decomposition from affecting a corpse or part of it for a full day.}
+\spell{Preserve Corpse}{10 minutes}{Biomancy 1}{}{0}{melee}{Effect}{1 day, charged}{Prevents decomposition from affecting a corpse or part of it for a full day.}
 
 
 
@@ -264,24 +265,24 @@ Manipulate drugs, cells, etc. Mutations, grafts.
 
 % \spell{Accelerate Fermentation}{2 Hunger}{ 1}{Entropy I}{15}{melee, target}{Ritual}{30 minutes}{ Greatly accelerates the fermentation process of sugary substances, creating 500ml of alcohol.}
 
-\spell{Animate Dead}{6 AP + 2 STA or as a ritual 1 min}{Animancy 4, Biomancy 4}{ Fresh body }{10}{melee}{Effect}{10 minutes, sustained}{Animates a corpse with a fragment of its soul. It can only move and attack or grapple enemies. The caster can direct it to attack something, but selecting a new target costs 1 AP. If the target dies, the corpse will automatically seek another. Multiple animated corpses can be commanded at the same time. The corpse retains its strength, size, and resilience, but the rest of the attributes become 6. If out of combat, it is possible to attempt to speak with the undead. If the brain and vocal cords are intact, it can answer some questions.}
+\spell{Animate Dead}{6 AP + 2 STA or as a ritual 1 min}{Animancy 4, Biomancy 4}{ Fresh body }{5}{melee}{Effect}{10 minutes, sustained}{Animates a corpse with a fragment of its soul. It can only move and attack or grapple enemies. The caster can direct it to attack something, but selecting a new target costs 1 AP. If the target dies, the corpse will automatically seek another. Multiple animated corpses can be commanded at the same time. The corpse retains its strength, size, and resilience, but the rest of the attributes become 6. If out of combat, it is possible to attempt to speak with the undead. If the brain and vocal cords are intact, it can answer some questions.}
 
 % manipulate trees
 
-\spell{Tree House}{1 ET, 2 exhaustion}{Biomancy 4}{}{10}{target}{Effect}{sustained}{ Grows trees and shapes them to have enough hollow space inside to serve as a room. The effect of the spell is permanent, but it takes the duration of the spell to shape the trees. The internal space is equal to 6 cubic meters xMM.}
+\spell{Tree House}{1 ET, 2 exhaustion}{Biomancy 4}{}{5}{target}{Effect}{sustained}{ Grows trees and shapes them to have enough hollow space inside to serve as a room. The effect of the spell is permanent, but it takes the duration of the spell to shape the trees. The internal space is equal to 6 cubic meters xMM.}
 
-\spell{Accelerate Blooming}{2 Exhaustion, 1 ET}{Biomancy 2}{}{5}{melee, target}{Effect}{sustained}{ The plant will go through its seasonal stages very quickly, draining nutrients and water from the soil and bearing fruit if possible. }
+\spell{Accelerate Blooming}{2 Exhaustion, 1 ET}{Biomancy 2}{}{0}{melee, target}{Effect}{sustained}{ The plant will go through its seasonal stages very quickly, draining nutrients and water from the soil and bearing fruit if possible. }
 
-\spell{Defoliate}{1 min}{Biomancy 2}{Pheromone Control}{8}{12m, radius of 6m}{Environmental}{}{ Causes all deciduous trees in the area to lose their leaves within 1 turn. The leaves are flammable. }
+\spell{Defoliate}{1 min}{Biomancy 2}{Pheromone Control}{3}{12m, radius of 6m}{Environmental}{}{ Causes all deciduous trees in the area to lose their leaves within 1 turn. The leaves are flammable. }
 
-\spell{Insect Pheromone}{5 AP + 1 STA}{Biomancy 3}{Pheromone Control}{8}{ radius of 3m x MM of taret}{Environmental}{}{ Secretes pheromone, which can be stored. Causes nearby insects to swarm anyone that gets in contact with it and sting them. The effects depend on the insects that are present and how long they will take to arrive. In combat, it works if there are insects within 50m, they take 1 turn per 10m to arrive.}
+\spell{Insect Pheromone}{5 AP + 1 STA}{Biomancy 3}{Pheromone Control}{3}{ radius of 3m x MM of taret}{Environmental}{}{ Secretes pheromone, which can be stored. Causes nearby insects to swarm anyone that gets in contact with it and sting them. The effects depend on the insects that are present and how long they will take to arrive. In combat, it works if there are insects within 50m, they take 1 turn per 10m to arrive.}
 
-\spell{Stimulate Secretion}{ 1 min }{Biomancy 2}{dead animal}{5}{touch}{Effect}{}{ Forces a dead venomous animal to secrete venom. The venom produced is sufficient for 1 application and the effect depends on the corpse used. }
+\spell{Stimulate Secretion}{ 1 min }{Biomancy 2}{dead animal}{0}{touch}{Effect}{}{ Forces a dead venomous animal to secrete venom. The venom produced is sufficient for 1 application and the effect depends on the corpse used. }
 
 % \spell{Healing Avatar}{5AP + 3 STA}{  5}{Ghost, Healing Touch}{12}{30m, target}{Effect}{3 turns}{Sends a generous amount of healing energy to a target, performing 8 AP in healing spells per turn with the target's STA, but without costing them AP. }
 
 
-\spell{Clone}{ 1 ET, 4 exhaustion }{Biomancy 6}{living sample, preserved corpse }{15}{melee}{Effect}{sustained}{ Converts the genes of a part of the body of a preserved corpse to match those of another creature of the same species. A living sample of the model must be present. Converts 10kg of biological matter per TE.}
+\spell{Clone}{ 1 ET, 4 exhaustion }{Biomancy 6}{living sample, preserved corpse }{10}{melee}{Effect}{sustained}{ Converts the genes of a part of the body of a preserved corpse to match those of another creature of the same species. A living sample of the model must be present. Converts 10kg of biological matter per TE.}
 
 
 
@@ -331,21 +332,21 @@ There are 5 types of entity that can be negotiated with:
 
 The following spells can only be cast when some sort of deal with a spirit is struck. 
 
-\spell{Aurora }{5 AP + 2 STA or 1 exhaustion for 10 min}{Shamanism 4}{}{10}{5km}{Environmental}{sustained}{Draws or writes a simple and blurred message in the sky that can be seen at night within the spell's range.}
+\spell{Aurora }{5 AP + 2 STA or 1 exhaustion for 10 min}{Shamanism 4}{}{5}{5km}{Environmental}{sustained}{Draws or writes a simple and blurred message in the sky that can be seen at night within the spell's range.}
 
-\spell{Call Lightning}{5 AP + 2 STA}{Shamanism 4}{Shamanism 5}{10}{directly from 100m xMM}{Projectile}{instantaneous}{Summons a lightning bolt to a specific target within the electrical storm as a directed effect. The lightning causes 25xDM electric damage. There is no distance penalty.}
+\spell{Call Lightning}{5 AP + 2 STA}{Shamanism 4}{Shamanism 5}{5}{directly from 100m xMM}{Projectile}{instantaneous}{Summons a lightning bolt to a specific target within the electrical storm as a directed effect. The lightning causes 25xDM electric damage. There is no distance penalty.}
 
-\spell{Storm of Lightning}{5-minute ritual, 2 exhaustion}{Shamanism 5}{}{15}{100m, 15m radius on the ground}{Environmental}{5 turns}{As long as there are enough clouds, calls 2 lightning bolts per round in a designated area to hit random targets as a terrain effect. The lightning causes 25xDM electric damage and is defended by reflexes against DL 7.}
+\spell{Storm of Lightning}{5-minute ritual, 2 exhaustion}{Shamanism 5}{}{10}{100m, 15m radius on the ground}{Environmental}{5 turns}{As long as there are enough clouds, calls 2 lightning bolts per round in a designated area to hit random targets as a terrain effect. The lightning causes 25xDM electric damage and is defended by reflexes against DL 7.}
 
-\spell{Freeze Water}{5 AP + 3 STA}{Shamanism 3}{}{8}{15m, area of 15 spaces}{Environmental}{1 turn delay, 5 turns}{Freezes water in an area after one turn. A puddle becomes slippery, turning into difficult terrain with a DC of 12. A layer of ice 10 cm thick is created on a water surface, but additional layers can be added if there is enough water. The temperature of the ice increases due to its freezing, causing it to start melting immediately.}
+\spell{Freeze Water}{5 AP + 3 STA}{Shamanism 3}{}{3}{15m, area of 15 spaces}{Environmental}{1 turn delay, 5 turns}{Freezes water in an area after one turn. A puddle becomes slippery, turning into difficult terrain with a DC of 12. A layer of ice 10 cm thick is created on a water surface, but additional layers can be added if there is enough water. The temperature of the ice increases due to its freezing, causing it to start melting immediately.}
 
-\spell{Create Fog}{8 AP + 3 STA}{Shamanism 2}{}{5}{15m, area with a radius of 50m}{Environmental}{1 minute}{Condenses water in the air over a large area, creating a thick fog that hinders visibility. Cannot be cast in low humidity areas.}
+\spell{Create Fog}{8 AP + 3 STA}{Shamanism 2}{}{0}{15m, area with a radius of 50m}{Environmental}{1 minute}{Condenses water in the air over a large area, creating a thick fog that hinders visibility. Cannot be cast in low humidity areas.}
 
-\spell{Rain}{5-minute ritual + 4 Hunger}{Shamanism 4}{}{10}{100m, area with a radius of 45m}{Environmental}{10 minutes}{If there are enough clouds, converts them to a location and makes it rain there, soaking everything. Criticals can cause hail to fall, dealing 15 PEN of physical damage per turn. }
+\spell{Rain}{5-minute ritual + 4 Hunger}{Shamanism 4}{}{5}{100m, area with a radius of 45m}{Environmental}{10 minutes}{If there are enough clouds, converts them to a location and makes it rain there, soaking everything. Criticals can cause hail to fall, dealing 15 PEN of physical damage per turn. }
 
-\spell{Landslide}{8 AP + 3 STA}{Shamanism 3}{}{8}{100m, area with a radius of 5m}{Environmental}{1 turn delay}{ Heats and cools a solid, causing expansion and contraction in adjacent planes of the solid, causing it to break. This technique works well on crystalline structures, rocks, and especially wet soil. One turn later, it triggers a landslide or snow that damages anyone still in the area.}
+\spell{Landslide}{8 AP + 3 STA}{Shamanism 3}{}{3}{100m, area with a radius of 5m}{Environmental}{1 turn delay}{ Heats and cools a solid, causing expansion and contraction in adjacent planes of the solid, causing it to break. This technique works well on crystalline structures, rocks, and especially wet soil. One turn later, it triggers a landslide or snow that damages anyone still in the area.}
 
-\spell{Strong Wind}{4 AP + 3 STA}{Shamanism 2}{}{10}{self, radius of 9m, length of 30m in the area}{Environmental}{5 turns, 1 turn delay}{ Produces an entropic field that facilitates the movement of wind in one direction, causing a strong gust. Any projectiles going against the wind or perpendicular to it receive -2 to accuracy. Dispels fog and dust.}
+\spell{Strong Wind}{4 AP + 3 STA}{Shamanism 2}{}{5}{self, radius of 9m, length of 30m in the area}{Environmental}{5 turns, 1 turn delay}{ Produces an entropic field that facilitates the movement of wind in one direction, causing a strong gust. Any projectiles going against the wind or perpendicular to it receive -2 to accuracy. Dispels fog and dust.}
 
 % \spell{Call Wave}{5 AP + 6 STA}{ 3}{}{18}{60m, semicircle with a radius of 9/12m}{Explosion}{1 turn delay}{Pulls a wave from a body of water. It hits all who remain in the area and attempts to pull them into the water with a pulling action using the spell's DC instead of the character's Strength.}
 

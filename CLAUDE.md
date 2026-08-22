@@ -8,7 +8,8 @@ The system is designed to be played with or without magic.
 
 `main.tex` is the root file; everything else is loaded from it.
 
-- `intro.tex` — old and outdated. Disregard.
+- `intro.tex` — stated the game's design philosophy and intent. Answers who this game is for and what should be expected.
+- `play.tex` — describes the game's loops. Answers what play is supposed to look and feel like. claude should always know what is in this file in any prompt about the game's mechanics.
 - `creating.tex` — character model. Describes the static characteristics of a character and the rules for player character creation, including the master skill list and value formulas.
 - `combat.tex` — mechanics of combat and any situation that requires the grid.
 - `gear.tex` — properties of gear, gear sheets, and gear-related mechanics.
