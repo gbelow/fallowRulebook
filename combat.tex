@@ -141,9 +141,6 @@ Aggravating factors: \\
 
 Multiple intimidations and taunts don't stack. Only the highest charisma 
 
-
-% Every time the character activates their limit stress action, they lose 2 XP from one of their convictions, at the character's choice.
-
 \section{Damage and Injuries}
 
 \subsection{Injuries and Death}
@@ -179,13 +176,11 @@ Tier 5 & armor+5xTGH & 50 & 300\% \\
 
 % \textbf{Multiple types:} Some attacks can cause multiple types of damage. In this case, the damage thresholds are calculated separately for each type of damage, and the injuries caused by each type are considered separately.
 
-\textbf{Physical attacks:} have energy as their main component. If the weapon is not capable of cutting its target, the damage is blunt and its value is equal to energy. If the weapon can cut its target, energy x SHP becomes cutting damage, where SHP is the sharpness of the attack.
-
-Note: The energy of a physical attack refers to the useful energy to cause deformation in the target. Harder objects will have more energy than softer ones, even if speed and mass are the same.
+\textbf{Physical attacks:} have blunt and cutting damage components. If the weapon is not capable of cutting its target, the damage is blunt, otherwise, use the most advantageous of the two.
 
 \textbf{Blunt damage:} is defended by armor protection. 
 
-\textbf{Cutting damage:} is defended by armor RES.  
+\textbf{Cutting damage:} is defended by armor RES.
 
 \textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks. More details on the gear section.
 
@@ -215,9 +210,9 @@ Note: The energy of a physical attack refers to the useful energy to cause defor
 \text{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overflows the DL to hit posed by the defender during an attack can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
 
 \begin{itemize}
-    \item \textbf{Armor Bypass:} Only attacks from weapons with the piercing property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the weapon has it.
-    \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
-    \item \textbf{ Extra cut:} Costs a number of SOPs equal to the target's deflection to double the sharpness bonus to cutting damage. Sharpness bonus is SHP-1. Only weapons with the bladed property can use this.
+    \item \textbf{Armor Bypass:} Only attacks from weapons with the precise property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the attack also has the property.
+    \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. For the same cost, ignores fiber armor RES entirely. This can only be done by weapons with the penetrating property. 
+    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per SOP. Only weapons with the bladed property can use this.
     \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1 or interrupt if its over T0.
 \end{itemize}
     
@@ -289,15 +284,15 @@ The survival chapter describes how health works during rest.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases energy of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit.
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit.
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has energy bonus of +STR on a hit. If the damage is blunt, this also pushes the target, but without initiating grapple.
+\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. If the damage is blunt, this also pushes the target.
 
-\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. Gains +STR/2 energy if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. If the damage is blunt, this counts as a drag, from grappling.
+\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. Gains +STR/2 damage if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. If the damage is blunt, this counts as a drag, from grappling.
 
 \textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
 }

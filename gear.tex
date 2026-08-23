@@ -19,23 +19,23 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
-% \item \textbf{BLT/CUT:} indicates the blunt and cut damage. CUT is always a multiple of BLT.
 \item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
 \item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum.
-\item \textbf{Piercing:} Grazes behave like a miss. Divides the amount of IL received from cutting damage by its SHP. Also reduces damage to gear and objects by the same amount.
+\item \textbf{Piercing:} Grazes behave like a miss. Deal half the amount of IL damage. Must exceed object RES by 2x to break them.
 \item \textbf{Bladed:} allows using the extra cut additional effect and can be sharpened.
 \item \textbf{Penetrating:} allows using the penetrating additional effect.
 \item \textbf{Precise:} allows performing armor bypass additional effect.
+\item \textbf{Vicious:} causes double bleeding.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
 \item \textbf{Fast, UF:} Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
-% \item \textbf{Overpen:} Maximum IL damage is 10.
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
-% \item \textbf{Shot:} This can only blocked with a shield.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
 \item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
 \end{itemize}
 
-Some human-sized versions of weapons are shown in the list. To create a version of a different size, adjust the DM to the appropriate size category. \\
+\textbf{Scaling weapons:} The weapons in the tables are human-sized and serve as a basis for size scaling. When scaling weapon size, multiply damages and RES by the DM and reach by the MM.
+
+Note that in reality, scaling an object would require reshaping it to maintain its properties. Larger objects would have to be sturdier not to break on impact, so weapons could not be so long.  \\
 
 \section{ Weapons}
 
@@ -62,24 +62,24 @@ Some human-sized versions of weapons are shown in the list. To create a version 
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Small Arms} } \\
 \hline
-Weapon & RES & Energy & SHP & hand & range & properties & price & size \\
+Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \hline
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & small \\
 & STR & 0.5x STR & 0 & small & short & draw & heavy I, smash &  \\[5pt]
 \hline
-\textbf{Claws} & 10 & 0.5x STR & 1x & small & short & grapple, DEF & - & small \\[5pt]
+\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[5pt]
 \hline
-\textbf{Brass Knuckles} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\ 
-& 25 & 0.5x STR & 1x & one & short & heavy I, smash & &\\ [5pt]
+\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\ 
+& 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & &\\ [5pt]
 \hline
-\textbf{Dagger} & 15 & 8 & 2x & small & short & draw, DEF, piercing, bladed, precise & 3 GP & small\\
-& 15 & 8 & 2x & small & STR & draw, precise, throw && \\ [5pt]
+\textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small\\
+& 15 & 4 & 16 & small & STR & draw, precise, throw && \\ [5pt]
 \hline
-\textbf{Stiletto} & 15 & 6 & 3x & small & short & draw, penetrating, precise, piercing & 5 GP & small\\
+\textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small\\
 & 15 & 0 & 0 & small & short & draw, DEF && \\ [5pt]
 \hline
-\textbf{Whip} & 10 & 4 & 1x & small & long II & draw & 2 GP & small\\
-& 15 & 0/4 & 3 & small & long II & grapple & & \\[5pt]
+\textbf{Whip} & 10 & 0 & 6 & small & long II & draw & 2 GP & small\\
+& 15 & 0 & 0 & small & long II & grapple & & \\[5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -107,23 +107,23 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large One-Handed Weapons} } \\
 \hline
-Weapon & RES & Energy & SHP & hand & range & properties & price & size \\
+Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \hline
-\textbf{Short Sword}& 20 & 8 & 2x & one & short & precise, draw & 8 GP & medium\\
-& 20 & 10 & 1.5x & one & short & sweep, draw, DEF, heavy I, bladed  && \\ [5pt]
+\textbf{Short Sword}& 20 & 4 & 16 & one & short & precise, piercing, bladed, draw & 8 GP & medium\\
+& 20 & 8 & 16 & one & short & sweep, draw, DEF, heavy I, bladed  && \\ [5pt]
 \hline
-\textbf{Rapier} & 15 & 8 & 2x & one & long I & draw, precise, piercing & 10 GP & medium\\
+\textbf{Rapier} & 15 & 5 & 16 & one & long I & draw, precise, piercing, penetrating & 10 GP & medium\\
  & 15 & 0 & 0 & one & long I & DEF & & \\[5pt]
 \hline
-\textbf{Short Spear} & 20 & 8 & 2x & two & long I & braced, precise, piercing, heavy I & 1 SP & large \\
-& 15 & STR & 1x & two & short & DEF, shaft, grapple &  & \\
-& 20 &  8  & 2x & one & 2xSTR & throw, precise, heavy I-I && \\[5pt]
+\textbf{Short Spear} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 1 SP & large \\
+& 15 & STR & 0 & two & short & DEF, shaft, grapple &  & \\
+& 20 &  8  & 20 & one & 2xSTR & throw, penetrating, piercing, heavy I && \\[5pt]
 \hline
-\textbf{Mace} & 50 & 12 & 1x & one & short & heavy I-II, smash & 4 GP & medium\\
-\textbf & 15 & 0 & 2 & one & short & DEF, shaft &  & \\[5pt]
+\textbf{Mace} & 50 & 12 & 0 & one & short & heavy I-II, smash & 4 GP & medium\\
+\textbf & 15 & 0 & 0 & one & short & DEF, shaft &  & \\[5pt]
 \hline
-\textbf{Battle Axe}& 25 & 10 & 1.5x & one & short & heavy I-II, bladed & 5 GP & medium\\
-& 15 & 0 & 2 & one & short & DEF && \\ [5pt]
+\textbf{Battle Axe}& 25 & 10 & 15 & one & short & heavy I-II, bladed & 5 GP & medium\\
+& 15 & 0 & 0 & one & short & DEF && \\ [5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -152,32 +152,30 @@ Weapon & RES & Energy & SHP & hand & range & properties & price & size \\
 \hline
 \multicolumn{9}{|c|}{ \textbf{ \Large Two-Handed Weapons} } \\
 \hline
-Weapon & RES & Energy & SHP & hand & range & properties & price & size \\ 
+Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\ 
 \hline
-\textbf{Longsword} & 20 & 12 & 1.5x & two & long I & sweep, DEF, heavy I, bladed & 12GP & large\\
-% & 40/x2 & STR/1x & 3 & two & short & heavy I && \\
-& 20 & 8 & 2x & one & short & piercing, penetrating, precise && \\
-& 20 & 8 & 2x & two & long I & piercing && \\[5pt]
+\textbf{Longsword} & 20 & 10 & 18 & two & long I & sweep, DEF, heavy I, bladed & 12GP & large\\ 
+& 20 & 4 & 16 & one & short & piercing, penetrating, precise, heavy I && \\
+& 20 & 4 & 16 & two & long I & piercing && \\[5pt]
 \hline
-\textbf{Pike} & 20 & 8 & 2x & two & long II & braced, piercing, heavy I & 6 GP & large\\ 
-& 20 & 0 & 1 & two & long I & shaft & & \\ [5pt] 
+\textbf{Pike} & 20 & 6 & 24 & two & long II & braced, piercing, heavy I & 6 GP & large\\ 
+& 20 & 0 & 0 & two & long I & shaft & & \\ [5pt] 
 \hline
-\textbf{Halberd} & 20 & 8 & 2x & two & long I & braced, piercing, heavy I & 12GP & large\\
-& 30 & STR & 1.5x & two & long I & hook & & \\
-& 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
-& 30 & 12 & 1.5x & two & long I & heavy I-III, bladed && \\ [5pt]
+\textbf{Halberd} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12GP & large\\
+& 30 & STR & 1.5x STR & two & long I & hook & & \\
+& 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+& 30 & 12 & 20 & two & long I & heavy I-III, bladed && \\ [5pt]
 \hline
-\textbf{Warhammer} & 20 & 8 & 2x & two & long I & braced, piercing, heavy I & 12GP & large\\
-& 30 & STR & 1.5x & two & long I & hook && \\
-& 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
-& 100 & 12 & 1x & two & long I & heavy I-III, smash && \\ [5pt]
+\textbf{Warhammer} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12GP & large\\
+& 30 & STR & 1.5x STR & two & long I & hook && \\
+& 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+& 100 & 14 & 0 & two & long I & heavy II-III, smash && \\ [5pt]
 \hline
-\textbf{Bardiche} & 30 & 12 & 1.5X & two & long I & heavy III, sweep, bladed & 10 GP & large \\
+\textbf{Bardiche} & 30 & 12 & 20 & two & long I & heavy I-III, sweep, bladed & 10 GP & large \\
 \textbf & 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\ [5pt]
 \hline
-\textbf{Greatsword} & 30 & 12 & 1.5x & two & long I & sweep, DEF, heavy I-II, bladed & 18 GP & large\\
-% & 100/x2 & STR/0 & 3 & two & short & heavy I && \\
-& 20 & 8 & 2x & two & long I & piercing, heavy I, braced && \\[5pt]
+\textbf{Greatsword} & 30 & 12 & 18 & two & long I & sweep, DEF, heavy I-II, bladed & 18 GP & large\\
+& 20 & 6 & 20 & two & long I & piercing, heavy I, braced && \\[5pt]
 \hline
 \end{tabular}
 \end{table}
@@ -208,27 +206,27 @@ Weapon & RES & Energy & SHP & hand & range & properties & price & size \\
 \centering
 \renewcommand{\arraystretch}{1.4}
 \hspace*{-1cm}
-\begin{tabular}{ | c c c c c c c c c |}
+\begin{tabular}{ | c c c c c c c c c c |}
 \hline
-\multicolumn{9}{|c|}{ \textbf{ \Large Ranged Weapons} } \\
+\multicolumn{10}{|c|}{ \textbf{ \Large Ranged Weapons} } \\
 \hline
-Weapon & RES & Energy & AP & hands & range & properties & price & size \\
+Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
 \hline
-\textbf{Net} & 15 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & medium \\ [5pt]
+\textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & medium \\ [5pt]
 \hline
-\textbf{Grappling Hook and Rope} & 10 & 6 & 4+4 & two & 2xSTR & throw, hook & 2 SP & medium \\ [5pt]
+\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & 2xSTR & throw, hook & 2 SP & medium \\ [5pt]
 \hline
-\textbf{Grenade} & 20 & X & 3 & one & 2xSTR & throw & 2 GP & small \\ 
+\textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & throw & 2 GP & small \\ 
 \hline
-\textbf{Short Bow*} & 10 & 6 & 4 & two & 100m & piercing, fast & 5 GP & medium\\
+\textbf{Short Bow*} & 10 & 6 & 18 & 4 & two & 100m & piercing, fast & 5 GP & medium\\
 \hline
-\textbf{Long Bow*} & 10 & 8 & 5 & two & 150m & STR 13, piercing, fast & 8 GP & large\\
+\textbf{Long Bow*} & 10 & 8 & 22 & 5 & two & 150m & STR 13, piercing, fast & 8 GP & large\\
 \hline
-\textbf{Heavy Bow* } & 10 & 10 & 5 & two & 200m & STR 16, piercing, fast & 10 GP & large\\
+\textbf{Heavy Bow* } & 10 & 10 & 26 & 5 & two & 200m & STR 16, piercing, fast & 10 GP & large\\
 \hline
-\textbf{Crossbow} & 10 & 8 & 3+5 & two & 150m & reload, piercing, fast & 8 GP & medium \\
+\textbf{Crossbow} & 10 & 8 & 22 & 3+5 & two & 150m & reload, piercing, fast & 8 GP & medium \\
 \hline
-\textbf{Arbalest} & 10 & 10 & 3+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
+\textbf{Arbalest} & 10 & 10 & 26 & 3+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
 \hline
 \end{tabular}
 \end{table}
@@ -243,8 +241,8 @@ Arrows are small items that can be bundled into 10 units to make a small item. B
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Bodkin: bodkin arrows have 3x SHP and is penetrating.
-    \item Broadhead: has 2x SHP and is bladed.
+    \item Bodkin: arrows are penetrating.
+    \item Broadhead: arrows are vicious.
     \item Explosive: gives the explosive effect to the arrow if ignited. Igniting is a standard action of prestidigitation.
 \end{itemize}
 
@@ -295,24 +293,24 @@ Name & RES & Protection & Insulation & Deflection & Penalty & Price & Weight \\ 
 \hline\hline
 Fiber &&&&&&&\\
 \hline
-Skin & 0  & 0 & 0 & +3 & 0 & 0 & 0\\
-Clothing & 3  & 0 & 2 & +3 & 0 &  1 SP & small\\
-Fur coat & 4  & 2 & 5 & +5 & 0 & 0 & medium\\
-Thick Hide & 6  & 4 & 7 & +6 & 0 & 0 & large\\
-Gambeson & 8 & 3 &  6 & +5 & 0 & 5 GP & medium\\
+Skin & 0  & 0 & 0 & +4 & 0 & 0 & 0\\
+Clothing & 3  & 0 & 2 & +4 & 0 &  1 SP & small\\
+Fur coat & 7  & 2 & 5 & +5 & 0 & 0 & medium\\
+Thick Hide & 8  & 4 & 7 & +6 & 0 & 0 & large\\
+Gambeson & 10 & 3 &  6 & +5 & 0 & 5 GP & medium\\
 Padded Armor & 12 & 5  & 8  & +5 & -1 & 2 GP & large\\
 \hline
 Metallic &&&&&&&\\
 \hline
-Chain Shirt & 10  & 3 & 5 & +5 & 0 & 20 GP & medium\\ 
-Hauberk & 12  & 4 & 6 & +5 & -1  & 30 GP & medium\\
-Brigandine & 15/8 & 6 & 8 & +6 & -2 &  50 GP & large\\
+Chain Shirt & 8  & 3 & 5 & +5 & 0 & 20 GP & medium\\ 
+Hauberk & 10  & 5 & 6 & +5 & -1  & 30 GP & medium\\
+Brigandine & 12/8 & 8 & 8 & +6 & -2 &  50 GP & large\\
 \hline
 Rigid and Metallic &&&&&&&\\
 \hline
-Half Armor & 20/10 & 10 & 7  & +5 & -2 & 60 GP & large\\
-Full Armor & 20/10  & 10 & 8  & +7 & -3 & 100 GP & large\\
-Reinforced Armor & 25/10 & 12 & 10  & +8 & -4 & 150 GP & large\\
+Half Armor & 16/10 & 10 & 7  & +5 & -2 & 60 GP & large\\
+Full Armor & 16/10  & 10 & 8  & +7 & -3 & 100 GP & large\\
+Reinforced Armor & 18/10 & 12 & 10  & +8 & -4 & 150 GP & large\\
 \hline
 \end{tabular}
 \end{center}
@@ -383,6 +381,81 @@ Objects can deal and take damage whenever they collide with something else, whet
 % \hline
 % \end{tabular}
 % \end{center}
+
+\section{Tools of War}
+
+The tools below are mundane. They resolve through the existing rules for fire, smoke, explosions, objects, and morale. None require magic; magic amplifies them or makes them possible where they otherwise would not.
+
+\subsection{Fire}
+
+Fire is the principal means of breaking a formation. A burning space deals \textbf{burn} damage each turn to anything occupying it. Burn is not reduced by RES; it is reduced by the insulation of armor or hide. Metallic armor conducts heat poorly and applies its full insulation against fire. A sealed helm with an air filter protects the lungs from smoke, not the body from heat.
+
+\begin{center}
+\begin{tabular}{||c c c||}
+\hline
+Fuel & Burn/turn & Spread \\ [0.5ex]
+\hline\hline
+Dry grass, thatch & 5 & fast \\
+Oil film & 10 & moderate \\
+Pitch, tar, resin & 15 & moderate, sticks \\
+Wood pyre, timber & 20 & slow \\
+\hline
+\end{tabular}
+\end{center}
+
+Fire spreads each turn to adjacent spaces that contain fuel; a space without fuel goes out. A fire large enough to fill a space produces smoke (below) in and around itself. A character who ends a turn in fire may spend 2 AP to escape to an adjacent space before taking damage again.
+
+\textbf{Extinguishing:} Putting out a burning space takes 4 AP and a test (DL by fuel intensity) or total immersion in water. Dropping and rolling halves the burn for that turn.
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\setlength{\parskip}{0em}
+\item Oil flask - 250ml, 5 charges. Coats a space or item in flammable oil. 1 SP. small.
+\item Pitch pot - Burns hot and adheres; intensity 15, hard to extinguish. 2 SP. small.
+\item Fire arrow - Cloth wrap soaked in oil, lit before firing. Ignites a flammable target on a hit. Negligible cost. small.
+\item Torch - Sustained flame for 1 hour; intensity 10 at contact. 1 CP. small.
+\end{itemize}
+
+\subsection{Smoke}
+
+Smoke fills spaces from its source, spreading up to a radius each turn until dispersed by wind. Characters in smoke cannot see beyond 1m: they engage only at melee range, and attacks to or from them suffer the detection penalty for concealment. A character who begins their turn in thick smoke makes a Health test (DL by density) or spends the turn coughing, losing 2 AP.
+
+Sources: smoldering damp greenery, dung, pitch, or oil. A covered brazier produces sustained smoke. The smoke grenade (see Magical Items) produces the effect without fuel.
+
+\subsection{Poison and area denial}
+
+Poisons (see Potions and Poisons) can be delivered as injury, ingestion, or inhalation. Inhalation poisons dispersed as smoke affect everyone in the cloud at their normal DL, regardless of size. Poisoned caltrops and stakes apply the injury dosage on a wound of T1 or higher.
+
+\subsection{Caltrops and traps}
+
+These make a position costly to hold or cross, forcing a turtling enemy to move.
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\setlength{\parskip}{0em}
+\item Caltrops - A scattered space. Anyone entering above careful movement makes a reflex test (DL 3) or suffers a small piercing wound (T0-T1) and ends their movement. Mounted or unshod creatures roll at +2 DL. 1 SP covers one space. small.
+\item Stakes - Sharpened fixed stakes. Entering the space without care deals a piercing wound (T1). Blocks cavalry outright. 2 SP per space. medium.
+\item Tripwire - A reflex test (DL 2) or the character falls prone. 1 CP. small.
+\item Pit - Open or concealed. Reflex (DL by cover) to avoid, or fall and take falling damage. Dug with a shovel.
+\end{itemize}
+
+\subsection{War engines and vehicles}
+
+A vehicle or large rolling object moving along a line is resolved as an explosion on a line (see Interactions with objects, in Combat): each space in its path, occupants make a reflex test to dodge; on failure they suffer impact damage, estimated at 5-10 per expected injury tier by mass and speed, and are pushed one space. This is the mundane means of breaking a dense formation.
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\setlength{\parskip}{0em}
+\item Chariot - Drawn by one or two animals. Charges in a straight line at running speed; high impact, and the rider may attack from the platform. Requires a trained driver. 30 GP. cargo.
+\item Ram - A suspended timber driven against a gate, wall, or rank. Resolves as a moving object against a fixed target: impact applies to both, and the target tests breakage against its RES. 10 GP. cargo.
+\item Rolling log or boulder - Released downhill along a path. Treat as a line explosion of a large object: devastating impact, long path, difficult to dodge. Free where terrain allows; setup takes a turn and labor.
+\end{itemize}
+
+\subsection{Signals and morale}
+
+War horns, drums, and massed shouts coordinate allies and press enemy morale. A horn or concerted battle cry forces a morale test on enemies within range, at a DL set by the number of participants and the volume. Failure imposes stress or the Afraid condition. A force that fails badly may rout (see Morale). The same instruments relay commands across the field, allowing coordinated movement out of earshot.
+
+\magic \textbf{Magical amplification:} magic does not replace these tools but removes their limitations: fire that burns wet stone or flesh, smoke without fuel, fear that will not break, a ram that moves itself. The mundane tool remains the base; the spell makes it possible where it otherwise would not be.
 
 \section{Characteristics and Conditions}
 
