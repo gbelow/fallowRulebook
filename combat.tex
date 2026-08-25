@@ -110,9 +110,13 @@ To determine the difficulty of climbing, consider whether the surface is moving,
 
 \textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a failure, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
 
-When falling, the DL to fall properly is arbitrary, but is generally higher for low falls from bad positions, average for very high falls, and lower for small falls from a controlled position.
+When falling, the DL to fall properly is generally proportional to the fall height. Falls from small heights in a bad position are more difficult too.
 
-\textbf{Fall damage} is a special case of damage from impact with objects, further down this chapter. For this damage estimation, the landing spot is a flat, hard surface. The impactor is the body, so the DM is the character's DM and the damage ignores armor. The speed of the fall can be considered instantaneous for falls below 2m, in which case it causes 5xDM of blunt damage. 5m/s for the first 10m, causing 10xDM of blunt damage. Then it increases to 15m/s up to 30m, causing 20xDM of damage. Anything above that causes 40xDM of damage. A critical on the balance check reduces the damage by 50\%, a success by 25\%, a graze by nothing, and a miss hits the head. Crits and hits that don't receive T2 or higher injuries allow the character to stay on their feet, otherwise, they are prone.
+\textbf{Fall skill test:} A critical on the balance test reduces the damage by 50\%, a success by 25\%, a graze by nothing, and a miss hits the head. Crits and hits prevent T0 and T1 injuries. Receiving a T2 injury or higher or receiving graze or miss makes the character prone.
+
+\textbf{Fall damage} For this damage estimation, consider that the landing spot is a flat, hard surface. The DM is the character's DM and the damage ignores armor. To estimate fall damage, do 2x fall height x DM$^2$. Maximum height is capped at 50m. Soft surfaces, like sand halve the damage and liquids make it a quarter.
+
+Note: DM is squared because large creatures suffer more from falling. For size 2, instead of making 0.75$^2$, just use 0.5. For size 4, instead of 1.5$^2$, use 2.
 }  
 
 \section{Damage and Injuries}
@@ -129,7 +133,7 @@ When falling, the DL to fall properly is arbitrary, but is generally higher for 
 
 \textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving wounds. The table shows how much IL they receive from injuries at each tier. 
 
-\textbf{Damage Thresholds:} 
+\textbf{Damage Tiers:} 
 
 \begin{center}
 \begin{tabular}{||c c c c||}
@@ -141,7 +145,8 @@ Tier 1 & armor+TGH & 5 & 0 \\
 Tier 2 & armor+2xTGH & 10 & 50\% \\
 Tier 3 & armor+3xTGH & 20 & 100\% \\
 Tier 4 & armor+4xTGH & 30 & 100\% \\
-Tier 5 & armor+5xTGH & 50 & 100\% \\
+Tier 5 & armor+5xTGH & 40 & 100\% \\
+Tier 6 & armor+6xTGH & 50 & 100\% \\
 \hline
 \end{tabular}
 \end{center}
@@ -171,7 +176,8 @@ Tier 5 & armor+5xTGH & 50 & 100\% \\
 \begin{itemize}
     \item Broken arm: Makes the arm useless. Equivalent to 10 IL to heal.
     \item Broken leg: Makes the leg lame. Equivalent to 15 IL to heal.
-    \item Bleed: a special wound that requires healing to stop bleeding. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per Bleed cure untreated. Bleeds caused by a T2 wound require 1 cure to be healed. For every extra tier, they require 1 extra cure. They do not require the expense of hunger or thirst to be healed. It is caused by damage to the chest or head. 
+    \item Bleed: a special wound that requires healing to stop bleeding. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per Bleed cure untreated. Bleeds caused by a T2 wound require 1 cure to be healed. For every extra tier, they require 1 extra cure. They do not require the expense of hunger or thirst to be healed. It is caused by damage to the chest or head.
+    \item Shocked: cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit and 100\% chance on a T5. 
     \item Unconscious: causes unconsciousness. Happens when receiving damage in the head. Takes at least 1 minute to wake up without intervention.
 \end{itemize}
 
@@ -204,7 +210,7 @@ To illustrate, here are some targets for humanoids. There are 4 locations: chest
 
 \textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates. 
 
-\textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4+ damage has 50\% chance of instant death. Bypassing armor is possible with any weapon, unless the helmet is closed.
+\textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4 damage has 50\% chance of instant death, T5 has 100\%. Bypassing armor is possible with any weapon, unless the helmet is closed.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
 
@@ -443,15 +449,17 @@ Fire causes burn damage at the beginning of every round to anyone in it as an en
 
 A burning surface lasts at minimum until the end of combat, or until extinguished.
 
+Here are a few common flammable surfaces and the amount of burning damage they cause when covereing the same space as a character. 
+
 \begin{center}
 \begin{tabular}{||c c c||}
 \hline
 Fuel & Burn/round & Spread\\ [0.5ex]
 \hline\hline
-Dry grass, thatch & 5 & 1/round\\
+Dry grass, thatch & 8 & 1/round\\
 Oil film & 8 & 3/round \\
-Pitch, tar, resin & 10 & sticks \\
-Wood pyre, timber & 10 & 0 \\
+Pitch, tar, resin & 12 & sticks \\
+Wood pyre, timber & 12 & 0 \\
 \hline
 \end{tabular}
 \end{center}
