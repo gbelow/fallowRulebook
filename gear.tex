@@ -13,7 +13,6 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Grapple:} This attack is used for grappling actions, its force is equal to STR.
 \item \textbf{Sweeping:} Allows for Sweeping attacks.
 \item \textbf{Braced:} This attack can be a braced attack.
-\item \textbf{Throw:} indicates that the throw attack can be used.
 \item \textbf{Handle:} This attack represents the handle of the weapon.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x MM. Long-range attacks have an extended range of 1m x MM per level and cannot be used in grappling combat.  
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
@@ -27,7 +26,7 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Precise:} allows performing armor bypass additional effect.
 \item \textbf{Vicious:} causes double bleeding.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
-\item \textbf{Fast, UF:} Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
+\item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: gets -2 accuracy when the opponent defends actively. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
 \item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
@@ -73,7 +72,7 @@ Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 & 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & &\\ [5pt]
 \hline
 \textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small\\
-& 15 & 4 & 16 & small & STR & draw, precise, throw && \\ [5pt]
+& 15 & 4 & 16 & small & STR & draw, precise, slow && \\ [5pt]
 \hline
 \textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small\\
 & 15 & 0 & 0 & small & short & draw, DEF && \\ [5pt]
@@ -117,7 +116,7 @@ Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \hline
 \textbf{Short Spear} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 1 SP & large \\
 & 15 & STR & 0 & two & short & DEF, shaft, grapple &  & \\
-& 20 &  8  & 20 & one & 2xSTR & throw, penetrating, piercing, heavy I && \\[5pt]
+& 20 &  8  & 20 & one & 2xSTR & slow, piercing, heavy I-II && \\[5pt]
 \hline
 \textbf{Mace} & 50 & 12 & 0 & one & short & heavy I-II, smash & 4 GP & medium\\
 \textbf & 15 & 0 & 0 & one & short & DEF, shaft &  & \\[5pt]
@@ -212,11 +211,11 @@ Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \hline
 Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
 \hline
-\textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, throw & 3 GP & medium \\ [5pt]
+\textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, slow & 3 GP & medium \\ [5pt]
 \hline
-\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & 2xSTR & throw, hook & 2 SP & medium \\ [5pt]
+\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & 2xSTR & slow, hook & 2 SP & medium \\ [5pt]
 \hline
-\textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & throw & 2 GP & small \\ 
+\textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\ 
 \hline
 \textbf{Short Bow*} & 10 & 6 & 18 & 4 & two & 100m & piercing, fast & 5 GP & medium\\
 \hline
@@ -284,6 +283,10 @@ Armors have prot, which is used as damage reduction against impacts. The armor's
 
 \textbf{Gauntlets and closed helmet:} It is possible to remove the gloves and closed helmets, but removing each of these eliminates their bonuses.
 
+\textbf{Donning and Doffing armor:} Costs a standard action to don/doff helmet, gauntlets and small armor. Costs 6 AP to don/doff medium armors and several minutes to don/doff large ones. It is possible to doff a large armor by cutting it with a blade and spending 12 AP on it. This leaves the armor damaged.
+
+
+
 \end{multicols}
 
 \begin{center}
@@ -295,7 +298,7 @@ Fiber &&&&&&&\\
 \hline
 Skin & 0  & 0 & 0 & +4 & 0 & 0 & 0\\
 Clothing & 3  & 0 & 2 & +4 & 0 &  1 SP & small\\
-Fur coat & 7  & 2 & 5 & +5 & 0 & 0 & medium\\
+Fur coat & 7  & 2 & 6 & +5 & 0 & 0 & medium\\
 Thick Hide & 8  & 4 & 7 & +6 & 0 & 0 & large\\
 Gambeson & 10 & 3 &  6 & +5 & 0 & 5 GP & medium\\
 Padded Armor & 12 & 5  & 8  & +5 & -1 & 2 GP & large\\
@@ -310,7 +313,7 @@ Rigid and Metallic &&&&&&&\\
 \hline
 Half Armor & 16/10 & 10 & 7  & +5 & -2 & 60 GP & large\\
 Full Armor & 16/10  & 10 & 8  & +7 & -3 & 100 GP & large\\
-Reinforced Armor & 18/10 & 12 & 10  & +8 & -4 & 150 GP & large\\
+Reinforced Armor & 18/10 & 12 & 8  & +8 & -4 & 150 GP & large\\
 \hline
 \end{tabular}
 \end{center}
@@ -347,142 +350,55 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Breakage and Hardness:} Collisions involving materials of hardness 1 and 2 do not pose a risk of breakage to other materials.
 
+% \textbf{Breakage through fire/radiant:} 
+
 \textbf{Weapon Breakage:} A broken weapon can no longer be used and costs 50\% of its original value to be repaired. Weapons that have a shaft require the replacement of the shaft.
 
 \textbf{Armor Breakage:} When armor breaks, it is considered pitted. Repairing armor costs 20\% of the armor's value.
 
 \textbf{Armorer:} Knowledge of armoring and the appropriate equipment are necessary to repair weapons and armor. Repairing metal objects requires a forge.
 
-\textbf{Sharpening:} Is an action that takes one exploration turn and increases the weapon's SHP by 25\%. On critical hits, it increases by 50\%. Requires a sharpening stone. This does not work on precise weapons, because they are already considered sharp.
+\textbf{Sharpening:} Is an action that takes one exploration turn and applies the sharp condition. Requires a sharpening stone. This does not work on precise weapons, because they are already considered sharp.
 
-% \subsection{Materials}
 
-% The table is a reference for the hardness of materials. It is used to define what can be cut by what. A higher hardness can cut a lower hardness. 
-
-% \begin{center}
-% \label{materiais}
-% \begin{tabular}{||c c ||}
-% \hline
-% Name & Hardness \\ [1ex]
-% \hline\hline
-% \hline
-% Water & 0 \\
-% Butter & 1 \\
-% Flesh & 2\\
-% Linen & 3 \\
-% Silk & 3\\
-% Chitin & 4-6  \\
-% Horn & 5  \\
-% Wood &  5-6  \\
-% Bone & 6\\
-% Stone &  6-9  \\
-% Steel &  8-10 \\
-% Diamond & 11 \\
-% \hline
-% \end{tabular}
-% \end{center}
-
-\section{Tools of War}
-
-The tools below are mundane. They resolve through the existing rules for fire, smoke, explosions, objects, and morale. None require magic; magic amplifies them or makes them possible where they otherwise would not.
-
-\subsection{Fire}
-
-Fire is the principal means of breaking a formation. A burning space deals \textbf{burn} damage each turn to anything occupying it. Burn is not reduced by RES; it is reduced by the insulation of armor or hide. Metallic armor conducts heat poorly and applies its full insulation against fire. A sealed helm with an air filter protects the lungs from smoke, not the body from heat.
-
-\begin{center}
-\begin{tabular}{||c c c||}
-\hline
-Fuel & Burn/turn & Spread \\ [0.5ex]
-\hline\hline
-Dry grass, thatch & 5 & fast \\
-Oil film & 10 & moderate \\
-Pitch, tar, resin & 15 & moderate, sticks \\
-Wood pyre, timber & 20 & slow \\
-\hline
-\end{tabular}
-\end{center}
-
-Fire spreads each turn to adjacent spaces that contain fuel; a space without fuel goes out. A fire large enough to fill a space produces smoke (below) in and around itself. A character who ends a turn in fire may spend 2 AP to escape to an adjacent space before taking damage again.
-
-\textbf{Extinguishing:} Putting out a burning space takes 4 AP and a test (DL by fuel intensity) or total immersion in water. Dropping and rolling halves the burn for that turn.
-
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
-\item Oil flask - 250ml, 5 charges. Coats a space or item in flammable oil. 1 SP. small.
-\item Pitch pot - Burns hot and adheres; intensity 15, hard to extinguish. 2 SP. small.
-\item Fire arrow - Cloth wrap soaked in oil, lit before firing. Ignites a flammable target on a hit. Negligible cost. small.
-\item Torch - Sustained flame for 1 hour; intensity 10 at contact. 1 CP. small.
-\end{itemize}
-
-\subsection{Smoke}
-
-Smoke fills spaces from its source, spreading up to a radius each turn until dispersed by wind. Characters in smoke cannot see beyond 1m: they engage only at melee range, and attacks to or from them suffer the detection penalty for concealment. A character who begins their turn in thick smoke makes a Health test (DL by density) or spends the turn coughing, losing 2 AP.
-
-Sources: smoldering damp greenery, dung, pitch, or oil. A covered brazier produces sustained smoke. The smoke grenade (see Magical Items) produces the effect without fuel.
-
-\subsection{Poison and area denial}
-
-Poisons (see Potions and Poisons) can be delivered as injury, ingestion, or inhalation. Inhalation poisons dispersed as smoke affect everyone in the cloud at their normal DL, regardless of size. Poisoned caltrops and stakes apply the injury dosage on a wound of T1 or higher.
-
-\subsection{Caltrops and traps}
-
-These make a position costly to hold or cross, forcing a turtling enemy to move.
-
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
-\item Caltrops - A scattered space. Anyone entering above careful movement makes a reflex test (DL 3) or suffers a small piercing wound (T0-T1) and ends their movement. Mounted or unshod creatures roll at +2 DL. 1 SP covers one space. small.
-\item Stakes - Sharpened fixed stakes. Entering the space without care deals a piercing wound (T1). Blocks cavalry outright. 2 SP per space. medium.
-\item Tripwire - A reflex test (DL 2) or the character falls prone. 1 CP. small.
-\item Pit - Open or concealed. Reflex (DL by cover) to avoid, or fall and take falling damage. Dug with a shovel.
-\end{itemize}
-
-\subsection{War engines and vehicles}
-
-A vehicle or large rolling object moving along a line is resolved as an explosion on a line (see Interactions with objects, in Combat): each space in its path, occupants make a reflex test to dodge; on failure they suffer impact damage, estimated at 5-10 per expected injury tier by mass and speed, and are pushed one space. This is the mundane means of breaking a dense formation.
-
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
-\item Chariot - Drawn by one or two animals. Charges in a straight line at running speed; high impact, and the rider may attack from the platform. Requires a trained driver. 30 GP. cargo.
-\item Ram - A suspended timber driven against a gate, wall, or rank. Resolves as a moving object against a fixed target: impact applies to both, and the target tests breakage against its RES. 10 GP. cargo.
-\item Rolling log or boulder - Released downhill along a path. Treat as a line explosion of a large object: devastating impact, long path, difficult to dodge. Free where terrain allows; setup takes a turn and labor.
-\end{itemize}
-
-\subsection{Signals and morale}
-
-War horns, drums, and massed shouts coordinate allies and press enemy morale. A horn or concerted battle cry forces a morale test on enemies within range, at a DL set by the number of participants and the volume. Failure imposes stress or the Afraid condition. A force that fails badly may rout (see Morale). The same instruments relay commands across the field, allowing coordinated movement out of earshot.
-
-\magic \textbf{Magical amplification:} magic does not replace these tools but removes their limitations: fire that burns wet stone or flesh, smoke without fuel, fear that will not break, a ram that moves itself. The mundane tool remains the base; the spell makes it possible where it otherwise would not be.
 
 \section{Characteristics and Conditions}
 
-
+\textbf{Customising weapons}:  
 \begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item Condition: Sharp - Weapon has +0.25x SHP until the end of the combat. It can be sharpened to a higher degree, increasing by an additional 25\%.
-    \item Condition: Dull - Weapon loses 50\% of its SHP.
-    % \item Characteristic: Hard: reduces RES by 25\%, but increases SHP of bladed weapons by 0.5x when sharpened.
-    % \item Condition/Characteristic: Pitted - Armor has its coverage reduced by 3.
-    \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1.
+    \item Change base damage by up to 30\% up or down. Incresing more than that might make it a tool for every job. Double weapon value for every +10\%. 
+    \item RES can be changed by up to 50\%. Double the price for every 25\%.
+    \item Pointy weapons can switch between vicious and penetrating, representing a thin point for penetrating and a broader one for vicious.
 \end{itemize}
 
+\textbf{Customising armor}:
+\begin{itemize}
+    \item Change base damage reductions by up to 30\%. Increasing further should increase its armor penalty, for the extra weight in material. Double armor value for every +10\%. 
+    \item Do not change the penalty of any armor by more than 1. 4x armor value to reduce it by 1.
+    \item Higher deflection means less exploitable gaps and better deflection angles. Change it by maximum +2, and until +9 ,at most. Also increase armor penalty for the reduced mobility. Increasing it by 1 doubles armor value.
+\end{itemize}
+
+\textbf{Gear condition}
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    % \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
+    \item Condition: Sharp - Weapon deals 1.5 extra damage per SOP with extra cut.
+    \item Condition: Dull - Bladed weapon cannot use extra cut.
+    \item Condition/Characteristic: Pitted - Armor has its deflection reduced by 2. Damaged or low quality.
+    \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1. Low quality armor or armor made for someone else.
+\end{itemize}
+
+\textbf{Gear characteristics}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
+    \item Characteristic: Flammable - Burning condition does not wear off by itself.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
-    \item Characteristic: Insulating: Increases coverage against electric-type damage attacks by +5.
+    \item Characteristic: Insulating: Increases insulation against electric-type damage attacks by +5.
     \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
-    \item Characteristic: Sealed: Has infinite coverage against corrosive-type damage attacks.
-    % \item Characteristic: Liquid: Immune to damage from slashing and bludgeoning-type attacks.
-    \item Characteristic: Low-quality weapon - Weapon loses 25\% of its SHP and 25\% RES. -50\% cost.
-    \item Characteristic: Low-quality armor - RES  reduced by 25\%. -50\% cost.
-    \item Characteristic: High-quality weapon - Weapon has +25\% RES. +200\% cost.
-    \item Characteristic: High-quality armor - RES increased by 25\%. +200\% cost.
+    \item Characteristic: Sealed: Has infinite insulation against corrosive-type damage attacks.
+   
     \item Characteristic: Semi-automatic - Has multiple shots per reload.
     \item Characteristic: Air filter - Closed helmet that grants immunity to toxic gas effects.
     \item \magic Characteristic: Magnetic - Allows the use of magnetic abilities with the equipment.
@@ -563,10 +479,72 @@ Doctor & 3SP/day & 1 GP/day & 3 GP per day \\
 
 Any of these can be hired, as long as they accept the job.
 
+\section{Tools of War}
 
-Lifestyle:
-1SP per day
+These are items that can be used in combat. They play a role in controlling terrain, forcing actions out of oponents and potentially causing damage.
 
+\subsection{Flammables}
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\setlength{\parskip}{0em}
+\item Oil flask - 250ml. Coats 3 adjacent hexes in flammable oil. 2 SP. small.
+\item Pitch pot - Burns for 15 burning damage and adheres. 4 SP. small.
+% \item Fire arrow - Cloth wrap soaked in oil, lit before firing. Ignites a flammable target on a hit. Negligible cost. small.
+\item Torch - Sustained flame for 1 hour; intensity 5 at contact. 1 CP. small.
+\end{itemize}
+
+\subsection{Smoke}
+
+Sources: smoldering damp greenery, dung, pitch, or oil. A covered brazier produces sustained smoke. The smoke grenade (see Magical Items) produces the effect without fuel.
+
+\subsection{Poisons}
+
+\textbf{Poisons} apply an effect to the target. To resist it, the victim must make a Health test. The amount of poison applied is determined by the method of application (some methods may increase the amount of poison applied).
+
+Poisons can be delivered a through cutting injuries, ingestion, or inhalation. Each additional dose of the poison a target takes increases the Health DL by 3/2/1 for every additional dose. 
+
+\textbf{Ingestion:} Poison must be eaten. 
+
+\textbf{Inhalation} poisons dispersed as smoke affect everyone in the cloud at their normal DL, regardless of size.
+
+\textbf{Cutting injuries:} Tier 1+ wounds from Cutting damage apply the full effect of the poison. Tier 0 decrease DL by 3. Inhalation applies the normal DL, independent of creature size.
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item Anticoagulant Poison: adds +1 bleed to any attack. 5 GP for a vial with 10 applications and light weight.
+    \item Paralytic Poison: DL 5 health to avoid becoming immobile within 20 turns on a graze or in 10 turns on a miss. Paralysis lasts for 1 hour/ 4 hours respectively.
+    \item Necrotic Poison: 
+    \item \item Soporific Poison: Inhalation or ingested. Target must make a DL 5 Health save. After 2 minutes, the target falls Unconscious for 1 hour. Taking damage or being vigorously shaken awakes the target.
+\end{itemize}
+
+\subsection{Caltrops and traps}
+
+These make a position costly to hold or cross, forcing a turtling enemy to move.
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\setlength{\parskip}{0em}
+\item Caltrops - A scattered space. Anyone entering above careful movement makes a reflex test (DL 3) or suffers a small piercing wound (T0-T1) and ends their movement. Mounted or unshod creatures roll at +2 DL. 1 SP covers one space. small.
+\item Stakes - Sharpened fixed stakes. Entering the space without care deals a piercing wound (T1). Blocks cavalry outright. 2 SP per space. medium.
+\item Tripwire - A reflex test (DL 2) or the character falls prone. 1 CP. small.
+\item Pit - Open or concealed. Reflex (DL by cover) to avoid, or fall and take falling damage. Dug with a shovel.
+\end{itemize}
+
+\subsection{War engines and vehicles}
+
+A vehicle or large rolling object moving along a line is resolved as an explosion on a line (see Interactions with objects, in Combat): each space in its path, occupants make a reflex test to dodge; on failure they suffer impact damage, estimated at 5-10 per expected injury tier by mass and speed, and are pushed one space. This is the mundane means of breaking a dense formation.
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\setlength{\parskip}{0em}
+\item Chariot - Drawn by one or two animals. Charges in a straight line at running speed; high impact, and the rider may attack from the platform. Requires a trained driver. 30 GP. cargo.
+\item Ram - A suspended timber driven against a gate, wall, or rank. Resolves as a moving object against a fixed target: impact applies to both, and the target tests breakage against its RES. 10 GP. cargo.
+\item Rolling log or boulder - Released downhill along a path. Treat as a line explosion of a large object: devastating impact, long path, difficult to dodge. Free where terrain allows; setup takes a turn and labor.
+\end{itemize}
+
+\section{Special Items}
 
 \subsection{\magic Magical Items}
 
@@ -589,7 +567,7 @@ Lifestyle:
     % \item Sharpening Sheath - Reduces the cost of the Sharpen spell on a weapon within the sheath to 1 AP - Weight 2 - 50 GP.
 \end{itemize}
 
-\subsection{Potions and Poisons}
+\subsection{Potions}
 
 Potions require a standard action to be consumed. Taking multiple potions does not amplify the effect. The contents of a potion on the list are relative to a creature of size 3. A creature of a different size will consume an amount equivalent to 1x Volume Modifier.
 
@@ -598,23 +576,12 @@ Potions add an effect to the character for a certain duration. The effects of po
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Simple Healing: 4 cures over 1 exploration turn, 2 GP.
-    \item Medium Healing: 8 cures over 1 exploration turn, 6 GP.
-    \item Good Healing: 16 cures over 1 exploration turn, 16 GP.
-    % \item Constitution: Increases constitution by +1 for 1 day, 4 GP.
-    % \item Power: Increases power by +2 for 1 day, 4 GP.
+    \item Simple Healing: heals 4 extra IL over 1 short rest, 2 GP.
+    \item Medium Healing: heals 8 extra IL over 1 short rest, 6 GP.
+    \item Good Healing: heals 16 extra IL over 1 short rest, 16 GP.
 \end{itemize}
 
-\textbf{Poisons} apply an effect to the target. The magnitude of the effect is determined by the potency of the poison, the amount of poison applied and the target's resistance to the poison, represented by Health. The amount of poison applied is determined by the method of application (some methods may increase the amount of poison applied) and the seriousness of the injury.
 
-\textbf{Dosage:} Tier 1+ wounds from PEN apply the full effect of the poison. Tier 0 decrease DL by 3. Inhalation applies the normal DL, independent of creature size.
-
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item Anticoagulant Poison: DL 5 health when applied to get 1 point in hemorrhage, 10 GP for a vial with 10 applications and weight 1.
-    % \item Paralytic Poison: DC 10 health to avoid being paralyzed and lose 100/50/25/0 \% of maximum AP for 1 hour or until receiving an antidote.
-\end{itemize}
 
 
 \subsection{Utility and Survival}
@@ -632,8 +599,8 @@ Potions add an effect to the character for a certain duration. The effects of po
     \item Shovel: Used for digging. 1 PP. Large.
     \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 PP. Medium
     \item Vial: Holds 50ml of any liquid. 5 CP. small
-    \item Alcohol - Used for fire skills. 1 PP per 250ml (5 charges). 
-    \item Oil - oil. 1 PP per 250ml (5 charges). 
+    \item Alcohol - Used for fire skills. 2 PP per 250ml (5 charges). 
+    \item Torch - Gives 5m of visibility in the dark. Lasts 4 hours. 
     \item Sharpening Stone - A sharpening stone. 2 PP. small 
     \item Fur Cloak - Improves resistance to cold wear by +3. 1 GP. medium
     

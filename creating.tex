@@ -20,13 +20,15 @@ There are 27 skills, as described in the table:
 Skill & Proficiency & Talent & Trainable \\
 \hline &&& \\
 Health & Constitution & - & no\\
-% Strength & STR-10 & Constitution & no \\
+Strength & 2x(STR-10) & Constitution & yes \\
+Agility & 2x(AGI-10) & Constitution & yes \\
+Stamina & 2x(STA-10) & Constitution & yes \\
 
 Strike & Melee & Dexterity  & yes \\
 Defend & Melee & Dexterity & yes \\
 Grapple & Melee + STR-10 & - & no \\
 
-Accuracy & Ranged & Dexterity & yes\\
+Accuracy & Ranged & Dexterity & yes\\ 
 Reflex & Ranged + Awareness & Dexterity & no\\
 
 Balance & AGI-10 & Dexterity  & yes \\
@@ -137,7 +139,7 @@ Constitution governs the enhancement of attributes, health, and \magic mutation 
 
 Attributes represent the physical characteristics of the character. They are divided into Strength (STR), Agility (AGI), and Stamina (STA). The common values for attributes for healthy young humans are 10.
 
-\textbf{Attributes as skills:} sometimes, an attribute can be used as a skill in case no skills fit an action. For example, strength for lifting weight, agility to outrunning someone and stamina for holding breath. In that case, use attribute -10 as the skill value.
+\textbf{Attributes as skills:} sometimes, an attribute can be used as a skill. For example, strength for lifting weight, agility to outrunning someone and stamina for holding breath. In that case, use 2x(attribute -10) as the skill value.
 
 \textbf{Improving attributes:} The XP cost to improve attributes is equal to the target attribute value divided by 2. However, if the average of the 3 attributes exceeds $10+CON-SM$, the cost is doubled. For every point higher, it increases by +100\% again. It is impossible to have any attribute higher than 20.
 
@@ -163,7 +165,7 @@ Size is a characteristic that defines how much space a creature occupies on the 
 
 \textbf{Size interpretation:} Consider that the weight of a creature increases 10 times every 2 categories or 3 times for each category. A human is a creature of size 3 and weighs about 50kg. Therefore, a creature of size 1 would be a cat weighing 5kg, and a horse would be a creature of size 5, as it weighs about 500kg.
 
-\textbf{Size and Space Occupation: } A creature of size 3 in human form occupies 1 square or hexagon. For every 2 size categories, a character on a square grid will increase their dimensions by 1 square, and a hexagonal grid will occupy 3 spaces (placing the token in the middle of 3), then 7, then 19 (with the token in the central hexagon and expanding outward by 1 hexagon).
+\textbf{Size and Space Occupation: } A creature of size 3 in human form occupies 1 square or hexagon. For every 2 size categories, a character on a square grid will increase their dimensions by 1 square, and a hexagonal grid will occupy 3 spaces (placing the token in the middle of 3), then 7. Other creatures may have different shapes.
 
 Two creatures of size 3 can occupy the same space, but cannot end a turn like that. A creature can occupy the same space as another of two sizes higher than itself.
 
@@ -330,7 +332,7 @@ Intellect measures the logical capacity, planning, and decision-making abilities
 
 Knowledges are like skills, but are generally used outside of combat and has various utilities related to magic, exploration, and measuring the character's intelligence.
 
-\textbf{Knowledge as a skill:} The purest way to use knowledge is as a skill:
+\textbf{Knowledge as a skill assist:} Some types of knowledge can be added to other skills, like detection to improve the chance of detecting something.
 
 \skill{Knowledge}{ 2x Knowledge or 2x INT}{
 It is equivalent to asking your character if they should know or understand something, even when the player does not know that thing.
@@ -343,6 +345,8 @@ To use this skill, make a knowledge check against an arbitrary difficulty, repre
 }
 
 \textbf{Knowledge as a talent:} Knowledge can be used as a talent to learn spells and sorcery abilities. Spells have a knowledge requirement indicating the difficulty.
+
+\textbf{Knowledge in magic:} There are three magic related knowledges. They are used when casting and learning spells as a wizard. More details in the Sorcery chapter.
 
 The formal areas of knowledge in which the character can be trained are:
 
@@ -440,7 +444,7 @@ Each character must choose a limit action.
 
 \textbf{Violent:} is compelled to use their fight surge to inflict damage on someone. If STA is insuficient, rest and then surge if possible.
 
-\textbf{Tanatosis:} Falls to the ground paralyzed for 1 turn and rests 2 times.
+\textbf{Tanatosis:} Falls to the ground unconscious for 1 turn and wakes up the next.
 
 \textbf{Abusive:} is compelled to spend 3 AP to insult allies, increasing the morale test DL by +1 for the team. If nobody is around, default to coward.
 

@@ -37,7 +37,7 @@
 
 \textbf{Negative AP:} AP can become a negative number, but never as a result of performing an action or reaction. When the character recovers their AP, they must deduct the negative value from their maximum.
 
-\textbf{Suffocation:} If the character cannot breathe during the turn of a round, they lose 1 STA and cannot rest.
+\textbf{Suffocation:} If the character cannot breathe at the beginning of a round, they lose 1 STA and cannot rest. If STA goes negative, they drop unconscious. If it goes under -10, they die.
 
 % \textbf{Delay the turn:} The player can spend 1 AP during their turn to delay it. This allows the character to regain their token and play again within the same round. AP regeneration only occurs once per round.
 
@@ -110,36 +110,10 @@ To determine the difficulty of climbing, consider whether the surface is moving,
 
 \textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a failure, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
 
-When falling, the DL to fall properly is arbitrary, but is generally higher for low falls from bad positions, average for very high falls, and lower for small falls from a controlled position. DLs should be around 20 at most and 5 at least.
+When falling, the DL to fall properly is arbitrary, but is generally higher for low falls from bad positions, average for very high falls, and lower for small falls from a controlled position.
 
-\textbf{Fall damage} This damage ignores armor and depends on the speed of the fall and the landing spot. The standard landing spot is a flat, hard surface. The speed of the fall can be considered instantaneous for falls below 2m, in which case it causes 10xDM of bludgeoning damage. 5m/s for the first 10m, causing 20xDM of bludgeoning damage. Then it increases to 15m/s up to 30m, causing 50xDM of damage. Anything above that causes 100xDM of damage. A critical on the balance check reduces the damage by 75\%, a success by 50\%, a graze by 25\%, and a failure takes the full damage.
+\textbf{Fall damage} is a special case of damage from impact with objects, further down this chapter. For this damage estimation, the landing spot is a flat, hard surface. The impactor is the body, so the DM is the character's DM and the damage ignores armor. The speed of the fall can be considered instantaneous for falls below 2m, in which case it causes 5xDM of blunt damage. 5m/s for the first 10m, causing 10xDM of blunt damage. Then it increases to 15m/s up to 30m, causing 20xDM of damage. Anything above that causes 40xDM of damage. A critical on the balance check reduces the damage by 50\%, a success by 25\%, a graze by nothing, and a miss hits the head. Crits and hits that don't receive T2 or higher injuries allow the character to stay on their feet, otherwise, they are prone.
 }  
-
-\section{Morale}
-
-Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using will proficiency.
-
-\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the terror of the moment. A graze leaves the character frightened, and a failure activates the character's limit stress action.
-
-DL = -2 + aggravating factors
-
-Aggravating factors: \\ 
-
-\begin{itemize}
-    \item Sensory deprivation(being oblivious): +3
-    \item Reduced sensory quality(being disoriented): +2
-    \item Seriously injured ( IL > 10): +3
-    \item In melee range: +2
-    \item Being on fire or suffocating: +5
-    \item Out of STA: +2
-    \item Monstrous presence: variable. Depends on presence.
-\end{itemize}
-
-\textbf{Intimidation:} A character can make an intimidation attempt as part of an action in combat. This increases the value of the DL of the next morale test by the character's charisma. The intimidating action costs 2 AP and can be made by anyone in the team after causing a T1 injury or higher to an enemy. 
-
-\textbf{Taunt:} In combat, a taunt is an attempt to make the target infuriated. It costs 2 AP and must be made immediately after someone in the team is missed by a direct attack or receiving zero damage from one. Add charisma to the morale test of the opposing side in the next morale check.
-
-Multiple intimidations and taunts don't stack. Only the highest charisma 
 
 \section{Damage and Injuries}
 
@@ -166,11 +140,13 @@ Tier 0 & armor & 1 & 0 \\
 Tier 1 & armor+TGH & 5 & 0 \\
 Tier 2 & armor+2xTGH & 10 & 50\% \\
 Tier 3 & armor+3xTGH & 20 & 100\% \\
-Tier 4 & armor+4xTGH & 30 & 200\% \\
-Tier 5 & armor+5xTGH & 50 & 300\% \\
+Tier 4 & armor+4xTGH & 30 & 100\% \\
+Tier 5 & armor+5xTGH & 50 & 100\% \\
 \hline
 \end{tabular}
 \end{center}
+
+\textbf{Interpreting IL:} A tier 0, or T0 injury means a small bruise or a patch of burned skin. A T1 injury is kin deep cut that bleeds a little or a large bruise. A T2 is a cut down to the muscle or a potentially cracked bone. A T3 is definitely a cracked bone and internal organ damage with bleeding. A T4 is near system shock, with multiple broken bones, impalation through the chest and potentially limb amputation. A T5 means instant death.
 
 \textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds. 
 
@@ -184,7 +160,9 @@ Tier 5 & armor+5xTGH & 50 & 300\% \\
 
 \textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks. More details on the gear section.
 
-\textbf{Burn, radiant, and corrosive damage:} Their respective defense is INS.
+\textbf{Burn, radiant:} Their respective defense is INS. Dealing Tier 0 injury or higher leaves the target burning. 
+
+\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to II of damage leaves the target corroding at that tier of damage, which reaplies the damage until armor is removed. Higher tiers still apply Tier II of corroding.
 
 \textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage.
 
@@ -255,7 +233,10 @@ The list of afflictions is:
 \item \textbf{Deaf:} Cannot use hearing. 
 % Requires a balance check for basic movement on any terrain.
 
-\item \textbf{Unconscious:} The character cannot do anything other than Will and Health checks. They can also make detection and sensing checks, but receive -10 on these checks. These checks can be made to wake up. The DL and the allowed check depend on the situation. 
+\item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
+\item \textbf{Corroding 0/I/II} Applies a tier of injury every round. Can only be ended by specific items, jumping on water or removing the armor. Cannot be applied to unarmored.
+
+\item \textbf{Unconscious:} The character cannot do anything other than Will and Health checks. They can also make detection and sensing checks, but receive -10 on these checks. These checks can be made to wake up. The DL and the allowed check depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
 
 \item \textbf{Afraid:} Receives -1 Mental and cannot make a fight surge. The fear ends when the character succeeds on their Will check or becomes angry. 
 \item \textbf{Enraged:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will check or becomes afraid. 
@@ -413,19 +394,33 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 This section is a guideline for interactions with objects in combat. The exact values can be modified by the GM. This is just a basis to work with.
 
-\textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider for any random object that a regular human, with strength 10, can lift about 50kg.
+\textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider that a regular human with strength 10, for any random object shape, can lift about 20kg within a 3 AP + 1STA action. That is about one size category lower than its own.
 
-\textbf{Pushing objects:} To push an object, or when struck by one, use the push action, as described in Grapple. A hit stops the object and accelerates it in any direction by 1m/s per SOP. When struck by an object, in a graze, the object can be redirected by up to 60 degrees.
+\textbf{Pushing objects:} To push an object, or when struck by one, use the push action as described in Grapple, but use STR as a skill. A hit stops the object and moves it in any direction by 1m per 3 SOP. When struck by an object, in a graze, the object can be redirected by up to 60 degrees.
 
-The push DL depends on weight and speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. A suggestion would be +1 per m/s for objects of size 3. Reduce it for smaller objects and increase it for larger ones.
+The push DL depends on weight. When stopping an object, also consider its speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. A suggestion would be +1 per m/s for objects of size 3. Reduce it for smaller objects and increase it for larger ones.
 
-\textbf{Dodging objects:} Large objects can be considered explosions on a line given by their path. Use reflex to dodge them. Consider how difficult it is to dodge subjectively, using the basic guidelines on how to choose a DL.
+\textbf{Defending against objects:} Small objects are considered projectiles and defended as such. Large objects can be considered explosions on a line given by their path. Use reflex to dodge them. Consider how difficult it is to dodge subjectively, using the basic guidelines on how to choose a DL.
 
-\textbf{Damage from Impact with objects:} Depends entirely on what is hitting what at what speed and whether one object is fixated or free. Estimate what tier of injury the impact would cause and match the damage to correspond to it. Range between 5 to 10 damage per expected tier of injury. 
+\textbf{Damage from Impact with objects:} Depends on what is hitting what, at what speed, and whether the target is fixated or free to move. \textbf{Action and reaction:} The impactor takes the same damage as the target. In practice, it is recommended that the value should be estimated quickly and intuitively at gametime. Use the instructions ahead to whatever extent it is useful.
+
+\textbf{What objects to consider:} Objects with speeds significantly higher than 20m/s and sharp objects in general are considered weapons and should have their damage estimated separately.
+
+\textbf{The base damage estimation:} The initial assumption for these numbers is that the object is rigid and blunt. The damage is 10 x DM x speed category, where speed categories are 1 for 5m/s, 2 for 10m/s and 3 for 20m/s and DM refers to the impactor's size category DM. This is also used for damage between objects when the target is fixated in place, like a door or wall.
+
+Adjust the damage as follows:
+
+\begin{itemize}
+    \item \textbf{Freedom of movement:} If the target is free to move, it is swept along instead of crushed: halve the damage. Do not halve the damage for objects 2 size categories below the target.
+    \item \textbf{Contact:} soft or wide objects (bodies, sand) halves damage.
+    \item \textbf{Armor:} Damage from objects of size equal or greater than the character ignore armor. Note: armor spreads damage, but large objects have enough force to damage even when energy is spread out.
+\end{itemize}
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
 \textbf{Standard Action:} Consider that 1 AP is equal to half a second and estimate how long an action should take. In general, taking an item from a belt or strap around the armor should take about 3 AP, while opening a backpack and taking something costs about 5 seconds. The AP cost of a standard action is 3 AP.
+
+\textbf{Draw/Put away weapons:} Weapons with the draw property take 1 standard action to be drawn. The rest take 2.
 
 \textbf{Conceal Objects:} Used as a defense against detection tests to identify objects carried by the character. This is a detection vs prestidigitation test and works like a regular detection test. There is a -5 penalty to conceal items for every item size larger than small.
 
@@ -435,6 +430,74 @@ The push DL depends on weight and speed. To help decide on a DL, consider that 5
 
 When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP.
 }
+
+\section{Environmental Hazards}
+
+These are effects that play a role in controlling terrain, forcing actions out of oponents and potentially causing damage.
+
+\subsection{Fire}
+
+Fire is one of the most available ways to force characters to move. It is not a very fast source of damage, but it cannot be ignored.
+
+Fire causes burn damage at the beginning of every round to anyone in it as an environmental effect. Any creature that occupies more than 1 burning space takes the damage multiplied by the amount of burning spaces it is in. 
+
+A burning surface lasts at minimum until the end of combat, or until extinguished.
+
+\begin{center}
+\begin{tabular}{||c c c||}
+\hline
+Fuel & Burn/round & Spread\\ [0.5ex]
+\hline\hline
+Dry grass, thatch & 5 & 1/round\\
+Oil film & 8 & 3/round \\
+Pitch, tar, resin & 10 & sticks \\
+Wood pyre, timber & 10 & 0 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Extinguishing:} Fires can be extinguished by muffling it, throwing water or with magic. Both muffling and throwing water require 4 AP and being in a burning space or adjacent to it. Not every fire is extinguishable through water or muffling within a 4 AP action.
+
+Optional: \textbf{Fire spreads} each round to adjacent spaces that contain fuel. Adjust spread speed depending on fuel.
+
+\textbf{Sticky fuel:} lasts until extinguished and follows mobile targets. Extinguishes automatically at the end of combat unless otherwise stated.
+
+\subsection{Gas}
+
+Gas can have several effects: Poison, explosion, suffocation, reduced vision radius and blindness. It lasts until the end of combat or dispersed somehow through wind. Muffling or extinguishing the source of the gas causes it to disappear in the beginning of the next round. Doing that costs 4 AP. Relocating the source moves the area somewhere else starting next round.  
+
+\textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
+
+\textbf{Reduced vision:} Smoke reduces vision radius of anyone inside of it to 2m by default and makes them invisible (untargetable through vision, requires a different active sense) to those outside. Standing at the edge of the area allows bad visibility to attackers, making them disoriented when targeting someone inside.
+
+\textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. The effects may vary depending on the poison.
+
+In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
+
+\textbf{Blindness:} Being inside at the beginning of the round causes blindness. Depending on the gas, a health test may be called. Protective gear over the eyes also prevents blindness.
+
+\textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
+
+\textbf{Wind:} Requires balance or strength test to avoid being pushed. Clears the other gases for the round. If the gas has an active source, it comes back once the wind stops.
+
+\subsection{Liquids}
+
+\textbf{Liquid Spread:} Smalls amounts of liquid (under 50 L) are considered to spread instantly and do so with the geometry of an explosion. Liquids spread around solids, not through them.
+
+\textbf{Corrosion:} Being soaked in corrosive liquids cause a corrosive damage. The damage is multiplied by the amount of corrosive filled spaces the character is in.
+
+\textbf{Waves and Currents:} Requires strength test to avoid being pushed. If the character is swimming, they get pushed automatically, but can spend AP to swim and cancel the movement.
+
+
+\subsection{Land and collapse}
+
+\textbf{Slippery Surfaces, swampy terrain:} trigger balance tests. Hint at the difficulty of the test if the character noticed that the terrain was difficult.
+
+\textbf{Traps:} Require detection tests. Gets Architecture or Survival knowledge bonus depending on where the trap is. Magical traps may use the appropriate magical knowledge.
+
+\textbf{Collapse:} Works like an explosion, but there is no crit area. Gets buried in the rubble unless the explosion grazes or misses. Escaping requires a Strength test.
+
+\textbf{Jagged terrain:} causes crushing or piercing damage per movement. Balance test lowers the amount of damage.
 
 
 \section{Chases}
@@ -609,6 +672,34 @@ Here's a list of possible modifiers. Many modifiers can be combined.
 \end{itemize}
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection.
+
+
+
+\section{Morale}
+
+Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using will proficiency.
+
+\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the terror of the moment. A graze leaves the character frightened, and a failure activates the character's limit stress action.
+
+DL = -2 + aggravating factors
+
+Aggravating factors: \\ 
+
+\begin{itemize}
+    \item Sensory deprivation(being oblivious): +3
+    \item Reduced sensory quality(being disoriented): +2
+    \item Seriously injured ( IL > 10): +3
+    \item In melee range: +2
+    \item Burning or suffocating: +5
+    \item Out of STA: +2
+    \item Monstrous presence: variable. Depends on presence.
+\end{itemize}
+
+\textbf{Intimidation:} A character can make an intimidation attempt as part of an action in combat. This increases the value of the DL of the next morale test by the character's charisma. The intimidating action costs 2 AP and can be made by anyone in the team after causing a T1 injury or higher to an enemy. 
+
+\textbf{Taunt:} In combat, a taunt is an attempt to make the target infuriated. It costs 2 AP and must be made immediately after someone in the team is missed by a direct attack or receiving zero damage from one. Add charisma to the morale test of the opposing side in the next morale check.
+
+Multiple intimidations and taunts don't stack. Only the highest charisma 
 
 
 %----------------
