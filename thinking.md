@@ -28,6 +28,10 @@ Notice what actually forces your spell design: reach rules, ritual universality 
   attempted as a ritual"), material resonance requirements, theory-accelerated learning,
   gods-as-external-caster.
 
+  spell surge? can spells be used with surge? stamina cost of spells?
+
+  spirit strike scales with size? 
+
 
 
 think about mundane tools to break turtling:

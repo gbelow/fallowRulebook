@@ -61,6 +61,8 @@ Casting a spell costs AP and STA during combat or exhaustion during exploration.
 
 \textbf{Stealth and Sorcery:} Spells are imperceptible through normal senses before they cause their effect. Once their effect occurs, they can be identified with a test of the skill used to cast the spell.
 
+\textbf{Relationship between Size and Sorcery:} Any spell that has DM, SM, MM or VM marked in it is scaled to character size.
+
 \subsection{Types of Spells and Modifications}
 
 Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. Each of them have a cost in SOPs to be used.
@@ -71,7 +73,7 @@ Enhancements are modifications that casters can make to their spells to make the
 
 \textbf{Enhance Spell:} Spend 4 SOPs to improve spells in a special way described in the spell.  \\
 
-\textbf{Amplify Spell:} Spend 4 SOPs to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. Increase Spell allows it to apply to larger versions of the items. \\
+\textbf{Amplify Spell:} Spend 4 SOPs to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, MM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. \\
 
 \textbf{Extend Charge Duration:} Spend 2 SOPs to increase the charge duration of charged spells by +50\%, then +100\%, then +200\%, +400\%, and so on in progression. \\
 
@@ -81,11 +83,15 @@ The types of spells are:
 
 \begin{itemize}[noitemsep]
 \item Environmental: The spell alters the environment. They have customized enhancements.
-\item Effect: Spells that directly affect the target and have various effects. They have customized enhancements.
+\item Effect: Spells that directly affect the target and have various effects. They have customized enhancements. 
 \item Psychic: Spells that directly affect the target and have psychic effects. They use the Charisma proficiency as the Difficulty Level (DL) agaisnt will. Enhancing increases the DL by 2. The magical effect is noticed by the victim only on a graze.
 \item Projectile: Spells that function as projectiles, using the shooting skill as the DL.
-\item Touch: Spells that function as strikes, using the striking skill as the DL. They do not trigger opportunity attacks.
+\item Touch: Spells that function as strikes, using the striking skill as the DL. They do not trigger opportunity attacks and can be used during a combat surge.
 \end{itemize}
+
+\section{Spell Design Principles:}
+
+\textbf{No turn durations:} Avoid making spell durations in turns. Turn based durations add bookkeeping during combat. 
 
 \section{Alchemy}
 
@@ -104,7 +110,7 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 % \spell{Start Fire}{ 1 charge, 3 AP + 3 STA}{Alchemy 1}{igneous stone}{5}{Touch}{Environmental}{instantaneous}{ Sets fire to any combustible material it can touch. }
 
-\spell{Flamethrower}{6 AP + 1 STA, + 1 charge per activation}{Alchemy 3}{Flamethrower}{3}{Cone explosion of 4m xMM in length and 60 degrees in radius}{Projectile}{sustained}{ Creates flames from an igneous stone, dealing its base damage xDM in burn damage to all within a cone in front of the caster. The flamethrower can be sustained, dealing explosion damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage. }
+\spell{Flamethrower}{6 AP + 1 STA, + 1 charge per activation}{Alchemy 3}{Flamethrower}{3}{Spray explosion of 4m xMM in length and 60 degrees in radius}{Projectile}{sustained}{ Creates flames from an igneous stone, dealing its base damage xDM as burn damage as a spray in front of the caster. The flamethrower can be sustained, dealing explosion damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage. }
 
 \spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{3}{ Long I }{Touch}{instantaneous}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
 
@@ -125,7 +131,7 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 % \spell{Galvanic Corrosion}{3 AP + 1STA or 1 exhaustion for 4kg}{Alchemy 2}{electrite}{5}{melee, target}{Touch}{charged, 1 turn}{ Rusts an object that is susceptible to rust. Leaves armors pockmarked and weapons smaller than size 5 without wire. It is necessary to hit an attack against an object for the effect to occur.}
 
-\spell{Sustained Lightning}{4 AP + 1 STA, 3AP+1STA per activation, 1 charge per activation }{Alchemy 5}{electrite}{3}{9mxMM}{Projectile}{sustained}{The caster attempts to create a sustained electric arc between themselves and a target, causing the base damage of the electrite x2DM electric damage. Once the spell hits, it only ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}
+\spell{Sustained Lightning}{4 AP + 1 STA, 3AP+1STA per activation, 1 charge per activation }{Alchemy 5}{electrite}{3}{9mxMM}{Projectile}{sustained}{The caster attempts to create a sustained electric arc between themselves and a target, causing the base damage of the electrite x2 xDM electric damage. Once the spell hits, it only ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}
 
 \spell{ Taser }{2 AP +1 charge}{Alchemy 1}{electrite}{0}{touch}{Touch}{charged, 1 turn}{ Charges an object of electrite with electricity that discharges on the first object it comes into contact with, adding the electric damage of the material to the attack. }
 
@@ -164,7 +170,7 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 \spell{Anchor Soul}{Ritual}{Animancy 3}{Soul stone}{3}{melee, target}{Effect}{3 days, sustained}{Anchors a creature's soul to a soul stone, preventing it from disappearing. This can be done with the souls of creatures that have been dead for up to 10 minutes. If the soul is still present, resurrection is possible, but the soul will extinguish in 3 days without a body.}
 
-\spell{Alter Memories}{5 AP}{Animancy 4}{}{5}{melee, target}{Effect}{ }{ Touches the mind of a person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. In this case, a success or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
+\spell{Alter Memories}{5 AP}{Animancy 4}{}{5}{melee, target}{Psychic}{ }{ Touches the mind of a person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. In this case, a success or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
 
 \spell{Disintegrate Mind}{8 AP + 8 STA}{Animancy 4}{ }{5}{melee, target}{Effect}{}{Destroys a creature's mind permanently. Reduces SPI to 0 permanently and resets all convictions to 0. This can be done by clerics of Iskar even without having learned this ability, but the target's consent is required.}
 
@@ -192,7 +198,7 @@ This is the art of projecting the soul into objects and creatures and injecting 
 \spell{Command}{6 AP +1STA}{Animancy 5}{Suggestion}{7}{15m}{Psychic}{up to unconscious}{ Gives a simple command to a confused target and leaves them Dominated if they miss on a will test. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it. }
 
 %------
-\spell{Interference Matrix}{3 AP + 3 STA or ritual 1 hunger for 5 minutes}{Animancy 4}{}{5}{6m radius, 10m range}{Effect}{5 turns}{Increases the difficulty of casting any spell within the area by 3.}
+% \spell{Interference Matrix}{3 AP + 3 STA or ritual 1 hunger for 5 minutes}{Animancy 4}{}{5}{6m radius, 10m range}{Effect}{5 turns}{Increases the difficulty of casting any spell within the area by 3.}
 
 \spell{Psychoactive Assistance}{3 AP + 1 STA}{Animancy 4}{Central Intelligence}{5}{15m}{Effect}{instantaneous}{ Focuses on a creature with whom they share a telepathic link. The caster can make an insight or will test to resist or remove a mental status effect or psychic ability on behalf of anyone connected by a telepathic link. }
 
@@ -204,7 +210,7 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 \spell{Visual Interference}{3 AP }{Animancy 3, Biomancy 1}{}{3}{15m, detectable target}{Psychic}{1 turn}{ Causes blindness for a turn in a target connected by telepathic link that misses or grazes on a will test. }
 
-\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{-2}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, interrupting them and draining 1 STA on a graze and stunning them and causing 2 STA on a miss. For every 3 points under a miss, lose another STA. This attack's DL is if the caster's will + 3 SM against the target's will + 3 SM. Enhancing increases the DL by 2. This can be used as a reaction against targets in the sinesthesia AoE.}
+\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{-2}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, interrupting them and draining 1 STA on a graze and stunning them and causing 2 STA on a miss. For every 3 points under a miss, lose another STA. This attack's DL is if the caster's SPI + 3 SM against the target's SPI + 3 SM. Amplifying increases the DL by 3.}
 
 \spell{Telepathic Link}{3 AP}{Animancy 3}{}{0}{20m}{Psychic}{10 minutes}{ Creates a telepathic link with a nearby creature if they fail or graze on a will test or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. Each simultaneous link increases the difficulty of the spellcasting test by 3.}
 
@@ -215,7 +221,7 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 \spell{Possession}{4 AP + 4 STA}{Animancy 4}{ }{5}{melee}{Psychic}{sustained}{Attempts to enter and possess another body during the spiritual walk or as a ghost. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration and is vulnerable to spells that require connection by telepathic link. Each time the possessed makes a will test, the possessor must spend 1 STA to resist. The body and the ghost occupy the same space and can act independetly. Possession ends when the possessor's STA reaches 0 or the possessed succeeds on a will test.}
 
-\spell{Torment}{8 AP + 3 STA}{Animancy 5}{}{7}{15m, direct target}{Effect}{until they wake up}{ Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a success or critical on a will test. They can attempt to wake up every hour. The victim does not heal from this sleep and receives 2 exhaustion for each hour they remain asleep.}
+\spell{Torment}{8 AP + 3 STA}{Animancy 5}{}{7}{15m, direct target}{Psychic}{until they wake up}{ Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a success or critical on a will test. They can attempt to wake up every hour. The victim does not heal from this sleep and receives 2 exhaustion for each hour they remain asleep.}
 
 % ideas: 
 % phantom sounds and images through telepathic link - one spell per specific image?

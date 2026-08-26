@@ -25,7 +25,7 @@
 
 \begin{itemize}
     \item Movement surge: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
-    \item Combat surge: 3 STA to gain 6 AP that can be used for anything and must be used immediately.
+    \item Combat surge: 3 STA to gain 6 AP that can be used for melee and ranged attacks or movement and must be used immediately.
     \item Reaction surge: 3 STA to gain 6 AP, but can only use reactions and rest until the end of the round.
 \end{itemize}
 
@@ -45,13 +45,11 @@
 
 \textbf{Preparing a reaction:} Any action can be prepared on a player's turn, but doing so costs 1 AP. This allows the player to create any trigger they can imagine for a reaction. They must have enough AP to perform the reaction when the trigger occurs. A prepared action can consist of a movement and a use of skill and can be repeated multiple times as long as the trigger happens again.
 
-\textbf{Compulsions:} These are forced actions. They must occur immediately if there are enough AP. If not, they force action surges. If even that is not possible, the remaining AP are lost, and the compulsion ends. If the compulsion occurs during another character's action surge, it happens when the AP of the surge ends.
+\textbf{Compulsions:} These are forced actions. They must occur immediately if there are enough AP. If not, they force action surges. If even that is not possible, the remaining AP are lost, and the compulsion ends.
+
+\textbf{Severe compulsions:} Whenever a compulsion forces a character to perform an act that they perceive will cause physical harm to themselves or an ally, the compulsion is severe. In this case, the character has +5 to resist the compulsion.
 
 \textbf{Adding more characters:} It is possible to add more characters to the combat after it has started. This can only be done at the turn of a round. If the added character is in stealth, make the appropriate perception checks at the beginning of the round.
-
-% \textbf{Severe compulsions:} Whenever a compulsion forces a character to perform an act that they perceive will cause physical harm to themselves or someone they care about, the compulsion is severe. In this case, the character has +5 to resist the compulsion.
-
-% \textbf{Compulsions:} These are forced actions. When the compelled character has enough AP, the action is performed immediately; otherwise, it occurs at the start of their next turn, right after regenerating AP and processing effects per turn. The turn of the compelled character must start as soon as possible. If the compulsion requires a reaction, such as defending someone, it is not possible to end the turn with fewer AP than the compulsion requires. If it is not possible to fulfill the compulsion within a turn, lose the compelled AP to get rid of it. The most recent compulsion overrides the previous one if there are 2 compulsions stored for the next turn.
 
 \section{Movement}
 
@@ -108,13 +106,13 @@ To determine the difficulty of climbing, consider whether the surface is moving,
 
 \skill{Balance}{AGI - 10}{ Skill to perform acrobatics, avoid falling, and mitigate damage from falling. Can be used actively with a skill check or passively when something tries to knock you down.
 
-\textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a failure, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
+\textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a miss, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they receive some consequence (usually falling).
 
-When falling, the DL to fall properly is generally proportional to the fall height. Falls from small heights in a bad position are more difficult too.
+\textbf{Fall skill test:} Falling requires a balance test to decide how well the landing or dive goes. On a critical on the balance test, reduce the damage by 50\% and prevent T0 and T1 injuries. On a hit, reduce damage by TGH. On a graze, takes full damage and falls prone, and on a miss takes full damage, falls prone and hits the head. Receiving a T2 injury or higher always makes the character prone.
 
-\textbf{Fall skill test:} A critical on the balance test reduces the damage by 50\%, a success by 25\%, a graze by nothing, and a miss hits the head. Crits and hits prevent T0 and T1 injuries. Receiving a T2 injury or higher or receiving graze or miss makes the character prone.
+\textbf{Choosing Fall DL:} When falling, the DL to fall properly is generally proportional to the fall height. Falls from small heights in a bad position are more difficult too. As a rule of thumb, DL is 1 per meter until a maximum of 25. As a common exception to the rule, DLs for 1m can be considered trivial at -5, then 0 for 2m. 
 
-\textbf{Fall damage} For this damage estimation, consider that the landing spot is a flat, hard surface. The DM is the character's DM and the damage ignores armor. To estimate fall damage, do 2x fall height x DM$^2$. Maximum height is capped at 50m. Soft surfaces, like sand halve the damage and liquids make it a quarter.
+\textbf{Fall damage} For this damage estimation, consider that the landing spot is a flat, hard surface. To estimate fall damage, do 2x fall height x DM$^2$, Where the DM is the character's DM and the damage ignores armor. Maximum height is capped at 50m. Soft surfaces, like sand or water halve the damage.
 
 Note: DM is squared because large creatures suffer more from falling. For size 2, instead of making 0.75$^2$, just use 0.5. For size 4, instead of 1.5$^2$, use 2.
 }  
@@ -242,15 +240,15 @@ The list of afflictions is:
 \item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
 \item \textbf{Corroding 0/I/II} Applies a tier of injury every round. Can only be ended by specific items, jumping on water or removing the armor. Cannot be applied to unarmored.
 
-\item \textbf{Unconscious:} The character cannot do anything other than Will and Health checks. They can also make detection and sensing checks, but receive -10 on these checks. These checks can be made to wake up. The DL and the allowed check depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
+\item \textbf{Unconscious:} The character cannot do anything other than Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
 
-\item \textbf{Afraid:} Receives -1 Mental and cannot make a fight surge. The fear ends when the character succeeds on their Will check or becomes angry. 
-\item \textbf{Enraged:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will check or becomes afraid. 
+\item \textbf{Afraid:} Receives -1 Mental and cannot make a fight surge. The fear ends when the character succeeds on their Will test or becomes angry. 
+\item \textbf{Enraged:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will test or becomes afraid. 
 % \item \textbf{Charmed:} Behaves like everyone is a contact. Cannot coexist with afraid or enraged.
-\item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will check whenever the compulsion is severe. Outside of combat, can make a check once per hour.
+\item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will test to break out of domination whenever a command constitutes a severe compulsion. Outside of combat, can make a test once per hour.
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
-\item \textbf{Tired/Exhausted/Confused} Penalty of -1 mental/-2 mental/-4 mental. Becomes vulnerable to domination attacks. 
+\item \textbf{Tired/Exhausted/Confused} Penalty of -1 mental/-2 mental/-4 mental. Becomes vulnerable to domination attacks. It is possible to be confused without being tired or exhausted, but extreme exhaustion causes confusion.
 \item \textbf{Weakened/Malnourished} -1/-2 Health. -1/2 to IT.
 \item \textbf{Thirsty/Dehydrated} -1/-2 Health, -1/2 to IT
 \item \textbf{Sick} -2 Health. -2 to IT.
@@ -271,7 +269,7 @@ The survival chapter describes how health works during rest.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit.
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage of piercing or bladed weapons.
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
@@ -359,11 +357,15 @@ Other types of ranged attacks will be available depending on the type of weapon 
 
 \textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses strength with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
 
-Explosions have different magnitudes of effects depending on where things are in relation to the center. The center is where the axis of the spell's radius is located. For a circle, it is in the middle. For a cone or line, it is in the first space from where the explosion radiates. Anyone caught at the central 30\% of the radius receives the critical effect, while in the 30\% to 70\% range they are hit, and in the outer 30\% they are grazed. Always round the middle area up and the others down. If a creature occupies multiple spaces, apply the strongest effect. In most cases, only the central space will be a crit and only the outer ring will be a graze. It changes once radius goes over 7m, but most explosions are not that big.
+Explosions have different magnitudes of effects depending on where things are in relation to the center. The center is where the axis of the spell's radius is located. Anyone caught in the center of the radius receives the critical effect, while those in the middle are hit, and the ones in the edge are grazed. If a creature occupies multiple spaces, apply the strongest effect. For very large explosions (>5m radius), the critical and graze zones can be expanded (30\%/40\%/30\%). 
 
-Effects of an explosion that have a DL, such as pushing enemies, receive +5 against enemies in the critical area and -5 against those in the graze area. The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a graze, and 0 on a miss.
+The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a graze, and 0 on a miss. Effects of an explosion that have a DL, such as pushing enemies, receive +5 against enemies in the critical area and -5 against those in the graze area.
 
 \textbf{\large Sprays:} They are a type of explosion, with the same damage progression based on distance from the origin and the same DL definition mechanic. Sprays target all characters in range, which their reflex saves to escape, and move their characters according to their result. The attacker can choose the exact direction of the cone after the movement.
+
+\textbf{\large Huge projectiles:} Draw the projectile's trajectory and the places it occupies until stopped. This is defended by reflexes. 
+
+\textbf{\large Objects as explosions:} A large object can be considered an explosion. Draw its trajectory and the places it occupied until it stopped. This is defended b reflexes, but only the outer edge counts as a graze. 
 
 %--------------------- REFLEX
 
@@ -380,7 +382,7 @@ Effects of an explosion that have a DL, such as pushing enemies, receive +5 agai
 In all cases, if the character is interrupted, they cannot move after the interruption.
 }
 
-\section{Positioning and Tactics }
+\section{Positioning and Visibility }
 
 \textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
 
@@ -391,6 +393,12 @@ In all cases, if the character is interrupted, they cannot move after the interr
 \textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. One character no longer offers cover against ranged attacks to another if one is in front of the other against shots from the high ground. The melee reach is reduced by 1m unless the person on the lower ground targets the legs. The one on the high ground has the reach reduced to hit the legs of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. A difference in elevation is a defensive tactical resource where whoever has the high ground has a slight advantage.
 
 \textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses. 
+
+\textbf{Visibility:} is a temporary characteristic of a target. Can be good, bad, or zero. Bad visibility applies -2 visibility penalties to anyone targeting them, as if they were disoriented. Zero visibility means that the target is untargetable through vision. The terrain can offer visibility status to those in it through fog, smoke and dim light.
+
+\textbf{Darkness and light:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. Anyone in the light radius is in good visibility and anyone out is considered at zero visibility. 
+
+\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 2m by default and makes them zero visibility to those outside. Standing at the edge of the area makes them bad visibility to those outside, but allows good visibility for the one inside.
 
 \textbf{Underwater Combat:} Any attack that does not have the precise tag or the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m for small objects (the size of arrows), 5m for medium ones (the size of spears) and 8m for large ones (the size of ballista shots, since larger projectiles decelerate less). All explosions have half the radius, but blunt damage is doubled.
 
@@ -441,6 +449,8 @@ When Prestidigitation reaches 5, the cost of the standard action becomes 2. If i
 
 These are effects that play a role in controlling terrain, forcing actions out of oponents and potentially causing damage.
 
+This list shows the possible effects and how to handle them. The actual item list is in the gear section.
+
 \subsection{Fire}
 
 Fire is one of the most available ways to force characters to move. It is not a very fast source of damage, but it cannot be ignored.
@@ -449,22 +459,22 @@ Fire causes burn damage at the beginning of every round to anyone in it as an en
 
 A burning surface lasts at minimum until the end of combat, or until extinguished.
 
-Here are a few common flammable surfaces and the amount of burning damage they cause when covereing the same space as a character. 
+Here are a few common flammable surfaces and the amount of burning damage they cause when covering the same space as a character. 
 
 \begin{center}
 \begin{tabular}{||c c c||}
 \hline
 Fuel & Burn/round & Spread\\ [0.5ex]
 \hline\hline
-Dry grass, thatch & 8 & 1/round\\
-Oil film & 8 & 3/round \\
-Pitch, tar, resin & 12 & sticks \\
-Wood pyre, timber & 12 & 0 \\
+Dry grass, thatch & 5 & 1/round\\
+Burning cloth & 5 & 1/round\\
+Burning Oil & 8 & 1/round\\
+Wood pyre, timber & 8 & 0 \\
 \hline
 \end{tabular}
 \end{center}
 
-\textbf{Extinguishing:} Fires can be extinguished by muffling it, throwing water or with magic. Both muffling and throwing water require 4 AP and being in a burning space or adjacent to it. Not every fire is extinguishable through water or muffling within a 4 AP action.
+\textbf{Extinguishing:} Fires can be extinguished by muffling it, throwing water or with magic. Both muffling and throwing water require 4 AP by default and being in a burning space or adjacent to it. Not every fire is extinguishable through water or muffling. Some fires require more than 4 AP to be extinguished.
 
 Optional: \textbf{Fire spreads} each round to adjacent spaces that contain fuel. Adjust spread speed depending on fuel.
 
@@ -472,25 +482,26 @@ Optional: \textbf{Fire spreads} each round to adjacent spaces that contain fuel.
 
 \subsection{Gas}
 
-Gas can have several effects: Poison, explosion, suffocation, reduced vision radius and blindness. It lasts until the end of combat or dispersed somehow through wind. Muffling or extinguishing the source of the gas causes it to disappear in the beginning of the next round. Doing that costs 4 AP. Relocating the source moves the area somewhere else starting next round.  
+Gases can have several effects: Poison, explosion, suffocation, reduced visibility and blindness. It lasts until the end of combat or dispersed somehow through wind. Muffling or extinguishing the source of the gas causes it to disappear in the beginning of the next round. Doing that costs 4 AP. Relocating the source moves the area somewhere else starting next round.  
 
-\textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
+\begin{itemize}
+    \item \textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
+    \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Positioning and Visibility section.
+    \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
+    \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Use a reflex test to avoid it. Protective gear over the eyes also prevents blindness.
+    \item \textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
+\end{itemize}
 
-\textbf{Reduced vision:} Smoke reduces vision radius of anyone inside of it to 2m by default and makes them invisible (untargetable through vision, requires a different active sense) to those outside. Standing at the edge of the area allows bad visibility to attackers, making them disoriented when targeting someone inside.
 
-\textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. The effects may vary depending on the poison.
+\textbf{White Smoke:} affects visibility, but only suffocates in enclosed places filled by it. \textbf{Black Smoke:} Affects visibility and also cause suffocation.
 
-In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
-
-\textbf{Blindness:} Being inside at the beginning of the round causes blindness. Depending on the gas, a health test may be called. Protective gear over the eyes also prevents blindness.
-
-\textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
+\textbf{Smoke Spread:} smoke only spreads indoors. The spread is counted in minutes as how long it takes to fill a 10m by 10m room.
 
 \textbf{Wind:} Requires balance or strength test to avoid being pushed. Clears the other gases for the round. If the gas has an active source, it comes back once the wind stops.
 
 \subsection{Liquids}
 
-\textbf{Liquid Spread:} Smalls amounts of liquid (under 50 L) are considered to spread instantly and do so with the geometry of an explosion. Liquids spread around solids, not through them.
+\textbf{Liquid Spread and splash:} Smalls amounts of liquid (under 50 L) are considered to spread instantly and do so with the geometry of an explosion. Liquids spread around solids, not through them. Splashing a bucket of a liquid counts as a thrown ranged attack with 3m x MM range.  
 
 \textbf{Corrosion:} Being soaked in corrosive liquids cause a corrosive damage. The damage is multiplied by the amount of corrosive filled spaces the character is in.
 
@@ -503,7 +514,7 @@ In order to detect poison gas, use an appropriate knowledge test to recognize th
 
 \textbf{Traps:} Require detection tests. Gets Architecture or Survival knowledge bonus depending on where the trap is. Magical traps may use the appropriate magical knowledge.
 
-\textbf{Collapse:} Works like an explosion, but there is no crit area. Gets buried in the rubble unless the explosion grazes or misses. Escaping requires a Strength test.
+\textbf{Collapse:} Works like an object as an explosion. Gets buried in the rubble unless the explosion grazes or misses. Escaping requires a Strength test.
 
 \textbf{Jagged terrain:} causes crushing or piercing damage per movement. Balance test lowers the amount of damage.
 
@@ -566,7 +577,7 @@ The stealth test is done by the lowest stealth in the group. The group can choos
 
 If the stealth test happens, nobody detects the fugitives and the distance is far or greater, the chase is over. It is recommended to only use the highest detection in the group. 
 
-If the distance is still at close when hiding, the oponent has the option of leaving. If they don't, the fugitives will have to risk being detected again to sneak away in another stealth event to end the chase.
+If the distance is still at close when hiding, the opponent has the option of leaving. If they don't, the fugitives will have to risk being detected again to sneak away in another stealth event to end the chase.
 
 \subsection{Obstacles}
 
@@ -616,8 +627,6 @@ An event could be trying to hide in a specific spot, trying to pass through some
 \textbf{Smell:} is a passive sense. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
 
 \textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed to it. Projectiles that hit the character have their direction identified, not necessarily their source. Using only touch as an active sense makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
-
-\textbf{Darkness and Night:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. 
 
 \textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection against everything other than the distraction. A character that has used its action surge is automatically distracted.
 

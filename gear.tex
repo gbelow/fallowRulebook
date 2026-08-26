@@ -18,8 +18,8 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
-\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against oponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
-\item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum.
+\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against opponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
+\item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum, and normal attacks are not allowed.
 \item \textbf{Piercing:} Grazes behave like a miss. Deal half the amount of IL damage. Must exceed object RES by 2x to break them.
 \item \textbf{Bladed:} allows using the extra cut additional effect and can be sharpened.
 \item \textbf{Penetrating:} allows using the penetrating additional effect.
@@ -73,6 +73,8 @@ Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \hline
 \textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small\\
 & 15 & 4 & 16 & small & STR & draw, precise, slow && \\ [5pt]
+\hline
+\textbf{Club} & 15 & 8 & 0 & small & short & DEF, heavy I & 1 SP & small \\ [5pt]
 \hline
 \textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small\\
 & 15 & 0 & 0 & small & short & draw, DEF && \\ [5pt]
@@ -225,13 +227,14 @@ Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
 \hline
 \textbf{Crossbow} & 10 & 8 & 22 & 3+5 & two & 150m & reload, piercing, fast & 8 GP & medium \\
 \hline
-\textbf{Arbalest} & 10 & 10 & 26 & 3+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
+\textbf{Arbalest**} & 10 & 10 & 26 & 3+3T & two & 200m & reload, piercing, fast & 12 GP & large \\
 \hline
 \end{tabular}
 \end{table}
 \begin{multicols}{2}
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot.
+** Arbalests require 3 turns to be realoaded.
 
 % ** Can use artillery arrows.
 
@@ -483,66 +486,65 @@ Any of these can be hired, as long as they accept the job.
 
 These are items that can be used in combat. They play a role in controlling terrain, forcing actions out of oponents and potentially causing damage.
 
-\subsection{Flammables}
+\subsection{Flammables, Smokers}
 
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
-\item Oil flask - 250ml. Coats 3 adjacent hexes in flammable oil. 2 SP. small.
-\item Pitch pot - Burns for 15 burning damage and adheres. 4 SP. small.
-% \item Fire arrow - Cloth wrap soaked in oil, lit before firing. Ignites a flammable target on a hit. Negligible cost. small.
-\item Torch - Sustained flame for 1 hour; intensity 5 at contact. 1 CP. small.
+\item {Oil flask - 0.5L}. Flask that can be thrown to coat 1 space in flammable oil. Cannot be extinguished with water. Can be used to make a torch. \textit{Cost:} 2 SP. \textit{Bulk:} small. 
+\item \textbf{Pitch pot:} Pot of pitch with a fuse that can be thrown and burns for 12 burning damage per round and sticks to 1 space or target and produces smoke (black smoke, 2m radius, 1 min fill) This does not extinguish with water and requires 8 AP to be muffled. \textit{Cost:} 5 SP. \textit{Bulk:} Medium.
+\item \textbf{Smoke bundle:} Improvised. Damp greenery, dung, or straw rolled in cloth. Produces smoke (White smoke, 2m radius, 5 min fill). \textit{Cost:} 1 CP. \textit{Bulk:} Medium.
+\item \textbf{Torch} - Improvised. Gives 5m light radius when lit, requires an oil flask to burn for 4 hours. Can be used to block attack at RES 10. Lighting it is a DL -2 exploration test. \textit{Cost:} 1 CP. \textit{Bulk:} small.
 \end{itemize}
 
-\subsection{Smoke}
-
-Sources: smoldering damp greenery, dung, pitch, or oil. A covered brazier produces sustained smoke. The smoke grenade (see Magical Items) produces the effect without fuel.
 
 \subsection{Poisons}
 
 \textbf{Poisons} apply an effect to the target. To resist it, the victim must make a Health test. The amount of poison applied is determined by the method of application (some methods may increase the amount of poison applied).
 
-Poisons can be delivered a through cutting injuries, ingestion, or inhalation. Each additional dose of the poison a target takes increases the Health DL by 3/2/1 for every additional dose. 
+Poisons can be delivered a through cutting injuries, ingestion, or inhalation. Each additional dose of the poison a target takes increases the Health DL by 3/2/1.
 
 \textbf{Ingestion:} Poison must be eaten. 
 
 \textbf{Inhalation} poisons dispersed as smoke affect everyone in the cloud at their normal DL, regardless of size.
 
-\textbf{Cutting injuries:} Tier 1+ wounds from Cutting damage apply the full effect of the poison. Tier 0 decrease DL by 3. Inhalation applies the normal DL, independent of creature size.
+\textbf{Cutting injuries:} Tier 1+ wounds from Cutting damage apply the full effect of the poison. Tier 0 decrease DL by 3 and higher tiers increase it by 1 per tier above 1. 
+
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Anticoagulant Poison: adds +1 bleed to any attack. 5 GP for a vial with 10 applications and light weight.
-    \item Paralytic Poison: DL 5 health to avoid becoming immobile within 20 turns on a graze or in 10 turns on a miss. Paralysis lasts for 1 hour/ 4 hours respectively.
-    \item Necrotic Poison: 
-    \item \item Soporific Poison: Inhalation or ingested. Target must make a DL 5 Health save. After 2 minutes, the target falls Unconscious for 1 hour. Taking damage or being vigorously shaken awakes the target.
+    \item \textbf{Anticoagulant Poison:} adds +1 bleed to any attack. 5 GP for a vial with 10 applications and light weight.
+    \item \textbf{Paralytic Poison:} DL 5 health to avoid becoming immobile within 20 turns on a graze or in 10 turns on a miss. Paralysis lasts for 1 hour/ 4 hours respectively.
+    \item \textbf{Necrotic Poison:} Character must make a DL 8 Health test in the next exploration turn. On a miss, they receive 5 IL. On a graze, 2. The effect does not wear off until a hit is scored.
+    \item \textbf{Soporific Poison:} Inhalation or ingested. Target must make a DL 5 Health test. On a graze or miss, after 2 minutes, the target falls Unconscious for 1 hour. The target will awake if damaged, but will fall asleep again once danger ends.
 \end{itemize}
 
-\subsection{Caltrops and traps}
+\subsection{Traps}
 
 These make a position costly to hold or cross, forcing a turtling enemy to move.
 
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
-\item Caltrops - A scattered space. Anyone entering above careful movement makes a reflex test (DL 3) or suffers a small piercing wound (T0-T1) and ends their movement. Mounted or unshod creatures roll at +2 DL. 1 SP covers one space. small.
-\item Stakes - Sharpened fixed stakes. Entering the space without care deals a piercing wound (T1). Blocks cavalry outright. 2 SP per space. medium.
-\item Tripwire - A reflex test (DL 2) or the character falls prone. 1 CP. small.
-\item Pit - Open or concealed. Reflex (DL by cover) to avoid, or fall and take falling damage. Dug with a shovel.
+\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 15 piercing damage to the leg. 1 SP covers one space. small.
+% \item Stakes - Sharpened fixed stakes. Work like a spear's braced attack. 2 SP per space. medium.
+\item \textbf{Tripwire:} An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5. 1 CP. small.
+\item \textbf{Pit:} Detection DL to avoid falling in.
+\item \textbf{Rolling log:} 1 ton of wood released downhill along a path. Treat as a huge projectile. Deals 30 blunt damage and pushes with a DL of 30.
 \end{itemize}
 
-\subsection{War engines and vehicles}
+% \subsection{War engines and vehicles}
 
-A vehicle or large rolling object moving along a line is resolved as an explosion on a line (see Interactions with objects, in Combat): each space in its path, occupants make a reflex test to dodge; on failure they suffer impact damage, estimated at 5-10 per expected injury tier by mass and speed, and are pushed one space. This is the mundane means of breaking a dense formation.
+% A vehicle or large rolling object moving along a line is resolved as an explosion on a line (see Interactions with objects, in Combat): each space in its path, occupants make a reflex test to dodge; on failure they suffer impact damage, estimated at 5-10 per expected injury tier by mass and speed, and are pushed one space. This is the mundane means of breaking a dense formation.
 
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
-\item Chariot - Drawn by one or two animals. Charges in a straight line at running speed; high impact, and the rider may attack from the platform. Requires a trained driver. 30 GP. cargo.
-\item Ram - A suspended timber driven against a gate, wall, or rank. Resolves as a moving object against a fixed target: impact applies to both, and the target tests breakage against its RES. 10 GP. cargo.
-\item Rolling log or boulder - Released downhill along a path. Treat as a line explosion of a large object: devastating impact, long path, difficult to dodge. Free where terrain allows; setup takes a turn and labor.
-\end{itemize}
+% \begin{itemize}
+% \setlength\itemsep{0em}
+% \setlength{\parskip}{0em}
+% \item Chariot - Drawn by one or two animals. Charges in a straight line at running speed; high impact, and the rider may attack from the platform. Requires a trained driver. 30 GP. cargo.
+% \item Ram - A suspended timber driven against a gate, wall, or rank. Resolves as a moving object against a fixed target: impact applies to both, and the target tests breakage against its RES. 10 GP. cargo.
+
+% \end{itemize}
 
 \section{Special Items}
 
@@ -563,7 +565,7 @@ A vehicle or large rolling object moving along a line is resolved as an explosio
     \item Soul Stone - Used to preserve souls - 200 GP.
     \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.    
     \item Smoke Grenade - An item that can be thrown or attached to a projectile and produces smoke. 1 GP. Weight 1 for 5 units. 
-    \item Explosive - Used for fire abilities. When ignited, it deals 5 fire damage with PEN 5 per turn of contact. 5 SP for 1 charge. 5 charges weigh 1. One charge can be affixed to an arrow.
+    \item Explosive - Used for fire abilities. When ignited, it deals 5 burning damage with PEN 5 per turn of contact. 5 SP for 1 charge. 5 charges weigh 1. One charge can be affixed to an arrow.
     % \item Sharpening Sheath - Reduces the cost of the Sharpen spell on a weapon within the sheath to 1 AP - Weight 2 - 50 GP.
 \end{itemize}
 
@@ -600,7 +602,6 @@ Potions add an effect to the character for a certain duration. The effects of po
     \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 PP. Medium
     \item Vial: Holds 50ml of any liquid. 5 CP. small
     \item Alcohol - Used for fire skills. 2 PP per 250ml (5 charges). 
-    \item Torch - Gives 5m of visibility in the dark. Lasts 4 hours. 
     \item Sharpening Stone - A sharpening stone. 2 PP. small 
     \item Fur Cloak - Improves resistance to cold wear by +3. 1 GP. medium
     
