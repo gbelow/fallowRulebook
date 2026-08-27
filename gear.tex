@@ -16,7 +16,7 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Handle:} This attack represents the handle of the weapon.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x MM. Long-range attacks have an extended range of 1m x MM per level and cannot be used in grappling combat.  
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
-\item \textbf{STR x:} Strength requirement.
+\item \textbf{STR x:} Strength requirement. Cannot use quick shot unless STR is +3 points higher than the requirement.
 \item \textbf{Hook:} This attack can be used to knock down.
 \item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against opponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
 \item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum, and normal attacks are not allowed.
@@ -219,22 +219,21 @@ Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
 \hline
 \textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\ 
 \hline
-\textbf{Short Bow*} & 10 & 6 & 18 & 4 & two & 100m & piercing, fast & 5 GP & medium\\
+\textbf{Short Bow*} & 10 & 6 & 18 & 5 & two & 100m & piercing, fast & 5 GP & medium\\
 \hline
-\textbf{Long Bow*} & 10 & 8 & 22 & 5 & two & 150m & STR 13, piercing, fast & 8 GP & large\\
+\textbf{Long Bow*} & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, fast & 8 GP & large\\
 \hline
-\textbf{Heavy Bow* } & 10 & 10 & 26 & 5 & two & 200m & STR 16, piercing, fast & 10 GP & large\\
+\textbf{Heavy Bow* } & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, fast & 10 GP & large\\
 \hline
-\textbf{Crossbow} & 10 & 8 & 22 & 3+5 & two & 150m & reload, piercing, fast & 8 GP & medium \\
+\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, fast & 8 GP & medium \\
 \hline
-\textbf{Arbalest**} & 10 & 10 & 26 & 3+3T & two & 200m & reload, piercing, fast & 12 GP & large \\
+\textbf{Arbalest} & 10 & 10 & 26 & 4+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
 \hline
 \end{tabular}
 \end{table}
 \begin{multicols}{2}
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot.
-** Arbalests require 3 turns to be realoaded.
 
 % ** Can use artillery arrows.
 
@@ -527,9 +526,9 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
-\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 15 piercing damage to the leg. 1 SP covers one space. small.
+\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 15 piercing damage to the leg. \textit{Cost:} 1 SP covers one space.\textit{Bulk:} small.
 % \item Stakes - Sharpened fixed stakes. Work like a spear's braced attack. 2 SP per space. medium.
-\item \textbf{Tripwire:} An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5. 1 CP. small.
+\item \textbf{Tripwire:} An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5. \textit{Cost:} 1 CP. \textit{Bulk:} small.
 \item \textbf{Pit:} Detection DL to avoid falling in.
 \item \textbf{Rolling log:} 1 ton of wood released downhill along a path. Treat as a huge projectile. Deals 30 blunt damage and pushes with a DL of 30.
 \end{itemize}

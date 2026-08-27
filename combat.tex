@@ -21,12 +21,13 @@
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want to use later in the same round.
 
-\textbf{Action surge:} All characters are entitled to one action surge per round. There are 3 basic types of action surges: movement, combat, and reaction.
+\textbf{Action surge:} All characters are entitled to one action surge per round. There are 3 basic types of action surges: movement, combat, reaction and focus.
 
 \begin{itemize}
     \item Movement surge: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
-    \item Combat surge: 3 STA to gain 6 AP that can be used for melee and ranged attacks or movement and must be used immediately.
+    \item Combat surge: 3 STA to gain 6 AP that can be used for attacks or movement and must be used immediately.
     \item Reaction surge: 3 STA to gain 6 AP, but can only use reactions and rest until the end of the round.
+    \item Focus surge: 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons and casting spells.
 \end{itemize}
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 6 AP minus any negative AP they had. Any unspent AP is lost. AP loss can be prevented by pooling AP from both rounds to rest, which happens at the beginning of the next round.
@@ -242,7 +243,7 @@ The list of afflictions is:
 
 \item \textbf{Unconscious:} The character cannot do anything other than Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
 
-\item \textbf{Afraid:} Receives -1 Mental and cannot make a fight surge. The fear ends when the character succeeds on their Will test or becomes angry. 
+\item \textbf{Afraid:} Receives -1 Mental and cannot make a combat surge. The fear ends when the character succeeds on their Will test or becomes angry. 
 \item \textbf{Enraged:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will test or becomes afraid. 
 % \item \textbf{Charmed:} Behaves like everyone is a contact. Cannot coexist with afraid or enraged.
 \item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will test to break out of domination whenever a command constitutes a severe compulsion. Outside of combat, can make a test once per hour.
@@ -348,11 +349,11 @@ Other types of ranged attacks will be available depending on the type of weapon 
 
 \textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons gain range based on STR.
 
-\textbf{Shoot:} Basic ranged attack with a shooting weapon.
+\textbf{Shoot:} Basic ranged attack with a shooting weapon. Requires Focus surge to use.
 
-\textbf{Snipe:} Modifies the shot to cost an additional 2 AP to shoot with a -1 distance penalty instead of -2 for the first 50m.
+\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP to shoot with a -1 distance penalty instead of -2 for the first 50m.
 
-\textbf{Quick Shot:} Modifies the shot to cost 1 AP less to shoot, but incurs a -3 penalty in accuracy and -3 in distance instead of -2.
+\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less, but incurs a -3 penalty in accuracy and -3 in distance instead of -2. 
 }
 
 \textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses strength with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
@@ -521,20 +522,25 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \section{Chases}
 
-The chase starts when everyone in a party decides to run away. It always starts at the beginning of a new round. Any character that cannot run for whatever reason at the beginning of the round will prevent the chase to begin, unless they get left behind. If they do, resume the fight before the chase.
+Chase scenes happen when two or more teams are at risk of entering combat. It can happen as both teams approach each other or as they are chasing each other.
 
-A chase is an event to decide the increase or decrease of the distance between two parties while they fight. There are four distance tiers: Very close, close, far and very far.
+\textbf{Escape:} The chase starts when everyone in a party decides to run away. It always starts at the beginning of a new round. Any character that cannot run for whatever reason at the beginning of the round will prevent the chase from beginning, unless they get left behind. If they do, finish the fight, and then start the chase.
+
+\textbf{Approach:} This starts when characters have range to attack the other team. The weapon range will decide at what distance both teams start from each other.
+
+There are four distance tiers: Combat, Shooting, Far and Very far.
 
 \begin{itemize}
-    \item \textbf{Combat:} This is under 50m distance, which is combat range. Can be smaller when indoors (a room) or in places with many obstacles.
-    \item \textbf{Close:} This is from around 50m to 200m distance. This range can be smaller in a city, a dense forest or any other place with lots of hiding spots and obstacles.
+    \item \textbf{Combat:} This is under 50m distance. Can be smaller when indoors (a room) or in places with many obstacles.
+    \item \textbf{Shooting:} This is from around 50m to 200m distance. This range can be smaller in a city, a dense forest or any other place with lots of hiding spots and obstacles.
     \item \textbf{Far:} This is from around 200m to 500m. This is the limit of what can be seen in many places. It will be smaller in places with many obstacles and hiding spots.
     \item \textbf{ Very Far:} This is from 500m and beyond. This distance is only used in open terrain.
 \end{itemize}
 
-\textbf{Chase tests:} Chase actions are tests. On a success, decide to increase or decrease distance. On a failure, opponent decides. 
+\textbf{Chase actions:} Chase actions can be running and scouting, ranged combat or hiding. 
 
 \textbf{Escaping:} There are three ways to escape:
+
 \begin{itemize}
     \item \textbf{Outrunning:} If the distance is already far or very far and the winner decides to increase the distance, the chase is over.
     \item \textbf{Hiding:} If the distance is at least far and there is a stealth event, in which the quarry succeeds, it escapes.
@@ -543,55 +549,53 @@ A chase is an event to decide the increase or decrease of the distance between t
 
 \subsection{Running}
 
-The simplest case for a chase is running in an open field. This is the breakdown:
+Running is how both teams get closer or farther from each other. It works in rounds, where both teams compare their speeds, and the fastest decides to close the distance or move away.
 
-\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint. Whoever has the highest running speed wins.
+\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint, spending STA to do it. Whoever has the highest running speed wins. A draw does not change distance tier, but spends STA from the movement surge.
 
-\textbf{Running at longer ranges:} This is a sustained pace running. The running speed is STA + AGI. Whoever is higher wins. 50\% chance on a draw. If the character is bleeding, it bleeds 3x.
+\textbf{Running at longer ranges:} This is a sustained pace running. The running speed is STA + AGI. Whoever is higher wins. 50\% chance on a draw. If the character is bleeding, it bleeds as if they have used an action surge.
 
-\textbf{Catching:} The quarry is caught when its does not have STA to run, when it voluntarily turns back to fight or when it ends its turn with any mobility affliction while in very close range. In this case, the chase ends and a combat or social situation starts.
+\textbf{Catching:} The quarry is caught when one of its members does not have STA to run, or when it ends a round with any mobility affliction while in combat range. In this case, a combat or social situation starts. When the combat starts, the tokens can be arranged in any way, as long as the distance from the character who ended the chase is within 10m of one enemy and within 30m of any member of their team. If the catch happened over a grapple, the characters involved start adjacent to each other.
 
-\textbf{Fight on the run:} When one side wins on a test, but the distance is already very close, all pursuers and defenders get 6 AP. It is considered that everyone has range against everyone. 
-
-\textbf{Shot and run:} Whichever side wins can get 6 AP to perform ranged attacks instead of changing the distance when winning in the chase. The quarry can be allowed to increase distance and receive 6 AP, while the pursuers receive 12 AP to attack them. If the starting distance is combat, the distance penalty for ranged attacks is at 30m mark.
+\textbf{ Routing :} When the pursuers are in combat range, but the quarry is not caught yet, everyone gets 6AP, but the pursuers have +2 bonus to all uses of strike,  accuracy and cunning. This works like normal combat, but no grid is pulled yet. Everyone is considered to be in range to attack or defend anyone. Once the AP are spent, the round is over and a new running test is made.
 
 \textbf{Group chase:} In a group chase, use the speeds of the slowest in each group as the speed for the other team to beat.
 
-\textbf{Pursuers win:} Not all the fugitives have to stay with their slow ally. In that case, they can leave them behind. From now on, they stay at 1 distance away from their slow integrant. They can come back to aid, but only in the next turn.
+\textbf{Separating the group:} If one participant in the group is too slow, it is possible to leave them behind. From now on, the distant members are one distance tier away from their group. If combat starts, the distant group takes 2 full rounds to arrive, and when they do, they do it at 30m distance from a chosen ally.
 
-\textbf{Fugitives win:} The pursuers can choose everyone who is faster than the slowest fugitive to catch up. The team is split and their slow integrants stay behind. They will catch up, but only when the chase ends or the vanguard decides to stay behind.
+\subsection{Ranged Combat}
 
-Whenever a combat is going on and a detached party catches up, they do it at 30m distance from their ally.
+This stage can only happen at Shooting distance.
 
-\subsection{Hiding}
+One team may decide to fight to attempt to injure the other before they get closer or to snipe enemies early. There are two possible situations: Both teams shoot at each other or one team shoots and the other attempts to close in. Either way, the distance penalty used is that of 50m. Everyone is targetable by anyone, except when one whole team is invisible to the other.
 
-Hiding can be done at any distance greater than combat.
+\textbf{Both teams shoot each other.} This happens until one team runs out of ammo, someone changes strategy and decides to run, or a whole team dies. Everyone has 12 AP to spend as they like per round.
 
-The fugitives will look for a place to hide using their detection skill. It needs to make sense with the scene they are in. They will describe what they are looking for. The odds that such a place exists will be a test with DL between around -5 and 20, where 0 is obvious, 5 is easy, 10 is difficult, 20 is near impossible.
+\textbf{One team attempts to approach.} The approaching team gets 6 AP and must spend a movement surge for running. The shooting team gets AP depending on the running speed of the slowest character of the approaching team. They get 18 AP for running speed 2m per 2 AP, 12 AP for 3m, and 9 AP for 4m or higher (Optionally, $36/speed$ AP). At the end, both teams will be in combat range. The approaching team can split and leave someone behind to shoot, in which case they get the same amount of AP as the attackers. 
 
-The fugitives can only describe one thing that they are looking for per round.
+Ranged combat can happen over terrain features, benefiting either team.
 
-If the place is not found, resume the chase with running.
+\textbf{Cover:} If a character has cover, they can decide not to leave it and stay untargetable, but then they cannot target any enemy with attacks or spells. For the ones who decide to shoot or move, cover is partial, with a bonus of +3 to reflexes by default.
 
-The stealth test is done by the lowest stealth in the group. The group can choose to hide partially to increase the stealth value and leave someone as bait.
+\textbf{Visibility:} If visibility is affected by fog or darkness, use bad visibility if at any point the opponent becomes targetable. In case they never become visible, they stay at zero visibility. 
 
-If the stealth test happens, nobody detects the fugitives and the distance is far or greater, the chase is over. It is recommended to only use the highest detection in the group. 
+\subsection{Hiding and Terrain}
 
-If the distance is still at close when hiding, the opponent has the option of leaving. If they don't, the fugitives will have to risk being detected again to sneak away in another stealth event to end the chase.
+\textbf{Scouting:} The fugitives can look for a place to hide or a vantage point for combat using their detection skill. Only the fugitives can do this, since they are dictating where everybody is running. They will describe what they are looking for. The odds that such a place exists will be a test with DL between around -5 and 20, where 0 is obvious, 5 is easy, 10 is difficult, 20 is near impossible. Harder tests mean that the place is either very hard to find through some camouflage or are just very far away.
 
-\subsection{Obstacles}
+The fugitives can only describe one thing that they are looking for per round. If the place is not found, resume the chase with running and adjust the distances. The terrain feature is at a set distance tier from where the characters are, and is approached one tier per round. 
 
-Either the fugitives look for obstacles to traverse or the GM puts them in place. The fugitives can describe what they are looking for and make a detection test to find it, like with a hiding spot. The fugitives can also look for terrain that will give them advantages in a fight and reposition there. The players are encouraged to draw the map themselves on a success.
+The terrain features can be: a bunch of objects to use as cover, buildings to hide in or barricade, a group of potential allies, a hole on the ground, a choke point, a river, a cloud of fog, a forest or anything else imaginable.
 
-The fugitives can only describe one thing that they are looking for per round.
+Some terrain features can be obstacles. Traversing an obstacle works just like running, but with a balance, climb or swim test to determine the ability to traverse. Again, use the lowest skill in the group to determine traversal ability.
 
-Traversing an obstacle works just like running, but with a balance, climb or swim check to define speed. Opponents can attack in melee if they win the chase during an obstacle and they can also decide not to traverse, but pepper them with ranged attacks.
+\textbf{Hiding:} Hiding can be done at any distance greater than Combat in a Chase scene.
 
-\textbf{Obstacles:} Use balance to run on rooftops. Use climb to go where you cant be followed. Jump out of high places and land safely while others cant. Swim when others cant follow. 
+\textbf{Hiding at far distances:} If a hiding spot is entered at far or very far distances, the chase is over. Whether the pursuers will be able to follow depends on interpretation of the scene in question. Maybe the fugitives have disappeared into the forest and need to be tracked, but maybe they are inside a house and cant leave without being seen. It all depends on the scene.
 
+\textbf{Hiding at shooting distances:} The stealth test is done by the lowest stealth in the group, but splitting the group is possible. Stealth is done against the best of the opponent's detection. The hiding spot in question is relevant, since it can grant stealth bonuses. On a detection hit or crit, the pursuers find the lowest stealth character and anyone that is with them. On a miss or graze, the pursuers follow some wrong track or give up.
 
 \section{Stealth and Subterfuge}
-
 
 \skill{Stealth}{ Awareness }{ Skill to remain unnoticed. It involvels stepping lightly, moving with appropriate timing, keeping to the shadow, avoiding making noise. 
 
