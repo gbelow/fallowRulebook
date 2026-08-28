@@ -24,14 +24,9 @@ Take the other knowledges seriously. Create skills and gear to go with them.
 
 Health: have abilities that use health as skill.
 
-Notice what actually forces your spell design: reach rules, ritual universality ("any magic can be
-  attempted as a ritual"), material resonance requirements, theory-accelerated learning,
-  gods-as-external-caster.
+review stealth system
 
-  spell surge? can spells be used with surge? stamina cost of spells?
-
-  spirit strike scales with size? 
-
+review contacts, reputation and factions
 
 
 think about mundane tools to break turtling:
@@ -43,24 +38,8 @@ create more exploration tools -
 
 issues:
 Expand on standard knowledges and their uses to justify investment in them.
-The social→combat bridge is implied but not wired 
-Charmed is commented out in the afflictions list, so seduction→charmed currently has
-  no mechanic — either restore it or define it
-But intrigue.tex never
-  references the affliction mechanics — the emotional outcome is described in fiction
-  only. Wiring it ("a successful intimidation applies the Afraid affliction for the
-  scene") would make social actions directly produce combat-relevant conditions.
-
-  The vocabulary sells the wrong design. "Interpretation Bonus," "good acting," "how
-  invested the player is in the interaction and how they show that in roleplay" — the
-  chapter's own language describes an eloquence contest, while the intent (and most of the
-  ladder: "reading the scene well and coming up with practical game solutions") describes a
-  scene-reading contest. I misread the design because the text misdescribes it. So yes —
-  you need to be clearer, and the fix is cheap.
 
   improve comfort rules. there is no guideline to define its value
-  make examples of damage for heavy objects and trample.
-  make the simple version of the explosion the first to be said and the percentual damage version second, so that the simple version is the default.
 
 
 # product workflow - how to turn this into a game

@@ -14,10 +14,10 @@
 
 \textbf{ Feint :} is a cunning against cunning test between two characters in melee. It must be initiated during either character's turn. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP. Feint forces spending available AP, but cannot cause negative AP and cannot force an action surge.
 
-\textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 3 AP to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
-
-\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it does not detect its attacker before it begins attacking.
+\textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 4 AP +1STA to Rest and to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, such as the creature's vulnerable areas, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 }
+
+\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it does not detect its attacker before it begins attacking. 
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want to use later in the same round.
 
@@ -26,19 +26,19 @@
 \begin{itemize}
     \item Movement surge: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
     \item Combat surge: 3 STA to gain 6 AP that can be used for attacks or movement and must be used immediately.
-    \item Reaction surge: 3 STA to gain 6 AP, but can only use reactions and rest until the end of the round.
+    \item Reaction surge: 3 STA to gain 6 AP, but can only use reactions until the end of the round.
     \item Focus surge: 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons and casting spells.
 \end{itemize}
 
-\textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 6 AP minus any negative AP they had. Any unspent AP is lost. AP loss can be prevented by pooling AP from both rounds to rest, which happens at the beginning of the next round.
+\textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 6 AP minus any negative AP they had. Any unspent AP is lost.
 
-\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting. 
+\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting during their own turn. The AP loss from ending a round without spending all AP can be prevented by pooling AP from both rounds to Rest, which happens at the beginning of the new round.
 
 \textbf{Environmental and ongoing effects:} Any effect that occurs periodically per turn or is environmental has its effect applied at the beginning of the round.
 
 \textbf{Negative AP:} AP can become a negative number, but never as a result of performing an action or reaction. When the character recovers their AP, they must deduct the negative value from their maximum.
 
-\textbf{Suffocation:} If the character cannot breathe at the beginning of a round, they lose 1 STA and cannot rest. If STA goes negative, they drop unconscious. If it goes under -10, they die.
+\textbf{Suffocation:} If the character cannot breathe at the beginning of a round, they lose 1 STA and cannot Rest. If STA goes negative, they drop unconscious. If it goes under -10, they die.
 
 % \textbf{Delay the turn:} The player can spend 1 AP during their turn to delay it. This allows the character to regain their token and play again within the same round. AP regeneration only occurs once per round.
 
@@ -241,11 +241,12 @@ The list of afflictions is:
 \item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
 \item \textbf{Corroding 0/I/II} Applies a tier of injury every round. Can only be ended by specific items, jumping on water or removing the armor. Cannot be applied to unarmored.
 
-\item \textbf{Unconscious:} The character cannot do anything other than Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
+\item \textbf{Unconscious:} The character cannot do anything other than Rest and Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
 
 \item \textbf{Afraid:} Receives -1 Mental and cannot make a combat surge. The fear ends when the character succeeds on their Will test or becomes angry. 
 \item \textbf{Enraged:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will test or becomes afraid. 
-% \item \textbf{Charmed:} Behaves like everyone is a contact. Cannot coexist with afraid or enraged.
+% \item \textbf{Charmed:} Receives -1 Mental and behaves like permanently distracted. Cannot coexist with afraid or enraged.
+% \item \textbf{Distracted:} Receives -3 to Detection and -3 Cunning.
 \item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will test to break out of domination whenever a command constitutes a severe compulsion. Outside of combat, can make a test once per hour.
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
@@ -257,7 +258,7 @@ The list of afflictions is:
 
 \skill{Health}{ CON }{ Represents how strong the character's body is against diseases, poisons, exposure to the elements, and how quickly they recover from injuries and exhaustion. 
 
-The survival chapter describes how health works during rest.
+The survival chapter describes how health works for healing.
 }
 
 \section{Melee Combat}
@@ -488,7 +489,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 \begin{itemize}
     \item \textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
     \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Positioning and Visibility section.
-    \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
+    \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a Rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
     \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Use a reflex test to avoid it. Protective gear over the eyes also prevents blindness.
     \item \textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
 \end{itemize}
@@ -563,7 +564,7 @@ Running is how both teams get closer or farther from each other. It works in rou
 
 \textbf{Separating the group:} If one participant in the group is too slow, it is possible to leave them behind. From now on, the distant members are one distance tier away from their group. If combat starts, the distant group takes 2 full rounds to arrive, and when they do, they do it at 30m distance from a chosen ally.
 
-\subsection{Ranged Combat}
+\subsection{Skirmish}
 
 This stage can only happen at Shooting distance.
 
@@ -572,6 +573,8 @@ One team may decide to fight to attempt to injure the other before they get clos
 \textbf{Both teams shoot each other.} This happens until one team runs out of ammo, someone changes strategy and decides to run, or a whole team dies. Everyone has 12 AP to spend as they like per round.
 
 \textbf{One team attempts to approach.} The approaching team gets 6 AP and must spend a movement surge for running. The shooting team gets AP depending on the running speed of the slowest character of the approaching team. They get 18 AP for running speed 2m per 2 AP, 12 AP for 3m, and 9 AP for 4m or higher (Optionally, $36/speed$ AP). At the end, both teams will be in combat range. The approaching team can split and leave someone behind to shoot, in which case they get the same amount of AP as the attackers. 
+
+\textbf{Split team combat:} If two teams are engaging in combat range, anyone at shooting range can still shoot from far away. They have their turn normally and are considered to be at 50m distance from anyone for the ranged penalties. If someone wants to go after them, they must end the round 30m away from any enemies (or their corpses). The combat just gets two areas within the same round order, where the new combat area starts with the two groups 30m apart.
 
 Ranged combat can happen over terrain features, benefiting either team.
 
@@ -632,7 +635,8 @@ An event could be trying to hide in a specific spot, trying to pass through some
 
 \textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed to it. Projectiles that hit the character have their direction identified, not necessarily their source. Using only touch as an active sense makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
 
-\textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection against everything other than the distraction. A character that has used its action surge is automatically distracted.
+\textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection and cunning against everything other than the distraction. 
+% A character that has used its action surge is automatically distracted.
 
 \textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's DL. If Detection is equal or higher than DL, they find it. 
 
@@ -694,13 +698,11 @@ Here's a list of possible modifiers. Many modifiers can be combined.
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection.
 
-
-
 \section{Morale}
 
-Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using will proficiency.
+Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using the will skill.
 
-\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the terror of the moment. A graze leaves the character frightened, and a failure activates the character's limit stress action.
+\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the DL of the terror of the moment. A graze leaves the character frightened, and a failure activates the character's limit stress action.
 
 DL = -2 + aggravating factors
 
@@ -716,12 +718,23 @@ Aggravating factors: \\
     \item Monstrous presence: variable. Depends on presence.
 \end{itemize}
 
-\textbf{Intimidation:} A character can make an intimidation attempt as part of an action in combat. This increases the value of the DL of the next morale test by the character's charisma. The intimidating action costs 2 AP and can be made by anyone in the team after causing a T1 injury or higher to an enemy. 
+\subsection{Social actions}
 
-\textbf{Taunt:} In combat, a taunt is an attempt to make the target infuriated. It costs 2 AP and must be made immediately after someone in the team is missed by a direct attack or receiving zero damage from one. Add charisma to the morale test of the opposing side in the next morale check.
+Every social action costs 4 AP +1 STA and counts as a Rest action.
 
-Multiple intimidations and taunts don't stack. Only the highest charisma 
+\textbf{Intimidation:} A character can make an intimidation attempt in combat. This increases the value of the DL of the next morale test by the character's charisma. This can be done during a combat surge.
 
+Multiple intimidations and taunts don't stack. Only the highest charisma counts.
+
+\textbf{Taunt:} In combat, a taunt modifies the next morale test to make enemies enraged instead of afraid. 
+
+\textbf{Surrender:} An attempt to surrender. It is a persuasion test against the highest insight in the enemy team. On a hit or crit, nobody in the enemy team is allowed to target this character. Being perceived holding a weapon, attacking anyone, trying to hide, running away or doing anything to help their own team cancels the effect and increases the difficulty of surrendering by 5 for any subsequent attempts of anyone in the whole team.
+
+% \textbf{Feign Death:} The character becomes immobile and prone. Anyone trying to target them has to hit or crit on an insight or cunning test against deception, or be forced to do something else. WHAT ABOUT CRUELTY STABS? WHAT ABOUT THROWING AOE ON THE SIDE? WHAT ABOUT AFTER COMBAT? 
+
+% \textbf{Truce:} A persuasion test against the highest between insight or cunning in the enemy team to attempt to stop the fight. Only intelligent creatures capable of communication can accept this.
+
+\textbf{Negotiation:} This is a persuasion test against the highest between insight or cunning of the leader of the opponent team. It is a social test and adds IB, just like as explained in the intrigue section. Only intelligent creatures capable of communication can accept this. The point of negotiation is to promote a truce or demand capitulation. If the truce is accepted or capitulation is offered, the combat ends.
 
 %----------------
 
