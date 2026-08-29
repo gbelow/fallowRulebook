@@ -14,32 +14,33 @@ riding - rules about taming and riding animals. Maybe a system of mounts and the
 
 RETHINK MAGIC SYSTEM
 
-Animancy - think about the morale system and how it can be integrated.
+Animancy - think about the morale system and how it can be integrated. --- done
 
 Biomancy - think about how mutations can go wrong
 
-Shamanism - think about how to find spirits: exploration turns, touching objects, finding auras.
+Shamanism - think about how to find spirits: exploration turns, touching objects, finding auras. --- 
 
 Take the other knowledges seriously. Create skills and gear to go with them.
 
-Health: have abilities that use health as skill.
-
-review stealth system
+Health: have abilities that use health as skill. --- done
 
 review contacts, reputation and factions
 
 
 think about mundane tools to break turtling:
 fire, light, poison, slippery surfaces, trample mechanics, falling objects, etc. 
-create magical versions of those tools.
+create magical versions of those tools. 
 
 create more exploration tools - 
 
+morale during stealth, exploration and chase
+
 
 issues:
-Expand on standard knowledges and their uses to justify investment in them.
 
-  improve comfort rules. there is no guideline to define its value
+ - many day resting fast forward mechanic
+
+ - explaining wear economy
 
 
 # product workflow - how to turn this into a game

@@ -3,149 +3,208 @@
 % \chapter{Survival in the hot}
 \begin{multicols}{2}
 
-\section{Character Conditions}
-
-\subsection{Basic Concepts}
+\section{Basic Concepts}
 
 The survival markers are \textbf{Hunger, Thirst and Exhaustion.} A character must eat to regain energy, drink water to stay hydrated, and rest to alleviate exhaustion.
 
 \textbf{Exploration Turn (ET):} It is convenient to divide a day into blocks of 4 hours because it splits a day into 6 parts. The day has 24 hours: 8 hours of travel, 8 hours of sleep, 4 hours to set up camp and search for food, and 4 hours to fix anything that goes wrong or do something else. Each block of 4 hours is considered an exploration turn.
 
-\textbf{Conceptual Map:} The system was designed so that exploration actions could be performed on a conceptual map. Such a map consists of nodes. Each of them can have several events attached. The events can be accessible to characters by being present in the node and achieving good results in exploration tests.
+\textbf{Point crawl:} The system was designed so that exploration actions could be performed on a point crawl map. Such a map consists of nodes. Each of them can have several events attached. The events can be accessible to characters by being present in the node and achieving good results in exploration tests.
 
 \subsection{Simplified Survival}
 
-Using the complete survival system all the time is unnecessary. Not every situation is a survival situation.
+Using the complete survival system all the time is unnecessary. Not every situation is a survival situation. Use these simplified rules for long and uneventful travels, and for expeditions that don't need to manage food, water and shelter.
 
-To simplify, allow bringing enough supplies for the journey, which eliminates the struggle to stay hydrated and fed. Consider that the camping supplies are sufficient to always provide the best possible sleep during rest time.
+\textbf{Simplified Hunger and Thirst:} consider that characters are always well fed and hydrated. consider that there is enough food and water for the jouney. Charge a reasonable amount for it, if it were bought.  
 
-\subsection{Exhaustion, Hunger, and Thirst}
+\textbf{Simplified Resting:} Allow characters to sleep once per day. Heal half of the character's exhaustion and heal $3+health/2$ per sleep.   
 
-\textbf{\large Exhaustion} is the measure of mental fatigue. It is increased by staying awake and performing mentally demanding tasks, like casting spells or concentrating for long periods. Exhaustion ranges from 0 to 12, where the higher it is, the worst the effects. When the character reaches 12, it as to make a will test every exploration turn to avoid falling unconscious and being forced to short rest. The Will test has a DL equal to character's exhaustion - 5.
+\textbf{Simplified Wear:} Traveling causes no wear.
 
-%TN
+\textbf{Simplified Point Crawl:} keep the node structure and exploration tests for travel. Do not use events meant to reward resources and shelter.
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item > 12 = Confused
-    \item > 8 = Exhausted
-    \item > 4 = Tired
-    \item > 0 = Everything is normal
-\end{itemize}
+\section{Character Values}
 
-
-
-\textbf{\large Hunger} represents the lack of nutrients in the body. Allowing hunger values to exceed certain levels will apply negative conditions:
+\subsection{Hunger} represents the lack of nutrients in the body. Allowing hunger values to exceed certain levels will apply negative conditions:
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item > 30 = Becomes Malnourished
-    \item > 15 = Becomes Weakened
-    \item < 15 = Everything is normal
+    \item = 30 = Becomes Malnourished
+    \item 15 - 29 = Becomes Weakened
+    \item 0 - 14 = Everything is normal
 \end{itemize}
 
-Every hunger point above 30 increases IL by +1.
+Hunger cannot be increased further than 30. Every hunger point that would be above 30 increases IL by +1 instead, until it eventually leads to death.
 
-The nutritional value of a portion of food is counted in hunger. Average characters of regular size can eat 4 portions per day.
+Hunger is lowered by eating. Average characters can eat 4 portions per day. Each portion eaten recovers a number of hunger points defined in the portion itself. The nutritional value of a
+portion ranges from 1 to 5.
 
-For role-playing purposes, consider that 1 meal is about 500g and that 1 portion of water is 500ml for a size 3 creature. The portion size varies with VM for each size category. The nutritional value of a portion ranges from 1 to 5 hunger, depending on the food and its preparation.
+The nutritional value of a portion of food is counted in hunger points. The portions are measured for a character of size 3. Other sizes of characters require different amounts of food to constitute a portion at a rate defined by the VM. Bigger characters need more food for a portion and smaller ones require less.
 
-\textbf{\large Thirst}
+For roleplaying purposes, a portion of food is roughly 500g.
 
-Thirst starts at 0; the higher the character's thirst, the worse it is. Exceeding a certain limit causes the adverse effects below:
+\subsection{Thirst}
+
+Thirst starts at 0. The higher the character's thirst, the worse it is. Exceeding a certain limit causes the adverse effects below:
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item > 20 = Dehydrated + damage
-    \item > 15 = Dehydrated
-    \item > 10 = Thirsty
-    \item > 0 = Everything is normal
+    \item 15 = Dead
+    \item 12 = Unconscious + Dehydrated
+    \item 8 - 11 = Dehydrated
+    \item 4 - 7 = Thirsty
+    \item 0 - 3 = Everything is normal
 \end{itemize}
 
-For every thirst point above 20, increases IL by +2.
+Thirst is lowered by drinking water. A character can recover 5 thirst in a single ET if there is enough water available. Every portion of water recovers 1 thirst, unless there is something wrong with it, like being saltwater or infected.
 
-\subsection{Rest}
+For roleplaying purposes, a portion of water is roughly 0.5L.
 
-\textbf{Long Rest } is an action that costs 2 exploration turns, heals and recovers exhaustion, and can only be done once per day. 
+\subsection{Rest and exhaustion}
 
-The character heals IL equal to 1+$(health+comfort)/2$, where health is the health skill and quality represents the comfort of the situation. Each IL recovered consumes 1 hunger and 1 thirst. Healing is not possible if hunger or hydration values are at their limit. 
+\textbf{Exhaustion} is the measure of mental fatigue. It is increased by staying awake and performing mentally demanding tasks, like casting spells or concentrating for long periods. 
 
-The exhaustion value is set to half its value - comfort.
+Exhaustion starts at zero and increases with every ET, except when resting. The higher it is, the worst the penalties. When the character reaches 12, it has to make a will test every exploration turn to avoid falling unconscious and being forced to short rest. The Will test has a DL equal to character's exhaustion - 5.
 
-\textbf{Short Rest:} The character has the option to spend an exploration turn doing nothing, which recovers 2 exhaustion. High values of discomfort prevent short resting.
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \setlength{\parskip}{0em}
+    \item > 11 = Confused
+    \item 8 - 11 = Exhausted
+    \item 4 - 7 = Tired
+    \item 0 - 3 = Everything is normal
+\end{itemize}
 
-\textbf{Comfort:} Each terrain has a value that represents how pleasant it is to spend time there. This represents how stressful the situation is. This value is used to determine the RV for resting. Generally, the value ranges from -5 to 2.
+Exhaustion is lowered by long rests and short rests.
 
-\textbf{Daily wear:} The character receives 4 exhaustion, 2 hunger, and 2 thirst every day in addition to the wear generated by the exploration action.
+\textbf{Sleep } It is an action that costs 2 exploration turns. It heals IL, recovers exhaustion, and can only be done once per day. The character is unconscious during sleep. 
+
+After sleeping, the exhaustion value is set to half its value - exposure. 
+
+\textbf{Healing:} Happens per sleep. The character heals IL equal to $2+(health-exposure)/2$, where health is the health skill and exposure represents the absence of mental and physical stress. Each IL recovered increases hunger and thirst by 1. Healing is not possible if hunger or hydration values are at their maximum value. 
+
+\textbf{Healing Potions:} take their effect during sleep or a short rest. They heal IL, but do not affect the hunger and thirst values. Any healing that is not used during rest is lost.
+
+\textbf{Healing Wounds:} all wounds heal by half the value of IL recovered. If the IL is already zero, but there are still wounds, continue healing the wound at the same rate, but do not increase hunger nor thirst.
+
+\textbf{Short Rest:} The character has the option to spend an ET doing nothing, which recovers 1 exhaustion +1 IL. Every two short rests in a row cost 1 hunger and 1 thirst. Any time a character does not participate in an exploration action, they are doing nothing and short rest automatically.
+
+\textbf{Exposure:} Each terrain has a value that represents how rough it is to spend time there. This represents how physically and mentally stressful the situation is. Generally, the value ranges from 5 to -2. Anything higher than 5 prevents resting, while -2 means you are as comfortable as sleeping in your home's bed. More explanation on the Terrain subsection.
+
+\subsection{Wear}
+
+Performing any exploration action that is not resting causes wear. The effect is applied to everyone who participated, independent of them rolling for it or not. If they were in the group that executed the exploration action, they receive the respective wear.
+
+The standard wear is 1 IL + 1 exhaustion per ET, and it is applied at the end of the ET. It is possible for the exploration action to have increased wear depending on the terrain. This is explained in the terrain  subsection.
 
 \section{Exploration}
 
 \textbf{Exploration Action:} There are 4 exploration actions: \textbf{Rest}, \textbf{Travel}, \textbf{Search}, and \textbf{Prepare}. The skill test is performed by only one character from the group. Roll individually for each separate group. 
 
-\textbf{Wear:} Performing any exploration action that is not resting causes wear. The standard wear is 1 IL, and it is applied at the end of the exploration action. It is possible for the exploration action to have increased wear depending on the terrain. For example, performing any exploration action in the desert causes +1 thirst.
+\skill{Exploration}{ Knowledge + Awareness }{ This skill is used to perform Travel and Search actions. Its value is equal to the specific knowledge about the location + the detection proficiency. 
 
-\skill{Exploration}{ Knowledge + Detection }{ This skill is used to perform Travel and Search actions. Its value is equal to the specific knowledge about the location + the detection proficiency.
+\textbf{General Knowledge:} in the absence of specific knowledge of the region, use Awareness + $knowledge/2$, where knowledge is one of the general knowledges. Use survival for searching and tracking in the wilderness, geopolitics for traveling, and architecture for tunnels and large structures. The general knowledge is not as good as specific, but it helps.
 
-\textbf{Travel:} Tries to move in the correct direction along the easiest path, avoiding accidents and dangers. The test is made against the DL of the path being attempted. A graze or mistake means that the search action is performed instead of traveling, triggering events within the node. A critical success or success means that no one got lost and the movement is as fast as possible. The test value used for traveling is also used against any events that are part of the path.
+\textbf{Acquiring Specific knowledge:} Acquiring maps, reaching landmarks, and asking for information improve local knowledge. These are events unlocked through traveling or in preparation for travel. 
 
-\textbf{Search:} Attempts to find desired type events and avoid unwanted types without getting lost. The test is made against all DL of events in the node simultaneously. Events are triggered in random or arbitrary order. Many events do not consume the exploration action, allowing the second event to be activated and so on.
+\textbf{Travel:} Tries to move to a different node in the correct direction along the easiest path, avoiding accidents and dangers. The test is made against the DL of the path being attempted. A crit or hit means that no one got lost and the movement is as fast as possible.
+
+\textbf{Search:} Attempts to find events of the desired types and avoid unwanted types without getting lost. The player states what kind of event they are looking for and makes the test. Characters find the easiest event of the type that was searched for and for which their test value was high enough. 
+
+\textbf{Tracking} is done with an exploration test but requires a specific ability. When tracking someone, make an exploration test against the terrain's DL for tracking. Adjust the DL based on how old the trail is, how many creatures there were, and their size and what they were carrying. A crit or hit means that the quarry was found if it is in the same node, or which direction they went to if not. 
+
+\textbf{Grazes and misses:} If characters dont find any events with search nor the path they were looking for with travel, nor their quarry when tracking, they find a random event in the node or go to another random node. The explanation is in the events subsection.
+
+\textbf{Splitting the party:}The party can be split for any exploration actions. At the end of the ET, the party meets again unless someone moved to another node or did not come back for some reason special reason.
 }
 
-\textbf{Prepare:} Setting up camp can be time-consuming without proper equipment, but it is essential to avoid exposure and to be able to cook food. The skill used is survival knowledge.
+\textbf{Prepare:} Setting up camp can be time-consuming without proper equipment, but it is essential to avoid exposure and to be able to cook food. Prepare actions include: Campfire, Cooking and Shelter. The skill used is 2x survival knowledge.
 
-\textbf{Campfire:} Characters must perform an exploration action to search for dry firewood and light the campfire. The action cannot be performed if there is no firewood or fuel. On a critical success, they do not spend the exploration action and succeed. On a success, they succeed. On a graze, they can either give up or spend double the time. On a failure, the action fails. The campfire allows cooking and provides a bonus to comfort, which ranges from +1 to +3.
+\textbf{Campfire:} The campfire allows cooking, provides a source of light and reduces exposure to cold and insects by 1. It requires firewood and some method to light the fire. \textbf{Searching for firewood:} requires characters to perform an exploration action to search for dry firewood. On a crit, they do not spend the exploration action and succeed. On a hit, they succeed. On a graze, they can either give up or spend double the time. On a failure, the action fails. The firewood lasts for a day.\textbf{Lighting the fire:} is done without a test if some items or spells are present, otherwise, try to use natural materials. Crits perform it in minutes, hits spend an ET, grazes gives the option to spend 2 ETs to succeed or lose one and misses just waste an ET.
 
-\textbf{Cooking:} This test is made against the DL of the food and requires proper equipment for preparation. On a critical success, all food is utilized. On a success, only 75\%. On a graze, 50\%, and on a failure, 25\%.
+\textbf{Cooking:} This test is made against the DL of the food and can require equipment to be done, like a campfire and a pot. On a critical success, all food is utilized. On a success, only 75\%. On a graze, 50\%, and on a miss, 25\%.
 
-\textbf{Shelter:} Setting up camp can be time-consuming without proper equipment. Characters can bring their own tent and sleeping bag. These tools can largely serve as protection against the elements without taking much time. If these items are not available, an exploration action to build a natural shelter must be performed. The effectiveness of the shelter is described in the shelter event, if it has been activated, or in the natural event of the node.
+\textbf{Shelter:} Setting up camp can be time-consuming without proper equipment. Characters can bring their own tent and sleeping bag, which provide a bonus to prevent exposure. If these items are not available, an exploration action to build a natural shelter must be performed. Building a natural shelter takes one ET and improves the exposure for resting by 1 on a hit and by 2 on a crit.
 
-\textbf{Tracking} is done with an exploration test but requires a skill. When tracking someone, make an exploration test against the terrain's DL for tracking. Increase the DL based on how old the trail is. A critical success or regular success means that a trail was found and something is known about the people. A graze or failure means that no trail or the wrong trail is found.
+\textbf{Long Camping:} Sometimes characters need to rest for several days to heal up. In that case, consider that any shelter that was built and any campfires that were made last for several days stay as they are. The exposure value stays constant. Every day, characters heal $6+(health-exposure)/2$. They can continue doing this until water or food runs out. Healing abilities can be used for 1 ET per day per healer. Exhaustion should be zero by the second day for everyone.
 
-\textbf{Covering tracks:} This works like a stealth test, but using exploration for it. A test is made against the terrain DL to cover the tracks and increase the DL for tracking. The terrain has a base DL for track covering, which is modified by the exploration test result. The DL to cover track increases or decreases depending on how many creatures there were, and their size and what they were carrying. 
+Optionally, roll one random encounter per day when long camping. 
 
 \subsection{Night and Darkness}
 
 Traveling at night significantly reduces the team's visibility range, making exploration more difficult. If the group has a light source or the ability to see in the dark, the DL for search actions is increased by just +5. If the group is without vision, all exploration actions increase by +5 and search increases by +10.
 
-The day can have any number of periods of day and night. This depends on the season and the location on Earth. The standard is 3 periods of day and 3 of night.
+The day can have any number of periods of day and night. This depends on the season and the location on Earth. The standard is 4 periods of day and 2 of night.
+
+\subsection{ How the loop works }
+
+\textbf{The exploration loop} is designed to require preparation. Having tools to make a campfire, carrying tents and bedrolls, bringing a pot to cook, bringing food and water, and hiring a guide are all measures that should be thought of before starting an expedition. Exploration is a demanding task and can by itself cause as much harm as a battle.
+
+\textbf{Exploration day Breakdown:} full day in which characters sleep once and explore 4 times is meant to net a negative IL sum. This is equivalent to pushing the pace.
+
+A day where characters explore 3 times, rest once and sleep once is meant to net around 0 IL. This is a good traveling pace.
+
+\textbf{Healing serious injuries:} To heal injuries effectively after tough battles, a long camping is expected to happen. In case of a game with magic, intense use of potions and magic are necessary for quick healing. 
+
+\textbf{Pick your Battles:} Battles are costly things. Even in victory, the injuries received will make players question if it was worth it.
+
+\textbf{Split the party:} Splitting the party allows multiple characters to attempt at a test in the same ET, at the cost of danger of ambushes and accidents for the loners. It is also useful to leave depleted characters resting while others explore. 
+
+\section{ Point crawl}
+
+\subsection{ Nodes and Terrain}
+
+Every node in a point crawl map is made out of a terrain, which contains a list of characteristics. The same terrain can be reused for many nodes.
+
+\textbf{Exposure:} Every terrain has a value of exposure. It defines how hard it is to rest in it without finding shelter.
+
+\textbf{Natural Shelter DL:} Standard difficulty to build a natural shelter.
+
+\textbf{Tracking DL:} Represents how hard it is to track someone. Depends on how long footprints survive, how much the smell sticks, how much sound propagates, the presence of branches to be broken or other things that indicate someone's passage. Default is 0.
+
+\textbf{Visibility:} Defines how far away objects can be spotted. Its value ranges from immediate to horizon. Depends on trees, rocks, fog, etc. Default is shooting range.
+
+\textbf{Wear:} Terrain can have value for extra wear. For example, spending an ET in the desert without shelter always inflicts an extra thirst. Moving through mountains may inflict extra exhaustion. 
+
+\textbf{Terrain tags:}
+\begin{itemize}
+    \item wood: allows looking for firewood
+    \item rain: there is a chance of rain, which increases exposure in the absence of shelter.
+    \item cold: exposure can be reduced with measures against cold.
+    \item heat: exposure can be reduced with measures against heat.
+    \item insects: exposure can be reduced with measures against insects.
+    \item threats: requires someone to stand guard to avoid or reduce a stress induced increase in exposure.
+\end{itemize}
 
 \subsection{Events}
 
-\textbf{Event DL:} The DL of events varies between -5 and 15. The character can receive bonuses for traveling if they know the location they are heading to and for searching if they know where the item they are looking for is supposed to be.
+
+\textbf{Event DL:} The DL of events varies between -5 and 15. This is the difficulty for an event to be found on purpose. A crit over the event DL allows interacting with it and, if the event does not take the whole ET, go for another event for which there was a hit or crit. 
 
 There are 8 types of events:
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Active encounter
-    \item Passive encounter
-    \item Obstacle
-    \item Treasure
-    \item Wear
-    \item Food
-    \item Shelter
-    \item Water
+    \item \textbf{Place:} A structure, village, monument.
+    \item \textbf{Encounter:} This is found by the player characters. It can be anything that generates social interaction or combat.
+    \item \textbf{Obstacle:} It can be a puzzle, a door, a physical challenge, a natural disaster, etc.
+    \item \textbf{Treasure:} It can be any object of value.
+    \item \textbf{Wear:} It is an event that increases wear. Can have a chance to happen regardless of the exploration test result.
+    \item \textbf{Food:} an event that provides the opportunity to obtain food.
+    \item \textbf{Shelter:} finds a place with better exposure than the rest of the node.
+    \item \textbf{Water:} an event that provides the opportunity to obtain water. 
 \end{itemize}
 
-\textbf{Active encounter:} It occurs against the group when they perform an exploration action in a node. It happens when the characters are being tracked, when there are patrols or predators in the area. It can occur with a luck roll.
+Events can be of multiple types at once. The typing exists so that players can choose to try to search for them. If an event has multiple types, the character must be looking only for one of the types for the event to qualify for the search.
 
-\textbf{Shelter:} Improves resting conditions, replacing the normal terrain values.
+\textbf{Random event:} If none of the desired events or paths were found, put all available events in a numbered list and roll a d6 or d10. Leave numbers blank or add some events multiple times. If the exploration test result is lower than 0, also add paths to other nodes.
 
-\textbf{Water:} Provides a quantity of water or presents a test to obtain water.
+\textbf{Traveling:} from one node to the next can cost multiple ETs. There is no need for placeholder nodes in the middle of two important ones just to conform to the duration of 1 ET. 
 
-\textbf{Food:} Provides a quantity of food or presents a test to obtain food.
-
-\textbf{Wear:} It is an event that takes effect if the exploration test is lower than its DL, increasing wear.
-
-\textbf{Passive encounter:} The characters must find this. It can be anything that generates social interaction or combat.
-
-\textbf{Obstacle:} It can be a puzzle, a door, a physical challenge, a natural disaster, etc.
-
-\textbf{Treasure:} It can be anything of monetary or experience value.
+\textbf{Being tracked:} this is rolled separately using the tracker's exploration skill. Trigger a detection check when the trackers approach to determine if they are detected and at what distance.
 
 % \textbf{Natural Disasters} include: Snowstorm, Sandstorm, Storm, Hail, Earthquake, Eruption, Lightning, Flood, Wildfire, Landslide, Fog, Tornado, strong wind, being covered by insects during sleep, and entering a monster's den.
 
@@ -155,12 +214,13 @@ There are 8 types of events:
 
 Examples of encounters:
 
-Shelter: DL 2, Reduces the terrain penalty to 0. DL for building natural shelter =0. \\
-Encounter: DL 5, A pack of 8 wolves is howling nearby. On a critical success, they can choose to outsmart them. On a success, everyone must make a stealth test to avoid the wolves. On a near miss, the wolves are aggressive and try to attack. On a failure, they are caught by surprise.\\
-Water: DL 3, A spring of water is found. \\
+Shelter: DL 2, Reduces the terrain exposure to 0. DL for building natural shelter =0. \\
+Encounter: DL 5, A pack of 8 wolves is howling nearby. On a critical success, the party can choose to avoid them. On a success, the party must make a stealth test to avoid the wolves. On a graze, the wolves are aggressive and try to attack. On a miss, the party is caught by surprise.\\
+Water: DL 3, A spring of clear water is found. \\
 Food: DL 5, a deer is nearby, but it will run away if it gets scared. The deer has enough meat for 80 portions worth 4 and has a DL of 4 for cooking.  
 Treasure: A map of the region and 3 GP were found in an abandoned camp. The map increases the effective survival knowledge level in the area by 1 level.
-Wear: Traveling causes 2 exhaustion to characters with STA lower than 12. Critical successes in exploration reduce the requirement to 10.
+Wear: Traveling causes 1 extra exhaustion to characters with STA lower than 12. Critical successes in exploration reduce the requirement to 10.
+Obstacle: A climb is required to continue on the path. Everyone must make a DL 3 climbing test. On a miss, fall down 5m at a DL 3 of balance.
 
 \end{multicols}
 

@@ -235,21 +235,21 @@ Manipulate drugs, cells, etc. Mutations, grafts.
 
 % healing
 
-\spell{Healing Food}{5 minutes}{Biomancy 4}{}{7}{touch}{Effect}{sustained}{ Modifies a portion of food to behave like a potion, giving half of its nutritional value as healing instead of hunger. }
+\spell{Healing Food}{5 minutes}{Biomancy 4}{}{7}{touch}{Effect}{sustained}{ Modifies a portion of food to behave like a potion, giving half of its nutritional value as IL healing. }
 
-\spell{Immune modulation}{ 1 Exhaustion }{Biomancy 3}{}{3}{melee, target}{ Effect }{ 10 minutes }{ Attempts to manipulate the body of a living being to metabolize poison. Allows a redo of a health test to resist poison using the target's health +2, and an additional +2 for each enhancement. }
+\spell{Immune modulation}{ 1 Exhaustion }{Biomancy 3}{}{3}{melee, target}{ Effect }{ 10 minutes }{ Attempts to manipulate the body of a living being to metabolize poison. Allows a redo of a health test to resist poison using the target's health + caster's sorcery, and an additional +2 for each enhancement. }
 
-\spell{Defibrillate}{3 AP + 1 STA}{Biomancy 2}{}{0}{melee, target}{Effect}{instantaneous}{ Wakes an unconscious target.}
+\spell{Defibrillate}{4 AP + 1 STA}{Biomancy 2}{}{0}{melee, target}{Effect}{instantaneous}{ Wakes an unconscious target.}
 
-\spell{Reattach Limb}{2 Exhaustion, 1 hour}{Biomancy 5}{}{7}{melee, target}{Effect}{}{Reattaches a limb to a body, adding a serious wound that requires 20 cures to function perfectly again.} 
+\spell{Reattach Limb}{2 Exhaustion}{Biomancy 5}{}{7}{melee, target}{Effect}{1 ET}{Reattaches a limb to a body, adding a wound that requires 20 IL to be healed and function perfectly again.} 
 
-\spell{Healing Touch}{4 AP + 1 STA}{Biomancy 2}{}{0}{melee, target}{Effect}{instantaneous}{ Clots 1 point of bleeding in a target that can be touched. Enhancing increases the amount of heals by 1. }
+\spell{Clotting Touch}{4 AP + 1 STA}{Biomancy 2}{}{2}{melee, target}{Effect}{instantaneous}{ Clots 1 point of bleeding in a target that can be touched. Enhancing increases the amount of bleeding healed by 1. }
 
-\spell{Regenerate}{15 minutes/cure, 1 exhaustion/hour}{Biomancy 3}{Medicine 4}{5}{melee, target}{Effect}{sustained}{Actively manipulates the functions of a target's body to accelerate healing. Removes 1 IL or heals a wound by 1 for every 10 minutes.}
+\spell{Regenerate}{2 exhaustion, 1 ET}{Biomancy 3}{Medicine 4}{5}{melee, target}{Effect}{sustained}{Actively manipulates the functions of a target's body to accelerate healing. Removes 4 IL or heals a wound by 4 per ET. The patient can rest during this time. Enhancing the spell increases the healing by 1 per enhancement.}
 
-\spell{Revitalize}{2 Exhaustion}{Biomancy 5, Animancy 3}{ }{10}{melee, target}{Effect}{5 minutes, sustained}{ Performs a 5-minute ritual to revive a creature within reach of the body, as long as the body is in a condition to be alive and there is a sample of the soul nearby. The body is revived with all its wounds. }
+\spell{Revitalize}{2 Exhaustion}{Biomancy 5, Animancy 3}{ }{10}{melee, target}{Effect}{ 1 ET}{ Performs a ritual to revive a creature within reach of the body, as long as the body is in a condition to be alive and there is a sample of the soul nearby. The body is revived with all its wounds and IL damage. IL defaults to 49 if it were 50 or higher. }
 
-\spell{Enhanced Sleep}{1 TE, 1 Exhaustion}{Biomancy 1}{}{3}{touch melee}{ Ritual}{4 hours}{Blesses the sleep of everyone in the area for 4 hours, allowing everyone except the caster to receive +2 health for resting and to complete it in 4h.}
+\spell{Enhanced Sleep}{1 ET, 1 Exhaustion}{Biomancy 1}{}{3}{touch melee}{ Ritual}{4 hours}{ Blesses the sleep of everyone in the area for 4 hours, allowing everyone except the caster to receive +2 to the health skill for resting and to complete it in 4h.}
 
 \spell{Preserve Corpse}{10 minutes}{Biomancy 1}{}{0}{melee}{Effect}{1 day, charged}{Prevents decomposition from affecting a corpse or part of it for a full day.}
 
@@ -273,7 +273,7 @@ Manipulate drugs, cells, etc. Mutations, grafts.
 
 \spell{Tree House}{1 ET, 2 exhaustion}{Biomancy 4}{}{5}{target}{Effect}{sustained}{ Grows trees and shapes them to have enough hollow space inside to serve as a room. The effect of the spell is permanent, but it takes the duration of the spell to shape the trees. The internal space is equal to 6 cubic meters xMM.}
 
-\spell{Accelerate Blooming}{2 Exhaustion, 1 ET}{Biomancy 2}{}{0}{melee, target}{Effect}{sustained}{ The plant will go through its seasonal stages very quickly, draining nutrients and water from the soil and bearing fruit if possible. }
+\spell{Accelerate Blooming}{2 Exhaustion, 1 ET}{Biomancy 2}{}{0}{melee, target}{Effect}{sustained}{ The plant will go through its seasonal stages very quickly, draining nutrients and water from the soil and bearing fruit if possible. The yield depends on the plant. }
 
 \spell{Defoliate}{1 min}{Biomancy 2}{Pheromone Control}{3}{12m, radius of 6m}{Environmental}{}{ Causes all deciduous trees in the area to lose their leaves within 1 turn. The leaves are flammable. }
 
@@ -284,7 +284,7 @@ Manipulate drugs, cells, etc. Mutations, grafts.
 % \spell{Healing Avatar}{5AP + 3 STA}{  5}{Ghost, Healing Touch}{12}{30m, target}{Effect}{3 turns}{Sends a generous amount of healing energy to a target, performing 8 AP in healing spells per turn with the target's STA, but without costing them AP. }
 
 
-\spell{Clone}{ 1 ET, 4 exhaustion }{Biomancy 6}{living sample, preserved corpse }{10}{melee}{Effect}{sustained}{ Converts the genes of a part of the body of a preserved corpse to match those of another creature of the same species. A living sample of the model must be present. Converts 10kg of biological matter per TE.}
+\spell{Clone}{ Downtime }{Biomancy 6}{living sample, preserved corpse }{10}{melee}{Effect}{sustained}{ Converts the genes of a part of the body of a preserved corpse to match those of another creature of the same species. A living sample of the model must be present.}
 
 
 
