@@ -20,27 +20,48 @@ Biomancy - think about how mutations can go wrong
 
 Shamanism - think about how to find spirits: exploration turns, touching objects, finding auras. --- 
 
-Take the other knowledges seriously. Create skills and gear to go with them.
+Alchemy - review spells
+
 
 Health: have abilities that use health as skill. --- done
 
 review contacts, reputation and factions
 
+Take the other knowledges seriously. Create skills and gear to go with them.
 
 think about mundane tools to break turtling:
 fire, light, poison, slippery surfaces, trample mechanics, falling objects, etc. 
 create magical versions of those tools. 
 
-create more exploration tools - 
+create more exploration tools - tables, 1 point crawl
+
+make a list of monsters
+
+review exploration items -- half done
 
 morale during stealth, exploration and chase
 
+review magical items
 
-issues:
+Forgery and disguise
 
- - many day resting fast forward mechanic
 
- - explaining wear economy
+
+# CHANGE IN THE APP
+
+check all skills again
+
+check load penalties
+
+check all afflictions
+
+check survival resources - hunger/thirst
+
+check AGI, STR, STA effects - make penalty count
+
+add attributes as skills?
+
+update weapons and armor - check gear properties
 
 
 # product workflow - how to turn this into a game

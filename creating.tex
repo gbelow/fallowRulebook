@@ -10,7 +10,7 @@
 
 \textbf{Skills and Proficiencies}: Skill values are determined by the sum of the skill bonus and the proficiency bonus. Each skill bonus only influences a single skill and can be trained individually. Proficiency bonuses, on the other hand, can affect multiple skills. The default values for all skills and proficiencies is 0.
 
-There are 27 skills, as described in the table:
+There are 19 skills, as described in the table:
 
 \end{multicols}
 
@@ -20,9 +20,6 @@ There are 27 skills, as described in the table:
 Skill & Proficiency & Talent & Trainable \\
 \hline &&& \\
 Health & Constitution & - & no\\
-Strength & 2x(STR-10) & Constitution & yes \\
-Agility & 2x(AGI-10) & Constitution & yes \\
-Stamina & 2x(STA-10) & Constitution & yes \\
 
 Strike & Melee & Dexterity  & yes \\
 Defend & Melee & Dexterity & yes \\
@@ -40,7 +37,7 @@ Stealth & - & Dexterity & yes \\
 
 Cunning & Awareness & Intellect  & yes \\
 Detection & Awareness & - & no \\
-Exploration & Awareness & Intellect  & knowledge \\
+Exploration & Knowledge + Awareness & Intellect  & knowledge \\
 Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
 
 % Combustion & Sorcery & Intellect & yes \\
@@ -55,7 +52,7 @@ Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
 Insight & Charisma & Intellect & yes \\
 Deception & Charisma & Intellect & yes \\
 Persuasion & Charisma & Intellect & yes \\
-Will & SPI & Spirit & no \\
+Will & SPI & - & no \\
 
 \hline
 \end{tabular}
@@ -63,7 +60,9 @@ Will & SPI & Spirit & no \\
 
 \begin{multicols}{2}
 
-Skills marked as trainable can be improved individually. The ones that are not can only get bonuses from their proficiency. Skills where trainable is "knowledge" mean that the skill value is trainable, but follows the rules of the knowledges.
+Skills marked as trainable can be improved individually. The ones that are not can only get bonuses from their proficiency. 
+
+Skills where trainable is "knowledge" mean that the skill value depends on knowledge levels.
 
 \subsection{Proficiencies:}
 

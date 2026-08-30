@@ -215,7 +215,7 @@ Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
 \hline
 \textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, slow & 3 GP & medium \\ [5pt]
 \hline
-\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & 2xSTR & slow, hook & 2 SP & medium \\ [5pt]
+\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & STR & slow, hook & 2 SP & medium \\ [5pt]
 \hline
 \textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\ 
 \hline
@@ -271,7 +271,7 @@ Body shields are marked with * in the table and can provide total cover.
 
 Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow CUT damage to hit the wearer.
 
-\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack.
+\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values, as well as in the stealth skill. The penalties from multiple gear stack.
 
 \textbf{Fiber armors} require the user to defend against most attacks actively, but they prevent the damage from being severe if hit. Cloth armors have very few penalties and a hardness of 2.
 
@@ -490,10 +490,11 @@ These are items that can be used in combat. They play a role in controlling terr
 \begin{itemize}
 \setlength\itemsep{0em}
 \setlength{\parskip}{0em}
+\item {Alchohol - 0.5L}. Flask that can be thrown to coat 1 space in flammable alchohol. Can be drank. \textit{Cost:} 2 SP. \textit{Bulk:} small. 
 \item {Oil flask - 0.5L}. Flask that can be thrown to coat 1 space in flammable oil. Cannot be extinguished with water. Can be used to make a torch. \textit{Cost:} 2 SP. \textit{Bulk:} small. 
 \item \textbf{Pitch pot:} Pot of pitch with a fuse that can be thrown and burns for 12 burning damage per round and sticks to 1 space or target and produces smoke (black smoke, 2m radius, 1 min fill) This does not extinguish with water and requires 8 AP to be muffled. \textit{Cost:} 5 SP. \textit{Bulk:} Medium.
-\item \textbf{Smoke bundle:} Improvised. Damp greenery, dung, or straw rolled in cloth. Produces smoke (White smoke, 2m radius, 5 min fill). \textit{Cost:} 1 CP. \textit{Bulk:} Medium.
-\item \textbf{Torch} - Improvised. Gives 5m light radius when lit, requires an oil flask to burn for 4 hours. Can be used to block attack at RES 10. Lighting it is a DL -2 exploration test. \textit{Cost:} 1 CP. \textit{Bulk:} small.
+\item \textbf{Smoke bundle:} Improvised, consumed by use. Damp greenery, dung, or straw rolled in cloth. Produces smoke (White smoke, 2m radius, 5 min fill). \textit{Cost:} 1 CP. \textit{Bulk:} Medium.
+\item \textbf{Torch} - Improvised, discarded after use. Gives 5m light radius when lit, requires an oil flask to burn for 4 hours. Can be used to block attack at RES 10. Lighting it is a DL -2 exploration test. \textit{Cost:} 1 CP. \textit{Bulk:} small.
 \end{itemize}
 
 
@@ -563,8 +564,7 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
     \item Venomous Frog Corpse - Produces anticoagulant poison. - 5 GP - Weight 1.
     \item Soul Stone - Used to preserve souls - 200 GP.
     \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.    
-    \item Smoke Grenade - An item that can be thrown or attached to a projectile and produces smoke. 1 GP. Weight 1 for 5 units. 
-    \item Explosive - Used for fire abilities. When ignited, it deals 5 burning damage with PEN 5 per turn of contact. 5 SP for 1 charge. 5 charges weigh 1. One charge can be affixed to an arrow.
+    \item Smoke Grenade - An item that can be thrown or attached to a projectile and produces 3m radius of white smoke. 1 GP. small. 
     % \item Sharpening Sheath - Reduces the cost of the Sharpen spell on a weapon within the sheath to 1 AP - Weight 2 - 50 GP.
 \end{itemize}
 
@@ -577,29 +577,40 @@ Potions add an effect to the character for a certain duration. The effects of po
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Simple Healing: heals 4 extra IL over 1 short rest, 2 GP.
-    \item Medium Healing: heals 8 extra IL over 1 short rest, 6 GP.
-    \item Good Healing: heals 16 extra IL over 1 short rest, 16 GP.
+    \item Simple Healing: heals 5 extra IL over 1 short rest, 2 GP. small.
+    \item Medium Healing: heals 10 extra IL over 1 short rest, 6 GP. small.
+    \item Good Healing: heals 15 extra IL over 1 short rest, 16 GP. small.
 \end{itemize}
+
+Potions are carried in vials.
 
 \subsection{Utility and Survival}
 
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and reduces exposure by 3 - 1 GP - medium
-    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and reduces exposure by 3 - 2 GP - large
-    \item Flint: Grants +5 on the test to light a campfire. 2 PP - small
-    \item Firewood: Wood ready to burn for 8 hours. Grants +5 on the test to light a campfire. - medium
-    \item Rope: Useful item. 1 PP per meter. Medium
-    \item Canteen: Holds 2L of water. 1 PP. Small.
-    \item Jug: Holds 5L of water.  1 PP. Medium.
-    \item Shovel: Used for digging. 1 PP. Large.
-    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 PP. Medium
-    \item Vial: Holds 50ml of any liquid. 5 CP. small
-    \item Alcohol - Used for fire skills. 2 PP per 250ml (5 charges). 
-    \item Sharpening Stone - A sharpening stone. 2 PP. small 
-    \item Fur Cloak - Improves resistance to cold wear by +3. 1 GP. medium
+    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 1 GP - medium
+    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 2 GP - large
+    \item Hammock: Reduces exposure to insects by 2. - 5 SP, medium
+    \item Bedroll: Reduces cold exposure by 2. 4 SP. Medium
+    \item Oil Lamp: Gives 5m light radius when lit, requires an oil flask to burn for 8 hours. 1 GP - small
+    \item Flint: Allows lighting a campfire within minutes, no test required. 2 SP - small
+    \item Firewood: Dry wood ready to burn for 4 hours. - medium
+    \item Rope: Useful item. 1 SP per meter. Medium
+    \item Canteen: Holds 2L of water. 1 SP. Small.
+    \item Jug: Holds 10L of water.  2 SP. Large.
+    \item Shovel: Used for digging. 1 SP. Large.
+    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 SP. Medium
+    \item Vial: Holds 50ml of any liquid. 1 SP. small
+    \item Chalk: makes being followed trivial in the marked path. It is spent in one ET and lasts until it rains. 5 CP - small
+    \item Insect repellant: Reduces exposure to insects by 2. lasts for 1 sleep.
+    % \item Alcohol - Used for fire skills. 2 SP per 250ml (5 charges). 
+    \item Sharpening Stone - A sharpening stone. 2 SP. small 
+    \item Fur Cloak - Improves resistance to cold exposure by +2. 1 GP. medium
+    \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP.
+    \item Camouflage for X - where X is the terrain. Improvised. 
+    \item Snow shoes - cancels penalty for walking in the snow. 1 GP.
+    \item Grappling hook - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 1 GP.
     
 \end{itemize}
     
@@ -608,7 +619,7 @@ Potions add an effect to the character for a certain duration. The effects of po
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item Popaine:  - 5 PP - Causes the character to become confused or, in high doses, incapacitated.
+    \item Popaine:  - 5 SP - Causes the character to become confused or, in high doses, incapacitated.
     \item Alcohol: Causes the character to become intoxicated. 
     
 \end{itemize}

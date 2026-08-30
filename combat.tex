@@ -219,7 +219,7 @@ Afflictions are the negative conditions that can affect creatures.
 
 There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Health. 
 
-\textbf{Injury (IL):} penalties affect Grapple, Climb, Swim, and Will. 
+\textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect movement speeds, nor TGH. It affects all other usages.
 
 \textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
 
@@ -330,9 +330,9 @@ Multiple characters can assist each other in the grab. Any skill test made by se
 
 \skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
 
-\textbf{Distance Penalties:} If the target is 10m away or less, there is no penalty. Beyond that, a cumulative penalty of -2 to the attack is applied for every additional 20m of distance. From 50m onwards, the penalty is -2 for every additional 50m. The vertical range of a ranged weapon is half the horizontal range.
-
 \textbf{Distance Measurement Recommendation:} Measuring distance is a time-consuming process, so it is more practical to estimate the distance intuitively and give the benefit of the doubt in favor of the shooter.
+
+\textbf{Vertical distance:} The vertical range of a ranged weapon is half the horizontal range.
 
 \textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
 
@@ -350,11 +350,13 @@ Other types of ranged attacks will be available depending on the type of weapon 
 
 \textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons gain range based on STR.
 
-\textbf{Shoot:} Basic ranged attack with a shooting weapon. Requires Focus surge to use.
+\textbf{Shoot:} Basic ranged attack with a shooting weapon. Requires Focus surge to use. Shoot is only allowed against targets within 30m.
 
-\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP to shoot with a -1 distance penalty instead of -2 for the first 50m.
+\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP, but allows shooting targets at any distance.
 
-\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less, but incurs a -3 penalty in accuracy and -3 in distance instead of -2. 
+\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less, but can only be used within 10m of the target. 
+
+\textbf{Ranged attacks outside the combat area:} Any ranged attacks with range higher than 50 can hit outside the combat area at a penalty of -5.
 }
 
 \textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses strength with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
@@ -375,7 +377,9 @@ The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{Evasion:} When the character is targeted by projectiles, they can spend 2 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze.
 
-\textbf{Guard:} If using a shield, they can spend 2 AP to guard against ranged attacks coming from one direction as a reaction. All ranged attacks within a 180-degree semicircle in front of the character are made against the DL of reflexes + shield deflection without additional AP cost. The guard is canceled if the character performs any action other than careful movement.
+\textbf{Guard:} If using a shield, they can spend 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield deflection is added to guard as a bonus. The damage is reduced by the shield RES on grazes and misses. Hits and crits damage the character directly.
+
+\textbf{Cover:} When using a large shield, it is possible to take total cover behind the shield after using guard. The cover is canceled if the character performs any action other than careful movement. This cover only extends to allies who stand in the same space.
 
 \textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they can spend an extra STA to jump in any direction before the explosion occurs. On a graze or miss, they can move 2 AP after the explosion.
 
@@ -470,7 +474,7 @@ Fuel & Burn/round & Spread\\ [0.5ex]
 \hline\hline
 Dry grass, thatch & 5 & 1/round\\
 Burning cloth & 5 & 1/round\\
-Burning Oil & 8 & 1/round\\
+Burning Oil/Alcohol & 8 & 1/round\\
 Wood pyre, timber & 8 & 0 \\
 \hline
 \end{tabular}
@@ -568,13 +572,13 @@ Running is how both teams get closer or farther from each other. It works in rou
 
 This stage can only happen at Shooting distance.
 
-One team may decide to fight to attempt to injure the other before they get closer or to snipe enemies early. There are two possible situations: Both teams shoot at each other or one team shoots and the other attempts to close in. Either way, the distance penalty used is that of 50m. Everyone is targetable by anyone, except when one whole team is invisible to the other.
+One team may decide to fight to attempt to injure the other before they get closer or to snipe enemies early. There are two possible situations: Both teams shoot at each other or one team shoots and the other attempts to close in. Either way, any weapon with a range higher than 50m can be used. Everyone is targetable by anyone, except when one whole team is invisible to the other.
 
 \textbf{Both teams shoot each other.} This happens until one team runs out of ammo, someone changes strategy and decides to run, or a whole team dies. Everyone has 12 AP to spend as they like per round.
 
 \textbf{One team attempts to approach.} The approaching team gets 6 AP and must spend a movement surge for running. The shooting team gets AP depending on the running speed of the slowest character of the approaching team. They get 18 AP for running speed 2m per 2 AP, 12 AP for 3m, and 9 AP for 4m or higher (Optionally, $36/speed$ AP). At the end, both teams will be in combat range. The approaching team can split and leave someone behind to shoot, in which case they get the same amount of AP as the attackers. 
 
-\textbf{Split team combat:} If two teams are engaging in combat range, anyone at shooting range can still shoot from far away. They have their turn normally and are considered to be at 50m distance from anyone for the ranged penalties. If someone wants to go after them, they must end the round 30m away from any enemies (or their corpses). The combat just gets two areas within the same round order, where the new combat area starts with the two groups 30m apart.
+\textbf{Split team combat:} If two teams are engaging in combat range, anyone at shooting range can still shoot from far away. They have their turn normally and are considered to be outside the combat area for the ranged penalties. If someone wants to go after them, they must end the round 30m away from any enemies (or their corpses). The combat just gets two areas within the same round order, where the new combat area starts with the two groups 30m apart.
 
 Ranged combat can happen over terrain features, benefiting either team.
 
@@ -652,7 +656,7 @@ Call for a new stealth check when the scene changes. One failed test means that 
 }
 
 
-\textbf{Guidelines on playing stealth}
+\subsection{Guidelines on playing stealth}
 
 These guidelines exist to provide a physical basis to draw the stealth bonuses. It is not meant to be used as a table, but to ground difficulty decisions and provide common sense to everyone at the table. In practice, the bonuses should be chosen quickly and intuitively. The guidelines are meant to sharpen instincts.
 
@@ -685,10 +689,10 @@ Here's a list of possible modifiers. Many modifiers can be combined.
 \begin{itemize}
     \setlength\itemsep{0em}
     \setlength{\parskip}{0em}
-    \item \textbf{Wearing camouflage:} Allows hiding in plain sight.
+    \item \textbf{Being in plain sight:} -10 to Stealth vs. vision. Only in front of someone.
+    \item \textbf{Camouflage in plain sight:} -5 to Stealth vs vision when in plain sight.
     \item \textbf{Hiding behind a tree:} +2 to Stealth vs. vision (Requires active search to detect).
     \item \textbf{Complete hiding:} Automatically undetected to vision.
-    \item \textbf{Being in plain sight:} -10 to Stealth vs. vision. Only in front of someone.
     \item \textbf{Wearing noisy gear or carrying jingly objects:} -2 to -4 to Stealth vs. hearing. Metal armor is around -2.
     \item \textbf{Movement in the grass:} 0 vs. vision, -2 to Stealth vs. hearing.
     \item \textbf{Movement on marble floor with standard boots:} -2 to Stealth vs. hearing.
@@ -709,17 +713,14 @@ Here's a list of possible modifiers. Many modifiers can be combined.
 
 Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using the will skill.
 
-\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the DL of the terror of the moment. A graze leaves the character frightened, and a failure activates the character's limit stress action.
+\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the DL of the terror of the moment. A graze leaves the character frightened, and a miss activates the character's limit stress action. The limit stress action only triggers if there is an enemy within 30m.
 
-DL = -2 + aggravating factors
-
-Aggravating factors: \\ 
+\textbf{Combat morale DL = aggravating factors}
 
 \begin{itemize}
     \item Sensory deprivation(being oblivious): +3
     \item Reduced sensory quality(being disoriented): +2
-    \item Seriously injured ( IL > 10): +3
-    \item In melee range: +2
+    \item injured: +2 per injury penalty
     \item Burning or suffocating: +5
     \item Out of STA: +2
     \item Monstrous presence: variable. Depends on presence.
