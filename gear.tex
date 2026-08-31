@@ -7,9 +7,7 @@
 A weapon is a tool used in combat to enhance the character's abilities. Each weapon or shield has at least one form of attack. Each form has its own properties: \\
 
 \noindent
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item \textbf{Grapple:} This attack is used for grappling actions, its force is equal to STR.
 \item \textbf{Sweeping:} Allows for Sweeping attacks.
 \item \textbf{Braced:} This attack can be a braced attack.
@@ -29,12 +27,18 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: gets -2 accuracy when the opponent defends actively. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
-\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
-\end{itemize}
+\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible.
+\end{proplist}
 
 \textbf{Scaling weapons:} The weapons in the tables are human-sized and serve as a basis for size scaling. When scaling weapon size, multiply damages and RES by the DM and reach by the MM.
 
-Note that in reality, scaling an object would require reshaping it to maintain its properties. Larger objects would have to be sturdier not to break on impact, so weapons could not be so long.  \\
+\end{multicols}
+
+\begin{dnote}
+Scaling an object in reality would require reshaping it to keep its properties: a larger object needs to be sturdier not to break on impact, so a weapon could not simply grow longer and keep working the same way. This system trades that verisimilitude for a single scaling multiplier that is easy to apply at the table.
+\end{dnote}
+
+\begin{multicols}{2}
 
 \section{ Weapons}
 
@@ -52,38 +56,38 @@ Note that in reality, scaling an object would require reshaping it to maintain i
 
 \end{multicols}
 
-\begin{table}[H]
-\scriptsize 
-\centering
-\renewcommand{\arraystretch}{1.4}
-\hspace*{-1cm}
-\begin{tabular}{ | c c c c c c c c c |}
-\hline
-\multicolumn{9}{|c|}{ \textbf{ \Large Small Arms} } \\
-\hline
-Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
-\hline
+% NOTE for review: the "heavy I, smash" entries below sit in the price
+% column for Unarmed's and Gauntlet's second row in the pre-existing data.
+% That looks like a misplaced value (it reads like a property, not a
+% price) rather than a deliberate one — left as-is here since fixing game
+% data isn't a formatting call; flagging it for a content pass.
+\begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+\midrule
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & small \\
-& STR & 0.5x STR & 0 & small & short & draw & heavy I, smash &  \\[5pt]
-\hline
-\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[5pt]
-\hline
-\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\ 
-& 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & &\\ [5pt]
-\hline
-\textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small\\
-& 15 & 4 & 16 & small & STR & draw, precise, slow && \\ [5pt]
-\hline
-\textbf{Club} & 15 & 8 & 0 & small & short & DEF, heavy I & 1 SP & small \\ [5pt]
-\hline
-\textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small\\
-& 15 & 0 & 0 & small & short & draw, DEF && \\ [5pt]
-\hline
-\textbf{Whip} & 10 & 0 & 6 & small & long II & draw & 2 GP & small\\
-& 15 & 0 & 0 & small & long II & grapple & & \\[5pt]
-\hline
-\end{tabular}
-\end{table}
+{\footnotesize\textcolor{fallowrule}{$\hookrightarrow$}} & STR & 0.5x STR & 0 & small & short & draw, heavy I, smash & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[3pt]
+\midrule
+\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\
+{\footnotesize\textcolor{fallowrule}{$\hookrightarrow$}} & 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small \\
+\rowcolor{fallowtint}
+{\footnotesize\textcolor{fallowrule}{$\hookrightarrow$}} & 15 & 4 & 16 & small & STR & draw, precise, slow & & \\[3pt]
+\midrule
+\textbf{Club} & 15 & 8 & 0 & small & short & DEF, heavy I & 1 SP & small \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small \\
+\rowcolor{fallowtint}
+{\footnotesize\textcolor{fallowrule}{$\hookrightarrow$}} & 15 & 0 & 0 & small & short & draw, DEF & & \\[3pt]
+\midrule
+\textbf{Whip} & 10 & 0 & 6 & small & long II & draw & 2 GP & small \\
+{\footnotesize\textcolor{fallowrule}{$\hookrightarrow$}} & 15 & 0 & 0 & small & long II & grapple & & \\
+\end{stattable}
 \begin{multicols}{2}
 
 \textbf{Short Sword:} It is a larger version of a dagger, suitable for public use without drawing attention and easy to draw. Although it is too large to be ideal for grappling combat, it has stronger attacks and offers better defensive potential. It is a good secondary weapon or for urban and enclosed environments. 
