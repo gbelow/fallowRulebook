@@ -92,7 +92,9 @@ The expected levels for skills and proficiencies range from 0 to 5, but can be i
 
 \textbf{Gaining Experience (XP):} Improving skills and proficiencies and learning abilities requires training during free time, which yields experience based on training time. A regular training session for skills and proficiencies takes 10 days for 1 XP and costs a certain amount of money based on the difficulty level of what one wants to learn.
 
-\textbf{Talent and XP Costs}: The cost of XP to improve a proficiency is equal to $4+4*n$, where n is the proficiency level one wishes to achieve. If the talent is lower than the level one wants to reach, this value is multiplied by $2^x$, where x is the difference between n and the talent. The cost to increase a skill is equal to half the cost to increase the proficiency.
+\textbf{Improving proficiencies}: The cost of XP to improve a proficiency is equal to $4+4*n$, where n is the proficiency level one wishes to achieve. If the talent is lower than the level one wants to reach, this value is multiplied by $2^x$, where x is the difference between n and the talent. 
+
+\textbf{Improving skills:} The logic is exactly the same as proficiencies, and the cost to increase a skill is equal to $2+2*n$, which is half the cost to increase the proficiency.
 
 A character has 4 talents that represent their potential for growth.
 
@@ -329,23 +331,33 @@ Intellect measures the logical capacity, planning, and decision-making abilities
 
 \subsection{Knowledge}
 
-Knowledges are like skills, but are generally used outside of combat and has various utilities related to magic, exploration, and measuring the character's intelligence.
+Knowledges are used mostly outside of combat. They are used as requisite to learn abilities, to interact with features during exploration, to enable and improve several downtime activities, and as a general measure of the character's intelligence.
 
-\textbf{Knowledge as a skill assist:} Some types of knowledge can be added to other skills, like detection to improve the chance of detecting something.
+\textbf{Learning Knowledge}: The knowledge listed in the areas of knowledge is learned exactly the same way as any skill, using INT as the talent. The levels are also tracked in the same scale.
 
 \skill{Knowledge}{ 2x Knowledge or 2x INT}{
-It is equivalent to asking your character if they should know or understand something, even when the player does not know that thing.
 
-You use 2x the relevant knowledge as the skill value. If the necessary facts for deduction are already known, you can use 2x intellect as the value.
+\textbf{Knowledge test:} is equivalent to asking your character if they know or remember something from their studies. Use 2x the relevant knowledge as the skill value.
 
-Whenever a player claims that the character knows something, the GM can ask for a knowledge check to determine if the character really knows it.
+The player is welcome to suggest what the character is supposed to know from the test. The GM can take that information into consideration when choosing the test DL. If the test is a hit or crit, what the player said is true. 
 
-To use this skill, make a knowledge check against an arbitrary difficulty, representing the challenge of reaching a good conclusion from the available information. Critical successes mean that the character can make the best deduction from the information they have, even determining what information is missing to make a better deduction and remembering everything they know. Successes mean they have a good guess and remember most of what they know. Grazes mean that you don't know or can't remember, but you might know where to look. Misses mean that you reach an incorrect conclusion or a different one from the correct one, or you can't remember anything.
+If the player suggests nothing and just asks if the character knows something, consider the topic and how likely is any information about it supposed to be known to choose a DL. If the test result was a crit or hit, come up with a piece of information. If it was a graze or miss, tell them nothing is known or give them misinformation.
+
+\textbf{Deduction test:} If the necessary facts for deduction are already known, you can use 2x INT as the skill value. Whenever a player claims that the character knows something, the GM can ask for a knowledge test to determine if the character really knows it.
+
+To use this skill, make a knowledge test against an arbitrary difficulty, representing the challenge of reaching a good conclusion from the available information. Critical successes mean that the character can make the best deduction from the information they have, even determining what information is missing to make a better deduction and remembering everything they know. Successes mean they have a good guess and remember most of what they know. Grazes mean that you don't know or can't remember, but you might know where to look. Misses mean that you reach an incorrect conclusion or a different one from the correct one, or you can't remember anything.
 }
 
+\textbf{Knowledge as Enabler:} Many actions require an amount of a certain knowledge to be able to be performed. Attempting to perform that without the necessary knowledge level leads to a penalty of -5 per missing knowledge level to whatever test was called.
+
+\textbf{Ability requirement:} Some abilities are learned automatically at certain levels of the areas of knowledge. Some abilities cannot be learned without the proper knowledge requirement.
+    
 \textbf{Knowledge as a talent:} Knowledge can be used as a talent to learn spells and sorcery abilities. Spells have a knowledge requirement indicating the difficulty.
 
-\textbf{Knowledge in magic:} There are three magic related knowledges. They are used when casting and learning spells as a wizard. More details in the Sorcery chapter.
+\textbf{Knowledge in magic:} There are three magic related areas of knowledge. They are used when casting and learning spells as a wizard. More details in the Sorcery chapter.
+
+
+\subsection{Areas of Knowledge}
 
 The formal areas of knowledge in which the character can be trained are:
 
@@ -353,25 +365,23 @@ The formal areas of knowledge in which the character can be trained are:
     \item \magic Alchemy: Knowledge about the usage and creation of inorganic magical items. Necessary for alchemy spells.
     \item \magic Animancy: Knowledge about consciousness and the nature of sorcery. What it does in the body, how it manifests and affects the environment, how to manipulate it. Necessary for animancy spells.
     \item \magic Biomancy: Knowledge about biological structures. Necessary for biomancy magic.
-    % \item Shamanism: Knowledge about the flow of energy and summoning of spirits. Necessary for shamanism spells.
-    % \item Botany: Knowledge about plants, their location, shape, magical properties, poisons, fruit-bearing capacity, ecology, etc.
+    \item \magic Shamanism: Helps with finding spirits, diplomacy with them.  
     
     \item Architecture: Knowledge about structures, their common forms, how to build or destroy them. Tunnels, bridges, buildings. Helps with exploration inside buildings.
-    \item Chemstry: Knowledge about chemicals and their craft. Includes bombs, poisons, acids.
-    \item Physics: Knowledge about electricity, radiation, magnetism and their craft.
-    \item Medicine: Includes knowledge of medicine and farmaceutics, like anatomy, potions, poisons and oils.
-    \item Geopolitics: Knowledge about general history and geography. Allows map-making. 
+    \item Chemistry: Knowledge about chemicals and their craft. Includes bombs, acids, toxic substances.
+    \item Medicine: can make autopsy, potions, poisons and everything from first aid to surgeury.
+    \item Geography: Allows map-making. Helps traveling skill. Make tests to guess where resource events should be.
+    \item Politics: involves forgery, disguise, and acquiring local information about people.
     \item Smithing: Knowledge about the manufacture and maintenance of weapons, armor and mechanisms. Includes tools, locks and siege weapons.
     
-    % \item Medicine: Knowledge about diseases, anatomy, and biological processes. Necessary for magic.
     \item Survival: This is the knowledge used in the action of exploration and preparation. It includes actions like cooking, butchering animals, preparing campfires, making natural shelters, and crafting simple objects from materials found in nature.
-    % \item Zoology: Knowledge about animals, their anatomy, weaknesses, ecological roles, habits, etc.
+    \item Zoology: Knowledge about animals. Helps with diplomacy with animals, hunting, finding weaknesses.
 \end{itemize}
 \noindent
 
-\textbf{Learning Knowledge}: The knowledge listed in the areas of knowledge is learned exactly the same way as any skill, using INT as the talent.
-
-\subsection{Informal Knowledge}
+% \item Botany: Knowledge about plants, their location, shape, magical properties, poisons, fruit-bearing capacity, ecology, etc.
+% \item Physics: Knowledge about electricity, radiation, magnetism and their craft.
+\subsection{Specific Knowledge}
 
 Informal knowledge is the result of the character's experiences and can be acquired by engaging in any activity. The categories can be diverse, created to represent the character's experiences.
 
