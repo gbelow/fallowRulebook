@@ -23,12 +23,12 @@
 
 \textbf{Action surge:} All characters are entitled to one action surge per round. There are 3 basic types of action surges: movement, combat, reaction and focus.
 
-\begin{itemize}
-    \item Movement surge: 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
-    \item Combat surge: 3 STA to gain 6 AP that can be used for attacks or movement and must be used immediately.
-    \item Reaction surge: 3 STA to gain 6 AP, but can only use reactions until the end of the round.
-    \item Focus surge: 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons and casting spells.
-\end{itemize}
+\begin{proplist}
+    \item \textbf{Movement surge:} 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
+    \item \textbf{Combat surge:} 3 STA to gain 6 AP that can be used for attacks or movement and must be used immediately.
+    \item \textbf{Reaction surge:} 3 STA to gain 6 AP, but can only use reactions until the end of the round.
+    \item \textbf{Focus surge:} 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons and casting spells.
+\end{proplist}
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 6 AP minus any negative AP they had. Any unspent AP is lost.
 
@@ -57,7 +57,7 @@
 Movement actions spend AP in exchange for changing the character's position on the grid. A character must always end their turn in the center of a square or hexagon, which means that moving only a fraction of a space is impossible. It is possible to pass through a space occupied by another character as long as they do not resist the passage. 
 
 Types of movement:
-\begin{itemize}
+\begin{proplist}
 \item \textbf{basic movement:} Simple walking movement.
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
 \item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same.
@@ -68,25 +68,23 @@ Types of movement:
 
 \item \textbf{trample:} The character attempts to pass through an occupied space. If the opponent does not move out of the way, they must perform a push action to stop the movement.
 \item \textbf{mounted movement:} A character needs minimum training to be able to give commands to a mount. During mounted combat, the character's movement speed matches that of the mount. Running and a movement surge do not spend character STA. Mounting and dismounting costs AP equal to standing up.
-\end{itemize}
+\end{proplist}
 
-\begin{center}
-\begin{tabular}{| c c c|}
-\hline && \\
-Movement & Cost & Speed  \\
-\hline && \\
+\begin{stattable}{Movement Costs and Speeds}{@{}lcc@{}}
+Movement & Cost & Speed \\
+\midrule
 Careful & AP & 0.5 m \\
+\rowcolor{fallowtint}
 Basic & 1 AP & 1 m \\
 Run & 2AP & AGI/3m \\
+\rowcolor{fallowtint}
 Jump & 1AP+1STA & AGI/4m \\
 Crawl & 1 AP & 0.33 m \\
+\rowcolor{fallowtint}
 Swim & 1 AP & 0.33 m \\
 % Swim Fast & 1 AP & 0.5 m \\
 Stand up & 5 -AGI/5 AP & 0 \\
-
-\hline
-\end{tabular}
-\end{center}
+\end{stattable}
 
 \skill{Swimming}{AGI - 10}{ Represents the character's swimming ability. While in the water, make a swimming check against the DL of the body of water. On a critical or hit, swim perfectly. On a graze, lose 2PA+1 STA just to stay composed. On a failure, the character must use their movement surge just to stay above water or fall 1m.
 
@@ -134,21 +132,20 @@ Note: DM is squared because large creatures suffer more from falling. For size 2
 
 \textbf{Damage Tiers:} 
 
-\begin{center}
-\begin{tabular}{||c c c c||}
-\hline
-Name & Threshold & IL & Wound \\ [1ex]
-\hline \hline
+\begin{stattable}{Damage Tiers}{@{}lccc@{}}
+Name & Threshold & IL & Wound \\
+\midrule
 Tier 0 & armor & 1 & 0 \\
+\rowcolor{fallowtint}
 Tier 1 & armor+TGH & 5 & 0 \\
 Tier 2 & armor+2xTGH & 10 & 50\% \\
+\rowcolor{fallowtint}
 Tier 3 & armor+3xTGH & 20 & 100\% \\
 Tier 4 & armor+4xTGH & 30 & 100\% \\
+\rowcolor{fallowtint}
 Tier 5 & armor+5xTGH & 40 & 100\% \\
 Tier 6 & armor+6xTGH & 50 & 100\% \\
-\hline
-\end{tabular}
-\end{center}
+\end{stattable}
 
 \textbf{Interpreting IL:} A tier 0, or T0 injury means a small bruise or a patch of burned skin. A T1 injury is kin deep cut that bleeds a little or a large bruise. A T2 is a cut down to the muscle or a potentially cracked bone. A T3 is definitely a cracked bone and internal organ damage with bleeding. A T4 is near system shock, with multiple broken bones, impalation through the chest and potentially limb amputation. A T5 means instant death.
 
@@ -172,13 +169,13 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
 
 \textbf{Wounds:} can be caused by receiving high tier damage. Their healing counter is separate from the main injury counter. 
 
-\begin{itemize}
-    \item Broken arm: Makes the arm useless. Equivalent to 10 IL to heal.
-    \item Broken leg: Makes the leg lame. Equivalent to 15 IL to heal.
-    \item Bleed: a special wound that requires healing to stop bleeding. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per Bleed cure untreated. Bleeds caused by a T2 wound require 1 cure to be healed. For every extra tier, they require 1 extra cure. They do not require the expense of hunger or thirst to be healed. It is caused by damage to the chest or head.
-    \item Shocked: cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit and 100\% chance on a T5. 
-    \item Unconscious: causes unconsciousness. Happens when receiving damage in the head. Takes at least 1 minute to wake up without intervention.
-\end{itemize}
+\begin{proplist}
+    \item \textbf{Broken arm:} Makes the arm useless. Equivalent to 10 IL to heal.
+    \item \textbf{Broken leg:} Makes the leg lame. Equivalent to 15 IL to heal.
+    \item \textbf{Bleed:} a special wound that requires healing to stop bleeding. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per Bleed cure untreated. Bleeds caused by a T2 wound require 1 cure to be healed. For every extra tier, they require 1 extra cure. They do not require the expense of hunger or thirst to be healed. It is caused by damage to the chest or head.
+    \item \textbf{Shocked:} cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit and 100\% chance on a T5.
+    \item \textbf{Unconscious:} causes unconsciousness. Happens when receiving damage in the head. Takes at least 1 minute to wake up without intervention.
+\end{proplist}
 
 \subsection{Additional effects:}
 
@@ -192,12 +189,12 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
 
 \text{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overflows the DL to hit posed by the defender during an attack can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
 
-\begin{itemize}
+\begin{proplist}
     \item \textbf{Armor Bypass:} Only attacks from weapons with the precise property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the attack also has the property.
     \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. For the same cost, ignores fiber armor RES entirely. This can only be done by weapons with the penetrating property. 
     \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per SOP. Only weapons with the bladed property can use this.
     \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1 or interrupt if its over T0.
-\end{itemize}
+\end{proplist}
     
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
 
@@ -227,7 +224,7 @@ There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Heal
 
 The list of afflictions is:
 
-\begin{itemize}
+\begin{proplist}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
 \item \textbf{Prone:} Can only crawl and stand up. Takes -3 to any attempt to evade.
 \item \textbf{Grappled:} Movement requires pushing. Focus is locked to the main grappler.
@@ -254,7 +251,7 @@ The list of afflictions is:
 \item \textbf{Weakened/Malnourished} -1/-2 Health. -1/2 to IT.
 \item \textbf{Thirsty/Dehydrated} -1/-2 Health, -1/2 to IT
 \item \textbf{Sick} -2 Health. -2 to IT.
-\end{itemize}
+\end{proplist}
 
 \skill{Health}{ CON }{ Represents how strong the character's body is against diseases, poisons, exposure to the elements, and how quickly they recover from injuries and exhaustion. 
 
@@ -430,11 +427,11 @@ The push DL depends on weight. When stopping an object, also consider its speed.
 
 Adjust the damage as follows:
 
-\begin{itemize}
+\begin{proplist}
     \item \textbf{Freedom of movement:} If the target is free to move, it is swept along instead of crushed: halve the damage. Do not halve the damage for objects 2 size categories below the target.
     \item \textbf{Contact:} soft or wide objects (bodies, sand) halves damage.
     \item \textbf{Armor:} Damage from objects of size equal or greater than the character ignore armor. Note: armor spreads damage, but large objects have enough force to damage even when energy is spread out.
-\end{itemize}
+\end{proplist}
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
@@ -467,18 +464,16 @@ A burning surface lasts at minimum until the end of combat, or until extinguishe
 
 Here are a few common flammable surfaces and the amount of burning damage they cause when covering the same space as a character. 
 
-\begin{center}
-\begin{tabular}{||c c c||}
-\hline
-Fuel & Burn/round & Spread\\ [0.5ex]
-\hline\hline
-Dry grass, thatch & 5 & 1/round\\
-Burning cloth & 5 & 1/round\\
-Burning Oil/Alcohol & 8 & 1/round\\
+\begin{stattable}{Flammable Surfaces}{@{}lcc@{}}
+Fuel & Burn/round & Spread \\
+\midrule
+Dry grass, thatch & 5 & 1/round \\
+\rowcolor{fallowtint}
+Burning cloth & 5 & 1/round \\
+Burning Oil/Alcohol & 8 & 1/round \\
+\rowcolor{fallowtint}
 Wood pyre, timber & 8 & 0 \\
-\hline
-\end{tabular}
-\end{center}
+\end{stattable}
 
 \textbf{Extinguishing:} Fires can be extinguished by muffling it, throwing water or with magic. Both muffling and throwing water require 4 AP by default and being in a burning space or adjacent to it. Not every fire is extinguishable through water or muffling. Some fires require more than 4 AP to be extinguished.
 
@@ -490,13 +485,13 @@ Optional: \textbf{Fire spreads} each round to adjacent spaces that contain fuel.
 
 Gases can have several effects: Poison, explosion, suffocation, reduced visibility and blindness. It lasts until the end of combat or dispersed somehow through wind. Muffling or extinguishing the source of the gas causes it to disappear in the beginning of the next round. Doing that costs 4 AP. Relocating the source moves the area somewhere else starting next round.  
 
-\begin{itemize}
+\begin{proplist}
     \item \textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
     \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Positioning and Visibility section.
     \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a Rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
     \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Use a reflex test to avoid it. Protective gear over the eyes also prevents blindness.
     \item \textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
-\end{itemize}
+\end{proplist}
 
 
 \textbf{White Smoke:} affects visibility, but only suffocates in enclosed places filled by it. \textbf{Black Smoke:} Affects visibility and also cause suffocation.
@@ -535,22 +530,22 @@ Chase scenes happen when two or more teams are at risk of entering combat. It ca
 
 There are four distance tiers: Combat, Shooting, Far and Horizon.
 
-\begin{itemize}
+\begin{proplist}
     \item \textbf{Combat:} This is under 50m distance. Can be smaller when indoors (a room) or in places with many obstacles.
     \item \textbf{Shooting:} This is from around 50m to 200m distance. This range can be smaller in a city, a dense forest or any other place with lots of hiding spots and obstacles.
     \item \textbf{Far:} This is from around 200m to 500m. This is the limit of what can be seen in many places. It will be smaller in places with many obstacles and hiding spots.
     \item \textbf{Horizon:} This is from 500m and beyond. This distance is only used in open terrain.
-\end{itemize}
+\end{proplist}
 
 \textbf{Chase actions:} Chase actions can be running and scouting, ranged combat or hiding. 
 
 \textbf{Escaping:} There are three ways to escape:
 
-\begin{itemize}
+\begin{proplist}
     \item \textbf{Outrunning:} If the distance is already far or Horizon and the winner decides to increase the distance, the chase is over.
     \item \textbf{Hiding:} If the distance is at least far and there is a stealth event, in which the quarry succeeds, it escapes.
     \item \textbf{Obstacle:} If there is an obstacle that the quarry traverses and that the pursuers cannot or do not want to traverse.
-\end{itemize}
+\end{proplist}
 
 \subsection{Running}
 
@@ -670,15 +665,13 @@ The factors that determine the difficulty to detect or hide are: distance, noise
 
 \textbf{Distance bands:} Detection is penalized by distance. It is convenient to design distance bands, as shown in the list. For each band over the first, add -3 penalty to vision, -5 to hearing and -5 to smell.
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item immediate (within 10m), bonus instead of penalty
     \item combat (within 50m), no penalty
     \item shooting(within 200 m)
     \item far (within 500 m)
-    \item horizon 
-\end{itemize}
+    \item horizon
+\end{proplist}
 
 \textbf{Noise:} is the amount of conflicting signal in a given situation. For hearing, its the loudness and rhythm of other sounds. For vision, it is the amount of camouflage, as well as the amount of cover and the presence of very bright nearby objects. For smell, it is the variety and intensity of other smells. 
 
@@ -686,9 +679,7 @@ The factors that determine the difficulty to detect or hide are: distance, noise
 
 Here's a list of possible modifiers. Many modifiers can be combined.
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item \textbf{Being in plain sight:} -10 to Stealth vs. vision. Only in front of someone.
     \item \textbf{Camouflage in plain sight:} -5 to Stealth vs vision when in plain sight.
     \item \textbf{Hiding behind a tree:} +2 to Stealth vs. vision (Requires active search to detect).
@@ -705,7 +696,7 @@ Here's a list of possible modifiers. Many modifiers can be combined.
     \item \textbf{Hitting in melee:} detected by touch. Detected by vision a moment later.
     \item \textbf{Shooting a bow:} -2 to Stealth vs. hearing and vision.
     \item \textbf{Hitting at distance:} -2 vs Vision. Automatically detected if in plain sight. Direction is detected either way.
-\end{itemize}
+\end{proplist}
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection.
 
@@ -717,14 +708,14 @@ Morale is the measure of the characters' stress tolerance. Stressful situations,
 
 \textbf{Combat morale DL = aggravating factors}
 
-\begin{itemize}
-    \item Sensory deprivation(being oblivious): +3
-    \item Reduced sensory quality(being disoriented): +2
-    \item injured: +2 per injury penalty
-    \item Burning or suffocating: +5
-    \item Out of STA: +2
-    \item Monstrous presence: variable. Depends on presence.
-\end{itemize}
+\begin{proplist}
+    \item \textbf{Sensory deprivation (being oblivious):} +3
+    \item \textbf{Reduced sensory quality (being disoriented):} +2
+    \item \textbf{Injured:} +2 per injury penalty
+    \item \textbf{Burning or suffocating:} +5
+    \item \textbf{Out of STA:} +2
+    \item \textbf{Monstrous presence:} variable. Depends on presence.
+\end{proplist}
 
 \subsection{Social actions}
 

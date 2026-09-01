@@ -14,32 +14,40 @@ There are 19 skills, as described in the table:
 
 \end{multicols}
 
-\begin{center}
-\begin{tabular}{| c c c c|}
-\hline &&& \\
+\begin{stattable}{Skills}{@{}llll@{}}
 Skill & Proficiency & Talent & Trainable \\
-\hline &&& \\
+\midrule
 Health & Constitution & - & no\\
-
+\midrule
+\rowcolor{fallowtint}
 Strike & Melee & Dexterity  & yes \\
+\rowcolor{fallowtint}
 Defend & Melee & Dexterity & yes \\
+\rowcolor{fallowtint}
 Grapple & Melee + STR-10 & - & no \\
-
-Accuracy & Ranged & Dexterity & yes\\ 
+\midrule
+Accuracy & Ranged & Dexterity & yes\\
 Reflex & Ranged + Awareness & Dexterity & no\\
-
+\midrule
+\rowcolor{fallowtint}
 Balance & AGI-10 & Dexterity  & yes \\
+\rowcolor{fallowtint}
 Climb & AGI-10 & Dexterity  & yes \\
+\rowcolor{fallowtint}
 Swim & AGI-10 & Dexterity  & yes \\
-
+\midrule
 Prestidigitation & Dexterity & Dexterity & yes \\
 Stealth & - & Dexterity & yes \\
-
+\midrule
+\rowcolor{fallowtint}
 Cunning & Awareness & Intellect  & yes \\
+\rowcolor{fallowtint}
 Detection & Awareness & - & no \\
+\rowcolor{fallowtint}
 Exploration & Knowledge + Awareness & Intellect  & knowledge \\
+\rowcolor{fallowtint}
 Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
-
+\midrule
 % Combustion & Sorcery & Intellect & yes \\
 % Electromagnetism & Sorcery & Intellect & yes \\
 % Entropy & Sorcery & Intellect & yes \\
@@ -48,15 +56,11 @@ Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
 % Telepathy & Sorcery & Intellect & yes \\
 % Biomancy & Sorcery & Intellect & yes \\
 % Devotion & Devotion & Spirit & yes \\
-
 Insight & Charisma & Intellect & yes \\
 Deception & Charisma & Intellect & yes \\
 Persuasion & Charisma & Intellect & yes \\
 Will & SPI & - & no \\
-
-\hline
-\end{tabular}
-\end{center}
+\end{stattable}
 
 \begin{multicols}{2}
 
@@ -178,22 +182,24 @@ Two creatures of size 3 can occupy the same space, but cannot end a turn like th
 
 \textbf{Skill Modifier (SM):} is a modifier added to or subtracted from the character's values, in the proportions shown in the table.
 
-\begin{center}
-\begin{tabular}{||c c ||}
-\hline
+\end{multicols}
+
+\begin{stattable}{Skill Modifier (SM)}{@{}lc@{}}
 Skill & Modifier \\
-\hline
-Grapple & +5x \\ 
-% Strength & +5x \\ 
-Reflex & -1x \\ 
-% Deflection & -1x \\ 
-% Weapon Precision & -1x \\ 
-SD & -1x \\ 
+\midrule
+Grapple & +5x \\
+% Strength & +5x \\
+\rowcolor{fallowtint}
+Reflex & -1x \\
+% Deflection & -1x \\
+% Weapon Precision & -1x \\
+SD & -1x \\
+\rowcolor{fallowtint}
 Stealth & -2x \\
-Climbing & -2x \\ 
-\hline
-\end{tabular}
-\end{center}
+Climbing & -2x \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 \textbf{Movement Multiplier (MM):} multiplies all movement speeds and the range of all weapons.
 
@@ -201,18 +207,18 @@ Climbing & -2x \\
 
 \bigskip
 
-\begin{center}
-\begin{tabular}{||c c c c c c c c||}
-\hline
+\end{multicols}
+
+\begin{stattable}{Size}{@{}lccccccc@{}}
 Size & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
-\hline
+\midrule
 DM & 0.5 & 0.75 & 1 & 1.5 & 2 & 3 & 4 \\
 SM & -2 & -1 & 0 & +1 & +2 & +3 & +4 \\
-MM & 0.5 & 1 & 1 & 1.5 & 1.5 & 2 & 2.5 \\ 
-VM & 0.1 & 0.33 & 1 & 3.33 & 10 & 33.3 & 100 \\ 
-\hline
-\end{tabular}
-\end{center}
+MM & 0.5 & 1 & 1 & 1.5 & 1.5 & 2 & 2.5 \\
+VM & 0.1 & 0.33 & 1 & 3.33 & 10 & 33.3 & 100 \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 
 \section{Races and Age}
@@ -221,101 +227,86 @@ VM & 0.1 & 0.33 & 1 & 3.33 & 10 & 33.3 & 100 \\
 Each playable race comes with its own bonuses to attributes and talents. The table below shows the playable races. In a no-magic game, it is up to the GM to decide which races are available.
 
 
-\begin{center}
-\small
-\noindent
-\hspace*{-1cm}
-\begin{tabular}{||c c c c c c c c||}
-\hline
-Race & STR & AGI & STA & INT & SPI & DEX & CON \\ [1em]
-\hline\hline
-Surbit & 1 & 2 & 2 & 0 & 0 & 1 & 1 \\[0.5em]
-\hline
-Dwarf & 1 & -1 & 1 & 0 & 1 & 0 & 0 \\[0.5em]
-\hline
-Human & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\[0.5em]
-\hline
-Halkir & 0 & 2 & 1 & 0 & 0 & 1 & 0 \\ [0.5em]
-\hline
-Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\[0.5em]
-\hline
-\end{tabular}
-\end{center}
+\end{multicols}
+
+\begin{stattable}{Races}{@{}lccccccc@{}}
+Race & STR & AGI & STA & INT & SPI & DEX & CON \\
+\midrule
+Surbit & 1 & 2 & 2 & 0 & 0 & 1 & 1 \\
+\rowcolor{fallowtint}
+Dwarf & 1 & -1 & 1 & 0 & 1 & 0 & 0 \\
+Human & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\rowcolor{fallowtint}
+Halkir & 0 & 2 & 1 & 0 & 0 & 1 & 0 \\
+Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 \textbf{\large Surbit}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Small-sized creature
 \item Has the Fur ability
 \item Has the Bear Nose ability
 \item Has the Tail I ability
 \item Has the Claws ability
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Dwarves}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Has the Bat Ears ability
 \item Has the Tireless ability
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Humans}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Increases two talents by 1 at creation.
 \item Can choose one from Tireless, Large Hands, and Beautiful.
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Erthal}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Has the Large Hands ability
 \item Has the Regenerative Reservoir ability
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Halkir}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Has the Beautiful ability
 \item Has the Infrared Vision ability
-\end{itemize}
+\end{proplist}
 
 
 \subsection{Aging}
 
 A character's age influences their attributes and ability to learn new things. A character can be created as a child, a teenager, an adult, or older. Each of these ages has its characteristics.
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item Child: -2 STR, talents start at 0 but cost half the karma. Considered a size 2 creature.
     \item Teenager: -2 STR, +1 to talents.
     \item Adult: Standard.
     \item Aging: Receives -1 to CON and also to all attributes at each stage.
-\end{itemize}
+\end{proplist}
 
 The time required to advance in the age category can vary between races.
 
-\begin{center}
-\normalsize
-\begin{tabular}{| c c |}
-\hline
-Stage & Human \\ [1em]
-\hline
-Child & 8-13 \\ [0.5em]
-Teenager & 14-18 \\[0.5em]
-Adult & 19-39 \\[0.5em]
-Mature & 40-59 \\[0.5em]
-Old & 60-79 \\[0.5em]
-Very old & 80-death \\[0.5em]
-\hline
-\end{tabular}
-\end{center}
+\end{multicols}
+
+\begin{stattable}{Aging}{@{}lc@{}}
+Stage & Human \\
+\midrule
+Child & 8-13 \\
+\rowcolor{fallowtint}
+Teenager & 14-18 \\
+Adult & 19-39 \\
+\rowcolor{fallowtint}
+Mature & 40-59 \\
+Old & 60-79 \\
+\rowcolor{fallowtint}
+Very old & 80-death \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 
 \section{Intellect}
@@ -361,22 +352,22 @@ To use this skill, make a knowledge test against an arbitrary difficulty, repres
 
 The formal areas of knowledge in which the character can be trained are:
 
-\begin{itemize}
-    \item \magic Alchemy: Knowledge about the usage and creation of inorganic magical items. Necessary for alchemy spells.
-    \item \magic Animancy: Knowledge about consciousness and the nature of sorcery. What it does in the body, how it manifests and affects the environment, how to manipulate it. Necessary for animancy spells.
-    \item \magic Biomancy: Knowledge about biological structures. Necessary for biomancy magic.
-    \item \magic Shamanism: Helps with finding spirits, diplomacy with them.  
-    
-    \item Architecture: Knowledge about structures, their common forms, how to build or destroy them. Tunnels, bridges, buildings. Helps with exploration inside buildings.
-    \item Chemistry: Knowledge about chemicals and their craft. Includes bombs, acids, toxic substances.
-    \item Medicine: can make autopsy, potions, poisons and everything from first aid to surgeury.
-    \item Geography: Allows map-making. Helps traveling skill. Make tests to guess where resource events should be.
-    \item Politics: involves forgery, disguise, and acquiring local information about people.
-    \item Smithing: Knowledge about the manufacture and maintenance of weapons, armor and mechanisms. Includes tools, locks and siege weapons.
-    
-    \item Survival: This is the knowledge used in the action of exploration and preparation. It includes actions like cooking, butchering animals, preparing campfires, making natural shelters, and crafting simple objects from materials found in nature.
-    \item Zoology: Knowledge about animals. Helps with diplomacy with animals, hunting, finding weaknesses.
-\end{itemize}
+\begin{proplist}
+    \item \magic \textbf{Alchemy:} Knowledge about the usage and creation of inorganic magical items. Necessary for alchemy spells.
+    \item \magic \textbf{Animancy:} Knowledge about consciousness and the nature of sorcery. What it does in the body, how it manifests and affects the environment, how to manipulate it. Necessary for animancy spells.
+    \item \magic \textbf{Biomancy:} Knowledge about biological structures. Necessary for biomancy magic.
+    \item \magic \textbf{Shamanism:} Helps with finding spirits, diplomacy with them.
+
+    \item \textbf{Architecture:} Knowledge about structures, their common forms, how to build or destroy them. Tunnels, bridges, buildings. Helps with exploration inside buildings.
+    \item \textbf{Chemistry:} Knowledge about chemicals and their craft. Includes bombs, acids, toxic substances.
+    \item \textbf{Medicine:} can make autopsy, potions, poisons and everything from first aid to surgeury.
+    \item \textbf{Geography:} Allows map-making. Helps traveling skill. Make tests to guess where resource events should be.
+    \item \textbf{Politics:} involves forgery, disguise, and acquiring local information about people.
+    \item \textbf{Smithing:} Knowledge about the manufacture and maintenance of weapons, armor and mechanisms. Includes tools, locks and siege weapons.
+
+    \item \textbf{Survival:} This is the knowledge used in the action of exploration and preparation. It includes actions like cooking, butchering animals, preparing campfires, making natural shelters, and crafting simple objects from materials found in nature.
+    \item \textbf{Zoology:} Knowledge about animals. Helps with diplomacy with animals, hunting, finding weaknesses.
+\end{proplist}
 \noindent
 
 % \item Botany: Knowledge about plants, their location, shape, magical properties, poisons, fruit-bearing capacity, ecology, etc.

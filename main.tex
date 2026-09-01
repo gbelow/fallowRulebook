@@ -179,6 +179,22 @@
   \par\endMakeFramed
 }
 
+% dnotesm: a smaller Designer's Note that stays inside one column of a
+% multicols layout (dnote cannot — see above). Built as an ordinary box,
+% not a framed one, since it never needs to break across a page/column:
+% keep its content short enough to fit in the remaining column height.
+\newsavebox{\dnotesmbox}
+\newenvironment{dnotesm}{%
+  \begin{lrbox}{\dnotesmbox}
+  \begin{minipage}{0.94\linewidth}
+  \noindent{\sffamily\bfseries\scriptsize\textcolor{fallowrule}{Designer's Note}}\par\vspace{1pt}%
+  \normalfont\itshape\footnotesize
+}{%
+  \end{minipage}
+  \end{lrbox}
+  \par\noindent\fboxsep=5pt\fboxrule=0.5pt\fcolorbox{fallowrule}{fallowtint}{\usebox{\dnotesmbox}}\par
+}
+
 \begin{document}
 
 \maketitle
