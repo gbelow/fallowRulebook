@@ -3,15 +3,16 @@
 \begin{multicols}{2}
 
 \newcommand{\spell}[9]{
-    \textbf{\large{#1}} \\
-     \textbf{Cost:} #2 \\
-     \textbf{Talent:} #3 \\
-     \textbf{Requirements:} #4 \\
-     \textbf{DL:} #5  \\
-     \textbf{Range, Area:} #6 \\
-     \textbf{Spell Type:} #7 \\
-     \textbf{Duration:} #8 \\
-     \textbf{Effect:} #9\\
+    \statrule
+    {\sffamily\bfseries\large #1} \\
+    \statlabel{Cost:} #2 \\
+    \statlabel{Talent:} #3 \\
+    \statlabel{Requirements:} #4 \\
+    \statlabel{DL:} #5  \\
+    \statlabel{Range, Area:} #6 \\
+    \statlabel{Spell Type:} #7 \\
+    \statlabel{Duration:} #8 \\
+    \statlabel{Effect:} #9\\
 }
 
 \section{Sorcery basics}
