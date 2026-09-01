@@ -1,8 +1,8 @@
 \documentclass[letterpaper]{book}
- 
+
 \usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{fontspec}
 
 \usepackage[singlelinecheck=false]{caption}
 \usepackage{geometry}
@@ -28,6 +28,11 @@
 \usepackage{titlesec}
 \usepackage{framed}
 \usepackage{booktabs}
+
+% Title-page display face: Uncial Antiqua (OFL, bundled in fonts/), used
+% only for the "Fallow" wordmark on the title page — not for running
+% headings, which stay Alegreya Sans.
+\newfontfamily\titlefont{UncialAntiqua-Regular}[Path=fonts/,Extension=.ttf]
 
 \selectlanguage{english}
 
@@ -63,9 +68,9 @@
   {0.5em}
   {}
 
-\title{RPG Below}
+\title{Fallow}
 \author{Guilherme Below}
-\date{February 2024}
+\date{September 2026}
 
 % Set page geometry.
 \geometry
@@ -131,7 +136,7 @@
 }
 
 % Mode tag: marks elements that belong to the magic system and are omitted in a no-magic game.
-\newcommand{\magic}{{\ding{73}}~}
+\newcommand{\magic}{{\ensuremath{\bigstar}}~}
 
 % --- Reusable content patterns --------------------------------------------
 
@@ -197,14 +202,33 @@
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+\centering
+\vspace*{0.12\textheight}
+
+{\titlefont\fontsize{76}{80}\selectfont Fallow}\\[8pt]
+{\color{fallowrule}\rule{0.36\textwidth}{1.2pt}}\\[10pt]
+
+\vspace{0.05\textheight}
+\includegraphics[height=6.5cm]{images/fallow_logo_umber.png}
+\vspace{0.05\textheight}
+
+{\normalfont\itshape\large A TTRPG system for tactical combat, gritty exploration and collaborative storytelling \\ in a low fantasy or historical medieval setting.}\\[2pt]
+
+\vfill
+
+{\sffamily\bfseries\large Guilherme Below}\\[2pt]
+{\normalfont September 2026}
+
+\vspace*{0.1\textheight}
+\end{titlepage}
+
 \clearpage
 
 \vspace*{\fill}
-% \includegraphics[height=2cm]{example-image}
 
 \begin{center}
-    gbelow.github.io \\
+    % gbelow.github.io \\
     Copyright \textcopyright\ Guilherme Madalena Below \\
     All rights reserved.
 \end{center}
