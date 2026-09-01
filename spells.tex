@@ -3,15 +3,16 @@
 \begin{multicols}{2}
 
 \newcommand{\spell}[9]{
-    \textbf{\large{#1}} \\
-     \textbf{Cost:} #2 \\
-     \textbf{Talent:} #3 \\
-     \textbf{Requirements:} #4 \\
-     \textbf{DL:} #5  \\
-     \textbf{Range, Area:} #6 \\
-     \textbf{Spell Type:} #7 \\
-     \textbf{Duration:} #8 \\
-     \textbf{Effect:} #9\\
+    \statrule
+    {\sffamily\bfseries\large #1} \\
+    \statlabel{Cost:} #2 \\
+    \statlabel{Talent:} #3 \\
+    \statlabel{Requirements:} #4 \\
+    \statlabel{DL:} #5  \\
+    \statlabel{Range, Area:} #6 \\
+    \statlabel{Spell Type:} #7 \\
+    \statlabel{Duration:} #8 \\
+    \statlabel{Effect:} #9\\
 }
 
 \section{Sorcery basics}
@@ -93,20 +94,31 @@ The types of spells are:
 
 \section{Spell Design Principles:}
 
-\textbf{No turn durations:} Avoid making spell durations in turns. Turn based durations add bookkeeping during combat. 
+\begin{itemize}
+    \item \textbf{No turn durations:} Don't making spell durations in turns. Turn based durations add bookkeeping during combat. Make dispell triggers instead, like will test or insight test.
+    \item \textbf{Survival spell durations:} Durations should be in ETs.
+    \item \textbf{No summoning:} Matter cannot be created. Spirits are incorporeal.
+    \item \textbf{No free energy:} the physical energy must come from the target of the spell. The spell merely activates the event telepathically when it otherwise would not.
+    \item \textbf{No magical buffs or debuffs:} Buffs and debuffs must not give bonuses to skills or attributes directly. Those are hard to remember and add bookkeeping.
+    \item \textbf{Ranges:} Keep it under 30m. Charged spells should be touch. Projectiles can shoot further.
+    \item \textbf{Area of effect:} Keep explosions between 2m - 5m radius. Environmentals can be of any size.
+    \item \textbf{Spell scaling:} Scaling is meant to be done by means of spell enhancement. No spells should be a bigger version of another.
+\end{itemize}
+
+\textbf{Exception:} Shamanism spells can break these principles. They work by allying with local entities, which have different limitations.
 
 \section{Alchemy}
 
 The art of giving life to objects and manipulating life in them. The power and efficacy of any alchemical spell is based on the gear used to perform it.
 
 
-\spell{Detonate Explosive}{1 charge, 2 AP + 1 STA}{Alchemy 2}{ explosive}{0}{15m}{Effect}{}{ Detonates an alchemical explosive that is already loaded, causing it to deal its damage and effects. }
+\spell{Detonate Explosive}{1 charge, 2 AP + 1 STA}{Alchemy 2}{ grenade}{0}{15m}{Effect}{}{ Detonates an alchemical grenade that is already charged, causing it to deal its damage and effects. }
 
-\spell{Smoke Explosive}{1 grenade, 3 AP + 1 STA}{Alchemy 3}{ explosive}{5}{Explosion with a 5m xMM radius}{Effect}{loaded, 5 rounds}{ Loads explosives with the effect of producing smoke when activated, upon contact with fire or on impact. The smoke renders anyone within the fog invisible to the naked eye and obscures visibility to a radius of 1m. }
+\spell{Smoke Explosive}{1 grenade, 4 AP + 1 STA}{Alchemy 3}{ grenade}{5}{Explosion with a 5m xMM radius}{Effect}{charged, 5 rounds}{ Loads explosives with the effect of producing smoke when activated, upon contact with fire or on impact. The grenade produces black fog. }
 
-\spell{Shock Explosive}{3 charges, 4 AP + 1 STA}{Alchemy 3}{ explosive}{5}{Explosion with a 3m xMM radius}{Effect}{loaded, 5 rounds}{ Loads explosives with alchemical energy to explode when activated, upon contact with fire or on impact, dealing 20xDM of impact damage and 20xDM PEN as an explosion.}
+\spell{Shock Explosive}{3 grenade, 4 AP + 1 STA}{Alchemy 3}{ grenade}{5}{Explosion with a 3m xMM radius}{Effect}{charged, 5 rounds}{ Loads explosives with alchemical energy to explode when activated, upon contact with fire or on impact, dealing 20xDM of blunt damage.}
 
-\spell{Incendiary Explosive}{3 charges, 4 AP + 1 STA}{Alchemy 3}{explosive}{5}{Explosion with a 3m xMM radius}{Effect}{loaded, 5 rounds}{ Transforms the explosive into a sticky substance that ignites when activated, upon contact with fire or on impact, dealing 30xDM burn damage. }
+\spell{Incendiary Explosive}{3 grenade, 4 AP + 1 STA}{Alchemy 3}{grenade}{5}{Explosion with a 3m xMM radius}{Effect}{charged, 5 rounds}{ Transforms the explosive into a sticky substance that ignites upon contact with fire, dealing 10xDM burn damage until extinguished. }
 
 % \spell{Extinguish Flames}{ 2 AP + 2 STA}{Alchemy 1}{ Alchemy 4}{8}{Touch}{Environmental}{instantaneous}{ Extinguishes the flames of any combustible material it can touch.}
 

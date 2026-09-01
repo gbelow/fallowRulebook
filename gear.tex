@@ -7,9 +7,7 @@
 A weapon is a tool used in combat to enhance the character's abilities. Each weapon or shield has at least one form of attack. Each form has its own properties: \\
 
 \noindent
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item \textbf{Grapple:} This attack is used for grappling actions, its force is equal to STR.
 \item \textbf{Sweeping:} Allows for Sweeping attacks.
 \item \textbf{Braced:} This attack can be a braced attack.
@@ -29,12 +27,22 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: gets -2 accuracy when the opponent defends actively. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
-\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible. 
-\end{itemize}
+\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible.
+\end{proplist}
+
+% \begin{dnotesm}
+% Piercing turning a graze into a miss trades away a little tactical granularity, to keep the block/graze/hit ladder simple.
+% \end{dnotesm}
 
 \textbf{Scaling weapons:} The weapons in the tables are human-sized and serve as a basis for size scaling. When scaling weapon size, multiply damages and RES by the DM and reach by the MM.
 
-Note that in reality, scaling an object would require reshaping it to maintain its properties. Larger objects would have to be sturdier not to break on impact, so weapons could not be so long.  \\
+\end{multicols}
+
+% \begin{dnote}
+% Scaling an object in reality would require reshaping it to keep its properties: a larger object needs to be sturdier not to break on impact, so a weapon could not simply grow longer and keep working the same way. This system trades that verisimilitude for a single scaling multiplier that is easy to apply at the table.
+% \end{dnote}
+
+\begin{multicols}{2}
 
 \section{ Weapons}
 
@@ -52,38 +60,38 @@ Note that in reality, scaling an object would require reshaping it to maintain i
 
 \end{multicols}
 
-\begin{table}[H]
-\scriptsize 
-\centering
-\renewcommand{\arraystretch}{1.4}
-\hspace*{-1cm}
-\begin{tabular}{ | c c c c c c c c c |}
-\hline
-\multicolumn{9}{|c|}{ \textbf{ \Large Small Arms} } \\
-\hline
-Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
-\hline
+% NOTE for review: Unarmed's second row originally had "heavy I, smash" sitting
+% in the price column instead of properties, alongside "draw" in properties.
+% Moved "heavy I, smash" into properties (now "draw, heavy I, smash"), matching
+% how Gauntlet's own second row already carries the same value in properties.
+% This is a small content change, not just formatting — worth a final glance.
+\begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+\midrule
 \textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & small \\
-& STR & 0.5x STR & 0 & small & short & draw & heavy I, smash &  \\[5pt]
-\hline
-\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[5pt]
-\hline
-\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\ 
-& 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & &\\ [5pt]
-\hline
-\textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small\\
-& 15 & 4 & 16 & small & STR & draw, precise, slow && \\ [5pt]
-\hline
-\textbf{Club} & 15 & 8 & 0 & small & short & DEF, heavy I & 1 SP & small \\ [5pt]
-\hline
-\textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small\\
-& 15 & 0 & 0 & small & short & draw, DEF && \\ [5pt]
-\hline
-\textbf{Whip} & 10 & 0 & 6 & small & long II & draw & 2 GP & small\\
-& 15 & 0 & 0 & small & long II & grapple & & \\[5pt]
-\hline
-\end{tabular}
-\end{table}
+ & STR & 0.5x STR & 0 & small & short & draw, heavy I, smash & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[3pt]
+\midrule
+\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\
+ & 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small \\
+\rowcolor{fallowtint}
+ & 15 & 4 & 16 & small & STR & draw, precise, slow & & \\[3pt]
+\midrule
+\textbf{Club} & 15 & 8 & 0 & small & short & DEF, heavy I & 1 SP & small \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small \\
+\rowcolor{fallowtint}
+ & 15 & 0 & 0 & small & short & draw, DEF & & \\[3pt]
+\midrule
+\textbf{Whip} & 10 & 0 & 6 & small & long II & draw & 2 GP & small \\
+ & 15 & 0 & 0 & small & long II & grapple & & \\
+\end{stattable}
 \begin{multicols}{2}
 
 \textbf{Short Sword:} It is a larger version of a dagger, suitable for public use without drawing attention and easy to draw. Although it is too large to be ideal for grappling combat, it has stronger attacks and offers better defensive potential. It is a good secondary weapon or for urban and enclosed environments. 
@@ -99,35 +107,33 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 \textbf{Battle Axe:} It is a very good option against wooden objects or opponents with low-rigidity armor. Its blade combined with its weight makes it an excellent weapon for destroying shields. The axe is slower than swords, and its attacks can leave the user open to enemy offensives, so it is wise to make each attack count. Its defensive potential is low, as it is a shaft weapon. It is better to use the axe alongside a shield to compensate. The battle axe has a spike on the back, which is a better option against opponents whose armor the blade cannot penetrate.  
 
 \end{multicols}
-\begin{table}[H]
-\scriptsize 
-\centering
-\renewcommand{\arraystretch}{1.4}
-\hspace*{-1cm}
-\begin{tabular}{ | c c c c c c c c c |}
-\hline
-\multicolumn{9}{|c|}{ \textbf{ \Large One-Handed Weapons} } \\
-\hline
-Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
-\hline
-\textbf{Short Sword}& 20 & 4 & 16 & one & short & precise, piercing, bladed, draw & 8 GP & medium\\
-& 20 & 8 & 16 & one & short & sweep, draw, DEF, heavy I, bladed  && \\ [5pt]
-\hline
-\textbf{Rapier} & 15 & 5 & 16 & one & long I & draw, precise, piercing, penetrating & 10 GP & medium\\
- & 15 & 0 & 0 & one & long I & DEF & & \\[5pt]
-\hline
+% NOTE for review: Mace's second row had a stray "\textbf" with no
+% argument in place of the usual blank/continuation first cell in the
+% pre-existing data — a markup leftover, not game data, so normalized to
+% the standard continuation marker used elsewhere.
+\begin{stattable}{One-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+\midrule
+\textbf{Short Sword} & 20 & 4 & 16 & one & short & precise, piercing, bladed, draw & 8 GP & medium \\
+ & 20 & 8 & 16 & one & short & sweep, draw, DEF, heavy I, bladed & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Rapier} & 15 & 5 & 16 & one & long I & draw, precise, piercing, penetrating & 10 GP & medium \\
+\rowcolor{fallowtint}
+ & 15 & 0 & 0 & one & long I & DEF & & \\[3pt]
+\midrule
 \textbf{Short Spear} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 1 SP & large \\
-& 15 & STR & 0 & two & short & DEF, shaft, grapple &  & \\
-& 20 &  8  & 20 & one & 2xSTR & slow, piercing, heavy I-II && \\[5pt]
-\hline
-\textbf{Mace} & 50 & 12 & 0 & one & short & heavy I-II, smash & 4 GP & medium\\
-\textbf & 15 & 0 & 0 & one & short & DEF, shaft &  & \\[5pt]
-\hline
-\textbf{Battle Axe}& 25 & 10 & 15 & one & short & heavy I-II, bladed & 5 GP & medium\\
-& 15 & 0 & 0 & one & short & DEF && \\ [5pt]
-\hline
-\end{tabular}
-\end{table}
+ & 15 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+ & 20 & 8 & 20 & one & 2xSTR & slow, piercing, heavy I-II & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Mace} & 50 & 12 & 0 & one & short & heavy I-II, smash & 4 GP & medium \\
+\rowcolor{fallowtint}
+ & 15 & 0 & 0 & one & short & DEF, shaft & & \\[3pt]
+\midrule
+\textbf{Battle Axe} & 25 & 10 & 15 & one & short & heavy I-II, bladed & 5 GP & medium \\
+ & 15 & 0 & 0 & one & short & DEF & & \\
+\end{stattable}
 
 \begin{multicols}{2}
 
@@ -144,42 +150,44 @@ Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \textbf{Greatsword:} is a larger and more robust version of a longsword. Although the weapon is quite heavy, it is balanced so that its attack can still be delivered with agility. The blade is very durable, making the weapon ideal for destroying other weapons that attempt to block it. Its sweeping attack with enhanced damage and long reach makes it excellent for dealing with many opponents at once. This sword is too large to be used in grappling combat, but it is still capable of thrusting at vulnerable points.
 
 \end{multicols}
-\begin{table}[H]
-\scriptsize 
-\centering
-\renewcommand{\arraystretch}{1.4}
-\hspace*{-1cm}
-\begin{tabular}{ | c c c c c c c c c |}
-\hline
-\multicolumn{9}{|c|}{ \textbf{ \Large Two-Handed Weapons} } \\
-\hline
-Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\ 
-\hline
-\textbf{Longsword} & 20 & 10 & 18 & two & long I & sweep, DEF, heavy I, bladed & 12GP & large\\ 
-& 20 & 4 & 16 & one & short & piercing, penetrating, precise, heavy I && \\
-& 20 & 4 & 16 & two & long I & piercing && \\[5pt]
-\hline
-\textbf{Pike} & 20 & 6 & 24 & two & long II & braced, piercing, heavy I & 6 GP & large\\ 
-& 20 & 0 & 0 & two & long I & shaft & & \\ [5pt] 
-\hline
-\textbf{Halberd} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12GP & large\\
-& 30 & STR & 1.5x STR & two & long I & hook & & \\
-& 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
-& 30 & 12 & 20 & two & long I & heavy I-III, bladed && \\ [5pt]
-\hline
-\textbf{Warhammer} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12GP & large\\
-& 30 & STR & 1.5x STR & two & long I & hook && \\
-& 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
-& 100 & 14 & 0 & two & long I & heavy II-III, smash && \\ [5pt]
-\hline
+% NOTE for review: Bardiche's second row had a stray "\textbf" with no
+% argument in place of the usual blank/continuation first cell in the
+% pre-existing data — a markup leftover, not game data, so normalized to
+% the standard continuation marker used elsewhere.
+\begin{stattable}{Two-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+\midrule
+\textbf{Longsword} & 20 & 10 & 18 & two & long I & sweep, DEF, heavy I, bladed & 12 GP & large \\
+ & 20 & 4 & 16 & one & short & piercing, penetrating, precise, heavy I & & \\
+ & 20 & 4 & 16 & two & long I & piercing & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Pike} & 20 & 6 & 24 & two & long II & braced, piercing, heavy I & 6 GP & large \\
+\rowcolor{fallowtint}
+ & 20 & 0 & 0 & two & long I & shaft & & \\[3pt]
+\midrule
+\textbf{Halberd} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12 GP & large \\
+ & 30 & STR & 1.5x STR & two & long I & hook & & \\
+ & 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+ & 30 & 12 & 20 & two & long I & heavy I-III, bladed & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Warhammer} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12 GP & large \\
+\rowcolor{fallowtint}
+ & 30 & STR & 1.5x STR & two & long I & hook & & \\
+\rowcolor{fallowtint}
+ & 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+\rowcolor{fallowtint}
+ & 100 & 14 & 0 & two & long I & heavy II-III, smash & & \\[3pt]
+\midrule
 \textbf{Bardiche} & 30 & 12 & 20 & two & long I & heavy I-III, sweep, bladed & 10 GP & large \\
-\textbf & 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\ [5pt]
-\hline
-\textbf{Greatsword} & 30 & 12 & 18 & two & long I & sweep, DEF, heavy I-II, bladed & 18 GP & large\\
-& 20 & 6 & 20 & two & long I & piercing, heavy I, braced && \\[5pt]
-\hline
-\end{tabular}
-\end{table}
+ & 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\[3pt] 
+\midrule
+\rowcolor{fallowtint}
+\textbf{Greatsword} & 30 & 12 & 18 & two & long I & sweep, DEF, heavy I-II, bladed & 18 GP & large \\
+\rowcolor{fallowtint}
+ & 20 & 6 & 20 & two & long I & piercing, heavy I, braced & & \\
+\end{stattable}
 
 \begin{multicols}{2}
 
@@ -202,35 +210,29 @@ Weapon & RES & Blunt & Cut & hand & range & properties & price & size \\
 \textbf{Arbalest:} the arbalest is an oversized crossbow that needs a lever-based reloading system to be drawn by an average person. The power of its shots is comparable to that of a heavy bow.
 
 \end{multicols}
-\begin{table}[H]
-\scriptsize 
-\centering
-\renewcommand{\arraystretch}{1.4}
-\hspace*{-1cm}
-\begin{tabular}{ | c c c c c c c c c c |}
-\hline
-\multicolumn{10}{|c|}{ \textbf{ \Large Ranged Weapons} } \\
-\hline
-Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
-\hline
-\textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, slow & 3 GP & medium \\ [5pt]
-\hline
-\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & 2xSTR & slow, hook & 2 SP & medium \\ [5pt]
-\hline
-\textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\ 
-\hline
-\textbf{Short Bow*} & 10 & 6 & 18 & 5 & two & 100m & piercing, fast & 5 GP & medium\\
-\hline
-\textbf{Long Bow*} & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, fast & 8 GP & large\\
-\hline
-\textbf{Heavy Bow* } & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, fast & 10 GP & large\\
-\hline
-\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, fast & 8 GP & medium \\
-\hline
+\begin{stattable}{Ranged Weapons}{@{}lccccccp{2.4cm}cc@{}}
+Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Size \\
+\midrule
+\textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, slow & 3 GP & medium \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & STR & slow, hook & 2 SP & medium \\[3pt]
+\midrule
+\textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Short Bow*} & 10 & 6 & 18 & 5 & two & 100m & piercing, fast & 5 GP & medium \\[3pt]
+\midrule
+\textbf{Long Bow*} & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, fast & 8 GP & large \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Heavy Bow*} & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, fast & 10 GP & large \\[3pt]
+\midrule
+\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, fast & 8 GP & medium \\[3pt]
+\midrule
+\rowcolor{fallowtint}
 \textbf{Arbalest} & 10 & 10 & 26 & 4+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
-\hline
-\end{tabular}
-\end{table}
+\end{stattable}
 \begin{multicols}{2}
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot.
@@ -239,30 +241,25 @@ Weapon & RES & Blunt & Cut & AP & hands & range & properties & price & size \\
 
 Arrows are small items that can be bundled into 10 units to make a small item. Bows and crossbows can use different types of arrows:
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item Bodkin: arrows are penetrating.
     \item Broadhead: arrows are vicious.
     \item Explosive: gives the explosive effect to the arrow if ignited. Igniting is a standard action of prestidigitation.
-\end{itemize}
+\end{proplist}
 
 
 \subsection{Shields}
 
 \end{multicols}
-\begin{center}
-\begin{tabular}{||c c c c c c c||}
-\hline
-Name & Penalty & Deflection & RES & Insulation & Weight & Value\\ [1ex]
-\hline \hline
-Wooden Shield & -1 & +2 & 20 & 10 & 10 & 1 GP\\
-Metal Shield & -2 & +2 &  30 & 10 & 25 & 15 GP\\
-Wooden Tower* & -2 & +4 & 20 & 15 & 20 & 2 GP\\
-\hline
-\end{tabular}
-\end{center}
-Body shields are marked with * in the table and can provide total cover. 
+\begin{stattable}{Shields}{@{}lcccccc@{}}
+Name & Penalty & Deflection & RES & Insulation & Weight & Value \\
+\midrule
+\textbf{Wooden Shield} & -1 & +2 & 20 & 10 & 10 & 1 GP \\
+\rowcolor{fallowtint}
+\textbf{Metal Shield} & -2 & +2 & 30 & 10 & 25 & 15 GP \\
+\textbf{Wooden Tower*} & -2 & +4 & 20 & 15 & 20 & 2 GP \\
+\end{stattable}
+Body shields are marked with * in the table and can provide total cover.
 % , but using them reduces running speed and long jump by 1m.
 
 \begin{multicols}{2}
@@ -271,7 +268,7 @@ Body shields are marked with * in the table and can provide total cover.
 
 Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow CUT damage to hit the wearer.
 
-\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack.
+\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values, as well as in the stealth skill. The penalties from multiple gear stack.
 
 \textbf{Fiber armors} require the user to defend against most attacks actively, but they prevent the damage from being severe if hit. Cloth armors have very few penalties and a hardness of 2.
 
@@ -291,34 +288,36 @@ Armors have prot, which is used as damage reduction against impacts. The armor's
 
 \end{multicols}
 
-\begin{center}
-\begin{tabular}{||c c c c c c c c||}
-\hline
-Name & RES & Protection & Insulation & Deflection & Penalty & Price & Weight \\ [1ex]
-\hline\hline
-Fiber &&&&&&&\\
-\hline
-Skin & 0  & 0 & 0 & +4 & 0 & 0 & 0\\
-Clothing & 3  & 0 & 2 & +4 & 0 &  1 SP & small\\
-Fur coat & 7  & 2 & 6 & +5 & 0 & 0 & medium\\
-Thick Hide & 8  & 4 & 7 & +6 & 0 & 0 & large\\
-Gambeson & 10 & 3 &  6 & +5 & 0 & 5 GP & medium\\
-Padded Armor & 12 & 5  & 8  & +5 & -1 & 2 GP & large\\
-\hline
-Metallic &&&&&&&\\
-\hline
-Chain Shirt & 8  & 3 & 5 & +5 & 0 & 20 GP & medium\\ 
-Hauberk & 10  & 5 & 6 & +5 & -1  & 30 GP & medium\\
-Brigandine & 12/8 & 8 & 8 & +6 & -2 &  50 GP & large\\
-\hline
-Rigid and Metallic &&&&&&&\\
-\hline
-Half Armor & 16/10 & 10 & 7  & +5 & -2 & 60 GP & large\\
-Full Armor & 16/10  & 10 & 8  & +7 & -3 & 100 GP & large\\
-Reinforced Armor & 18/10 & 12 & 8  & +8 & -4 & 150 GP & large\\
-\hline
-\end{tabular}
-\end{center}
+\begin{stattable}{Armors}{@{}lccccccc@{}}
+Name & RES & Protection & Insulation & Deflection & Penalty & Price & Weight \\
+\midrule
+\multicolumn{8}{l}{\textbf{\textit{Fiber}}} \\
+\midrule
+Skin & 0 & 0 & 0 & +4 & 0 & 0 & 0 \\
+\rowcolor{fallowtint}
+Clothing & 3 & 0 & 2 & +4 & 0 & 1 SP & small \\
+Fur coat & 7 & 2 & 6 & +5 & 0 & 0 & medium \\
+\rowcolor{fallowtint}
+Thick Hide & 8 & 4 & 7 & +6 & 0 & 0 & large \\
+Gambeson & 10 & 3 & 6 & +5 & 0 & 5 GP & medium \\
+\rowcolor{fallowtint}
+Padded Armor & 12 & 5 & 8 & +5 & -1 & 2 GP & large \\
+\midrule
+\multicolumn{8}{l}{\textbf{\textit{Metallic}}} \\
+\midrule
+Chain Shirt & 8 & 3 & 5 & +5 & 0 & 20 GP & medium \\
+\rowcolor{fallowtint}
+Hauberk & 10 & 5 & 6 & +5 & -1 & 30 GP & medium \\
+Brigandine & 12/8 & 8 & 8 & +6 & -2 & 50 GP & large \\
+\midrule
+\multicolumn{8}{l}{\textbf{\textit{Rigid and Metallic}}} \\
+\midrule
+\rowcolor{fallowtint}
+Half Armor & 16/10 & 10 & 7 & +5 & -2 & 60 GP & large \\
+Full Armor & 16/10 & 10 & 8 & +7 & -3 & 100 GP & large \\
+\rowcolor{fallowtint}
+Reinforced Armor & 18/10 & 12 & 8 & +8 & -4 & 150 GP & large \\
+\end{stattable}
 \begin{multicols}{2}
 
 
@@ -381,19 +380,15 @@ Objects can deal and take damage whenever they collide with something else, whet
 \end{itemize}
 
 \textbf{Gear condition}
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item Condition: Sharp - Weapon deals 1.5 extra damage per SOP with extra cut.
     \item Condition: Dull - Bladed weapon cannot use extra cut.
     \item Condition/Characteristic: Pitted - Armor has its deflection reduced by 2. Damaged or low quality.
     \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1. Low quality armor or armor made for someone else.
-\end{itemize}
+\end{proplist}
 
 \textbf{Gear characteristics}
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
     \item Characteristic: Flammable - Burning condition does not wear off by itself.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
@@ -405,7 +400,7 @@ Objects can deal and take damage whenever they collide with something else, whet
     \item Characteristic: Air filter - Closed helmet that grants immunity to toxic gas effects.
     \item \magic Characteristic: Magnetic - Allows the use of magnetic abilities with the equipment.
     \item \magic Characteristic: Living steel - Can be magically sharpened.
-\end{itemize}
+\end{proplist}
 
 
 \section{Containers and Load}
@@ -421,29 +416,28 @@ Items can be categorized as small, medium, large, and cargo.
 
 \textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do no need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and limping.
 
-\begin{itemize}
+\begin{proplist}
 \item \textbf{Light}: the burden has no effect.
 \item \textbf{Medium}: -1 for burden penalty.
 \item \textbf{Heavy}: -2 for burden penalties.
 \item \textbf{Over}: -3 for burden penalties. Character is considered lame.
-\end{itemize}
+\end{proplist}
 
 \textbf{Slot size and stacking:}Each container has a number of slots, which can each accomodate an item or stack of items. Slots are of one of three different kinds: small, medium, and large. A small slot can hold a small item. A medium slot can hold a medium item or a stack of 5 small ones. A large slot can hold a large item, a stack of 5 medium items, or a stack of 25 small items. Only identical items can be stacked together.
 
-\begin{center}
-\begin{tabular}{||c c c c c||}
-\hline
-Name & Slots & type & burden & cost \\ [1ex]
-\hline \hline
-Belt* & 4 & light & light & 1 GP  \\
-Backpack & 12 & medium & medium & 5 SP  \\
-Large Backpack** & 12 & large & heavy & 1 GP  \\
-Sled & 200 & Cargo & over & 2 SP  \\
-One-Horse Cart & 500 & Cargo & over & 30 GP  \\
-Two-Horse Cart & 1000 & Cargo & over & 60 GP  \\
-\hline
-\end{tabular}
-\end{center}
+\begin{stattable}{Containers}{@{}lcccc@{}}
+Name & Slots & Type & Burden & Cost \\
+\midrule
+Belt* & 4 & light & light & 1 GP \\
+\rowcolor{fallowtint}
+Backpack & 12 & medium & medium & 5 SP \\
+Large Backpack** & 12 & large & heavy & 1 GP \\
+\rowcolor{fallowtint}
+Sled & 200 & Cargo & over & 2 SP \\
+One-Horse Cart & 500 & Cargo & over & 30 GP \\
+\rowcolor{fallowtint}
+Two-Horse Cart & 1000 & Cargo & over & 60 GP \\
+\end{stattable}
 *items stored in the belt can be used with a standard action of prestidigitation
 ** STR 15 or size 4 reduces penalty to medium
 
@@ -461,23 +455,23 @@ Assets represent land, rare items, slaves, investments, a business, or another f
 
 The values of salaries and cost of living are described here are a guideline designed to ground the cost of things. 
 
-\begin{center}
-\begin{tabular}{||c c c c||}
-\hline
-Job & apprentice & specialist & master \\ [1ex]
-\hline \hline
+\begin{stattable}{Salaries and Cost of Living}{@{}lccc@{}}
+Job & Apprentice & Specialist & Master \\
+\midrule
 Worker & 1SP/day & - & - \\
+\rowcolor{fallowtint}
 Infantry & 2SP/day & 4SP/day & - \\
 Archer & 2SP/day & 6SP/day & 12SP/day \\
+\rowcolor{fallowtint}
 Knight & - & 8SP/day & 3 GP/day \\
 Armorer & 2SP/day & 5SP/day & 2 GP per day \\
+\rowcolor{fallowtint}
 Carpenter & 2SP/day & 3SP/day & 5SP per day \\
 Mason & 2SP/day & 3SP/day & 5SP per day \\
 % Priest & 2SP/day & 4SP/day & 8s per day \\
+\rowcolor{fallowtint}
 Doctor & 3SP/day & 1 GP/day & 3 GP per day \\
-\hline
-\end{tabular}
-\end{center}
+\end{stattable}
 
 Any of these can be hired, as long as they accept the job.
 
@@ -487,14 +481,13 @@ These are items that can be used in combat. They play a role in controlling terr
 
 \subsection{Flammables, Smokers}
 
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
-\item {Oil flask - 0.5L}. Flask that can be thrown to coat 1 space in flammable oil. Cannot be extinguished with water. Can be used to make a torch. \textit{Cost:} 2 SP. \textit{Bulk:} small. 
+\begin{proplist}
+\item {Alchohol - 0.5L}. Flask that can be thrown to coat 1 space in flammable alchohol. Can be drank. \textit{Cost:} 2 SP. \textit{Bulk:} small.
+\item {Oil flask - 0.5L}. Flask that can be thrown to coat 1 space in flammable oil. Cannot be extinguished with water. Can be used to make a torch. \textit{Cost:} 2 SP. \textit{Bulk:} small.
 \item \textbf{Pitch pot:} Pot of pitch with a fuse that can be thrown and burns for 12 burning damage per round and sticks to 1 space or target and produces smoke (black smoke, 2m radius, 1 min fill) This does not extinguish with water and requires 8 AP to be muffled. \textit{Cost:} 5 SP. \textit{Bulk:} Medium.
-\item \textbf{Smoke bundle:} Improvised. Damp greenery, dung, or straw rolled in cloth. Produces smoke (White smoke, 2m radius, 5 min fill). \textit{Cost:} 1 CP. \textit{Bulk:} Medium.
-\item \textbf{Torch} - Improvised. Gives 5m light radius when lit, requires an oil flask to burn for 4 hours. Can be used to block attack at RES 10. Lighting it is a DL -2 exploration test. \textit{Cost:} 1 CP. \textit{Bulk:} small.
-\end{itemize}
+\item \textbf{Smoke bundle:} Improvised, consumed by use. Damp greenery, dung, or straw rolled in cloth. Produces smoke (White smoke, 2m radius, 5 min fill). \textit{Cost:} 1 CP. \textit{Bulk:} Medium.
+\item \textbf{Torch} - Improvised, discarded after use. Gives 5m light radius when lit, requires an oil flask to burn for 4 hours. Can be used to block attack at RES 10. Lighting it is a DL -2 exploration test. \textit{Cost:} 1 CP. \textit{Bulk:} small.
+\end{proplist}
 
 
 \subsection{Poisons}
@@ -510,28 +503,24 @@ Poisons can be delivered a through cutting injuries, ingestion, or inhalation. E
 \textbf{Cutting injuries:} Tier 1+ wounds from Cutting damage apply the full effect of the poison. Tier 0 decrease DL by 3 and higher tiers increase it by 1 per tier above 1. 
 
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item \textbf{Anticoagulant Poison:} adds +1 bleed to any attack. 5 GP for a vial with 10 applications and light weight.
     \item \textbf{Paralytic Poison:} DL 5 health to avoid becoming immobile within 20 turns on a graze or in 10 turns on a miss. Paralysis lasts for 1 hour/ 4 hours respectively.
     \item \textbf{Necrotic Poison:} Character must make a DL 8 Health test in the next exploration turn. On a miss, they receive 5 IL. On a graze, 2. The effect does not wear off until a hit is scored.
     \item \textbf{Soporific Poison:} Inhalation or ingested. Target must make a DL 5 Health test. On a graze or miss, after 2 minutes, the target falls Unconscious for 1 hour. The target will awake if damaged, but will fall asleep again once danger ends.
-\end{itemize}
+\end{proplist}
 
 \subsection{Traps}
 
 These make a position costly to hold or cross, forcing a turtling enemy to move.
 
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 15 piercing damage to the leg. \textit{Cost:} 1 SP covers one space.\textit{Bulk:} small.
 % \item Stakes - Sharpened fixed stakes. Work like a spear's braced attack. 2 SP per space. medium.
 \item \textbf{Tripwire:} An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5. \textit{Cost:} 1 CP. \textit{Bulk:} small.
 \item \textbf{Pit:} Detection DL to avoid falling in.
 \item \textbf{Rolling log:} 1 ton of wood released downhill along a path. Treat as a huge projectile. Deals 30 blunt damage and pushes with a DL of 30.
-\end{itemize}
+\end{proplist}
 
 % \subsection{War engines and vehicles}
 
@@ -549,9 +538,7 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
 
 \subsection{\magic Magical Items}
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item Alchemical Torch - Allows the use of some light spells - Weight 2 - 12 GP.
     \item Superior Alchemical Torch - Allows the use of some light spells and automatically increases its size once - Weight 2 - 50 GP.
     \item Alchemical Prism - Allows the channeling of light - 150 GP.
@@ -559,14 +546,13 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
     \item Superior Electrite - Allows the transformation of magic into electricity, dealing 15 base electric damage. - Weight 2 - 400 GP - carries 20 charges.
     \item Magnetite - Allows the transformation of magic into magnetism. - 10 GP.
     \item Fire Stone - Allows the production of fire from it, dealing 20 base burn damage. - 50 GP - carries 20 charges.
-    \item Flame Thrower - A staff mounted with a fire stone to apply pressure to the flames, deals 20 base burn damage. - 80 GP. 
+    \item Flame Thrower - A staff mounted with a fire stone to apply pressure to the flames, deals 20 base burn damage. - 80 GP.
     \item Venomous Frog Corpse - Produces anticoagulant poison. - 5 GP - Weight 1.
     \item Soul Stone - Used to preserve souls - 200 GP.
-    \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.    
-    \item Smoke Grenade - An item that can be thrown or attached to a projectile and produces smoke. 1 GP. Weight 1 for 5 units. 
-    \item Explosive - Used for fire abilities. When ignited, it deals 5 burning damage with PEN 5 per turn of contact. 5 SP for 1 charge. 5 charges weigh 1. One charge can be affixed to an arrow.
+    \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.
+    \item Smoke Grenade - An item that can be thrown or attached to a projectile and produces 3m radius of white smoke. 1 GP. small.
     % \item Sharpening Sheath - Reduces the cost of the Sharpen spell on a weapon within the sheath to 1 AP - Weight 2 - 50 GP.
-\end{itemize}
+\end{proplist}
 
 \subsection{Potions}
 
@@ -574,44 +560,49 @@ Potions require a standard action to be consumed. Taking multiple potions does n
 
 Potions add an effect to the character for a certain duration. The effects of potions are not cumulative, but they can be refreshed by consuming another potion. The effects of potions are not amplified by consuming multiple potions of the same type.
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item Simple Healing: heals 4 extra IL over 1 short rest, 2 GP.
-    \item Medium Healing: heals 8 extra IL over 1 short rest, 6 GP.
-    \item Good Healing: heals 16 extra IL over 1 short rest, 16 GP.
-\end{itemize}
+\begin{proplist}
+    \item Simple Healing: heals 5 extra IL over 1 short rest, 2 GP. small.
+    \item Medium Healing: heals 10 extra IL over 1 short rest, 6 GP. small.
+    \item Good Healing: heals 15 extra IL over 1 short rest, 16 GP. small.
+\end{proplist}
+
+Potions are carried in vials.
 
 \subsection{Utility and Survival}
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and reduces exposure by 3 - 1 GP - medium
-    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and reduces exposure by 3 - 2 GP - large
-    \item Flint: Grants +5 on the test to light a campfire. 2 PP - small
-    \item Firewood: Wood ready to burn for 8 hours. Grants +5 on the test to light a campfire. - medium
-    \item Rope: Useful item. 1 PP per meter. Medium
-    \item Canteen: Holds 2L of water. 1 PP. Small.
-    \item Jug: Holds 5L of water.  1 PP. Medium.
-    \item Shovel: Used for digging. 1 PP. Large.
-    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 PP. Medium
-    \item Vial: Holds 50ml of any liquid. 5 CP. small
-    \item Alcohol - Used for fire skills. 2 PP per 250ml (5 charges). 
-    \item Sharpening Stone - A sharpening stone. 2 PP. small 
-    \item Fur Cloak - Improves resistance to cold wear by +3. 1 GP. medium
-    
-\end{itemize}
+\begin{proplist}
+    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 1 GP - medium
+    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 2 GP - large
+    \item Hammock: Reduces exposure to insects by 2. - 5 SP, medium
+    \item Bedroll: Reduces cold exposure by 2. 4 SP. Medium
+    \item Oil Lamp: Gives 5m light radius when lit, requires an oil flask to burn for 8 hours. 1 GP - small
+    \item Flint: Allows lighting a campfire within minutes, no test required. 2 SP - small
+    \item Firewood: Dry wood ready to burn for 4 hours. - medium
+    \item Rope: Useful item. 1 SP per meter. Medium
+    \item Canteen: Holds 2L of water. 1 SP. Small.
+    \item Jug: Holds 10L of water.  2 SP. Large.
+    \item Shovel: Used for digging. 1 SP. Large.
+    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 SP. Medium
+    \item Vial: Holds 50ml of any liquid. 1 SP. small
+    \item Chalk: makes being followed trivial in the marked path. It is spent in one ET and lasts until it rains. 5 CP - small
+    \item Insect repellant: Reduces exposure to insects by 2. lasts for 1 sleep.
+    % \item Alcohol - Used for fire skills. 2 SP per 250ml (5 charges).
+    \item Sharpening Stone - A sharpening stone. 2 SP. small
+    \item Fur Cloak - Improves resistance to cold exposure by +2. 1 GP. medium
+    \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP.
+    \item Camouflage for X - where X is the terrain. Improvised.
+    \item Snow shoes - cancels penalty for walking in the snow. 1 GP.
+    \item Grappling hook - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 1 GP.
+
+\end{proplist}
     
 \subsection{Drugs}
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
-    \item Popaine:  - 5 PP - Causes the character to become confused or, in high doses, incapacitated.
-    \item Alcohol: Causes the character to become intoxicated. 
-    
-\end{itemize}
+\begin{proplist}
+    \item Popaine:  - 5 SP - Causes the character to become confused or, in high doses, incapacitated.
+    \item Alcohol: Causes the character to become intoxicated.
+
+\end{proplist}
 
 
 \end{multicols}

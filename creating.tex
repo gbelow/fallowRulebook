@@ -10,39 +10,44 @@
 
 \textbf{Skills and Proficiencies}: Skill values are determined by the sum of the skill bonus and the proficiency bonus. Each skill bonus only influences a single skill and can be trained individually. Proficiency bonuses, on the other hand, can affect multiple skills. The default values for all skills and proficiencies is 0.
 
-There are 27 skills, as described in the table:
+There are 19 skills, as described in the table:
 
 \end{multicols}
 
-\begin{center}
-\begin{tabular}{| c c c c|}
-\hline &&& \\
+\begin{stattable}{Skills}{@{}llll@{}}
 Skill & Proficiency & Talent & Trainable \\
-\hline &&& \\
+\midrule
 Health & Constitution & - & no\\
-Strength & 2x(STR-10) & Constitution & yes \\
-Agility & 2x(AGI-10) & Constitution & yes \\
-Stamina & 2x(STA-10) & Constitution & yes \\
-
+\midrule
+\rowcolor{fallowtint}
 Strike & Melee & Dexterity  & yes \\
+\rowcolor{fallowtint}
 Defend & Melee & Dexterity & yes \\
+\rowcolor{fallowtint}
 Grapple & Melee + STR-10 & - & no \\
-
-Accuracy & Ranged & Dexterity & yes\\ 
+\midrule
+Accuracy & Ranged & Dexterity & yes\\
 Reflex & Ranged + Awareness & Dexterity & no\\
-
+\midrule
+\rowcolor{fallowtint}
 Balance & AGI-10 & Dexterity  & yes \\
+\rowcolor{fallowtint}
 Climb & AGI-10 & Dexterity  & yes \\
+\rowcolor{fallowtint}
 Swim & AGI-10 & Dexterity  & yes \\
-
+\midrule
 Prestidigitation & Dexterity & Dexterity & yes \\
 Stealth & - & Dexterity & yes \\
-
+\midrule
+\rowcolor{fallowtint}
 Cunning & Awareness & Intellect  & yes \\
+\rowcolor{fallowtint}
 Detection & Awareness & - & no \\
-Exploration & Awareness & Intellect  & knowledge \\
+\rowcolor{fallowtint}
+Exploration & Knowledge + Awareness & Intellect  & knowledge \\
+\rowcolor{fallowtint}
 Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
-
+\midrule
 % Combustion & Sorcery & Intellect & yes \\
 % Electromagnetism & Sorcery & Intellect & yes \\
 % Entropy & Sorcery & Intellect & yes \\
@@ -51,19 +56,17 @@ Knowledge & 2x knowledge or 2x INT & Intellect  & knowledge \\
 % Telepathy & Sorcery & Intellect & yes \\
 % Biomancy & Sorcery & Intellect & yes \\
 % Devotion & Devotion & Spirit & yes \\
-
 Insight & Charisma & Intellect & yes \\
 Deception & Charisma & Intellect & yes \\
 Persuasion & Charisma & Intellect & yes \\
-Will & SPI & Spirit & no \\
-
-\hline
-\end{tabular}
-\end{center}
+Will & SPI & - & no \\
+\end{stattable}
 
 \begin{multicols}{2}
 
-Skills marked as trainable can be improved individually. The ones that are not can only get bonuses from their proficiency. Skills where trainable is "knowledge" mean that the skill value is trainable, but follows the rules of the knowledges.
+Skills marked as trainable can be improved individually. The ones that are not can only get bonuses from their proficiency. 
+
+Skills where trainable is "knowledge" mean that the skill value depends on knowledge levels.
 
 \subsection{Proficiencies:}
 
@@ -93,7 +96,9 @@ The expected levels for skills and proficiencies range from 0 to 5, but can be i
 
 \textbf{Gaining Experience (XP):} Improving skills and proficiencies and learning abilities requires training during free time, which yields experience based on training time. A regular training session for skills and proficiencies takes 10 days for 1 XP and costs a certain amount of money based on the difficulty level of what one wants to learn.
 
-\textbf{Talent and XP Costs}: The cost of XP to improve a proficiency is equal to $4+4*n$, where n is the proficiency level one wishes to achieve. If the talent is lower than the level one wants to reach, this value is multiplied by $2^x$, where x is the difference between n and the talent. The cost to increase a skill is equal to half the cost to increase the proficiency.
+\textbf{Improving proficiencies}: The cost of XP to improve a proficiency is equal to $4+4*n$, where n is the proficiency level one wishes to achieve. If the talent is lower than the level one wants to reach, this value is multiplied by $2^x$, where x is the difference between n and the talent. 
+
+\textbf{Improving skills:} The logic is exactly the same as proficiencies, and the cost to increase a skill is equal to $2+2*n$, which is half the cost to increase the proficiency.
 
 A character has 4 talents that represent their potential for growth.
 
@@ -177,22 +182,24 @@ Two creatures of size 3 can occupy the same space, but cannot end a turn like th
 
 \textbf{Skill Modifier (SM):} is a modifier added to or subtracted from the character's values, in the proportions shown in the table.
 
-\begin{center}
-\begin{tabular}{||c c ||}
-\hline
+\end{multicols}
+
+\begin{stattable}{Skill Modifier (SM)}{@{}lc@{}}
 Skill & Modifier \\
-\hline
-Grapple & +5x \\ 
-% Strength & +5x \\ 
-Reflex & -1x \\ 
-% Deflection & -1x \\ 
-% Weapon Precision & -1x \\ 
-SD & -1x \\ 
+\midrule
+Grapple & +5x \\
+% Strength & +5x \\
+\rowcolor{fallowtint}
+Reflex & -1x \\
+% Deflection & -1x \\
+% Weapon Precision & -1x \\
+SD & -1x \\
+\rowcolor{fallowtint}
 Stealth & -2x \\
-Climbing & -2x \\ 
-\hline
-\end{tabular}
-\end{center}
+Climbing & -2x \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 \textbf{Movement Multiplier (MM):} multiplies all movement speeds and the range of all weapons.
 
@@ -200,18 +207,18 @@ Climbing & -2x \\
 
 \bigskip
 
-\begin{center}
-\begin{tabular}{||c c c c c c c c||}
-\hline
+\end{multicols}
+
+\begin{stattable}{Size}{@{}lccccccc@{}}
 Size & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
-\hline
+\midrule
 DM & 0.5 & 0.75 & 1 & 1.5 & 2 & 3 & 4 \\
 SM & -2 & -1 & 0 & +1 & +2 & +3 & +4 \\
-MM & 0.5 & 1 & 1 & 1.5 & 1.5 & 2 & 2.5 \\ 
-VM & 0.1 & 0.33 & 1 & 3.33 & 10 & 33.3 & 100 \\ 
-\hline
-\end{tabular}
-\end{center}
+MM & 0.5 & 1 & 1 & 1.5 & 1.5 & 2 & 2.5 \\
+VM & 0.1 & 0.33 & 1 & 3.33 & 10 & 33.3 & 100 \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 
 \section{Races and Age}
@@ -220,101 +227,86 @@ VM & 0.1 & 0.33 & 1 & 3.33 & 10 & 33.3 & 100 \\
 Each playable race comes with its own bonuses to attributes and talents. The table below shows the playable races. In a no-magic game, it is up to the GM to decide which races are available.
 
 
-\begin{center}
-\small
-\noindent
-\hspace*{-1cm}
-\begin{tabular}{||c c c c c c c c||}
-\hline
-Race & STR & AGI & STA & INT & SPI & DEX & CON \\ [1em]
-\hline\hline
-Surbit & 1 & 2 & 2 & 0 & 0 & 1 & 1 \\[0.5em]
-\hline
-Dwarf & 1 & -1 & 1 & 0 & 1 & 0 & 0 \\[0.5em]
-\hline
-Human & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\[0.5em]
-\hline
-Halkir & 0 & 2 & 1 & 0 & 0 & 1 & 0 \\ [0.5em]
-\hline
-Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\[0.5em]
-\hline
-\end{tabular}
-\end{center}
+\end{multicols}
+
+\begin{stattable}{Races}{@{}lccccccc@{}}
+Race & STR & AGI & STA & INT & SPI & DEX & CON \\
+\midrule
+Surbit & 1 & 2 & 2 & 0 & 0 & 1 & 1 \\
+\rowcolor{fallowtint}
+Dwarf & 1 & -1 & 1 & 0 & 1 & 0 & 0 \\
+Human & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\rowcolor{fallowtint}
+Halkir & 0 & 2 & 1 & 0 & 0 & 1 & 0 \\
+Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 \textbf{\large Surbit}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Small-sized creature
 \item Has the Fur ability
 \item Has the Bear Nose ability
 \item Has the Tail I ability
 \item Has the Claws ability
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Dwarves}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Has the Bat Ears ability
 \item Has the Tireless ability
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Humans}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Increases two talents by 1 at creation.
 \item Can choose one from Tireless, Large Hands, and Beautiful.
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Erthal}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Has the Large Hands ability
 \item Has the Regenerative Reservoir ability
-\end{itemize}
+\end{proplist}
 
 \textbf{\large Halkir}
-\begin{itemize}
-\setlength\itemsep{0em}
-\setlength{\parskip}{0em}
+\begin{proplist}
 \item Has the Beautiful ability
 \item Has the Infrared Vision ability
-\end{itemize}
+\end{proplist}
 
 
 \subsection{Aging}
 
 A character's age influences their attributes and ability to learn new things. A character can be created as a child, a teenager, an adult, or older. Each of these ages has its characteristics.
 
-\begin{itemize}
-    \setlength\itemsep{0em}
-    \setlength{\parskip}{0em}
+\begin{proplist}
     \item Child: -2 STR, talents start at 0 but cost half the karma. Considered a size 2 creature.
     \item Teenager: -2 STR, +1 to talents.
     \item Adult: Standard.
     \item Aging: Receives -1 to CON and also to all attributes at each stage.
-\end{itemize}
+\end{proplist}
 
 The time required to advance in the age category can vary between races.
 
-\begin{center}
-\normalsize
-\begin{tabular}{| c c |}
-\hline
-Stage & Human \\ [1em]
-\hline
-Child & 8-13 \\ [0.5em]
-Teenager & 14-18 \\[0.5em]
-Adult & 19-39 \\[0.5em]
-Mature & 40-59 \\[0.5em]
-Old & 60-79 \\[0.5em]
-Very old & 80-death \\[0.5em]
-\hline
-\end{tabular}
-\end{center}
+\end{multicols}
+
+\begin{stattable}{Aging}{@{}lc@{}}
+Stage & Human \\
+\midrule
+Child & 8-13 \\
+\rowcolor{fallowtint}
+Teenager & 14-18 \\
+Adult & 19-39 \\
+\rowcolor{fallowtint}
+Mature & 40-59 \\
+Old & 60-79 \\
+\rowcolor{fallowtint}
+Very old & 80-death \\
+\end{stattable}
+
+\begin{multicols}{2}
 
 
 \section{Intellect}
@@ -330,49 +322,57 @@ Intellect measures the logical capacity, planning, and decision-making abilities
 
 \subsection{Knowledge}
 
-Knowledges are like skills, but are generally used outside of combat and has various utilities related to magic, exploration, and measuring the character's intelligence.
+Knowledges are used mostly outside of combat. They are used as requisite to learn abilities, to interact with features during exploration, to enable and improve several downtime activities, and as a general measure of the character's intelligence.
 
-\textbf{Knowledge as a skill assist:} Some types of knowledge can be added to other skills, like detection to improve the chance of detecting something.
+\textbf{Learning Knowledge}: The knowledge listed in the areas of knowledge is learned exactly the same way as any skill, using INT as the talent. The levels are also tracked in the same scale.
 
 \skill{Knowledge}{ 2x Knowledge or 2x INT}{
-It is equivalent to asking your character if they should know or understand something, even when the player does not know that thing.
 
-You use 2x the relevant knowledge as the skill value. If the necessary facts for deduction are already known, you can use 2x intellect as the value.
+\textbf{Knowledge test:} is equivalent to asking your character if they know or remember something from their studies. Use 2x the relevant knowledge as the skill value.
 
-Whenever a player claims that the character knows something, the GM can ask for a knowledge check to determine if the character really knows it.
+The player is welcome to suggest what the character is supposed to know from the test. The GM can take that information into consideration when choosing the test DL. If the test is a hit or crit, what the player said is true. 
 
-To use this skill, make a knowledge check against an arbitrary difficulty, representing the challenge of reaching a good conclusion from the available information. Critical successes mean that the character can make the best deduction from the information they have, even determining what information is missing to make a better deduction and remembering everything they know. Successes mean they have a good guess and remember most of what they know. Grazes mean that you don't know or can't remember, but you might know where to look. Misses mean that you reach an incorrect conclusion or a different one from the correct one, or you can't remember anything.
+If the player suggests nothing and just asks if the character knows something, consider the topic and how likely is any information about it supposed to be known to choose a DL. If the test result was a crit or hit, come up with a piece of information. If it was a graze or miss, tell them nothing is known or give them misinformation.
+
+\textbf{Deduction test:} If the necessary facts for deduction are already known, you can use 2x INT as the skill value. Whenever a player claims that the character knows something, the GM can ask for a knowledge test to determine if the character really knows it.
+
+To use this skill, make a knowledge test against an arbitrary difficulty, representing the challenge of reaching a good conclusion from the available information. Critical successes mean that the character can make the best deduction from the information they have, even determining what information is missing to make a better deduction and remembering everything they know. Successes mean they have a good guess and remember most of what they know. Grazes mean that you don't know or can't remember, but you might know where to look. Misses mean that you reach an incorrect conclusion or a different one from the correct one, or you can't remember anything.
 }
 
+\textbf{Knowledge as Enabler:} Many actions require an amount of a certain knowledge to be able to be performed. Attempting to perform that without the necessary knowledge level leads to a penalty of -5 per missing knowledge level to whatever test was called.
+
+\textbf{Ability requirement:} Some abilities are learned automatically at certain levels of the areas of knowledge. Some abilities cannot be learned without the proper knowledge requirement.
+    
 \textbf{Knowledge as a talent:} Knowledge can be used as a talent to learn spells and sorcery abilities. Spells have a knowledge requirement indicating the difficulty.
 
-\textbf{Knowledge in magic:} There are three magic related knowledges. They are used when casting and learning spells as a wizard. More details in the Sorcery chapter.
+\textbf{Knowledge in magic:} There are three magic related areas of knowledge. They are used when casting and learning spells as a wizard. More details in the Sorcery chapter.
+
+
+\subsection{Areas of Knowledge}
 
 The formal areas of knowledge in which the character can be trained are:
 
-\begin{itemize}
-    \item \magic Alchemy: Knowledge about the usage and creation of inorganic magical items. Necessary for alchemy spells.
-    \item \magic Animancy: Knowledge about consciousness and the nature of sorcery. What it does in the body, how it manifests and affects the environment, how to manipulate it. Necessary for animancy spells.
-    \item \magic Biomancy: Knowledge about biological structures. Necessary for biomancy magic.
-    % \item Shamanism: Knowledge about the flow of energy and summoning of spirits. Necessary for shamanism spells.
-    % \item Botany: Knowledge about plants, their location, shape, magical properties, poisons, fruit-bearing capacity, ecology, etc.
-    
-    \item Architecture: Knowledge about structures, their common forms, how to build or destroy them. Tunnels, bridges, buildings. Helps with exploration inside buildings.
-    \item Chemstry: Knowledge about chemicals and their craft. Includes bombs, poisons, acids.
-    \item Physics: Knowledge about electricity, radiation, magnetism and their craft.
-    \item Medicine: Includes knowledge of medicine and farmaceutics, like anatomy, potions, poisons and oils.
-    \item Geopolitics: Knowledge about general history and geography. Allows map-making. 
-    \item Smithing: Knowledge about the manufacture and maintenance of weapons, armor and mechanisms. Includes tools, locks and siege weapons.
-    
-    % \item Medicine: Knowledge about diseases, anatomy, and biological processes. Necessary for magic.
-    \item Survival: This is the knowledge used in the action of exploration and preparation. It includes actions like cooking, butchering animals, preparing campfires, making natural shelters, and crafting simple objects from materials found in nature.
-    % \item Zoology: Knowledge about animals, their anatomy, weaknesses, ecological roles, habits, etc.
-\end{itemize}
+\begin{proplist}
+    \item \magic \textbf{Alchemy:} Knowledge about the usage and creation of inorganic magical items. Necessary for alchemy spells.
+    \item \magic \textbf{Animancy:} Knowledge about consciousness and the nature of sorcery. What it does in the body, how it manifests and affects the environment, how to manipulate it. Necessary for animancy spells.
+    \item \magic \textbf{Biomancy:} Knowledge about biological structures. Necessary for biomancy magic.
+    \item \magic \textbf{Shamanism:} Helps with finding spirits, diplomacy with them.
+
+    \item \textbf{Architecture:} Knowledge about structures, their common forms, how to build or destroy them. Tunnels, bridges, buildings. Helps with exploration inside buildings.
+    \item \textbf{Chemistry:} Knowledge about chemicals and their craft. Includes bombs, acids, toxic substances.
+    \item \textbf{Medicine:} can make autopsy, potions, poisons and everything from first aid to surgeury.
+    \item \textbf{Geography:} Allows map-making. Helps traveling skill. Make tests to guess where resource events should be.
+    \item \textbf{Politics:} involves forgery, disguise, and acquiring local information about people.
+    \item \textbf{Smithing:} Knowledge about the manufacture and maintenance of weapons, armor and mechanisms. Includes tools, locks and siege weapons.
+
+    \item \textbf{Survival:} This is the knowledge used in the action of exploration and preparation. It includes actions like cooking, butchering animals, preparing campfires, making natural shelters, and crafting simple objects from materials found in nature.
+    \item \textbf{Zoology:} Knowledge about animals. Helps with diplomacy with animals, hunting, finding weaknesses.
+\end{proplist}
 \noindent
 
-\textbf{Learning Knowledge}: The knowledge listed in the areas of knowledge is learned exactly the same way as any skill, using INT as the talent.
-
-\subsection{Informal Knowledge}
+% \item Botany: Knowledge about plants, their location, shape, magical properties, poisons, fruit-bearing capacity, ecology, etc.
+% \item Physics: Knowledge about electricity, radiation, magnetism and their craft.
+\subsection{Specific Knowledge}
 
 Informal knowledge is the result of the character's experiences and can be acquired by engaging in any activity. The categories can be diverse, created to represent the character's experiences.
 

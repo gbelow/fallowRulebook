@@ -9,38 +9,69 @@
 
 ## Post-launch / supplement material (not Phase 0)
 
-riding - rules about taming and riding animals. Maybe a system of mounts and their stats, and how they interact with the player character's stats.
 
 
-RETHINK MAGIC SYSTEM
+
+# OPEN ISSUES
 
 Animancy - think about the morale system and how it can be integrated. --- done
+Animancy - integration with intrigue. only soothe?
 
 Biomancy - think about how mutations can go wrong
 
 Shamanism - think about how to find spirits: exploration turns, touching objects, finding auras. --- 
 
-Take the other knowledges seriously. Create skills and gear to go with them.
-
-Health: have abilities that use health as skill. --- done
+Alchemy - review spells
 
 review contacts, reputation and factions
 
-
 think about mundane tools to break turtling:
 fire, light, poison, slippery surfaces, trample mechanics, falling objects, etc. 
-create magical versions of those tools. 
+create magical versions of those tools.  --- only vehicles missing
 
-create more exploration tools - 
+create more exploration tools - tables, 1 point crawl
+
+make a list of monsters
+
+review exploration items -- half done
 
 morale during stealth, exploration and chase
 
+review magical items
 
-issues:
+Forgery and disguise
 
- - many day resting fast forward mechanic
+riding - rules about taming and riding animals. Maybe a system of mounts and their stats, and how they interact with the player character's stats.
 
- - explaining wear economy
+# RETHINKING KNOWLEDGE SYSTEM
+
+ - crafting section in survival - chemstry, survival, medicine, smithing, architecture
+ - geography as event finder across nodes, questions how long it takes until we reach X, bonus from maps,  
+ - downtime uses - gather information, work for money, get better deals, 
+ - 
+ - knowledge as gate: to learn abilities, to learn spells, to attempt exploration actions
+ - co-creation with knowledge - suggest something and roll to make it true
+ 
+ uses of architecture - demolition, 
+
+ specific knowledges
+
+
+# CHANGE IN THE APP
+
+check all skills again
+
+check load penalties
+
+check all afflictions
+
+check survival resources - hunger/thirst
+
+check AGI, STR, STA effects - make penalty count
+
+add attributes as skills?
+
+update weapons and armor - check gear properties
 
 
 # product workflow - how to turn this into a game

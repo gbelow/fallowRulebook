@@ -7,9 +7,9 @@
 \usepackage[singlelinecheck=false]{caption}
 \usepackage{geometry}
 \usepackage{graphicx}
-\usepackage{float} 
+\usepackage{float}
 \usepackage{amssymb}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{multicol}
 \usepackage{enumitem}
 \usepackage{amsmath}
@@ -20,8 +20,48 @@
 \usepackage{etoolbox}
 \usepackage{ragged2e}
 
+% Book type: Alegreya (body) + Alegreya Sans (headings, labels, table text).
+% A matched serif/sans family pair, chosen for the historical/parchment
+% direction — see thinking.md for the standing style decision.
+\usepackage[osf]{Alegreya}
+\usepackage{AlegreyaSans}
+\usepackage{titlesec}
+\usepackage{framed}
+\usepackage{booktabs}
+
 \selectlanguage{english}
-% \captionsetup[table]{labelformat=empty,font={sf,sc,bf,},skip=0pt}
+
+% Palette: warm umber for rules/accents, light tan for shading. Kept
+% deliberately small — typography carries the design, not color.
+\definecolor{fallowrule}{RGB}{120,86,48}
+\definecolor{fallowtint}{RGB}{232,219,190}
+
+\captionsetup[table]{labelformat=empty, font={sf,bf,large}, justification=centering, skip=6pt, position=top}
+
+% Heading style: Alegreya Sans, tracked caps at chapter level, an
+% umber rule under chapter/section titles.
+\titleformat{\chapter}
+  {\normalfont\sffamily\bfseries\Huge}
+  {\thechapter.}
+  {0.5em}
+  {}
+  [\vspace{4pt}{\color{fallowrule}\titlerule[1.2pt]}]
+\titleformat{\section}
+  {\normalfont\sffamily\bfseries\Large}
+  {\thesection}
+  {0.7em}
+  {}
+  [{\color{fallowrule}\titlerule[0.6pt]}]
+\titleformat{\subsection}
+  {\normalfont\sffamily\bfseries\large}
+  {\thesubsection}
+  {0.6em}
+  {}
+\titleformat{\subsubsection}
+  {\normalfont\sffamily\bfseries}
+  {\thesubsubsection}
+  {0.5em}
+  {}
 
 \title{RPG Below}
 \author{Guilherme Below}
@@ -58,32 +98,102 @@
 }
 \AtEndEnvironment{multicols}{\justifying\fussy}
 
-\newcommand{\skill}[3]{
-    \textbf{\large{Skill: #1}} \\
-    \textbf{Proficiency:}  #2\\
-     #3 \\
-  }
+% Inline field label for stat blocks (skill/ability/spell entries).
+\newcommand{\statlabel}[1]{\textcolor{fallowrule}{\sffamily\bfseries #1}}
+% Thin rule opening a stat block, separating it from what precedes it.
+\newcommand{\statrule}{\noindent\textcolor{fallowrule}{\rule{\linewidth}{0.4pt}}\par\vspace{2pt}}
 
-  \newcommand{\abil}[5]{
-\textbf{\large{#1}} \\
-\textbf{Usage:} #2\\
-\textbf{Cost, Talent:} #3 \\
-\textbf{Requirements:} #4 \\
-\textbf{Description:} #5 \\
+\newcommand{\skill}[3]{
+  \statrule
+  {\sffamily\bfseries\large Skill: #1} \\
+  \statlabel{Proficiency:}  #2\\
+   #3 \\
+}
+
+\newcommand{\abil}[5]{
+\statrule
+{\sffamily\bfseries\large #1} \\
+\statlabel{Usage:} #2\\
+\statlabel{Cost, Talent:} #3 \\
+\statlabel{Requirements:} #4 \\
+\statlabel{Description:} #5 \\
 }
 
 \newcommand{\inna}[7]{
-\textbf{\large{#1}} \\
-\textbf{Usage:} #2 \\
-\textbf{Cost:} #3 \\
-\textbf{Requirements} #4 \\
-\textbf{Range, Area:} #5 \\
-\textbf{Duration:} #6 \\
-\textbf{Effect:} #7 \\
+\statrule
+{\sffamily\bfseries\large #1} \\
+\statlabel{Usage:} #2 \\
+\statlabel{Cost:} #3 \\
+\statlabel{Requirements} #4 \\
+\statlabel{Range, Area:} #5 \\
+\statlabel{Duration:} #6 \\
+\statlabel{Effect:} #7 \\
 }
 
 % Mode tag: marks elements that belong to the magic system and are omitted in a no-magic game.
 \newcommand{\magic}{{\ding{73}}~}
+
+% --- Reusable content patterns --------------------------------------------
+
+% stattable{title}{colspec}: a gear/stat table with a caption above and
+% booktabs rules. Shade an item's row(s) with \rowcolor{fallowtint} to mark
+% every other entry — do this per item, not per raw row, since many entries
+% span two rows (e.g. a melee profile and a thrown profile).
+\newenvironment{stattable}[2]{%
+  \begin{table}[H]
+  \caption{#1}
+  \centering
+  \footnotesize
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabular}{#2}
+  \toprule
+}{%
+  \bottomrule
+  \end{tabular}
+  \end{table}
+}
+
+% proplist: a glossary-style list (\item \textbf{Term:} definition...)
+% with tightened spacing and an accent-colored marker instead of a bullet.
+\newenvironment{proplist}{%
+  \begin{itemize}[
+    label={\textcolor{fallowrule}{\textbullet}},
+    leftmargin=1.1em,
+    itemsep=0.15em,
+    parsep=0pt,
+    topsep=0.3em
+  ]
+}{%
+  \end{itemize}
+}
+
+% dnote: a Designer's Note callout. The framed package cannot break a box
+% across multicols columns, so — like stattable — it closes the two-column
+% flow and sits at full width rather than squeezed into one column.
+\newenvironment{dnote}{%
+  \def\FrameCommand{\fboxsep=7pt\fboxrule=0.6pt\fcolorbox{fallowrule}{fallowtint}}%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent{\sffamily\bfseries\footnotesize\textcolor{fallowrule}{Designer's Note}}\par\vspace{2pt}%
+  \normalfont\itshape\small
+}{%
+  \par\endMakeFramed
+}
+
+% dnotesm: a smaller Designer's Note that stays inside one column of a
+% multicols layout (dnote cannot — see above). Built as an ordinary box,
+% not a framed one, since it never needs to break across a page/column:
+% keep its content short enough to fit in the remaining column height.
+\newsavebox{\dnotesmbox}
+\newenvironment{dnotesm}{%
+  \begin{lrbox}{\dnotesmbox}
+  \begin{minipage}{0.94\linewidth}
+  \noindent{\sffamily\bfseries\scriptsize\textcolor{fallowrule}{Designer's Note}}\par\vspace{1pt}%
+  \normalfont\itshape\footnotesize
+}{%
+  \end{minipage}
+  \end{lrbox}
+  \par\noindent\fboxsep=5pt\fboxrule=0.5pt\fcolorbox{fallowrule}{fallowtint}{\usebox{\dnotesmbox}}\par
+}
 
 \begin{document}
 
