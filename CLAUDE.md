@@ -13,7 +13,7 @@ The system is designed to be played with or without magic.
 - `creating.tex` — character model. Describes the static characteristics of a character and the rules for player character creation, including the master skill list and value formulas.
 - `combat.tex` — mechanics of combat and any situation that requires the grid.
 - `gear.tex` — properties of gear, gear sheets, and gear-related mechanics.
-- `intrigue.tex` — the social system and usage of social skills. Mechanics for an intrigue game.
+- `story.tex` (chapter title "Story") — the social system, usage of social skills, and the Knowledge skill (formal Areas of Knowledge and Specific Knowledge share their test/acquisition mechanic here, since Knowledge is a co-creation-heavy social skill; the buildable catalog of Areas and Specific Knowledge categories still lives in `creating.tex`). Mechanics for an intrigue game.
 - `survival.tex` — exploration mechanics and resources for an exploration game.
 - `abilities.tex` — abilities characters can obtain.
 - `spells.tex` — spells characters can obtain, plus casting and learning rules.
