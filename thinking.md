@@ -43,6 +43,8 @@ Forgery and disguise
 
 riding - rules about taming and riding animals. Maybe a system of mounts and their stats, and how they interact with the player character's stats.
 
+training + trainers + training alone. review
+
 # RETHINKING KNOWLEDGE SYSTEM
 
  - crafting section in survival - chemstry, survival, medicine, smithing, architecture
