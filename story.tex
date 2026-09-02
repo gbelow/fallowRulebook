@@ -162,7 +162,7 @@ Knowledge
 Spirit
 Constitution
 
-\textbf{Acquiring contacts:} This can be done by completing missions, or by making an acting test to see how much time and money will be spent on acquiring this contact. The amount of time and money required depends on the relevance and utility of the contact.
+\textbf{Acquiring contacts:} This can be done by completing missions, or by making an politics test to see how much time and money will be spent on acquiring this contact. The amount of time and money required depends on the relevance and utility of the contact.
 
 \section{Tags}
 
@@ -248,6 +248,74 @@ Wealth \\
 Access \\
 Service \\
 “What can you give me?”
+
+\section{Downtime}
+
+\newcommand{\downtime}[6]{
+\statrule
+{\sffamily\bfseries\large Activity: #1} \\
+\statlabel{Days:} #2 \\
+\statlabel{Cost:} #3 \\
+\statlabel{Requirement:} #4 \\
+\statlabel{Test} #5 \\
+\statlabel{Yield:} #6 \\
+}
+
+Players can do many different downtime activities. Each one costs a number of days and possibly money.
+
+Only one thing can be done per day, but a single thing can fit more than one category.
+
+Train - XP for + money, less XP alone
+Job - +money 
+Study - gain knowledge
+Heal - excellent sleep - pay to heal faster
+celebrate - gain popularity + local knowledge
+
+\downtime{Training}{10 x N}{Trainer rate x days }{Trainer}{ none }{ N XP }
+
+\downtime{Training without trainer}{10 x N}{ variable }{ - }{ 2x talent vs 2x training level }{ miss = 0 XP - graze = $N/4$ XP - hit $N/2$ XP - crit N XP }
+
+\downtime{Job}{ N days }{ - }{Employer}{ none }{ daily rate x N }
+
+\downtime{Celebrate}{ N days }{ - }{ Populated town with popularity }{ Persuasion vs DL }{ reputation }
+
+\downtime{Healing}{N days}{rate per day}{Healer}{ }{ trainer heal rate x N }
+
+\textbf{Healing alone:} Use the rules of long camping.
+
+
+\subsection{Wealth and Money}
+
+Wealth is divided into two categories: currency and assets.
+
+Copper, silver, and gold are everyday currencies. Ten coppers are worth the same as one silver, and 10 silvers are worth the same as 1 gold. 1 coin weighs 10g, which means 50 coins weigh 500g, equivalent to 1 small item.
+
+Assets represent land, rare items, slaves, investments, a business, or another form of wealth that is owned but has a fluctuating value compared to regular currency.
+
+\subsection{Salaries and Cost of Living}
+
+The values of salaries and cost of living are described here are a guideline designed to ground the cost of things. 
+
+\begin{stattable}{Salaries and Cost of Living}{@{}lccc@{}}
+Job & Apprentice & Specialist & Master \\
+\midrule
+Worker & 1SP/day & - & - \\
+\rowcolor{fallowtint}
+Infantry & 2SP/day & 4SP/day & - \\
+Archer & 2SP/day & 6SP/day & 12SP/day \\
+\rowcolor{fallowtint}
+Knight & - & 8SP/day & 3 GP/day \\
+Armorer & 2SP/day & 5SP/day & 2 GP per day \\
+\rowcolor{fallowtint}
+Carpenter & 2SP/day & 3SP/day & 5SP per day \\
+Mason & 2SP/day & 3SP/day & 5SP per day \\
+% Priest & 2SP/day & 4SP/day & 8s per day \\
+\rowcolor{fallowtint}
+Doctor & 3SP/day & 1 GP/day & 3 GP per day \\
+\end{stattable}
+
+Any of these can be hired, as long as they accept the job.
+
 
 \section{Reputation}
 

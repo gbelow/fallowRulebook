@@ -48,15 +48,13 @@ training + trainers + training alone. review
 # RETHINKING KNOWLEDGE SYSTEM
 
  - crafting section in survival - chemstry, survival, medicine, smithing, architecture
- - geography as event finder across nodes, questions how long it takes until we reach X, bonus from maps,  
- - downtime uses - gather information, work for money, get better deals, 
- - 
- - knowledge as gate: to learn abilities, to learn spells, to attempt exploration actions
- - co-creation with knowledge - suggest something and roll to make it true
- 
- uses of architecture - demolition, 
 
- specific knowledges
+ - geography as event finder across nodes, questions how long it takes until we reach X, bonus from maps,  
+
+ - downtime uses - gather information, work for money, get better deals, 
+ 
+ 
+ - uses of building - demolition, siege engines, shelter building, navigation in buildings
 
 
 # CHANGE IN THE APP
