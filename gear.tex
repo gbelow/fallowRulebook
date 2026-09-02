@@ -60,11 +60,6 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 
 \end{multicols}
 
-% NOTE for review: Unarmed's second row originally had "heavy I, smash" sitting
-% in the price column instead of properties, alongside "draw" in properties.
-% Moved "heavy I, smash" into properties (now "draw, heavy I, smash"), matching
-% how Gauntlet's own second row already carries the same value in properties.
-% This is a small content change, not just formatting — worth a final glance.
 \begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
 Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \midrule
@@ -107,10 +102,6 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 \textbf{Battle Axe:} It is a very good option against wooden objects or opponents with low-rigidity armor. Its blade combined with its weight makes it an excellent weapon for destroying shields. The axe is slower than swords, and its attacks can leave the user open to enemy offensives, so it is wise to make each attack count. Its defensive potential is low, as it is a shaft weapon. It is better to use the axe alongside a shield to compensate. The battle axe has a spike on the back, which is a better option against opponents whose armor the blade cannot penetrate.  
 
 \end{multicols}
-% NOTE for review: Mace's second row had a stray "\textbf" with no
-% argument in place of the usual blank/continuation first cell in the
-% pre-existing data — a markup leftover, not game data, so normalized to
-% the standard continuation marker used elsewhere.
 \begin{stattable}{One-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
 Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \midrule
@@ -150,10 +141,6 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \textbf{Greatsword:} is a larger and more robust version of a longsword. Although the weapon is quite heavy, it is balanced so that its attack can still be delivered with agility. The blade is very durable, making the weapon ideal for destroying other weapons that attempt to block it. Its sweeping attack with enhanced damage and long reach makes it excellent for dealing with many opponents at once. This sword is too large to be used in grappling combat, but it is still capable of thrusting at vulnerable points.
 
 \end{multicols}
-% NOTE for review: Bardiche's second row had a stray "\textbf" with no
-% argument in place of the usual blank/continuation first cell in the
-% pre-existing data — a markup leftover, not game data, so normalized to
-% the standard continuation marker used elsewhere.
 \begin{stattable}{Two-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
 Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \midrule
@@ -266,9 +253,9 @@ Body shields are marked with * in the table and can provide total cover.
 
 \section{Armors}
 
-Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow CUT damage to hit the wearer.
+Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow cutting damage to hit the wearer.
 
-\textbf{Load penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values, as well as in the stealth skill. The penalties from multiple gear stack.
+\textbf{Burden penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack. Burden penalties are reduced or increased based on STR, where burden penalty is modified by $(STR-10)/3$
 
 \textbf{Fiber armors} require the user to defend against most attacks actively, but they prevent the damage from being severe if hit. Cloth armors have very few penalties and a hardness of 2.
 
@@ -282,14 +269,14 @@ Armors have prot, which is used as damage reduction against impacts. The armor's
 
 \textbf{Gauntlets and closed helmet:} It is possible to remove the gloves and closed helmets, but removing each of these eliminates their bonuses.
 
-\textbf{Donning and Doffing armor:} Costs a standard action to don/doff helmet, gauntlets and small armor. Costs 6 AP to don/doff medium armors and several minutes to don/doff large ones. It is possible to doff a large armor by cutting it with a blade and spending 12 AP on it. This leaves the armor damaged.
+\textbf{Donning and Doffing armor:} Costs a standard action to don/doff helmet, gauntlets and small armor. Costs 6 AP to don/doff medium armors and several minutes to don/doff large ones. It is possible to doff a large armor by cutting it with a blade and spending 8 AP on it. This leaves the armor damaged.
 
 
 
 \end{multicols}
 
 \begin{stattable}{Armors}{@{}lccccccc@{}}
-Name & RES & Protection & Insulation & Deflection & Penalty & Price & Weight \\
+Name & RES & Protection & Insulation & Deflection & Burden & Price & Weight \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Fiber}}} \\
 \midrule
@@ -298,10 +285,10 @@ Skin & 0 & 0 & 0 & +4 & 0 & 0 & 0 \\
 Clothing & 3 & 0 & 2 & +4 & 0 & 1 SP & small \\
 Fur coat & 7 & 2 & 6 & +5 & 0 & 0 & medium \\
 \rowcolor{fallowtint}
-Thick Hide & 8 & 4 & 7 & +6 & 0 & 0 & large \\
+Thick Hide & 8 & 4 & 7 & +5 & 0 & 0 & large \\
 Gambeson & 10 & 3 & 6 & +5 & 0 & 5 GP & medium \\
 \rowcolor{fallowtint}
-Padded Armor & 12 & 5 & 8 & +5 & -1 & 2 GP & large \\
+Padded Armor & 12 & 6 & 8 & +5 & -1 & 2 GP & large \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Metallic}}} \\
 \midrule
@@ -395,6 +382,7 @@ Objects can deal and take damage whenever they collide with something else, whet
     \item Characteristic: Insulating: Increases insulation against electric-type damage attacks by +5.
     \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
     \item Characteristic: Sealed: Has infinite insulation against corrosive-type damage attacks.
+    \item Characteristic: Noisy: Produces noise when moved or worn.
    
     \item Characteristic: Semi-automatic - Has multiple shots per reload.
     \item Characteristic: Air filter - Closed helmet that grants immunity to toxic gas effects.
@@ -403,7 +391,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 \end{proplist}
 
 
-\section{Containers and Load}
+\section{Containers and Burden}
 
 Items can be categorized as small, medium, large, and cargo. 
 
@@ -590,7 +578,7 @@ Potions are carried in vials.
     \item Sharpening Stone - A sharpening stone. 2 SP. small
     \item Fur Cloak - Improves resistance to cold exposure by +2. 1 GP. medium
     \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP.
-    \item Camouflage for X - where X is the terrain. Improvised.
+    \item Camouflage for X - where X is the terrain. Gives +3 to Stealth vs vision outside combat. -3 penalty in combat in plain sight. 2 SP. large.
     \item Snow shoes - cancels penalty for walking in the snow. 1 GP.
     \item Grappling hook - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 1 GP.
 

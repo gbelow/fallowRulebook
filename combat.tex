@@ -595,7 +595,7 @@ Some terrain features can be obstacles. Traversing an obstacle works just like r
 
 \textbf{Hiding at far distances:} If a hiding spot is entered at Far or Horizon distances, the chase is over. Whether the pursuers will be able to follow depends on interpretation of the scene in question. Maybe the fugitives have disappeared into the forest and need to be tracked, but maybe they are inside a house and cant leave without being seen. It all depends on the scene.
 
-\textbf{Hiding at shooting distances:} The stealth test is done by the lowest stealth in the group, but splitting the group is possible. Stealth is done against the best of the opponent's detection. The hiding spot in question is relevant, since it can grant stealth bonuses. On a detection hit or crit, the pursuers find the lowest stealth character and anyone that is with them. On a miss or graze, the pursuers follow some wrong track or give up.
+\textbf{Hiding at shooting distances:} The stealth test is done by the lowest stealth in the group, but splitting the group is possible. Stealth is done against the best of the opponent's detection. The hiding spot in question is relevant, since it can grant stealth bonuses. On a stealth miss or graze, the pursuers find the lowest stealth character and anyone that is with them. On a hit or crit, the pursuers follow some wrong track or give up.
 
 \section{Stealth}
 
@@ -603,30 +603,30 @@ Some terrain features can be obstacles. Traversing an obstacle works just like r
 
 \textbf{Stealth value:} The player rolls the d10 and adds their stealth skill, that is the stealth value that is used against every detection skill value until a new roll is called. 
 
-\textbf{Stealth events:} are a description given by the player of what exactly the character is trying to do with their stealth, which defines which senses the detectors are using and sets a bonus or penalty to the detection test. The usual values should stay between -15 and +5.
+\textbf{Stealth events:} are a description given by the player of what exactly the character is trying to do with their stealth, which defines which senses the detectors are using and sets a bonus or penalty to the detection test. The usual values should stay between -15 and +15.
 
 An event could be trying to hide in a specific spot, trying to pass through somewhere undetected or taking some kind of action without being identified or located. A stealth event should take into consideration what noise the footsteps make in a path (altered by how fast characters are moving), how difficult it is not to bump into anything, how hard it is to avoid line of sight, how hard it is to stop gear from making noise, how close to a detector the path lies, how good a hiding spot is and how long you will be searched for if staying there.
 
-Each event adds a bonus or penalty to the stealth value relative to a detector, who uses the best sense available. On hits or crits, the character stays unnoticed. On grazes, the character can be reacted against and raises the alarm for the detector, which allows them to go looking around actively. On misses, the character is detected and, if in combat, the opponent may take their turn immediately. The stealth value is modified by events that change the situational bonus.
+Each event adds a bonus or penalty to the stealth value relative to a detector, who uses the best sense available. On hits or crits, the character stays unnoticed. On grazes, active senses detect, but passive ones just draw the attention of active senses and possibly make characters go searching with the active ones. On misses, the character is detected. The stealth value is modified by events that change the situational bonus.
 
-Call for a new stealth check when the scene changes. One failed test means that stealth is over, so repeating multiple tests will eventually lead to failure. This is why only one test is called for a scene. The variation comes from the player's actions.
-
-\textbf{Stealth in combat:} the stealth value is rolled in the beginning of the round. The stealthy character's actions may change the bonus of their stealth event, like when they attack someone or run. The stealth value deteriorates with the stealth event that had the worst penalty of all until the stealthy character starts a round undetectable again, at which point they remake their stealth test. Enemies cannot target the character unless their detection is higher than the stealth value and cannot react before it is 4 points below it or less.
+Call for a new stealth test when the scene changes into combat, chase or interpretation. One failed test means that stealth is over, so repeating multiple tests will eventually lead to failure. This is why only one test is called for a scene. The variation comes from the player's actions in stealth events.
 
 \textbf{Event Chaos modifier:} Some stealth events can have highly unpredictable outcomes and others can be the opposite. Use safe tests or risky tests to represent this fact.
 
-\textbf{Hidden roll:} Optionally, the GM could roll the dice for the player, add it to the character's stealth skill and keep the result, without revealing it. The player then describes what they are trying to do. For every major shift in event difficulty, the GM decides on a bonus and narrates what is happening. This is especially useful in situations where multiple stealth rolls would be called for. If the dice is rolled separately for each new description, the dice would eventually roll very badly.
+\textbf{Hidden roll:} Optionally, the GM could roll the dice for the player, add it to the character's stealth skill and keep the result, without revealing it. The player then describes what they are trying to do. For every major shift in event difficulty, the GM decides on a bonus and narrates what is happening. The player must interpret whether their dice result was good or not. They won't give up early if their stealth value came too low or just walk by everyone if the was too high.
 
-\textbf{Group roll:} Use the worst stealth value of any character in a group. Increase the penalty of the stealth event for the amount of characters, if necessary. Mounts, pets, cargo and vehicles should be taken into consideration. 
+\textbf{Group roll:} Group rolls are used in chases or interpreted scenes. Start with the worst stealth skill of any character in a group and add penalties for the amount of characters, gear carried, mounts, pets, cargo and vehicles as stealth event penalty.  
+
+\textbf{Split Group:} In interpretation or chase scenes, the action depends on description and interpretation. If someone is detected, but the group is split, only the worst stealth group is detected.
 }
 
 \skill{Detection}{ Awareness}{ Detection is used to detect things in stealth or just for looking for things in general.
 
-\textbf{Detected and Undetected status} To be considered undetected, a character must be out of the field of detection of all active senses of another character at the beginning of a round. An undetected character cannot be reacted against.
+\textbf{Detection as defense:} Detection is used as a defense against stealth, meaning that it is used passively without rolling.
 
 \textbf{Group detection:} a single Detection value should be used for a whole group of characters, using the best Detection in the group for everybody. The group can be separated as desired, but then finding the best detection may involve using different distance bands for each group.
 
-\textbf{Senses:} Any detection event will target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses can be active or passive. 
+\textbf{Senses:} Any detection event must target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses can be active or passive. 
 
 \textbf{Active senses:} are used to keep the detector in aware, meaning that after detection, the target is tracked by the detector and can be reacted to until a new stealth event occurs.
 
@@ -679,26 +679,67 @@ The factors that determine the difficulty to detect or hide are: distance, noise
 
 Here's a list of possible modifiers. Many modifiers can be combined.
 
+\textbf{Hiding in stealth:}
 \begin{proplist}
-    \item \textbf{Being in plain sight:} -10 to Stealth vs. vision. Only in front of someone.
-    \item \textbf{Camouflage in plain sight:} -5 to Stealth vs vision when in plain sight.
-    \item \textbf{Hiding behind a tree:} +2 to Stealth vs. vision (Requires active search to detect).
-    \item \textbf{Complete hiding:} Automatically undetected to vision.
-    \item \textbf{Wearing noisy gear or carrying jingly objects:} -2 to -4 to Stealth vs. hearing. Metal armor is around -2.
+    \item \textbf{Being in plain sight:} auto detect unless camouflaged or at far distance and beyond.
+    \item \textbf{Camouflage in plain sight:} +3 to Stealth vs vision. Varies with camouglage quality.
+    \item \textbf{Partial cover:} +3 to Stealth vs. vision.
+    \item \textbf{Complete cover:} Automatically undetected to vision.
+\end{proplist}
+
+\textbf{Moving in stealth:} 
+\begin{proplist}
     \item \textbf{Movement in the grass:} 0 vs. vision, -2 to Stealth vs. hearing.
     \item \textbf{Movement on marble floor with standard boots:} -2 to Stealth vs. hearing.
-    \item \textbf{Movement on marble floor with muffled boots:} +2 to Stealth vs. hearing.
+    \item \textbf{Movement on marble floor with muffled boots:} +0 to Stealth vs. hearing.
+    \item \textbf{Wearing noisy gear or carrying jingly objects:} -2 to -4 to Stealth vs. hearing. Metal armor is around -2.
+    \item \textbf{Wearing metallic armor:} -2 to Stealth vs. hearing.
+    \item \textbf{Carrying burden:} -2/-4/-10 to Stealth vs. hearing for medium, large and cargo burdens.
     \item \textbf{Moving on squeaking floorboards:} -3 to -5 to Stealth vs. hearing.
     \item \textbf{Careful movement and crawling:} 0 to hearing and vision (Base Skill).
     \item \textbf{Basic movement:} -2 to Stealth vs. hearing and vision.
     \item \textbf{Running / Combat Sprint:} -5 to Stealth vs. hearing and vision.
+\end{proplist}
+    
+\textbf{Attacking from stealth:}
+\begin{proplist}
     \item \textbf{Attacking in melee:} -3 to Stealth vs. hearing. Causes immediate automatic detection if within a detector's field of vision.
     \item \textbf{Hitting in melee:} detected by touch. Detected by vision a moment later.
     \item \textbf{Shooting a bow:} -2 to Stealth vs. hearing and vision.
-    \item \textbf{Hitting at distance:} -2 vs Vision. Automatically detected if in plain sight. Direction is detected either way.
+    \item \textbf{Hitting at distance:} -2 vs Vision. Direction is detected either way, so stealth cannot hit or crit.
 \end{proplist}
 
-\textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection.
+\magic spellcasting is naturally undetectable without special detection. Only the spell's effects are detectable.
+
+\textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection. Use luck to represent the character's lingering somewhere and giving luck a chance to ruin their stealth.
+
+\subsection{Stealth in combat}
+
+Stealth should not be free form in combat. The rules in combat situations are stricter to allow tactical planning.
+
+\textbf{Stealth test:} The stealth value is rolled in the beginning of the round for each character in stealth individually. This is only done for characters that started their round undetectable to any opponent active senses. Enemies cannot target the character unless their detection is higher than the stealth value (a miss in stealth), and cannot react to them if their detection is not 4 points lower, at most (a graze in stealth). The stealth value of any character in combat is public to everyone and must be checked against whenever someone tries to act or react against a stealthy character.
+
+\textbf{Stealth penalties:} The stealthy character's actions change their stealth value. Their stealth value situational bonus is set as the sum of all penalties they received until a new stealth test is made. The situational bonus in combat are:
+
+\begin{proplist}
+    \item \textbf{Tier 1 - Careful movement and crawling:} 0, \textbf{Tier 2 - Normal movement:} -2, \textbf{Tier 3 - Running and jumping:} -4.
+    \item \textbf{Ranged attacks:} -2. \textbf{Melee attack:} -4.
+\end{proplist}
+
+% metallic armor and a backpack dont matter enough to be considered in combat, but they do matter in stealth events.
+\textbf{Staying in stealth:} The character must begin their turn undetectable through any active sense in order to be considered in stealth. They must go back to being undetectable to any enemy active senses and end their turn to continue in stealth. Failing to do so causes automatic detection by everyone (their stealth value disappears). Trying to take a second turn immediately after finishing their last one takes -5 penalty to cunning.
+
+\textbf{Attacking from stealth:} Being attacked automatically causes detection through touch after the attack, which means that a second attack can always be reacted to. Whoever is struck always knows where the attack came from, but cannot target the spot directly unless they detect the attacker through an active sense or has high enough detection. 
+
+\textbf{Searching actively:} A character can spend 3 AP to pay better attention to their surroundings. This increases their detection by +3 for the round. 
+
+\textbf{Staying undetectable:} A character must use cover, fog, darkness or camouflage to stay undetectable. 
+
+\textbf{Camouflage:} is necessary to stay stealthy in plain sight, and must be matched to the current environment. A camouflage item comes with a penalty to stealth that is added when the character is in plain sight. 
+
+\textbf{Floor noise:} The terrain may have a bonus or penalty to stealth based on what the floor is made of, which modify the penalties from movement. Some floors make noise when stepped on, some halls are echoey, some floors have leaves and branches that can make noise when stepped on. This must be drawn in the map and the GM must inform the players of the numerical values associated with the terrain. For example: Marble floor makes movement penalties to stealth increase in 1 per movement tier.
+
+\textbf{Gear noise:} Some gear produces noise when moved or worn, which will be indicated in the gear description. When it does, it increases the penalties from movement by +1 per tier and also the penalties from attacking by +1.
 
 \section{Morale}
 

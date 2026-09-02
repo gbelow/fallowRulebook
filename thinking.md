@@ -73,6 +73,10 @@ add attributes as skills?
 
 update weapons and armor - check gear properties
 
+STR reduces gear PEN - (STR-10)/3 
+
+review size modifiers
+
 
 # product workflow - how to turn this into a game
 
