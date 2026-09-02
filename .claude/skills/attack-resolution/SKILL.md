@@ -62,9 +62,12 @@ Melee (to hit): opportunity attack +2 · heavy II −2, heavy III −3 · small 
 in a grapple +2 · mounted −2 (mount-dependent) · injury/sensory penalties (−1
 per 10 IL; Strike/Defend are sensory) · other agreed modifiers.
 
-Ranged (to hit): distance — ≤10m 0; −2 per full +20m up to 50m; from 50m −2 per
-+50m (vertical range = half horizontal) · quick shot −3 · snipe uses −1 per
-first 50m · mounted & moving −2 · untrained bows: +3 AP per shot instead.
+Ranged (to hit): the text defines no distance-based to-hit falloff — range is
+bounded only by the weapon's max range and Shoot's 30m cap (Snipe removes the
+cap for +2 AP; vertical range = half horizontal). Quick Shot has no to-hit
+penalty in the text, only ≤10m range and −1 AP. Mounted & moving −2. Untrained
+bows: +3 AP per shot instead of a penalty. Shots >50m fired from outside the
+combat area (chase/skirmish only) take −5.
 
 **DL = defender's defense value:**
 - Melee: Defend value if actively defending; else SD.
@@ -84,7 +87,8 @@ reroll). Risky: keep the farthest from 5. Only when the rules allow it.
 **AP/STA cost** (track it; users care about damage per AP): strike 3 AP ·
 heavy I +1AP · heavy II +2AP+1STA · heavy III +3AP+1STA · sweep +1AP · braced
 +2AP+1STA · assassinate +1AP · ranged: AP from weapon row (e.g. "3+5" = shot +
-reload) · quick shot −1AP · snipe +2AP. Defense: evade 2AP · evasive jump +1STA ·
+reload, e.g. crossbow "4+4" = shot then reload) · quick shot −1AP · snipe +2AP.
+Defense: evade 2AP · evasive jump +1STA ·
 block 2AP · intercept 3AP · reflex evasion 2AP.
 
 ## 4. Compute damage
@@ -117,7 +121,7 @@ block 2AP · intercept 3AP · reflex evasion 2AP.
 
 Compare final damage to thresholds **armor + N × TGH**, where "armor" is
 Protection for blunt and RES for cutting. Shortcut: **tier =
-floor((damage − armor) / TGH)**, capped at T5; damage below the armor value
+floor((damage − armor) / TGH)**, capped at T6; damage below the armor value
 deals no IL.
 
 | Tier | Threshold | IL | Wound |
@@ -126,8 +130,9 @@ deals no IL.
 | T1 | armor+TGH | 5 | 0 |
 | T2 | armor+2×TGH | 10 | 50% |
 | T3 | armor+3×TGH | 20 | 100% |
-| T4 | armor+4×TGH | 30 | 200% |
-| T5 | armor+5×TGH | 50 | 300% |
+| T4 | armor+4×TGH | 30 | 100% |
+| T5 | armor+5×TGH | 40 | 100% |
+| T6 | armor+6×TGH | 50 | 100% |
 
 **Key invariants (use these to sanity-check any matchup):**
 - Each heavy degree adds +TGH damage (0.5×STR×DM) = **exactly one tier at any
@@ -210,3 +215,14 @@ matters:
   RES vs cutting.
 - SOP = score − DL, only on hit/crit.
 - Melee crits add no extra damage beyond SOP; only explosions crit at 200%.
+- Ranged accuracy is flat within weapon range by design — confirmed with the
+  user (2026-09-02): there is no distance-to-hit falloff, only hard range
+  caps (weapon max range, Shoot's 30m limit, Snipe removing it). spells.tex's
+  "distance penalty" wording (e.g. Lasers: "does not receive any distance
+  penalty up to 50m") is loose phrasing, not evidence of a hidden formula.
+  Do not invent a falloff number.
+- Penetrating's SOP cost (= target's deflection) has two distinct payoffs:
+  it lets cutting damage apply against same-hardness (metal) targets, *and*,
+  for that same cost, it separately lets the attack ignore fiber armor's RES
+  entirely (combat.tex, Success Overflow / Penetrating) — the two are not
+  additive purchases, either payoff costs one deflection-worth of SOP.

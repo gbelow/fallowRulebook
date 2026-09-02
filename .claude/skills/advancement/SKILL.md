@@ -72,13 +72,11 @@ Learned exactly like any skill, INT as talent, same 0-6 scale. Two uses:
   needed facts are already known.
 
 **As an enabler:** acting without the knowledge a task requires costs −5 per
-missing knowledge level on the relevant test. **As a talent:** knowledge
-level substitutes for talent when learning spells/sorcery abilities — spells
-carry a knowledge-level requirement gating their difficulty.
+missing knowledge level on the relevant test.
 
 Formal areas (Alchemy/Animancy/Biomancy/Shamanism are \magic-tagged):
-Architecture, Chemistry, Medicine, Geography, Politics, Smithing, Survival,
-Zoology, plus the three magic knowledges. **Specific/informal knowledge**
+Building, Chemistry, Medicine, Geography, Politics, Smithing, Linguistics,
+Survival, Zoology, plus the three magic knowledges. **Specific/informal knowledge**
 (a place, a language, a faction, an animal, a vehicle) is learned the same
 way but its XP cost is arbitrary/GM-set by difficulty; INT is still the
 talent normally. It's generated passively by relevant downtime activity, not
