@@ -35,10 +35,6 @@ make a list of monsters
 
 review exploration items -- half done
 
-morale during stealth, exploration and chase
-
-review magical items
-
 Forgery and disguise
 
 riding - rules about taming and riding animals. Maybe a system of mounts and their stats, and how they interact with the player character's stats.
