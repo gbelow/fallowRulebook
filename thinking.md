@@ -41,6 +41,10 @@ riding - rules about taming and riding animals. Maybe a system of mounts and the
 
 training + trainers + training alone. review
 
+pets
+
+
+
 # RETHINKING KNOWLEDGE SYSTEM
 
  - crafting section in survival - chemstry, survival, medicine, smithing, architecture

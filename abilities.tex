@@ -343,7 +343,7 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 % Basic
 \subsection{Linguistics}
 
-\abil{Learn Language}{passive}{ automatic Linguistics 0}{Knowing a language}{ Character is capable of learning a language. Use 2x linguistics or 1x INT in any activity that increases specific language level.}
+\abil{Learn Language}{passive}{ automatic Linguistics 0}{Knowing a language}{ Character is capable of learning a language. Use 2x linguistics in any activity that increases specific language level.}
 
 \abil{Translate}{passive}{ automatic Linguistics 0}{Knowing a language}{ Requires knowing two languages. If there is a translation DL, use the lowest language level. }
 
@@ -379,27 +379,56 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 \abil{Surgeury}{1 ET}{automatic at Medicine 4 }{}{ Required for making human chimerism, implants and prosthetics. }
 
 
+\subsection{Mechanics}
+
+\abil{ Lockpicking }{passive}{automatic at Mechanics 1}{}{ Allows the character to attempt to pick locks and set or disarm traps. The skill used is Prestidigitation + Mechanics Knowledge. }
+
+\abil{Mechanism craftsman}{passive}{automatic at Mechanics 1}{}{Learns to craft mechanisms.}
+
 \subsection{Chemstry}
 
-\abil{Bomb maker}{}{}{}{}
-
+\abil{Chemstry craftsman}{passive}{automatic at Chemstry 1}{}{Learns to craft bombs, acids, and other useful chemical devices.}
 
 \subsection{Smithing}
 
-\abil{Armorer}{passive}{automatic at Armorer 1}{}{ Allows the character to make repairs and maintain weapons and armor.}
+\abil{Smithing craftsman}{passive}{automatic at Armorer 1}{}{ Allows the character to craft, repairs and maintain weapons and armor and tools.}
 
-% Survival
 
-\subsection{Geography}
+% Exploration
+
+\subsection{Navigation}
+
+\abil{Geographer }{passive}{automatic at Navigation 1}{}{ Allows the use of Navigation knowledge + awareness as an exploration skill during travel unless the place requires specific knowledge. Far away, uninhabited or secluded places require specific knowledge.}
+
+\abil{ Superior Orientation }{passive}{automatic at Navigation 4}{}{ Character always knows which direction is which while outdoors. They also know it indoors unless they were brought in unconscious. }
+
+\abil{Spatial memory}{passive}{automatic at Navigation 1}{}{ Uses Navigation knowledge + awareness as skill to learn specific locations.}
+
+\abil{Cartography I/II }{passive}{automatic at Navigation 2/4}{}{ I. Allows using 2x Navigation to learn about places through maps. II. Allows professional map-making.}
 
 \subsection{Survival}
 
+\abil{Survivalist }{passive}{automatic at Survival 1}{}{ Allows the use of Survival knowledge + awareness as an exploration skill during search exploration action unless the place requires specific knowledge. Far away, uninhabited or secluded places require specific knowledge.}
 
-\abil{Geographer I/II}{passive}{automatic at Geography 1/4}{}{ I. Allows the use of geography knowledge + awareness as an exploration skill, provided you have a map. II. Allows for professional map-making.}
+\abil{Improvised crafting}{passive}{automatic at survival 1}{}{Allows producing improvised items.}
 
-\abil{Tracking}{passive}{6 XP, INT 2}{ Survival 2 }{Learn to track.}
+\abil{Tracking}{passive}{automatic at Survival 2}{ Survival 2 }{ When tracking someone, make an awareness + survival test against the terrain's DL for tracking. Adjust the DL based on how old the trail is, how many creatures there were, and their size and what they were carrying. A crit or hit means that the quarry was found if it is in the same node, or which direction they went to if not.}
 
 \abil{Odor Repertoire}{passive}{8 XP, INT 2}{Bear Nose, tracking}{Recognizes smells on a success if the scent is familiar. Increases food searching and tracking by +3 and allows tracking by smell, which may have a completely different DL to regular tracking.}
+
+\subsection{Animal handling}
+
+\abil{Taming}{passive}{Automatic at animal handling 2}{}{ Learns how to teach pets to understand commands to choose targets, tell pets to stop, and use special abilities. The test to tame is 2x Animal handling vs the animal's DL to be tamed. The tamed animal is automatically bonded with whoever tamed them. }
+
+\abil{Command pet}{2 AP}{Automatic at animal handling 0}{}{ Commands a pet with which there is a bond. More intelligent pets understand more complex commands. }
+
+\abil{Animal psychology}{passive}{Automatic at animal handling 2}{}{ Learns how to use social actions on animals. Use Animal handling instead of charisma. }
+
+\abil{Animal anatomy}{4 AP +1 STA}{Automatic at animal handling 3}{}{ This is used during rest. Use 2x Animal handling to analyze animals to identify their weak points for localized damage and to know their special abilities. }
+
+\abil{Veterinarian}{passive}{Automatic at animal handling 3}{}{ Learns how to use any medicine ability in animals.}
+
+\abil{Hunting}{passive}{Automatic at animal handling 3}{}{ Animal handling can be used to search for animals using awareness + animal handling as a skill.}
 
 % Combat
 \subsection{Cunning}
@@ -421,11 +450,6 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 \abil{Desperate Action}{1 STA + action}{6 XP, INT 3}{}{Can perform a defend, or reflex action even without sufficient AP, but must spend +1 STA over the normal cost of the action to do so. Cannot end up with less than -2 AP. }
 
 \abil{Improved Feint}{passive}{6 XP, INT 2}{}{After feinting a character successfully, gains +1 in every reaction against them.}
-
-\subsection{Mechanics}
-
-\abil{ Lockbreaking }{passive}{}{}{ Allows the character to attempt to pick locks and set or disarm traps.}
-
 
 
 \subsection{Social}
