@@ -327,7 +327,7 @@ A high-quality padded armor would be much more expensive but would improve resis
 
 \section{Smithing and maintenance}
 
-\subsection{Breakage and Repair of Equipment}
+\subsection{Equipment Breakage}
 
 The equipment breakage function is optional.
 
@@ -345,11 +345,11 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Armor Breakage:} When armor breaks, it is considered pitted. Repairing armor costs 20\% of the armor's value.
 
-\textbf{Armorer:} Knowledge of armoring and the appropriate equipment are necessary to repair weapons and armor. Repairing metal objects requires a forge.
+\subsection{Equipment Repair}
 
 \textbf{Sharpening:} Is an action that takes one exploration turn and applies the sharp condition. Requires a sharpening stone. This does not work on precise weapons, because they are already considered sharp.
 
-\textbf{Repairing gear:} Requires an armor rapair kit. 
+\textbf{Repairing gear:} Requires an armor rapair kit. Make a smithing test against armor DL. Hits and crits fix in 1 exploration turn. grazes take 2 and misses just miss. Requires scraps from other armor or repair supplies.
 
 
 \subsection{Characteristics and Conditions}
@@ -382,8 +382,8 @@ Objects can deal and take damage whenever they collide with something else, whet
     \item Characteristic: Flammable - Burning condition does not wear off by itself.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
     \item Characteristic: Insulating: Increases insulation against electric-type damage attacks by +5.
-    \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
-    \item Characteristic: Sealed: Has infinite insulation against corrosive-type damage attacks.
+    % \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
+    % \item Characteristic: Sealed: Has infinite insulation against corrosive-type damage attacks.
     \item Characteristic: Noisy: Produces noise when moved or worn.
    
     \item Characteristic: Semi-automatic - Has multiple shots per reload.
@@ -440,11 +440,12 @@ These are items that can be used in combat. They play a role in controlling terr
 \subsection{Flammables, Smokers}
 
 \begin{proplist}
-\item {Alchohol - 0.5L}. Flask that can be thrown to coat 1 space in flammable alchohol. Can be drank. \textit{Cost:} 2 SP. \textit{Bulk:} small.
+\item {Alchohol - 0.5L}. Flask that can be thrown to coat 1 space in flammable alcohol. \textit{Cost:} 2 SP. \textit{Bulk:} small.
 \item {Oil flask - 0.5L}. Flask that can be thrown to coat 1 space in flammable oil. Cannot be extinguished with water. Can be used to make a torch. \textit{Cost:} 2 SP. \textit{Bulk:} small.
 \item \textbf{Pitch pot:} Pot of pitch with a fuse that can be thrown and burns for 12 burning damage per round and sticks to 1 space or target and produces smoke (black smoke, 2m radius, 1 min fill) This does not extinguish with water and requires 8 AP to be muffled. \textit{Cost:} 5 SP. \textit{Bulk:} Medium.
 \item \textbf{Smoke bundle:} Improvised, consumed by use. Damp greenery, dung, or straw rolled in cloth. Produces smoke (White smoke, 2m radius, 5 min fill). \textit{Cost:} 1 CP. \textit{Bulk:} Medium.
 \item \textbf{Torch} - Improvised, discarded after use. Gives 5m light radius when lit, requires an oil flask to burn for 4 hours. Can be used to block attack at RES 10. Lighting it is a DL -2 exploration test. \textit{Cost:} 1 CP. \textit{Bulk:} small.
+\item \textbf{Smoke Grenade} - An item that can be thrown or attached to a projectile and produces 3m radius of white smoke. 2 GP. small.
 \end{proplist}
 
 
@@ -497,31 +498,38 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
 \subsection{\magic Magical Items}
 
 \begin{proplist}
-    \item Alchemical Torch - Allows the use of some light spells - Weight 2 - 12 GP.
-    \item Superior Alchemical Torch - Allows the use of some light spells and automatically increases its size once - Weight 2 - 50 GP.
+    \item Alchemical Torch - Allows the use of light spells - Weight 2 - 12 GP.
+    \item Superior Alchemical Torch - An alchemical torch that amplifies magic once - Weight 2 - 50 GP.
     \item Alchemical Prism - Allows the channeling of light - 150 GP.
-    \item Electrite - Allows the transformation of magic into electricity, dealing 10 base electric damage. - Weight 2 - 30 GP.
-    \item Superior Electrite - Allows the transformation of magic into electricity, dealing 15 base electric damage. - Weight 2 - 400 GP - carries 20 charges.
-    \item Magnetite - Allows the transformation of magic into magnetism. - 10 GP.
-    \item Fire Stone - Allows the production of fire from it, dealing 20 base burn damage. - 50 GP - carries 20 charges.
+    \item Electrite - A magically activated electrical battery stone. Deals 10 base electric damage. 20 charges - Weight 2 - 30 GP.
+    \item Superior Electrite - every spell is amplified once automatically. 20 charges - Weight 2 - 400 GP
+    \item Magnetite - Can be placed into gear to give magnetic properties. - 10 GP.
+    % \item Fire Stone - Allows the production of fire from it, dealing 20 base burn damage. - 50 GP - carries 20 charges.
     \item Flame Thrower - A staff mounted with a fire stone to apply pressure to the flames, deals 20 base burn damage. - 80 GP.
     \item Venomous Frog Corpse - Produces anticoagulant poison. - 5 GP - Weight 1.
-    \item Soul Stone - Used to preserve souls - 200 GP.
+    \item Soul Stone - Used to preserve souls - 40 GP.
     \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.
-    \item Smoke Grenade - An item that can be thrown or attached to a projectile and produces 3m radius of white smoke. 1 GP. small.
     % \item Sharpening Sheath - Reduces the cost of the Sharpen spell on a weapon within the sheath to 1 AP - Weight 2 - 50 GP.
 \end{proplist}
 
-\subsection{Potions}
+\subsection{Potions and Medicine}
 
 Potions require a standard action to be consumed. Taking multiple potions does not amplify the effect. The contents of a potion on the list are relative to a creature of size 3. A creature of a different size will consume an amount equivalent to 1x Volume Modifier.
 
 Potions add an effect to the character for a certain duration. The effects of potions are not cumulative, but they can be refreshed by consuming another potion. The effects of potions are not amplified by consuming multiple potions of the same type.
 
 \begin{proplist}
-    \item Simple Healing: heals 5 extra IL over 1 short rest, 2 GP. small.
-    \item Medium Healing: heals 10 extra IL over 1 short rest, 6 GP. small.
-    \item Good Healing: heals 15 extra IL over 1 short rest, 16 GP. small.
+    \item \magic \textbf{Simple Healing:} heals 5 extra IL over 1 short rest, 2 GP. small.
+    \item \magic \textbf{Medium Healing:} heals 10 extra IL over 1 short rest, 6 GP. small.
+    \item \magic \textbf{Good Healing:} heals 15 extra IL over 1 short rest, 16 GP. small.
+    \item \textbf{Bandages:} useful for medicine. 10 charges. 1 SP. small.
+    \item \textbf{Splint:} useful for medicine. 5 CP or improvised. small.
+    \item \textbf{Anti-septic:} reduces infection exposure by 3 when applied with a bandage. 10 charges. 1 SP. small.
+    \item \textbf{Antibiotic poultice:} reduces infection exposure by 2 when consumed. 5 charges. 4 SP. small.
+    \item \textbf{Cocaine:} Removes the effects of exhaustion for 1 ET, but doubles Wear. 5 charges. 1 GP. small.
+    \item \textbf{Morphine:} Becomes intoxicated, but gets no injury penalty to morale tests. 5 charges. 1 GP. small.
+    \item \textbf{Ayahuasca:} Causes confusion, but increases shamanism by +5. 5 charges. 1 GP. small. % stub - must know how shamanism works
+    \item \textbf{Antidote:} Removes effect of poison. Price and availability depend on poison. 5 charges. 1 GP. small.
 \end{proplist}
 
 Potions are carried in vials.
@@ -544,7 +552,6 @@ Potions are carried in vials.
     \item Vial: Holds 50ml of any liquid. 1 SP. small
     \item Chalk: makes being followed trivial in the marked path. It is spent in one ET and lasts until it rains. 5 CP - small
     \item Insect repellant: Reduces exposure to insects by 2. lasts for 1 sleep.
-    % \item Alcohol - Used for fire skills. 2 SP per 250ml (5 charges).
     \item Sharpening Stone - A sharpening stone. 2 SP. small
     \item Fur Cloak - Improves resistance to cold exposure by +2. 1 GP. medium
     \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP.
@@ -554,13 +561,6 @@ Potions are carried in vials.
 
 \end{proplist}
     
-\subsection{Drugs}
-
-\begin{proplist}
-    \item Popaine:  - 5 SP - Causes the character to become confused or, in high doses, incapacitated.
-    \item Alcohol: Causes the character to become intoxicated.
-
-\end{proplist}
 
 
 \end{multicols}

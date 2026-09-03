@@ -341,17 +341,31 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 \section{INT}
 
 % Basic
+\subsection{Linguistics}
 
-\abil{Literacy}{passive}{ 6 XP INT 1}{Language 2}{Learns to read and write.}
+\abil{Literacy}{passive}{ 6 XP INT 1}{Knowing a language}{Learns to read and write.}
 
 %Art
-\subsection{Art}
+% \subsection{Art}
 
-\abil{Performance I/II/III}{passive}{4 XP, INT 2/4/6}{}{I. Allows the character to know a form of art, such as playing an instrument, magic tricks, jokes, etc. Gains +1/2/3 to tests to distract the audience.  }
+% \abil{Performance I/II/III}{passive}{4 XP, INT 2/4/6}{}{I. Allows the character to know a form of art, such as playing an instrument, magic tricks, jokes, etc. Gains +1/2/3 to tests to distract the audience.  }
 
 \subsection{Medicine}
 
-\abil{First Aid}{ritual}{automatic at Medicine 1 (\magic Biomancy 1)}{}{Learn to heal wounds, make splints, and fix broken bones. By spending an exploration turn, you can heal 2 IL to an injured creature if used within 4 hours after it has been hurt. }
+\abil{First Aid}{full turn}{automatic at Medicine 1 }{}{ Tries to stop bleeding through a torniquet or pressure on self or other. Make a medicine test against a DL equal to 2x bleeding. On a hit or crit, prevents bleeding that turn completely. Reduces bleeding by 0/0/1/2.  }
+
+\abil{Cauterization}{4 AP + focus surge}{automatic at Medicine 1 }{Burning object}{ Tries to stop bleeding through burning the area. Causes 10 fire damage that ignores armor and reduces bleeding by 2.  }
+
+\abil{Bone Setting}{1 ET}{automatic at Medicine 1 }{Splint}{ In one ET, make a medicine test DL 3 to allow a wound to heal with rest. It heals 0/1/2/2 per sleep. A crit does not spend the ET. The test only needs to be done once per wound. }
+
+\abil{Wound triage}{1 ET}{automatic at Medicine 1 }{Bandages}{ In one ET, make a medicine test to prevent infection. It lowers the DL of the infection test by 2. One test can be used for the whole team and can be retried, but spends resources per character per attempt. }
+
+\abil{Diagnosis}{1 ET}{automatic at Medicine 1 }{}{ Make a medicine test of an arbitrary DL to diagnose a disease or poisoning. On a hit or crit, the character knows what the disease and treatment are. }
+
+\abil{Autopsy}{1 ET}{automatic at Medicine 1 }{}{ Make a medicine test of an arbitrary DL to find the cause of death. Spends 1/2/1/0 ET to find out and fails on a miss. A graze costs 2 ETs and succeeds or spend one fails.  }
+
+\abil{Surgeury}{1 ET}{automatic at Medicine 4 }{}{ Required for making human chimerism, implants and prosthetics. }
+
 
 \subsection{Engineering and Alchemy}
 
@@ -528,9 +542,7 @@ These mutations are spiritual and require knowledge of Animancy or divine assist
 
 \subsection{Chimerism}
 
-These are abilities that mix characteristics of other animals with those of humans. These mutations only occur when trained with transfiguration magic. 
-
-It is possible to train this ability in another character, like a plastic surgery, but the wizard must have the talent and both must spend the necessary time to gain XP.
+These are abilities that mix characteristics of other animals with those of humans. Many of them require surgical and magical intervention to be taken.
 
 \abil{Fur }{passive}{6 Karma, Biomancy 3}{racial or ritual, not Scaly}{ Becomes Furry, granting +3 on tests to resist exposure to cold and gives a natural armor of 2xDM INS.  }
 

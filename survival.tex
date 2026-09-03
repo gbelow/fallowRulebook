@@ -7,7 +7,7 @@
 
 The survival markers are \textbf{Hunger, Thirst and Exhaustion.} A character must eat to regain energy, drink water to stay hydrated, and rest to alleviate exhaustion.
 
-\textbf{Exploration Turn (ET):} It is convenient to divide a day into blocks of 4 hours because it splits a day into 6 parts. The day has 24 hours: 8 hours of travel, 8 hours of sleep, 4 hours to set up camp and search for food, and 4 hours to fix anything that goes wrong or do something else. Each block of 4 hours is considered an exploration turn.
+\textbf{Exploration Turn (ET):} It is convenient to divide a day into blocks of 4 hours because it splits a day into 6 parts. The day has 24 hours: 8 hours of travel, 8 hours of sleep, 4 hours to set up camp and search for food, and 4 hours to fix anything that goes wrong or do something else. Each block of 4 hours is considered an exploration turn. Any action that spends an exploration turn is an exploration action.
 
 \textbf{Point crawl:} The system was designed so that exploration actions could be performed on a point crawl map. Such a map consists of nodes. Each of them can have several events attached. The events can be accessible to characters by being present in the node and achieving good results in exploration tests.
 
@@ -58,7 +58,7 @@ Thirst is lowered by drinking water. A character can recover 5 thirst in a singl
 
 For roleplaying purposes, a portion of water is roughly 0.5L.
 
-\subsection{Rest and exhaustion}
+\subsection{Rest, Exhaustion and Healing}
 
 \textbf{Exhaustion} is the measure of mental fatigue. It is increased by staying awake and performing mentally demanding tasks, like casting spells or concentrating for long periods. 
 
@@ -81,17 +81,19 @@ After sleeping, the exhaustion value is set to half its value - exposure.
 
 \textbf{Healing Potions:} take their effect during sleep or a short rest. They heal IL, but do not affect the hunger and thirst values. Any healing that is not used during rest is lost.
 
-\textbf{Healing Wounds:} all wounds heal by half the value of IL recovered. If the IL is already zero, but there are still wounds, continue healing the wound at the same rate, but do not increase hunger nor thirst.
+\textbf{Healing Wounds:} wounds require medicine or magic to heal. Healing this does not increase hunger or thirst.
 
-\textbf{Short Rest:} The character has the option to spend an ET doing nothing, which recovers 1 exhaustion +1 IL. Every two short rests in a row cost 1 hunger and 1 thirst. Any time a character does not participate in an exploration action, they are doing nothing and short rest automatically.
+\textbf{Short Rest:} The character has the option to spend an ET doing nothing, which recovers 1 exhaustion and +1 IL. Every two short rests in a row cost 1 hunger and 1 thirst. Any time a character does not participate in an exploration action, they are doing nothing and short rest automatically.
 
-\textbf{Exposure:} Each terrain has a value that represents how rough it is to spend time there. This represents how physically and mentally stressful the situation is. Generally, the value ranges from 5 to -2. Anything higher than 5 prevents resting, while -2 means you are as comfortable as sleeping in your home's bed. More explanation on the Terrain subsection.
+\textbf{Exposure:} Each terrain has a value that represents how rough it is to spend time there. This represents how physically and mentally stressful the situation is. Generally, the value ranges from 5 to -2 for places that resting is possible. Anything higher than 5 prevents resting, while -2 means you are as comfortable as sleeping in your home's bed. The character can lower exposure by using items.
+
+Optional: \textbf{Infection:} Make a health test every time the character heals through rest. The DL is equal to the 2x Injury penalty + infection exposure. The character takes 4/2/1/0 IL damage depending on the test result.
 
 \textbf{Long Camping:} Sometimes characters need to rest for several days to heal up. In that case, consider that any shelter that was built and any campfires that were made last for several days stay as they are. The exposure value stays constant. Every day, characters heal $6+(health-exposure)/2$. They can continue doing this until water or food runs out. Healing abilities can be used for 1 ET per day per healer. Exhaustion should be zero by the second day for everyone.
 
 \subsection{Wear}
 
-Performing any exploration action that is not resting causes IL damage, representing the physical wear of exploration actions and exhaustion, representing the mental side.
+Performing any exploration action that is not resting causes Wear.
 
 \textbf{What cause wear:} The effect is applied to everyone who participated in the exploration action, independent of them rolling for it or not. If they were in the group that executed the exploration action, they receive the respective wear.
 
@@ -162,11 +164,13 @@ The day can have any number of periods of day and night. This depends on the sea
 
 \section{ Point crawl}
 
-\subsection{ Nodes and Terrain}
+\subsection{ Terrain}
 
 Every node in a point crawl map is made out of a terrain, which contains a list of characteristics. The same terrain can be reused for many nodes.
 
 \textbf{Exposure:} Every terrain has a value of exposure. It defines how hard it is to rest in it without finding shelter.
+
+\textbf{Infection Exposure:} Increases the DL of infection tests. 
 
 \textbf{Natural Shelter DL:} Standard difficulty to build a natural shelter. May require tools, like an axe, or shovel.
 
