@@ -328,7 +328,7 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 
 \abil{Phobia of x}{passive}{ }{}{ Has a moral penalty when in the presence of the phobia's object. Gains 1 Ferocity XP if incapacitating the target of fear. }
 
-\abil{Fear of Heights}{passive}{ }{}{ Receives -5 for moral tests when in high places, with a risk of falling.}
+\abil{Fear of Heights}{passive}{ }{}{ Receives -5 for morale tests when in high places, with a risk of falling.}
 
 \abil{Nymphomaniac}{passive}{}{}{ Receives -3 to resist seduction tests. Gains 1 Hedonism XP each time they successfully seduce someone, but loses 1 XP whenever they fail. }
 
@@ -381,7 +381,9 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 
 \subsection{Mechanics}
 
-\abil{ Lockpicking }{passive}{automatic at Mechanics 1}{}{ Allows the character to attempt to pick locks and set or disarm traps. The skill used is Prestidigitation + Mechanics Knowledge. }
+\abil{ Lockpicking }{passive}{automatic at Mechanics 1}{}{ Allows the character to attempt to pick locks and set or disarm traps using prestidigitation. Lacking sufficient knowledge increases difficulty by 5 per missing level. }
+
+\abil{Trapping}{passive}{automatic at Mechanics 2}{}{Set up traps using 2x Mechanics as skill against the trap DL to be set. Crits improve trap stealth.}
 
 \abil{Mechanism craftsman}{passive}{automatic at Mechanics 1}{}{Learns to craft mechanisms.}
 
@@ -418,9 +420,9 @@ It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So 
 
 \subsection{Animal handling}
 
-\abil{Taming}{passive}{Automatic at animal handling 2}{}{ Learns how to teach pets to understand commands to choose targets, tell pets to stop, and use special abilities. The test to tame is 2x Animal handling vs the animal's DL to be tamed. The tamed animal is automatically bonded with whoever tamed them. }
+\abil{Taming}{passive}{Automatic at animal handling 2}{}{ Learns how to teach pets to understand commands to choose targets, tell pets to stop, and use special abilities. The test to tame is 2x Animal handling vs the animal's DL to be tamed. The tamed animal is automatically bonded with whoever tamed them. This can also be used to teach commands.}
 
-\abil{Command pet}{2 AP}{Automatic at animal handling 0}{}{ Commands a pet with which there is a bond. More intelligent pets understand more complex commands. }
+\abil{Command pet}{2 AP}{Automatic at animal handling 0}{}{ Commands a pet with which there is a bond. More intelligent pets learn and understand more complex commands. }
 
 \abil{Animal psychology}{passive}{Automatic at animal handling 2}{}{ Learns how to use social actions on animals. Use Animal handling instead of charisma. }
 
@@ -488,7 +490,7 @@ Abilities in this section are part of the magic system ($\star$), except where a
 \subsubsection{\magic Animancy}
 
 %Animancy
-\inna{Synesthesia I/II/III}{0 AP + 1 STA per turn or 2 IL per exploration turn}{6 XP, Animancy 1/3/5}{}{ Animancy meters radius}{instantaneous}{ I. Maintains an energy perimeter that amplifies perception. This character can see invisible things as if they were visible within a sphere around them. The volume of perception is filled as if it were gas. Solid impermeable objects block the radius of synesthesia. II. Can maintain synesthesia without spending STA per turn and allows extending the range of enhanced senses up to 2x Sensing by spending 1 STA per turn. III. Doubles the normal and increased radius. }
+\inna{Synesthesia I/II/III}{+1 STA per turn or 2 Exhaustion per ET}{6 XP, Animancy 1/3/5}{}{ Animancy meters radius}{instantaneous}{ I. Maintains an energy perimeter that amplifies perception. This character can see invisible things as if they were visible within a sphere around them. The volume of perception is filled as if it were gas. Solid impermeable objects block the radius of synesthesia. II. Doubles the normal radius. III. Triples the normal and increased radius. }
 
 \abil{Blind Combat}{passive}{6 XP, INT 3}{Synesthesia}{ Uses synesthesia as an active sense. Does not receive any distance penalties and does not receive any penalty for using a closed helmet while synesthesia is active against characters within its range.}
 
@@ -524,55 +526,63 @@ Abilities in this section are part of the magic system ($\star$), except where a
 
 \abil{\magic  Cell Reconstruction }{1 AP + 1 STA}{8 XP, Biomancy 3}{}{I. Reduces bleed by 1 in self. }
 
+\abil{Metabolic Control }{passive}{10 Karma, Biomancy 4}{ Biomancy 4}{ Learns to perform multiple sleeps per day. Infection only happens once per day.}
+
 \abil{\magic Amplified Pheromones}{passive}{6 XP, CON 3}{Biomancy 3}{ The character gains awareness and control over their pheromones, increasing the difficulty of any social test by +2 for anyone within 6m.}
+
+% \abil{\magic Hibernation}{passive}{8 XP, Biomancy 4}{racial or training}{ Can sleep for long periods. The character only receives 1 hunger and 1 thirst per day of sleep. }
 
 % \abil{Powerful Voice}{2 AP, 2 STA}{6 XP, Sorcery 2}{}{Speaks very loudly. }
 
 % \abil{Toxic Sweat}{passive}{6 XP, Sorcery 1}{ intoxicated, Entropy I}{ Gains +3 to resist exposure to insects while intoxicated. Receives +3 on any defense against swarm-type opponents, unless they have resistance to alcohol. }
 
+\subsubsection{\magic Shamanism}
+
+\abil{\magic Spirit Diplomacy }{passive}{Automatic at Shamanism 1}{}{ Shamanism acts enabler for conversations with spirits.  }
+
+\abil{\magic Spirit Finding }{passive}{Automatic at Shamanism 1}{}{ Use Shamanism as enaber to find encounters with spirits.  }
+
 \section{\magic Mutations}
 
 Mutations are unusual physical transformations that are either innate or acquired through magical means in games with magic. When acquired, they involve activating dormant genes or implanting enhancements, and gardening growth to achieve a certain form. They are triggered in the body by traumatic events, scientific intervention, divine influence and sheer will to change.
 
-Usually, a mutation is learned by spending Karma, but can also be learned through Biomancy. Learning with biomancy removes the need for requirements and allows mutating with XP instead of Karma. 
+Usually, a mutation is learned by spending Karma, but can also be learned through Biomancy. 
+
+\textbf{Learning through biomancy:} A Health test that allows transforming the body.  
 
 % It is also possible to pay for a biomancer to apply one of those mutations on a character, which allows learning without any requirements. This method works like the Biomancy route. 
 
 \subsection{Physical Transfiguration}
 
-These are mutations that involve resizing the body. They can be learned instinctively through athletics or intellectually by knowing biomancy. 
+These are mutations that involve resizing the body.
 
 % It is possible to train this skill on another character, like plastic surgery, but the wizard must have the talent, and both must spend the necessary time to gain XP.
 
-\abil {Grow! } {passive}{12 Karma, 20 XP Biomancy 4 }{STR > 15}{ A humanoid character increases one size class and loses 3 STR and 1 AGI.}
+\abil {Grow! } {passive}{16 Karma }{STR > 15}{ A humanoid character increases one size class and loses 3 STR and 1 AGI.}
 
-\abil {Shrink! } {passive}{12 Karma, 20 XP Biomancy 4}{ STR < 9 or Biomancy 4}{ A humanoid character decreases one size class and gains 3 STR and 1 AGI.}
+\abil {Shrink! } {passive}{12 Karma}{ STR < 9 or Biomancy 4}{ A humanoid character decreases one size class and gains 3 STR and 1 AGI.}
 
-\abil{Large Hands }{passive}{6 Karma, 10 XP Biomancy 3 }{STR > 12 or or Biomancy 3 }{ Allows the use of melee weapons from a larger size category, but attacks cost +1 AP and have STR-3 in every move done with the weapon. The hands also count as a weapon of larger size, but dont get the AP cost increase. }
+\abil{Large Hands }{passive}{6 Karma }{STR > 12 or or Biomancy 3 }{ Allows the use of melee weapons from a larger size category, but attacks cost +1 AP and have STR-3 in every move done with the weapon. The hands also count as a weapon of larger size, but dont get the AP cost increase. }
 
-\abil{Keen Eyes I/II/III}{passive}{4 Karma, Biomancy 3}{Awareness 2/4/5}{Improves vision by +1/2/3.}
+\abil{Keen Eyes I/II/III}{passive}{4 Karma}{Awareness 2/4/5}{Improves vision by +1/2/3.}
 
-\abil{Acute Ears I/II/III}{passive}{4 Karma, Biomancy 3}{Awareness 2/4/5}{Improves hearing by +1/2/3.}
+\abil{Acute Ears I/II/III}{passive}{4 Karma}{Awareness 2/4/5}{Improves hearing by +1/2/3.}
 
-\abil{Sensitive Nose I/II}{passive}{4 Karma, Biomancy 3}{Awareness 2/4/5}{Improves smell by +1/2/3.}
+\abil{Sensitive Nose I/II}{passive}{4 Karma}{Awareness 2/4/5}{Improves smell by +1/2/3.}
 
-\abil{Beautiful}{passive}{4 Karma, Biomancy 3}{racial or ritual}{ This ability can be used to gain +1 on persuasion attemtps and between +1 and +5 on seduction attempts when allowed. This ability is used when allowed by the GM, meaning that beauty may have no effect against animals or in other situations where the character's appearance is not relevant.}
+\abil{Beautiful}{passive}{4 Karma}{racial}{ This ability can be used to gain +1 on persuasion attemtps and +3 on seduction attempts against seductible characters. }
 
-% \abil{Ugly}{passive}{8 karma}{chosen at character creation or ritual}{ Gains -2 on seduction checks and +2 on intimidation in social actions. }
+\abil{Ugly}{passive}{-4 karma}{chosen at character creation or ritual}{ Gets -1 on persuasion social actions and -3 on seduction attempts. Can be taken at creation for 4 extra karma.}
 
-\abil{Obese}{passive}{0 XP}{ 2 months }{ Receives -1 load penalty to AGI. When Hunger reaches 30, the character loses this ability and their hunger resets to 15. Requires eating a lot. }
+\abil{Obese}{passive}{0 XP}{ 2 months }{ Receives -1 load penalty. When Hunger reaches 30, the character loses this ability and their hunger resets to 15. Requires eating a lot. }
 
-\abil{Metabolic Control }{passive}{10 Karma, Biomancy 4}{ Biomancy 4}{ Learns to perform multiple rests per day.}
+\abil{Regenerative Reservoir }{passive}{8 Karma}{Cell Reconstruction}{ The character has an internal reservoir that functions like a potion that heals 10 IL. The reservoir is filled by regular healing while they are resting and uninjured or when drinking a potion.  }
 
-\abil{Regenerative Reservoir }{passive}{8 Karma, Biomancy 4 }{Cell Reconstruction}{ The character has an internal reservoir that functions like a potion that heals 10 IL. The reservoir is filled by regular healing while they are resting and uninjured or when drinking a potion.  }
+\abil{Resurrection}{ritual}{10 Karma }{ Metabolic Control, Biomancy 5}{ The body performs sleeps after it character dies. If the character goes back to the living range of IL, they come back to life. }
 
-\abil{Resurrection}{ritual}{10 Karma, Biomancy 6 }{ Metabolic Control, Biomancy 5}{ The body performs rests after the character dies. If the character remains without deadly injuries during this time, they come back to life. Resurrection does not heal amputations. }
+\abil{Glutton}{passive}{8 Karma}{ racial or training}{The character can eat 2x the normal amount per day.}
 
-\abil{Glutton}{passive}{8 Karma, Biomancy 3}{ racial or training}{The character can eat 2x the normal amount per day.}
-
-\abil{Tireless}{passive}{8 Karma, Biomancy 3}{racial or Biomancy 4}{ Exhaustion is divided by 3 in a long rest.}
-
-\abil{Hibernation}{passive}{8 Karma, Biomancy 4}{racial or training}{ Can rest for long periods. The character only receives 1 hunger and 1 thirst per day of sleep. }
+\abil{Tireless}{passive}{8 Karma}{racial or Biomancy 4}{ Exhaustion is divided by 3 in a long rest.}
 
 
 % \subsection{Implants}
@@ -595,30 +605,27 @@ These mutations are spiritual and require knowledge of Animancy or divine assist
 
 These are abilities that mix characteristics of other animals with those of humans. Many of them require surgical and magical intervention to be taken.
 
-\abil{Fur }{passive}{6 Karma, Biomancy 3}{racial or ritual, not Scaly}{ Becomes Furry, granting +3 on tests to resist exposure to cold and gives a natural armor of 2xDM INS.  }
+\abil{Fur}{passive}{6 Karma}{racial or ritual, not Scaly}{ Becomes Furry, granting +3 on tests to resist exposure to cold and gives a natural armor of 2xDM INS.  }
 
-\abil{ Scales}{passive}{8 Karma, Biomancy 4}{racial or ritual, not Furry}{ Scales: Makes the skin resemble that of a crocodile. Gives a natural armor of +4xDM RES.}
+\abil{Scales}{passive}{8 Karma}{racial or ritual, not Furry}{ Scales: Makes the skin resemble that of a crocodile. Gives a natural armor of +4xDM RES.}
 
-\abil{Claws}{passive}{6 Karma, Biomancy 3}{racial or ritual}{ Gives an unarmed attack with a base damage of 6 with sharpness of 2 and the property of grappling. This has hardness 3. Also improves climbing by +1 if not wearing gloves.}
+\abil{Claws}{passive}{6 Karma}{racial or ritual}{ Gives an unarmed attack with a base damage of 6 with sharpness of 2 and the property of grappling. This has hardness 3. Also improves climbing by +1 if not wearing gloves.}
 
-\abil{Gills}{passive}{10 Karma, Biomancy 4 }{racial or ritual}{Can rest with half the STA regeneration under water and does not lose STA due to suffocation under water.}
+\abil{Gills}{passive}{10 Karma }{racial or ritual}{Can rest with half the STA regeneration under water and does not lose STA due to suffocation under water.}
 
 \abil{Tail I/II}{passive}{6 Karma }{racial or ritual}{+1/2 for balance and climbing. II. Can hold things and hang with the tail.}
 
-\abil{Bear Nose}{passive}{10 Karma, Biomancy 4}{racial or ritual, sensitive nose II}{ Modifies the nose to become very sensitive and can transform it into a snout. Removes the -5 penalty to smell.}
+\abil{Bear Nose}{passive}{10 Karma}{racial or ritual, sensitive nose II}{ Modifies the nose to become very sensitive and can transform it into a snout. Removes the -5 penalty to smell.}
 
-\abil{Infrared Vision}{passive}{6 Karma, Biomancy 4}{racial or ritual}{Modifies the eyes to be able to see infrared light, allowing aiming at heat sources even through fog or in complete darkness.}
+\abil{Infrared Vision}{passive}{6 Karma}{racial or ritual}{Modifies the eyes to be able to see infrared light, allowing aiming at heat sources even through fog or in complete darkness.}
 
-\abil{Owl eyes}{passive}{8 Karma, Biomancy 4}{racial or ritual}{Modifies the eyes to be able to see well at night, but not absolute darkness. }
+\abil{Owl eyes}{passive}{8 Karma}{racial or ritual}{Modifies the eyes to be able to see well at night, but not absolute darkness. }
 
-\abil{Bat Ears}{passive}{8 Karma, Biomancy 4}{racial or ritual}{Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense. This is not as good as vision as a dominant sense, so it leaves the character disoriented when used as the only active sense. This does not work in complete silence. }
+\abil{Bat Ears}{passive}{8 Karma}{racial or ritual}{Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense. This is not as good as vision as a dominant sense, so it leaves the character disoriented when used as the only active sense. This does not work in complete silence. }
 
-\abil{Four Legs}{passive}{12 Karma, Biomancy 6}{racial or ritual, Biomancy 5}{ Gains quadrupedal movement, gaining +3 on any balance test and its running speed is AGI/2. Cannot have anything in its hands while walking on four legs. }
+\abil{Four Legs}{passive}{12 Karma}{racial or ritual, Biomancy 5}{ Gains quadrupedal movement, gaining +3 on any balance test and its running speed is AGI/2. Cannot have anything in its hands while walking on four legs. }
 
-\abil{Venom Glands}{passive}{10 Karma, Biomancy 4}{racial, Biomancy 4}{Allows for performing abilities with poison.}
-
-% \inna{Blinding Spray}{4AP + 4 SP}{forest 3}{melee, range of 4.5m, arc of 180 degrees}{3 turns}{Sprays an acidic cloud that burns the eyes of anyone. If they fail a Health test, they will be blinded for the duration. Alternatively, they can try to escape with a reflex to leave the area.}
-
+% \abil{Venom Glands}{passive}{10 Karma}{racial, Biomancy 3}{Allows for performing abilities with poison.}
 
 
 

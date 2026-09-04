@@ -1,60 +1,22 @@
-# Currently at work
-
-## Phase 0 punch list (the actual gaps)
-
-1. Exploration: knowledges need to justify investment (skills + gear to go with them). Comfort is too important to be a sidenote — needs a valuation guideline.
-2. Social: double-check the combat synergy — wire the social→combat bridge (afflictions like Afraid/Charmed from social actions) instead of leaving it fiction-only. Fix the vocabulary that sells an eloquence contest when the design is a scene-reading contest.
-3. Magic: mostly reworked. Currently a consistency check on spells. Remaining: integration with morale and chase systems, expansion of magic's effect on exploration and advancement. This is content — reworkable at any time.
-4. Book text: vocabulary and quality pass with AI assist (separate sessions).
-
-## Post-launch / supplement material (not Phase 0)
-
-
-
-
-# OPEN ISSUES
-
-Animancy - think about the morale system and how it can be integrated. --- done
-Animancy - integration with intrigue. only soothe?
-
-Biomancy - think about how mutations can go wrong
-
-Shamanism - think about how to find spirits: exploration turns, touching objects, finding auras. --- 
-
-Alchemy - review spells
+# Open issues
 
 review contacts, reputation and factions
-
-think about mundane tools to break turtling:
-fire, light, poison, slippery surfaces, trample mechanics, falling objects, etc. 
-create magical versions of those tools.  --- only vehicles missing
 
 create more exploration tools - tables, 1 point crawl
 
 make a list of monsters
 
-review exploration items -- half done
+pets and riding - a system of mounts and their stats
 
-Forgery and disguise
+crafting system
 
-riding - rules about taming and riding animals. Maybe a system of mounts and their stats, and how they interact with the player character's stats.
+vehicles and siege engines
 
 training + trainers + training alone. review
 
-pets
+social abilities
 
-
-
-# RETHINKING KNOWLEDGE SYSTEM
-
- - crafting section in survival - chemstry, survival, medicine, smithing, architecture
-
- - geography as event finder across nodes, questions how long it takes until we reach X, bonus from maps,  
-
- - downtime uses - gather information, work for money, get better deals, 
- 
- 
- - uses of building - demolition, siege engines, shelter building, navigation in buildings
+knowledges are new - probably need new abilities
 
 
 # CHANGE IN THE APP
@@ -94,7 +56,6 @@ Freeze and dont touch anything else after freezing
 - The resolution core loop has been frozen for a long time. What changes is content (magic, tools, knowledges) and integration with morale/chase. Content is reworkable at any time — the freeze governs the core only.
 - Breaking the core freeze is allowed only for playtest-discovered core failures — never for new ideas, polish, or itch.
 - Every core freeze break must be written up publicly as a revision post. The change pays for itself as content. This is extra work, so it self-limits: you can't do it obsessively the way you've changed core before.
-- Test for "nearly done": the open items (knowledges, comfort, social-combat wiring, magic integration) are all content/integration — none touch the resolution core in combat.tex. If a proposed change touches the resolution core, that's a red flag, not a fix.
 
 ### 2. Create a quickstart
 
