@@ -24,10 +24,14 @@ tags in story need work
 
 karma yield for doing hard things/celebrate/review tags
 
+review economy. horses + armor = expensive
+
 
 # CHANGE IN THE APP
 
 check all skills again
+
+check social skills proficiency
 
 check load penalties
 
