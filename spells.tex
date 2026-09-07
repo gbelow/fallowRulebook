@@ -27,7 +27,7 @@ Spells can be learned in three different ways: intuitively, as a wizard and as a
 
 \textbf{Intuitively:} A specific spell can be learned through simple trial and error under the right circumstances. Doing it this way costs 6 XP, and the talent used to learn is the Sorcery proficiency level or devotion (if the spell is in the divinities list). It is not possible to learn spells with knowledge requirements above 3 this way.
 
-The skill to perform spells this way is initially 0. The spell can be learned again for 1 XP to increase it by 1 and then again by 2XP to increase it by 2 and so on increasing the requirement by 1 to reduce it further by 1 point.
+The skill to perform spells this way is initially 0. The spell can be practiced for 1 XP to increase it to 1 and then again by 2XP to increase it to 2 and so on increasing the cost by 1 to increase it further by 1 point. 
 
 In case a spell is learnt through the wizard or cleric method, it is possible to improve on a specific spell starting at the skill level that the character has when they learn it. Always match the skill of an intuitive spell to the skill of the other methods, if they are higher.
 
@@ -39,7 +39,7 @@ The wizard can learn spells from grimoires or through experimentation within an 
 
 \textbf{Cleric:} can cast every spell in the deity's list, as long as it has the required devotion level. The \textbf{Devotion level + Sorcery} is used as a skill to perform divine spells.
 
-Clerics can also attempt to cast miracles. When they do that, they use \textbf{2x Devotion} as a skill, and can try to cast any spell, regardless of devotion level, but get a -3 penalty on the test per devotion level under the spell's talent requirement and must perform them in a risky manner. It is impossible to cast spells this way in places outside the influence area of the deity. In a temple or holy place, the effect is opposite, and the difficulty to cast is reduced. 
+Clerics can also attempt to cast miracles. When they do that, they use \textbf{2x Devotion} as a skill, and can try to cast any spell, regardless of devotion level, but get a -3 penalty on the test per devotion level under the spell's knowledge requirement and must perform them in a risky manner. It is impossible to cast spells this way in places outside the influence area of the deity. In a temple or holy place, the effect is opposite, and the difficulty to cast is reduced. 
 
 \subsection{Casting spells}
 
@@ -54,7 +54,7 @@ Spells require using a focus surge to be cast in combat scenes.
 
 \textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. For these spells, the sorcery skill test needs to be redone periodically, as indicated in the spell. A failure in the sorcery test interrupts the sustained magic.
 
-\textbf{Charged:} can be charged into something and released when a trigger is activated. The charge lasts until the end of the round or a number of ETs. If the charge is not used within the duration, it dissipates. 
+\textbf{Charged:} can be charged into something and released when a trigger is activated. The charge lasts until the end of the round for spells that cost AP or a number of ETs, for those that last ETs. If the charge is not used within the duration, it dissipates. 
 
 \textbf{Delayed Spells:} Any spell can be delayed, meaning that the casting can be completed, but the release is postponed. The character must concentrate on the spell until the release, which can be triggered by a previously prepared action. If a trigger does not occur, remake the sorcery test every turn to keep the spell ready.
 
@@ -85,7 +85,7 @@ The types of spells are:
 \begin{itemize}[noitemsep]
 \item Environmental: The spell alters the environment. They have customized enhancements.
 \item Effect: Spells that directly affect the target and have various effects. They have customized enhancements. 
-\item Psychic: Spells that directly affect the target and have psychic effects. They use the Charisma proficiency as the Difficulty Level (DL) agaisnt will. Enhancing increases the DL by 2. The magical effect is noticed by the victim only on a graze.
+\item Psychic: Spells that directly affect the target and have psychic effects. They force targets to make a will or insight test against the caster's Charisma as DL. Enhancing increases the DL by 2.
 \item Projectile: Spells that function as projectiles, using the shooting skill as the DL.
 \item Touch: Spells that function as strikes, using the striking skill as the DL. They do not trigger opportunity attacks and can be used during any surge.
 \end{itemize}
@@ -124,7 +124,7 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 \spell{Flamethrower}{6 AP + 1 STA, + 1 charge per activation}{Alchemy 3}{Flamethrower}{3}{Spray explosion of 4m xMM in length and 60 degrees in radius}{Projectile}{sustained}{ Creates flames from an igneous stone, dealing its base damage xDM as burn damage as a spray in front of the caster. The flamethrower can be sustained, dealing explosion damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage. }
 
-\spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{3}{ Long I }{Touch}{instantaneous}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
+% \spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{5}{ Long I }{Touch}{instantaneous}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
 
 
 
@@ -137,7 +137,7 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 % \spell{Caixão de Areia}{6AP + 8 STA}{ 4}{}{16}{directly from 30m}{Effect}{5 turns}{Attempts to cover a creature of size 4 or smaller with sand. The sand follows and grabs the target, paralyzing and suffocating for 1 turn if they fail or scratch their Strength or Evasion defense. The effect is reapplied each turn until the duration ends. Requires large amounts of sand.}
 
-\spell{Repair Metal}{ 1 ET }{ 3}{ living steel }{3}{touch}{Effect}{ permanent }{ Repairs cracks in metals. Works like a cold weld, removing negative conditions from equipment. }
+\spell{Repair Metal}{ 1 ET }{Alchemy 3}{ living steel }{5}{touch}{Effect}{ permanent }{ Repairs cracks in metals. Works like a cold weld, removing negative conditions from equipment. }
 
 \spell{Metal Sharpening}{ 3 AP + 1 STA }{Alchemy 3}{living steel weapon}{5}{touch}{Effect}{charged}{ Performs a sharpening action on a weapon. Improving gives a critical hit on the sharpening.  }
 
@@ -150,11 +150,12 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 % \spell{Phantom Sound}{3AP + 2 STA}{ 1}{}{15}{30m}{Environmental}{instantaneous}{The wizard makes a sound propagate from a point at a distance they do not need to see, only pointing in the general direction. The target must make a perception test to try to immediately know it is an illusion; otherwise, they will react normally to the sound. The sound can be as loud as a scream.}
 
-\spell{Recharge Stone}{1 ET, +1 exhaustion per ET}{Alchemy 1}{stone}{0}{}{Effect}{charged}{ Recharges a stone. Recharges 0/5/10/20 harges. Ateu devotees can cast this spell without Exhaustion cost.}
+\spell{Recharge Stone}{1 ET, +1 exhaustion per ET}{Alchemy 1}{stone}{0}{}{Effect}{charged}{ Recharges a stone. Recharges 0/5/10/20 harges. }
+% Ateu devotees can cast this spell without Exhaustion cost.
 
 \spell{Darken}{3 AP+1 STA per turn }{Alchemy 3}{ Alchemical Prism}{3}{1m radius}{Environmental}{sustained}{Absorbs all light entering an area, making it difficult for those outside to see what is inside. Makes anyone inside invisible to those outside, who only see a large black circle.}
 
-\spell{Lasers}{5 AP + 2 STA, 3 AP + 1 STA per activation}{ Alchemy 4}{ Alchemical Prism}{7}{200m xMM}{Projectile}{sustained}{Converges the rays of light from a large light source into a single point at a distance, causing 30xDM radiant damage to the target per activation. The laser is considered a projectile but does not receive any distance penalty up to 50m.}
+\spell{Lasers}{5 AP + 2 STA, 3 AP + 1 STA per activation}{ Alchemy 4}{ Alchemical Prism}{7}{200m xMM}{Projectile}{sustained}{Converges the rays of light from a large light source into a single point at a distance, causing 15xDM radiant damage to the target per activation. The laser is considered a projectile but does not receive any distance penalty up to 50m.}
 
 % \spell{Invisibility}{3 AP +1 STA}{Alchemy 4}{ Alchemical Prism}{12}{self}{Environmental}{sustained}{Bends the rays of light around the caster during the duration to make them invisible.}
 
@@ -174,7 +175,8 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 \spell{Anchor Soul}{6 AP}{Animancy 3}{Soul stone}{3}{melee, target}{Effect}{3 days, charged}{Anchors a creature's soul to a soul stone, preventing it from disappearing. This can be done with the souls of creatures that have been dead for up to 10 minutes. If the soul is still present, resurrection is possible, but the soul will extinguish in 3 days without a body.}
 
-\spell{Alter Memories}{5 AP}{Animancy 4}{}{5}{melee, target}{Psychic}{ }{ Touches the mind of a confused person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. This is a test against will, where a hit or critical modifies the memory successfully. If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual. }
+\spell{Alter Memories}{5 AP}{Animancy 4}{}{5}{melee, target}{Psychic}{ }{ Touches the mind of a confused person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. This is a test against will, where a hit or critical modifies the memory successfully.  }
+% If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual.
 
 \spell{Disintegrate Mind}{8 AP + 8 STA}{Animancy 4}{ }{5}{melee, target}{Effect}{}{Destroys a creature's mind permanently. Resets SPI to 0 and resets all convictions to 0. This can be done by clerics of Iskar even without having learned this ability, but the target's consent is required.}
 
@@ -189,17 +191,17 @@ This is the art of projecting the soul into objects and creatures and injecting 
 % \spell{Rescue}{4 AP}{Animancy 2}{}{0}{15m, detectable and enchanted target}{Psychic}{instantaneous}{ Compels a character with the guardian limit action to trigger it immediately.  }
 
 %------
-\spell{Pacify}{4 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ Allows the target to remake a morale test and get rid of frightened and enraged. Adds the caster's psychic spell DL bonus as bonus to will.}
+\spell{Pacify}{4 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ Allows the target to remake a morale test and get rid of afraid and enraged. Adds the caster's psychic spell DL bonus as bonus to will.}
 
 \spell{Frighten}{4 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ A psychic intimidate that triggers an immediate morale test.}
 
 \spell{Offend}{4 AP }{Animancy 1}{}{0}{15m, detectable target}{Psychic}{instantaneous}{ A psychic taunt that triggers an immediate morale test that makes the target enraged. }
 
-\spell{Suggestion}{4 AP }{Animancy 2}{}{0}{15m target that can hear and understand the suggestion}{Psychic}{}{ Tells a creature that can hear and understand the words and is confused, enraged, or frightened to do something, which triggers make a morale check immediately, adding caster's charisma to the DL (plus any spell enhancements). The limit actions triggered can be either the target's natural one or violent when enraged, coward when frightened and all to confused. The exact action being suggested must match the available limit actions. }
+\spell{Suggestion}{4 AP }{Animancy 2}{}{0}{15m target that can hear and understand the suggestion}{Psychic}{}{ Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers make a morale check immediately, adding caster's charisma to the DL (plus any spell enhancements). The limit actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit actions. }
 
-\spell{Overwhelming Terror}{5 AP}{Animancy 3}{}{3}{10m}{Psychic}{}{ Intimidates and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to run away from the caster on a limit break.}
+\spell{Overwhelming Terror}{5 AP}{Animancy 3}{}{3}{10m}{Psychic}{}{ Intimidates and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to run away from the caster on a limit stress action.}
 
-\spell{Provocative Mockery}{3 AP }{Animancy 3}{}{3}{15m}{Psychic}{}{ Taunts and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to attack the caster on a limit break.}
+\spell{Provocative Mockery}{3 AP }{Animancy 3}{}{3}{15m}{Psychic}{}{ Taunts and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to attack the caster on a limit stress action.}
 
 \spell{Command}{6 AP +1STA}{Animancy 5}{Suggestion}{7}{15m}{Psychic}{up to unconscious}{ Gives a simple command to a confused target and leaves them Dominated if they miss on a will test. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it. }
 
@@ -216,7 +218,7 @@ This is the art of projecting the soul into objects and creatures and injecting 
 
 \spell{Visual Interference}{4 AP + 4 AP to sustain }{Animancy 3, Biomancy 1}{}{3}{15m, detectable target}{Psychic}{sustained}{ Causes blindness until the end of the round in a target connected by telepathic link that misses or grazes on a will test. The spell can be sustained for multiple targets, but casting has DL increased by 3 per target.  }
 
-\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{-2}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, interrupting them and draining 1 STA on a graze and stunning them and causing 2 STA on a miss. For every 3 points under a miss, lose another STA. This attack's DL is if the caster's SPI + 3 SM against the target's SPI + 3 SM. Amplifying increases the DL by 3.}
+\spell{Spiritual Strike}{3 AP + 1 STA}{Animancy 2}{ }{0}{15m}{Effect}{}{Launches part of your soul violently at an enemy, including incorporeal ones, forcing the enemy to make a test using SPI + 3 SM as skill value against caster's SPI + 3 SM as a DL. This attack interrupts them and drains 1 STA on a graze and stuns them and causes 2 STA on a miss. For every 3 points under a miss, lose another STA. Amplifying increases the DL by 3.}
 
 \spell{Telepathic Link}{4 AP}{Animancy 3}{}{0}{20m}{Psychic}{10 minutes}{ Creates a telepathic link with a nearby creature if they fail or graze on a will test or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. Each simultaneous link increases the difficulty of the spellcasting test by 3.}
 
@@ -289,9 +291,9 @@ Biomancy is the magical art of manipulating celular activity.
 
 \spell{Accelerate Blooming}{2 Exhaustion, 1 ET}{Biomancy 2}{}{0}{melee, target}{Effect}{sustained}{ The plant will go through its seasonal stages very quickly, draining nutrients and water from the soil and bearing fruit if possible. The yield depends on the plant. }
 
-\spell{Defoliate}{1 min}{Biomancy 2}{Pheromone Control}{3}{12m, radius of 6m}{Environmental}{}{ Causes all deciduous trees in the area to lose their leaves within 1 turn. The leaves are flammable. }
+\spell{Defoliate}{1 min}{Biomancy 2}{Amplified Pheromones}{3}{12m, radius of 6m}{Environmental}{}{ Causes all deciduous trees in the area to lose their leaves within 1 turn. The leaves are flammable. }
 
-\spell{Insect Pheromone}{5 AP + 1 STA}{Biomancy 3}{Pheromone Control}{3}{ radius of 3m x MM of taret}{Environmental}{}{ Secretes pheromone, which can be stored. Causes nearby insects to swarm anyone that gets in contact with it and sting them. The effects depend on the insects that are present and how long they will take to arrive. In combat, it works if there are insects within 50m, they take 1 turn per 10m to arrive.}
+\spell{Insect Pheromone}{5 AP + 1 STA}{Biomancy 3}{Amplified Pheromones}{3}{ radius of 3m x MM of taret}{Environmental}{}{ Secretes pheromone, which can be stored. Causes nearby insects to swarm anyone that gets in contact with it and sting them. The effects depend on the insects that are present and how long they will take to arrive. In combat, it works if there are insects within 50m, they take 1 turn per 10m to arrive.}
 
 \spell{Stimulate Secretion}{ 1 min }{Biomancy 2}{dead animal}{0}{touch}{Effect}{}{ Forces a dead venomous animal to secrete venom. The venom produced is sufficient for 1 application and the effect depends on the corpse used. }
 
@@ -336,7 +338,7 @@ Spirits can be found through synesthesia or through attempts to interact with ma
 
 There are 5 types of entity that can be negotiated with:
 
-\textbf{ Incorporeal entities:} Shadows, Echoes, wraiths. These have skills and knowledge that they can share. Animancy is the 
+\textbf{ Incorporeal entities:} Shadows, Echoes, wraiths. These have skills and knowledge that they can share.
 
 \textbf{ Sentient Objects:} work like gatekeepers for magical object, where negotiation is necessary for usage. 
 
@@ -350,11 +352,11 @@ The following spells can only be cast when some sort of deal with a spirit is st
 
 \spell{Aurora }{1 ET or +1 exhaustion }{Shamanism 4}{}{5}{5km}{Environmental}{sustained}{Draws or writes a simple and blurred message in the sky that can be seen at night within the spell's range.}
 
-\spell{Call Lightning}{5 AP + 1 STA}{Shamanism 4}{Shamanism 5}{5}{directly from 100m xMM}{Projectile}{instantaneous}{Summons a lightning bolt to a specific target within the electrical storm as a directed effect. The lightning causes 25xDM electric damage. There is no distance penalty.}
+\spell{Call Lightning}{5 AP + 1 STA}{Shamanism 4}{}{5}{directly from 100m xMM}{Projectile}{instantaneous}{Summons a lightning bolt to a specific target within the electrical storm as a directed effect. The lightning causes 20xDM electric damage. There is no distance penalty.}
 
-\spell{Storm of Lightning}{1 ET, +2 exhaustion per ET}{Shamanism 5}{}{10}{100m, 15m radius on the ground}{Environmental}{5 turns}{As long as there are enough clouds, calls 2 lightning bolts per round in a designated area to hit random targets as a terrain effect. The lightning causes 25xDM electric damage and is defended by reflexes against DL 7.}
+\spell{Storm of Lightning}{1 ET, +2 exhaustion per ET}{Shamanism 5}{}{10}{100m, 15m radius on the ground}{Environmental}{5 turns}{As long as there are enough clouds, calls 2 lightning bolts per round in a designated area to hit random targets as a terrain effect. The lightning causes 20xDM electric damage and is defended by reflexes against DL 7.}
 
-\spell{Freeze Water}{5 AP + 1 STA}{Shamanism 3}{}{3}{15m, area of 15 spaces}{Environmental}{1 turn delay, 5 turns}{Freezes water in an area after one turn. A puddle becomes slippery, turning into difficult terrain with a DL of 12. A layer of ice 10 cm thick is created on a water surface, but additional layers can be added if there is enough water. The temperature of the ice increases due to its freezing, causing it to start melting immediately.}
+\spell{Freeze Water}{5 AP + 1 STA}{Shamanism 3}{}{3}{15m, area of 15 spaces}{Environmental}{1 turn delay, 5 turns}{Freezes water in an area after one turn. A puddle becomes slippery, turning into difficult terrain with a balance DL of 12. A layer of ice 10 cm thick is created on a water surface, but additional layers can be added if there is enough water. The temperature of the ice increases due to its freezing, causing it to start melting immediately.}
 
 \spell{Create Fog}{8 AP + 1 STA}{Shamanism 2}{}{0}{15m, area with a radius of 50m}{Environmental}{1 minute}{Condenses water in the air over a large area, creating a thick fog that hinders visibility. Cannot be cast in low humidity areas.}
 

@@ -78,7 +78,7 @@ The trainable proficiencies are as follows. Proficiencies and other elements mar
 \textbf{\magic Sorcery (INT)}: General skill in casting spells. Uses INT as talent. \\
 \textbf{\magic Devotion (SPI)}: Level of alignment with a deity. Uses SPI as talent.\\
 \textbf{Charisma (SPI)}: This is the ability to make people trust you. Uses SPI as talent. \\
-\textbf{Conviction (SPI)}: Alignment of worldview and instinct. Uses SPI as talent. \\
+\textbf{Conviction (SPI)}: Alignment of worldview and temperament. Uses SPI as talent for each conviction. \\
 
 \subsection{Levels}
 
@@ -116,7 +116,7 @@ A character has 4 talents that represent their potential for growth.
 
 \subsection{Karma}
 
-\textbf{Karma:} is used to increase talents. It is received upon completing missions and their secondary objectives, as well as being rewarded for good gameplay.
+\textbf{Karma:} is used to increase talents and get special abilities. It is received upon completing missions and their secondary objectives, as well as being rewarded for good gameplay.
 
 The GM can reward players for loyalty to their character, creative use of the system, and participation in dramatic events.
 
@@ -236,7 +236,7 @@ Race & STR & AGI & STA & INT & SPI & DEX & CON \\
 \midrule
 Surbit & 1 & 2 & 2 & 0 & 0 & 1 & 1 \\
 \rowcolor{fallowtint}
-Dwarf & 1 & -1 & 1 & 0 & 1 & 0 & 0 \\
+Dwarf & 1 & -1 & 1 & 1 & 1 & 0 & 0 \\
 Human & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \rowcolor{fallowtint}
 Halkir & 0 & 2 & 1 & 0 & 0 & 1 & 0 \\
@@ -247,7 +247,7 @@ Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\
 
 \textbf{\large Surbit}
 \begin{proplist}
-\item Small-sized creature
+\item Small-sized creature: size 2
 \item Has the Fur ability
 \item Has the Bear Nose ability
 \item Has the Tail I ability
@@ -279,43 +279,43 @@ Erthal & 2 & 0 & 1 & 0 & 0 & 0 & 1 \\
 \end{proplist}
 
 
-\subsection{Aging}
+% \subsection{Aging}
 
-A character's age influences their attributes and ability to learn new things. A character can be created as a child, a teenager, an adult, or older. Each of these ages has its characteristics.
+% A character's age influences their attributes and ability to learn new things. A character can be created as a child, a teenager, an adult, or older. Each of these ages has its characteristics.
 
-\begin{proplist}
-    \item Child: -2 STR, talents start at 0 but cost half the karma. Considered a size 2 creature.
-    \item Teenager: -2 STR, +1 to talents.
-    \item Adult: Standard.
-    \item Aging: Receives -1 to CON and also to all attributes at each stage.
-\end{proplist}
+% \begin{proplist}
+%     \item Child: -2 STR, talents start at 0 but cost half the karma. Considered a size 2 creature.
+%     \item Teenager: -2 STR, +1 to talents.
+%     \item Adult: Standard.
+%     \item Aging: Receives -1 to CON and also to all attributes at each stage.
+% \end{proplist}
 
-The time required to advance in the age category can vary between races.
+% The time required to advance in the age category can vary between races.
 
-\end{multicols}
+% \end{multicols}
 
-\begin{stattable}{Aging}{@{}lc@{}}
-Stage & Human \\
-\midrule
-Child & 8-13 \\
-\rowcolor{fallowtint}
-Teenager & 14-18 \\
-Adult & 19-39 \\
-\rowcolor{fallowtint}
-Mature & 40-59 \\
-Old & 60-79 \\
-\rowcolor{fallowtint}
-Very old & 80-death \\
-\end{stattable}
+% \begin{stattable}{Aging}{@{}lc@{}}
+% Stage & Human \\
+% \midrule
+% Child & 8-13 \\
+% \rowcolor{fallowtint}
+% Teenager & 14-18 \\
+% Adult & 19-39 \\
+% \rowcolor{fallowtint}
+% Mature & 40-59 \\
+% Old & 60-79 \\
+% \rowcolor{fallowtint}
+% Very old & 80-death \\
+% \end{stattable}
 
-\begin{multicols}{2}
+% \begin{multicols}{2}
 
 
 \section{Intellect}
 
-Intellect measures the logical capacity, planning, and decision-making abilities of characters. The skills governed by intellect involve exploration, detection knowledge, sorcery, and cunning.
+Intellect measures the logical capacity, planning, and decision-making abilities of characters. The skills governed by intellect involve exploration, knowledge, sorcery, and cunning.
 
-\textbf{Exploration:} It is used in survival situations to determine the ability to travel without getting lost and to find things in varied terrains. The exploration skill is based on the sum of detection proficiency and specific knowledge of the area.
+\textbf{Exploration:} It is used in survival situations to determine the ability to travel without getting lost and to find things in varied terrains. The exploration skill is based on the sum of awareness proficiency and specific knowledge of the area.
 
 \textbf{Sorcery:} Uses sorcery proficiency added to a related knowledge to cast spells. More details are in the combat section.
 
@@ -413,7 +413,7 @@ Each character must choose a limit action.
 
 \textbf{Coward:} is compelled to use their movement surge to run away and try to hide. If STA is insuficient, rest and then surge if possible.
 
-\textbf{Violent:} is compelled to use their fight surge to inflict damage on someone. If STA is insuficient, rest and then surge if possible.
+\textbf{Violent:} is compelled to use their combat surge to inflict damage on someone. If STA is insuficient, rest and then surge if possible.
 
 \textbf{Tanatosis:} Falls to the ground unconscious for 1 turn and wakes up the next.
 
@@ -430,13 +430,13 @@ Convictions provide access to various buffs, exclusive abilities, and are the on
 
 Every odd level of conviction increases will by 1. A conviction at level 1 gives +1 will, a level 3 gives +2 and a level 5, +3.
 
-\textbf{Acquiring a conviction:} A character must adopt one worldview conviction and one instinct conviction during character creation. They start at level 0. Each has a defined way of gaining XP through the character's actions.
+\textbf{Acquiring a conviction:} A character must adopt one worldview conviction and one temperament conviction during character creation. They start at level 0. Each has a defined way of gaining XP through the character's actions.
 
 \textbf{Evolving Convictions}: Each conviction has its XP and level tracked individually. SPI is the talent used to determine the experience cost of improving the conviction. Conviction abilities are automatically acquired at each level.
 
-It is possible to lose conviction XP. If the session ends with negative XP, the proficiency loses a level. Each conviction has its condition for XP loss. If the level reaches 0, the conviction is considered renounced.
+It is possible to lose conviction XP. If the session ends with negative XP, the conviction loses a level. Each conviction has its condition for XP loss. If the level reaches 0, the conviction is considered renounced.
 
-There are 8 convictions arranged along two axes: Extrospective - Introspective and Order - Chaos. 4 of them are worldview convictions and 4 are instinct convictions. The convictions are detailed in the chapter on skills.
+There are 8 convictions arranged along two axes: Extrospective - Introspective and Order - Chaos. 4 of them are worldview convictions and 4 are temperament convictions. The convictions are detailed in the chapter on skills.
 
 \subsection{\magic Deities and Devotion}
 
@@ -448,19 +448,19 @@ Being a cleric of a deity grants access to cleric abilities and also allows one 
 
 Each deity has attitudes that are promoted and disapproved.
 
-\subsubsection{Ateu}
+% \subsubsection{Ateu}
 
-Values hard work and commitment. \\
+% Values hard work and commitment. \\
 
-CONTRACT: Gains the Contract ability. When the contract is made, both characters define a completion condition and a penalty. Gains 1 XP for making a contract, a variable amount of XP for completing the contract, and loses the same amount of XP for failing to comply. The loss can be mitigated by paying a penalty. \\
+% CONTRACT: Gains the Contract ability. When the contract is made, both characters define a completion condition and a penalty. Gains 1 XP for making a contract, a variable amount of XP for completing the contract, and loses the same amount of XP for failing to comply. The loss can be mitigated by paying a penalty. \\
 
-CANCELLATION: Atheist clerics always know if the parties are alive and if they have upheld the contract, as long as they are within areas of divine reach. The contracted individuals are marked and can be tracked by any Atheist cleric until they pay the penalty or complete the contract. \\
+% CANCELLATION: Atheist clerics always know if the parties are alive and if they have upheld the contract, as long as they are within areas of divine reach. The contracted individuals are marked and can be tracked by any Atheist cleric until they pay the penalty or complete the contract. \\
 
-Convictions: Ferocity and Adaptation \\
+% Convictions: Ferocity and Adaptation \\
 
-Abilities: Gas mask, magnetic shield, electric skin \\
+% Abilities: Gas mask, magnetic shield, electric skin \\
 
-Spells: Lamp, Revealing Light, Dazzling Flash, Sharpen, Rust, Repair metal, Start fire, Flame thrower, sustained lightning, activate explosive, alchemical grenade, ghostly sound, Taser, Firestorm, Aurora, freeze water, rain. \\
+% Spells: Lamp, Revealing Light, Dazzling Flash, Sharpen, Rust, Repair metal, Start fire, Flame thrower, sustained lightning, activate explosive, alchemical grenade, ghostly sound, Taser, Firestorm, Aurora, freeze water, rain. \\
 
 \subsubsection{Iskar}
 
@@ -472,35 +472,35 @@ REDEMPTION: Swears to redeem someone's soul. If able to subjugate them, allows t
 
 Convictions: Fatalism and Stoicism \\
 
-Abilities: Synesthesia, Spiritual Strike, central intelligence, blind combat, psychoactive assistance, chaotic thorn, \\
+Abilities: Synesthesia, Spiritual Strike, central intelligence, blind combat, psychoactive assistance, counterspell, martial spirit \\
 
-\subsubsection{Minala}
+% \subsubsection{Minala}
 
-Values 
+% Values 
 
-FAITH TEST: Gains healing food. Heals if true and well-intentioned, but poisons and loses nutritional value if not. \\
+% FAITH TEST: Gains healing food. Heals if true and well-intentioned, but poisons and loses nutritional value if not. \\
 
-RESURRECTION: Faithful clerics of Minala can be revived if placed inside one of her temples, following the restrictions of the resurrection ability. \\
+% RESURRECTION: Faithful clerics of Minala can be revived if placed inside one of her temples, following the restrictions of the resurrection ability. \\
 
-Convictions: Divine Providence and Guardian \\
+% Convictions: Providentialism and Guardian \\
 
-Abilities: \\
+% Abilities: \\
 
-Spells: Accelerate Blooming, enhanced sleep, treehouse, control tree, healing touch, Defibrillate, regeneration, Reattach limb\\
+% Spells: Accelerate Blooming, enhanced sleep, treehouse, control tree, healing touch, Defibrillate, regeneration, Reattach limb\\
 
-\subsubsection{Rivka}
+% \subsubsection{Rivka}
 
-Values diplomacy and intelligence \\
+% Values diplomacy and intelligence \\
 
-CONFESSION: Gains the ability to alter memories. Receives 1 XP for using it. Loses 4 XP if revealing the secret or if the person realizes that their memory has been altered. Performs a confession ritual in which they see the memories associated with the story. Can alter the person's memory, but must not let them perceive the alteration. \\
+% CONFESSION: Gains the ability to alter memories. Receives 1 XP for using it. Loses 4 XP if revealing the secret or if the person realizes that their memory has been altered. Performs a confession ritual in which they see the memories associated with the story. Can alter the person's memory, but must not let them perceive the alteration. \\
 
-DIVINE GUIDE: The cleric receives 1 exhaustion to create a ghost of Rivka. The ghost may help the group or not, depending on its will. \\
+% DIVINE GUIDE: The cleric receives 1 exhaustion to create a ghost of Rivka. The ghost may help the group or not, depending on its will. \\
 
-Convictions: Hedonism and Domination \\
+% Convictions: Hedonism and Domination \\
 
-Abilities: Synesthesia, read surface thoughts, central intelligence, sculpt face, universal communication, spiritual walk. \\
+% Abilities: Synesthesia, read surface thoughts, central intelligence, sculpt face, universal communication, spiritual walk. \\
 
-Spells: telepathic link, scare, provoke, calm, visual interference, suggestion, ghostly sound, Command, possession, create fog, rescue, psychoactive assistance, astral travel, torment, anchor soul, and Command. \\
+% Spells: telepathic link, scare, provoke, calm, visual interference, suggestion, ghostly sound, Command, possession, create fog, rescue, psychoactive assistance, astral travel, torment, anchor soul, and Command. \\
 
 % end --------------------------------------------------------------------------------------------------
 
@@ -511,40 +511,40 @@ It is possible to start at an older age and be allowed to select two focuses at 
 
 \textbf{Step 2: Race.} Choose a race, which grants racial abilities and bonuses to attributes and talents. Add the attribute bonuses after step 4. At this stage, you also choose the age. 
 
-\textbf{Step 3: Wealth.} The character can buy things worth this amount, but not training. Only 10\% can be taken into gameplay. \\
+\textbf{Step 3: Wealth.} The character can buy anything except training with that money. Only 10\% of the money can be spared, the rest must be spent or lost. \\
 A: 100 GP, \\
 B: 60 GP, \\
 C: 30 GP, \\
 D: 10 GP, \\
 E: 5 GP.\\
 
-\textbf{Step 4: CON.} Characters start with 8 in all attributes and receive XP to increase them depending on the focus. \\
-A. CON=2, +60 XP. \\
-B. CON=1, +42 XP. \\
-C. CON=1, +30 XP.\\
-D. CON=0, +24 XP. \\
-E. CON=0, +16 XP.\\
+\textbf{Step 4: CON.} Characters start with 8 in all attributes and receive XP to increase them. This XP can also be used for CON based abilities. \\
+A. +2 CON, +60 XP. \\
+B. +1 CON, +42 XP. \\
+C. +1 CON, +30 XP.\\
+D. +0 CON, +24 XP. \\
+E. +0 CON, +16 XP.\\
 
 \textbf{Step 5: SPI.} Starts with XP to distribute among the proficiencies, skills, and SPI abilities. \\
-A: SPI=2, 60 XP,  \\
-B: SPI=1, 42 XP,  \\
-C: SPI=1, 30 XP, \\
-D: SPI=0, 24 XP, \\
-E: SPI=0, 16 XP. \\
+A: +2 SPI, 60 XP,  \\
+B: +1 SPI, 42 XP,  \\
+C: +1 SPI, 30 XP, \\
+D: +0 SPI, 24 XP, \\
+E: +0 SPI, 16 XP. \\
 
 \textbf{Step 6: INT.} Starts with XP to distribute among the proficiencies, skills, and INT abilities. \\
-A: INT=2, 60 XP \\
-B: INT=1, 42 XP, \\
-C: INT=1, 30 XP, \\
-D: INT=0, 24 XP, \\
-E: INT=0, 16 XP. \\
+A: +2 INT, 60 XP \\
+B: +1 INT, 42 XP, \\
+C: +1 INT, 30 XP, \\
+D: +0 INT, 24 XP, \\
+E: +0 INT, 16 XP. \\
 All characters start with one language at level 4.\\
 
 \textbf{Step 7: DEX.} Starts with XP to distribute among the proficiencies, skills, and DEX abilities. \\
-A: DEX=2, 60 XP. \\
-B: DEX=1, 42 XP, \\
-C: DEX=1, 30 XP \\
-D: DEX=0, 24 XP \\
-E: DEX=0, 16 XP.\\
+A: +2 DEX, 60 XP. \\
+B: +1 DEX, 42 XP, \\
+C: +1 DEX, 30 XP \\
+D: +0 DEX, 24 XP \\
+E: +0 DEX, 16 XP.\\
 
 \end{multicols}

@@ -75,7 +75,7 @@ Learned exactly like any skill, INT as talent, same 0-6 scale. Two uses:
 missing knowledge level on the relevant test.
 
 Formal areas (Alchemy/Animancy/Biomancy/Shamanism are \magic-tagged):
-Building, Chemistry, Medicine, Geography, Politics, Smithing, Linguistics,
+Mechanic, Chemistry, Medicine, Geography, Smithing, Linguistics,
 Survival, Zoology, plus the three magic knowledges. **Specific/informal knowledge**
 (a place, a language, a faction, an animal, a vehicle) is learned the same
 way but its XP cost is arbitrary/GM-set by difficulty; INT is still the
@@ -120,7 +120,7 @@ wizard/cleric method (always takes the higher of the two).
 
 ## Conviction (SPI)
 
-Two convictions (worldview + instinct) chosen at creation, starting level 0.
+Two convictions (worldview + temperament) chosen at creation, starting level 0.
 Each tracks its own XP with its own defined promoted/prohibited attitudes
 (gain XP for acting on it, lose XP for acting against it — session-capped,
 usually once/turn). SPI is the talent for the cost formula. Conviction

@@ -21,13 +21,13 @@
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want to use later in the same round.
 
-\textbf{Action surge:} All characters are entitled to one action surge per round. There are 3 basic types of action surges: movement, combat, reaction and focus.
+\textbf{Action surge:} All characters are entitled to one action surge per round. There are 4 basic types of action surges: movement, combat, reaction and focus.
 
 \begin{proplist}
     \item \textbf{Movement surge:} 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
     \item \textbf{Combat surge:} 3 STA to gain 6 AP that can be used for attacks or movement and must be used immediately.
     \item \textbf{Reaction surge:} 3 STA to gain 6 AP, but can only use reactions until the end of the round.
-    \item \textbf{Focus surge:} 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons, casting spells and using professional abilities.
+    \item \textbf{Focus surge:} 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons, casting spells and utilizing non weapon items.
 \end{proplist}
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 6 AP minus any negative AP they had. Any unspent AP is lost.
@@ -38,8 +38,10 @@
 
 \textbf{Negative AP:} AP can become a negative number, but never as a result of performing an action or reaction. When the character recovers their AP, they must deduct the negative value from their maximum.
 
-\textbf{Suffocation:} If the character cannot breathe at the beginning of a round, they lose 1 STA and cannot Rest. If STA is lower than -5, they drop unconscious. If it goes under -10, they die.
 
+\textbf{Suffocation:} If the character cannot breathe at the beginning of a round, they lose 1 STA and cannot Rest. 
+
+\textbf{Negative STA:} STA can become a negative number, but only as a result of suffocation. If STA is lower than -5, they drop unconscious. If it goes under -10, they die.
 % \textbf{Delay the turn:} The player can spend 1 AP during their turn to delay it. This allows the character to regain their token and play again within the same round. AP regeneration only occurs once per round.
 
 \textbf{Reactions:} These are actions that can be performed on another character's turn but must be triggered by something. An example is trying to evade an attack, which is triggered when being attacked. A reaction takes effect before the action that caused it.
@@ -73,12 +75,12 @@ Types of movement:
 \begin{stattable}{Movement Costs and Speeds}{@{}lcc@{}}
 Movement & Cost & Speed \\
 \midrule
-Careful & AP & 0.5 m \\
+Careful & 1 AP & 0.5 m \\
 \rowcolor{fallowtint}
 Basic & 1 AP & 1 m \\
 Run & 2AP & AGI/3m \\
 \rowcolor{fallowtint}
-Jump & 1AP+1STA & AGI/4m \\
+Jump & 2AP+1STA & AGI/4m \\
 Crawl & 1 AP & 0.33 m \\
 \rowcolor{fallowtint}
 Swim & 1 AP & 0.33 m \\
@@ -120,11 +122,11 @@ Note: DM is squared because large creatures suffer more from falling. For size 2
 
 \subsection{Injuries and Death}
 
-\textbf{Injury level (IL):} Any time a character receives damage, they will increase their injury level. They will receive -1 as injury penalty for every multiple of their \textbf{injury tolerance (IT)}. The base value for injury tolerance is 10. The penalty affects skills shown in the afflictions section.
+\textbf{Injury level (IL):} Any time a character receives damage, they will increase their injury level. They will receive -1 as injury penalty for every multiple of 10. The penalty affects skills shown in the afflictions section.
 
-\textbf{Injury Capacity:} is the maximum amount of injuries a character can take without collapsing and going immobile. Its value is 4x IT.
+\textbf{Injury Capacity:} is the maximum amount of injuries a character can take without collapsing and going immobile. Its value is 40.
 
-\textbf{Death:} occurs when the character's injuries exceed 5x IT.
+\textbf{Death:} occurs when the character's injuries exceed 50 IL.
 
 \textbf{Healing Injuries:} characters heal by resting well and using potions or medicine. The details are explained in the exploration chapter.
 
@@ -161,7 +163,7 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
 
 \textbf{Cutting damage:} is defended by armor RES.
 
-\textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks. More details on the gear section.
+\textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks.
 
 \textbf{Burn, radiant:} Their respective defense is INS. Dealing Tier 0 injury or higher leaves the target burning. 
 
@@ -174,7 +176,7 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
 \begin{proplist}
     \item \textbf{Broken arm:} Makes the arm useless. Equivalent to 10 IL to heal.
     \item \textbf{Broken leg:} Makes the leg lame. Equivalent to 15 IL to heal.
-    \item \textbf{Bleed:} a special wound that requires healing to stop bleeding. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per Bleed cure untreated. Bleeds caused by a T2 wound requires 1 heal to be healed. For every extra tier, one extra healing required. Bleeding is caused by damage to the chest or head. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
+    \item \textbf{Bleed:} For every STA spent and at the end of every round in combat, the character receives +1 to their IL per bleed intensity. Bleeds caused by a T2 wound have intensity 1. For every extra tier, intensity increases by 1. Bleeding is caused by damage to the chest or head. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
     \item \textbf{Shocked:} cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit and 100\% chance on a T5.
     \item \textbf{Unconscious:} causes unconsciousness. Happens when receiving damage in the head. Takes at least 1 minute to wake up without intervention.
 \end{proplist}
@@ -189,14 +191,17 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
 
 \textbf{Stun:} An interrupt that has minimum loss of 4 AP.
 
-\text{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point that the attack roll overflows the DL to hit posed by the defender during an attack can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
+\textbf{Deflection:} is how hard it is to land additional effects on a hit. The natural deflection of a human body is +4. Any time a character is wearing armor, use the armor's deflection instead. 
+
+\textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point above a hit can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
 
 \begin{proplist}
     \item \textbf{Armor Bypass:} Only attacks from weapons with the precise property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the attack also has the property.
     \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. For the same cost, ignores fiber armor RES entirely. This can only be done by weapons with the penetrating property. 
     \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per SOP. Only weapons with the bladed property can use this.
-    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1 or interrupt if its over T0.
+    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1.
 \end{proplist}
+
     
 \textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
 
@@ -216,8 +221,6 @@ Some creatures may have their vulnerable point out of reach of others, requiring
 
 Afflictions are the negative conditions that can affect creatures. 
 
-There are 5 categories of affliction: Mobility, Injury, Vision, Mental, and Health. 
-
 \textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect movement speeds, nor TGH. It affects all other usages of attributes.
 
 \textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
@@ -230,7 +233,7 @@ The list of afflictions is:
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
 \item \textbf{Prone:} Can only crawl and stand up. Takes -3 to any attempt to evade.
 \item \textbf{Grappled:} Movement requires pushing. Focus is locked to the main grappler.
-\item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The SD is reduced to -5 + SMx1. 
+\item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
 \item \textbf{Disoriented:} Gives -2 to sensory penalties.
 \item \textbf{Oblivious:} Gives -5 to sensory penalties.
 \item \textbf{Blind:} Cannot use vision.
@@ -250,9 +253,9 @@ The list of afflictions is:
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
 \item \textbf{Tired/Exhausted/Confused} Penalty of -1 mental/-2 mental/-4 mental. Becomes vulnerable to domination attacks. It is possible to be confused without being tired or exhausted, but extreme exhaustion causes confusion.
-\item \textbf{Weakened/Malnourished} -1/-2 Health. -1/2 to IT.
-\item \textbf{Thirsty/Dehydrated} -1/-2 Health, -1/2 to IT
-\item \textbf{Sick} -2 Health. -2 to IT.
+\item \textbf{Weakened/Malnourished} -1/-2 Health. 
+\item \textbf{Thirsty/Dehydrated} -1/-2 Health.
+\item \textbf{Sick} -2 Health.
 \end{proplist}
 
 \skill{Health}{ CON }{ Represents how strong the character's body is against diseases, poisons, exposure to the elements, and how quickly they recover from injuries and exhaustion. 
@@ -266,13 +269,13 @@ The survival chapter describes how health works for healing.
 
 \skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost is 3 AP, but that may be modified by attack variations. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
 
-\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. Objects break when their RES Rules on equipement breakage can be found in the equipment chapter.
+\textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. RES Rules on equipement breakage can be found in the equipment chapter.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage of piercing or bladed weapons.
 
-\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or redirected, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
@@ -335,7 +338,7 @@ Multiple characters can assist each other in the grab. Any skill test made by se
 
 \textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
 
-\textbf{Immobile Targets and Shooting Errors:} The DL to hit an immobile target occupying a space of 1m is equal to -5-1*SM. If a projectile misses the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
+\textbf{Immobile Targets and Shooting Errors:} If a projectile misses on the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
 
 \textbf{Moving Targets:} It is possible to shoot at moving targets as a reaction. The total amount of AP spent to shoot cannot exceed the amount of AP spent on movement. The AP count starts when the target becomes visible. The target's position at the moment of the shot is where it is at the end of the movement.
 
@@ -376,13 +379,13 @@ The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{Evasion:} When the character is targeted by projectiles, they can spend 2 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze.
 
-\textbf{Guard:} If using a shield, they can spend 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield deflection is added to guard as a bonus. The damage is reduced by the shield RES on grazes and misses. Hits and crits damage the character directly.
+\textbf{Guard:} If using a shield, they can spend 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. Hits and crits damage the character directly.
 
 \textbf{Cover:} When using a large shield, it is possible to take total cover behind the shield after using guard. The cover is canceled if the character performs any action other than careful movement. This cover only extends to allies who stand in the same space.
 
 \textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they can spend an extra STA to jump in any direction before the explosion occurs. On a graze or miss, they can move 2 AP after the explosion.
 
-\textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield deflection test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
+\textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
 
 In all cases, if the character is interrupted, they cannot move after the interruption.
 }
@@ -407,7 +410,7 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \textbf{Underwater Combat:} Any attack that does not have the precise tag or the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m for small objects (the size of arrows), 5m for medium ones (the size of spears) and 8m for large ones (the size of ballista shots, since larger projectiles decelerate less). All explosions have half the radius, but blunt damage is doubled.
 
-\textbf{Mounted Combat:} Attacking in melee receives a mount-dependent penalty while mounted, usually around -2. Accuracy receives the penalty while the mount is moving, not when standing still. Any movement, except careful movement, is considered running to trigger reactions. If the character is forcibly displaced while mounted, they will be dismounted. The only defenses against melee attacks allowed during mounted combat are block and redirect.
+\textbf{Mounted Combat:} Attacking in melee receives a mount-dependent penalty while mounted, usually around -2. Accuracy receives the penalty while the mount is moving, not when standing still. Any movement, except careful movement, is considered running to trigger reactions. If the character is forcibly displaced while mounted, they will be dismounted. The only defenses against melee attacks allowed during mounted combat are block and intercept.
 
 \section{Interactions with objects}
 
@@ -415,7 +418,7 @@ This section is a guideline for interactions with objects in combat. The exact v
 
 \textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider that a regular human with strength 10, for any random object shape, can lift about 20kg within a 3 AP + 1STA action. That is about one size category lower than its own.
 
-\textbf{Pushing objects:} To push an object, or when struck by one, use the push action as described in Grapple, but use STR as a skill. A hit stops the object and moves it in any direction by 1m per 3 SOP. When struck by an object, in a graze, the object can be redirected by up to 60 degrees.
+\textbf{Pushing objects:} To push an object, or when struck by one, use the push action as described in Grapple, but use the skill value of STR as a skill instead. A hit stops the object and moves it in any direction by 1m per 3 SOP. When struck by an object, in a graze, the object can be redirected by up to 60 degrees.
 
 The push DL depends on weight. When stopping an object, also consider its speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. A suggestion would be +1 per m/s for objects of size 3. Reduce it for smaller objects and increase it for larger ones.
 
@@ -491,7 +494,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
     \item \textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
     \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Positioning and Visibility section.
     \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a Rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
-    \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Use a reflex test to avoid it. Protective gear over the eyes also prevents blindness.
+    \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Protective gear over the eyes also prevents blindness.
     \item \textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
 \end{proplist}
 
@@ -515,7 +518,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \textbf{Slippery Surfaces, swampy terrain:} trigger balance tests. Hint at the difficulty of the test if the character noticed that the terrain was difficult.
 
-\textbf{Traps:} Require detection tests. Gets Building or Survival knowledge bonus depending on where the trap is. Magical traps may use the appropriate magical knowledge.
+\textbf{Traps:} Require detection tests to be spotted before they fire. 
 
 \textbf{Collapse:} Works like an object as an explosion. Gets buried in the rubble unless the explosion grazes or misses. Escaping requires a Strength test.
 
@@ -545,7 +548,7 @@ There are four distance tiers: Combat, Shooting, Far and Horizon.
 
 \begin{proplist}
     \item \textbf{Outrunning:} If the distance is already far or Horizon and the winner decides to increase the distance, the chase is over.
-    \item \textbf{Hiding:} If the distance is at least far and there is a stealth event, in which the quarry succeeds, it escapes.
+    \item \textbf{Hiding:} If the distance is not combat and there is a stealth event, in which the quarry succeeds, it escapes.
     \item \textbf{Obstacle:} If there is an obstacle that the quarry traverses and that the pursuers cannot or do not want to traverse.
 \end{proplist}
 
@@ -728,7 +731,7 @@ Stealth should not be free form in combat. The rules in combat situations are st
     \item \textbf{Ranged attacks:} -2. \textbf{Melee attack:} -4.
 \end{proplist}
 
-\textbf{Staying in stealth:} The character must begin their turn undetectable through any active sense in order to be considered in stealth. They must go back to being undetectable to any enemy active senses and end their turn to continue in stealth. Failing to do so causes automatic detection by everyone (their stealth value disappears). Trying to take a second turn immediately after finishing their last one takes -5 penalty to cunning.
+\textbf{Staying in stealth:} The character must begin their turn undetectable through any active sense in order to be considered in stealth. They must go back to being undetectable to any enemy active senses and end their turn to continue in stealth. Failing to do so causes automatic detection by everyone (their stealth value disappears).
 
 \textbf{Attacking from stealth:} Being attacked automatically causes detection through touch after the attack, which means that a second attack can always be reacted to. Whoever is struck always knows where the attack came from, but cannot target the spot directly unless they detect the attacker through an active sense or has high enough detection. 
 
@@ -746,7 +749,7 @@ Stealth should not be free form in combat. The rules in combat situations are st
 
 Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using the will skill.
 
-\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the DL of the terror of the moment. A graze leaves the character frightened, and a miss activates the character's limit stress action. The limit stress action only triggers if there is an enemy within 30m.
+\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the DL of the terror of the moment. A graze leaves the character afraid, and a miss activates the character's limit stress action. The limit stress action only triggers if there is an enemy within 30m.
 
 \textbf{Combat morale DL = aggravating factors}
 
@@ -769,7 +772,7 @@ Every social action costs 4 AP +1 STA and counts as a Rest action. They only wor
 
 Multiple intimidations and taunts don't stack. Only the highest one counts.
 
-\textbf{Rally:} Say something encouraging in combat. This adds decreases the DL of allies next morale test of the 1 + character's charisma/2. This can be done during a reaction surge. Multiple intimidations don't stack. Only the highest one counts.
+\textbf{Rally:} Say something encouraging in combat. This decreases the DL of allies next morale test by $1 + character's charisma/2$. This can be done during a reaction surge. Multiple Rallies don't stack. Only the highest one counts.
 
 \textbf{Surrender:} An attempt to surrender. It is a persuasion test against the highest insight in the enemy team. On a hit or crit, nobody in the enemy team is allowed to target this character. Being perceived holding a weapon, attacking anyone, trying to hide, running away or doing anything to help their own team cancels the effect and increases the difficulty of surrendering by 5 for any subsequent attempts of anyone in the whole team.
 

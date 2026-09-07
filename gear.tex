@@ -6,12 +6,14 @@
 
 A weapon is a tool used in combat to enhance the character's abilities. Each weapon or shield has at least one form of attack. Each form has its own properties: \\
 
+All weapon attacks are made out of metal, unless otherwise stated.
+
 \noindent
 \begin{proplist}
 \item \textbf{Grapple:} This attack is used for grappling actions, its force is equal to STR.
 \item \textbf{Sweeping:} Allows for Sweeping attacks.
 \item \textbf{Braced:} This attack can be a braced attack.
-\item \textbf{Handle:} This attack represents the handle of the weapon.
+\item \textbf{Shaft:} This attack represents the shaft of the weapon and it is made of wood.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x MM. Long-range attacks have an extended range of 1m x MM per level and cannot be used in grappling combat.  
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement. Cannot use quick shot unless STR is +3 points higher than the requirement.
@@ -27,7 +29,7 @@ A weapon is a tool used in combat to enhance the character's abilities. Each wea
 \item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: gets -2 accuracy when the opponent defends actively. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
-\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate gives a increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible.
+\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible.
 \end{proplist}
 
 % \begin{dnotesm}
@@ -113,12 +115,12 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \rowcolor{fallowtint}
  & 15 & 0 & 0 & one & long I & DEF & & \\[3pt]
 \midrule
-\textbf{Short Spear} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 1 SP & large \\
+\textbf{Short Spear} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 2 SP & large \\
  & 15 & STR & 0 & two & short & DEF, shaft, grapple & & \\
  & 20 & 8 & 20 & one & 2xSTR & slow, piercing, heavy I-II & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Mace} & 50 & 12 & 0 & one & short & heavy I-II, smash & 4 GP & medium \\
+\textbf{Mace} & 50 & 12 & 0 & one & short & heavy I-II, smash & 2 GP & medium \\
 \rowcolor{fallowtint}
  & 15 & 0 & 0 & one & short & DEF, shaft & & \\[3pt]
 \midrule
@@ -149,17 +151,17 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
  & 20 & 4 & 16 & two & long I & piercing & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Pike} & 20 & 6 & 24 & two & long II & braced, piercing, heavy I & 6 GP & large \\
+\textbf{Pike} & 20 & 6 & 24 & two & long II & braced, piercing, heavy I & 3 SP & large \\
 \rowcolor{fallowtint}
  & 20 & 0 & 0 & two & long I & shaft & & \\[3pt]
 \midrule
-\textbf{Halberd} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12 GP & large \\
+\textbf{Halberd} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 12 GP & large \\
  & 30 & STR & 1.5x STR & two & long I & hook & & \\
  & 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
  & 30 & 12 & 20 & two & long I & heavy I-III, bladed & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Warhammer} & 20 & 6 & 24 & two & long I & braced, piercing, heavy I & 12 GP & large \\
+\textbf{Warhammer} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 12 GP & large \\
 \rowcolor{fallowtint}
  & 30 & STR & 1.5x STR & two & long I & hook & & \\
 \rowcolor{fallowtint}
@@ -240,7 +242,7 @@ Arrows are small items that can be bundled into 10 units to make a small item. B
 
 \end{multicols}
 \begin{stattable}{Shields}{@{}lcccccc@{}}
-Name & Penalty & Deflection & RES & Insulation & Weight & Value \\
+Name & Penalty & Cover & RES & Insulation & Weight & Value \\
 \midrule
 \textbf{Wooden Shield} & -1 & +2 & 20 & 10 & 10 & 1 GP \\
 \rowcolor{fallowtint}
@@ -254,7 +256,7 @@ Body shields are marked with * in the table and can provide total cover.
 
 \section{Armors}
 
-Armors have prot, which is used as damage reduction against impacts. The armor's TGH value is used to determine the breaking point of the armor. When there is no value for TGH, that means that the armor cannot be destroyed by an impact, which is the case for all non rigid armor. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow cutting damage to hit the wearer.
+Armors have prot, which is used as damage reduction against impacts. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow cutting damage to hit the wearer.
 
 \textbf{Burden penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack. Burden penalties are reduced or increased based on STR, where burden penalty is modified by $(STR-10)/3$
 
@@ -272,6 +274,7 @@ Armors have prot, which is used as damage reduction against impacts. The armor's
 
 \textbf{Donning and Doffing armor:} Costs a standard action to don/doff helmet, gauntlets and small armor. Costs 6 AP to don/doff medium armors and several minutes to don/doff large ones. It is possible to doff a large armor by cutting it with a blade and spending 2 full turns, or 16 AP on it. This leaves the armor damaged.
 
+\textbf{Armor layers:} For any armor marked with two values for RES, like 10/5, the second and lower value is the inner layer, which is made of the same material as the outer one by default.
 
 \end{multicols}
 
@@ -373,7 +376,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Gear condition}
 \begin{proplist}
-    \item Condition: Sharp - Weapon deals 1.5 extra damage per SOP with extra cut.
+    \item Condition: Sharp - Weapon deals 1.5 x DM extra damage per SOP with extra cut.
     \item Condition: Dull - Bladed weapon cannot use extra cut.
     \item Condition/Characteristic: Pitted - Armor has its deflection reduced by 2. Damaged or low quality.
     \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1. Low quality armor or armor made for someone else.
@@ -381,8 +384,8 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Gear characteristics}
 \begin{proplist}
-    \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body.
-    \item Characteristic: Flammable - Burning condition does not wear off by itself.
+    \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body. If armor has two values, it is layered.
+    \item Characteristic: Flammable - Burning condition does not wear off by itself. Deals 5 fire damage per round until extinguished.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
     \item Characteristic: Insulating: Increases insulation against electric-type damage attacks by +5.
     % \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.
@@ -407,7 +410,7 @@ Items can be categorized as small, medium, large, and cargo.
     \item Cargo items are oversized items that require special handling and transportation, such as a horse or a cart. Their actual size is counted as weight and volume.
 \end{itemize}
 
-\textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do no need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and limping.
+\textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do no need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and over.
 
 \begin{proplist}
 \item \textbf{Light}: the burden has no effect.
@@ -462,7 +465,7 @@ Poisons can be delivered a through cutting injuries, ingestion, or inhalation. E
 
 \textbf{Inhalation} poisons dispersed as smoke affect everyone in the cloud at their normal DL, regardless of size.
 
-\textbf{Cutting injuries:} Tier 1+ wounds from Cutting damage apply the full effect of the poison. Tier 0 decrease DL by 3 and higher tiers increase it by 1 per tier above 1. 
+\textbf{Cutting injuries:} Tier 1+ injuries from Cutting damage apply the full effect of the poison. Tier 0 decrease DL by 3 and higher tiers increase it by 1 per tier above 1. 
 
 
 \begin{proplist}
@@ -477,10 +480,10 @@ Poisons can be delivered a through cutting injuries, ingestion, or inhalation. E
 These make a position costly to hold or cross, forcing a turtling enemy to move.
 
 \begin{proplist}
-\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 15 piercing damage to the leg. \textit{Cost:} 1 SP covers one space.\textit{Bulk:} small.
+\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 10 piercing damage to the leg on a graze or 15 on a miss. \textit{Cost:} 1 SP covers one space.\textit{Bulk:} small.
 % \item Stakes - Sharpened fixed stakes. Work like a spear's braced attack. 2 SP per space. medium.
 \item \textbf{Tripwire:} An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5. \textit{Cost:} 1 CP. \textit{Bulk:} small.
-\item \textbf{Pit:} Detection DL to avoid falling in.
+% \item \textbf{Pit:} Detection test against a DL to avoid falling in. 
 \item \textbf{Rolling log:} 1 ton of wood released downhill along a path. Treat as a huge projectile. Deals 30 blunt damage and pushes with a DL of 30.
 \end{proplist}
 
@@ -507,8 +510,8 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
     \item Electrite - A magically activated electrical battery stone. Deals 10 base electric damage. 20 charges - Weight 2 - 30 GP.
     \item Superior Electrite - every spell is amplified once automatically. 20 charges - Weight 2 - 400 GP
     \item Magnetite - Can be placed into gear to give magnetic properties. - 10 GP.
-    % \item Fire Stone - Allows the production of fire from it, dealing 20 base burn damage. - 50 GP - carries 20 charges.
-    \item Flame Thrower - A staff mounted with a fire stone to apply pressure to the flames, deals 15 base burn damage. - 80 GP.
+    \item Fire Stone - Allows the production of fire from it, dealing 10 base burn damage. - 30 GP - carries 20 charges.
+    \item Flamethrower - A staff mounted with a fire stone to apply pressure to the flames, deals 15 base burn damage. - 50 GP.
     \item Venomous Frog Corpse - Produces anticoagulant poison. - 5 GP - Weight 1.
     \item Soul Stone - Used to preserve souls - 40 GP.
     \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.
@@ -529,7 +532,7 @@ Potions add an effect to the character for a certain duration. The effects of po
     \item \textbf{Splint:} useful for medicine. 5 CP or improvised. small.
     \item \textbf{Anti-septic:} reduces infection exposure by 3 when applied with a bandage. 10 charges. 1 SP. small.
     \item \textbf{Antibiotic poultice:} reduces infection exposure by 2 when consumed. 5 charges. 4 SP. small.
-    \item \textbf{Cocaine:} Removes the effects of exhaustion for 1 ET, but doubles Wear. 5 charges. 1 GP. small.
+    \item \textbf{Cocaine:} Removes the effects of exhaustion for 1 ET, but doubles Wear. Does not prevent unconsciousness. 5 charges. 1 GP. small.
     \item \textbf{Morphine:} Becomes intoxicated, but gets no injury penalty to morale tests. 5 charges. 1 GP. small.
     \item \textbf{Ayahuasca:} Causes confusion, but increases shamanism by +5. 5 charges. 1 GP. small. % stub - must know how shamanism works
     \item \textbf{Antidote:} Removes effect of poison. Price and availability depend on poison. 5 charges. 1 GP. small.
@@ -542,25 +545,26 @@ Potions are carried in vials.
 \begin{proplist}
     \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 1 GP - medium
     \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 2 GP - large
-    \item Hammock: Reduces exposure to insects by 2. - 5 SP, medium
+    \item Hammock: Reduces exposure to insects by 1. - 5 SP, medium
     \item Bedroll: Reduces cold exposure by 2. 4 SP. Medium
     \item Oil Lamp: Gives 5m light radius when lit, requires an oil flask to burn for 8 hours. 1 GP - small
     \item Flint: Allows lighting a campfire within minutes, no test required. 2 SP - small
-    \item Firewood: Dry wood ready to burn for 4 hours. - medium
-    \item Rope: Useful item. 1 SP per meter. Medium
+    \item Firewood: Dry wood ready to burn for 4 hours. - medium. Improvised.
+    \item Rope: Useful item. 1 SP per meter. 1 Small per 5 meters.
     \item Canteen: Holds 2L of water. 1 SP. Small.
     \item Jug: Holds 10L of water.  2 SP. Large.
     \item Shovel: Used for digging. 1 SP. Large.
     \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 SP. Medium
     \item Vial: Holds 50ml of any liquid. 1 SP. small
     \item Chalk: makes being followed trivial in the marked path. It is spent in one ET and lasts until it rains. 5 CP - small
-    \item Insect repellant: Reduces exposure to insects by 2. lasts for 1 sleep.
+    \item Insect repellant: Reduces exposure to insects by 2. lasts for 1 sleep. 1 SP or Improvised. small.
     \item Sharpening Stone - A sharpening stone. 2 SP. small
     \item Fur Cloak - Improves resistance to cold exposure by +2. 1 GP. medium
     \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP.
     \item Camouflage for X - where X is the terrain. Gives +3 to Stealth vs vision outside combat. -3 penalty in combat in plain sight. 2 SP. large.
     \item Snow shoes - cancels penalty for walking in the snow. 1 GP.
-    \item Grappling hook - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 1 GP.
+    \item Grappling hook - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 2 SP.
+    \item Armor repair kit - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 2 GP.
 
 \end{proplist}
     

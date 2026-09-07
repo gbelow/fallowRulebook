@@ -12,7 +12,7 @@ This chapter contains skills and tools that are designed to help the players cre
 
 \skill{Knowledge}{ 2x Knowledge or 2x INT}{
 
-\textbf{Knowledge test:} is equivalent to asking your character if they know or remember something from their studies. Use 2x the relevant knowledge or 2x INT as the skill value.
+\textbf{Knowledge test:} is equivalent to asking your character if they know or remember something from their studies. Use 2x the relevant knowledge or 2x INT as the skill value. This test cannot be done twice for the same thing.
 
 The player is welcome to suggest what the character is supposed to know from the test. The GM takes that information into consideration when choosing the test DL. If the test is a hit or crit, what the player said is true, or partially true.
 
@@ -26,8 +26,6 @@ To use this skill, make a knowledge test against an arbitrary difficulty, repres
 \subsection{Specific Knowledge}
 
 Specific knowledge is about things that pertain the setting or adventure. It is knowledge about languages, people, places, cultures, and whatever else can be thought. 
-
-the result of the character's experiences and can be acquired by engaging in any activity. 
 
 \textbf{Why have this?}
 
@@ -155,7 +153,7 @@ Renown & Recognition  \\
 0 to +1 & Nobody \\[3pt]
 \end{stattable}
 
-\textbf{Intimidation:} The higher the renown, the higher the level of an NPC that can be intimidated in a public scenario. 
+\textbf{Intimidation:} The higher the renown, the higher the social status of an NPC that can be intimidated without forceful coercion. 
 
 \subsection{Honor}  
 Ranges from -10 to 10. \\
@@ -176,6 +174,8 @@ Honor & Recognition & Consequence \\
 -10 & Monster & actively hunted \\[3pt]
 \end{stattable}
 
+Effects are cumulative from 0 upwards and downwards. \\ 
+
 
 \subsection{Popularity} is tracked from city to city or region to region and it defines whether the character's renown and honor is recognized there. The popularity scale is not necessary for someone to know a character. Some characters are more well informed than others and can know things for other reasons. Popularity sets the general reaction of the public.
 The base amount of popularity is equal to the strength of the most influential Influencer that is a contact. Celebrating and living lavishly can override this base, if higher.
@@ -189,6 +189,7 @@ Popularity & Recognition  \\
 +2 to +4 & Renown/Honor > 7 or < -7 are known \\[3pt]
 0 to +1 & Nobody knows \\[3pt]
 \end{stattable}
+
 
 
 
@@ -211,7 +212,7 @@ Some NPCs have tags that define how they react in the game. It is possible to fi
 \begin{proplist}
     \item \textbf{Seduceable:} If character is open for romantic relationship. Trying to seduce one that isn't receives automatic -5 seduction.
     \item \textbf{Etiquette:} groups require knowledge of their customs to allow access. Requires disguise to blend in.
-    \item \textbf{Moralist:} Treats good characters with trust +1 or bad ones with -1 per Honor level before being a contact.
+    \item \textbf{Moralist:} Treats good characters with trust +1 or bad ones with -1 per Honor recognition level before being a contact.
 \end{proplist}
 
 \subsection{Wealth and Money}
@@ -296,7 +297,7 @@ They trade a service or time of service for money. They are more expensive or ma
 
 \begin{proplist}
     \item \textbf{Helper:} performs basic manual labour.\\
-    \item \textbf{Healer:} speeds up healing injuries and wounds. Heals 8 IL per day, costs 1 GP per day. Higher level: reattach limb. \\
+    \item \textbf{Healer:} speeds up healing injuries and wounds. Heals 8 IL extra per day on top of regular healing, costs 1 GP per day. Higher level: reattach limb. \\
     \item \textbf{Spy:} knows information about a certain place. Paid per information.\\
     \item \textbf{Banker:} lends money. Pays based on reputation.\\
     \item \textbf{Assassin:} kills people for money.\\
@@ -325,11 +326,11 @@ A trainer has a cost per day of instruction. They will charge extra without good
 
 Standard rates for training are given per level of training:
 
-\begin{stattable}{Training costs}{@{}lcccccc@{}}
-Level & 1 & 2 & 3 & 4 & 5 & 6 \\
+\begin{stattable}{Training costs}{@{}lccccc@{}}
+Level & 1 & 2 & 3 & 4 & 5  \\
 \midrule
 \rowcolor{fallowtint}
-Price & 4 CP & 8 CP & 2 SP & 4 SP & 1 GP & +++ \\[3pt]
+Price & 4 CP & 8 CP & 2 SP & 4 SP & 1 GP  \\[3pt]
 \end{stattable}
 
 
@@ -401,10 +402,10 @@ Only one thing can be done per day, but a single thing can fit more than one cat
     daily rate x N,  \\
     Gain +1 trust with employer on a crit.  \\
     If skill test DL is equal or higher than 2x training level, this counts as training alone. \\
-    A miss loses 2 renown. A graze loses 1 renown.
+    A miss loses 2 trust. A graze loses 1 trust.
 }
 
-\downtime{Celebrate}{ lasts 10 days, Living standard x 10. Can be more expensive for larger regions. }{ - }{ Populated town and a deed or mission. Only one deed or mission can be celebrated at a time, unless the deed was part of the mission.}{ Persuasion or deception vs DL. DL increases for lack of evidence and lack of previous renown. DL decreases by 1 by increasing duration by 10 days, with a maximum of 30 days.}{ 
+\downtime{Celebrate}{ lasts 10 days }{ Living standard x 10. Can be more expensive for larger regions. }{ Populated town and a deed or mission. Only one deed or mission can be celebrated at a time, unless the deed was part of the mission.}{ Persuasion or deception vs DL. DL increases for lack of evidence and lack of previous renown. DL decreases by 1 by increasing duration by 10 days, with a maximum of 30 days. It is possible to extend the celebration after rolling for it.}{
     Improves popularity in town while celebrating to 2/4/7/10, if that is an improvement. \\
     Gives a bonus to the renown of a mission by -1/0/0/+1 depending on the test result. The bonus does not affect the base value.  \\
     Uses deception to usurp someone else's mission's renown and Honor on a hit or crit. Loses trust with the usurped and, on misses or grazes, reduces own Honor by -1/-2. \\
@@ -421,19 +422,18 @@ Only one thing can be done per day, but a single thing can fit more than one cat
 
 Costs of living include food, water, housing and security. 
 
-%finish saying what better living yields
 The cost of living changes from town to town. This table is an average.
 
 \begin{stattable}{Cost of Living}{@{}lccc@{}}
-Level & Cost & Health & Renown   \\
+Level & Cost & Exposure & Renown   \\
 \midrule
-Miserable & 1CP/day & -2 & zero  \\
+Miserable & 1CP/day & -3 & zero  \\
 \rowcolor{fallowtint}
-Poor & 5CP/day & 0 & 2 \\
-Medium & 1SP/day & +2 & 4 \\
+Poor & 5CP/day & -1 & 2 \\
+Medium & 1SP/day & 0 & 4 \\
 \rowcolor{fallowtint}
-Rich & 3SP/day & +2 & 7 \\
-Lavish & 1GP/day & +2 & 10 \\
+Rich & 3SP/day & 0 & 7 \\
+Lavish & 1GP/day & 0 & 10 \\
 \end{stattable}
 
 A character has to live at their renown level or higher. Living lower for a month will limit the renown to the value on the table.

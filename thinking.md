@@ -10,21 +10,21 @@ pets and riding - a system of mounts and their stats
 
 crafting system
 
-add spear specific modifications - swords varied by better edge (bladed +) and resistance -  
-
 vehicles and siege engines
-
-training + trainers + training alone. review
 
 social abilities
 
 knowledges are new - probably need new abilities
 
-tags in story need work
-
-karma yield for doing hard things/celebrate/review tags
 
 review economy. horses + armor = expensive
+
+trap setting rules
+
+review devotion abilities
+
+breaking armor too weak?
+
 
 
 # CHANGE IN THE APP
