@@ -29,23 +29,7 @@ breaking armor too weak?
 
 # CHANGE IN THE APP
 
-check all skills again
-
-check social skills proficiency
-
-check load penalties
-
-check all afflictions
-
 check survival resources - hunger/thirst
-
-check AGI, STR, STA effects - make penalty count
-
-add attributes as skills?
-
-update weapons and armor - check gear properties
-
-STR reduces gear PEN - (STR-10)/3 
 
 review size modifiers
 

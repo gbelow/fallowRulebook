@@ -24,7 +24,7 @@
 \textbf{Action surge:} All characters are entitled to one action surge per round. There are 4 basic types of action surges: movement, combat, reaction and focus.
 
 \begin{proplist}
-    \item \textbf{Movement surge:} 3 STA to gain 6 AP that must be used for movement immediately and allow running until the end of the turn.
+    \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement immediately and allow running until the end of the turn.
     \item \textbf{Combat surge:} 3 STA to gain 6 AP that can be used for attacks or movement and must be used immediately.
     \item \textbf{Reaction surge:} 3 STA to gain 6 AP, but can only use reactions until the end of the round.
     \item \textbf{Focus surge:} 1 STA to gain 2 AP. The AP is free to use for anything. This surge is required to use shooting weapons, casting spells and utilizing non weapon items.
@@ -66,9 +66,9 @@ Types of movement:
 \item \textbf{getting up:} Removes the fallen condition.
 \item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to AGI/3. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved.
 \item \textbf{crawling:} is the only usable movement speed while \textbf{lying down}.
-\item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{lying down} condition.
+\item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{prone} condition.
 
-\item \textbf{trample:} The character attempts to pass through an occupied space. If the opponent does not move out of the way, they must perform a push action to stop the movement.
+\item \textbf{trample:} The character attempts to pass through an occupied space. If the opponent does not move out of the way, they get trampled, as explained in the force skill in melee combat.
 \item \textbf{mounted movement:} A character needs minimum training to be able to give commands to a mount. During mounted combat, the character's movement speed matches that of the mount. Running and a movement surge do not spend character STA. Mounting and dismounting costs AP equal to standing up.
 \end{proplist}
 
@@ -78,9 +78,9 @@ Movement & Cost & Speed \\
 Careful & 1 AP & 0.5 m \\
 \rowcolor{fallowtint}
 Basic & 1 AP & 1 m \\
-Run & 2AP & AGI/3m \\
+Run & 2AP & 3m \\
 \rowcolor{fallowtint}
-Jump & 2AP+1STA & AGI/4m \\
+Jump & 2AP+1STA & 2m \\
 Crawl & 1 AP & 0.33 m \\
 \rowcolor{fallowtint}
 Swim & 1 AP & 0.33 m \\
@@ -92,7 +92,7 @@ Stand up & 5 -AGI/5 AP & 0 \\
 
 The swimming check should not be redone more than once per round unless the swimming conditions change.
 
-Characters attempting to swim with one hand receive a -3 penalty on the check.
+Characters attempting to swim with one hand receive a -3 penalty on the test.
 
 A swimming check in a deep pool is considered a DL of -2. Swimming at a beach with waves is 0. Swimming in a swift river or choppy sea would be around 4. Swimming under a storm or in a raging river is around a 7.
 }
@@ -105,7 +105,7 @@ A character who is climbing is considered lying down. An attack that interrupts 
 
 To determine the difficulty of climbing, consider whether the surface is moving, the quality of the grips, and the distance to be climbed. An easy climb, with minimal chances of falling, is considered a DL of 5. A DL of 15 is reasonable for out-of-combat situations but quite challenging in a difficult scenario. DLs greater than 20 will require equipped and specialized characters and are unlikely to be accomplished during combat. As a general rule, consider that for every meter, the difficulty increases by 1.}
 
-\skill{Balance}{AGI - 10}{ Skill to perform acrobatics, avoid falling, and mitigate damage from falling. Can be used actively with a skill check or passively when something tries to knock you down.
+\skill{Balance}{AGI - 10}{ Skill to perform acrobatics, avoid falling from losing balance, and mitigate damage from falling.
 
 \textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a miss, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they receive some consequence (usually falling).
 
@@ -145,8 +145,7 @@ Tier 2 & armor+2xTGH & 10 & 50\% \\
 Tier 3 & armor+3xTGH & 20 & 100\% \\
 Tier 4 & armor+4xTGH & 30 & 100\% \\
 \rowcolor{fallowtint}
-Tier 5 & armor+5xTGH & 40 & 100\% \\
-Tier 6 & armor+6xTGH & 50 & 100\% \\
+Tier 5 & armor+5xTGH & 50 & 100\% \\
 \end{stattable}
 
 \begin{dnote}
@@ -167,7 +166,7 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
 
 \textbf{Burn, radiant:} Their respective defense is INS. Dealing Tier 0 injury or higher leaves the target burning. 
 
-\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to II of damage leaves the target corroding at that tier of damage, which reaplies the damage until armor is removed. Higher tiers still apply Tier II of corroding.
+\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to I of damage leaves the target corroding at that tier of damage, which reaplies the damage until armor is removed. 
 
 \textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage.
 
@@ -177,7 +176,7 @@ Tier 6 & armor+6xTGH & 50 & 100\% \\
     \item \textbf{Broken arm:} Makes the arm useless. Equivalent to 10 IL to heal.
     \item \textbf{Broken leg:} Makes the leg lame. Equivalent to 15 IL to heal.
     \item \textbf{Bleed:} For every STA spent and at the end of every round in combat, the character receives +1 to their IL per bleed intensity. Bleeds caused by a T2 wound have intensity 1. For every extra tier, intensity increases by 1. Bleeding is caused by damage to the chest or head. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
-    \item \textbf{Shocked:} cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit and 100\% chance on a T5.
+    \item \textbf{Shocked:} cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit.
     \item \textbf{Unconscious:} causes unconsciousness. Happens when receiving damage in the head. Takes at least 1 minute to wake up without intervention.
 \end{proplist}
 
@@ -211,7 +210,7 @@ To illustrate, here are some targets for humanoids. There are 4 locations: chest
 
 \textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage accounted from this is 5. Taking 20 IL damage amputates.
 
-\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates. 
+\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates.
 
 \textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4 damage has 50\% chance of instant death, T5 has 100\%. Bypassing armor is possible with any weapon, unless the helmet is closed.
 
@@ -221,18 +220,18 @@ Some creatures may have their vulnerable point out of reach of others, requiring
 
 Afflictions are the negative conditions that can affect creatures. 
 
-\textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect movement speeds, nor TGH. It affects all other usages of attributes.
+\textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect TGH. It affects all other usages of attributes.
 
 \textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
 
-\textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight and all Knowledges and all spellcasting.  
+\textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight, persuasion, deception and all Knowledges and all spellcasting.  
 
 The list of afflictions is:
 
 \begin{proplist}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
 \item \textbf{Prone:} Can only crawl and stand up. Takes -3 to any attempt to evade.
-\item \textbf{Grappled:} Movement requires pushing. Focus is locked to the main grappler.
+\item \textbf{Grappled:} Movement requires a test. Focus is locked to the main grappler.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
 \item \textbf{Disoriented:} Gives -2 to sensory penalties.
 \item \textbf{Oblivious:} Gives -5 to sensory penalties.
@@ -241,7 +240,7 @@ The list of afflictions is:
 % Requires a balance check for basic movement on any terrain.
 
 \item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
-\item \textbf{Corroding 0/I/II} Applies a tier of injury every round. Can only be ended by specific items, jumping on water or removing the armor. Cannot be applied to unarmored.
+\item \textbf{Corroding 0/I} Applies a tier of injury every round. Can only be ended by specific items, jumping on water or removing the armor. Cannot be applied to unarmored.
 
 \item \textbf{Unconscious:} The character cannot do anything other than Rest and Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
 
@@ -273,19 +272,18 @@ The survival chapter describes how health works for healing.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage of piercing or bladed weapons.
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. If the damage is blunt, this also pushes the target.
+\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. The additional damage effect also triggers a trample.
 
-\textbf{Hook Attack:} A melee attack with a hook weapon that attempts to knock down the opponent. Gains +STR/2 damage if the opponent attempts to perform an evasive jump and +STR if they are running. This can be used as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. If the damage is blunt, this counts as a drag, from grappling.
+\textbf{Hook Attack:} A melee attack using a weapon with hook property that attempts to trigger tripping the opponent. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +1 AP +1STA to attempt to trip their target, in which case the attack gets +STR/2 damage if the opponent attempts to perform an evasive jump and +STR if they are running.
 
 \textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
 }
-
 
 %-----------------------------------DEFEND
 
@@ -295,11 +293,11 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a graze, the attack has 50\% damage, and on misses, it has 0.
 
-\textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump can be backwards or sideways and uses the movement speed of jumping backwards.
+\textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump from the attack while evading an attack. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump must move away or sideways from the attack and uses the movement speed of jumping backwards. This can be used to avoid being trampled and it always works unless trample is a directed attack.
 
 \textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
 
-\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 grapple higher than the defender. On a miss, stop it if the attacker has up to 8 grapple more than the defender.
+\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has up to 8 force more than the defender.
 
 \textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
 
@@ -307,13 +305,11 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \skill{Grapple}{Melee + STR-10}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
 
-\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit or critical, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
+\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
 \textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles. Any weapons with the grappling property can use the grapple skill instead of strike to attack during a grapple.
 
-\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, move, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used against the opponent.
-
-\textbf{Drag and Push:} On a hit, moves the opponent one space x MM. A crit in the grapple check makes the opponent prone. Pushing can be used simultaneously, without exta AP cost and sharing the dice roll, with initiating the grapple if the strike test is a hit. It gets +3 to the grapple test if the grapple initiated while running or when the hooked or braced attacks get STR bonus.
+\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it.
 
 \textbf{Escape:} Escapes from the grapple on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
 
@@ -324,6 +320,17 @@ Other variations of melee attacks are available depending on the type of weapon 
 \textbf{Immobilize:} The opponent becomes immobilized on a critical. It is possible to stay immobilized yourself to achieve immobilization on a hit.
 
 Multiple characters can assist each other in the grab. Any skill test made by several characters uses the highest skill value among them plus 3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters of a smaller size category add a maximum of 2.
+}
+
+\skill{Force}{STR-10}{This is the skill for pushing, lifting objects, and resisting being thrown.
+
+\textbf{Trample:} Happens when two characters hit each other at speed. This is a Force vs Force comparison. If the runner's Force is higher, the opponent moves back one space x MM. If Force is 5 points higher or more, the opponent is prone. Whoever is running or jumping gets a bonus equal to their running or jumping speed to this. If the defender's force is equal or higher, the runner is stopped. If a strike started this action, targeting the head increases attacker's force by 5.
+
+\textbf{Catch:} happens when someone tries to initiate a grapple against a running target. The catcher must spend 3 AP + 1STA to perform a strike with a weapon with the grapple property and add their own running speed to defend the trample. If the target is stopped, the catcher can decide to grapple them without further tests.
+
+\textbf{Push and drag} attempts to move with a grappled creature. This costs 2AP +1STA and is a force vs force comparison. The strongest pushes the other by up to 1m. On a force difference equal or greater than 5, push them 2m. The defender must spend 2AP+1STA or receive -5 in this comparison. Nobody moves on a draw.
+
+\textbf{Trip:} happens as a consequence of a hook attack. This is a comparison between the attacker's force and target's balance + force. If anyone is jumping or running, the attacker gets a bonus equal to the moving party's movement speed. If the attacker's value is higher, the target falls and is prone. Targeting the head or legs increases the attacker's value by +5.
 }
 
 %----------------------SHOOT
@@ -361,7 +368,7 @@ Other types of ranged attacks will be available depending on the type of weapon 
 \textbf{Ranged attacks outside the combat area:} Any ranged attacks with range higher than 50 can hit outside the combat area at a penalty of -5.
 }
 
-\textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses strength with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
+\textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses power with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
 
 Explosions have different magnitudes of effects depending on where things are in relation to the center. The center is where the axis of the spell's radius is located. Anyone caught in the center of the radius receives the critical effect, while those in the middle are hit, and the ones in the edge are grazed. If a creature occupies multiple spaces, apply the strongest effect. For very large explosions (>5m radius), the critical and graze zones can be expanded (30\%/40\%/30\%). 
 
@@ -418,9 +425,9 @@ This section is a guideline for interactions with objects in combat. The exact v
 
 \textbf{Lifting Weight:} The basic rule of strength is that you become 3.33x stronger for every 5 points of strength, following the VM from the size categories. The exact weight lifted will depend greatly on the exact lifting movement. It is fair to consider that a regular human with strength 10, for any random object shape, can lift about 20kg within a 3 AP + 1STA action. That is about one size category lower than its own.
 
-\textbf{Pushing objects:} To push an object, or when struck by one, use the push action as described in Grapple, but use the skill value of STR as a skill instead. A hit stops the object and moves it in any direction by 1m per 3 SOP. When struck by an object, in a graze, the object can be redirected by up to 60 degrees.
+\textbf{Pushing, catching, trampling and dragging:} work just like explained in force, but against an object DL.
 
-The push DL depends on weight. When stopping an object, also consider its speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. A suggestion would be +1 per m/s for objects of size 3. Reduce it for smaller objects and increase it for larger ones.
+The push DL depends on weight. When stopping an object, also consider its speed. To help decide on a DL, consider that 50kg (size 3) is the base dificulty, with DL 0. Change the DL by 5 for every size category. Increase the DL for higher speeds. 
 
 \textbf{Defending against objects:} Small objects are considered projectiles and defended as such. Large objects can be considered explosions on a line given by their path. Use reflex to dodge them. Consider how difficult it is to dodge subjectively, using the basic guidelines on how to choose a DL.
 
@@ -503,7 +510,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \textbf{Smoke Spread:} smoke only spreads indoors. The spread is counted in minutes as how long it takes to fill a 10m by 10m room.
 
-\textbf{Wind:} Requires balance or strength test to avoid being pushed. Clears the other gases for the round. If the gas has an active source, it comes back once the wind stops.
+\textbf{Wind:} Requires balance or Force test to avoid being pushed. Clears the other gases for the round. If the gas has an active source, it comes back once the wind stops.
 
 \subsection{Liquids}
 
@@ -511,7 +518,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \textbf{Corrosion:} Being soaked in corrosive liquids cause a corrosive damage. The damage is multiplied by the amount of corrosive filled spaces the character is in.
 
-\textbf{Waves and Currents:} Requires strength test to avoid being pushed. If the character is swimming, they get pushed automatically, but can spend AP to swim and cancel the movement.
+\textbf{Waves and Currents:} Requires Force test to avoid being pushed. If the character is swimming, they get pushed automatically, but can spend AP to swim and cancel the movement.
 
 
 \subsection{Land and collapse}
@@ -556,7 +563,7 @@ There are four distance tiers: Combat, Shooting, Far and Horizon.
 
 Running is how both teams get closer or farther from each other. It works in rounds, where both teams compare their speeds, and the fastest decides to close the distance or move away.
 
-\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint, spending STA to do it. Whoever has the highest running speed wins. A draw does not change distance tier, but spends STA from the movement surge.
+\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint, spending STA to do it. Whoever has the highest AGI x running speed wins. A draw does not change distance tier, but spends STA from the movement surge.
 
 \textbf{Running at longer ranges:} This is a sustained pace running. The running speed is STA + AGI. Whoever is higher wins. 50\% chance on a draw. If the character is bleeding, it bleeds as if they have used an action surge.
 

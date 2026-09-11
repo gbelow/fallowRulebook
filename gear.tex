@@ -17,7 +17,7 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x MM. Long-range attacks have an extended range of 1m x MM per level and cannot be used in grappling combat.  
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement. Cannot use quick shot unless STR is +3 points higher than the requirement.
-\item \textbf{Hook:} This attack can be used to knock down.
+\item \textbf{Hook:} This attack can be used for hooked attacks.
 \item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against opponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
 \item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum, and normal attacks are not allowed.
 \item \textbf{Piercing:} Grazes behave like a miss. Deal half the amount of IL damage. Must exceed object RES by 2x to break them.
@@ -65,14 +65,14 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
 Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \midrule
-\textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, draw & - & small \\
- & STR & 0.5x STR & 0 & small & short & draw, heavy I, smash & & \\[3pt]
+\textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, braced, hooked, draw & - & small \\
+ & STR & 5 & 0 & small & short & draw, heavy I, smash & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
 \textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[3pt]
 \midrule
 \textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\
- & 25 & 0.5x STR + 3 & 0 & one & short & heavy I, smash & & \\[3pt]
+ & 25 & 8 & 0 & one & short & heavy I, smash & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
 \textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small \\
@@ -116,7 +116,7 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
  & 15 & 0 & 0 & one & long I & DEF & & \\[3pt]
 \midrule
 \textbf{Short Spear} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 2 SP & large \\
- & 15 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+ & 15 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
  & 20 & 8 & 20 & one & 2xSTR & slow, piercing, heavy I-II & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
@@ -156,16 +156,16 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
  & 20 & 0 & 0 & two & long I & shaft & & \\[3pt]
 \midrule
 \textbf{Halberd} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 12 GP & large \\
- & 30 & STR & 1.5x STR & two & long I & hook & & \\
- & 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+ & 30 & 5 & 12 & two & long I & hook, bladed & & \\
+ & 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
  & 30 & 12 & 20 & two & long I & heavy I-III, bladed & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
 \textbf{Warhammer} & 20 & 6 & 24 & two & long I & braced, piercing, penetrating, heavy I & 12 GP & large \\
 \rowcolor{fallowtint}
- & 30 & STR & 1.5x STR & two & long I & hook & & \\
+ & 30 & 5 & 12 & two & long I & hook, bladed & & \\
 \rowcolor{fallowtint}
- & 20 & STR & 0 & two & short & DEF, shaft, grapple & & \\
+ & 20 & 0 & 0 & two & short & DEF, shaft, grapple & & \\
 \rowcolor{fallowtint}
  & 100 & 14 & 0 & two & long I & heavy II-III, smash & & \\[3pt]
 \midrule

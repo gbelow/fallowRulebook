@@ -48,6 +48,7 @@ Skill value = proficiency bonus + skill bonus (talent gates XP cost, not value).
 | Strike | Melee + strike bonus |
 | Defend | Melee + defend bonus |
 | Grapple | Melee + STR − 10 (+5×SM) |
+| Force | (STR − 10) (+5×SM) |
 | Accuracy | Ranged + accuracy bonus |
 | Reflex | Ranged + Awareness (+ −1×SM) |
 
@@ -85,7 +86,8 @@ rolling 6. Safe test: roll 2d10, keep the one closest to 5 (tie: average or
 reroll). Risky: keep the farthest from 5. Only when the rules allow it.
 
 **AP/STA cost** (track it; users care about damage per AP): strike 3 AP ·
-heavy I +1AP · heavy II +2AP+1STA · heavy III +3AP+1STA · sweep +1AP · braced
+heavy I +1AP · heavy II +2AP+1STA · heavy III +3AP+1STA · sweep +1AP · hook
+3 AP, +1AP+1STA only if the damage rider is bought · braced
 +2AP+1STA · assassinate +1AP · ranged: AP from weapon row (e.g. "3+5" = shot +
 reload, e.g. crossbow "4+4" = shot then reload) · quick shot −1AP · snipe +2AP.
 Defense: evade 2AP · evasive jump +1STA ·
@@ -96,14 +98,19 @@ block 2AP · intercept 3AP · reflex evasion 2AP.
 1. **Read the weapon row** (Blunt and Cut columns).
    - Plain numbers (e.g. Cut 16) are multiplied by the attacker's weapon DM.
      This scaling applies to any extra damage effects added to the attack.
-   - Entries like "STR" or "0.5x STR" use the attacker's STR (× DM if the
-     wielder is not size 3 — oversized weapons also use STR−5 and +1 AP).
-   - Any non-plain multiplier in the Cut column (e.g. "1.5x", "2x") is a
-     mistake in the tables — all damage values are plain numbers. Flag it to
-     the user instead of computing with it.
+   - Every Blunt/Cut entry is a plain number keyed to STR 10. Attribute-scaled
+     damage entries (`STR`, `0.5x STR`, `1.5x STR`) were removed from the tables
+     in Sept 2026 — if one reappears, flag it rather than computing with it.
+     RES columns may still read `STR` or `TGH` for body parts; those are
+     breakage thresholds, not damage.
+   - Oversized weapons use STR−5 for any STR *contribution* (heavy, braced,
+     hook riders) and cost +1 AP.
 2. **Add variation bonuses** (these increase cutting damage too): heavy I
-   +0.5×STR, II +1×STR, III +1.5×STR · braced +1.5×STR · hook +STR/2 (vs
-   evasive jump) or +STR (vs running) · extra cut SOP +1×DM per SOP (bladed
+   +0.5×STR, II +1×STR, III +1.5×STR (heavy applies to blunt *and* cutting
+   damage — the old "piercing or bladed only" qualifier was dropped) · braced
+   +1.5×STR · hook +STR/2 (vs evasive jump) or +STR (vs running), and the hook
+   rider is an **optional purchase of +1 AP +1 STA made after the hit lands** ·
+   extra cut SOP +1×DM per SOP (bladed
    only, scales slowly — 1 per SOP vs TGH per heavy degree). Smash adds no
    damage — it is SOP-only (stun/interrupt, step 6).
 3. **Degree multiplier:** graze 50% (round down) · miss 0 · hit and crit 100%
@@ -121,7 +128,7 @@ block 2AP · intercept 3AP · reflex evasion 2AP.
 
 Compare final damage to thresholds **armor + N × TGH**, where "armor" is
 Protection for blunt and RES for cutting. Shortcut: **tier =
-floor((damage − armor) / TGH)**, capped at T6; damage below the armor value
+floor((damage − armor) / TGH)**, capped at T5; damage below the armor value
 deals no IL.
 
 | Tier | Threshold | IL | Wound |
@@ -131,8 +138,7 @@ deals no IL.
 | T2 | armor+2×TGH | 10 | 50% |
 | T3 | armor+3×TGH | 20 | 100% |
 | T4 | armor+4×TGH | 30 | 100% |
-| T5 | armor+5×TGH | 40 | 100% |
-| T6 | armor+6×TGH | 50 | 100% |
+| T5 | armor+5×TGH | 50 | 100% |
 
 **Key invariants (use these to sanity-check any matchup):**
 - Each heavy degree adds +TGH damage (0.5×STR×DM) = **exactly one tier at any
@@ -155,7 +161,8 @@ Highest tier whose threshold the damage meets or exceeds. Notes:
   → unconsciousness, blunt T1 50%/T2 100% wound, T4+ 50% instant death; hand
   max 5 IL; leg max 10 IL.
 - IL then gives −1 injury penalty per 10 IL (base IT = 10); collapse at 40 IL,
-  death past 50 IL (4×/5× IT).
+  death past 50 IL (4×/5× IT). T5 is the top of the table and lands exactly on
+  50 IL, so a single T5 is a collapse, not automatic death.
 
 ## 6. After-effects (mention when they trigger)
 
@@ -165,7 +172,18 @@ Highest tier whose threshold the damage meets or exceeds. Notes:
   (cost = deflection; lets the weapon cut equal hardness, i.e. metal) ·
   extra cut (1 SOP = +1×DM cut, bladed) · smash (cost = deflection; stun if
   ≥T1, interrupt if ≥T0 — smash-property weapons
-  only) · localized damage (head 5, hand 10 or 5 vs blocking target, leg 0).
+  only) · localized damage (head 5, hand 10 or 5 vs blocking target, leg 0) ·
+  **drag/push strength** (2 SOP = +1 Strength on the displacement comparison
+  below).
+- **Drag and Push** (braced and hook only, and only when the attack's
+  additional damage effect applies): no second roll. Compare the attacker's
+  **Strength skill** — 2 × (STR − 10), +5 per size category — against the
+  target's. Higher Strength moves the target one space × MM; 5 or more higher
+  makes them prone. 2 SOP buys +1 Strength, so prone costs 10 SOP at equal
+  Strength. Hooking the legs adds +3 against jumping or running targets, at
+  the cost of the leg location's 10 IL damage cap. One size category is worth
+  exactly the prone threshold, which is what makes mounts and large creatures
+  hard to pull down.
   Weigh SOP purchases against their full cost: deflection points + to-hit
   penalties of heavy attacks make top-end results commitment+luck events, not
   routine output.
@@ -214,7 +232,13 @@ matters:
 - Armor is a threshold band (step 5), not subtraction; Protection vs blunt,
   RES vs cutting.
 - SOP = score − DL, only on hit/crit.
-- Melee crits add no extra damage beyond SOP; only explosions crit at 200%.
+- Regular attacks have no critical degree at all — they resolve as
+  miss/graze/hit, and everything above a hit becomes SOP (confirmed with the
+  user, 2026-09-10). Non-attack tests (grapple maneuvers, balance) still use
+  criticals normally. Explosions are the only attacks that crit, at 200%.
+- Displacement distance never scales with the roll: forced movement must stay
+  slower than plain walking for the same AP. Flat distance, at most doubled on
+  a critical.
 - Ranged accuracy is flat within weapon range by design — confirmed with the
   user (2026-09-02): there is no distance-to-hit falloff, only hard range
   caps (weapon max range, Shoot's 30m limit, Snipe removing it). spells.tex's
