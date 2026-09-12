@@ -25,13 +25,14 @@ review devotion abilities
 
 breaking armor too weak?
 
+extend spell, MMs strangely scaled
 
 
 # CHANGE IN THE APP
 
-check survival resources - hunger/thirst
-
 review size modifiers
+
+surge costs
 
 
 # product workflow - how to turn this into a game

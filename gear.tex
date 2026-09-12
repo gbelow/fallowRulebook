@@ -27,9 +27,8 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \item \textbf{Vicious:} causes double bleeding.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
 \item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: gets -2 accuracy when the opponent defends actively. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
-\item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon.
+\item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon, and drawing can be done with any action surge.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
-\item \textbf{Size x:} Defines which size of creature can wield the weapon. Wielding a weapon that is larger than appropriate increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible.
 \end{proplist}
 
 % \begin{dnotesm}
@@ -37,6 +36,8 @@ All weapon attacks are made out of metal, unless otherwise stated.
 % \end{dnotesm}
 
 \textbf{Scaling weapons:} The weapons in the tables are human-sized and serve as a basis for size scaling. When scaling weapon size, multiply damages and RES by the DM and reach by the MM.
+
+\textbf{Size Scaling:} Every piece of gear in the list is made for a size 3 creature. Wielding a weapon that is larger than appropriate increases the cost of AP for all attacks by +1, and uses STR-5 in the contribution of STR to damage. This penalty applies to any contribution of STR for any attack, including braced, hooked, and heavy. Wielding a weapon 2 size categories larger is impossible.
 
 \end{multicols}
 
@@ -63,15 +64,15 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \end{multicols}
 
 \begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
-Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, braced, hooked, draw & - & small \\
+\textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, braced, hooked, draw & - & - \\
  & STR & 5 & 0 & small & short & draw, heavy I, smash & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple & - & small \\[3pt]
+\textbf{Claws} & 10 & 4 & 12 & small & short & bladed, grapple, hooked & - & - \\[3pt]
 \midrule
-\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF & 15 GP & small \\
+\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF, hooked & 15 GP & small \\
  & 25 & 8 & 0 & one & short & heavy I, smash & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
@@ -105,7 +106,7 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 
 \end{multicols}
 \begin{stattable}{One-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
-Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
 \textbf{Short Sword} & 20 & 4 & 16 & one & short & precise, piercing, bladed, draw & 8 GP & medium \\
  & 20 & 8 & 16 & one & short & sweep, draw, DEF, heavy I, bladed & & \\[3pt]
@@ -144,9 +145,9 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 
 \end{multicols}
 \begin{stattable}{Two-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
-Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
+Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Longsword} & 20 & 10 & 18 & two & long I & sweep, DEF, heavy I, bladed & 12 GP & large \\
+\textbf{Longsword} & 20 & 10 & 18 & two & long I & sweep, DEF, heavy I, bladed & 12 GP & medium \\
  & 20 & 4 & 16 & one & short & piercing, penetrating, precise, heavy I & & \\
  & 20 & 4 & 16 & two & long I & piercing & & \\[3pt]
 \midrule
@@ -201,7 +202,7 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Size \\
 \end{multicols}
 
 \begin{stattable}{Ranged Weapons}{@{}lccccccp{2.4cm}cc@{}}
-Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Size \\
+Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Bulk \\
 \midrule
 \textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, slow & 3 GP & medium \\[3pt]
 \midrule
@@ -218,7 +219,7 @@ Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Size \\
 \rowcolor{fallowtint}
 \textbf{Heavy Bow*} & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, fast & 10 GP & large \\[3pt]
 \midrule
-\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, fast & 8 GP & medium \\[3pt]
+\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, fast & 8 GP & large \\[3pt]
 \midrule
 \rowcolor{fallowtint}
 \textbf{Arbalest} & 10 & 10 & 26 & 4+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
@@ -227,32 +228,15 @@ Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Size \\
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot.
 
-% ** Can use artillery arrows.
+\textbf{Quiver}: Can be slung on a belt and carries 20 arrows or bolts that cost nothing to be drawn. - medium - 2 GP
 
-Arrows are small items that can be bundled into 10 units to make a small item. Bows and crossbows can use different types of arrows:
+Bows and crossbows can use different types of arrows:
 
 \begin{proplist}
-    \item Bodkin: arrows are penetrating.
-    \item Broadhead: arrows are vicious.
+    \item Bodkin: arrows are penetrating. 5 CP per arrow
+    \item Broadhead: arrows are vicious. 5 CP per arrow
     \item Explosive: gives the explosive effect to the arrow if ignited. Igniting is a standard action of prestidigitation.
 \end{proplist}
-
-
-\subsection{Shields}
-
-\end{multicols}
-\begin{stattable}{Shields}{@{}lcccccc@{}}
-Name & Penalty & Cover & RES & Insulation & Weight & Value \\
-\midrule
-\textbf{Wooden Shield} & -1 & +2 & 20 & 10 & 10 & 1 GP \\
-\rowcolor{fallowtint}
-\textbf{Metal Shield} & -2 & +2 & 30 & 10 & 25 & 15 GP \\
-\textbf{Wooden Tower*} & -2 & +4 & 20 & 15 & 20 & 2 GP \\
-\end{stattable}
-Body shields are marked with * in the table and can provide total cover.
-% , but using them reduces running speed and long jump by 1m.
-
-\begin{multicols}{2}
 
 \section{Armors}
 
@@ -279,25 +263,25 @@ Armors have prot, which is used as damage reduction against impacts. RES is both
 \end{multicols}
 
 \begin{stattable}{Armors}{@{}lccccccc@{}}
-Name & RES & Protection & Insulation & Deflection & Burden & Price & Weight \\
+Name & RES & Protection & Insulation & Deflection & Burden & Price & Bulk \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Fiber}}} \\
 \midrule
-Skin & 0 & 0 & 0 & +4 & 0 & 0 & 0 \\
+Skin & 0 & 0 & 0 & +4 & 0 & 0 & - \\
 \rowcolor{fallowtint}
-Clothing & 3 & 0 & 2 & +4 & 0 & 1 SP & small \\
+Clothing & 3 & 0 & 2 & +4 & 0 & 1 SP & medium \\
 Fur coat & 7 & 2 & 6 & +5 & 0 & 0 & medium \\
 \rowcolor{fallowtint}
-Thick Hide & 8 & 4 & 7 & +5 & 0 & 0 & large \\
+Thick Hide & 8 & 4 & 7 & +5 & 0 & 0 & - \\
 Gambeson & 10 & 3 & 6 & +5 & 0 & 5 GP & medium \\
 \rowcolor{fallowtint}
 Padded Armor & 12 & 6 & 8 & +5 & -1 & 2 GP & large \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Metallic}}} \\
 \midrule
-Chain Shirt & 8 & 3 & 5 & +5 & 0 & 20 GP & medium \\
+Chain Shirt & 8 & 3 & 5 & +5 & 0 & 20 GP & large \\
 \rowcolor{fallowtint}
-Hauberk & 10 & 5 & 6 & +5 & -1 & 30 GP & medium \\
+Hauberk & 10 & 5 & 6 & +5 & -1 & 30 GP & large \\
 Brigandine & 12/8 & 8 & 8 & +6 & -2 & 50 GP & large \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Rigid and Metallic}}} \\
@@ -328,6 +312,23 @@ A high-quality padded armor would be much more expensive but would improve resis
 \textbf{Half Armor: } is a lighter version of full armor. Several of the more restrictive pieces are removed so that the armor remains medium. As it retains the steel breastplate, it is very good against projectiles. Only those who find a gap in the armor will be able to injure the wearer. This type of armor is often chosen by archers in open field battles.
 
 \textbf{Full Armor: } is the traditional armor of the medieval knight. Those who wear such armor want to survive a rain of steel or expend all their energy in attacking while letting the armor defend them. It comes standard with gauntlets and a closed helmet, providing superior coverage and preventing almost any attack from hitting a vulnerable point. Its thick steel plates offer high resistance against all types of damage, and its rigidity is so high that it is common for more fragile weapons, like swords, to break upon impact. Adventuring in this armor is extremely tiring. There is an even more exaggerated version of this armor, which is the reinforced one.
+
+\subsection{Shields}
+
+The shields here are equipped with a strap around the shoulder and a handle for the hand. They do not require a strap from a container, since they carry their own, but they add their own burden separately. Shields can be equipped and unequipped with a standard action, which means just sliding it to the back or back to the front. Throwing the shield out also costs a standard action.
+
+\end{multicols}
+\begin{stattable}{Shields}{@{}lcccccc@{}}
+Name & Burden & Cover & RES & Insulation & Bulk & Value \\
+\midrule
+\textbf{Wooden Shield} & -1 & +2 & 20 & 10 & large & 1 GP \\
+\rowcolor{fallowtint}
+\textbf{Metal Shield} & -1 & +2 & 30 & 10 & large & 15 GP \\
+\textbf{Wooden Tower*} & -2 & +4 & 20 & 15 & large & 2 GP \\
+\end{stattable}
+Body shields are marked with * in the table and can provide total cover.
+
+\begin{multicols}{2}
 
 \section{Smithing and maintenance}
 
@@ -401,14 +402,16 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \section{Containers and Burden}
 
-Items can be categorized as small, medium, large, and cargo. 
+Items can be categorized as small, medium, large. 
 
 \begin{itemize}
-    \item Small items are the kind of thing you can hold in your hand. Tools, small weapons, coins, flasks and similar items are small. They tend to stay under 0.5 kg in weight and 0.5 liters in volume. It is possible to have a bundle of very small items that together are considered a small item, such as a bundle of arrows or a bag of coins.
-    \item Medium items are normally cumbersome. They include one-handed weapons, folded tents, books, large bottles, etc. They tend to stay under 2 kg in weight and 2 liters in volume.
-    \item Large items are at the limit of what can be carried. They include two-handed weapons, armors, boxes, tinder. They tend to stay under 10 kg in weight and 10 liters in volume.
-    \item Cargo items are oversized items that require special handling and transportation, such as a horse or a cart. Their actual size is counted as weight and volume.
+    \item Small items are the kind of thing that fits in a hand. Small tools, small weapons, coins, flasks and similar items are small. They tend to stay under 0.5 kg in weight and 0.5 liters in volume. 
+    \item Medium items are normally cumbersome. They include one-handed weapons, books, large bottles, etc. They tend to stay under 2 kg in weight and 2 liters in volume.
+    \item Large items are too big to be carried in a backpack. They are carried in hand, slung or lashed outside the backpack. These include most two-handed weapons, shields, pots, shovels. They can also be carried in vehicles and animals. 
+    \item Cargo: counted in number of large items. These can only be placed in vehicles.
 \end{itemize}
+
+\textbf{Hands:} Items held in hands can be of any size. 
 
 \textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do no need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and over.
 
@@ -419,25 +422,34 @@ Items can be categorized as small, medium, large, and cargo.
 \item \textbf{Over}: -3 for burden penalties. Character is considered lame.
 \end{proplist}
 
-\textbf{Slot size and stacking:}Each container has a number of slots, which can each accomodate an item or stack of items. Slots are of one of three different kinds: small, medium, and large. A small slot can hold a small item. A medium slot can hold a medium item or a stack of 5 small ones. A large slot can hold a large item, a stack of 5 medium items, or a stack of 25 small items. Only identical items can be stacked together.
 
-\begin{stattable}{Containers}{@{}lcccc@{}}
-Name & Slots & Type & Burden & Cost \\
+\textbf{Slot size and stacking:} Each container has a number of slots, which can each accomodate an item or stack of items. Slots can be small, medium or large. A small slot can hold a small item. A medium slot can hold a medium item or a stack of 5 small ones. A large slot can hold a large item, a stack of 5 medium items, or a stack of 25 small items. Only identical items can be stacked together.
+
+\textbf{Drawing items in combat:} taking items from container slots takes 8 AP. Quick slots are used for quick draw items. These can be drawn within a standard action during combat. All small and medium items can be used as quick draw as long as they are in a quick slot. 
+
+\textbf{Large:} are used for large items. They require two standard actions to be readied during combat. 
+
+\begin{stattable}{Containers}{@{}lccccc@{}}
+Name & Quick & Medium & Large & Burden & Cost \\
 \midrule
-Belt* & 4 & light & light & 1 GP \\
+Belt & 4 medium & 0 & 0 & light & 1 GP \\
 \rowcolor{fallowtint}
-Backpack & 12 & medium & medium & 5 SP \\
-Large Backpack** & 12 & large & heavy & 1 GP \\
+Bandolier & 8 small & 0 & 0 & light & 3 GP \\
+Backpack & 0 & 12 & 2 & medium & 5 SP \\
 \rowcolor{fallowtint}
-Sled & 200 & Cargo & over & 2 SP \\
-One-Horse Cart & 500 & Cargo & over & 30 GP \\
+Large Backpack & 0 & 16 & 4 & heavy & 1 GP \\
+Saddle* & 2 large & 8 & 4 & light & 4 GP \\
 \rowcolor{fallowtint}
-Two-Horse Cart & 1000 & Cargo & over & 60 GP \\
+Sled & 0 & 0 & 20 & over & 2 SP \\
+One-Horse Cart* & 0 & 0 & 100 & heavy & 30 GP \\
+\rowcolor{fallowtint}
+Two-Horse Cart* & 0 & 0 & 200 & heavy & 60 GP \\
 \end{stattable}
-*items stored in the belt can be used with a standard action of prestidigitation
-** STR 15 or size 4 reduces penalty to medium
+* the burden applies to the animal that is carrying it.
 
-A character can use only one backpack and one belt at a time.
+A character can use only one backpack, one bandolier and one belt at a time.
+
+\textbf{}
 
 \section{Tools of War}
 
@@ -469,10 +481,10 @@ Poisons can be delivered a through cutting injuries, ingestion, or inhalation. E
 
 
 \begin{proplist}
-    \item \textbf{Anticoagulant Poison:} adds +1 bleed to any attack. 5 GP for a vial with 10 applications and light weight.
-    \item \textbf{Paralytic Poison:} DL 5 health to avoid becoming immobile within 20 turns on a graze or in 10 turns on a miss. Paralysis lasts for 1 hour/ 4 hours respectively.
-    \item \textbf{Necrotic Poison:} Character must make a DL 8 Health test in the next exploration turn. On a miss, they receive 5 IL. On a graze, 2. The effect does not wear off until a hit is scored.
-    \item \textbf{Soporific Poison:} Inhalation or ingested. Target must make a DL 5 Health test. On a graze or miss, after 2 minutes, the target falls Unconscious for 1 hour. The target will awake if damaged, but will fall asleep again once danger ends.
+    \item \textbf{Anticoagulant Poison:} adds +1 bleed to any attack. 5 GP for a vial with 10 applications. \textbf{Bulk:} small
+    \item \textbf{Paralytic Poison:} DL 5 health to avoid becoming immobile within 20 turns on a graze or in 10 turns on a miss. Paralysis lasts for 1 hour/ 4 hours respectively. \textbf{Bulk:} small
+    \item \textbf{Necrotic Poison:} Character must make a DL 8 Health test in the next exploration turn. On a miss, they receive 5 IL. On a graze, 2. The effect does not wear off until a hit is scored. \textbf{Bulk:} small
+    \item \textbf{Soporific Poison:} Inhalation or ingested. Target must make a DL 5 Health test. On a graze or miss, after 2 minutes, the target falls Unconscious for 1 hour. The target will awake if damaged, but will fall asleep again once danger ends. \textbf{Bulk:} small
 \end{proplist}
 
 \subsection{Traps}
@@ -480,7 +492,7 @@ Poisons can be delivered a through cutting injuries, ingestion, or inhalation. E
 These make a position costly to hold or cross, forcing a turtling enemy to move.
 
 \begin{proplist}
-\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 10 piercing damage to the leg on a graze or 15 on a miss. \textit{Cost:} 1 SP covers one space.\textit{Bulk:} small.
+\item \textbf{Caltrops:} A scattered space. Balance DL 3 to avoid taking 10 piercing damage to the leg on a graze or 15 on a miss. \textit{Cost:} 1 SP covers one space.\textit{Bulk:} medium.
 % \item Stakes - Sharpened fixed stakes. Work like a spear's braced attack. 2 SP per space. medium.
 \item \textbf{Tripwire:} An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5. \textit{Cost:} 1 CP. \textit{Bulk:} small.
 % \item \textbf{Pit:} Detection test against a DL to avoid falling in. 
@@ -504,17 +516,17 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
 \subsection{\magic Magical Items}
 
 \begin{proplist}
-    \item Alchemical Torch - Allows the use of light spells - Weight 2 - 12 GP.
-    \item Superior Alchemical Torch - An alchemical torch that amplifies magic once - Weight 2 - 50 GP.
-    \item Alchemical Prism - Allows the channeling of light - 150 GP.
-    \item Electrite - A magically activated electrical battery stone. Deals 10 base electric damage. 20 charges - Weight 2 - 30 GP.
-    \item Superior Electrite - every spell is amplified once automatically. 20 charges - Weight 2 - 400 GP
-    \item Magnetite - Can be placed into gear to give magnetic properties. - 10 GP.
-    \item Fire Stone - Allows the production of fire from it, dealing 10 base burn damage. - 30 GP - carries 20 charges.
-    \item Flamethrower - A staff mounted with a fire stone to apply pressure to the flames, deals 15 base burn damage. - 50 GP.
-    \item Venomous Frog Corpse - Produces anticoagulant poison. - 5 GP - Weight 1.
-    \item Soul Stone - Used to preserve souls - 40 GP.
-    \item Condenser - Allows the extraction of water from the air. - Weight 2 - 5 GP.
+    \item Alchemical Torch - Allows the use of light spells - small - 12 GP.
+    \item Superior Alchemical Torch - An alchemical torch that amplifies magic once - small - 50 GP.
+    \item Alchemical Prism - Allows the channeling of light - small - 150 GP.
+    \item Electrite - A magically activated electrical battery stone. Deals 10 base electric damage. 20 charges - small - 30 GP.
+    \item Superior Electrite - every spell is amplified once automatically. 20 charges - small - 400 GP
+    \item Magnetite - Can be placed into gear to give magnetic properties. - small - 10 GP.
+    \item Fire Stone - Allows the production of fire from it, dealing 10 base burn damage.  - small - 30 GP - carries 20 charges.
+    \item Flamethrower - A stick mounted with a fire stone to apply pressure to the flames, deals 15 base burn damage. - medium - 50 GP.
+    \item Venomous Frog Corpse - Produces anticoagulant poison. - 5 GP - small.
+    \item Soul Stone - Used to preserve souls - small - 40 GP.
+    \item Condenser - Allows the extraction of water from the air. - small - 5 GP.
     % \item Sharpening Sheath - Reduces the cost of the Sharpen spell on a weapon within the sheath to 1 AP - Weight 2 - 50 GP.
 \end{proplist}
 
@@ -528,6 +540,7 @@ Potions add an effect to the character for a certain duration. The effects of po
     \item \magic \textbf{Simple Healing:} heals 5 extra IL over 1 short rest, 2 GP. small.
     \item \magic \textbf{Medium Healing:} heals 10 extra IL over 1 short rest, 6 GP. small.
     \item \magic \textbf{Good Healing:} heals 15 extra IL over 1 short rest, 16 GP. small.
+    \item \magic \textbf{Darkseeing:} potion that allows seeing in the dark for 1 ET, 8 GP. small.
     \item \textbf{Bandages:} useful for medicine. 10 charges. 1 SP. small.
     \item \textbf{Splint:} useful for medicine. 5 CP or improvised. small.
     \item \textbf{Anti-septic:} reduces infection exposure by 3 when applied with a bandage. 10 charges. 1 SP. small.
@@ -543,28 +556,30 @@ Potions are carried in vials.
 \subsection{Utility and Survival}
 
 \begin{proplist}
-    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 1 GP - medium
-    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 2 GP - large
-    \item Hammock: Reduces exposure to insects by 1. - 5 SP, medium
+    \item Coin Pouch: holds up to 20 coins - small
+    \item Oilcloth: a personal tent that counts as shelter against rain. 5 SP - medium
+    \item Small Tent: Allows you to set up camp without skill. Has space for 2 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 1 GP - large
+    \item Large Tent: Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1 - 2 GP - 4x large
+    \item Hammock: Reduces exposure to insects by 2. - 5 SP, medium
     \item Bedroll: Reduces cold exposure by 2. 4 SP. Medium
     \item Oil Lamp: Gives 5m light radius when lit, requires an oil flask to burn for 8 hours. 1 GP - small
     \item Flint: Allows lighting a campfire within minutes, no test required. 2 SP - small
-    \item Firewood: Dry wood ready to burn for 4 hours. - medium. Improvised.
+    \item Firewood: Dry wood ready to burn for 4 hours. - large. Improvised.
     \item Rope: Useful item. 1 SP per meter. 1 Small per 5 meters.
-    \item Canteen: Holds 2L of water. 1 SP. Small.
-    \item Jug: Holds 10L of water.  2 SP. Large.
+    \item Canteen: Holds 2L of water. 1 SP. Medium.
+    \item Jug: Holds 5L of water.  2 SP. Large.
     \item Shovel: Used for digging. 1 SP. Large.
-    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 SP. Medium
+    \item Pot: Used to boil water and cook up to 10 portions, improving the preparation test by 2.  5 SP. Large
     \item Vial: Holds 50ml of any liquid. 1 SP. small
     \item Chalk: makes being followed trivial in the marked path. It is spent in one ET and lasts until it rains. 5 CP - small
     \item Insect repellant: Reduces exposure to insects by 2. lasts for 1 sleep. 1 SP or Improvised. small.
     \item Sharpening Stone - A sharpening stone. 2 SP. small
     \item Fur Cloak - Improves resistance to cold exposure by +2. 1 GP. medium
-    \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP.
+    \item Muffled Boots - +2 bonus to stealth against hearing. 1 GP. medium
     \item Camouflage for X - where X is the terrain. Gives +3 to Stealth vs vision outside combat. -3 penalty in combat in plain sight. 2 SP. large.
-    \item Snow shoes - cancels penalty for walking in the snow. 1 GP.
+    \item Snow shoes - cancels penalty for walking in the snow. 1 GP. medium
     \item Grappling hook - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 2 SP.
-    \item Armor repair kit - entry in ranged weapons. Climbing DL 3 anywhere the hook sticks. 2 GP.
+    \item Armor repair kit - allows repairing armor in the field. 2 GP. - medium
 
 \end{proplist}
     
