@@ -172,6 +172,11 @@
   \end{itemize}
 }
 
+% gitem{Name}{Description}{Cost}{Bulk}: one entry of an item list inside a
+% proplist. Keeps name, description, cost and bulk in the same order and
+% style across every gear list.
+\newcommand{\gitem}[4]{\item \textbf{#1:} #2 {\small\mbox{\statlabel{Cost:} #3}\enspace\mbox{\statlabel{Bulk:} #4}}}
+
 % dnote: a Designer's Note callout. The framed package cannot break a box
 % across multicols columns, so — like stattable — it closes the two-column
 % flow and sits at full width rather than squeezed into one column.
