@@ -1,7 +1,7 @@
 ---
 name: size-table
 description: >-
-  Quick reference for the Fallow size system — the size 1–7 table (DM, SM, MM,
+  Quick reference for the Fallow size system — the size 1–7 table (DM, SM, RM,
   VM), skill modifiers by size, Standard Deflection, and creature/weapon/gear
   scaling rules. Use whenever a question involves creature size, scaling a
   creature or weapon up or down, size-based hit difficulty (SD), or how size
@@ -21,7 +21,7 @@ if exactness matters — the user edits these tables actively.
 |---|---|---|---|---|---|---|---|
 | DM (damage) | 0.5 | 0.75 | 1 | 1.5 | 2 | 3 | 4 |
 | SM (skill) | −2 | −1 | 0 | +1 | +2 | +3 | +4 |
-| MM (movement) | 0.5 | 1 | 1 | 1.5 | 1.5 | 2 | 2.5 |
+| RM (reach) | 0.5 | 1 | 1 | 1.5 | 1.5 | 2 | 2.5 |
 | VM (volume/weight) | 0.1 | 0.33 | 1 | 3.33 | 10 | 33.3 | 100 |
 
 Size 3 = human baseline (≈50 kg). Weight scales ×3 per category, ×10 per 2
@@ -32,7 +32,7 @@ categories. Reference points: size 1 ≈ cat (5 kg), size 5 ≈ horse (500 kg).
 - **DM** — multiplies all STR-derived values: damage (weapon plain numbers and
   STR contributions), TGH, armor defenses, abilities, and STR-scaling spells.
 - **SM** — added to/subtracted from skills per the skill modifier table below.
-- **MM** — multiplies all movement speeds AND weapon ranges.
+- **RM** — multiplies all weapon ranges.
 - **VM** — multiplies character weight, item weight when scaling, and consumable
   doses (a potion dose = 1× VM of the size-3 content).
 
@@ -70,7 +70,7 @@ AGI** (DM more than compensates in raw output). Grow!/Shrink! abilities encode
 this: +1 size = −3 STR −1 AGI; −1 size = +3 STR +1 AGI.
 
 **Scaling a weapon:** tables are human-sized (size 3) baselines. Multiply damage
-and RES by **DM**, reach/range by **MM**.
+and RES by **DM**, reach/range by **RM**.
 
 **Wielding a weapon of the wrong size:**
 - One category too large: +1 AP on all attacks with it, and all STR

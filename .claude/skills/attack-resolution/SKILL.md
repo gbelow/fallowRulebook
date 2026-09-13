@@ -27,7 +27,7 @@ Rules change as the user edits the book. Before resolving:
 
 Ask for (or assume defaults and state them) per combatant:
 
-**Attacker:** STR, DEX, size (→ DM/SM/MM), Melee or Ranged proficiency level,
+**Attacker:** STR, DEX, size (→ DM/SM/RM), Melee or Ranged proficiency level,
 Strike/Accuracy skill bonus, weapon + which attack form (row in the weapon
 table), attack variation, armor/condition of the weapon, relevant afflictions.
 
@@ -53,7 +53,7 @@ Skill value = proficiency bonus + skill bonus (talent gates XP cost, not value).
 | Reflex | Ranged + Awareness (+ −1×SM) |
 
 Size table (size 1–7): DM 0.5/0.75/1/1.5/2/3/4 · SM −2/−1/0/+1/+2/+3/+4 ·
-MM 0.5/1/1/1.5/1.5/2/2.5.
+RM 0.5/1/1/1.5/1.5/2/2.5.
 
 ## 3. Assemble the attack roll
 
@@ -178,7 +178,7 @@ Highest tier whose threshold the damage meets or exceeds. Notes:
 - **Drag and Push** (braced and hook only, and only when the attack's
   additional damage effect applies): no second roll. Compare the attacker's
   **Strength skill** — 2 × (STR − 10), +5 per size category — against the
-  target's. Higher Strength moves the target one space × MM; 5 or more higher
+  target's. Higher Strength moves the target one space × RM; 5 or more higher
   makes them prone. 2 SOP buys +1 Strength, so prone costs 10 SOP at equal
   Strength. Hooking the legs adds +3 against jumping or running targets, at
   the cost of the leg location's 10 IL damage cap. One size category is worth

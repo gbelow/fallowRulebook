@@ -25,7 +25,7 @@ review devotion abilities
 
 breaking armor too weak?
 
-extend spell, MMs strangely scaled
+extend spell, RMs strangely scaled
 
 
 # CHANGE IN THE APP
