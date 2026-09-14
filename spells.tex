@@ -13,14 +13,15 @@
   effect range/.store in=\spellEffectRange,
   effect area/.store in=\spellEffectArea,
   duration/.store in=\spellDuration,
+  damage/.store in=\spellDamage,
   enhance/.store in=\spellEnhance,
   effect/.store in=\spellEffect,
 }
 \newcommand{\spellrow}[2]{\ifdefempty{#2}{}{\statlabel{#1} #2 \\}}
 \newcommand{\spell}[2]{%
   \pgfkeys{/spell/.cd, cost=, knowledge=, requirements=, dl=, type=,
-    cast range=, cast area=, effect area=, effect range=, effect area=,
-    duration=, enhance=, effect=, #2}%
+    cast range=, cast area=, effect range=, effect area=,
+    duration=, damage=, enhance=, effect=, #2}%
   \statrule
   {\sffamily\bfseries\large #1} \\
   \spellrow{Cost:}{\spellCost}
@@ -33,6 +34,7 @@
   \spellrow{Effect range:}{\spellEffectRange}
   \spellrow{Effect area:}{\spellEffectArea}
   \spellrow{Duration:}{\spellDuration}
+  \spellrow{Damage:}{\spellDamage}
   \spellrow{Effect:}{\spellEffect}
   \spellrow{Enhance:}{\spellEnhance}
 }
@@ -136,7 +138,7 @@ The art of giving life to objects and manipulating life in them. The power and e
 
 
 \spell{Detonate Explosive}{%
-cost={1 charge, 2 AP + 1 STA}, knowledge=Alchemy 2, requirements=grenade, dl=0, type=Effect, cast range=15m, duration=instant,
+cost={2 AP + 1 STA}, knowledge=Alchemy 2, requirements=grenade, dl=0, type=Effect, cast range=15m, duration=instant,
 effect={Detonates an alchemical grenade that is already charged, causing it to deal its damage and effects.}}
 
 \spell{Smoke Explosive}{%
@@ -144,12 +146,12 @@ cost={1 grenade, 4 AP + 1 STA}, knowledge=Alchemy 3, requirements=grenade, dl=5,
 effect={Loads explosives with the effect of producing smoke when activated, upon contact with fire or on impact. The grenade produces black fog.}}
 
 \spell{Shock Explosive}{%
-cost={1 grenade, 4 AP + 1 STA}, knowledge=Alchemy 3, requirements=grenade, dl=5, type=Effect, cast range=touch, effect area=3m xRM radius, duration=charged,
-effect={Loads explosives with alchemical energy to explode when activated, upon contact with fire or on impact, dealing 20xDM of blunt damage.}}
+cost={1 grenade, 4 AP + 1 STA}, knowledge=Alchemy 3, requirements=grenade, dl=5, type=Effect, cast range=touch, effect area=3m xRM radius, duration=charged, damage=20xDM blunt,
+effect={Loads explosives with alchemical energy to explode when activated, upon contact with fire or on impact.}}
 
 \spell{Incendiary Explosive}{%
-cost={1 grenade, 4 AP + 1 STA}, knowledge=Alchemy 3, requirements=grenade, dl=5, type=Effect, cast range=touch, effect area=3m xRM radius, duration=charged,
-effect={Transforms the explosive into a sticky substance that ignites upon contact with fire, dealing 10xDM burn damage until extinguished.}}
+cost={1 grenade, 4 AP + 1 STA}, knowledge=Alchemy 3, requirements=grenade, dl=5, type=Effect, cast range=touch, effect area=3m xRM radius, duration=charged, damage=10xDM burn,
+effect={Transforms the explosive into a sticky substance that ignites upon contact with fire and burns until extinguished.}}
 
 \spell{Extinguish Flames}{%
 cost=2 AP, knowledge=Alchemy 1, requirements=Alchemy 2, dl=0, type=Environmental, cast range=touch, duration=instant, enhance=Enhancing increases the amount of spaces by 1.,
@@ -158,8 +160,8 @@ effect={Extinguishes the flames of 1 x RM space.}}
 % \spell{Start Fire}{ 1 charge, 3 AP + 3 STA}{Alchemy 1}{igneous stone}{5}{Touch}{Environmental}{instant}{ Sets fire to any combustible material it can touch. }
 
 \spell{Flamethrower}{%
-cost={6 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=Projectile, effect area={spray, 4m xRM, 60 degrees}, duration=sustained, cast range=touch,
-effect={Creates flames from a flamethrower, dealing 20xDM as burn damage as a spray explosion in front of the caster. The flamethrower can be sustained, dealing damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage.}}
+cost={6 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=Projectile, effect area={spray, 4m xRM, 60 degrees}, duration=sustained, cast range=touch, damage=20xDM burn,
+effect={Creates flames from a flamethrower as a spray explosion in front of the caster. The flamethrower can be sustained, dealing damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage.}}
 
 % \spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{5}{ Long I }{Touch}{instant}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
 
@@ -187,12 +189,12 @@ effect={Performs a sharpening action on a weapon.}}
 % \spell{Galvanic Corrosion}{3 AP + 1STA or 1 exhaustion for 4kg}{Alchemy 2}{electrite}{5}{melee, target}{Touch}{charged, 1 turn}{ Rusts an object that is susceptible to rust. Leaves armors pockmarked and weapons smaller than size 5 without wire. It is necessary to hit an attack against an object for the effect to occur.}
 
 \spell{Sustained Lightning}{%
-cost={4 AP + 1 STA, 1 charge}, knowledge=Alchemy 4, requirements=electrite, dl=8, type=Projectile, cast range=9mxRM, duration=sustained,
-effect={The caster attempts to create a sustained electric arc between themselves and a target, causing the base damage of the electrite x2 xDM electric damage. Once the spell hits, it ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}}
+cost={4 AP + 1 STA, 1 charge}, knowledge=Alchemy 4, requirements=electrite, dl=8, type=Projectile, effect range=9mxRM, duration=sustained, damage=25 xDM electric,
+effect={The caster attempts to create a sustained electric arc between themselves and a target. Once the spell hits, it ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}}
 
 \spell{Taser}{%
-cost=2 AP +1 charge, knowledge=Alchemy 1, requirements=electrite, dl=0, type=Effect, cast range=touch, duration=charged,
-effect={Charges an object of electrite with electricity that discharges on the first object it comes into contact with, adding the electric damage of the material to the attack.}}
+cost=2 AP +1 charge, knowledge=Alchemy 1, requirements=electrite, dl=0, type=Effect, cast range=touch, duration=charged, damage=15 xDM electric,
+effect={Charges an object of electrite with electricity that discharges on the first object it comes into contact with, adding its damage to the attack.}}
 
 
 % \spell{Phantom Sound}{3AP + 2 STA}{ 1}{}{15}{30m}{Environmental}{instant}{The wizard makes a sound propagate from a point at a distance they do not need to see, only pointing in the general direction. The target must make a perception test to try to immediately know it is an illusion; otherwise, they will react normally to the sound. The sound can be as loud as a scream.}
@@ -207,8 +209,8 @@ cost=3 AP+1 STA, knowledge=Alchemy 3, requirements=Alchemical Prism, dl=3, type=
 effect={Absorbs all light entering an area, making it difficult for those outside to see what is inside. Makes anyone inside invisible to those outside, who only see a large black circle.}}
 
 \spell{Lasers}{%
-cost=5 AP + 2 STA, knowledge=Alchemy 4, requirements=Alchemical Prism, dl=7, type=Projectile, effect range=200m xRM, duration=sustained,
-effect={Converges the rays of light from a large light source into a single point at a distance, causing 15xDM radiant damage to the target. The laser is considered a projectile.}}
+cost=5 AP + 2 STA, knowledge=Alchemy 4, requirements=Alchemical Prism, dl=7, type=Projectile, effect range=200m xRM, duration=sustained, damage=15xDM radiant,
+effect={Converges the rays of light from a large light source into a single point at a distance. The laser is considered a projectile.}}
 
 % \spell{Invisibility}{3 AP +1 STA}{Alchemy 4}{ Alchemical Prism}{12}{self}{Environmental}{sustained}{Bends the rays of light around the caster during the duration to make them invisible.}
 
@@ -498,12 +500,12 @@ cost=1 ET or +1 exhaustion, knowledge=Shamanism 4, dl=5, type=Environmental, cas
 effect={Draws or writes a simple and blurred message in the sky that can be seen at night within the spell's range.}}
 
 \spell{Call Lightning}{%
-cost=5 AP + 1 STA, knowledge=Shamanism 4, dl=5, type=Projectile, cast range=directly from 100m xRM, duration=instant,
-effect={Summons a lightning bolt to a specific target within the electrical storm as a projectile. The lightning causes 20xDM electric damage. }}
+cost=5 AP + 1 STA, knowledge=Shamanism 4, dl=5, type=Projectile, cast range=directly from 100m xRM, duration=instant, damage=20xDM electric,
+effect={Summons a lightning bolt to a specific target within the electrical storm as a projectile.}}
 
 \spell{Storm of Lightning}{%
-cost=8 AP +2 STA, knowledge=Shamanism 5, requirements=Thunderstorm, dl=10, type=Environmental, cast range=100m, effect area=15m radius on the ground, duration=1 ET,
-effect={Focuses lightning from a thunderstorm into a small area. Every beginning of round, a lightning that causes 20xDM electric damage will fall on anyone in the area. The projectile is defended by a DL 7 reflex test.}}
+cost=8 AP +2 STA, knowledge=Shamanism 5, requirements=Thunderstorm, dl=10, type=Environmental, cast range=100m, effect area=15m radius on the ground, duration=1 ET, damage=20xDM electric,
+effect={Focuses lightning from a thunderstorm into a small area. Every beginning of round, a lightning falls on anyone in the area. The projectile is defended by a DL 7 reflex test.}}
 
 \spell{Freeze Water}{%
 cost=5 AP + 1 STA, knowledge=Shamanism 3, dl=3, type=Environmental, cast range=15m, effect area=area of 15 spaces, duration= 1 ET,
@@ -514,8 +516,8 @@ cost=8 AP + 1 STA, knowledge=Shamanism 2, dl=3, type=Environmental, cast range=1
 effect={Condenses water in the air over a large area, creating a thick fog that hinders visibility. The fog stays until blown away or the combat ends.}}
 
 \spell{Rain}{%
-cost=1 ET + 2 Exhaustion, knowledge=Shamanism 4, dl=5, type=Environmental, cast range=100m, effect area=radius of 45m, duration=1 ET,
-effect={If there are enough clouds, converts them to a location and makes it rain there, soaking everything. crits can cause hail to fall, dealing 10 cutting damage per round.}}
+cost=1 ET + 2 Exhaustion, knowledge=Shamanism 4, dl=5, type=Environmental, cast range=100m, effect area=radius of 45m, duration=1 ET, damage=10 cutting,
+effect={If there are enough clouds, converts them to a location and makes it rain there, soaking everything. Crits can cause hail to fall, dealing damage every round.}}
 
 \spell{Landslide}{%
 cost=8 AP + 1 STA, knowledge=Shamanism 3, dl=3, type=Environmental, cast range=100m, effect area=radius of 5m, duration=instant,
