@@ -86,11 +86,7 @@ Spells require using a focus surge to be cast in combat scenes.
 
 \textbf{Concentration:} All sorcery tests require concentration. No other action or reaction can be performed while concentrating. Being interrupted causes the loss of concentration. Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. Losing concentration causes all AP and STA spent to be lost. 
 
-\textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. The cost must be paid at the beginning of the next round to maintain the spell effect.
 
-\textbf{Charged:} can be charged into something. The charge can be released when a trigger is activated if there is one. The charge lasts until the end of the combat for spells that cost AP or a number of ETs, for those that last ETs. If the charge is not used within the duration, it dissipates. 
-
-\textbf{Curse:} are spells that stay active until the target has hit or crit on a test to shrug it off. Tests to resist curses are made automatically every start of round or start of ET.
 
 \textbf{Delayed Spells:} Any spell can be delayed, meaning that the casting can be completed, but the release is postponed. The character must concentrate on the spell until the release, which can be triggered by a previously prepared action. If a trigger does not occur, remake the sorcery test every turn to keep the spell ready.
 
@@ -105,7 +101,7 @@ Spells require using a focus surge to be cast in combat scenes.
 
 Enhancements are modifications that casters can make to their spells to make them more powerful or better suited to their needs. Each of them have a cost in SOPs to be used.
 
-\textbf{Accelerate Spell:} Spend 4 SOPs to Accelerate a spell for 1 AP. It can be used multiple times to reduce the sorcery time to up to half the original value. It is possible to accelerate spells to avoid opportunity attacks.\\
+\textbf{Quicken Spell:} Increases spell DL by 4 SOPs to allow it to be cast during any surge and not cause oportunity attacks. \\
 
 \textbf{Extend Spell:} Spend 3 SOPs to increase the casting range of a spell by +100\%, then +200\%, +300\%, and so on in progression.\\
 
@@ -120,11 +116,10 @@ Enhancements are modifications that casters can make to their spells to make the
 The types of spells are:
 
 \begin{proplist}
-\item \textbf{Environmental}: The spell alters the environment. They have customized enhancements.
-\item \textbf{Effect}: Spells that directly affect the target and have various effects. They have customized enhancements. 
-\item \textbf{Psychic}: Spells that directly affect the target and have psychic effects.
-\item \textbf{Projectile}: Spells that function as projectiles, using the accuracy skill as the DL.
-\item \textbf{Touch}: Spells that function as strikes, using the striking skill as the DL.
+    \item \textbf{Instant:} Happens as the casting is complete.
+    \item \textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. The cost must be paid at the beginning of the next round to maintain the spell effect.
+    \item \textbf{Charged:} activates an object that stays charged. The charge can be released when a trigger is activated if there is one. The charge lasts until the end of the combat for spells that cost AP or a number of ETs, for those that last ETs.
+    \item \textbf{Curse:} are spells that stay active until the target has hit or crit on a test to shrug it off. Tests to resist curses are made automatically every start of round or start of ET.
 \end{proplist}
 
 \section{Spell Design Principles:}
@@ -264,8 +259,8 @@ cost=4 AP, knowledge=Animancy 2, dl=0, type=Psychic, cast range=15m, duration=cu
 effect={Causes someone who is tired or exhausted to fall asleep. This is only usable in social or stealth scenes.}}
 
 \spell{Soothe}{%
-cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse, test={Charisma vs insight}, miss={+4 DL to persuasion and deception against them}, graze={+2 DL to persuasion and deception against them}, hit={notices the spell}, crit={notices the spell},
-effect={A psychic attempt to soothe a target's emotions and make them less suspicious. The effect lasts for the rest of the scene or until the target becomes enraged or afraid.}}
+cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse, test={Charisma vs insight}, miss={+3 DL to persuasion and deception against them}, graze={+2 DL to persuasion and deception against them}, hit={notices the spell}, crit={notices the spell},
+effect={A psychic attempt to soothe a target's emotions and make them less suspicious. The effect lasts until the target hits or crits in a social action or until it becomes enraged or afraid.}}
 
 \spell{Charm}{%
 cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse, test={Charisma vs insight}, miss={distracted}, graze={distracted}, hit={notices the spell}, crit={notices the spell},
@@ -534,7 +529,7 @@ cost=8 AP + 1 STA, knowledge=Shamanism 3, dl=3, type=Environmental, cast range=1
 effect={Heats and cools a solid, causing expansion and contraction in adjacent planes of the solid, causing it to break. This technique works well on crystalline structures, rocks, and especially wet soil. One round later, it triggers a landslide or snow that damages anyone still in the area.}}
 
 \spell{Strong Wind}{%
-cost=6 AP + 1 STA, knowledge=Shamanism 2, dl=5, type=Environmental, cast range=self, effect area={radius of 9m, length of 30m}, duration=1 round,
+cost=6 AP + 1 STA, knowledge=Shamanism 2, dl=5, type=Environmental, cast range=self, effect area={radius of 9m, length of 30m}, duration=instant,
 effect={Produces an entropic field that facilitates the movement of wind in one direction, causing a strong gust. Removes fog, smoke and dust.}}
 
 % \spell{Call Wave}{5 AP + 6 STA}{ 3}{}{18}{60m, semicircle with a radius of 9/12m}{Explosion}{1 turn delay}{Pulls a wave from a body of water. It hits all who remain in the area and attempts to pull them into the water with a pulling action using the spell's DL instead of the character's Strength.}
