@@ -14,6 +14,11 @@
   effect area/.store in=\spellEffectArea,
   duration/.store in=\spellDuration,
   damage/.store in=\spellDamage,
+  test/.store in=\spellTest,
+  miss/.store in=\spellMiss,
+  graze/.store in=\spellGraze,
+  hit/.store in=\spellHit,
+  crit/.store in=\spellCrit,
   enhance/.store in=\spellEnhance,
   effect/.store in=\spellEffect,
 }
@@ -21,7 +26,7 @@
 \newcommand{\spell}[2]{%
   \pgfkeys{/spell/.cd, cost=, knowledge=, requirements=, dl=, type=,
     cast range=, cast area=, effect range=, effect area=,
-    duration=, damage=, enhance=, effect=, #2}%
+    duration=, damage=, test=, miss=, graze=, hit=, crit=, enhance=, effect=, #2}%
   \statrule
   {\sffamily\bfseries\large #1} \\
   \spellrow{Cost:}{\spellCost}
@@ -35,7 +40,12 @@
   \spellrow{Effect area:}{\spellEffectArea}
   \spellrow{Duration:}{\spellDuration}
   \spellrow{Damage:}{\spellDamage}
+  \spellrow{Test:}{\spellTest}
   \spellrow{Effect:}{\spellEffect}
+  \spellrow{Miss:}{\spellMiss}
+  \spellrow{Graze:}{\spellGraze}
+  \spellrow{Hit:}{\spellHit}
+  \spellrow{Crit:}{\spellCrit}
   \spellrow{Enhance:}{\spellEnhance}
 }
 
@@ -78,7 +88,7 @@ Spells require using a focus surge to be cast in combat scenes.
 
 \textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. The cost must be paid at the beginning of the next round to maintain the spell effect.
 
-\textbf{Charged:} can be charged into something and released when a trigger is activated. The charge lasts until the end of the combat for spells that cost AP or a number of ETs, for those that last ETs. If the charge is not used within the duration, it dissipates. 
+\textbf{Charged:} can be charged into something. The charge can be released when a trigger is activated if there is one. The charge lasts until the end of the combat for spells that cost AP or a number of ETs, for those that last ETs. If the charge is not used within the duration, it dissipates. 
 
 \textbf{Curse:} are spells that stay active until the target has hit or crit on a test to shrug it off. Tests to resist curses are made automatically every start of round or start of ET.
 
@@ -220,9 +230,9 @@ effect={Converges the rays of light from a large light source into a single poin
 cost=3AP or +1 exhaustion, knowledge=Alchemy 1, requirements=alchemical torch, dl=0, type=Environmental, cast range=touch, effect area=5m xRM light radius, duration=1 ET,
 effect={Lights up an alchemical torch that you can touch.}}
 
-\spell{Dazzling Flash}{%
+\spell{Dazzling Light}{%
 cost=4AP+1STA, knowledge=Alchemy 2, requirements=alchemical torch, dl=3, type=Environmental, cast range=self, effect area=6m radius cone at 180 degrees, duration=instant,
-effect={Produces a powerful flash that blinds anyone in the area. Victims must make a reflex test, at no AP cost. On a graze, they are disoriented until the end of the round. On a miss, they are oblivious. The flash is blocked by fog, dust clouds, and magical darkening.}}
+effect={Produces a powerful flash that makes anyone within the area that tries to target the character disoriented if they use vision as active sense.}}
 
 \spell{Revealing Light}{%
 cost=4AP or +1 exhaustion, knowledge=Alchemy 2, requirements=alchemical torch, dl=3, type=Environmental, cast range=touch, effect area=10m radius, duration=1 ET,
@@ -239,8 +249,8 @@ cost=6 AP, knowledge=Animancy 3, requirements=Soul stone, dl=3, type=Effect, cas
 effect={Anchors a creature's soul to a soul stone, preventing it from disappearing. This can be done with the souls of creatures that have been dead for up to 1 ET. If the soul is still present, resurrection is possible, but the soul will extinguish in 3 days without a body.}}
 
 \spell{Alter Memories}{%
-cost=5 AP, knowledge=Animancy 4, dl=5, type=Psychic, cast range={melee, target}, duration=instant, enhance={increases DL by 2.}
-effect={Touches the mind of a confused person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth. This is a target's will test against caster's charisma, where a miss or graze modifies the memory successfully.}}
+cost=5 AP, knowledge=Animancy 4, dl=5, type=Psychic, cast range={melee, target}, duration=instant, test={Charisma vs will}, miss={memory modified}, graze={memory modified}, enhance={increases DL by 2.},
+effect={Touches the mind of a confused person and sees the memories of the things the person is talking about. Anything said by the caster to the person will be remembered as truth.}}
 % If the person accepts the ritual, a cleric of Rivka automatically succeeds in the ritual.
 
 \spell{Disintegrate Mind}{%
@@ -250,47 +260,47 @@ effect={Destroys a creature's mind permanently. Resets SPI to 0 and resets all c
 % \spell{Mental Palace}{5 minutes}{Animancy 4}{}{5}{target, melee}{Effect}{5 minutes, sustained}{ Helps someone remember something, gaining +2 on any knowledge test. Additionally, they can recall all the details of anything they can perceive during the duration of the spell.}
 
 \spell{Sleep}{%
-cost=4 AP, knowledge=Animancy 2, dl=0, type=Psychic, cast range=15m, duration=curse, enhance=[increases DL by 2.]
-effect={Causes someone who is tired or exhausted to fall asleep. This is only usable in social or stealth scenes. This is a target's will test against caster's charisma. Targets fall asleep on a miss if they are just tired and on a graze if they are exhausted.}}
+cost=4 AP, knowledge=Animancy 2, dl=0, type=Psychic, cast range=15m, duration=curse, test={Charisma vs will}, miss={asleep}, graze={asleep if exhausted}, enhance={increases DL by 2.},
+effect={Causes someone who is tired or exhausted to fall asleep. This is only usable in social or stealth scenes.}}
 
 \spell{Soothe}{%
-cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse,
-effect={A psychic attempt to soothe a target's emotions and make them less suspicious. This is a target's insight test against caster's charisma. It increases the DL of persuasion and deception attempts against them by 2 on a graze and 4 on a miss for the rest of the interaction. The effect wears out with the end of the scene or if the target becomes enraged or afraid. On hits or crits, the target notices the magical effect}}
+cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse, test={Charisma vs insight}, miss={+4 DL to persuasion and deception against them}, graze={+2 DL to persuasion and deception against them}, hit={notices the spell}, crit={notices the spell},
+effect={A psychic attempt to soothe a target's emotions and make them less suspicious. The effect lasts for the rest of the scene or until the target becomes enraged or afraid.}}
 
 \spell{Charm}{%
-cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse,
-effect={A psychic attempt to distract someone with their own thoughts. This is a target's insight test against caster's charisma. It makes a target distracted when they miss or graze. On hits or crits, the target notices the magical effect.}}
+cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=curse, test={Charisma vs insight}, miss={distracted}, graze={distracted}, hit={notices the spell}, crit={notices the spell},
+effect={A psychic attempt to distract someone with their own thoughts.}}
 
 % \spell{Rescue}{4 AP}{Animancy 2}{}{0}{15m, detectable and enchanted target}{Psychic}{instant}{ Compels a character with the guardian limit action to trigger it immediately.  }
 
 %------
 \spell{Pacify}{%
-cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=instant,
-effect={Allows the target to remake a morale test and get rid of afraid and enraged. Adds the caster's charisma as bonus to the defender's will.}}
+cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=instant, test={morale aggravators vs will + Charisma},
+effect={Allows the target to remake a morale test and get rid of afraid and enraged.}}
 
 \spell{Frighten}{%
-cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=instant, enhance={increases DL by 2.},
+cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=instant, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
 effect={A psychic intimidate that triggers an immediate morale test.}}
 
 \spell{Offend}{%
-cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=instant, enhance={increases DL by 2.},
-effect={A psychic taunt that triggers an immediate morale test that makes the target enraged,.}}
+cost=4 AP, knowledge=Animancy 1, dl=0, type=Psychic, cast range=15m, duration=instant, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
+effect={A psychic taunt that triggers an immediate morale test that makes the target enraged.}}
 
 \spell{Suggestion}{%
-cost=4 AP, knowledge=Animancy 2, dl=0, type=Psychic, cast range=15m, duration=instant, enhance={increases DL by 2.},
-effect={Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers a morale test immediately as a morale action with caster's charisma added to the DL. The limit actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit actions.}}
+cost=4 AP, knowledge=Animancy 2, dl=0, type=Psychic, cast range=15m, duration=instant, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
+effect={Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers an immediate morale test. The limit actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit actions.}}
 
 \spell{Overwhelming Terror}{%
-cost=5 AP, knowledge=Animancy 3, dl=3, type=Psychic, cast range=10m, duration=instant, enhance={increases DL by 2.},
+cost=5 AP, knowledge=Animancy 3, dl=3, type=Psychic, cast range=10m, duration=instant, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
 effect={Intimidates and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to run away from the caster on a limit stress action.}}
 
 \spell{Provocative Mockery}{%
-cost=3 AP, knowledge=Animancy 3, dl=3, type=Psychic, cast range=15m, duration=instant, enhance={increases DL by 2.},
+cost=3 AP, knowledge=Animancy 3, dl=3, type=Psychic, cast range=15m, duration=instant, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
 effect={Taunts and forces an immediate morale test on all targets within range of active synesthesia or under the effect of telepathic link. They are compelled to attack the caster on a limit stress action.}}
 
 \spell{Command}{%
-cost=6 AP +1STA, knowledge=Animancy 5, requirements=Suggestion, dl=7, type=Psychic, cast range=15m, duration=curse,
-effect={Gives a simple command to a confused target and leaves them Dominated if they miss on a will test. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it.}}
+cost=6 AP +1STA, knowledge=Animancy 5, requirements=Suggestion, dl=7, type=Psychic, cast range=15m, duration=curse, test={Charisma vs will}, miss={Dominated},
+effect={Gives a simple command to a confused target. They remain Dominated until they complete the task, become unconscious, or hit or crit on a will test to break free from the domination. It is not possible to change the task without using Command again, but it is possible to specify it.}}
 
 %------
 % \spell{Interference Matrix}{4 AP + 3 STA or ritual 1 hunger for 5 minutes}{Animancy 4}{}{5}{6m radius, 10m range}{Effect}{5 turns}{Increases the difficulty of casting any spell within the area by 3.}
@@ -300,28 +310,28 @@ cost=4 AP + 1 STA, knowledge=Animancy 4, requirements=Central Intelligence, dl=5
 effect={Focuses on a creature with whom they share a telepathic link. The caster can make an insight or will test to resist or remove a mental status effect or psychic ability on behalf of anyone connected by a telepathic link.}}
 
 \spell{Psychosis}{%
-cost=4 AP + 1 STA, knowledge=Animancy 4, dl=5, type=Psychic, cast range=15m, duration=sustained, enhance={increases DL by 2.},
-effect={Causes confusion in a target that is connected by telepathic link or possessed when they miss or graze on a will test against caster's charisma.}}
+cost=4 AP + 1 STA, knowledge=Animancy 4, dl=5, type=Psychic, cast range=15m, duration=sustained, test={Charisma vs will}, miss={confused}, graze={confused}, enhance={increases DL by 2.},
+effect={Causes confusion in a target that is connected by telepathic link or possessed.}}
 
 \spell{Mental Paralysis}{%
-cost=5 AP + 2 STA, knowledge=Animancy 5, dl=5, type=Psychic, cast range=15m, duration=curse, enhance={increases DL by 2.},
-effect={Completely paralyzes the mind of a confused creature that grazes or misses on their will test, rendering them immobile and fallen (unless held up by something) until they can hit or crit the will test against caster's charisma.}}
+cost=5 AP + 2 STA, knowledge=Animancy 5, dl=5, type=Psychic, cast range=15m, duration=curse, test={Charisma vs will}, miss={paralyzed}, graze={paralyzed}, enhance={increases DL by 2.},
+effect={Completely paralyzes the mind of a confused creature, rendering them immobile and fallen (unless held up by something) until they hit or crit the will test.}}
 
 \spell{Pain}{%
-cost=4 AP, knowledge={Animancy 3, Biomancy 1}, dl=3, type=Psychic, cast range=15m, duration=instant, enhance={increases DL by 2.},
-effect={Causes a great sensation of pain to everyone connected by telepathic link. This causes a loss of 6 AP on a miss or 4 AP on a graze on a will test.}}
+cost=4 AP, knowledge={Animancy 3, Biomancy 1}, dl=3, type=Psychic, cast range=15m, duration=instant, test={Charisma vs will}, miss={-6 AP}, graze={-4 AP}, enhance={increases DL by 2.},
+effect={Causes a great sensation of pain to everyone connected by telepathic link.}}
 
 \spell{Visual Interference}{%
-cost=4 AP, knowledge={Animancy 3, Biomancy 1}, dl=3, type=Psychic, cast range=15m, duration=sustained, enhance={increases DL by 2.},
-effect={Causes blindness in a target connected by telepathic link that misses or grazes on a will test against caster's charisma. They can redo their will test at every round when the spell is sustained.}}
+cost=4 AP, knowledge={Animancy 3, Biomancy 1}, dl=3, type=Psychic, cast range=15m, duration=sustained, test={Charisma vs will}, miss={blinded}, graze={blinded}, enhance={increases DL by 2.},
+effect={Causes blindness in a target connected by telepathic link. They redo the will test every round while the spell is sustained.}}
 
 \spell{Spiritual Strike}{%
-cost=3 AP + 1 STA, knowledge=Animancy 2, dl=0, type=Effect, cast range=15m, duration=instant,
-effect={Launches part of your soul violently at an enemy, including incorporeal ones, forcing the enemy to make a test using SPI + 3 xSM as skill value against caster's SPI + 3 xSM as a DL. This attack interrupts them and drains 1 STA on a graze and stuns them and causes 2 STA on a miss. For every 3 points under a miss, lose another STA.}}
+cost=3 AP + 1 STA, knowledge=Animancy 2, dl=0, type=Effect, cast range=15m, duration=instant, test={SPI + 3xSM vs SPI + 3xSM}, miss={stunned, -2 STA, -1 STA per 3 points under}, graze={interrupted, -1 STA},
+effect={Launches part of your soul violently at an enemy, including incorporeal ones.}}
 
 \spell{Telepathic Link}{%
-cost=4 AP, knowledge=Animancy 3, dl=0, type=Psychic, cast range=20m, duration=sustained, enhance={increases DL by 2.}
-effect={Creates a telepathic link with a nearby creature if they miss or graze on a will test against caster's charisma or if they allow the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. It is possible to cast the spell again to affect multiple targets at the same time. Telepathic link allows casting spells that depend on it while concentrating. These spells are made against all targets affected by link simultaneously. Each simultaneous link increases the difficulty of spellcasting test by 3.}}
+cost=4 AP, knowledge=Animancy 3, dl=0, type=Psychic, cast range=20m, duration=sustained, test={Charisma vs will}, miss={linked}, graze={linked}, enhance={increases DL by 2.},
+effect={Creates a telepathic link with a nearby creature, or with anyone who allows the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. It is possible to cast the spell again to affect multiple targets at the same time. Telepathic link allows casting spells that depend on it while concentrating. These spells are made against all targets affected by link simultaneously. Each simultaneous link increases the difficulty of spellcasting test by 3.}}
 
 
 \spell{Spiritual Walk}{%
@@ -333,12 +343,12 @@ cost={6 AP + x STA, or 1 exhaustion out of combat}, knowledge=Animancy 3, requir
 effect={Generates a ghost that behaves like the spiritual walk but has limited energy. The ghost receives x STA and disappears if STA reaches 0. All memories of the ghost are lost if it does not return to the original body. The ghost loses 2 STA per turn or 1 STA if the spell is perfected.}}
 
 \spell{Possession}{%
-cost=4 AP + 4 STA, knowledge=Animancy 4, dl=5, type=Psychic, cast range=melee, duration=curse, enhance={increases DL by 2.}
-effect={Attempts to enter and possess another body during the spiritual walk or as a ghost. This is a will test against caster's charisma to resist. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration and is vulnerable to spells that require connection by telepathic link. Each time the possessed makes a will test against them, the possessor must spend 1 STA to resist. The body and the ghost occupy the same space and can act independetly. Possession ends when the possessor's STA reaches 0 or the possessed hits or crits on a will test.}}
+cost=4 AP + 4 STA, knowledge=Animancy 4, dl=5, type=Psychic, cast range=melee, duration=curse, test={Charisma vs will}, miss={Dominated}, graze={Dominated}, enhance={increases DL by 2.},
+effect={Attempts to enter and possess another body during the spiritual walk or as a ghost. This is only possible if the body is confused, unconscious, or if the target allows the possession. The target is Dominated for the duration and is vulnerable to spells that require connection by telepathic link. Each time the possessed makes a will test against them, the possessor must spend 1 STA to resist. The body and the ghost occupy the same space and can act independetly. Possession ends when the possessor's STA reaches 0 or the possessed hits or crits on a will test.}}
 
 \spell{Torment}{%
-cost=8 AP + 2 STA, knowledge=Animancy 5, dl=7, type=Psychic, cast range={15m}, duration=curse, enhance={increases DL by 2.}
-effect={Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep until they can escape the dream by achieving a hit or crit on a will test. They can attempt to wake up every ET. The victim does not heal from this sleep and receives 2 exhaustion for each ET they remain asleep.}}
+cost=8 AP + 2 STA, knowledge=Animancy 5, dl=7, type=Psychic, cast range={15m}, duration=curse, test={Charisma vs will}, hit={wakes}, crit={wakes}, enhance={increases DL by 2.},
+effect={Infects an unconscious target within range with a terrible and extremely realistic dream, which keeps the victim asleep. They can attempt to wake up every ET. The victim does not heal from this sleep and receives 2 exhaustion for each ET they remain asleep.}}
 
 % ideas: 
 % phantom sounds and images through telepathic link - one spell per specific image?
@@ -361,8 +371,8 @@ cost=1 ET +1 exhaustion, knowledge=Biomancy 4, dl=7, type=Effect, cast range=tou
 effect={Modifies food to behave like a potion, giving half of its nutritional value as IL healing in the next rest. Can be used while cooking.}}
 
 \spell{Immune modulation}{%
-cost={1 ET, 1 Exhaustion}, knowledge=Biomancy 3, dl=3, type=Effect, cast range={melee, target}, duration=instant, enhance=+2 for each enhancement.,
-effect={Attempts to manipulate the body of a living being to metabolize poison. Allows a redo of a health test to resist poison using the target's health + caster's sorcery.}}
+cost={1 ET, 1 Exhaustion}, knowledge=Biomancy 3, dl=3, type=Effect, cast range={melee, target}, duration=instant, test={poison DL vs health + Sorcery}, enhance=+2 for each enhancement.,
+effect={Attempts to manipulate the body of a living being to metabolize poison. Allows a redo of the health test to resist poison.}}
 
 \spell{Defibrillate}{%
 cost=4 AP + 1 STA, knowledge=Biomancy 2, dl=0, type=Effect, cast range={melee, target}, duration=instant,
@@ -504,8 +514,8 @@ cost=5 AP + 1 STA, knowledge=Shamanism 4, dl=5, type=Projectile, cast range=dire
 effect={Summons a lightning bolt to a specific target within the electrical storm as a projectile.}}
 
 \spell{Storm of Lightning}{%
-cost=8 AP +2 STA, knowledge=Shamanism 5, requirements=Thunderstorm, dl=10, type=Environmental, cast range=100m, effect area=15m radius on the ground, duration=1 ET, damage=20xDM electric,
-effect={Focuses lightning from a thunderstorm into a small area. Every beginning of round, a lightning falls on anyone in the area. The projectile is defended by a DL 7 reflex test.}}
+cost=8 AP +2 STA, knowledge=Shamanism 5, requirements=Thunderstorm, dl=10, type=Environmental, cast range=100m, effect area=15m radius on the ground, duration=1 ET, damage=20xDM electric, test={7 vs reflex},
+effect={Focuses lightning from a thunderstorm into a small area. Every beginning of round, a lightning falls on anyone in the area.}}
 
 \spell{Freeze Water}{%
 cost=5 AP + 1 STA, knowledge=Shamanism 3, dl=3, type=Environmental, cast range=15m, effect area=area of 15 spaces, duration= 1 ET,
