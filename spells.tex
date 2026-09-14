@@ -19,7 +19,7 @@
 \newcommand{\spellrow}[2]{\ifdefempty{#2}{}{\statlabel{#1} #2 \\}}
 \newcommand{\spell}[2]{%
   \pgfkeys{/spell/.cd, cost=, knowledge=, requirements=, dl=, type=,
-    cast range=, cast area, effect area=, effect range=, effect area=,
+    cast range=, cast area=, effect area=, effect range=, effect area=,
     duration=, enhance=, effect=, #2}%
   \statrule
   {\sffamily\bfseries\large #1} \\
@@ -159,7 +159,7 @@ effect={Extinguishes the flames of 1 x RM space.}}
 
 \spell{Flamethrower}{%
 cost={6 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=Projectile, effect area={spray, 4m xRM, 60 degrees}, duration=sustained, cast range=touch,
-effect={Creates flames from a flamethrower, dealing its base damage xDM as burn damage as a spray explosion in front of the caster. The flamethrower can be sustained, dealing damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage.}}
+effect={Creates flames from a flamethrower, dealing 20xDM as burn damage as a spray explosion in front of the caster. The flamethrower can be sustained, dealing damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage.}}
 
 % \spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{5}{ Long I }{Touch}{instant}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
 
@@ -276,7 +276,7 @@ effect={A psychic taunt that triggers an immediate morale test that makes the ta
 
 \spell{Suggestion}{%
 cost=4 AP, knowledge=Animancy 2, dl=0, type=Psychic, cast range=15m, duration=instant, enhance={increases DL by 2.},
-effect={Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers a morale test immediately, adding caster's charisma to the DL. The limit actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit actions.}}
+effect={Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers a morale test immediately as a morale action with caster's charisma added to the DL. The limit actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit actions.}}
 
 \spell{Overwhelming Terror}{%
 cost=5 AP, knowledge=Animancy 3, dl=3, type=Psychic, cast range=10m, duration=instant, enhance={increases DL by 2.},
