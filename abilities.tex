@@ -8,13 +8,24 @@ Abilities are acquired through XP during downtime. To calculate XP cost of an ab
 
 Abilities can only be acquired once. When a technique has multiple levels, it receives an I, II, III next to its name, indicating each level. Each level has a different training level, which means the talent requirement changes. 
 
-An ability can have its bonuses written as 1/2/3 or similar. That means that at each level, they get upgraded to the corresponding stage. An effect written as I. II. III. has one segment per level. A single value applies to every level and is paid at each.
+An ability can have its bonuses written as 1|2|3 or similar. That means that at each level, they get upgraded to the corresponding stage. An effect written as I. II. III. has one segment per level. A single value applies to every level and is paid at each.
 
 \textbf{Usage:} \textit{passive} is always on. A cost (\textit{2 AP}, \textit{1 STA}, \textit{2 AP + 1 STA}, \textit{1 ET}, \textit{2 IL}) is an action; \textit{attack} costs whatever the attack costs. \textit{reaction} is used outside the character's turn, with its cost after the comma. \textit{sustained} is paid per turn while active. \textit{full turn} and \textit{ritual} take the whole turn or a ritual.
 
-\textbf{Cost:} the price, followed by the talent and training level when the price is XP. \textit{6 XP, DEX 3} costs 6 XP trained at level 3 with DEX as talent. Karma prices have no talent. \textit{0 XP} means the ability is gained as soon as its requirements are met, unless its text says otherwise. A negative price is received, not paid, when the ability is taken. Values split by / are per level.
+\textbf{Cost:} the price, followed by the talent and training level when the price is XP. \textit{6 XP, DEX 3} costs 6 XP trained at level 3 with DEX as talent. Karma prices have no talent. \textit{0 XP} means the ability is gained as soon as its requirements are met, unless its text says otherwise. A negative price is received, not paid, when the ability is taken. Values split by | are per level.
 
-\textbf{Requirements:} it is not possible to acquire an ability unless the requirements are met. All listed items are needed; \textit{or} gives alternatives within an item and \textit{not} forbids one. Items are abilities (with their level, \textit{Riding I}), skills or knowledges at a level (\textit{Survival 2}), attribute thresholds (\textit{STR > 15}), or a condition (\textit{racial}, \textit{ritual}).
+\textbf{Requirements:} it is not possible to acquire an ability unless the requirements are met. All listed items are needed; \textit{or} gives alternatives within an item and \textit{not} forbids one. Items are gear (\textit{Splint}), an ability with its level (\textit{Riding I}), a knowledge, skill or talent at a level (\textit{Survival 2}, \textit{Awareness 2|4|5}, \textit{INT 3}), an attribute threshold (\textit{STR > 15}), or a spell (\textit{Possession}).
+
+\section{CON}
+
+\abil{Large Stomach}{%
+usage=passive, cost={8 XP, CON 2}, requirements=racial or training,
+effect={The character can eat 2x the normal amount per day.}}
+
+\abil{Obese}{%
+usage=passive, cost={6 XP; CON 1},
+effect={Receives -1 burden penalty. When Hunger reaches 30, the character loses this ability and their hunger resets to 15. Requires eating a lot.}}
+
 
 \section{DEX}
 
@@ -22,33 +33,29 @@ An ability can have its bonuses written as 1/2/3 or similar. That means that at 
 
 Athletics represents the character's movement abilities. It includes running, jumping, climbing, swimming, and riding. It also includes the ability to perform acrobatic maneuvers and maintain balance in difficult situations.
 
-\abil{Sprinter I/II}{%
-usage=passive, cost={6 XP, CON 3/5},
-effect={Increases running speed by 1/2m.}}
+\abil{Sprinter I|II}{%
+usage=passive, cost={6 XP, CON 3|5},
+effect={Increases running speed by 1|2m.}}
 
-\abil{Jumper I/II}{%
-usage=passive, cost={6 XP, CON 3/5},
-effect={Increases jump distance by 1/2m.}}
+\abil{Jumper I|II}{%
+usage=passive, cost={6 XP, CON 3|5},
+effect={Increases jump distance by 1|2m.}}
 
-\abil{Climber I/II/III}{%
-usage=passive, cost=0 XP, requirements=Climbing 1/3/5,
+\abil{Climber I|II|III}{%
+usage=passive, cost=0 XP, requirements=Climbing 1|3|5,
 effect={I. Learns to make climbing tests safely. II. Learns to spend 1 STA to make the test in a risky manner and make climbing speed equal to 1m on a hit or crit. III. The character is not considered prone while climbing if they crit on their climbing test.}}
 
-\abil{Gymnast I/II/III}{%
-usage=passive, cost=0 XP, requirements=Balance 1/3/5,
+\abil{Gymnast I|II|III}{%
+usage=passive, cost=0 XP, requirements=Balance 1|3|5,
 effect={I. Balance tests can be performed safely. II. The character is capable of jumping on hits on their balance check. III. Falling damage is reduced to 20\% on a crit on a balance check when falling.}}
 
-\abil{Swimmer I/II/III}{%
-usage=passive, cost=0 XP, requirements=Swimming 1/3/5,
+\abil{Swimmer I|II|III}{%
+usage=passive, cost=0 XP, requirements=Swimming 1|3|5,
 effect={I. Can perform safe swimming tests. II. Learns to double swimming speed during movement surge. III. Swimming speed increases to 0.5m.}}
 
-\abil{Riding I/II/III}{%
-usage=passive, cost={6 XP, DEX 1/3/5},
+\abil{Riding I|II|III}{%
+usage=passive, cost={6 XP, DEX 1|3|5},
 effect={I. Learns to give commands to walk and run for mounts capable of understanding the command. II. The rider can utilize the mount's jumping, standing, swimming, and climbing movements if it is capable of understanding the commands. III. The rider can utilize the flight of their mount while riding.}}
-
-\abil{Large Stomach}{%
-usage=passive, cost={8 XP, CON 2}, requirements=racial or training,
-effect={The character can eat 2x the normal amount per day.}}
 
 
 % \abil{Vascular Control}{%
@@ -69,24 +76,24 @@ effect={The character can eat 2x the normal amount per day.}}
 % usage=passive, cost={4 XP, DEX 2},
 % effect={The character can spend 1 extra STA to move the equivalent of one more AP of movement after the explosion or projectile.}}
 
-\abil{Mounted Shooter I/II}{%
-usage=passive, cost={4 XP, DEX 3/5}, requirements={Archer, Riding I},
-effect={Reduces the penalty for ranged attacks while riding by 1/2. Allows sharing AP for movement and shooting. The shot may come from any position that the attacker has been. Triggers opportunity attacks from all positions.}}
+\abil{Mounted Shooter I|II}{%
+usage=passive, cost={4 XP, DEX 3|5}, requirements={Archer, Riding I},
+effect={Reduces the penalty for ranged attacks while riding by 1|2. Allows sharing AP for movement and shooting. The shot may come from any position that the attacker has been. Triggers opportunity attacks from all positions.}}
 
-\abil{Thrower I/II}{%
-usage=passive, cost={6 XP, DEX 1/3},
-effect={The range of thrown weapons is increased by 50/100\%.}}
+\abil{Thrower I|II}{%
+usage=passive, cost={6 XP, DEX 1|3},
+effect={The range of thrown weapons is increased by 50|100\%.}}
 
 \abil{Archer}{%
 usage=passive, cost={6 XP, DEX 1},
 effect={Learns to shoot with bows, removing the penalty.}}
 
-\abil{Elite Sniper I/II/III}{%
-usage=passive, cost={6 XP, DEX 2/4/6}, requirements=Archer,
-effect={I. Snipe gets +1/2/3 bonus. II. Snipe costs 1 AP less.}}
+\abil{Elite Sniper I|II|III}{%
+usage=passive, cost={6 XP, DEX 2|4|6}, requirements=Archer,
+effect={Snipe gets +1|2|3 to hit. From level II, snipe costs 1 AP less.}}
 
-\abil{Quick Shooter I/II/III}{%
-usage=passive, cost={6 XP, DEX 2/4/6}, requirements=Archer,
+\abil{Quick Shooter I|II|III}{%
+usage=passive, cost={6 XP, DEX 2|4|6}, requirements=Archer,
 effect={I. Increases distance for shoot to 50m. II. Increases distance for quick shots to 30m. III. Reduces cost of quick shot by 1 AP.}}
 
 \abil{Crossbow and Shield}{%
@@ -97,9 +104,9 @@ effect={Allows the character to be in cover with a body shield while reloading a
 usage=passive, cost={6 XP, DEX 3},
 effect={Can move at careful movement speed while performing ranged attacks (except snipe), reutilizing the AP cost. It is considered that the attack came from any position that the attacker has been. Opportunity attacks are triggered at all positions along the path.}}
 
-\abil{Archer's Muscles I/II}{%
-usage=passive, cost={6 XP, CON 2/4}, requirements=Archer,
-effect={Provides a strength bonus of +1/2 to meet the strength requirement of bows.}}
+\abil{Archer's Muscles I|II}{%
+usage=passive, cost={6 XP, CON 2|4}, requirements=Archer,
+effect={Provides a strength bonus of +1|2 to meet the strength requirement of bows.}}
 
 \abil{Archer's Reflexes}{%
 usage=passive, cost={6 XP, DEX 3}, requirements=Quick Shooter I,
@@ -109,9 +116,9 @@ effect={Allows for a quick shot at any visible target in range as a reaction to 
 usage={reaction, 1 AP}, cost={6 XP, DEX 4},
 effect={If the character uses reflexes without moving, reflexes only cost 1 AP.}}
 
-\abil{Quick Reload I/II}{%
-usage=passive, cost={6 XP, DEX 2/4},
-effect={Reloads weapons 1/2 AP faster.}}
+\abil{Quick Reload I|II}{%
+usage=passive, cost={6 XP, DEX 2|4},
+effect={Reloads weapons 1|2 AP faster.}}
 
 \abil{Jump Shot}{%
 usage=attack + 1 STA, cost={6 XP, DEX 4},
@@ -142,7 +149,7 @@ effect={You can initiate a grapple without cost whenever you intercept an attack
 usage=passive, cost={6 XP, DEX 3},
 effect={Grants attacks for grappling that cost 4AP+1STA and inflict wounds directly. Spending 5 SOP after a hit allows choosing one special effect: Suffocate the enemy, break an arm, and break a leg. Hits can immobilize both characters if the attacker so chooses.}}
 
-\abil{Counterattack}{% 
+\abil{Counterattack}{%
 usage={reaction, attack}, cost={6 XP, DEX 2},
 effect={You can attack in response to an attack, as long as you are within range. Both attacks are made against the opponent's SD. The attack with the higher result hits first, having the chance to interrupt the opponent. The counterattack receives -2 to hit.}}
 
@@ -174,21 +181,17 @@ effect={Learns to perform one attack with the APs from a movement surge.}}
 usage=4 AP + 1 STA, cost={6 XP, DEX 1},
 effect={Learns to initiate a grapple and perform a trample or knockdown in the same action.}}
 
-\abil{Jousting I/II}{%
-usage=passive, cost={6 XP, DEX 2/4}, requirements=Riding I,
-effect={Reduces the penalty from being mounted for braced attack by 1/2.}}
+\abil{Jousting I|II}{%
+usage=passive, cost={6 XP, DEX 2|4}, requirements=Riding I,
+effect={Reduces the penalty from being mounted for braced attack by 1|2.}}
 
 \abil{Technical Lift}{%
 usage=passive, cost={4 XP, DEX 1},
 effect={The character can spend 1 STA to perform an evasive jump and stand up in the same action, but takes -3 to defend while doing so.}}
 
-% \abil{Master with Blades}{%
-% usage=passive, cost={10 XP, DEX 2/4/6},
-% effect={Increases the PEN of melee weapons with PEN 2x or greater by 2/4/6.}}
-
-\abil{Combo I/II}{%
-usage=passive, cost={6 XP, DEX 3/5},
-effect={Combat surge gives +1/2 AP.}}
+\abil{Combo I|II}{%
+usage=passive, cost={6 XP, DEX 3|5},
+effect={Combat surge gives +1|2 AP.}}
 
 \abil{Lunge}{%
 usage=passive, cost={6 XP, DEX 2},
@@ -202,10 +205,6 @@ effect={Gains +2 to block if holding a shield and adjacent to another character 
 usage=passive, cost={6 XP, DEX 3},
 effect={Reduces the AP cost of using braced attack as a reaction by 1 AP.}}
 
-% \abil{Pikeman}{%
-% usage=passive, cost={6 XP, DEX 3},
-% effect={Increases the threat area of the reaction, allowing you to spend 1 STA to move 1 basic movement before using the braced attack as a reaction.}}
-
 \abil{Precise Evasion}{%
 usage={reaction, 1 AP}, cost={6 XP, DEX 4},
 effect={Learns to use evade with 1 AP, but takes -3 to defend in doing so. If the opponent grazes or misses, an opportunity attack is triggered.}}
@@ -217,7 +216,7 @@ effect={After blocking or intercepting a melee attack and reducing its damage to
 
 \section{SPI}
 
-\subsection{Conviction of Adaptation}
+\subsection{Adaptation}
 \textbf{Worldview - Chaos - Introspective }
 
 They believe that the universe is chaos and that those who do not adapt should be left behind. 
@@ -228,7 +227,7 @@ They believe that the universe is chaos and that those who do not adapt should b
 usage=passive, cost=0 XP, requirements=Adaptation 1,
 effect={Can use adaptation XP as any type of XP considering the character's talent +1. When doing this, the XP also increases the progress of Adaptation.}}
  
- \subsection{ Conviction of Domination }
+ \subsection{ Domination }
  \textbf{Worldview - Chaos - Extrospective }
  
  They believe that most people are mediocre and incapable of acting in their own benefit. This justifies their control over others.
@@ -251,20 +250,20 @@ effect={Whenever an opponent uses suggestion or command and get a miss, they los
 usage=passive, cost=0 XP, requirements=Domination 5,
 effect={Gets +1 to all tests against characters affected by any mind altering status effects. \magic Also increases the DL of any spells used against such characters.}}
 
-\subsection{ Conviction of Stoicism }
+\subsection{ Stoicism }
 \textbf{Worldview - Order - Introspective }
 
 \textbf{Promoted Attitudes:} Gains 1 XP each time a prepared action crits.
 \textbf{Prohibited Attitudes:} Loses 1 XP each turn that they do not prepare any action.
-\abil{Deliberate I/II}{%
-usage=passive, cost=0 XP, requirements=Stoicism 1/3,
-effect={Prepared actions gain +1/2 on the test of the prepared action.}}
+\abil{Deliberate I|II}{%
+usage=passive, cost=0 XP, requirements=Stoicism 1|3,
+effect={Prepared actions gain +1|2 on the test of the prepared action.}}
 \abil{Cunning Studies}{%
 usage=passive, cost=0 XP, requirements=Stoicism 2,
 effect={Can learn with conviction XP everything in the section on Cunning. When doing so, the XP also increases the progress of Stoicism.}}
-\abil{\magic Prepared Casting I/II}{%
-usage=passive, cost=0 XP, requirements=Stoicism 2/4,
-effect={Receives +1/2 to cast any prepared spells.}}
+\abil{\magic Prepared Casting I|II}{%
+usage=passive, cost=0 XP, requirements=Stoicism 2|4,
+effect={Receives +1|2 to cast any prepared spells.}}
 \abil{First Mover}{%
 usage=passive, cost=0 XP, requirements=Stoicism 3,
 effect={Gains +1 to all skill tests when the character is the first to take their turn in a round.}}
@@ -275,7 +274,7 @@ effect={Whenever you win a cunning test to act before another character, you gai
 usage=passive, cost=0 XP, requirements=Stoicism 5,
 effect={Receives +1 AP for each crit in the prepared action.}}
 
-\subsection{ Conviction of Fatalism }
+\subsection{ Fatalism }
 \textbf{Temperament - Order - Introspective }
 
 They believe that life is simple and people overcomplicate things. They brave every challenge with resilience and acceptance.
@@ -285,11 +284,11 @@ They believe that life is simple and people overcomplicate things. They brave ev
 \abil{Quick Resolve}{%
 usage=passive, cost=0 XP, requirements=Fatalism 1,
 effect={Active will tests can be made with 2 AP.}}
-\abil{Iron Will I/II}{%
-usage=passive, cost=0 XP, requirements=Fatalism 2/4,
-effect={Receives +1/2 in Will. Still triggers the XP gain when the will test was overcome by 1/2.}}
-\abil{Unwearied I/II}{%
-usage=passive, cost=0 XP, requirements=Fatalism 2/4,
+\abil{Iron Will I|II}{%
+usage=passive, cost=0 XP, requirements=Fatalism 2|4,
+effect={Receives +1|2 in Will. Still triggers the XP gain when the will test was overcome by 1|2.}}
+\abil{Unwearied I|II}{%
+usage=passive, cost=0 XP, requirements=Fatalism 2|4,
 effect={I. The character ignores the effect of tiredness. II. Ignores the effect of exhaustion.}}
 \abil{Grace Under Pressure}{%
 usage=passive, cost=0 XP, requirements=Fatalism 3,
@@ -299,7 +298,7 @@ usage=passive, cost=0 XP, requirements=Fatalism 5,
 effect={The character has no limit action.}} 
 
 % Rage
-\subsection{Conviction of Ferocity}
+\subsection{Ferocity}
 \textbf{Temperament - Chaos - Extrospective }
 
 They understand that everything can be resolved with more strength. 
@@ -312,8 +311,8 @@ effect={The mental penalty of rage is removed. Every time the character uses com
 \abil{Voluntary Rage}{%
 usage=passive, cost=0 XP, requirements=Ferocity 2,
 effect={Learns to enter a rage voluntarily with a will test DL 3. If the character is afraid, the DL is the same as what caused their fear.}}
-\abil{Unstoppable I/II}{%
-usage=passive, cost=0 XP, requirements=Ferocity 3/5,
+\abil{Unstoppable I|II}{%
+usage=passive, cost=0 XP, requirements=Ferocity 3|5,
 effect={I. The character cannot be interrupted by receiving tier 2 injuries while in rage. II. They are also not interrupted by receiving tier 3 injuries. Does not fall unconscious from IL.}}
 \abil{Rage Endurance}{%
 usage=passive, cost=0 XP, requirements=Ferocity 4,
@@ -322,7 +321,7 @@ effect={The character ignores the effect of exhaustion and sickness during rage.
 usage=passive, cost=0 XP, requirements=Ferocity 4,
 effect={The character learns spiritual strike and martial spirit. Uses will instead of animancy against the opponent.}}
 
-\subsection{Guardian Conviction }
+\subsection{Guardian }
 \textbf{Temperament - Order - Extrospective }
 
 They believe that what exists should not be destroyed without reason.
@@ -334,18 +333,18 @@ They believe that what exists should not be destroyed without reason.
 \abil{Protection Surge}{%
 usage=passive, cost=0 XP, requirements=Guardian 0,
 effect={When they realize that an ally within 10m has been attacked, they can make a protection surge. This is just a reaction surge that allows running to reposition immediately to assist the ally. It works like a compulsion, which interrupts the attacker's turn momentarily. The character's actions must necessarily heal the ally or be reactions.}}
-\abil{Bulwark I/II}{%
-usage=passive, cost=0 XP, requirements=Guardian 2/4,
-effect={Gains +1/2 to defend and reflex when making the protection surge to protect someone else. \magic Also gains +1/2 in sorcery for any healing action.}}
+\abil{Bulwark I|II}{%
+usage=passive, cost=0 XP, requirements=Guardian 2|4,
+effect={Gains +1|2 to defend and reflex when making the protection surge to protect someone else. \magic Also gains +1|2 in sorcery for any healing action.}}
 \abil{Rallying Guard}{%
 usage=passive, cost=0 XP, requirements=Guardian 3,
 effect={Using protection surge automatically makes a rally.}}
-\abil{Guardian's Vigor I/II}{%
-usage=passive, cost=0 XP, requirements=Guardian 3/5,
-effect={Gain 1/2 AP extra when they use protection surge.}}
+\abil{Guardian's Vigor I|II}{%
+usage=passive, cost=0 XP, requirements=Guardian 3|5,
+effect={Gain 1|2 AP extra when they use protection surge.}}
 
 
-\subsection{Hedonism Conviction}
+\subsection{Hedonism}
 \textbf{Temperament - Chaos - Introspective }
 
 They believe that life is meant to pursue good things and pleasure. They learn to seek happiness in all things and to enjoy them in the best way possible, without letting them destroy them. 
@@ -354,27 +353,27 @@ They believe that life is meant to pursue good things and pleasure. They learn t
 \textbf{Prohibited Attitudes:} None.
 
 %Hedonism
-\abil{Self-Control I/II/III}{%
-usage=passive, cost=0 XP, requirements=Hedonism 1/3/5,
-effect={The character has +1/2/3 to will in any test that forces them to deny a vice.}}
-\abil{Tolerance I/II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2/4,
-effect={I. The mental penalty for being intoxicated decreases by 1/2. II. The character ignores the effect of tired and exhausted when intoxicated.}}
-\abil{Showman I/II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2/4,
-effect={Gains +1/2 to the persuasion test if they have the vice "center of attention."}}
-\abil{Light Fingers I/II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2/4,
-effect={Receives +1/2 for prestidigitation if they have the vice "Kleptomaniac."}}
-\abil{Seducer I/II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2/4,
-effect={Receives +1/2 for seduction tests if they have the vice "Nymphomaniac."}}
-\abil{Sharp Tongue I/II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2/4,
-effect={Receives +1/2 for taunting if they have the limit action of "Abusive."}}
-\abil{Sly Words I/II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2/4,
-effect={Receives +1/2 for persuasion tests if they have the limit action of "Traitor."}}
+\abil{Self-Control I|II|III}{%
+usage=passive, cost=0 XP, requirements=Hedonism 1|3|5,
+effect={The character has +1|2|3 to will in any test that forces them to deny a vice.}}
+\abil{Tolerance I|II}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2|4,
+effect={I. The mental penalty for being intoxicated decreases by 1|2. II. The character ignores the effect of tired and exhausted when intoxicated.}}
+\abil{Showman I|II}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2|4,
+effect={Gains +1|2 to the persuasion test if they have the vice "center of attention."}}
+\abil{Light Fingers I|II}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2|4,
+effect={Receives +1|2 for prestidigitation if they have the vice "Kleptomaniac."}}
+\abil{Seducer I|II}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2|4,
+effect={Receives +1|2 for seduction tests if they have the vice "Nymphomaniac."}}
+\abil{Sharp Tongue I|II}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2|4,
+effect={Receives +1|2 for taunting if they have the limit action of "Abusive."}}
+\abil{Sly Words I|II}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2|4,
+effect={Receives +1|2 for persuasion tests if they have the limit action of "Traitor."}}
 \abil{Reveler}{%
 usage=passive, cost=0 XP, requirements=Hedonism 3,
 effect={Gains +2 bonus to celebrate.}}
@@ -388,7 +387,7 @@ effect={Gains the ability to roll exploded die twice and pick the most extreme o
 usage=passive, cost=0 XP, requirements=Hedonism 3,
 effect={+1 XP for each book read. Learning a spell from the grimoire counts as a book.}}
 
-\subsection{ Providentialism Conviction }
+\subsection{ Providentialism}
 \textbf{Worldview - Order - Extrospective }
 
 They believe and find comfort in the belief in a good universal order. If everyone acted correctly, according to the order, everything would work well.
@@ -506,11 +505,11 @@ usage=passive, cost=0 XP, requirements=Linguistics 0,
 effect={Character is capable of learning a language. Use 2x linguistics in any activity that increases specific language level.}}
 
 \abil{Translate}{%
-usage=passive, cost=0 XP, requirements={Linguistics 0, knows two languages},
+usage=passive, cost=0 XP, requirements=Linguistics 0,
 effect={If there is a translation DL, use the lowest language level.}}
 
 \abil{Literacy}{%
-usage=passive, cost=0 XP, requirements={Linguistics 2, knows a language},
+usage=passive, cost=0 XP, requirements=Linguistics 2,
 effect={Learns to read and write. The higher the level, the faster and better quality the reading is. Can be used to learn skills and knowledges through books, but counts as learning alone.}}
 
 \abil{Cypher}{%
@@ -532,9 +531,9 @@ effect={Attempts to identify an unknown language. DL vs 2x linguistics knowledge
 %Art
 % \subsection{Art}
 
-% \abil{Performance I/II/III}{%
-% usage=passive, cost={4 XP, INT 2/4/6},
-% effect={Allows the character to know a form of art, such as playing an instrument, magic tricks, jokes, etc. Gains +1/2/3 to tests to distract the audience.}}
+% \abil{Performance I|II|III}{%
+% usage=passive, cost={4 XP, INT 2|4|6},
+% effect={Allows the character to know a form of art, such as playing an instrument, magic tricks, jokes, etc. Gains +1|2|3 to tests to distract the audience.}}
 
 \subsection{Medicine}
 
@@ -543,15 +542,15 @@ usage=full turn, cost=0 XP, requirements=Medicine 1,
 effect={Tries to stop bleeding through a tourniquet or pressure on self or other. Make a medicine test against a DL equal to 2x bleeding. On a hit or crit, prevents bleeding that turn completely. Reduces bleeding by 0/0/1/2.}}
 
 \abil{Cauterization}{%
-usage=4 AP, cost=0 XP, requirements={Medicine 1, burning object},
+usage=4 AP, cost=0 XP, requirements={Medicine 1},
 effect={Requires a focus surge. Tries to stop bleeding through burning the area. Causes 10 fire damage that ignores armor and reduces bleeding by 2.}}
 
 \abil{Bone Setting}{%
-usage=1 ET, cost=0 XP, requirements={Medicine 1, splint},
+usage=1 ET, cost=0 XP, requirements={Medicine 1, Splint},
 effect={In one ET, make a medicine test DL 3 to allow a wound to heal with rest. It heals 0/1/2/2 per sleep. A crit does not spend the ET. The test only needs to be done once per wound. The patient is considered to be resting or sleeping.}}
 
 \abil{Wound Triage}{%
-usage=1 ET, cost=0 XP, requirements={Medicine 1, bandages},
+usage=1 ET, cost=0 XP, requirements={Medicine 1, Bandages},
 effect={In one ET, make a medicine test to prevent infection. It lowers the DL of the infection test by 2. One test can be used for the whole team and can be retried, but spends resources per character per attempt. The patient is considered to be resting or sleeping.}}
 
 \abil{Diagnosis}{%
@@ -610,8 +609,8 @@ effect={Character always knows which direction is which while outdoors. They als
 usage=passive, cost=0 XP, requirements=Navigation 1,
 effect={Uses Navigation knowledge + awareness as skill to learn specific locations.}}
 
-\abil{Cartography I/II}{%
-usage=passive, cost=0 XP, requirements=Navigation 2/4,
+\abil{Cartography I|II}{%
+usage=passive, cost=0 XP, requirements=Navigation 2|4,
 effect={I. Allows using 2x Navigation to learn about places through maps. II. Allows professional map-making.}}
 
 \subsection{Survival}
@@ -669,9 +668,9 @@ effect={Prepares an action for an ally that can understand the command. The ally
 % usage=passive, cost={6 XP, INT 2},
 % effect={Allows the character to coordinate their shots with allies. While shooting, gives a command to all allies than can understand it to shoot the same target simultaneously, without need to prepare the shot.}}
 
-\abil{Strategist I/II/III}{%
-usage=passive, cost={4 XP, INT 2/4/5},
-effect={If the character is the first to take their turn in a round in combat, they get back up to 1/2/3 AP that were unspent in the previous round.}}
+\abil{Strategist I|II|III}{%
+usage=passive, cost={4 XP, INT 2|4|5},
+effect={If the character is the first to take their turn in a round in combat, they get back up to 1|2|3 AP that were unspent in the previous round.}}
 
 \abil{Prepared}{%
 usage=passive, cost={6 XP, INT 4},
@@ -707,8 +706,8 @@ Abilities in this section are part of the magic system ($\star$), except where a
 usage=passive, cost={10 XP, INT 1}, requirements=Literacy,
 effect={Allows learning and casting spells like a wizard. The descriptions are in the sorcery chapter.}}
 
-\abil{\magic Battle Mage I/II/III}{%
-usage=passive, cost={6 XP, INT 1/3/5},
+\abil{\magic Battle Mage I|II|III}{%
+usage=passive, cost={6 XP, INT 1|3|5},
 effect={I. Allows the caster to use careful movement while concentrating, repurposing the same action points used for the spell. II. The character can defend actively while concentrating, with AP costs paid separately. III. When interrupted, instead of losing the spell, redo the spellcasting test with a penalty of -3 and choose the worst result between the original and this one.}}
 
 \subsubsection{\magic Alchemy}
@@ -747,8 +746,8 @@ effect={Taser costs 1 AP.}}
 \subsubsection{\magic Animancy}
 
 %Animancy
-\abil{Synesthesia I/II/III}{%
-usage={sustained, 1 STA/turn}, cost={6 XP, INT 1/3/5}, range=Animancy meters radius, duration=instantaneous,
+\abil{Synesthesia I|II|III}{%
+usage={sustained, 1 STA/turn}, cost={6 XP, INT 1|3|5}, range=Animancy meters radius, duration=instantaneous,
 effect={Out of combat, costs 2 exhaustion per ET instead. I. Maintains an energy perimeter that amplifies perception. This character can see invisible things as if they were visible within a sphere around them. The volume of perception is filled as if it were gas. Solid impermeable objects block the radius of synesthesia. II. Doubles the normal radius. III. Triples the normal and increased radius.}}
 
 \abil{Blind Combat}{%
@@ -865,36 +864,34 @@ effect={A humanoid character decreases one size class and gains 3 STR and 1 AGI.
 usage=passive, cost=6 Karma, requirements=Biomancy 3 or STR > 12,
 effect={Allows the use of melee weapons from a larger size category, but attacks cost +1 AP and have STR-3 in every move done with the weapon. The hands also count as a weapon of larger size, but don't get the AP cost increase.}}
 
-\abil{Keen Eyes I/II/III}{%
-usage=passive, cost=4 Karma, requirements=Awareness 2/4/5,
-effect={Improves vision by +1/2/3.}}
+\abil{Keen Eyes I|II|III}{%
+usage=passive, cost=4 Karma, requirements=Awareness 2|4|5,
+effect={Improves vision by +1|2|3.}}
 
-\abil{Acute Ears I/II/III}{%
-usage=passive, cost=4 Karma, requirements=Awareness 2/4/5,
-effect={Improves hearing by +1/2/3.}}
+\abil{Acute Ears I|II|III}{%
+usage=passive, cost=4 Karma, requirements=Awareness 2|4|5,
+effect={Improves hearing by +1|2|3.}}
 
-\abil{Sensitive Nose I/II/III}{%
-usage=passive, cost=4 Karma, requirements=Awareness 2/4/5,
-effect={Improves smell by +1/2/3.}}
+\abil{Sensitive Nose I|II|III}{%
+usage=passive, cost=4 Karma, requirements=Awareness 2|4|5,
+effect={Improves smell by +1|2|3.}}
 
 \abil{Beautiful}{%
 usage=passive, cost=4 Karma, requirements=racial,
 effect={This ability can be used to gain +1 on persuasion attempts and +3 on seduction attempts against seductible characters.}}
 
 \abil{Ugly}{%
-usage=passive, cost=-4 Karma, requirements=creation or ritual,
+usage=passive, cost=-4 Karma,
 effect={Gets -1 on persuasion social actions and -3 on seduction attempts. Can be taken at creation for 4 extra karma.}}
 
-\abil{Obese}{%
-usage=passive, cost=0 XP, requirements=2 months,
-effect={Receives -1 burden penalty. When Hunger reaches 30, the character loses this ability and their hunger resets to 15. Requires eating a lot.}}
+
 
 \abil{Regenerative Reservoir}{%
 usage=passive, cost=8 Karma,
 effect={The character has an internal reservoir that functions like a potion that heals 10 IL. The reservoir is filled by regular healing while they are resting and uninjured or when drinking a potion.}}
 
 \abil{Resurrection}{%
-usage=ritual, cost=10 Karma, requirements={Metabolic Control, Adaptive Sleep, Biomancy 5},
+usage=passive, cost=10 Karma, requirements={Metabolic Control, Adaptive Sleep, Biomancy 5},
 effect={The body performs sleeps after the character dies. If the character goes back to the living range of IL, they come back to life.}}
 
 \abil{Tireless}{%
@@ -927,7 +924,7 @@ effect={The character gains awareness and control over their pheromones, increas
 These mutations are spiritual and require knowledge of Animancy or divine assistance to be acquired.
 
 \abil{Elf}{%
-usage=passive, cost=12 Karma, requirements=Devotion 4 or racial,
+usage=passive, cost=12 Karma, requirements=Devotion 4,
 effect={Gains the ability to meditate for 4 hours a day to gain +2 Devotion for the day. The bonus applies automatically if in a sacred place. The character must meditate every day; otherwise, they will become ill within 24 hours. The entity worshiped by the cleric has +10 on the DL of compulsions against the elf's will.}}
 
 
@@ -936,39 +933,39 @@ effect={Gains the ability to meditate for 4 hours a day to gain +2 Devotion for 
 These are abilities that mix characteristics of other animals with those of humans. Many of them require surgical and magical intervention to be taken.
 
 \abil{Fur}{%
-usage=passive, cost=6 Karma, requirements={racial or ritual, not Scales},
+usage=passive, cost=6 Karma, requirements={not Scales},
 effect={Becomes Furry, granting +3 on tests to resist exposure to cold and gives a natural armor of 2xDM INS.}}
 
 \abil{Scales}{%
-usage=passive, cost=8 Karma, requirements={racial or ritual, not Fur},
+usage=passive, cost=8 Karma, requirements={not Fur},
 effect={Scales: Makes the skin resemble that of a crocodile. Gives a natural armor of +4xDM RES.}}
 
 \abil{Claws}{%
-usage=passive, cost=6 Karma, requirements=racial or ritual,
+usage=passive, cost=6 Karma,
 effect={Gives an unarmed attack that uses claws, defined in gear. Also improves climbing by +1 if not wearing gloves.}}
 
 \abil{Gills}{%
-usage=passive, cost=10 Karma, requirements=racial or ritual,
+usage=passive, cost=10 Karma,
 effect={Can rest with half the STA regeneration under water and does not lose STA due to suffocation under water.}}
 
-\abil{Tail I/II}{%
-usage=passive, cost=6 Karma, requirements=racial or ritual,
-effect={I. +1/2 for balance and climbing. II. Can hold things and hang with the tail.}}
+\abil{Tail I|II}{%
+usage=passive, cost=6 Karma,
+effect={I. +1|2 for balance and climbing. II. Can hold things and hang with the tail.}}
 
 \abil{Bear Nose}{%
-usage=passive, cost=10 Karma, requirements=racial or ritual,
+usage=passive, cost=10 Karma,
 effect={Modifies the nose to become very sensitive and can transform it into a snout. Removes the -5 penalty to smell.}}
 
 \abil{Infrared Vision}{%
-usage=passive, cost=8 Karma, requirements=racial or ritual,
+usage=passive, cost=8 Karma,
 effect={Modifies the eyes to be able to see infrared light, allowing aiming at heat sources even through fog or in complete darkness.}}
 
 \abil{Owl Eyes}{%
-usage=passive, cost=12 Karma, requirements=racial or ritual,
+usage=passive, cost=12 Karma,
 effect={Modifies the eyes to be able to see well at night, but not absolute darkness.}}
 
 \abil{Bat Ears}{%
-usage=passive, cost=12 Karma, requirements=racial or ritual,
+usage=passive, cost=12 Karma,
 effect={Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense. This is not as good as vision as a dominant sense, so it leaves the character disoriented when used as the only active sense. This does not work in complete silence.}}
 
 % \abil{Four Legs}{%
