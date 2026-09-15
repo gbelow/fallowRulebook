@@ -118,8 +118,11 @@
 % Stat block row, omitted when the value is empty.
 \newcommand{\statrow}[2]{\ifdefempty{#2}{}{\statlabel{#1} #2 \\}}
 
-% Ability entry: \abil{Name}{key=value, ...}. Cost grammar: <price>[, <talent> <level>]
-% with price N XP | N Karma (negative = received), levels per stage split by /.
+% Ability entry: \abil{Name}{key=value, ...}. Field grammars (levels per stage split by /):
+%   usage: passive | <cost> | reaction[, <cost>] | sustained, <cost>/turn | full turn | ritual
+%          cost = N AP | N STA | N AP + N STA | attack[ + N STA] | N ET | N IL
+%   cost:  <price>[, <talent> <level>]   price = N XP | N Karma (negative = received)
+%   requirements: comma = and, "or" = alternatives, "not X" = forbidden; ability names carry their level
 \pgfkeys{/abil/.cd,
   usage/.store in=\abilUsage,
   cost/.store in=\abilCost,
