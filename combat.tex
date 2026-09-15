@@ -63,7 +63,7 @@ Types of movement:
 \item \textbf{basic movement:} Simple walking movement.
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
 \item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same.
-\item \textbf{getting up:} Removes the fallen condition.
+\item \textbf{getting up:} Removes the prone condition.
 \item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to match that of running. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved. 
 \item \textbf{crawling:} is the only usable movement speed while \textbf{prone}.
 \item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{prone} condition.
@@ -97,11 +97,11 @@ Characters attempting to swim with one hand receive a -3 penalty on the test.
 A swimming check in a deep pool is considered a DL of -2. Swimming at a beach with waves is 0. Swimming in a swift river or choppy sea would be around 4. Swimming under a storm or in a raging river is around a 7.
 }
 
-\skill{Climbing}{AGI - 10}{ Make a climbing skill check to overcome a DL and climb a surface. Climbing checks can be made safely or recklessly.
+\skill{Climbing}{AGI - 10}{ Make a climbing skill check to overcome a DL and climb a surface.
 
 The climbing speed is equal to the crawling speed but costs 1 AP + 1 STA. On a critical, it does not cost STA. On a success, they climb normally. On a near miss, decide to go twice as slow or give up. On a failure, the character simply falls from the surface.
 
-A character who is climbing is considered lying down. An attack that interrupts the climber will require them to redo their climbing check with a -3 penalty. In the case of multiple climbing checks in a single turn, always take the worst result. Climbing with one hand incurs a -3 penalty.
+A character who is climbing is considered prone. An attack that interrupts the climber will require them to redo their climbing check with a -3 penalty. In the case of multiple climbing checks in a single turn, always take the worst result. Climbing with one hand incurs a -3 penalty.
 
 To determine the difficulty of climbing, consider whether the surface is moving, the quality of the grips, and the distance to be climbed. An easy climb, with minimal chances of falling, is considered a DL of 5. A DL of 15 is reasonable for out-of-combat situations but quite challenging in a difficult scenario. DLs greater than 20 will require equipped and specialized characters and are unlikely to be accomplished during combat. As a general rule, consider that for every meter, the difficulty increases by 1.}
 
@@ -192,7 +192,7 @@ Tier 5 & armor+5xTGH & 50 & 100\% \\
 
 \textbf{Deflection:} is how hard it is to land additional effects on a hit. The natural deflection of a human body is +4. Any time a character is wearing armor, use the armor's deflection instead. 
 
-\textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. Every point above a hit can be used to activate these effects. These points are called Success Overflow Points(SOP). The effects are:
+\textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. SOPs are used to activate these effects. The effects are:
 
 \begin{proplist}
     \item \textbf{Armor Bypass:} Only attacks from weapons with the precise property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the attack also has the property.
@@ -230,7 +230,7 @@ The list of afflictions is:
 
 \begin{proplist}
 \item \textbf{Lame:} Cannot run, jump, or perform basic movement.
-\item \textbf{Prone:} Can only crawl and stand up. Takes -3 to any attempt to evade.
+\item \textbf{Prone:} Can only crawl and stand up.
 \item \textbf{Grappled:} Movement requires a test. Focus is locked to the main grappler.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
 \item \textbf{Disoriented:} Gives -2 to sensory penalties.
@@ -388,7 +388,7 @@ The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{Guard:} If using a shield, they can spend 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. Hits and crits damage the character directly.
 
-\textbf{Cover:} When using a large shield, it is possible to take total cover behind the shield after using guard. The cover is canceled if the character performs any action other than careful movement. This cover only extends to allies who stand in the same space.
+\textbf{Cover:} When using a body shield, it is possible to take total cover behind the shield after using guard. The cover is canceled if the character performs any action other than careful movement. This cover only extends to allies who stand in the same space.
 
 \textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they can spend an extra STA to jump in any direction before the explosion occurs. On a graze or miss, they can move 2 AP after the explosion.
 
