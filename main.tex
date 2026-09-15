@@ -115,24 +115,29 @@
    #3 \\
 }
 
-\newcommand{\abil}[5]{
-\statrule
-{\sffamily\bfseries\large #1} \\
-\statlabel{Usage:} #2\\
-\statlabel{Cost, Talent:} #3 \\
-\statlabel{Requirements:} #4 \\
-\statlabel{Description:} #5 \\
-}
+% Stat block row, omitted when the value is empty.
+\newcommand{\statrow}[2]{\ifdefempty{#2}{}{\statlabel{#1} #2 \\}}
 
-\newcommand{\inna}[7]{
-\statrule
-{\sffamily\bfseries\large #1} \\
-\statlabel{Usage:} #2 \\
-\statlabel{Cost:} #3 \\
-\statlabel{Requirements} #4 \\
-\statlabel{Range, Area:} #5 \\
-\statlabel{Duration:} #6 \\
-\statlabel{Effect:} #7 \\
+% Ability entry: \abil{Name}{key=value, ...}. Cost grammar: <price>[, <talent> <level>]
+% with price N XP | N Karma (negative = received), levels per stage split by /.
+\pgfkeys{/abil/.cd,
+  usage/.store in=\abilUsage,
+  cost/.store in=\abilCost,
+  requirements/.store in=\abilReq,
+  range/.store in=\abilRange,
+  duration/.store in=\abilDuration,
+  effect/.store in=\abilEffect,
+}
+\newcommand{\abil}[2]{%
+  \pgfkeys{/abil/.cd, usage=, cost=, requirements=, range=, duration=, effect=, #2}%
+  \statrule
+  {\sffamily\bfseries\large #1} \\
+  \statrow{Usage:}{\abilUsage}
+  \statrow{Cost:}{\abilCost}
+  \statrow{Requirements:}{\abilReq}
+  \statrow{Range:}{\abilRange}
+  \statrow{Duration:}{\abilDuration}
+  \statrow{Effect:}{\abilEffect}
 }
 
 % Mode tag: marks elements that belong to the magic system and are omitted in a no-magic game.

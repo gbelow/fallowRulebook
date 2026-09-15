@@ -22,31 +22,30 @@
   enhance/.store in=\spellEnhance,
   effect/.store in=\spellEffect,
 }
-\newcommand{\spellrow}[2]{\ifdefempty{#2}{}{\statlabel{#1} #2 \\}}
 \newcommand{\spell}[2]{%
   \pgfkeys{/spell/.cd, cost=, knowledge=, requirements=, dl=, type=,
     cast range=, cast area=, effect range=, effect area=,
     duration=, damage=, test=, miss=, graze=, hit=, crit=, enhance=, effect=, #2}%
   \statrule
   {\sffamily\bfseries\large #1} \\
-  \spellrow{Cost:}{\spellCost}
-  \spellrow{Knowledge:}{\spellKnowledge}
-  \spellrow{Requirements:}{\spellReq}
-  \spellrow{DL:}{\spellDL}
-  \spellrow{Type:}{\spellType}
-  \spellrow{Cast range:}{\spellCastRange}
-  \spellrow{Cast area:}{\spellCastArea}
-  \spellrow{Effect range:}{\spellEffectRange}
-  \spellrow{Effect area:}{\spellEffectArea}
-  \spellrow{Duration:}{\spellDuration}
-  \spellrow{Damage:}{\spellDamage}
-  \spellrow{Test:}{\spellTest}
-  \spellrow{Effect:}{\spellEffect}
-  \spellrow{Miss:}{\spellMiss}
-  \spellrow{Graze:}{\spellGraze}
-  \spellrow{Hit:}{\spellHit}
-  \spellrow{Crit:}{\spellCrit}
-  \spellrow{Enhance:}{\spellEnhance}
+  \statrow{Cost:}{\spellCost}
+  \statrow{Knowledge:}{\spellKnowledge}
+  \statrow{Requirements:}{\spellReq}
+  \statrow{DL:}{\spellDL}
+  \statrow{Type:}{\spellType}
+  \statrow{Cast range:}{\spellCastRange}
+  \statrow{Cast area:}{\spellCastArea}
+  \statrow{Effect range:}{\spellEffectRange}
+  \statrow{Effect area:}{\spellEffectArea}
+  \statrow{Duration:}{\spellDuration}
+  \statrow{Damage:}{\spellDamage}
+  \statrow{Test:}{\spellTest}
+  \statrow{Effect:}{\spellEffect}
+  \statrow{Miss:}{\spellMiss}
+  \statrow{Graze:}{\spellGraze}
+  \statrow{Hit:}{\spellHit}
+  \statrow{Crit:}{\spellCrit}
+  \statrow{Enhance:}{\spellEnhance}
 }
 
 \section{Sorcery basics}
