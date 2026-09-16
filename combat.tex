@@ -195,9 +195,9 @@ Tier 5 & armor+5xTGH & 50 & 100\% \\
 \textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. SOPs are used to activate these effects. The effects are:
 
 \begin{proplist}
-    \item \textbf{Armor Bypass:} Only attacks from weapons with the precise property can use this effect. This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, which has lower RES and is present in rigid armors. Penetrating is applied automatically if the attack also has the property.
-    \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. For the same cost, ignores fiber armor RES entirely. This can only be done by weapons with the penetrating property. 
-    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per SOP. Only weapons with the bladed property can use this.
+    \item \textbf{Armor Bypass:} This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, if the armor has one. Only attacks from weapons with the precise property can use this effect.
+    \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. Behaves like extra cut against fiber armor and after already penetrating same hardness objects. This can only be done by weapons with the penetrating property. 
+    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per SOP. Only weapons with the bladed property can use this. Increases by 2xDM per SOP for bladed and piercing weapons.
     \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1.
 \end{proplist}
 
@@ -206,13 +206,13 @@ Tier 5 & armor+5xTGH & 50 & 100\% \\
 
 To illustrate, here are some targets for humanoids. There are 4 locations: chest, hand, leg, and head.
 
-\textbf{Chest:} Costs 0 points. Standard location. 
+\begin{proplist}
+    \item \textbf{Chest:} Costs 0 points. Standard location. 
+    \item \textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage accounted from this is 5. Taking 20 IL damage amputates.
+    \item \textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates.
+    \item \textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4 damage has 50\% chance of instant death, T5 has 100\%.
+\end{proplist}
 
-\textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage accounted from this is 5. Taking 20 IL damage amputates.
-
-\textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates.
-
-\textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4 damage has 50\% chance of instant death, T5 has 100\%. Bypassing armor is possible with any weapon, unless the helmet is closed.
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
 
@@ -270,20 +270,21 @@ The survival chapter describes how health works for healing.
 
 \textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. RES Rules on equipement breakage can be found in the equipment chapter.
 
-Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. Each attack type must be used individually.
+Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. The variations can be combined, but braced and hook attack cannot be combined with anything.
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
-\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. There is no size bonus or penalty to strike in sweeping attacks.
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. 
 
-\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack, but not with evasive jump. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
+\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
 \textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. The additional damage effect also triggers a trample.
 
 \textbf{Hook Attack:} A melee attack using a weapon with hook property that attempts to trigger tripping the opponent. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +1 AP +1STA to attempt to trip their target, in which case the attack gets +STR/2 damage if the opponent attempts to perform an evasive jump and +STR if they are running.
 
-\textbf{ Assassinate :} Requires being in short range and having a free hand or equipping a small weapon on the off hand. This costs 1 extra AP on the normal cost of the attack. Precise weapons gain the +3 to bypass armor. This is equivalent to opening a gap in the oponent's armor with one hand and attacking with the other.
+\textbf{ Assassinate :} Can only be done against SD, not against active defense, and requires a short range and precise weapon attack. This costs 1 extra AP on the normal cost of the attack. It automatically applies armor bypass.
 }
+
 
 %-----------------------------------DEFEND
 
@@ -297,7 +298,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
 
-\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has up to 8 force more than the defender.
+\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has less than 8 force more than the defender.
 
 \textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
 
@@ -415,7 +416,7 @@ In all cases, if the character is interrupted, they cannot move after the interr
 
 \textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 2m by default and makes them zero visibility to those outside. Standing at the edge of the area makes them bad visibility to those outside, but allows good visibility for the one inside.
 
-\textbf{Underwater Combat:} Any attack that does not have the precise tag or the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m for small objects (the size of arrows), 5m for medium ones (the size of spears) and 8m for large ones (the size of ballista shots, since larger projectiles decelerate less). All explosions have half the radius, but blunt damage is doubled.
+\textbf{Underwater Combat:} Any attack that does not have the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m. All explosions have half the radius, but blunt damage is doubled.
 
 \textbf{Mounted Combat:} Attacking in melee receives a mount-dependent penalty while mounted, usually around -2. Accuracy receives the penalty while the mount is moving, not when standing still. Any movement, except careful movement, is considered running to trigger reactions. If the character is forcibly displaced while mounted, they will be dismounted. The only defenses against melee attacks allowed during mounted combat are block and intercept.
 

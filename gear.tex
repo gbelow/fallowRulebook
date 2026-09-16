@@ -10,19 +10,20 @@ All weapon attacks are made out of metal, unless otherwise stated.
 
 \noindent
 \begin{proplist}
-\item \textbf{Grapple:} This attack is used for grappling actions, its force is equal to STR.
+% \item \textbf{Nimble:} This attack gets +2 against grappled targets.
+\item \textbf{Grapple:} This attack is used for grappling actions.
 \item \textbf{Sweeping:} Allows for Sweeping attacks.
 \item \textbf{Braced:} This attack can be a braced attack.
-\item \textbf{Shaft:} This attack represents the shaft of the weapon and it is made of wood.
+\item \textbf{Shaft:} This attack represents the shaft of the weapon.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x RM. Long-range attacks have an extended range of 1m x RM per level and cannot be used in grappling combat.  
 \item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement. Cannot use quick shot unless STR is +3 points higher than the requirement.
 \item \textbf{Hook:} This attack can be used for hooked attacks.
-\item \textbf{Small/One/Two hands:} Small weapons give +2 to Strike against opponents involved in the same grapple as oneself. One-handed attacks use only one hand. Two-handed weapons require both hands. 
+\item \textbf{One/Two hands:} One-handed attacks use only one hand. Two-handed weapons require both hands. 
 \item \textbf{Heavy I/II/III:} Allows heavy attacks. Having a higher degree of heavy allows using any lower degree. Having heavy I-III or similar means that heavy I is minimum, and normal attacks are not allowed.
-\item \textbf{Piercing:} Grazes behave like a miss. Deal half the amount of IL damage. Must exceed object RES by 2x to break them.
+\item \textbf{Piercing:} Grazes behave like a miss. Deal half the amount of IL damage. Only breaks objects when damage > 2x RES.
 \item \textbf{Bladed:} allows using the extra cut additional effect and can be sharpened.
-\item \textbf{Penetrating:} allows using the penetrating additional effect.
+\item \textbf{Penetrating:} allows using the penetrating additional effect. Can only be used in piercing attacks.
 \item \textbf{Precise:} allows performing armor bypass additional effect.
 \item \textbf{Vicious:} causes double bleeding.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
@@ -51,11 +52,11 @@ All weapon attacks are made out of metal, unless otherwise stated.
 
 \subsection{Melee Weapons}
 
-\textbf{ Unarmed:} Corresponds to the hands of a humanoid character. It has punch and grapple as attacks. The punch deals damage based on the character's strength. A punch is unlikely to damage another character wearing armor, but since it is a small weapon with short range, it can land vulnerable hits with some ease. A heavy attack that overcomes armor coverage may be enough to knock someone out. The grapple does not deal damage, but serves both to hold the opponent and perform grappling maneuvers as well as to block some damage.
+\textbf{ Unarmed:} Corresponds to the hands of a humanoid character. It has punch and grapple as attacks. The punch deals damage based on the character's strength. A punch is unlikely to damage another character wearing armor, but it can stun when hitting the head. A heavy attack that overcomes armor coverage may be enough to knock someone out. The grapple does not deal damage, but serves both to hold the opponent and perform grappling maneuvers as well as to block some damage.
 
 \textbf{Brass Knuckles:} are a stronger version of the fists that are part of the armor. The character receives penalties for prestidigitation, accuracy, and climbing, but gains more coverage in the armor and has a much stronger and more resilient punch.
 
-\textbf{Rondel:} is a dagger focused on destroying armored opponents. Its penetration is quite high, making opponents wearing a chain shirt or chainmail extremely vulnerable. Being a small weapon with short range, the rondel is ideal for grappling combat. Even when its penetration is insufficient against armor, the rondel, being a precise weapon, can devastate the opponent if it lands a vulnerable attack.
+\textbf{Rondel:} is a dagger focused on destroying armored opponents. Its penetration is quite high, making opponents wearing a chain shirt or chainmail extremely vulnerable. Being a precise with short range, the rondel is ideal for grappling combat. Even when its penetration is insufficient against armor, the rondel, being a precise weapon, can devastate the opponent if it lands a vulnerable attack.
 
 \textbf{Dagger:} are extremely versatile weapons. They can be used as tools or as weapons and are easily concealed. Daggers are also used as defensive tools, making them useful when held in the non-dominant hand.
 
@@ -66,29 +67,29 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
 Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Unarmed} & TGH & 0 & 0 & small & short & grapple, DEF, braced, hooked, draw & - & - \\
+\textbf{Unarmed} & TGH & 0 & 0 & one & short & grapple, DEF, braced, hooked, draw & - & - \\
  & STR & 5 & 0 & small & short & draw, heavy I, smash & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Claws} & 10 & 0 & 5 & small & short & grapple, hooked & - & - \\[3pt]
+\textbf{Claws} & 10 & 0 & 5 & one & short & grapple, hooked & - & - \\[3pt]
 \midrule
 \textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple, DEF, hooked & 15 GP & small \\
  & 25 & 8 & 0 & one & short & heavy I, smash & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Dagger} & 15 & 4 & 15 & small & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small \\
+\textbf{Dagger} & 15 & 4 & 15 & one & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small \\
 \rowcolor{fallowtint}
- & 15 & 4 & 16 & small & STR & draw, precise, slow & & \\[3pt]
+ & 15 & 4 & 16 & one & STR & draw, precise, slow & & \\[3pt]
 \midrule
-\textbf{Club} & 15 & 8 & 0 & small & short & DEF, heavy I & 1 SP & small \\[3pt]
+\textbf{Club} & 15 & 8 & 0 & one & short & DEF, heavy I & 1 SP & small \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Stiletto} & 15 & 4 & 20 & small & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small \\
+\textbf{Stiletto} & 15 & 4 & 15 & one & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small \\
 \rowcolor{fallowtint}
- & 15 & 0 & 0 & small & short & draw, DEF & & \\[3pt]
+ & 15 & 0 & 0 & one & short & draw, DEF & & \\[3pt]
 \midrule
-\textbf{Whip} & 10 & 0 & 6 & small & long II & draw & 2 GP & small \\
- & 15 & 0 & 0 & small & long II & grapple & & \\
+\textbf{Whip} & 10 & 0 & 6 & one & long II & draw & 2 GP & small \\
+ & 15 & 0 & 0 & one & long II & grapple & & \\
 \end{stattable}
 \begin{multicols}{2}
 
@@ -212,17 +213,17 @@ Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Bulk \\
 \textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Short Bow*} & 10 & 6 & 18 & 5 & two & 100m & piercing, fast & 5 GP & medium \\[3pt]
+\textbf{Short Bow*} & 10 & 6 & 18 & 5 & two & 100m & piercing, precise, fast & 5 GP & medium \\[3pt]
 \midrule
-\textbf{Long Bow*} & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, fast & 8 GP & large \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Heavy Bow*} & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, fast & 10 GP & large \\[3pt]
-\midrule
-\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, fast & 8 GP & large \\[3pt]
+\textbf{Long Bow*} & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Arbalest} & 10 & 10 & 26 & 4+6 & two & 200m & reload, piercing, fast & 12 GP & large \\
+\textbf{Heavy Bow*} & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
+\midrule
+\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, precise, fast & 8 GP & large \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Arbalest} & 10 & 10 & 26 & 4+6 & two & 200m & reload, piercing, precise, fast & 12 GP & large \\
 \end{stattable}
 \begin{multicols}{2}
 
@@ -265,17 +266,17 @@ Armors have prot, which is used as damage reduction against impacts. RES is both
 
 \textbf{Metallic armors} cause the character to sink 1m per turn while swimming, on top of whatever they get in their swimming test. Metal armors cannot be cut without the penetrating property.
 
-\textbf{Rigid armors:} are layered to allow mobility. When RES is described with two numbers, the second one is the inner layer. Rigid armors receive and deal damage from weapons that hit them, thus having a RES value. Their protection against impact is greater, as the armor absorbs a larger portion.
+\textbf{Rigid armors:} receive and deal damage from weapons that hit them, thus having a RES value. Their protection against impact is greater, as the armor absorbs a larger portion.
 
 \textbf{Gauntlets:} Gauntlets give -3 to prestidigitation, -3 to accuracy and climbing, but the armor protects the vulnerability of the hands. A pair of gauntlets costs 15 GP or 15\% of the armor's value.
 
-\textbf{Closed helmet:} gives -2 to reflexes, -2 to detection, and makes swimming always suffocating, but armor bypass is impossible in the head. A closed helmet costs 15 GP or 15\% of the armor's value.
+\textbf{Closed helmet:} gives -2 to reflexes, -2 to detection, and makes swimming always suffocating, but armor bypass is impossible in the head. Opening and closing the visor of a closed helmet is a standard action. A closed helmet costs 15 GP or 15\% of the armor's value.
 
 \textbf{Gauntlets and closed helmet:} It is possible to remove the gloves and closed helmets, but removing each of these eliminates their bonuses.
 
 \textbf{Donning and Doffing armor:} Costs a standard action to don/doff helmet, gauntlets and small armor. Costs 6 AP to don/doff medium armors and several minutes to don/doff large ones. It is possible to doff a large armor by cutting it with a blade and spending 2 full turns, or 16 AP on it. This leaves the armor damaged.
 
-\textbf{Armor layers:} For any armor marked with two values for RES, like 10/5, the second and lower value is the inner layer, which is made of the same material as the outer one by default.
+\textbf{Armor layers:} For any armor marked with two values for RES, like 10/5, the second and lower value is the inner layer, which is made of the same material as the outer one by default. Unlayered armor cannot be bypassed.
 
 \end{multicols}
 
@@ -377,7 +378,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Gear condition}
 \begin{proplist}
-    \item Condition: Sharp - Weapon deals 1.5 x DM extra damage per SOP with extra cut.
+    \item Condition: Sharp - Weapon deals 1.5 x DM extra damage per SOP with extra cut. Does not affect bladed + piercing gear.
     \item Condition: Dull - Bladed weapon cannot use extra cut.
     \item Condition/Characteristic: Pitted - Armor has its deflection reduced by 2. Damaged or low quality.
     \item Condition/Characteristic: Misfitted - Armor has its penalty increased by 1. Low quality armor or armor made for someone else.
@@ -385,7 +386,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Gear characteristics}
 \begin{proplist}
-    \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body. If armor has two values, it is layered.
+    % \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body. If armor has two values, it is layered.
     \item Characteristic: Flammable - Burning condition does not wear off by itself. Deals 5 fire damage per round until extinguished.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
     \item Characteristic: Insulating: Increases insulation against electric-type damage attacks by +5.
@@ -413,7 +414,7 @@ Items can be categorized as small, medium, large.
 
 \textbf{Hands:} Items held in hands can be of any size. 
 
-\textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do no need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and over.
+\textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do not need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and over.
 
 \begin{proplist}
 \item \textbf{Light}: the burden has no effect.
