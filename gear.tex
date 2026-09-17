@@ -244,7 +244,7 @@ The shields here are equipped with a strap around the shoulder and a handle for 
 
 \end{multicols}
 \begin{stattable}{Shields}{@{}lcccccc@{}}
-Name & Burden & Cover & RES & Insulation & Bulk & Value \\
+Name & Burden Pen & Cover & RES & Insulation & Bulk & Value \\
 \midrule
 \textbf{Wooden Shield} & -1 & +2 & 20 & 10 & large & 1 GP \\
 \rowcolor{fallowtint}
@@ -259,7 +259,7 @@ Body shields are marked with * in the table and can provide total cover.
 
 Armors have prot, which is used as damage reduction against impacts. RES is both the armor breakage threshold and the damage reduction against CUT, since the armor must be destroyed to allow cutting damage to hit the wearer.
 
-\textbf{Burden penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack. Burden penalties are reduced or increased based on STR, where burden penalty is modified by $(STR-10)/3$
+\textbf{Burden penalties:} The penalties shown in the armor and shield tables derive from the additional weight of the armor and are reflected as a penalty in the AGI and STA attribute values. The penalties from multiple gear stack. Burden penalties are reduced or increased based on STR, where burden penalty is modified by $(STR-10)/5$
 
 \textbf{Fiber armors} require the user to defend against most attacks actively, but they prevent the damage from being severe if hit. Cloth armors have very few penalties and a hardness of 2.
 
@@ -280,7 +280,7 @@ Armors have prot, which is used as damage reduction against impacts. RES is both
 \end{multicols}
 
 \begin{stattable}{Armors}{@{}lccccccc@{}}
-Name & RES & Protection & Insulation & Deflection & Burden & Price & Bulk \\
+Name & RES & Protection & Insulation & Deflection & Burden Pen & Price & Bulk \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Fiber}}} \\
 \midrule
@@ -298,16 +298,16 @@ Padded Armor & 12 & 6 & 8 & +5 & -1 & 2 GP & large \\
 \midrule
 Chain Shirt & 8 & 3 & 5 & +5 & 0 & 20 GP & large \\
 \rowcolor{fallowtint}
-Hauberk & 10 & 5 & 6 & +5 & -1 & 30 GP & large \\
-Brigandine & 12/8 & 8 & 8 & +6 & -2 & 50 GP & large \\
+Hauberk & 10 & 5 & 6 & +5 & -1 & 30 GP & 4 \\
+Brigandine & 12/8 & 8 & 8 & +6 & -2 & 50 GP & 5 \\
 \midrule
 \multicolumn{8}{l}{\textbf{\textit{Rigid and Metallic}}} \\
 \midrule
 \rowcolor{fallowtint}
-Half Armor & 16/10 & 10 & 7 & +5 & -2 & 60 GP & large \\
-Full Armor & 16/10 & 10 & 8 & +7 & -3 & 100 GP & large \\
+Half Armor & 16/10 & 10 & 7 & +5 & -2 & 60 GP & 5 \\
+Full Armor & 16/10 & 10 & 8 & +7 & -3 & 100 GP & 5 \\
 \rowcolor{fallowtint}
-Reinforced Armor & 18/10 & 12 & 8 & +8 & -4 & 150 GP & large \\
+Reinforced Armor & 18/10 & 12 & 8 & +8 & -4 & 150 GP & 6 \\
 \end{stattable}
 \begin{multicols}{2}
 
@@ -402,50 +402,47 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \section{Containers and Burden}
 
-Items can be categorized as small, medium, large. 
+Items can be categorized in bulk like characters are in size, where each category weighs roughly 3x more than the previous. Item bulk is not to be confused with item size, since its role is to define what can be carried, not what can be used as a weapon. However, scaling items up or down also scales item bulk by the same amount.
 
 \begin{itemize}
-    \item Small items are the kind of thing that fits in a hand. Small tools, small weapons, coins, flasks and similar items are small. They tend to stay under 0.5 kg in weight and 0.5 liters in volume. 
-    \item Medium items are normally cumbersome. They include one-handed weapons, books, large bottles, etc. They tend to stay under 2 kg in weight and 2 liters in volume.
-    \item Large items are too big to be carried in a backpack. They are carried in hand, slung or lashed outside the backpack. These include most two-handed weapons, shields, pots, shovels. They can also be carried in vehicles and animals. 
-    \item Cargo: counted in number of large items. These can only be placed in vehicles.
+    \item Tiny items are bulk 0. a bag of 10 coins, and an arrow are tiny items.
+    \item Small items are bulk 1. They are the kind of thing that fits in a hand. Small tools, small weapons, flasks and similar items are small. They tend to stay under 0.5 kg in weight and 0.5 liters in volume. 
+    \item Medium items are bulk 2. They include one-handed weapons, books, large bottles, etc. They tend to stay under 2 kg in weight and 2 liters in volume.
+    \item Large items are bulk 3 and are too big to be carried in a backpack. They are carried in hand, slung or lashed outside the backpack. These include most two-handed weapons, shields, pots, shovels. 
+    \item Bulk 4. The list goes on numerically for larger sizes of items.
 \end{itemize}
 
-\textbf{Hands:} Items held in hands can be of any size. 
+\textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose burden penalty to be carried, determined by their burden and the character that is carrying them, calculated by burden penalty = character size - container burden. If the number is negative, add it to the character's burden penalty. They do not need to have anything inside to inflict the penalty. If the container's burden is 3 higher than the character, it causes the lame affliction.
 
-\textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose a level of burden to be carried, determined by their size. They do not need to have anything inside to inflict the penalty. A character can be in one of four levels of burden: light, medium, heavy, and over.
+\textbf{Hands:} can carry an item up to one bulk higher than the character's size.
 
-\begin{proplist}
-\item \textbf{Light}: the burden has no effect.
-\item \textbf{Medium}: -1 for burden penalty.
-\item \textbf{Heavy}: -2 for burden penalties.
-\item \textbf{Over}: -3 for burden penalties. Character is considered lame.
-\end{proplist}
+\textbf{Slot size and stacking:} Each container has a number of slots, which can each accommodate an item or stack of items. Slots can be of any bulk size. A slot holds one item of its Bulk, a stack of 3 items one step below, or 10 two steps below. The progression continues for smaller bulks, following the pattern of the VM: 3/10/30/100. Only identical items can be stacked together.
 
-
-\textbf{Slot size and stacking:} Each container has a number of slots, which can each accomodate an item or stack of items. Slots can be small, medium or large. A small slot can hold a small item. A medium slot can hold a medium item or a stack of 5 small ones. A large slot can hold a large item, a stack of 5 medium items, or a stack of 25 small items. Only identical items can be stacked together.
-
-\textbf{Large:} are used for large items.
+\textbf{Quick slots:} can only carry 1 item each, and have a maximum size of equipment that they can keep.
 
 \begin{stattable}{Containers}{@{}lccccc@{}}
 Name & Quick & Medium & Large & Burden & Cost \\
 \midrule
-Belt & 4 medium & 0 & 0 & light & 1 GP \\
+Belt & 4 medium & 0 & 0 & 3 & 1 GP \\
 \rowcolor{fallowtint}
-Bandolier & 8 small & 0 & 0 & light & 3 GP \\
-Backpack & 0 & 12 & 2 & medium & 5 SP \\
+Bandolier & 8 small & 0 & 0 & 3 & 3 GP \\
+Backpack & 0 & 12 & 2 & 4 & 5 SP \\
 \rowcolor{fallowtint}
-Large Backpack & 0 & 16 & 4 & heavy & 1 GP \\
-Saddle* & 2 large & 8 & 4 & light & 4 GP \\
+Large Backpack & 0 & 16 & 4 & 5 & 1 GP \\
+Saddle* & 2 large & 8 & 4 & 5 & 4 GP \\
 \rowcolor{fallowtint}
-Sled & 0 & 0 & 20 & over & 2 SP \\
-One-Horse Cart* & 0 & 0 & 100 & heavy & 30 GP \\
+Sled & 0 & 0 & 20 & 6 & 2 SP \\
+One-Horse Cart* & 0 & 0 & 100 & 7 & 30 GP \\
 \rowcolor{fallowtint}
-Two-Horse Cart* & 0 & 0 & 200 & heavy & 60 GP \\
+Two-Horse Cart* & 0 & 0 & 200 & 7 & 60 GP \\
 \end{stattable}
 * the burden applies to the animal that is carrying it.
 
 A character can use only one backpack, one bandolier and one belt at a time.
+
+\textbf{Scaling a container:} increase the size of every slot and increase burden by 1 to scale the container up a size. Do the oposite to scale it down. 
+
+
 
 \section{Tools of War}
 
@@ -492,7 +489,7 @@ These make a position costly to hold or cross, forcing a turtling enemy to move.
 % \item Stakes - Sharpened fixed stakes. Work like a spear's braced attack. 2 SP per space. medium.
 \gitem{Tripwire}{An undetected tripwire forces a balance check DL 3 to avoid falling prone. Detection DL 5.}{1 CP}{small}
 % \item \textbf{Pit:} Detection test against a DL to avoid falling in.
-\gitem{Rolling Log}{1 ton of wood released downhill along a path. Treat as a huge projectile. Deals 30 blunt damage and pushes with a DL of 30.}{improvised}{cargo}
+\gitem{Rolling Log}{1 ton of wood released downhill along a path. Treat as a huge projectile. Deals 30 blunt damage and pushes with a DL of 30.}{improvised}{8}
 \end{proplist}
 
 % \subsection{War engines and vehicles}
@@ -555,7 +552,7 @@ Potions are carried in vials.
     \gitem{Coin Pouch}{Holds up to 20 coins.}{--}{small}
     \gitem{Oilcloth}{A personal tent that counts as shelter against rain.}{5 SP}{medium}
     \gitem{Small Tent}{Allows you to set up camp without skill. Has space for 2 people and counts as shelter against rain and wind. Also reduces any exposure by 1.}{1 GP}{large}
-    \gitem{Large Tent}{Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1.}{2 GP}{4x large}
+    \gitem{Large Tent}{Allows you to set up camp without skill. Has space for 4 people and counts as shelter against rain and wind. Also reduces any exposure by 1.}{2 GP}{4}
     \gitem{Hammock}{Reduces exposure to insects by 2.}{5 SP}{medium}
     \gitem{Bedroll}{Reduces cold exposure by 2.}{4 SP}{medium}
     \gitem{Oil Lamp}{Gives 5m light radius when lit, requires an oil flask to burn for 8 hours.}{1 GP}{small}
