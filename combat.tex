@@ -109,9 +109,9 @@ To determine the difficulty of climbing, consider whether the surface is moving,
 
 \textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance check. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill check. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a miss, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they receive some consequence (usually falling).
 
-\textbf{Fall skill test:} Falling requires a balance test to decide how well the landing or dive goes. On a critical on the balance test, reduce the damage by 50\% and prevent T0 and T1 injuries. On a hit, reduce damage by TGH. On a graze, takes full damage and falls prone, and on a miss takes full damage, falls prone and hits the head. Receiving a T2 injury or higher always makes the character prone.
+\textbf{Fall skill test:} Falling requires a balance test to decide how well the landing or dive goes. On a critical on the balance test, reduce the damage by 50\% and prevent T0 and T1 injuries. On a hit, reduce damage by TGH. On a graze, takes full damage and falls prone, and on a miss takes full damage, falls prone and hits the head. Receiving a T1 injury or higher always makes the character prone and stuns.
 
-\textbf{Choosing Fall DL:} When falling, the DL to fall properly is generally proportional to the fall height. Falls from small heights in a bad position are more difficult too. As a rule of thumb, DL is 1 per meter until a maximum of 25. As a common exception to the rule, DLs for 1m can be considered trivial at -5, then 0 for 2m. 
+\textbf{Choosing Fall DL:} When falling, the DL to fall properly is generally proportional to the fall height. Falls from small heights in a bad position are more difficult too. As a rule of thumb, DL is 1 per meter until a maximum of 15. As a common exception to the rule, DLs for 1m can be considered trivial at -5, then 0 for 2m.
 
 \textbf{Fall damage} For this damage estimation, consider that the landing spot is a flat, hard surface. To estimate fall damage, do 2x fall height x DM$^2$, Where the DM is the character's DM and the damage ignores armor. Maximum height is capped at 50m. Soft surfaces, like sand or water halve the damage.
 
@@ -130,31 +130,29 @@ Note: DM is squared because large creatures suffer more from falling. For size 2
 
 \textbf{Healing Injuries:} characters heal by resting well and using potions or medicine. The details are explained in the exploration chapter.
 
-\textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving wounds. The table shows how much IL they receive from injuries at each tier. 
+\textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving injuries. The table shows how much IL they receive from injuries at each tier. 
 
 \textbf{Damage Tiers:} 
 
 \begin{stattable}{Damage Tiers}{@{}lccc@{}}
-Name & Threshold & IL & Wound \\
+Name & Threshold & IL & Bleed \\
 \midrule
 Tier 0 & armor & 1 & 0 \\
 \rowcolor{fallowtint}
 Tier 1 & armor+TGH & 5 & 0 \\
-Tier 2 & armor+2xTGH & 10 & 50\% \\
+Tier 2 & armor+2xTGH & 10 & 1 \\
 \rowcolor{fallowtint}
-Tier 3 & armor+3xTGH & 20 & 100\% \\
-Tier 4 & armor+4xTGH & 30 & 100\% \\
+Tier 3 & armor+3xTGH & 20 & 2 \\
+Tier 4 & armor+4xTGH & 30 & 3 \\
 \rowcolor{fallowtint}
-Tier 5 & armor+5xTGH & 50 & 100\% \\
+Tier 5 & armor+5xTGH & 50 & 4 \\
 \end{stattable}
 
 \begin{dnote}
-    \textbf{Interpreting IL:} A tier 0, or T0 injury means a small bruise or a patch of burned skin. A T1 injury is kin deep cut that bleeds a little or a large bruise. A T2 is a cut down to the muscle or a potentially cracked bone. A T3 is definitely a cracked bone and internal organ damage with bleeding. A T4 is near system shock, with multiple broken bones, impalation through the chest and potentially limb amputation. A T5 means instant death.
+    \textbf{Interpreting IL:} A tier 0, or T0 injury means a small bruise or a patch of burned skin. A T1 injury is a deep cut that bleeds a little or a large bruise. A T2 is a cut down to the muscle or a potentially cracked bone. A T3 is definitely a cracked bone and internal organ damage with bleeding. A T4 is near system shock, with multiple broken bones, impalation through the chest and potentially limb amputation. A T5 means instant death.
 \end{dnote}
 
-\textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of wounds. 
-
-% \textbf{Multiple types:} Some attacks can cause multiple types of damage. In this case, the damage thresholds are calculated separately for each type of damage, and the injuries caused by each type are considered separately.
+\textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of effects. 
 
 \textbf{Physical attacks:} have blunt and cutting damage components. If the weapon is not capable of cutting its target, the damage is blunt, otherwise, use the most advantageous of the two.
 
@@ -164,57 +162,59 @@ Tier 5 & armor+5xTGH & 50 & 100\% \\
 
 \textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks.
 
+\textbf{Bleed:} is caused by blunt and cutting damage. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per bleed intensity. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
+
 \textbf{Burn, radiant:} Their respective defense is INS. Dealing Tier 0 injury or higher leaves the target burning. 
 
-\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to I of damage leaves the target corroding at that tier of damage, which reaplies the damage until armor is removed. 
+\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to I of damage leaves the target corroding at that tier of damage, which reapplies the damage until armor is removed. 
 
-\textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage.
-
-\textbf{Wounds:} can be caused by receiving high tier damage. Their healing counter is separate from the IL counter. 
-
-\begin{proplist}
-    \item \textbf{Broken arm:} Makes the arm useless. Equivalent to 10 IL to heal.
-    \item \textbf{Broken leg:} Makes the leg lame. Equivalent to 15 IL to heal.
-    \item \textbf{Bleed:} For every STA spent and at the end of every round in combat, the character receives +1 to their IL per bleed intensity. Bleeds caused by a T2 wound have intensity 1. For every extra tier, intensity increases by 1. Bleeding is caused by damage to the chest or head. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
-    \item \textbf{Shocked:} cause immobile. Happens with damage to the chest. Has 50\% chance on a T4 hit.
-    \item \textbf{Unconscious:} causes unconsciousness. Happens when receiving damage in the head. Takes at least 1 minute to wake up without intervention.
-\end{proplist}
+\textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage, and stuns at tier 3 or higher. This damage only deals half IL damage per tier. Electric damage dealt by a weapon that causes at least Tier 0 cutting damage ignores INS.
 
 \subsection{Additional effects:}
 
 \textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed. 
 
-% \textbf{Knockback:} The victim is knocked 1 space away from the source of the attack. It is interrupted as well.
-
-% \textbf{Knockdown:} The victim fall to the floor and becomes prone. It is interrupted as well.
-
 \textbf{Stun:} An interrupt that has minimum loss of 4 AP.
 
 \textbf{Deflection:} is how hard it is to land additional effects on a hit. The natural deflection of a human body is +4. Any time a character is wearing armor, use the armor's deflection instead. 
 
-\textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. SOPs are used to activate these effects. The effects are:
+\textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. HOPs are used to activate these effects. The effects are:
 
 \begin{proplist}
-    \item \textbf{Armor Bypass:} This costs a number of SOP defined by the targets armor deflection. It hits the inner layer of the armor, if the armor has one. Only attacks from weapons with the precise property can use this effect.
-    \item \textbf{Penetrating:} Costs a number of SOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. Behaves like extra cut against fiber armor and after already penetrating same hardness objects. This can only be done by weapons with the penetrating property. 
-    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per SOP. Only weapons with the bladed property can use this. Increases by 2xDM per SOP for bladed and piercing weapons.
-    \item \textbf{Smash:} Costs a number of SOPs equal to the target's deflection to stun them if the damage is at least over T1.
+    \item \textbf{Armor Bypass:} This costs a number of HOP defined by the targets armor deflection. It hits the inner layer of the armor, if the armor has one. Only attacks from weapons with the precise property can use this effect.
+    \item \textbf{Penetrating:} Costs a number of HOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. Behaves like extra cut against fiber armor and after already penetrating same hardness objects. This can only be done by weapons with the penetrating property. 
+    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this. Increases by 2xDM per HOP for bladed and piercing weapons.
+    \item \textbf{Smash:} Costs a number of HOPs equal to the target's deflection to stun them if the damage is at least T1.
 \end{proplist}
 
-    
-\textbf{Localized damage:} Changing location costs points based on the location. Each type of creature may have points that must be specifically aimed at when using the attack, called vulnerabilities. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the vulnerability. 
+
+\subsection{Localized damage}
+
+
+\textbf{Declaring a location:} must be done before performing any attack, otherwise the default applies. Each type of creature may have places that can specifically aimed at when using the attack. When someone declares that they are aiming at that specific point, the attack is modified according to the description of the location. 
 
 To illustrate, here are some targets for humanoids. There are 4 locations: chest, hand, leg, and head.
 
 \begin{proplist}
-    \item \textbf{Chest:} Costs 0 points. Standard location. 
-    \item \textbf{Hand:} Costs 10 points, or only 5 when used against a target that blocks with a weapon. Hands have no armor unless the character is wearing gauntlets. A wound renders the hand useless. Maximum IL damage accounted from this is 5. Taking 20 IL damage amputates.
-    \item \textbf{Leg:} Costs 0 points. A wound leaves the character lame. Maximum IL damage from this is 10. Taking 30 IL amputates.
-    \item \textbf{Head:} Costs 5 points. Getting a wound or stun to the head causes unconsciousness. The head has a 50\% chance of a wound on tier 1 and 100\% on tier 2 when receiving blunt damage. Tier 4 damage has 50\% chance of instant death, T5 has 100\%.
+    \item \textbf{Chest:} Standard location, no penalty.
+    \item \textbf{Hand:} -10 to the attack test. Attacks can switch target to the hand used for defense by spending 3 HOP when the target tries to block or intercept without a shield. Hands have no armor unless the character is wearing gauntlets. Maximum injury tier applied to the body is 2.
+    \item \textbf{Leg:} 0 to the attack test. Maximum injury tier applied to the body is 3.
+    \item \textbf{Head:} -5 to the attack test. Getting a Tier 3 injury from blunt, cutting or electrical damage or stun to the head causes unconsciousness that lasts at least 1 minute without intervention. Tier 4 damage causes instant death. Armor bypass at the head always hits flesh.
 \end{proplist}
 
-
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
+
+\textbf{Wounds:} can be caused by receiving damage, as indicated in the table. A wound has a consequence that disables a character until healed. The amount of healing required is shown in IL wound on the table, and is tracked separately from the main IL. 
+
+\begin{stattable}{Wounds}{@{}lccc@{}}
+Wound & Cause & IL wound & consequence\\
+\midrule
+Broken hand & T2 blunt/cut & 10 & useless hand \\
+Amputated hand & T4 blunt/cut & no heal & loses hand \\
+Broken leg & T3 blunt/cut & 20 & lame\\
+Amputated leg & T5 blunt/cut & no heal & loses leg\\
+Shocked & T4 blunt+smash & 5 & immobile\\
+\end{stattable}
 
 \subsection{Afflictions}
 

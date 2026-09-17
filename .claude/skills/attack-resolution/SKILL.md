@@ -4,249 +4,251 @@ description: >-
   Simulate attack resolution in the Fallow rulebook — apply any attack type with
   any modifiers and state the damage dealt against a target wearing given armor.
   Use when asked to calculate or simulate damage, resolve an attack, compare
-  weapons/armor, or compute expected damage per attack or per AP.
+  weapons/armor, compute expected damage per attack or per AP, or check what a
+  declared location (head/hand/leg) does.
 ---
 
 # Attack Resolution Simulator
 
-Resolve any attack end-to-end: attack roll → degree → damage → armor → injury
-tier → IL/wounds. The user's typical question is "what does weapon X do against
-armor Y", so always finish with concrete damage and IL numbers, not just a
-miss/hit chance.
+Resolve an attack end-to-end: declare → roll → degree → damage → armor →
+tier → IL, bleed, wound, location effect → overflow purchases. The user's
+usual question is "what does weapon X do against armor Y", so always end with
+concrete tier/IL numbers, not just a hit chance.
 
 ## 0. Source of truth
 
-Rules change as the user edits the book. Before resolving:
-- Weapon/armor/shield stats: read the current tables in `gear.tex` (never from
-  memory — the user is actively updating these tables).
-- Test resolution and attack/defense/SOP rules: `play.tex` ("How skills work")
-  and `combat.tex`.
-- Skill value formulas and size multipliers: `creating.tex`.
+The user edits the book between messages. Before resolving, re-read the
+current text — never work from this file's numbers alone:
+- Weapon, shield, armor tables and weapon properties: `gear.tex`.
+- Test ladder and exploding die: `play.tex` ("How skills work").
+- Attacks, defenses, damage tiers, overflow effects, localized damage, wounds,
+  afflictions: `combat.tex` (Damage and Injuries, Melee Combat, Ranged
+  Combat).
+- Skill formulas, size table, SD: `creating.tex`.
 
-## 1. Gather inputs
+Terminology: the user now calls overflow points **HOP (Hit Overflow Points)**.
 
-Ask for (or assume defaults and state them) per combatant:
+## 1. Inputs (ask, or assume and state)
 
-**Attacker:** STR, DEX, size (→ DM/SM/RM), Melee or Ranged proficiency level,
-Strike/Accuracy skill bonus, weapon + which attack form (row in the weapon
-table), attack variation, armor/condition of the weapon, relevant afflictions.
+**Attacker:** STR, size (→ DM/SM/RM), Melee or Ranged proficiency, Strike or
+Accuracy bonus, weapon row (Blunt, Cut, properties, range), attack variation,
+declared location, weapon condition (sharp/dull), afflictions (IL penalty).
 
-**Defender:** size (→ SM, DM), armor (name → RES, Protection, Deflection,
-Insulation), TGH (default 0.5 × STR × DM), shield, defense action (evade /
-evasive jump / block / intercept / guard / no defense), Defend or Reflex value
-or SD, IL so far, gauntlets/closed helmet.
+**Defender:** size, armor row (RES, Protection, Insulation, Deflection),
+gauntlets / closed helmet, TGH (default 0.5 × STR × DM), shield, chosen
+defense (evade, evasive jump, block, intercept, reflex evasion, guard, none →
+SD), Defend or Reflex value, current IL.
 
-**Situation:** distance (ranged), mounted, high ground, cover, underwater,
-flanking, aimed location, grappled.
+**Situation:** moving or stationary, grappled, mounted, high ground, cover,
+flanking, underwater, distance.
 
 ## 2. Skill values
-
-Skill value = proficiency bonus + skill bonus (talent gates XP cost, not value).
 
 | Skill | Value |
 |---|---|
 | Strike | Melee + strike bonus |
 | Defend | Melee + defend bonus |
-| Grapple | Melee + STR − 10 (+5×SM) |
-| Force | (STR − 10) (+5×SM) |
+| Grapple | Melee + (STR − 10) + 5 × SM |
+| Force | (STR − 10) + 5 × SM |
 | Accuracy | Ranged + accuracy bonus |
-| Reflex | Ranged + Awareness (+ −1×SM) |
+| Reflex | Ranged + Awareness − 1 × SM |
 
-Size table (size 1–7): DM 0.5/0.75/1/1.5/2/3/4 · SM −2/−1/0/+1/+2/+3/+4 ·
-RM 0.5/1/1/1.5/1.5/2/2.5.
+Size 1–7: DM 0.5/0.75/1/1.5/2/3/4 · SM −2/−1/0/+1/+2/+3/+4 ·
+RM 0.5/1/1/1.5/1.5/2/2.5. Weapons scale damage and RES by DM, reach by RM.
+Oversized weapon (one size up): +1 AP per attack, STR − 5 for every STR
+contribution (heavy, braced, hook). Two sizes up: impossible.
 
-## 3. Assemble the attack roll
+## 3. Declare, then roll
 
-**Skill value, then add situational modifiers:**
+**Declarations happen before the roll:** attack variation, and location.
 
-Melee (to hit): opportunity attack +2 · heavy II −2, heavy III −3 · small weapon
-in a grapple +2 · mounted −2 (mount-dependent) · injury/sensory penalties (−1
-per 10 IL; Strike/Defend are sensory) · other agreed modifiers.
+**Location penalties (to the attack test):** chest 0 · leg 0 · head −5 ·
+hand −10. Separately, any attack can *switch* to the hand after the roll for 3
+HOP if the target blocked or intercepted without a shield (the accidental hand
+hit). Vulnerabilities on creatures work the same way, per their description.
 
-Ranged (to hit): the text defines no distance-based to-hit falloff — range is
-bounded only by the weapon's max range and Shoot's 30m cap (Snipe removes the
-cap for +2 AP; vertical range = half horizontal). Quick Shot has no to-hit
-penalty in the text, only ≤10m range and −1 AP. Mounted & moving −2. Untrained
-bows: +3 AP per shot instead of a penalty. Shots >50m fired from outside the
-combat area (chase/skirmish only) take −5.
+**To-hit modifiers:** opportunity attack +2 · heavy II −2, heavy III −3 ·
+mounted ≈ −2 (accuracy only while the mount moves) · slow ranged weapon −2 if
+the target defends actively · high ground: both sides +2 to melee defense ·
+bad visibility −2 · IL penalty −1 per 10 IL (Strike, Defend, Accuracy, Reflex
+are all sensory) · ranged >50 m from outside the combat area −5. There is no
+distance falloff inside weapon range — range is capped, not decayed (Shoot
+≤30 m, Snipe +2 AP any distance, Quick Shot −1 AP ≤10 m).
 
-**DL = defender's defense value:**
-- Melee: Defend value if actively defending; else SD.
-- Ranged: Reflex value if reacting (evasion/guard); else SD.
-- SD = −2 − SM (moving) or −5 − SM (stationary). No penalty can push a defense
-  below SD.
-- Evasive jump adds +AGI/3 to the defense test.
+**DL:** melee → Defend value if the target spends AP, else SD. Ranged → Reflex
+value if reacting, else SD. **SD = −5 − SM stationary, −2 − SM moving**; no
+penalty can push a defense below SD. Evasive jump adds +AGI/3 to Defend.
+Grappled targets cannot evade or block, only intercept. Assassinate only
+works against SD.
 
-**Degrees of success** (score = d10 + skill value + mods − DL):
-≥ +10 critical · ≥ +5 hit · ≥ 0 graze · else miss. Round every fraction down.
+**Score** = d10 + skill + mods − DL. Exploding die: a 10 adds 1d6 and keeps
+adding while the d6 shows 6; a 1 adds nothing and subtracts 1d6, continuing
+on 6. Safe test: 2d10 keep the one nearest 5; risky: keep the farthest.
 
-**Exploding die:** d10 = 10 → add 10 + 1d6, keep rolling d6 while it shows 6
-(keep adding). d10 = 1 → adds 0, then subtract 1d6, keep subtracting while
-rolling 6. Safe test: roll 2d10, keep the one closest to 5 (tie: average or
-reroll). Risky: keep the farthest from 5. Only when the rules allow it.
+**Degrees for attacks:** miss < 0 ≤ graze < 5 ≤ hit. There is no critical on
+an attack — everything above +5 is **HOP = score − 5**. (Explosions are the
+exception: their zones give crit 200% / hit 100% / graze 50%.)
 
-**AP/STA cost** (track it; users care about damage per AP): strike 3 AP ·
-heavy I +1AP · heavy II +2AP+1STA · heavy III +3AP+1STA · sweep +1AP · hook
-3 AP, +1AP+1STA only if the damage rider is bought · braced
-+2AP+1STA · assassinate +1AP · ranged: AP from weapon row (e.g. "3+5" = shot +
-reload, e.g. crossbow "4+4" = shot then reload) · quick shot −1AP · snipe +2AP.
-Defense: evade 2AP · evasive jump +1STA ·
-block 2AP · intercept 3AP · reflex evasion 2AP.
+**Piercing weapons:** a graze is a miss.
 
-## 4. Compute damage
+## 4. What the defense does with the degree
 
-1. **Read the weapon row** (Blunt and Cut columns).
-   - Plain numbers (e.g. Cut 16) are multiplied by the attacker's weapon DM.
-     This scaling applies to any extra damage effects added to the attack.
-   - Every Blunt/Cut entry is a plain number keyed to STR 10. Attribute-scaled
-     damage entries (`STR`, `0.5x STR`, `1.5x STR`) were removed from the tables
-     in Sept 2026 — if one reappears, flag it rather than computing with it.
-     RES columns may still read `STR` or `TGH` for body parts; those are
-     breakage thresholds, not damage.
-   - Oversized weapons use STR−5 for any STR *contribution* (heavy, braced,
-     hook riders) and cost +1 AP.
-2. **Add variation bonuses** (these increase cutting damage too): heavy I
-   +0.5×STR, II +1×STR, III +1.5×STR (heavy applies to blunt *and* cutting
-   damage — the old "piercing or bladed only" qualifier was dropped) · braced
-   +1.5×STR · hook +STR/2 (vs evasive jump) or +STR (vs running), and the hook
-   rider is an **optional purchase of +1 AP +1 STA made after the hit lands** ·
-   extra cut SOP +1×DM per SOP (bladed
-   only, scales slowly — 1 per SOP vs TGH per heavy degree). Smash adds no
-   damage — it is SOP-only (stun/interrupt, step 6).
-3. **Degree multiplier:** graze 50% (round down) · miss 0 · hit and crit 100%
-   (a crit's benefit is a bigger SOP pool, not more base damage; explosions are
-   the exception: crit 200%, hit 100%, graze 50%).
-4. **Pick damage type:** the attack can cut only if the weapon's material
-   hardness exceeds the target's surface hardness (liquids 1, flesh/fabric 2,
-   wood/bone/horn 3, metal/rock 4). If it can cut, the attacker chooses the
-   more advantageous type — Cut vs armor RES or Blunt vs armor Protection,
-   whichever yields the better tier against that armor. If it cannot cut, the
-   attack is blunt. Metal armor can never be cut without the penetrating
-   property (SOP, cost = deflection) — regardless of the Cut value.
+Hits always land at full damage. Graze/miss outcomes depend on the defense:
 
-## 5. Apply armor and convert to injuries
-
-Compare final damage to thresholds **armor + N × TGH**, where "armor" is
-Protection for blunt and RES for cutting. Shortcut: **tier =
-floor((damage − armor) / TGH)**, capped at T5; damage below the armor value
-deals no IL.
-
-| Tier | Threshold | IL | Wound |
+| Defense | AP | Graze | Miss |
 |---|---|---|---|
-| T0 | armor | 1 | 0 |
-| T1 | armor+TGH | 5 | 0 |
-| T2 | armor+2×TGH | 10 | 50% |
-| T3 | armor+3×TGH | 20 | 100% |
-| T4 | armor+4×TGH | 30 | 100% |
-| T5 | armor+5×TGH | 50 | 100% |
+| None (SD) | 0 | 50% damage | nothing |
+| Evade | 2 | 50% | nothing |
+| Evasive jump | 2 + 1 STA | 50%, +AGI/3 to Defend | nothing |
+| Block (DEF item) | 2 | damage − block value | damage − 1.5 × block |
+| Intercept (DEF, short range) | 3 | stopped unless attacker Force ≥ defender + 5 | stopped unless attacker Force ≥ defender + 8 |
+| Reflex evasion (ranged) | 2 | 50%, may jump for cover | nothing |
+| Guard (shield vs ranged) | 2 | damage − block value | damage − 1.5 × block |
 
-**Key invariants (use these to sanity-check any matchup):**
-- Each heavy degree adds +TGH damage (0.5×STR×DM) = **exactly one tier at any
-  STR**. Braced (+1.5×STR) = same as heavy III = +3 tiers over base.
-- Piercing weapons: graze = miss, **half IL but full tier effects** (wound %,
-  bleed cures, and T0/T1 poison delivery) — so piercing values run one tier
-  higher than blunt/cut of equivalent lethality.
-- Penetrating "bust window": cutting metal needs damage > RES just to split
-  rings; real damage tiers need another ~+5–10 over RES. Mail-breaker weapons
-  are tuned to land in that window vs flexible metal and at T0–T1 vs plate.
+Block value = STR one-handed, 2 × STR two-handed or shield, scaled by size.
+Shield Cover adds to Guard as a test bonus. Fast ranged weapons can only be
+blocked with a shield. A blocking object with damage ≥ its RES risks breaking
+(step 8).
 
-Highest tier whose threshold the damage meets or exceeds. Notes:
-- Cutting that does not exceed armor RES is stopped by the armor (no IL to the
-  wearer); check gear breakage instead (step 6).
-- Piercing weapons: grazes count as misses, and hits deal half the IL.
-- Rigid armors with two RES values (e.g. 20/10): armor-bypass SOP hits the
-  inner layer.
-- Burn/radiant/corrosive/electric defend by INS(ulation) instead, per gear.tex.
-- Wound chance is rolled per the Wound % column; head hits: any wound or stun
-  → unconsciousness, blunt T1 50%/T2 100% wound, T4+ 50% instant death; hand
-  max 5 IL; leg max 10 IL.
-- IL then gives −1 injury penalty per 10 IL (base IT = 10); collapse at 40 IL,
-  death past 50 IL (4×/5× IT). T5 is the top of the table and lands exactly on
-  50 IL, so a single T5 is a collapse, not automatic death.
+## 5. Damage
 
-## 6. After-effects (mention when they trigger)
+1. Read the weapon row: Blunt and Cut are plain numbers keyed to STR 10,
+   multiplied by the weapon's DM. If a row shows `STR` or a multiple, flag it
+   rather than computing — the user removed those.
+2. Add variation bonuses (they apply to blunt **and** cut):
+   heavy I +0.5 × STR (+1 AP) · heavy II +1 × STR (+2 AP +1 STA, −2) ·
+   heavy III +1.5 × STR (+3 AP +1 STA, −3) · braced +1.5 × STR (+2 AP +1 STA,
+   reaction vs approach or mounted charge; also triggers trample) · hook rider
+   (+1 AP +1 STA bought **after** the hit) +STR/2 vs evasive jump, +STR vs
+   running. Heavy I–III on a row means heavy I is the minimum attack.
+   Braced and hook combine with nothing.
+3. Extra cut (HOP): +1 × DM cut per HOP, bladed only; +2 × DM if bladed and
+   piercing; sharp condition +1.5 × DM (not for bladed + piercing); dull
+   forbids extra cut.
+4. Degree multiplier: hit 100% · graze 50% (round down) · miss 0.
+5. Underwater: non-grapple damage halved; fire/radiant/acid halved.
+6. **Type:** the weapon cuts only if its hardness exceeds the target's
+   (liquid 1 < fabric/flesh 2 < wood/bone/horn 3 < metal/rock 4). Metal armor
+   cannot be cut without buying **Penetrating** (HOP = deflection, penetrating
+   weapons only). If it can cut, use the better of Cut vs RES or Blunt vs
+   Protection; otherwise blunt.
 
-- **SOP** = points of score above the defender's DL on a hit or crit. Spend on:
-  armor bypass (cost = target's deflection; precise weapons only; hits the
-  inner layer of rigid armor — no effect vs non-rigid) · penetrating
-  (cost = deflection; lets the weapon cut equal hardness, i.e. metal) ·
-  extra cut (1 SOP = +1×DM cut, bladed) · smash (cost = deflection; stun if
-  ≥T1, interrupt if ≥T0 — smash-property weapons
-  only) · localized damage (head 5, hand 10 or 5 vs blocking target, leg 0) ·
-  **drag/push strength** (2 SOP = +1 Strength on the displacement comparison
-  below).
-- **Drag and Push** (braced and hook only, and only when the attack's
-  additional damage effect applies): no second roll. Compare the attacker's
-  **Strength skill** — 2 × (STR − 10), +5 per size category — against the
-  target's. Higher Strength moves the target one space × RM; 5 or more higher
-  makes them prone. 2 SOP buys +1 Strength, so prone costs 10 SOP at equal
-  Strength. Hooking the legs adds +3 against jumping or running targets, at
-  the cost of the leg location's 10 IL damage cap. One size category is worth
-  exactly the prone threshold, which is what makes mounts and large creatures
-  hard to pull down.
-  Weigh SOP purchases against their full cost: deflection points + to-hit
-  penalties of heavy attacks make top-end results commitment+luck events, not
-  routine output.
-- **Interruption:** T1+ blunt or electric, or push → lose action, min 2 AP
-  (smash/stun min 4).
-- **Gear breakage (optional rule):** cutting or blunt ≥ RES → 1-in-6 break,
-  both ≥ RES → 50%, either ≥ 2×RES → instant. Broken armor = pitted.
-- **Bleed:** T2+ wounds to chest/head bleed +1 IL per round per cure owed.
-- **Morale:** T1+ injury lets the enemy side intimidate; injuries raise the
-  next morale DL (IL > 10 → +3).
+## 6. Tier, IL, bleed
 
-## 7. Expected-damage mode (weapon vs armor comparisons)
+Threshold for tier N = **armor + N × TGH** (armor = RES for cutting,
+Protection for blunt, Insulation for burn/radiant/corrosive/electric).
+Shortcut: **tier = floor((damage − armor) / TGH)**, capped at 5; below the
+armor value → no injury.
 
-For "which weapon is better against this armor":
-1. Compute the exact distribution of the exploding die (write a tiny Python
-   script; enumerate d10 outcomes, expand 10/1 chains recursively to a
-   truncation like ±30).
-2. P(crit/hit/graze/miss) = P(score−DL ≥ 10 / ≥5 / ≥0 / <0). Apply piercing
-   graze→miss here.
-3. Damage is deterministic per degree → tier, IL, and wound chance are
-   deterministic per degree. Report a table: per degree → damage, tier, IL,
-   wound %. Then expected IL per attack = Σ P(degree) × IL(degree), and
-   expected IL per AP (divide by the attack's AP cost). Include SOP yield
-   (average SOP on hit+) since it buys effects, not damage.
-4. Vary DL: sweep the defender DL (or armor set) across a plausible range
-   (e.g. −5..+15) rather than one point, or the comparison is noise.
-5. State assumed inputs (STR, proficiencies, DM, TGH) up front.
-6. **Ladder report** (preferred for calibration work): since heavy degrees and
-   braced are exact tier steps, report each weapon form as a tier ladder —
-   standard / h1 / h2 / h3 / braced (+smash where property allows) — against
-   each armor class (flesh, fiber, flexible metal, rigid, reinforced).
-   Outliers are rows where the ladder jumps two tiers or crosses the design
-   bands (normal attacks T1–T2 on armored targets; plate T2–T3 max from
-   committed attacks; no one-shot T5 on flexible metal except committed
-   −3-to-hit events; cloth/flesh freely cut at T3+).
-   Calibration stance: every weapon and armor is a concept, not a fixed
-   number — variations are made at the table's discretion. The bands above are
-   design guidelines for spotting accidents, not a prescription; the goal is
-   that each stat can be tuned independently without anything becoming
-   overpowered.
+| Tier | IL | Bleed |
+|---|---|---|
+| T0 | 1 | 0 |
+| T1 | 5 | 0 |
+| T2 | 10 | 1 |
+| T3 | 20 | 2 |
+| T4 | 30 | 3 |
+| T5 | 50 | 4 |
 
-## 8. Interpretations to flag
+- **Bleed:** +1 IL per intensity for every STA spent and at every round end;
+  at combat end deals 3 × intensity and stops. Vicious doubles it.
+  Cauterization removes 2.
+- **Piercing:** half IL per tier (tier effects, wounds, KO, and bleed
+  unchanged), cannot amputate.
+- **Electric:** half IL, interrupts at T1+, stuns at T3+; ignores INS if the
+  weapon also does T0+ cutting. Burn/radiant T0+ → burning. Corrosive T0–T1 →
+  corroding at that tier every round until armor is removed.
+- **Interruption:** T1+ blunt or electric, or a push → lose the action, min
+  2 AP. Stun = interrupt with min 4 AP.
+- **Injury effects:** −1 to STR/AGI/STA uses and to sensory skills per 10 IL;
+  collapse (immobile) at 40; death past 50. One T5 is 50 IL = collapse, not
+  death, unless IL was already above 0.
 
-These are ambiguous in the text — use the reading below and say so when it
-matters:
-- Armor is a threshold band (step 5), not subtraction; Protection vs blunt,
-  RES vs cutting.
-- SOP = score − DL, only on hit/crit.
-- Regular attacks have no critical degree at all — they resolve as
-  miss/graze/hit, and everything above a hit becomes SOP (confirmed with the
-  user, 2026-09-10). Non-attack tests (grapple maneuvers, balance) still use
-  criticals normally. Explosions are the only attacks that crit, at 200%.
-- Displacement distance never scales with the roll: forced movement must stay
-  slower than plain walking for the same AP. Flat distance, at most doubled on
-  a critical.
-- Ranged accuracy is flat within weapon range by design — confirmed with the
-  user (2026-09-02): there is no distance-to-hit falloff, only hard range
-  caps (weapon max range, Shoot's 30m limit, Snipe removing it). spells.tex's
-  "distance penalty" wording (e.g. Lasers: "does not receive any distance
-  penalty up to 50m") is loose phrasing, not evidence of a hidden formula.
-  Do not invent a falloff number.
-- Penetrating's SOP cost (= target's deflection) has two distinct payoffs:
-  it lets cutting damage apply against same-hardness (metal) targets, *and*,
-  for that same cost, it separately lets the attack ignore fiber armor's RES
-  entirely (combat.tex, Success Overflow / Penetrating) — the two are not
-  additive purchases, either payoff costs one deflection-worth of SOP.
+**Invariants for sanity checks:** each heavy degree = +TGH = exactly one tier
+at any STR; braced = heavy III = +3 tiers. Every 5 points of overflow is worth
+one location step (leg → head) or one deflection-priced effect on an unarmored
+target.
+
+## 7. Location and wounds
+
+Location is declared in step 3. Apply after the tier is known:
+
+| Location | Body cap | Effect |
+|---|---|---|
+| Chest | none | Shocked wound on T4 blunt + smash (immobile, 5 IL wound) |
+| Leg | T3 (20 IL, bleed 2) | T3 blunt/cut → broken leg (lame, 20 IL wound); T5 → amputated (no heal) |
+| Hand | T2 (10 IL, bleed 1) | no armor unless gauntlets; T2 blunt/cut → broken hand (useless, 10 IL wound); T4 → amputated (no heal) |
+| Head | none | T3 blunt/cut/electric, or any stun → unconscious ≥1 min; T4 → instant death; armor bypass always hits flesh; closed helmet forbids bypass |
+
+"Body cap" means the body receives the capped tier's whole row (IL and
+bleed); the wound still reads the real tier. Wound IL is tracked separately
+and heals only by Medicine (Bone Setting 0/1/2/2 per sleep) or magic.
+Lame = careful movement and crawling only.
+
+Head math worth remembering: Smash (deflection HOP, needs T1) + head = KO at
+T1 damage — the sap. Assassinate (vs SD, +1 AP, short precise weapon, auto
+bypass) + head −5 is the reliable surprise KO/kill.
+
+## 8. Overflow purchases (HOP)
+
+Spend HOP after a hit, in any combination the attacker can afford:
+- **Armor bypass** — cost = target deflection; precise weapons; hits the inner
+  RES of layered armor (e.g. 16/10 → 10). Unlayered armor cannot be bypassed.
+- **Penetrating** — cost = deflection; penetrating weapons; lets the attack cut
+  same-hardness targets (metal). Against fiber armor, or once already
+  penetrating, behaves like extra cut instead.
+- **Extra cut** — 1 HOP each, rates in step 5.3.
+- **Smash** — cost = deflection; stun if the damage is T1+.
+- **Hand switch** — 5 HOP if the target blocked/intercepted without a shield.
+
+Deflection: body +4; armor +5 to +8 per the table; pitted −2. The head and
+Shocked compete only through the roll now, not through HOP.
+
+**Trip (hook attack):** no second roll. Attacker Force vs target Balance +
+Force; moving party's speed is added to the attacker; head or leg targeted
++5; higher wins → prone. **Trample:** Force vs Force; runner adds speed;
+higher → target back one space, +5 → prone; head targeted +5.
+
+**Gear breakage (optional):** damage ≥ RES → 1-in-6; both types ≥ RES → 50%;
+any damage ≥ 2 × RES → breaks. Piercing only breaks at > 2 × RES. Hardness 1–2
+never breaks anything. Broken armor = pitted.
+
+**Morale:** each injury penalty adds +2 to the side's next combat morale DL.
+
+## 9. Expected-damage mode
+
+For "which is better against armor Y":
+1. Enumerate the exploding d10 exactly (small Python script; expand the 10/1
+   chains recursively to ±30).
+2. P(hit/graze/miss) from score − DL ≥ 5 / ≥ 0 / < 0; piercing graze → miss.
+3. Damage per degree is deterministic, so tier, IL, bleed and wound are too.
+   Report per degree: damage, tier, IL, bleed, wound; then expected IL per
+   attack and per AP, and mean HOP on a hit.
+4. Sweep DL (−5 … +15) or armor class rather than a single point; a single DL
+   is noise.
+5. State assumed STR, proficiencies, DM, TGH up front.
+6. **Ladder report** for calibration: each weapon form as standard / h1 / h2 /
+   h3 / braced against flesh, fiber, flexible metal, rigid, reinforced. Design
+   bands: normal attacks T1–T2 on armored targets; plate T2–T3 from committed
+   attacks; no one-shot T5 on flexible metal outside −3-to-hit events;
+   cloth/flesh freely cut at T3+. Bands are for spotting accidents, not
+   prescriptions — every weapon and armor is a concept the table may vary.
+
+## 10. Settled readings — do not re-litigate
+
+- Armor is a threshold band, not subtraction.
+- Attacks have no critical; a "crit" trigger written on an attack simply
+  never fires and is not a defect.
+- Regular arrows doing nothing to mail is correct; bodkins carry penetrating.
+- Head death at T4 is intended; the head is the anti-large-creature tool.
+- Bleed is a clock, not a disability; bleeding while unconscious is fine.
+- Gauntlets and closed helmets are separate purchases for any armor.
+- Location effects being nearly free against SD and rare against an active
+  defender is the system working ("defending matters more as fighters get
+  better").
+- A steep penalty on a rare shot (hand −10) is a skill shot, not a dead
+  option.
+- Fall lethality (miss → head) is intended; only the DL choice is at issue.
+- Forced movement never scales with the roll; flat distance.
+- One skill per action: a secondary effect compares characteristics (Force,
+  Balance), never the attack skill again, and HOP buys declarations, not
+  bonus points on that comparison.
