@@ -67,6 +67,14 @@ hand −10. Separately, any attack can *switch* to the hand after the roll for 3
 HOP if the target blocked or intercepted without a shield (the accidental hand
 hit). Vulnerabilities on creatures work the same way, per their description.
 
+**Approach triggers (reactions, no preparation cost):** opportunity attack
+(+2, normal AP cost) and braced attack both fire on a step **between two
+spaces that are both inside the weapon's range** — a long I weapon triggers
+on 2 m → 1 m, a long II on 3 m → 2 m and 2 m → 1 m; stepping from outside
+range to the edge of range (3 m → 2 m against long I) triggers nothing. A
+braced attack can trigger only once per turn (anyone's turn), so several per
+round is legal. The target may cancel the step and reuse its AP to defend.
+
 **To-hit modifiers:** opportunity attack +2 · heavy II −2, heavy III −3 ·
 mounted ≈ −2 (accuracy only while the mount moves) · slow ranged weapon −2 if
 the target defends actively · high ground: both sides +2 to melee defense ·
@@ -101,12 +109,18 @@ Hits always land at full damage. Graze/miss outcomes depend on the defense:
 | Evade | 2 | 50% | nothing |
 | Evasive jump | 2 + 1 STA | 50%, +AGI/3 to Defend | nothing |
 | Block (DEF item) | 2 | damage − block value | damage − 1.5 × block |
+| Block with shield | 2 | as Block, **+Cover to Defend** (all shields +2) | as Block |
 | Intercept (DEF, short range) | 3 | stopped unless attacker Force ≥ defender + 5 | stopped unless attacker Force ≥ defender + 8 |
 | Reflex evasion (ranged) | 2 | 50%, may jump for cover | nothing |
 | Guard (shield vs ranged) | 2 | damage − block value | damage − 1.5 × block |
 
 Block value = STR one-handed, 2 × STR two-handed or shield, scaled by size.
-Shield Cover adds to Guard as a test bonus. Fast ranged weapons can only be
+Shield Cover is a test bonus to Defend when blocking with the shield and to
+Guard; it is the shield's only to-hit effect (2026-09-17: +2 for every
+shield; the tower's extra is full cover vs ranged, not more Cover). It does
+**not** apply to Intercept (only the Defensive Advance
+ability adds it there) and never applies in a grapple, where blocking is
+impossible. Fast ranged weapons can only be
 blocked with a shield. A blocking object with damage ≥ its RES risks breaking
 (step 8).
 
@@ -152,8 +166,8 @@ armor value → no injury.
 - **Bleed:** +1 IL per intensity for every STA spent and at every round end;
   at combat end deals 3 × intensity and stops. Vicious doubles it.
   Cauterization removes 2.
-- **Piercing:** half IL per tier (tier effects, wounds, KO, and bleed
-  unchanged), cannot amputate.
+- **Piercing:** half IL per tier, rounded down (0/2/5/10/15/25; tier effects,
+  wounds, KO, and bleed unchanged), cannot amputate.
 - **Electric:** half IL, interrupts at T1+, stuns at T3+; ignores INS if the
   weapon also does T0+ cutting. Burn/radiant T0+ → burning. Corrosive T0–T1 →
   corroding at that tier every round until armor is removed.
@@ -198,7 +212,7 @@ Spend HOP after a hit, in any combination the attacker can afford:
   penetrating, behaves like extra cut instead.
 - **Extra cut** — 1 HOP each, rates in step 5.3.
 - **Smash** — cost = deflection; stun if the damage is T1+.
-- **Hand switch** — 5 HOP if the target blocked/intercepted without a shield.
+- **Hand switch** — 3 HOP if the target blocked/intercepted without a shield.
 
 Deflection: body +4; armor +5 to +8 per the table; pitted −2. The head and
 Shocked compete only through the roll now, not through HOP.
@@ -212,7 +226,19 @@ higher → target back one space, +5 → prone; head targeted +5.
 any damage ≥ 2 × RES → breaks. Piercing only breaks at > 2 × RES. Hardness 1–2
 never breaks anything. Broken armor = pitted.
 
-**Morale:** each injury penalty adds +2 to the side's next combat morale DL.
+**Morale (2026-09-17):** tests happen at the **start of the round** (so the
+limit action has AP to run on) and only when triggered: aggravating factors
+5+ (injured +2 per penalty, out of STA +2, burning/suffocating +5, oblivious
++3, disoriented +2), while afraid / enraged / confused, or after an
+Intimidation / Taunt (+1 + Charisma/2 as a factor; Charisma is a 0–5
+proficiency, so +1 to +3). The die explodes as usual,
+but the player may roll the morale test **safe or risky** (2d10, keep the
+nearest / farthest from 5). Safe roughly quarters the rout chance but pushes
+results into the afraid band when Will < DL; risky does the reverse. With
+Will ≥ DL, safe is strictly better. Graze = afraid (no voluntary combat surge), miss = the character's
+**limit action** (Coward, Violent, Tanatosis, Abusive, Traitor, Martyr —
+`creating.tex`). Rest and social actions (5 AP) resolve at end of round; Rest
+may take AP negative if the next round starts positive.
 
 ## 9. Expected-damage mode
 

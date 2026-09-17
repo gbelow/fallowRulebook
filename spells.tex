@@ -265,7 +265,7 @@ effect={A psychic attempt to soothe a target's emotions and make them less suspi
 cost=4 AP, knowledge=Animancy 1, dl=0, type=curse, cast range=15m, test={Charisma vs insight}, miss={distracted}, graze={distracted}, hit={notices the spell}, crit={notices the spell},
 effect={A psychic attempt to distract someone with their own thoughts.}}
 
-% \spell{Rescue}{4 AP}{Animancy 2}{}{0}{15m, detectable and enchanted target}{Psychic}{instant}{ Compels a character with the guardian limit action to trigger it immediately.  }
+% \spell{Rescue}{4 AP}{Animancy 2}{}{0}{15m, detectable and enchanted target}{Psychic}{instant}{ Compels a character with the guardian limit stress action to trigger it immediately.  }
 
 %------
 \spell{Pacify}{%
@@ -282,7 +282,7 @@ effect={A psychic taunt that triggers an immediate morale test that makes the ta
 
 \spell{Suggestion}{%
 cost=4 AP, knowledge=Animancy 2, dl=0, type=instant, cast range=15m, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
-effect={Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers an immediate morale test. The limit actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit actions.}}
+effect={Tells a creature that can hear and understand the words and is confused, enraged, or afraid to do something, which triggers an immediate morale test. The limit stress actions triggered can be either the target's natural one or violent when enraged, coward when afraid and all to confused. The exact action being suggested must match the available limit stress actions.}}
 
 \spell{Overwhelming Terror}{%
 cost=5 AP, knowledge=Animancy 3, dl=3, type=instant, cast range=10m, test={Charisma + morale aggravators vs will}, enhance={increases DL by 2.},
@@ -309,7 +309,7 @@ effect={Causes confusion in a target that is connected by telepathic link or pos
 
 \spell{Mental Paralysis}{%
 cost=5 AP + 2 STA, knowledge=Animancy 5, dl=5, type=curse, cast range=15m, test={Charisma vs will}, miss={paralyzed}, graze={paralyzed}, enhance={increases DL by 2.},
-effect={Completely paralyzes the mind of a confused creature, rendering them immobile and fallen (unless held up by something) until they hit or crit the will test.}}
+effect={Completely paralyzes the mind of a confused creature, rendering them immobile and prone (unless held up by something) until they hit or crit in a will test, which is triggered every beginning of round instead of the morale test.}}
 
 \spell{Pain}{%
 cost=4 AP, knowledge={Animancy 3, Biomancy 1}, dl=3, type=instant, cast range=15m, test={Charisma vs will}, miss={-6 AP}, graze={-4 AP}, enhance={increases DL by 2.},
@@ -325,7 +325,7 @@ effect={Launches part of your soul violently at an enemy, including incorporeal 
 
 \spell{Telepathic Link}{%
 cost=4 AP, knowledge=Animancy 3, dl=0, type=sustained, cast range=20m, test={Charisma vs will}, miss={linked}, graze={linked}, enhance={increases DL by 2.},
-effect={Creates a telepathic link with a nearby creature, or with anyone who allows the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by a will test against the original DL or until the maximum distance is exceeded. It is possible to cast the spell again to affect multiple targets at the same time. Telepathic link allows casting spells that depend on it while concentrating. These spells are made against all targets affected by link simultaneously. Each simultaneous link increases the difficulty of spellcasting test by 3.}}
+effect={Creates a telepathic link with a nearby creature, or with anyone who allows the link. The caster can speak directly to the mind of their target during the duration of the spell. The link is broken by hitting on any will test triggered by the caster or until the maximum distance is exceeded. It is possible to cast the spell again to affect multiple targets at the same time. Telepathic link allows casting spells that depend on it while concentrating. These spells are made against all targets affected by link simultaneously. Each simultaneous link increases the difficulty of spellcasting test by 3.}}
 
 
 \spell{Spiritual Walk}{%

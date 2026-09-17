@@ -25,14 +25,13 @@ review devotion abilities
 
 breaking armor too weak?
 
-extend spell, RMs strangely scaled
 
 
 # CHANGE IN THE APP
 
-review size modifiers
+afraid, confused, enraged.  - confused stacks with exhausted
 
-surge costs
+update changed abilities
 
 
 # product workflow - how to turn this into a game

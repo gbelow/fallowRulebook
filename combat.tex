@@ -32,7 +32,7 @@
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 8 AP minus any negative AP they had. Any unspent AP is lost.
 
-\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting during their own turn. The AP loss from ending a round without spending all AP can be prevented by pooling AP from both rounds to Rest, which happens at the beginning of the new round.
+\textbf{Rest:} is an action that costs 4 AP and recovers STA by an amount equal to STA/4. The character is allowed to move 4 AP worth of careful movement while resting during their own turn. The AP loss from ending a round without spending all AP can be prevented by resting, which can make AP negative, as long as it starts next round positive.
 
 \textbf{Environmental and ongoing effects:} Any effect that occurs periodically per turn or is environmental has its effect applied at the beginning of the round.
 
@@ -172,7 +172,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \subsection{Additional effects:}
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action and associated costs when it occurs during an action. It causes a minimum loss of 2 AP when there is nothing to interrupt or the interrupted action costs 1 AP. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed. 
+\textbf{Interruption:} is an effect that causes the victim to lose their action or reaction and associated costs. It causes a minimum loss of 2 AP. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed. 
 
 \textbf{Stun:} An interrupt that has minimum loss of 4 AP.
 
@@ -244,14 +244,15 @@ The list of afflictions is:
 
 \item \textbf{Unconscious:} The character cannot do anything other than Rest and Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
 
-\item \textbf{Afraid:} Receives -1 Mental and cannot make a combat surge. The fear ends when the character succeeds on their Will test or becomes angry. 
-\item \textbf{Enraged:} Receives -1 Mental and cannot make a reaction surge. The anger ends when the character succeeds on their Will test or becomes afraid. 
+\item \textbf{Afraid:} Receives -1 Mental and must make a morale test every beginning of round. The fear ends when the character succeeds on their Will test or becomes angry. A character cannot make a voluntary combat surge while afraid.
+\item \textbf{Enraged:} Receives -1 Mental and must make a morale test every beginning of round. The anger ends when the character succeeds on their Will test or becomes afraid. A character cannot make a voluntary reaction surge while enraged.
 % \item \textbf{Charmed:} Receives -1 Mental and behaves like permanently distracted. Cannot coexist with afraid or enraged.
 % \item \textbf{Distracted:} Receives -3 to Detection and -3 Cunning.
+\item \textbf{Confused:} Receives -3 Mental and must make a morale test every beginning of round. The confusion ends when the character succeeds on their Will test.
 \item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will test to break out of domination whenever a command constitutes a severe compulsion. Outside of combat, can make a test once per ET.
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
-\item \textbf{Tired/Exhausted/Confused} Penalty of -1 mental/-2 mental/-4 mental. Becomes vulnerable to domination attacks. It is possible to be confused without being tired or exhausted, but extreme exhaustion causes confusion.
+\item \textbf{Tired/Exhausted} Penalty of -1 mental/-2 mental. Becomes vulnerable to domination attacks. It is possible to be confused without being tired or exhausted, but extreme exhaustion causes confusion.
 \item \textbf{Weakened/Malnourished} -1/-2 Health. 
 \item \textbf{Thirsty/Dehydrated} -1/-2 Health.
 \item \textbf{Sick} -2 Health.
@@ -278,7 +279,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. The additional damage effect also triggers a trample.
+\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. The additional damage effect also triggers a trample. Braced attack can only trigger once per turn (anyone's turn. It can be used multiple times per round.)
 
 \textbf{Hook Attack:} A melee attack using a weapon with hook property that attempts to trigger tripping the opponent. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +1 AP +1STA to attempt to trip their target, in which case the attack gets +STR/2 damage if the opponent attempts to perform an evasive jump and +STR if they are running.
 
@@ -296,7 +297,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Evasive Jump:} is a modification on evade. It costs an extra 1 STA and allows the character to jump away from the attack while evading it. This movement cannot be followed and gives +AGI/3 on the skill test. This can only be used if there is space to jump. The jump must move away or sideways from the attack and uses the movement speed of jumping backwards. This can be used to avoid being trampled and it always works unless trample is a directed attack.
 
-\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
+\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. Blocking with a shield adds its cover to defend. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
 
 \textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has less than 8 force more than the defender.
 
@@ -759,7 +760,7 @@ Stealth should not be free form in combat. The rules in combat situations are st
 
 Morale is the measure of the characters' stress tolerance. Stressful situations, such as combat and exploration in terrifying places, trigger morale tests. The test is conducted using the will skill.
 
-\textbf{Combat morale test:} At the beginning of each round, all characters make a will test against the DL of the terror of the moment. A graze leaves the character afraid, and a miss activates the character's limit stress action. The limit stress action only triggers if there is an enemy within 30m.
+\textbf{Combat morale test:} characters make a will test against the DL of the terror of the moment. A graze leaves the character afraid, and a miss activates the character's limit stress action. The limit stress action only triggers if there is an enemy within 30m. Morale tests can be done normally, safely or riskily, as the player decides.
 
 \textbf{Combat morale DL = aggravating factors}
 
@@ -769,20 +770,21 @@ Morale is the measure of the characters' stress tolerance. Stressful situations,
     \item \textbf{Injured:} +2 per injury penalty
     \item \textbf{Burning or suffocating:} +5
     \item \textbf{Out of STA:} +2
-    \item \textbf{Monstrous presence:} variable. Depends on presence.
 \end{proplist}
+
+\textbf{Morale test triggers:} at the beginning of a round when aggravating factors are at 5 or more, when under specific afflictions, or when specific social actions are used.
 
 \subsection{Social actions}
 
-Every social action costs 4 AP +1 STA and counts as a Rest action. They only work on creatures capable of communication.
+Every social action costs 5 AP and counts as a Rest action, which can be done at the end of the round, just before the morale tests are triggered. They only work on creatures capable of communication.
 
-\textbf{Intimidation:} A character can make an intimidation attempt in combat. This increases the DL of the enemies next morale test of the $1 + character's charisma/2$. This can be done during a combat surge.
+\textbf{Intimidation:} A character can make an intimidation attempt in combat. This triggers a morale test for all enemies at the beginning of next round, adding $1 + character's charisma/2$ as aggravating factor.
 
-\textbf{Taunt:} In combat, a taunt modifies the next morale test to make enemies enraged instead of afraid. This increases the DL of the enemies next morale test of the $1 + character's charisma/2$.
+\textbf{Taunt:} In combat, a taunt triggers a morale test for one enemy, adding $1 + character's charisma/2$ as aggravating factor and causing enraged instead of afraid.
 
 Multiple intimidations and taunts don't stack. Only the highest one counts.
 
-\textbf{Rally:} Say something encouraging in combat. This decreases the DL of allies next morale test by $1 + character's charisma/2$. This can be done during a reaction surge. Multiple Rallies don't stack. Only the highest one counts.
+\textbf{Rally:} Say something encouraging in combat. This decreases the DL of allies next morale test by $1 + character's charisma/2$. Multiple Rallies don't stack. Only the highest one counts.
 
 \textbf{Surrender:} An attempt to surrender. It is a persuasion test against the highest insight in the enemy team. On a hit or crit, nobody in the enemy team is allowed to target this character. Being perceived holding a weapon, attacking anyone, trying to hide, running away or doing anything to help their own team cancels the effect and increases the difficulty of surrendering by 5 for any subsequent attempts of anyone in the whole team.
 
