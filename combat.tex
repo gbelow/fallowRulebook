@@ -181,9 +181,10 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 \textbf{Success Overflow:} When a character receives a hit from an attack, they may receive additional effects, chosen by the attacker. HOPs are used to activate these effects. The effects are:
 
 \begin{proplist}
-    \item \textbf{Armor Bypass:} This costs a number of HOP defined by the targets armor deflection. It hits the inner layer of the armor, if the armor has one. Only attacks from weapons with the precise property can use this effect.
-    \item \textbf{Penetrating:} Costs a number of HOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. Behaves like extra cut against fiber armor and after already penetrating same hardness objects. This can only be done by weapons with the penetrating property. 
-    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this. Increases by 2xDM per HOP for bladed and piercing weapons.
+    \item \textbf{Armor Bypass:} This costs a number of HOP equal to the target's armor deflection and can only be done against rigid armor. It adds the value of 50\% RES or 50\% prot of the target armor to the damage, depending if the attack damage is blunt or cutting. Only attacks from weapons with the precise property can use this effect.
+    \item \textbf{Penetrating:} Costs a number of HOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property. 
+    \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this.
+    % \item \textbf{ Hemorrhage:} Costs a number of HOPs equal to the target's deflection to increase bleeding by 1 if damage causes at least tier 1 injury. This can only be used by weapons with the vicious property. 
     \item \textbf{Smash:} Costs a number of HOPs equal to the target's deflection to stun them if the damage is at least T1.
 \end{proplist}
 
@@ -199,7 +200,7 @@ To illustrate, here are some targets for humanoids. There are 4 locations: chest
     \item \textbf{Chest:} Standard location, no penalty.
     \item \textbf{Hand:} -10 to the attack test. Attacks can switch target to the hand used for defense by spending 3 HOP when the target tries to block or intercept without a shield. Hands have no armor unless the character is wearing gauntlets. Maximum injury tier applied to the body is 2.
     \item \textbf{Leg:} 0 to the attack test. Maximum injury tier applied to the body is 3.
-    \item \textbf{Head:} -5 to the attack test. Getting a Tier 3 injury from blunt, cutting or electrical damage or stun to the head causes unconsciousness that lasts at least 1 minute without intervention. Tier 4 damage causes instant death. Armor bypass at the head always hits flesh.
+    \item \textbf{Head:} -5 to the attack test. Getting a Tier 3 injury from blunt, cutting or electrical damage or stun to the head causes unconsciousness that lasts at least 1 minute without intervention. Tier 4 damage causes instant death. Armor bypass at the head hits flesh, which ignores all armor.
 \end{proplist}
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
@@ -264,24 +265,23 @@ The survival chapter describes how health works for healing.
 }
 
 \section{Melee Combat}
-
 %---------------------ATTACK
 
-\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. The AP cost is 3 AP, but that may be modified by attack variations. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
+\skill{Strike}{Melee}{ Striking consists of a melee weapon attack on a target using the strike skill test against the opponent's defense. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
 
 \textbf{Attack against equipment:} An attack can be made against a weapon, shield, or any object in order to break them. RES Rules on equipement breakage can be found in the equipment chapter.
 
 Other variations of melee attacks are available depending on the type of weapon used. The type of attack must be declared when used. The variations can be combined, but braced and hook attack cannot be combined with anything.
 
-\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5xSTR, but have an added cost of +1AP. Heavy II adds +1xSTR, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5xSTR, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
+\textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5 x STR xDM, but have an added cost of +1AP. Heavy II adds +1xSTR xDM, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5 x STR xDM, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. 
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack. The attack requires the normal AP cost and has a +2 bonus to hit. Triggering actions include casting spells that cost 3 AP or more, using ranged weapons, using a standard action, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR on a hit. The additional damage effect also triggers a trample. Braced attack can only trigger once per turn (anyone's turn. It can be used multiple times per round.)
+\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR x DM on a hit. The additional damage effect also triggers a trample. Braced attack can only trigger once per turn (anyone's turn. It can be used multiple times per round.)
 
-\textbf{Hook Attack:} A melee attack using a weapon with hook property that attempts to trigger tripping the opponent. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +1 AP +1STA to attempt to trip their target, in which case the attack gets +STR/2 damage if the opponent attempts to perform an evasive jump and +STR if they are running.
+\textbf{Hook Attack:} A melee attack using a weapon with hook property that attempts to trigger tripping the opponent. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +1 AP +1STA to attempt to trip their target, in which case the attack gets +STR/2 x DM damage if the opponent attempts to perform an evasive jump and +STR x DM if they are running.
 
 \textbf{ Assassinate :} Can only be done against SD, not against active defense, and requires a short range and precise weapon attack. This costs 1 extra AP on the normal cost of the attack. It automatically applies armor bypass.
 }
@@ -309,9 +309,9 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles. Any weapons with the grappling property can use the grapple skill instead of strike to attack during a grapple.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept. Once grappled, a character will center its focus on its grappler and cannot shift it to another for the purposes of flanking o blocking projectiles. Any attacks with the grappling property can use the grapple skill instead of strike to attack during a grapple.
 
-\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it.
+\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it or the test's result.
 
 \textbf{Escape:} Escapes from the grapple on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
 
