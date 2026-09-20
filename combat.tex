@@ -154,11 +154,11 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of effects. 
 
-\textbf{Physical attacks:} have blunt and cutting damage components. If the weapon is not capable of cutting its target, the damage is blunt, otherwise, use the most advantageous of the two.
+\textbf{Physical attacks:} have blunt and cutting damage components. If the weapon is not capable of cutting its target, the damage is blunt, otherwise, use the largest damage of the two, but apply the additional effects of both. 
 
-\textbf{Blunt damage:} is defended by armor protection. 
+\textbf{Blunt damage:} is defended by armor protection. Can cause interruption and stun.
 
-\textbf{Cutting damage:} is defended by armor RES.
+\textbf{Cutting damage:} is defended by armor RES. Applies poison and electric damage directly, as if the target has no armor, when damage is at least T0.
 
 \textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks.
 
@@ -168,13 +168,13 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \textbf{Corrosive:} Its respective defense is INS. Tiers 0 to I of damage leaves the target corroding at that tier of damage, which reapplies the damage until armor is removed. 
 
-\textbf{Electric damage:} It is also defended by INS. It causes interruptions when a character receives a tier 1 or higher damage from electric damage, and stuns at tier 3 or higher. This damage only deals half IL damage per tier. Electric damage dealt by a weapon that causes at least Tier 0 cutting damage ignores INS.
+\textbf{Electric damage:} It is also defended by INS. It causes interruptions and stuns. This damage only deals half IL damage per tier.
 
 \subsection{Additional effects:}
 
-\textbf{Interruption:} is an effect that causes the victim to lose their action or reaction and associated costs. It causes a minimum loss of 2 AP. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed. 
+\textbf{Interruption:} is an effect that interrupts any action from its victim, making them lose its associated costs. Movement is cancelled, except running and jumping. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed.
 
-\textbf{Stun:} An interrupt that has minimum loss of 4 AP.
+\textbf{Stun:} An interrupt in which the target also loses 2 AP. It happens when blunt or electric damage causes Tier 3 injury or higher.
 
 \textbf{Deflection:} is how hard it is to land additional effects on a hit. The natural deflection of a human body is +4. Any time a character is wearing armor, use the armor's deflection instead. 
 
@@ -184,8 +184,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
     \item \textbf{Armor Bypass:} This costs a number of HOP equal to the target's armor deflection and can only be done against rigid armor. It adds the value of 50\% RES or 50\% prot of the target armor to the damage, depending if the attack damage is blunt or cutting. Only attacks from weapons with the precise property can use this effect.
     \item \textbf{Penetrating:} Costs a number of HOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property. 
     \item \textbf{ Extra cut:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this.
-    % \item \textbf{ Hemorrhage:} Costs a number of HOPs equal to the target's deflection to increase bleeding by 1 if damage causes at least tier 1 injury. This can only be used by weapons with the vicious property. 
-    \item \textbf{Smash:} Costs a number of HOPs equal to the target's deflection to stun them if the damage is at least T1.
+    \item \textbf{Smash:} Costs a number of HOPs equal to the target's deflection to add 2 xDM extra damage and upgrades an interrupt to a stun.
 \end{proplist}
 
 
@@ -199,8 +198,8 @@ To illustrate, here are some targets for humanoids. There are 4 locations: chest
 \begin{proplist}
     \item \textbf{Chest:} Standard location, no penalty.
     \item \textbf{Hand:} -10 to the attack test. Attacks can switch target to the hand used for defense by spending 3 HOP when the target tries to block or intercept without a shield. Hands have no armor unless the character is wearing gauntlets. Maximum injury tier applied to the body is 2.
-    \item \textbf{Leg:} 0 to the attack test. Maximum injury tier applied to the body is 3.
-    \item \textbf{Head:} -5 to the attack test. Getting a Tier 3 injury from blunt, cutting or electrical damage or stun to the head causes unconsciousness that lasts at least 1 minute without intervention. Tier 4 damage causes instant death. Armor bypass at the head hits flesh, which ignores all armor.
+    \item \textbf{Leg:} 0 to the attack test. Maximum injury tier applied to the body is 3. 
+    \item \textbf{Head:} -5 to the attack test. Getting stunned in the head causes unconsciousness that lasts at least 1 minute without intervention. Tier 4 damage causes instant death. Armor bypass at the head hits flesh, which ignores all armor.
 \end{proplist}
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
@@ -214,7 +213,7 @@ Broken hand & T2 blunt/cut & 10 & useless hand \\
 Amputated hand & T4 blunt/cut & no heal & loses hand \\
 Broken leg & T3 blunt/cut & 20 & lame\\
 Amputated leg & T5 blunt/cut & no heal & loses leg\\
-Shocked & T4 blunt+smash & 5 & immobile\\
+Shocked & T3 blunt+smash & 5 & immobile\\
 \end{stattable}
 
 \subsection{Afflictions}
@@ -230,7 +229,7 @@ Afflictions are the negative conditions that can affect creatures.
 The list of afflictions is:
 
 \begin{proplist}
-\item \textbf{Lame:} Cannot run, jump, or perform basic movement.
+\item \textbf{Lame:} Cannot run and requires movement surge for basic movement. Takes +3 IL for traveling and Searching.
 \item \textbf{Prone:} Can only crawl and stand up.
 \item \textbf{Grappled:} Movement requires a test. Focus is locked to the main grappler.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
@@ -395,8 +394,6 @@ The damage from explosions is 200\% on a critical, 100\% on a hit, 50\% on a gra
 \textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they can spend an extra STA to jump in any direction before the explosion occurs. On a graze or miss, they can move 2 AP after the explosion.
 
 \textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
-
-In all cases, if the character is interrupted, they cannot move after the interruption.
 }
 
 \section{Positioning and Visibility }
@@ -514,7 +511,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \textbf{Smoke Spread:} smoke only spreads indoors. The spread is counted in minutes as how long it takes to fill a 10m by 10m room.
 
-\textbf{Wind:} Requires balance or Force test to avoid being pushed. Clears the other gases for the round. If the gas has an active source, it comes back once the wind stops.
+\textbf{Wind:} Requires balance test to avoid being pushed, but having high enough force can automatically succeed in the test. Clears the other gases for the round. If the gas has an active source, it comes back once the wind stops.
 
 \subsection{Liquids}
 

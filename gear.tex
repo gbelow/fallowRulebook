@@ -65,33 +65,34 @@ All weapon attacks are made out of metal, unless otherwise stated.
 
 \end{multicols}
 
-\begin{stattable}{Small Arms}{@{}lcccccp{2.9cm}cc@{}}
-Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
+\begin{stattable}{Small Arms}{@{}llcccccp{2.9cm}cc@{}}
+Weapon & Attack & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Unarmed} & TGH & 0 & 0 & one & short & grapple I, DEF, braced, hooked, draw & - & - \\
- & STR & 0 & 0 & small & short & draw, heavy I, smash & & \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Claws} & 10 & 0 & 0 & one & short & grapple II, hooked & - & - \\[3pt]
-\midrule
-\textbf{Gauntlet} & 25 & 0 & 0 & small & short & grapple I, DEF, hooked & 15 GP & small \\
- & 25 & 3 & 0 & one & short & heavy I, smash & & \\[3pt]
+\textbf{Unarmed} & grapple & 0 & 0 & 0 & one & short & grapple I, braced, DEF, hook, draw & - & - \\
+ & punch & 0 & 0 & 0 & one & short & heavy I, draw & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Dagger} & 15 & 0 & 10 & one & short & draw, DEF, piercing, bladed, precise, heavy I & 3 GP & small \\
-\rowcolor{fallowtint}
- & 15 & 4 & 16 & one & STR & draw, precise, slow & & \\[3pt]
+\textbf{Claws} & claw & 10 & 0 & 1 & one & short & grapple II, hook & - & - \\[3pt]
 \midrule
-\textbf{Club} & 15 & 4 & 0 & one & short & DEF, heavy I & 1 SP & small \\[3pt]
+\textbf{Gauntlet} & grapple & 25 & 0 & 0 & one & short & grapple I, DEF, hook & 15 GP & small \\
+ & punch & 25 & 4 & 0 & one & short & heavy I & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Stiletto} & 15 & 0 & 13 & one & short & draw, penetrating, precise, piercing, heavy I & 5 GP & small \\
+\textbf{Dagger} & stab & 15 & 0 & 11 & one & short & DEF, heavy I, piercing, bladed, precise, draw & 3 GP & small \\
 \rowcolor{fallowtint}
- & 15 & 0 & 0 & one & short & draw, DEF & & \\[3pt]
+ & throw & 15 & 4 & 16 & one & STR & precise, slow, draw & & \\[3pt]
 \midrule
-\textbf{Whip} & 10 & 0 & 6 & one & long II & draw & 2 GP & small \\
- & 15 & 0 & 0 & one & long II & grapple I & & \\
+\textbf{Club} & strike & 15 & 4 & 0 & one & short & DEF, heavy I & 1 SP & small \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Stiletto} & stab & 15 & 0 & 11 & one & short & heavy I, piercing, penetrating, precise, draw & 5 GP & small \\
+\rowcolor{fallowtint}
+ & parry & 15 & 0 & 0 & one & short & DEF, draw & & \\[3pt]
+\midrule
+\textbf{Whip} & lash & 10 & 0 & 2 & one & long II & draw & 2 GP & small \\
+ & entangle & 15 & 0 & 0 & one & long II & grapple I & & \\
 \end{stattable}
+
 \begin{multicols}{2}
 
 \textbf{Short Sword:} It is a larger version of a dagger, suitable for public use without drawing attention and easy to draw. Although it is too large to be ideal for grappling combat, it has stronger attacks and offers better defensive potential. It is a good secondary weapon or for urban and enclosed environments. 
@@ -107,29 +108,31 @@ A variation of the short sword is the scimitar, which receives +1 to damage on s
 \textbf{Battle Axe:} It is a very good option against wooden objects or opponents with low-rigidity armor. Its blade combined with its weight makes it an excellent weapon for destroying shields. The axe is slower than swords, and its attacks can leave the user open to enemy offensives, so it is wise to make each attack count. Its defensive potential is low, as it is a shaft weapon. It is better to use the axe alongside a shield to compensate. The battle axe has a spike on the back, which is a better option against opponents whose armor the blade cannot penetrate.  
 
 \end{multicols}
-\begin{stattable}{One-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
-Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
+
+\begin{stattable}{One-Handed Weapons}{@{}llcccccp{2.7cm}cc@{}}
+Weapon & Attack & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Short Sword} & 20 & 0 & 12 & one & short & precise, piercing, bladed, draw & 8 GP & medium \\
- & 20 & 4 & 12 & one & short & sweep, draw, DEF, heavy I, bladed & & \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Rapier} & 15 & 1 & 12 & one & long I & draw, precise, piercing, penetrating & 10 GP & medium \\
-\rowcolor{fallowtint}
- & 15 & 0 & 0 & one & long I & DEF & & \\[3pt]
-\midrule
-\textbf{Short Spear} & 20 & 2 & 20 & two & long I & braced, piercing, penetrating, heavy I & 2 SP & large \\
- & 15 & 0 & 0 & two & short & DEF, shaft, grapple I & & \\
- & 20 & 1 & 20 & one & 2xSTR & slow, piercing, heavy I-II & & \\[3pt]
+\textbf{Short Sword} & thrust & 20 & 0 & 12 & one & short & piercing, bladed, precise, draw & 8 GP & medium \\
+ & cut & 20 & 4 & 12 & one & short & sweeping, DEF, heavy I, bladed, draw & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Mace} & 50 & 8 & 0 & one & short & heavy I-II, smash & 2 GP & medium \\
+\textbf{Rapier} & thrust & 15 & 1 & 12 & one & long I & piercing, penetrating, precise, draw & 10 GP & medium \\
 \rowcolor{fallowtint}
- & 15 & 0 & 0 & one & short & DEF, shaft & & \\[3pt]
+ & parry & 15 & 0 & 0 & one & long I & DEF & & \\[3pt]
 \midrule
-\textbf{Battle Axe} & 25 & 6 & 12 & one & short & heavy I-II, bladed & 5 GP & medium \\
- & 15 & 0 & 0 & one & short & DEF & & \\
+\textbf{Short Spear} & thrust & 20 & 2 & 20 & two & long I & braced, heavy I, piercing, penetrating & 2 SP & large \\
+ & shaft & 15 & 0 & 0 & two & short & grapple I, shaft, DEF & & \\
+ & throw & 20 & 1 & 20 & one & 2xSTR & heavy I-II, piercing, slow & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Mace} & strike & 50 & 8 & 0 & one & short & heavy I-II & 2 GP & medium \\
+\rowcolor{fallowtint}
+ & shaft & 15 & 0 & 0 & one & short & shaft, DEF & & \\[3pt]
+\midrule
+\textbf{Battle Axe} & chop & 25 & 6 & 11 & one & short & heavy I-II, bladed & 5 GP & medium \\
+ & parry & 15 & 0 & 0 & one & short & DEF & & \\
 \end{stattable}
+
 
 \begin{multicols}{2}
 
@@ -146,39 +149,40 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \textbf{Greatsword:} is a larger and more robust version of a longsword. Although the weapon is quite heavy, it is balanced so that its attack can still be delivered with agility. The blade is very durable, making the weapon ideal for destroying other weapons that attempt to block it. Its sweeping attack with enhanced damage and long reach makes it excellent for dealing with many opponents at once. This sword is too large to be used in grappling combat, but it is still capable of thrusting at vulnerable points.
 
 \end{multicols}
-\begin{stattable}{Two-Handed Weapons}{@{}lcccccp{2.7cm}cc@{}}
-Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
+
+\begin{stattable}{Two-Handed Weapons}{@{}llcccccp{2.7cm}cc@{}}
+Weapon & Attack & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Longsword} & 20 & 6 & 14 & two & long I & sweep, DEF, heavy I, bladed & 12 GP & medium \\
- & 20 & 0 & 12 & one & short & piercing, penetrating, precise, heavy I & & \\
- & 20 & 0 & 12 & two & long I & piercing, penetrating & & \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Pike} & 20 & 2 & 20 & two & long II & braced, piercing, penetrating, heavy I & 3 SP & large \\
-\rowcolor{fallowtint}
- & 20 & 0 & 0 & two & long I & shaft & & \\[3pt]
-\midrule
-\textbf{Halberd} & 20 & 2 & 20 & two & long I & braced, piercing, penetrating, heavy I & 12 GP & large \\
- & 30 & 1 & 8 & two & long I & hook, bladed & & \\
- & 20 & 0 & 0 & two & short & DEF, shaft, grapple I & & \\
- & 30 & 8 & 16 & two & long I & heavy I-III, bladed & & \\[3pt]
+\textbf{Longsword} & cut & 20 & 6 & 14 & two & long I & sweeping, DEF, heavy I, bladed & 12 GP & medium \\
+ & half-sword thrust & 20 & 0 & 12 & one & short & heavy I, piercing, penetrating, precise & & \\
+ & thrust & 20 & 0 & 12 & two & long I & piercing, penetrating & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Warhammer} & 20 & 2 & 20 & two & long I & braced, piercing, penetrating, heavy I & 12 GP & large \\
+\textbf{Pike} & thrust & 20 & 2 & 20 & two & long II & braced, heavy I, piercing, penetrating & 3 SP & large \\
 \rowcolor{fallowtint}
- & 30 & 1 & 8 & two & long I & hook, bladed & & \\
-\rowcolor{fallowtint}
- & 20 & 0 & 0 & two & short & DEF, shaft, grapple I & & \\
-\rowcolor{fallowtint}
- & 100 & 10 & 0 & two & long I & heavy II-III, smash & & \\[3pt]
+ & shaft & 20 & 0 & 0 & two & long I & shaft & & \\[3pt]
 \midrule
-\textbf{Bardiche} & 30 & 8 & 16 & two & long I & heavy I-III, sweep, bladed & 10 GP & large \\
- & 20 & 0 & 0 & two & short & DEF, shaft, grapple I & & \\[3pt] 
+\textbf{Halberd} & spear point & 20 & 2 & 20 & two & long I & braced, heavy I, piercing, penetrating & 12 GP & large \\
+ & hook & 30 & 1 & 8 & two & long I & hook, bladed & & \\
+ & shaft & 20 & 0 & 0 & two & short & grapple I, shaft, DEF & & \\
+ & axe head & 30 & 8 & 16 & two & long I & heavy I-III, bladed & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Greatsword} & 30 & 8 & 14 & two & long I & sweep, DEF, heavy I-II, bladed & 18 GP & large \\
+\textbf{Warhammer} & spear point & 20 & 2 & 20 & two & long I & braced, heavy I, piercing, penetrating & 12 GP & large \\
 \rowcolor{fallowtint}
- & 20 & 2 & 16 & two & long I & piercing, heavy I, bladed, braced & & \\
+ & hook & 30 & 0 & 8 & two & long I & hook, bladed & & \\
+\rowcolor{fallowtint}
+ & shaft & 20 & 0 & 0 & two & short & grapple I, shaft, DEF & & \\
+\rowcolor{fallowtint}
+ & hammer & 100 & 10 & 0 & two & long I & heavy II-III & & \\[3pt]
+\midrule
+\textbf{Bardiche} & chop & 30 & 8 & 16 & two & long I & sweeping, heavy I-III, bladed & 10 GP & large \\
+ & shaft & 20 & 0 & 0 & two & short & grapple I, shaft, DEF & & \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Greatsword} & cut & 30 & 8 & 14 & two & long I & sweeping, DEF, heavy I-II, bladed & 18 GP & large \\
+\rowcolor{fallowtint}
+ & thrust & 20 & 2 & 16 & two & long I & braced, heavy I, piercing, bladed & & \\
 \end{stattable}
 
 \begin{multicols}{2}
@@ -203,29 +207,30 @@ Weapon & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \\
 
 \end{multicols}
 
-\begin{stattable}{Ranged Weapons}{@{}lccccccp{2.4cm}cc@{}}
-Weapon & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Bulk \\
+\begin{stattable}{Ranged Weapons}{@{}llccccccp{2.4cm}cc@{}}
+Weapon & Attack & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Net} & 15 & 0 & grapple & 4+10 & two & 9m, 2m rad & grab, reload, slow & 3 GP & medium \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Grappling Hook and Rope} & 10 & 6 & 10 & 4+4 & two & STR & slow, hook & 2 SP & medium \\[3pt]
-\midrule
-\textbf{Grenade} & 20 & X & X & 3 & one & 2xSTR & slow & 2 GP & small \\[3pt]
+\textbf{Net} & throw & 15 & 0 & 0 & 4+10 & two & 9m & slow, reload, grab & 3 GP & medium \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Short Bow*} & 10 & 6 & 18 & 5 & two & 100m & piercing, precise, fast & 5 GP & medium \\[3pt]
+\textbf{Grappling Hook and Rope} & throw & 10 & 6 & 10 & 4+4 & two & STR & hook, slow & 2 SP & medium \\[3pt]
 \midrule
-\textbf{Long Bow*} & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Heavy Bow*} & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
-\midrule
-\textbf{Crossbow} & 10 & 8 & 22 & 4+4 & two & 150m & reload, piercing, precise, fast & 8 GP & large \\[3pt]
+\textbf{Grenade} & throw & 20 & 0 & 0 & 3 & one & 2xSTR & slow & 2 GP & small \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Arbalest} & 10 & 10 & 26 & 4+6 & two & 200m & reload, piercing, precise, fast & 12 GP & large \\
+\textbf{Short Bow} & shoot & 10 & 6 & 18 & 5 & two & 100m & piercing, precise, fast & 5 GP & medium \\[3pt]
+\midrule
+\textbf{Long Bow} & shoot & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Heavy Bow} & shoot & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
+\midrule
+\textbf{Crossbow} & shoot & 10 & 8 & 22 & 4+4 & two & 150m & piercing, precise, fast, reload & 8 GP & large \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Arbalest} & shoot & 10 & 10 & 26 & 4+6 & two & 200m & piercing, precise, fast, reload & 12 GP & large \\
 \end{stattable}
+
 \begin{multicols}{2}
 
 *Bows require training to be used effectively. Characters without proper training spend an extra 3 AP for each shot and cannot snipe or quick shot.
@@ -245,14 +250,16 @@ Bows and crossbows can use different types of arrows:
 The shields here are equipped with a strap around the shoulder and a handle for the hand. They do not require a strap from a container, since they carry their own, but they add their own burden separately. Shields can be equipped and unequipped with a standard action, which means just sliding it to the back or back to the front. Throwing the shield out also costs a standard action.
 
 \end{multicols}
-\begin{stattable}{Shields}{@{}lcccccc@{}}
-Name & Burden Pen & Cover & RES & Insulation & Bulk & Value \\
+
+\begin{stattable}{Shields}{@{}llcccccp{2.2cm}ccccc@{}}
+Name & Attack & RES & Blunt & Cut & Hand & Range & Properties & Burden Pen & Cover & Insulation & Bulk & Value \\
 \midrule
-\textbf{Wooden Shield} & -1 & +2 & 20 & 10 & large & 1 GP \\
+\textbf{Wooden Shield} & bash & 20 & 0 & 0 & one & short & DEF, heavy I & -1 & +2 & 10 & large & 1 GP \\
 \rowcolor{fallowtint}
-\textbf{Metal Shield} & -1 & +2 & 30 & 10 & large & 15 GP \\
-\textbf{Wooden Tower*} & -2 & +2 & 20 & 15 & large & 2 GP \\
+\textbf{Metal Shield} & bash & 30 & 4 & 0 & one & short & DEF, heavy I & -1 & +2 & 10 & large & 15 GP \\
+\textbf{Wooden Tower*} & bash & 20 & 4 & 0 & one & short & DEF, heavy I & -2 & +2 & 15 & large & 2 GP \\
 \end{stattable}
+
 Body shields are marked with * in the table and can provide total cover.
 
 \begin{multicols}{2}
@@ -267,7 +274,7 @@ Armors have prot, which is used as damage reduction against impacts. RES is both
 
 \textbf{Metallic armors} cause the character to sink 1m per turn while swimming, on top of whatever they get in their swimming test. Metal armors cannot be cut without the penetrating property.
 
-\textbf{Rigid armors:} receive and deal damage from weapons that hit them, thus having a RES value. Their protection against impact is greater, as the armor absorbs a larger portion.
+\textbf{Rigid armors:} receive and deal damage from weapons that hit them. Their protection against impact is greater, as the armor absorbs a larger portion. Rigid armor can be bypassed by precise weapons with an attack additional effect.
 
 \textbf{Gauntlets:} Gauntlets give -3 to prestidigitation, -3 to accuracy and climbing, but the armor protects the vulnerability of the hands. A pair of gauntlets costs 15 GP or 15\% of the armor's value.
 
@@ -287,7 +294,7 @@ Name & RES & Protection & Insulation & Deflection & Burden Pen & Price & Bulk \\
 Skin & 0 & 0 & 0 & +4 & 0 & 0 & - \\
 \rowcolor{fallowtint}
 Clothing & 3 & 0 & 2 & +4 & 0 & 1 SP & medium \\
-Fur coat & 7 & 2 & 6 & +5 & 0 & 0 & medium \\
+Fur Coat & 7 & 2 & 6 & +5 & 0 & 0 & medium \\
 \rowcolor{fallowtint}
 Thick Hide & 8 & 4 & 7 & +5 & 0 & 0 & - \\
 Gambeson & 10 & 3 & 6 & +5 & 0 & 5 GP & medium \\
@@ -300,15 +307,16 @@ Chain Shirt & 8 & 3 & 5 & +5 & 0 & 20 GP & large \\
 \rowcolor{fallowtint}
 Hauberk & 10 & 5 & 6 & +5 & -1 & 30 GP & 4 \\
 \midrule
-\multicolumn{8}{l}{\textbf{\textit{Rigid and Metallic}}} \\
+\multicolumn{8}{l}{\textbf{\textit{Metallic, Rigid}}} \\
 \midrule
-\rowcolor{fallowtint}
 Brigandine & 12 & 8 & 8 & +6 & -2 & 50 GP & 5 \\
+\rowcolor{fallowtint}
 Half Armor & 16 & 10 & 7 & +5 & -2 & 60 GP & 5 \\
 Full Armor & 16 & 10 & 8 & +7 & -3 & 100 GP & 5 \\
 \rowcolor{fallowtint}
 Reinforced Armor & 18 & 12 & 8 & +8 & -4 & 150 GP & 6 \\
 \end{stattable}
+
 \begin{multicols}{2}
 
 
@@ -414,7 +422,7 @@ Items can be categorized in bulk like characters are in size, where each categor
 
 \textbf{Containers and burden:} Travelers need to have containers to carry equipment that they are not wearing or wielding. The containers impose burden penalty to be carried, determined by their burden and the character that is carrying them, calculated by burden penalty = character size - container burden. If the number is negative, add it to the character's burden penalty. They do not need to have anything inside to inflict the penalty. If the container's burden is 3 higher than the character, it causes the lame affliction.
 
-\textbf{Hands:} can carry an item up to one bulk higher than the character's size.
+\textbf{Hands:} can carry an item up to one bulk higher than the character's size without penalty. Carrying something up to 2 bulk higher is possible, but makes the character lame.
 
 \textbf{Slot size and stacking:} Each container has a number of slots, which can each accommodate an item or stack of items. Slots can be of any bulk size. A slot holds one item of its Bulk, a stack of 3 items one step below, or 10 two steps below. The progression continues for smaller bulks, following the pattern of the VM: 3/10/30/100. Only identical items can be stacked together.
 
