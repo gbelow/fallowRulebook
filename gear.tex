@@ -26,9 +26,10 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \item \textbf{Precise:} allows performing armor bypass additional effect.
 % \item \textbf{Vicious:} allows using hemorrhage additional effect.
 \item \textbf{RES:} indicates RES of that part of the weapon, which is the threshold for gear breakage.
-\item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: gets -2 accuracy when the opponent defends actively. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
+\item \textbf{Slow, Fast, UF:} Property only for ranged weapons. Slow: can be guarded against with weapons. Fast: can only be blocked with a shield. Ultra fast(UF): like fast, but it is automatically penetrating. 
 \item \textbf{Draw:} Attack can be performed at the same time as drawing the weapon, and drawing can be done with any action surge.
 \item \textbf{Reload:} The weapon requires reloading to attack again.
+\item \textbf{Explosion:} The effect resolves like an explosion. Being caught in the explosion applies the weapon's damage, grapple and any other effects.
 \end{proplist}
 
 % \begin{dnotesm}
@@ -80,7 +81,7 @@ Weapon & Attack & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \
 \rowcolor{fallowtint}
 \textbf{Dagger} & stab & 15 & 0 & 11 & one & short & DEF, heavy I, piercing, bladed, precise, draw & 3 GP & small \\
 \rowcolor{fallowtint}
- & throw & 15 & 4 & 16 & one & STR & precise, slow, draw & & \\[3pt]
+ & throw & 15 & 4 & 16 & one & 10m & precise, slow, draw & & \\[3pt]
 \midrule
 \textbf{Club} & strike & 15 & 4 & 0 & one & short & DEF, heavy I & 1 SP & small \\[3pt]
 \midrule
@@ -122,7 +123,7 @@ Weapon & Attack & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \
 \midrule
 \textbf{Short Spear} & thrust & 20 & 2 & 20 & two & long I & braced, heavy I, piercing, penetrating & 2 SP & large \\
  & shaft & 15 & 0 & 0 & two & short & grapple I, shaft, DEF & & \\
- & throw & 20 & 1 & 20 & one & 2xSTR & heavy I-II, piercing, slow & & \\[3pt]
+ & throw & 20 & 1 & 20 & one & 10m & heavy I-II, piercing, slow & & \\[3pt]
 \midrule
 \rowcolor{fallowtint}
 \textbf{Mace} & strike & 50 & 8 & 0 & one & short & heavy I-II & 2 GP & medium \\
@@ -210,25 +211,25 @@ Weapon & Attack & RES & Blunt & Cut & Hand & Range & Properties & Price & Bulk \
 \begin{stattable}{Ranged Weapons}{@{}llccccccp{2.4cm}cc@{}}
 Weapon & Attack & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & Bulk \\
 \midrule
-\textbf{Net} & throw & 15 & 0 & 0 & 4+10 & two & 9m & slow, reload, grab & 3 GP & medium \\[3pt]
+\textbf{Net} & throw & 15 & 0 & 0 & 4+10 & two & long II & reload, grapple I, explosion & 3 GP & medium \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Grappling Hook and Rope} & throw & 10 & 6 & 10 & 4+4 & two & STR & hook, slow & 2 SP & medium \\[3pt]
+\textbf{Grappling Hook and Rope} & throw & 10 & 6 & 10 & 4+4 & two & 10m & hook, slow & 2 SP & medium \\[3pt]
 \midrule
-\textbf{Grenade} & throw & 20 & 0 & 0 & 3 & one & 2xSTR & slow & 2 GP & small \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Short Bow} & shoot & 10 & 6 & 18 & 5 & two & 100m & piercing, precise, fast & 5 GP & medium \\[3pt]
-\midrule
-\textbf{Long Bow} & shoot & 10 & 8 & 25 & 6 & two & 150m & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
+\textbf{Grenade} & throw & 20 & 0 & 0 & 3 & one & 30m & slow, explosion & 2 GP & small \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Heavy Bow} & shoot & 10 & 10 & 30 & 6 & two & 200m & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
+\textbf{Short Bow} & shoot & 10 & 6 & 18 & 5 & two & shooting & piercing, precise, fast & 5 GP & medium \\[3pt]
 \midrule
-\textbf{Crossbow} & shoot & 10 & 8 & 22 & 4+4 & two & 150m & piercing, precise, fast, reload & 8 GP & large \\[3pt]
+\textbf{Long Bow} & shoot & 10 & 8 & 25 & 6 & two & shooting & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Arbalest} & shoot & 10 & 10 & 26 & 4+6 & two & 200m & piercing, precise, fast, reload & 12 GP & large \\
+\textbf{Heavy Bow} & shoot & 10 & 10 & 30 & 6 & two & shooting & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
+\midrule
+\textbf{Crossbow} & shoot & 10 & 8 & 22 & 4+4 & two & shooting & piercing, precise, fast, reload & 8 GP & large \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Arbalest} & shoot & 10 & 10 & 26 & 4+6 & two & shooting & piercing, precise, fast, reload & 12 GP & large \\
 \end{stattable}
 
 \begin{multicols}{2}
