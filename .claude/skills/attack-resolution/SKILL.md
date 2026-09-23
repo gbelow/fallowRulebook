@@ -89,9 +89,8 @@ penalty can push a defense below SD. Evasive jump adds +AGI/3 to Defend.
 Grappled targets cannot evade or block, only intercept. Assassinate only
 works against SD.
 
-**Score** = d10 + skill + mods − DL. Exploding die: a 10 adds 1d6 and keeps
-adding while the d6 shows 6; a 1 adds nothing and subtracts 1d6, continuing
-on 6. Safe test: 2d10 keep the one nearest 5; risky: keep the farthest.
+**Score** = d10 + skill + mods − DL. The d10 reads 0–9. Exploding die: a 9 adds 1d6 and keeps
+adding while the d6 shows 6; a 0 subtracts 1d6, continuing on 6. Safe test: 2d10 keep the one nearest 5; risky: keep the farthest.
 
 **Degrees for attacks:** miss < 0 ≤ graze < 5 ≤ hit. There is no critical on
 an attack — everything above +5 is **HOP = score − 5**. (Explosions are the
@@ -243,7 +242,7 @@ may take AP negative if the next round starts positive.
 ## 9. Expected-damage mode
 
 For "which is better against armor Y":
-1. Enumerate the exploding d10 exactly (small Python script; expand the 10/1
+1. Enumerate the exploding d10 exactly (small Python script; expand the 9/0
    chains recursively to ±30).
 2. P(hit/graze/miss) from score − DL ≥ 5 / ≥ 0 / < 0; piercing graze → miss.
 3. Damage per degree is deterministic, so tier, IL, bleed and wound are too.

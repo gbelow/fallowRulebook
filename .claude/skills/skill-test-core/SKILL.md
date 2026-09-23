@@ -8,9 +8,10 @@ looks like it may have changed — this is a compressed map, not a replacement.
 
 ## Skill test core
 
-d10 + skill value vs DL. Degrees: crit ≥+10, hit ≥+5, graze ≥0, else miss.
-Round fractions down. Exploding die: 10 → +1d6 (reroll+add while 6); 1 → −1d6
-(reroll+subtract while 6). Safe test: roll 2d10, keep closest to 5; risky:
+d10 (faces 0–9, the 0 is 0) + skill value vs DL. Degrees: crit ≥+10, hit ≥+5, graze ≥0, else miss.
+Round fractions down. Exploding die: 9 → +1d6 (reroll+add while 6); 0 → −1d6
+(reroll+subtract while 6). Parity (skill = DL): 10% crit / 40% hit / 40%
+graze / 10% miss. Safe test: roll 2d10, keep closest to 5; risky:
 keep farthest (only when a rule/ability/GM allows it). Group tests use best
 value, worst value, or best+helper-bonus, depending on the situation. (Full
 detail: play.tex "How skills work"; combat-math application: attack-resolution
