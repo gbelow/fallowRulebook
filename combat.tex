@@ -292,9 +292,9 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 % \textbf{Flinch:} This is a reaction that costs 1 AP and increases deflection by 2. The attack is still made against the SD.
 
-\textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a graze, the attack has 50\% damage, and on misses, it has 0.
+\textbf{Evade:} The defender spends 2 AP to try to get out of the way of an attack. On a graze, the attack has 50\% damage, and on misses, it has 0. This can be used to avoid being trampled and it always works automatically unless trample is a directed attack. 
 
-\textbf{Evasive Jump:} is a modification on evade. It costs an extra +1 AP +1 STA and allows the character to jump away from the attack while evading it. This movement cannot be followed and gives +AGI/2 on the skill test. This can only be used if there is space to jump. The jump must place the character further from the source of the attack and uses the movement speed of jumping backwards. When running, evasive jump uses the forward running long jump at a 60 degree angle of the direction of the run, and must end the movement further from the source of attack than it started. This can be used to avoid being trampled and it always works automatically unless trample is a directed attack. 
+\textbf{Evasive Jump:} is a modification on evade. It costs an extra +1 AP +1 STA and allows the character to jump away from the attack while evading it. This movement cannot be followed and gives +AGI/2 on the skill test. This can only be used if there is space to jump. The jump must place the character further from the source of the attack and uses the movement speed of jumping backwards. When running, evasive jump uses the forward running long jump at a 60 degree angle of the direction of the run, and must end the movement further from the source of attack than it started. 
 
 \textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. Blocking with a shield adds its cover to defend. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
 
@@ -325,7 +325,7 @@ Multiple characters can assist each other in the grab. Any skill test made by se
 
 \skill{Force}{STR-10}{This is the skill for pushing, lifting objects, and resisting being thrown.
 
-\textbf{Trample:} Happens when two characters hit each other at speed. This is a Force vs Force comparison. If the runner's Force is higher, the opponent moves back one space. If Force is 5 points higher or more, the opponent is prone. Whoever is running or jumping gets a bonus equal to their running or jumping speed to this. If the defender's force is equal or higher, the runner is stopped. If a strike started this action, targeting the head increases attacker's force by 5.
+\textbf{Trample:} Happens when two characters hit each other at speed. This is a Force vs Force comparison. If the runner's Force is higher, the opponent moves back one space and is stunned. If Force is 5 points higher or more, the opponent is stunned and prone. Whoever is running or jumping gets a bonus equal to their running or jumping speed to this. If the defender's force is equal or higher, the runner is stopped and stunned. If a strike started this action, targeting the head increases attacker's force by 3. Trampling a prone character is an automatic success and allows free passage.
 
 \textbf{Catch:} happens when someone tries to initiate a grapple against a running target. The catcher must spend 3 AP + 1STA to perform a strike with a weapon with the grapple property and add their own running speed to defend the trample. If the target is stopped, the catcher can decide to grapple them without further tests.
 
