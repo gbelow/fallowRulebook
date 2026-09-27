@@ -27,7 +27,7 @@
     \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement immediately and allow running until the end of the turn.
     \item \textbf{Combat surge:} 3 STA to gain 4 AP that must be used for attacks or movement and must be used immediately.
     \item \textbf{Reaction surge:} 3 STA to gain 4 AP, but can only use reactions until the end of the round.
-    \item \textbf{Focus surge:} Gains no AP, but this surge is required to use ranged attacks, casting spells and using standard actions.
+    \item \textbf{Focus surge:} Gains no AP, but this surge is required to use ranged attacks and casting spells.
 \end{proplist}
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 8 AP minus any negative AP they had. Any unspent AP is lost.
@@ -62,13 +62,13 @@ Types of movement:
 \begin{proplist}
 \item \textbf{basic movement:} Simple walking movement.
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
-\item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same.
+\item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same. The first 2 AP worth of running must be uninterrupted, otherwise, running cannot be started.
 \item \textbf{getting up:} Removes the prone condition.
 \item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to match that of running. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved. 
 \item \textbf{crawling:} is the only usable movement speed while \textbf{prone}.
 \item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{prone} condition.
 
-\item \textbf{trample:} The character attempts to pass through an occupied space. If the opponent does not move out of the way, they get trampled, as explained in the force skill in melee combat.
+\item \textbf{trample:} The character attempts to pass through an occupied space, as explained in the force skill in melee combat.
 \item \textbf{mounted movement:} A character needs minimum training to be able to give commands to a mount. During mounted combat, the character's movement speed matches that of the mount. Running and a movement surge do not spend character STA. Mounting and dismounting costs AP equal to standing up.
 \end{proplist}
 
@@ -224,14 +224,16 @@ Afflictions are the negative conditions that can affect creatures.
 
 \textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
 
-\textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight, persuasion, deception and all Knowledges and all spellcasting.  
+\textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight, persuasion, deception and all Knowledges and all spellcasting.
+
+% \textbf{Mobility:} Penalties to Force, Balance, Climb, and grapple.
 
 The list of afflictions is:
 
 \begin{proplist}
-\item \textbf{Lame:} Cannot run and requires movement surge for basic movement. Takes +3 IL for traveling and Searching.
-\item \textbf{Prone:} Can only crawl and stand up.
-\item \textbf{Grappled:} Movement requires a test.
+\item \textbf{Lame:} Cannot run, jump or use basic movement. Takes +2 IL for traveling and Searching.
+\item \textbf{Prone:} Can only crawl and stand up and cannot push nor drag. Other characters can pass through without trampling.
+\item \textbf{Grappled:} Movement requires pushing or dragging the other participants in the grapple.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
 \item \textbf{Disoriented:} Gives -2 to sensory penalties.
 \item \textbf{Oblivious:} Gives -5 to sensory penalties.
@@ -276,11 +278,11 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. 
 
-\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack. The attack requires the normal AP cost and the defense takes -2 penalty unless it's the SD. Triggering actions include anything that costs 3 AP or more during a focus surge, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
+\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack. The attack requires the normal AP cost and the defense takes -2 penalty unless it's the SD. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
-\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. It costs an additional +2AP and +1STA on top of the normal attack cost and has damage bonus of +1.5x STR x DM on a hit. The additional damage effect also triggers a trample. Braced attack can only trigger once per turn (anyone's turn. It can be used multiple times per round.)
+\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. On a hit, spend an additional +2AP and +1STA on top of the normal attack cost to get damage bonus of +1.5x STR x DM and trigger a trample.
 
-\textbf{Hook Attack:} A melee attack using a weapon with hook property that attempts to trigger tripping the opponent. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +1 AP +1STA to attempt to trip their target, in which case the attack gets +STR/2 x DM damage if the opponent attempts to perform an evasive jump and +STR x DM if they are running.
+\textbf{Hook Attack:} A melee attack using a weapon with hook property that gets extra damage against moving targets. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +2 AP +1STA to get +STR/2 x DM damage if the opponent attempts to perform an evasive jump and +STR x DM if they are running. If the attack was aimed at the legs or head, the post hit effect is a knockdown attempt which cannot be reacted against if they are running or jumping.
 
 \textbf{ Assassinate :} Can only be done against SD, not against active defense, and requires a short range and precise weapon attack. This costs 1 extra AP on the normal cost of the attack. It automatically applies bypass.
 }
@@ -298,7 +300,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. Blocking with a shield adds its cover to defend. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
 
-\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has less than 8 force more than the defender.
+\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has less than 8 force more than the defender. An intercept that stops the attack can start a grapple if the defender chooses and has an attack with grapple property available.
 
 \textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
 
@@ -306,32 +308,41 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \skill{Grapple}{Melee + STR-10}{ Used to grab and subdue others. When a character is under the effect of grapple, it cannot move without dragging the other grappler. Additionally, the list of things a grabbed character can do is limited to the points below:
 
-\textbf{Initiate the Grab:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
+\textbf{Initiate the Grapple:} attackers must make a strike test with a weapon that has the grapple property against the opponent's defense or SD. On a hit, the opponent is grappled, and any movement initiated by them is stopped. It is possible to grapple back automatically just by having a weapon with grappling property equipped, like a free hand ( a two handed weapon can be held with one hand ). If a creature's grapple skill is 10 points higher than its oponents, it does not suffer the grappled affliction.
 
-\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept. Any attacks with the grappling property can use the grapple skill instead of strike to attack during a grapple.
+\textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept.
 
-\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it or the test's result.
+\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to interrupt itself and spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it or the test's result. If a grapple maneuver grazes or misses, it simply has no effect. Grapple maneuvers can be used like opportunity attacks, with the same triggers and the -2 penalty to defense.
 
-\textbf{Escape:} Escapes from the grapple on criticals and hits. Being interrupted allows for a reaction to escape without the possibility of active resistance.
+\textbf{Escape:} Escapes from the grapple on criticals and hits. A stunned grappler allows the other to perform a reaction to escape without the possibility of active resistance.
 
-\textbf{Disarm:} Removes something from the opponent's hands on a critical. It is possible to grab the opponent's weapon on a hit, preventing them from using it until they manage to escape.
+\textbf{Disarm:} Removes something from the opponent's hands on a critical. Can be used by spending +1AP+1STA when intercept stops an attack. The item falls on the floor under the disarmed character.
 
-\textbf{Knockdown:} The opponent falls to the ground on a critical. It is possible to throw oneself along to achieve a knockdown on a hit.
+\textbf{Knockdown:} The opponent falls to the ground on a critical. It is possible to throw oneself along to achieve a knockdown on a hit. Also works on a hit when knockdown is done from a prone position. It is not possible to throw oneself along during a hook attack.
 
 \textbf{Immobilize:} The opponent becomes immobilized on a critical. It is possible to stay immobilized yourself to achieve immobilization on a hit.
 
-Multiple characters can assist each other in the grab. Any skill test made by several characters uses the highest skill value among them plus 3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters of a smaller size category add a maximum of 2.
+Multiple characters can assist each other in the grapple. Any skill test made by several characters uses the highest skill value among them plus 3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters with force 5 points lower than their opponent always add just +1.
 }
 
 \skill{Force}{STR-10}{This is the skill for pushing, lifting objects, and resisting being thrown.
 
-\textbf{Trample:} Happens when two characters hit each other at speed. This is a Force vs Force comparison. If the runner's Force is higher, the opponent moves back one space and is stunned. If Force is 5 points higher or more, the opponent is stunned and prone. Whoever is running or jumping gets a bonus equal to their running or jumping speed to this. If the defender's force is equal or higher, the runner is stopped and stunned. If a strike started this action, targeting the head increases attacker's force by 3. Trampling a prone character is an automatic success and allows free passage.
+\textbf{Trample:} Happens when a character moves through a space occupied by another character. The target's reaction decides which of the following applies:
 
-\textbf{Catch:} happens when someone tries to initiate a grapple against a running target. The catcher must spend 3 AP + 1STA to perform a strike with a weapon with the grapple property and add their own running speed to defend the trample. If the target is stopped, the catcher can decide to grapple them without further tests.
+\begin{proplist}
+\item \textbf{Evades:} costs 2 AP to allow free passage, works automatically unless the trample is a directed strike, in which case a hit in the strike causes a crash.
+\item \textbf{Is prone:} free passage.
+\item \textbf{Crash:} Resolve as a Force vs Force comparison. Whoever is running adds their movement speed to their Force. On force differences lower than 5, both are stunned and the higher force gets to either block passage or pass through. A draw blocks passage. On greater differences, the winner does not get stunned and the loser falls prone if they are the target. The target can spend 2AP+1STA to get +3 in this comparison (automatic from braced attack reaction). A hit to the head adds +3 to the crash.
+\end{proplist}
 
-\textbf{Push and drag} attempts to move with a grappled creature. This costs 2AP +1STA and is a force vs force comparison. The strongest pushes the other by up to 1m. On a force difference equal or greater than 5, push them 2m. The defender must spend 2AP+1STA or receive -5 in this comparison. Nobody moves on a draw.
+\textbf{Catch:} It is possible to try to start a grapple against a running target. Spend 3AP+1STA to do the grapple initiating attack and receive the +3 to the crash. If the target is not stopped, only a strike with 5 HOPs or more succeeds in the grapple.
 
-\textbf{Trip:} happens as a consequence of a hook attack. This is a comparison between the attacker's force and target's balance + force. If anyone is jumping or running, the attacker gets a bonus equal to the moving party's movement speed. If the attacker's value is higher, the target falls and is prone. Targeting the head or legs increases the attacker's value by +5.
+
+\textbf{Push and drag} is movement within a grapple. This costs 3AP +2STA for both attacker and defender and is a force vs force comparison. The stronger character gets control of movement for the group that round, but at careful movement speed. If the defender spends the costs, they interrupt their action, but they can refuse to spend and take a -5 penalty to the comparison.
+
+It is possible to move at basic movement speed when a group of characters have 10 force higher than the opponent group. Use the same rules for multiple characters as grapple.
+
+Pushing and dragging can be triggered like opportinity attacks, with the same triggers. A successful push or a draw interrupts the target.
 }
 
 %----------------------SHOOT
@@ -402,7 +413,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{Follow:} A character can, as a reaction to any movement except running, follow another character who is already within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
 
-\textbf{Flanking:} when more than one character is within melee range, any attack against one of the surrounding characters triggers an attack of opportunity from the others, provided that they cannot be fit within a semi-circle centered on the triggering attack's target. Each opportunity attack is resolved in order defined by the flankers and can be voided if the target gets out of range.
+\textbf{Flanking:} when more than one character is within melee range, any attack against one of the surrounding characters triggers an attack of opportunity from the others, provided that they cannot be fit within a semi-circle centered on the triggering attack's target. Each opportunity attack is resolved in order defined by the flankers and can be voided if the target gets out of range. Opportunity attacks do not trigger other opportunity attacks.
 
 \textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. One character no longer offers cover against ranged attacks to another if one is in front of the other against shots from the high ground. The melee reach is reduced by 1m unless the person on the lower ground targets the legs. The one on the high ground has the reach reduced to hit the legs of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. A difference in elevation is a defensive tactical resource where whoever has the high ground has a slight advantage.
 
@@ -446,7 +457,7 @@ Adjust the damage as follows:
 
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
-\textbf{Standard Action:} Consider that 1 AP is equal to half a second and estimate how long an action should take. In general, taking an item from a belt or strap around the armor should take about 3 AP, while opening a backpack and taking something costs about 5 seconds. The AP cost of a standard action is 3 AP.
+\textbf{Standard Action:} The AP cost of a standard action is 3 AP. When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP. This is used to pick up items from the floor, open doors, throwing items with bulk smaller than character size by up to 10m, and perform other kinds of object interactions.
 
 \textbf{Drawing items in combat:} taking items from container slots takes 4 AP + a standard action. Small and Medium items in quick slots can be held in hand within a standard action during combat, large ones take two standard actions. Weapons with the draw property and all small items can be drawn with 0 AP cost as long as they are in a quick slot. 
 
@@ -457,8 +468,6 @@ Adjust the damage as follows:
 \textbf{Theft:} A standard action can be used to steal an item from someone's body or place an item on them. This is done by having one hand free and using a standard action to perform a Prestidigitation skill test against the opponent's Detection +5x for every item bulk category over small (relative to who must detect it). On criticals, it is stolen without being noticed. On successes, the character can choose between successfully stealing or failing without drawing attention. On grazes and failures, attention is drawn and it fails. Stealing an item from stealth gives a bonus of +5.
 
 \textbf{Pick Lock:} These tests use knowledge of mechanics as enabler. On criticals, it takes 5 AP. On hits, it takes 3 rounds. On a graze, it takes 1 ET, and on a failure, it is impossible to open.
-
-When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP.
 }
 
 \section{Environmental Hazards}
