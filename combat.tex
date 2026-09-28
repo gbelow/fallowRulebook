@@ -42,9 +42,12 @@
 \textbf{Suffocation:} If the character cannot breathe at the beginning of a round, they lose 1 STA and cannot Rest. 
 
 \textbf{Negative STA:} STA can become a negative number, but only as a result of suffocation. If STA is lower than -5, they drop unconscious. If it goes under -10, they die.
-% \textbf{Delay the turn:} The player can spend 1 AP during their turn to delay it. This allows the character to regain their token and play again within the same round. AP regeneration only occurs once per round.
 
-\textbf{Reactions:} These are actions that can be performed on another character's turn but must be triggered by something. An example is trying to evade an attack, which is triggered when being attacked. A reaction takes effect before the action that caused it.
+\textbf{Actions:} Anything the character declares that they will do is an action. This chapter is filled with actions and their AP and STA costs in combat. Only one action can be done at a time.
+
+\textbf{Reactions:} These are actions that can be performed on another character's turn but must be triggered by something. An example is trying to evade an attack, which is triggered when being attacked. A reaction takes effect before the action that caused it. 
+
+\textbf{Interruption:} If the character is in the middle of an action that is not movement, it must interrupt itself in order to use a reaction. The AP from the interrupted action can be repurposed for the reaction, but the amount spent must be the highest between the action and the reaction. The reaction gets -2 to its skill value in the event of an interruption. 
 
 \textbf{Preparing a reaction:} Any action can be prepared on a player's turn, but doing so costs 1 AP. This allows the player to create any trigger they can imagine for a reaction. They must have enough AP to perform the reaction when the trigger occurs. A prepared action can consist of a movement and a use of skill and can be repeated multiple times as long as the trigger happens again.
 
@@ -63,7 +66,7 @@ Types of movement:
 \item \textbf{basic movement:} Simple walking movement.
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
 \item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same. The first 2 AP worth of running must be uninterrupted, otherwise, running cannot be started.
-\item \textbf{getting up:} Removes the prone condition.
+\item \textbf{Stand up:} Removes the prone condition. Any reactions done while standing up get -2 penalty to the skill.
 \item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to match that of running. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved. 
 \item \textbf{crawling:} is the only usable movement speed while \textbf{prone}.
 \item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{prone} condition.
@@ -172,9 +175,9 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \subsection{Additional effects:}
 
-\textbf{Interruption:} is an effect that interrupts any action from its victim, making them lose its associated costs. Movement is cancelled, except running and jumping. It happens when a tier 1+ blunt or electric damage is inflicted or when the character is pushed.
+\textbf{Interruption:} receiving a tier 1+ blunt or electric injury causes any action and movement to be interrupted, except for running and jumping. The AP and STA costs of the action or movement are lost. 
 
-\textbf{Stun:} An interrupt in which the target also loses 2 AP. It happens when blunt or electric damage causes Tier 3 injury or higher.
+\textbf{Stun:} An interruption in which the target also loses 2 AP. It happens when blunt or electric damage causes Tier 3 injury or higher.
 
 \textbf{Deflection:} is how hard it is to land additional effects on a hit. The natural deflection of a human body is +4. Any time a character is wearing armor, use the armor's deflection instead. 
 
@@ -278,7 +281,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. 
 
-\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. It is possible to cancel the triggering action and reuse the AP spent to defend against an opportunity attack. The attack requires the normal AP cost and the defense takes -2 penalty unless it's the SD. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
+\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
 \textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. On a hit, spend an additional +2AP and +1STA on top of the normal attack cost to get damage bonus of +1.5x STR x DM and trigger a trample.
 
@@ -312,7 +315,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Attack and Defend:} Strikes between opponents involved in a grapple can be done with short range attacks. It is not possible to evade or block attacks, only intercept.
 
-\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to interrupt itself and spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it or the test's result. If a grapple maneuver grazes or misses, it simply has no effect. Grapple maneuvers can be used like opportunity attacks, with the same triggers and the -2 penalty to defense.
+\textbf{Grapple Maneuvers:} These are performed during a grapple by any of the participants in order to \textbf{escape, immobilize, disarm, or knock down} an opponent. These actions cost 3 AP +1STA, must be defended with the grapple skill, and require the defender to spend 2 AP+1 STA or suffer a -5 penalty. If the grapple attack has any damage, it deals that damage whenever a grapple maneuver is used, regardless of who initiated it or the test's result. If a grapple maneuver grazes or misses, it simply has no effect. Grapple maneuvers can be used like opportunity attacks. They always interrupt when they hit.
 
 \textbf{Escape:} Escapes from the grapple on criticals and hits. A stunned grappler allows the other to perform a reaction to escape without the possibility of active resistance.
 
@@ -330,7 +333,7 @@ Multiple characters can assist each other in the grapple. Any skill test made by
 \textbf{Trample:} Happens when a character moves through a space occupied by another character. The target's reaction decides which of the following applies:
 
 \begin{proplist}
-\item \textbf{Evades:} costs 2 AP to allow free passage, works automatically unless the trample is a directed strike, in which case a hit in the strike causes a crash.
+\item \textbf{Evades:} costs 2 AP to allow free passage, works automatically unless the trample is started by a strike, in which case a hit in the strike causes a crash.
 \item \textbf{Is prone:} free passage.
 \item \textbf{Crash:} Resolve as a Force vs Force comparison. Whoever is running adds their movement speed to their Force. On force differences lower than 5, both are stunned and the higher force gets to either block passage or pass through. A draw blocks passage. On greater differences, the winner does not get stunned and the loser falls prone if they are the target. The target can spend 2AP+1STA to get +3 in this comparison (automatic from braced attack reaction). A hit to the head adds +3 to the crash.
 \end{proplist}
@@ -338,11 +341,9 @@ Multiple characters can assist each other in the grapple. Any skill test made by
 \textbf{Catch:} It is possible to try to start a grapple against a running target. Spend 3AP+1STA to do the grapple initiating attack and receive the +3 to the crash. If the target is not stopped, only a strike with 5 HOPs or more succeeds in the grapple.
 
 
-\textbf{Push and drag} is movement within a grapple. This costs 3AP +2STA for both attacker and defender and is a force vs force comparison. The stronger character gets control of movement for the group that round, but at careful movement speed. If the defender spends the costs, they interrupt their action, but they can refuse to spend and take a -5 penalty to the comparison.
+\textbf{Push and drag} is movement within a grapple. This costs 3AP +2STA for both attacker and defender and is a force vs force comparison. The stronger character gets control of movement for the group that round, but at careful movement speed. The defender can refuse to spend and take a -5 penalty to the comparison.
 
 It is possible to move at basic movement speed when a group of characters have 10 force higher than the opponent group. Use the same rules for multiple characters as grapple.
-
-Pushing and dragging can be triggered like opportinity attacks, with the same triggers. A successful push or a draw interrupts the target.
 }
 
 %----------------------SHOOT
