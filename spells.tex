@@ -80,15 +80,13 @@ Casting a spell requires using a focus surge and costs AP and STA during combat 
 
 \textbf{Concentration:} Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. The spell is only released at the end of the AP expense. Losing concentration causes all AP and STA spent to be lost. 
 
-
-
 \textbf{Delayed Spells:} Any spell can be delayed, meaning that the casting can be completed, but the release is postponed. The character must concentrate on the spell until the release, which can be triggered by a previously prepared action. If a trigger does not occur, remake the sorcery test every turn to keep the spell ready.
 
 \textbf{Requirements:} Some spells may even be impossible to cast if the minimum conditions are not met. Making it rain in the desert is impossible if there is no water in the sky.
 
 \textbf{Stealth and Sorcery:} Spells are imperceptible through normal senses before they cause their effect. Once their effect occurs, they can be identified with a test of the skill used to cast the spell.
 
-\textbf{Relationship between Size and Sorcery:} Any spell that has DM, SM, RM or VM marked in it is scaled to character size.
+\textbf{Relationship between Size and Sorcery:} Any spell that has DM, SM, RM or VM marked in it is scaled to character size. It is possible to use an item requirement up to 1 size larger than the character, but it is necessary to amplify the spell to use it.
 
 
 \subsection{Types of Spells and Modifications} %---------- TYPES
@@ -101,7 +99,7 @@ Enhancements are modifications that casters can make to their spells to make the
 
 \textbf{Enhance Spell:} Spend 4 HOPs to improve spells in a special way described in the spell.  \\
 
-\textbf{Amplify Spell:} Spend 5 HOPs to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, RM, and VM. The number of times it can be increased depends on environmental conditions and the material used. The amount of material or charges consumed is multiplied by the VM. \\
+\textbf{Amplify Spell:} Spend 5 HOPs to amplify spells. It can be used when the spell has its effects multiplied by DM, SM, RM, and VM. The amount of material or charges consumed is multiplied by the VM. The damage is increased by DM, the effect reach and area by RM, and so on. It is possible to amplify up to 1 size larger than the item requirement.\\
 
 \textbf{Effortless Spell:} Spend 6 HOPs to rest while casting a spell. The spell must spend the highest between the rest's AP cost and the spell's AP cost. If used outside combat, reduces the exhaustion cost of a spell by half, rounded down.  \\
 
@@ -148,7 +146,7 @@ effect={Loads explosives with alchemical energy to explode when activated, upon 
 
 \spell{Incendiary Explosive}{%
 cost={1 grenade, 4 AP + 1 STA}, knowledge=Alchemy 3, requirements=grenade, dl=5, type=charged, cast range=touch, effect area={explosion, 3m xRM}, damage=10xDM burn,
-effect={Transforms the explosive into a sticky substance that ignites upon contact with fire and burns until extinguished.}}
+effect={Transforms the explosive into a sticky substance that ignites upon contact with fire or impact and burns until extinguished.}}
 
 \spell{Extinguish Flames}{%
 cost=2 AP, knowledge=Alchemy 1, requirements=Alchemy 2, dl=0, type=instant, cast range=touch, enhance=Enhancing increases the amount of spaces by 1.,
@@ -157,7 +155,7 @@ effect={Extinguishes the flames of 1 x RM space.}}
 % \spell{Start Fire}{ 1 charge, 3 AP + 3 STA}{Alchemy 1}{igneous stone}{5}{Touch}{Environmental}{instant}{ Sets fire to any combustible material it can touch. }
 
 \spell{Flamethrower}{%
-cost={6 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=sustained, test={Accuracy vs reflex}, effect area={spray, 4m xRM, 60 degrees}, cast range=touch, damage=20xDM burn,
+cost={6 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=sustained, test={Accuracy vs reflex}, effect area={spray, 4m xRM, 60 degrees}, cast range=touch, damage=15xDM burn,
 effect={Creates flames from a flamethrower as a spray explosion in front of the caster. The flamethrower can be sustained, dealing damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage.}}
 
 % \spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{5}{ Long I }{Touch}{instant}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }

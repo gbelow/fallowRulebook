@@ -15,7 +15,7 @@ All weapon attacks are made out of metal, unless otherwise stated.
 \item \textbf{Braced:} This attack can be a braced attack.
 \item \textbf{Shaft:} This attack represents the shaft of the weapon.
 \item \textbf{Short, Long I/II:} Short-range attacks can be used in grappling combat but have a range of 1m x RM. Long-range attacks have an extended range of 1m x RM per level and cannot be used in grappling combat.  
-\item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to STR if weapon is one handed, and 2x STR if two handed or a shield. This value scales with weapon size.
+\item \textbf{DEF:} Attacks that have DEF can be used to block. The blocking value is equal to 2x STR if weapon is one handed, and 4x STR if two handed or a shield. This value scales with weapon size.
 \item \textbf{STR x:} Strength requirement. Cannot use quick shot unless STR is +3 points higher than the requirement.
 \item \textbf{Hook:} This attack can be used for hooked attacks.
 \item \textbf{One/Two hands:} One-handed attacks use only one hand. Two-handed weapons require both hands. 
@@ -219,17 +219,17 @@ Weapon & Attack & RES & Blunt & Cut & AP & Hands & Range & Properties & Price & 
 \textbf{Grenade} & throw & 20 & 0 & 0 & 3 & one & 30m & slow, explosion & 2 GP & small \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Short Bow} & shoot & 10 & 6 & 18 & 5 & two & shooting & piercing, precise, fast & 5 GP & medium \\[3pt]
+\textbf{Short Bow} & shoot & 10 & 6 & 24 & 5 & two & shooting & piercing, precise, fast & 5 GP & medium \\[3pt]
 \midrule
-\textbf{Long Bow} & shoot & 10 & 8 & 25 & 6 & two & shooting & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
-\midrule
-\rowcolor{fallowtint}
-\textbf{Heavy Bow} & shoot & 10 & 10 & 30 & 6 & two & shooting & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
-\midrule
-\textbf{Crossbow} & shoot & 10 & 8 & 22 & 4+4 & two & shooting & piercing, precise, fast, reload & 8 GP & large \\[3pt]
+\textbf{Long Bow} & shoot & 10 & 8 & 30 & 6 & two & shooting & STR 13, piercing, precise, fast & 8 GP & large \\[3pt]
 \midrule
 \rowcolor{fallowtint}
-\textbf{Arbalest} & shoot & 10 & 10 & 26 & 4+6 & two & shooting & piercing, precise, fast, reload & 12 GP & large \\
+\textbf{Heavy Bow} & shoot & 10 & 10 & 36 & 6 & two & shooting & STR 16, piercing, precise, fast & 10 GP & large \\[3pt]
+\midrule
+\textbf{Crossbow} & shoot & 10 & 8 & 30 & 4+4 & two & shooting & piercing, precise, fast, reload & 8 GP & large \\[3pt]
+\midrule
+\rowcolor{fallowtint}
+\textbf{Arbalest} & shoot & 10 & 10 & 36 & 4+6 & two & shooting & piercing, precise, fast, reload & 12 GP & large \\
 \end{stattable}
 
 \begin{multicols}{2}
@@ -283,7 +283,7 @@ Armors have prot, which is used as damage reduction against impacts. RES is both
 
 \textbf{Gauntlets and closed helmet:} It is possible to remove the gloves and closed helmets, but removing each of these eliminates their bonuses.
 
-\textbf{Donning and Doffing armor:} Costs a standard action to don/doff helmet, gauntlets and small armor. Costs 6 AP to don/doff medium armors and several minutes to don/doff large ones. It is possible to doff a large armor by cutting it with a blade and spending 2 full turns, or 16 AP on it. This leaves the armor damaged.
+\textbf{Donning and Doffing armor:} Costs a standard action to doff helmet and gauntlets. Costs 8 AP to doff non rigid armor and several minutes to doff large ones. It is not possible to don armor during combat. It is possible to doff a rigid armor by cutting it with a blade and spending 2 full turns, or 16 AP on it. This leaves the armor damaged. Donning anything takes twice as much time as doffing.
 
 \end{multicols}
 
@@ -429,21 +429,22 @@ Items can be categorized in bulk like characters are in size, where each categor
 
 \textbf{Quick slots:} can only carry 1 item each, and have a maximum size of equipment that they can keep.
 
-\begin{stattable}{Containers}{@{}lccccc@{}}
-Name & Quick & Medium & Large & Burden & Cost \\
+\begin{stattable}{Containers}{@{}lcccccc@{}}
+Name & Quick & Medium & Large & Burden & Cost & Bulk \\
 \midrule
-Belt & 4 medium & 0 & 0 & 3 & 1 GP \\
+Belt & 4 medium & 0 & 0 & 3 & 1 GP & medium \\
+Quiver & 20 tiny & 0 & 0 & 0 & 2 GP & medium \\
 \rowcolor{fallowtint}
-Bandolier & 8 small & 0 & 0 & 3 & 3 GP \\
-Backpack & 0 & 12 & 2 & 4 & 5 SP \\
+Bandolier & 8 small & 0 & 0 & 3 & 3 GP & medium\\
+Backpack & 0 & 12 & 2 & 4 & 5 SP & large\\
 \rowcolor{fallowtint}
-Large Backpack & 0 & 16 & 4 & 5 & 1 GP \\
-Saddle* & 2 large & 8 & 4 & 5 & 4 GP \\
+Large Backpack & 0 & 16 & 4 & 5 & 1 GP & large\\
+Saddle* & 2 large & 8 & 4 & 5 & 4 GP & 4\\
 \rowcolor{fallowtint}
-Sled & 0 & 0 & 20 & 6 & 2 SP \\
-One-Horse Cart* & 0 & 0 & 100 & 7 & 30 GP \\
+Sled & 0 & 0 & 20 & 6 & 2 SP & 5\\
+One-Horse Cart* & 0 & 0 & 100 & 7 & 30 GP & 7 \\
 \rowcolor{fallowtint}
-Two-Horse Cart* & 0 & 0 & 200 & 7 & 60 GP \\
+Two-Horse Cart* & 0 & 0 & 200 & 7 & 60 GP & 8 \\
 \end{stattable}
 * the burden applies to the animal that is carrying it.
 

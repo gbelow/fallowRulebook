@@ -24,8 +24,8 @@
 \textbf{Action surge:} All characters are entitled to one action surge per round. There are 4 basic types of action surges: movement, combat, reaction and focus.
 
 \begin{proplist}
-    \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement immediately and allow running until the end of the turn.
-    \item \textbf{Combat surge:} 3 STA to gain 4 AP that must be used for attacks or movement and must be used immediately.
+    \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement and reactions immediately. Running costs no STA until the end of the turn. Ending the turn loses the surge AP.
+    \item \textbf{Combat surge:} 3 STA to gain 4 AP that must be used for attacks, defenses, reflexes, movement, or any action within a grapple and must be used immediately. Ending the turn loses the surge AP.
     \item \textbf{Reaction surge:} 3 STA to gain 4 AP, but can only use reactions until the end of the round.
     \item \textbf{Focus surge:} Gains no AP, but this surge is required to use ranged attacks and casting spells.
 \end{proplist}
@@ -65,7 +65,7 @@ Types of movement:
 \begin{proplist}
 \item \textbf{basic movement:} Simple walking movement.
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
-\item \textbf{running:} Can only be initiated during a movement surge, but can continue running after accelerating as long as no turns of 90 degrees or more are made per running block. The character can run a partial amount smaller than its running speed, but AP cost is the same. The first 2 AP worth of running must be uninterrupted, otherwise, running cannot be started.
+\item \textbf{running:} The character can run a partial amount smaller than its running speed, but AP cost is the same. The first 2 AP worth of running must be uninterrupted, otherwise, running cannot be started.
 \item \textbf{Stand up:} Removes the prone condition. Any reactions done while standing up get -2 penalty to the skill.
 \item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to match that of running. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved. 
 \item \textbf{crawling:} is the only usable movement speed while \textbf{prone}.
@@ -81,7 +81,7 @@ Movement & Cost & Speed \\
 Careful & 1 AP & 0.5 m \\
 \rowcolor{fallowtint}
 Basic & 1 AP & 1 m \\
-Run & 2AP & 3m \\
+Run & 2AP+1STA & 3m \\
 \rowcolor{fallowtint}
 Jump & 2AP+1STA & 2m \\
 Crawl & 1 AP & 0.33 m \\
@@ -152,7 +152,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 \end{stattable}
 
 \begin{dnote}
-    \textbf{Interpreting IL:} A tier 0, or T0 injury means a small bruise or a patch of burned skin. A T1 injury is a deep cut that bleeds a little or a large bruise. A T2 is a cut down to the muscle or a potentially cracked bone. A T3 is definitely a cracked bone and internal organ damage with bleeding. A T4 is near system shock, with multiple broken bones, impalation through the chest and potentially limb amputation. A T5 means instant death.
+    \textbf{Interpreting IL:} A tier 0, or T0 injury means a small bruise or a patch of burned skin. A T1 injury is a deep cut that bleeds a little or a large bruise. A T2 is a cut down to the muscle or a potentially cracked bone. A T3 is definitely a cracked bone and internal organ damage with bleeding. A T4 is near system shock, with multiple broken bones, impalation through the chest and potentially limb amputation. A T5 means iminent death.
 \end{dnote}
 
 \textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of effects. 
@@ -167,9 +167,11 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \textbf{Bleed:} is caused by blunt and cutting damage. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per bleed intensity. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
 
-\textbf{Burn, radiant:} Their respective defense is INS. Dealing Tier 0 injury or higher leaves the target burning. 
+\textbf{Burning and radiant damage:} Their respective defense is INS. Every time burning damage is received, the burning counter is updated with the current burning value + incoming burning damage, and that total is used against INS to determine the injury. After the damage is applied, the burning counter is halved. Burning damage causes only half IL injury.
 
-\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to I of damage leaves the target corroding at that tier of damage, which reapplies the damage until armor is removed. 
+\textbf{Burning: } At every beginning of round, every burning character takes burning damage from their burning counter and halve its value. At the end of combat, burning damage is caused once and the counter is set to 0.
+
+\textbf{Corrosive:} Its respective defense is INS. Tiers 0 to I of damage leaves the target corroding at that tier of damage, which reapplies the damage every round.
 
 \textbf{Electric damage:} It is also defended by INS. It causes interruptions and stuns. This damage only deals half IL damage per tier.
 
@@ -189,6 +191,8 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
     \item \textbf{ Slice:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this.
     \item \textbf{Smash:} Costs a number of HOPs equal to the target's deflection to add 2 xDM extra damage and upgrades an interrupt to a stun.
 \end{proplist}
+
+\textbf{Damage absorption:} is when the same physical attack instance hits more than one target in a sequence. The damage is reduced after every target according to this rule. The attack's damage is zero if absorption value >= damage, halved if absorption value >= damage/2, and full if absorption value < damage/2. The absorption value is RES of the target if that is an object. For a character, the value equals to T2 damage. 
 
 
 \subsection{Localized damage}
@@ -244,7 +248,7 @@ The list of afflictions is:
 \item \textbf{Deaf:} Cannot use hearing. 
 % Requires a balance check for basic movement on any terrain.
 
-\item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
+% \item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
 \item \textbf{Corroding 0/I} Applies a tier of injury every round. Can only be ended by specific items, jumping on water or removing the armor. Cannot be applied to unarmored.
 
 \item \textbf{Unconscious:} The character cannot do anything other than Rest and Will and Health tests. They can also make detection and sensing tests, but receive -10 on these tests. These tests can be made to wake up. The DL and the allowed test depend on the situation. Unconscious characters breathe automatically and cannot hold their breath. 
@@ -279,7 +283,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5 x STR xDM, but have an added cost of +1AP. Heavy II adds +1xSTR xDM, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5 x STR xDM, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
-\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc. If the attack is blocked or intercepted, the impact is reduced for all. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. 
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. Sweeping attacks do not draw attacks of opportunity from any of its targets.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
@@ -301,9 +305,9 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Evasive Jump:} is a modification on evade. It costs an extra +1 AP +1 STA and allows the character to jump away from the attack while evading it. This movement cannot be followed and gives +AGI/2 on the skill test. This can only be used if there is space to jump. The jump must place the character further from the source of the attack and uses the movement speed of jumping backwards. When running, evasive jump uses the forward running long jump at a 60 degree angle of the direction of the run, and must end the movement further from the source of attack than it started. 
 
-\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. Blocking with a shield adds its cover to defend. On graze, the attack damage is reduced by the block value. On a miss, by 1.5x as much. A blocking object can break if damage is greater than RES. 
+\textbf{Block:} attempts to block an attack by spending 2 AP and using any weapon attack or shield that contains the DEF property. Blocking with a shield adds its cover to defend. On graze, use the block value to lower the damage according to absorption rules before the damage reaches the character. A miss increases block value by 50\%.
 
-\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, stops attacks unless the attacker has 5 force higher than the defender. On a miss, stop it if the attacker has less than 8 force more than the defender. An intercept that stops the attack can start a grapple if the defender chooses and has an attack with grapple property available.
+\textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, interrupts the attack unless the attacker has 5 force higher than the defender. On a miss, interrupt it if the attacker has less than 8 force more than the defender. An intercept that stops the attack can start a grapple if the defender chooses and has an attack with grapple property available.
 
 \textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
 
@@ -325,7 +329,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Immobilize:} The opponent becomes immobilized on a critical. It is possible to stay immobilized yourself to achieve immobilization on a hit.
 
-Multiple characters can assist each other in the grapple. Any skill test made by several characters uses the highest skill value among them plus 3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters with force 5 points lower than their opponent always add just +1, and those with force lower than 10 points do not count.
+Multiple characters can assist each other in the grapple. Any skill test made by several characters uses the highest skill value among them plus 3/2/1 for each additional character, up to a maximum of 5. All characters involved must spend the necessary AP. Characters with force 5 points lower than their opponent always add just +1, and those with force 10 points lower do not count.
 }
 
 \skill{Force}{STR-10}{This is the skill for pushing, lifting objects, and resisting being thrown.
@@ -360,15 +364,15 @@ Use the same rules for multiple characters as grapple, but use force instead of 
 
 \textbf{Vertical distance:} The vertical range of a ranged weapon is half the horizontal range.
 
-\textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
+% \textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
 
 \textbf{Immobile Targets and Shooting Errors:} If a projectile misses on the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
 
 \textbf{Moving Targets:} It is possible to shoot at moving targets as a reaction. The total amount of AP spent to shoot cannot exceed the amount of AP spent on movement. The AP count starts when the target becomes visible. The target's position at the moment of the shot is where it is at the end of the movement.
 
-\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes visible. It is possible to prepare to shoot the same target as an ally as a reaction to their ranged attack. The shot occurs at the same time as the ally's shot.
+\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes visible. Prepared shot cannot be used at the same time as coordinated shots.
 
-\textbf{Coordinated Shots:} Whenever an ally shoots a target, it is possible to target the same target in the same action, as long as they are in range. The target defends all shots with a single action.
+\textbf{Coordinated Shots:} Whenever an ally shoots a target, it is possible to target the same target in the same action, as long as they are in range. The target defends all shots with a single action. 
 
 \textbf{\large Types of Ranged Attacks:}
 
@@ -401,20 +405,20 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \skill{Reflex}{ Ranged Combat }{ Used to react as quickly as possible to something. This can be used to avoid explosions, projectiles, and other effects that require quick reactions.
 
-\textbf{Evasion:} When the character is targeted by projectiles, they can spend 2 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze.
+\textbf{Evasion:} When the character is targeted by projectiles, they can spend 2 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
 
-\textbf{Guard:} character spends 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, the attack damage is reduced by the block value of the piece of gear used. On a miss, by 1.5x as much. Hits and crits damage the character directly.
+\textbf{Guard:} character spends 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, use the absorption rules to reduce the damage. On a miss, block value is 50\% increased. Hits and crits damage the character directly.
 
 \textbf{Cover:} When using a body shield, it is possible to take total cover behind the shield after using guard. The cover is canceled if the character performs any action other than careful movement. This cover only extends to allies who stand in the same space.
 
-\textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run by spending one extra STA. On a hit, they can spend an extra STA to jump in any direction before the explosion occurs. On a graze, they can move 1 AP before the explosion. On a miss, they can move 2 AP after the explosion. It is possible to downgrade the movement action.
+\textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run once. On a hit, they can jump once in any direction before the explosion occurs. On a graze, they can move 1 AP before the explosion. On a miss, they can move 2 AP after the explosion. It is possible to downgrade the movement action. Movement stamina costs for running and jumping are standard.
 
 \textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
 }
 
 \section{Positioning and Visibility }
 
-\textbf{Flee:} It is possible to activate the movement surge as a reaction for a character to prevent them from entering melee range, getting any closer in melee or after receiving a melee attack. This reaction interrupts the oponents turn.
+\textbf{Flee:} It is possible to activate the movement surge as a reaction to prevent them from entering a 4m perimeter from the character, or after receiving a melee attack. This reaction interrupts the opponents turn, which is resumed after the flee. The flee action can only use actions allowed by movement surge. Everyone that declared that they want to flee do it in declaration order.
 
 \textbf{Follow:} A character can, as a reaction to any movement except running, follow another character who is already within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
 
@@ -485,7 +489,9 @@ This list shows the possible effects and how to handle them. The actual item lis
 
 Fire is one of the most available ways to force characters to move. It is not a very fast source of damage, but it cannot be ignored.
 
-Fire causes burn damage at the beginning of every round to anyone in it as an environmental effect. Any creature that occupies more than 1 burning space takes the damage multiplied by the amount of burning spaces it is in. 
+Fire surfaces causes burning damage at the end of a character's turn, and at the beginning of the round. The fire damage taken at the end of the turn is the worst environmental fire the character has touched during their turn. Creatures that take multiple spaces take the worst space they touched.
+
+If the character is standing on a surface that has fire damage at the beginning of their turn, they can jump once to attempt to avoid its effects.
 
 A burning surface lasts at minimum until the end of combat, or until extinguished.
 
@@ -502,7 +508,7 @@ Burning Oil/Alcohol & 8 & 1/round \\
 Wood pyre, timber & 8 & 0 \\
 \end{stattable}
 
-\textbf{Extinguishing:} Fires can be extinguished by muffling it, throwing water or with magic. Both muffling and throwing water require 4 AP by default and being in a burning space or adjacent to it. Not every fire is extinguishable through water or muffling. Some fires require more than 4 AP to be extinguished.
+\textbf{Extinguishing:} Fires can be extinguished by muffling it, throwing water or with magic. Both muffling and throwing water require 4 AP by default and being in a burning space or adjacent to it. Not every fire is extinguishable through water or muffling. Some fires require more than 4 AP to be extinguished. Extinguishing fire on a character causes the burning damage once and sets burning to 0.
 
 Optional: \textbf{Fire spreads} each round to adjacent spaces that contain fuel. Adjust spread speed depending on fuel.
 
@@ -513,7 +519,7 @@ Optional: \textbf{Fire spreads} each round to adjacent spaces that contain fuel.
 Gases can have several effects: Poison, explosion, suffocation, reduced visibility and blindness. It lasts until the end of combat or dispersed somehow through wind. Muffling or extinguishing the source of the gas causes it to disappear in the beginning of the next round. Doing that costs 4 AP. Relocating the source moves the area somewhere else starting next round.  
 
 \begin{proplist}
-    \item \textbf{Suffocation:} anyone that starts the round inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
+    \item \textbf{Suffocation:} anyone that is inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
     \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Positioning and Visibility section.
     \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a Rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
     \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Protective gear over the eyes also prevents blindness.
@@ -531,7 +537,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \textbf{Liquid Spread and splash:} Smalls amounts of liquid (under 50 L) are considered to spread instantly and do so with the geometry of an explosion. Liquids spread around solids, not through them. Splashing a bucket of a liquid counts as a thrown ranged attack with 3m x RM range.  
 
-\textbf{Corrosion:} Being soaked in corrosive liquids cause a corrosive damage. The damage is multiplied by the amount of corrosive filled spaces the character is in.
+\textbf{Corrosion:} Being soaked in corrosive liquids cause a corrosive damage.
 
 \textbf{Waves and Currents:} Requires Force test to avoid being pushed. If the character is swimming, they get pushed automatically, but can spend AP to swim and cancel the movement.
 
