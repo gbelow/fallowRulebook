@@ -25,7 +25,7 @@ review devotion abilities
 
 breaking armor too weak?
 
-
+ranged attacks without distance penalty may need reverting for app. shooting objects at a distance does not scale properly.
 
 # CHANGE IN THE APP
 

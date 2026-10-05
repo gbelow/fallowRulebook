@@ -351,8 +351,6 @@ Objects can deal and take damage whenever they collide with something else, whet
 
 \textbf{Breakage throuh physical damage:} compare blunt and cutting damage from the attacking object to the RES of the receiving one. Whenever a piece of equipment can be cut and receives cutting or blunt damage >= RES, the equipment has a 1 in 6 chance to break. If it receives both >= RES, it has 50\% chance. If any single damage exceeds RES twice, the item breaks instantly.
 
-\textbf{Breakage and Hardness:} Collisions involving materials of hardness 1 and 2 do not pose a risk of breakage to other materials.
-
 % \textbf{Breakage through fire/radiant:} 
 
 \textbf{Weapon Breakage:} A broken weapon can no longer be used and costs 50\% of its original value to be repaired. Weapons that have a shaft require the replacement of the shaft.
@@ -395,7 +393,7 @@ Objects can deal and take damage whenever they collide with something else, whet
 \textbf{Gear characteristics}
 \begin{proplist}
     % \item Characteristic: Layered - Armor bypass strikes secondary RES instead of body. If armor has two values, it is layered.
-    \item Characteristic: Flammable - Burning condition does not wear off by itself. Deals 5 fire damage per round until extinguished.
+    \item Characteristic: Flammable - This armor is damaged by fire damage.
     \item Characteristic: Reflective: Reduces damage from radiant-type attacks by 50\% before reaching insulation.
     \item Characteristic: Insulating: Increases insulation against electric-type damage attacks by +5.
     % \item Characteristic: Inert: Doubles the armor's insulation against corrosive-type damage attacks.

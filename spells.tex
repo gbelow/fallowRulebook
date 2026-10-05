@@ -78,7 +78,7 @@ Clerics can also attempt to cast miracles. When they do that, they use \textbf{2
 
 Casting a spell requires using a focus surge and costs AP and STA during combat or it costs exhaustion during exploration. To cast any spell, make a sorcery test against the \textbf{Spell DL} to determine if the spell was successfully cast or not. In case of a miss or graze, it fails and the costs are lost. In case of a graze in combat, there is the option to increase spell cost by 2 AP to gain +3 once in the test if that will turn the graze into a hit. On a hit, the spell works and any overflow is converted into HOPs for spell modifications. A graze outside of combat allows giving up or doubling exhaustion costs to gain +3 to the test.
 
-\textbf{Concentration:} Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. The spell is only released at the end of the AP expense. Losing concentration causes all AP and STA spent to be lost. 
+\textbf{Concentration:} Sometimes, a character's AP may not be enough to cover the action's requirements. In that case, they can maintain concentration and continue acting in the next turn. The spell is only released at the end of the AP expense. Losing concentration causes all AP and STA spent to be lost. Focus surge is necessary to sustain concentration, and is automatically selected at the beginning of a round when concentrating.
 
 \textbf{Delayed Spells:} Any spell can be delayed, meaning that the casting can be completed, but the release is postponed. The character must concentrate on the spell until the release, which can be triggered by a previously prepared action. If a trigger does not occur, remake the sorcery test every turn to keep the spell ready.
 
@@ -107,7 +107,7 @@ The types of spells are:
 
 \begin{proplist}
     \item \textbf{Instant:} Happens as the casting is complete.
-    \item \textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. The cost must be paid at the beginning of the next round to maintain the spell effect.
+    \item \textbf{Sustained Spells:} are actions that can be performed continuously while concentration is maintained. Their effect ends when the caster stops concentrating on it. The cost must be paid at the beginning of the next round to maintain the spell effect and can use leftover AP from the previous round.
     \item \textbf{Charged:} activates an object that stays charged. The charge can be released when a trigger is activated if there is one. The charge lasts until the end of the combat for spells that cost AP or a number of ETs, for those that last ETs.
     \item \textbf{Curse:} are spells that stay active until the target has hit or crit on a test to shrug it off. Tests to resist curses are made automatically every start of round or start of ET.
 \end{proplist}
@@ -155,8 +155,8 @@ effect={Extinguishes the flames of 1 x RM space.}}
 % \spell{Start Fire}{ 1 charge, 3 AP + 3 STA}{Alchemy 1}{igneous stone}{5}{Touch}{Environmental}{instant}{ Sets fire to any combustible material it can touch. }
 
 \spell{Flamethrower}{%
-cost={6 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=sustained, test={Accuracy vs reflex}, effect area={spray, 4m xRM, 60 degrees}, cast range=touch, damage=15xDM burn,
-effect={Creates flames from a flamethrower as a spray explosion in front of the caster. The flamethrower can be sustained, dealing damage to anyone entering the area. The damage is applied only once, based on the position that causes the most damage.}}
+cost={4 AP + 1 STA, + 1 charge}, knowledge=Alchemy 3, requirements=Flamethrower, dl=3, type=sustained, test={Accuracy vs reflex}, effect area={spray, 4m xRM, 60 degrees}, cast range=touch, damage=15xDM burn,
+effect={Creates flames from a flamethrower as a spray explosion in front of the caster. The flamethrower can be sustained, maintining an environmental fire effect that causes burning damage equal to the flamethrower's damage. It is possible to retarget the environmental effect for 2 AP as an opportunity attack.}}
 
 % \spell{Fire Breath}{2 AP + 1 STA}{Alchemy 2}{ Igneous Implant }{5}{ Long I }{Touch}{instant}{ Allows the user to blow hot air from their mouth as if it were a long weapon. The attack deals burn damage equal to the base damage of the implant xDM. This attack is considered precise and a small weapon. }
 
@@ -185,7 +185,7 @@ effect={Performs a sharpening action on a weapon.}}
 
 \spell{Sustained Lightning}{%
 cost={4 AP + 1 STA, 1 charge}, knowledge=Alchemy 4, requirements=electrite, dl=8, type=sustained, test={Accuracy vs reflex}, effect range=9mxRM, damage=25 xDM electric,
-effect={The caster attempts to create a sustained electric arc between themselves and a target. Once the spell hits, it ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell.}}
+effect={The caster attempts to create a sustained electric arc between themselves and a target. Once the spell hits, it ends if the target leaves the spell's range or touches the caster, in which case the arc short-circuits, causing damage to both and ending the spell. The spell deals damage once per round while active. The spell can be reused to deal the damage again, and sustained to continue next round.}}
 
 \spell{Taser}{%
 cost=2 AP +1 charge, knowledge=Alchemy 1, requirements=electrite, dl=0, type=charged, cast range=touch, damage=15 xDM electric,

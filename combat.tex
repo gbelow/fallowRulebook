@@ -10,9 +10,9 @@
 
 \skill{Cunning}{Awareness}{ Cunning is used to determine priority when competing to take a combat turn first. It is also used to gain tactical advantages in combat and assess danger.
 
-\textbf{Turn order:} It is defined by a "first to ask, first to play" rule. If several players want to play at the same time, all interested make a cunning test, and the one who rolls the highest goes first. A character is forced to spend at least 1 AP and cannot take its turn twice in a row.
+\textbf{Turn order:} It is defined by a "first to ask, first to play" rule. If several players want to play at the same time, all interested make a cunning test, and the one who rolls the highest goes first.
 
-\textbf{ Feint :} is a cunning against cunning test between two characters in melee. It must be initiated during either character's turn. On a hit, the target is forced to take their turn and spend at least 3 AP on it. On a crit, they must spend at least 6 AP. On a miss or graze, the effect is reversed and the feinter must take their turn and spend the respective AP. Feint forces spending available AP, but cannot cause negative AP and cannot force an action surge.
+\textbf{ Feint :} is a cunning against cunning test between two characters in melee. It must be initiated during one of the participants' turn. On a hit or crit, the target is forced to take their turn and use one action surge that they choose. On a miss or graze, the effect is reversed and the feinter must use its action surge. It is not possible to do this if either character already used their action surge.
 
 \textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 4 AP +1STA to Rest and to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 }
@@ -26,8 +26,8 @@
 \begin{proplist}
     \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement and reactions immediately. Running costs no STA until the end of the turn. Ending the turn loses the surge AP.
     \item \textbf{Combat surge:} 3 STA to gain 4 AP that must be used for attacks, defenses, reflexes, movement, or any action within a grapple and must be used immediately. Ending the turn loses the surge AP.
-    \item \textbf{Reaction surge:} 3 STA to gain 4 AP, but can only use reactions until the end of the round.
-    \item \textbf{Focus surge:} Gains no AP, but this surge is required to use ranged attacks and casting spells.
+    \item \textbf{Reaction surge:} 3 STA to gain 4 AP, but can only use reactions until the end of the round. Can be activated in order to perform a reaction.
+    \item \textbf{Focus surge:} Gains no AP, but this surge is required to use ranged attacks, casting spells and sustaining spells.
 \end{proplist}
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 8 AP minus any negative AP they had. Any unspent AP is lost.
@@ -49,11 +49,11 @@
 
 \textbf{Interruption:} If the character is in the middle of an action that is not movement, it must interrupt itself in order to use a reaction. The AP from the interrupted action can be repurposed for the reaction, but the amount spent must be the highest between the action and the reaction. The reaction gets -2 to its skill value in the event of an interruption. 
 
-\textbf{Preparing a reaction:} Any action can be prepared on a player's turn, but doing so costs 1 AP. This allows the player to create any trigger they can imagine for a reaction. They must have enough AP to perform the reaction when the trigger occurs. A prepared action can consist of a movement and a use of skill and can be repeated multiple times as long as the trigger happens again.
+\textbf{Preparing a reaction:} Any action can be prepared on a player's turn, but doing so costs 1 AP. This allows the player to create any trigger they can imagine for a reaction. They must have enough AP to perform the reaction when the trigger occurs. A prepared action can consist of 2 AP of movement and one other action, which can also be movement, and can be repeated multiple times as long as the trigger happens again. The movement part of the action can be skipped when performing the reaction, but the other action must be performed. Reacting to anything else while performing the prepared action will cancel it. An action stays prepared until the end of the round.
 
 \textbf{Compulsions:} These are forced actions. They must occur immediately if there are enough AP. If not, they force action surges. If even that is not possible, the remaining AP are lost, and the compulsion ends.
 
-\textbf{Severe compulsions:} Whenever a compulsion forces a character to perform an act that they perceive will cause physical harm to themselves or an ally, the compulsion is severe. In this case, the character has +5 to resist the compulsion.
+\textbf{Severe compulsions:} Whenever a compulsion forces a character to perform an act that they perceive will cause physical harm to themselves, the compulsion is severe. In this case, the character has +10 to resist the compulsion. Less severe compulsions, like being forced to attack an ally, have +5 to resist. 
 
 \textbf{Adding more characters:} It is possible to add more characters to the combat after it has started. This can only be done at the turn of a round. If the added character is in stealth, make the appropriate stealth tests at the beginning of the round.
 
@@ -66,8 +66,8 @@ Types of movement:
 \item \textbf{basic movement:} Simple walking movement.
 \item \textbf{careful movement:} Slow movement used to reposition in battle or improve stealth and balance. 
 \item \textbf{running:} The character can run a partial amount smaller than its running speed, but AP cost is the same. The first 2 AP worth of running must be uninterrupted, otherwise, running cannot be started.
-\item \textbf{Stand up:} Removes the prone condition. Any reactions done while standing up get -2 penalty to the skill.
-\item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a run, increase the base calculation of the horizontal distance of a long jump to match that of running. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved. 
+\item \textbf{Stand up:} Removes the prone condition.
+\item \textbf{jumping:} A jump has a vertical distance equal to half the horizontal distance. If performed during a movement surge, increase the jump distance by 1m xRM. Movement cannot be voluntarily interrupted in the middle of a jump. If performed backwards, the horizontal distance is halved. 
 \item \textbf{crawling:} is the only usable movement speed while \textbf{prone}.
 \item \textbf{swimming:} is the only usable movement speed while swimming. It also applies the \textbf{prone} condition.
 
@@ -78,39 +78,43 @@ Types of movement:
 \begin{stattable}{Movement Costs and Speeds}{@{}lcc@{}}
 Movement & Cost & Speed \\
 \midrule
-Careful & 1 AP & 0.5 m \\
+Careful & 2 AP & 1 m \\
 \rowcolor{fallowtint}
 Basic & 1 AP & 1 m \\
 Run & 2AP+1STA & 3m \\
 \rowcolor{fallowtint}
 Jump & 2AP+1STA & 2m \\
-Crawl & 1 AP & 0.33 m \\
+Crawl & 3 AP & 1 m \\
 \rowcolor{fallowtint}
-Swim & 1 AP & 0.33 m \\
+Swim & 3 AP & 1 m \\
 % Swim Fast & 1 AP & 0.5 m \\
-Stand up & 5 -AGI/5 AP & 0 \\
+Stand up & 5 -AGI/5 AP +1STA & 0 \\
 \end{stattable}
 
-\skill{Swimming}{AGI - 10}{ Represents the character's swimming ability. While in the water, make a swimming check against the DL of the body of water. On a critical or hit, swim perfectly. On a graze, lose 2PA+1 STA just to stay composed. On a failure, the character must use their movement surge just to stay above water or fall 1m.
+\skill{Swimming}{AGI - 10}{ Represents the character's swimming ability. When entering the water or at every round start in water, make a swimming test and save the result. Use that result against the DL of the body of water. On a critical or hit, swim perfectly. On a graze, the character swims at 1m per 5 AP. On a failure, the character swims 1m per 5 AP +1STA and sinks 1m at the moment of the test. The character does not sink if they did not start the round and missed in th the test.
 
-The swimming test should not be redone more than once per round unless the swimming conditions change.
+The swimming test should not be redone more than once per round. Characters attempting to swim with one hand receive a -3 penalty on the test.
 
-Characters attempting to swim with one hand receive a -3 penalty on the test.
+Getting out of the water requires the character to use stand up into the land, or get out prone by crawling. The water level must be the same as the land level, otherwise, climbing out is required.
 
 A swimming test in a deep pool is considered a DL of -2. Swimming at a beach with waves is 0. Swimming in a swift river or choppy sea would be around 4. Swimming under a storm or in a raging river is around a 7.
 }
 
-\skill{Climbing}{AGI - 10}{ Make a climbing skill test to overcome a DL and climb a surface.
+\skill{Climbing}{AGI - 10}{ When trying to climb a surface, make a climbing skill test to overcome a DL. The same test result is saved for the entire round.
 
-The climbing speed is equal to the crawling speed but costs 1 AP + 1 STA. On a critical, it does not cost STA. On a success, they climb normally. On a near miss, decide to go twice as slow or give up. On a failure, the character simply falls from the surface.
+The climbing speed is equal to the crawling speed but costs 3 AP + 1 STA. On a critical, it does not cost STA. On a success, they climb normally. On a graze, decide to go at 5AP+1STA or give up and fall. On a failure, the character simply falls from the surface.
 
-A character who is climbing is considered prone. An attack that interrupts the climber will require them to redo their climbing test with a -3 penalty. In the case of multiple climbing tests in a single turn, always take the worst result. Climbing with one hand incurs a -3 penalty.
+A character who is climbing is considered prone. An attack that interrupts the climber will require them to make a climbing test with a -3 penalty to avoid falling on a miss. Climbing with only one hand, claw or other climbing equipment incurs a -3 penalty. Climbing without any gives a -8 penalty. Add or remove the penalty to the climbing test to redetermine the climbing performance.
 
-To determine the difficulty of climbing, consider whether the surface is moving, the quality of the grips, and the distance to be climbed. An easy climb, with minimal chances of falling, is considered a DL of 5. A DL of 15 is reasonable for out-of-combat situations but quite challenging in a difficult scenario. DLs greater than 20 will require equipped and specialized characters and are unlikely to be accomplished during combat. As a general rule, consider that for every meter, the difficulty increases by 1.}
+Any character starts a climb at their own height. Once they reach the top, they must spend AP to stand up or finish the climb prone. Any climb with height equal or lower than the character's height can be done by just standing up in the new location.
+
+Climbing out of the cliff requires the character to use stand up, or get out prone by crawling.
+
+To determine the difficulty of climbing, consider whether the surface is moving, the quality of the grips and the distance between holds. An easy climb, with minimal chances of falling, is considered a DL of 5. A DL of 15 is reasonable for out-of-combat situations but quite challenging in a difficult scenario. DLs greater than 20 will require equipped and specialized characters and are unlikely to be accomplished during combat. }
 
 \skill{Balance}{AGI - 10}{ Skill to perform acrobatics, avoid falling from losing balance, and mitigate damage from falling.
 
-\textbf{Difficult terrain} Every time the character moves through difficult terrain, they must make a balance test. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill test. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a miss, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they receive some consequence (usually falling).
+\textbf{Difficult terrain} Every round the character moves through difficult terrain, they must make a balance test, which is saved until the character falls or the round ends. When they do, the test is redone and stored again. The DL is based on how slippery, unstable, long, and narrow the path is. The character decides the type of movement they wish to use, then makes the skill test. On a critical, all movement is inconsequential. On a success, only moving at a normal speed is safe, but not jumping or running. On a graze, moving at a careful speed is safe. On a miss, only crawling is allowed. If the character enters or moves in difficult terrain using a type of movement they did not manage well enough, they fall.
 
 \textbf{Fall skill test:} Falling requires a balance test to decide how well the landing or dive goes. On a critical on the balance test, reduce the damage by 50\% and prevent T0 and T1 injuries. On a hit, reduce damage by TGH. On a graze, takes full damage and falls prone, and on a miss takes full damage, falls prone and hits the head. Receiving a T1 injury or higher always makes the character prone and stuns.
 
@@ -188,11 +192,11 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 \begin{proplist}
     \item \textbf{Bypass:} This costs a number of HOP equal to the target's armor deflection and can only be done against rigid armor. It adds the value of 50\% RES or 50\% prot of the target armor to the damage, depending if the attack damage is blunt or cutting. Only attacks from weapons with the precise property can use this effect.
     \item \textbf{Bust:} Costs a number of HOPs equal to the target's deflection to be able to use cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property. 
-    \item \textbf{ Slice:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this.
+    \item \textbf{ Slice:} Increases cutting damage by 1xDM per HOP. Only weapons with the bladed property can use this. Weapons that are bladed and piercing increase cutting damage by 2xDM per HOP.
     \item \textbf{Smash:} Costs a number of HOPs equal to the target's deflection to add 2 xDM extra damage and upgrades an interrupt to a stun.
 \end{proplist}
 
-\textbf{Damage absorption:} is when the same physical attack instance hits more than one target in a sequence. The damage is reduced after every target according to this rule. The attack's damage is zero if absorption value >= damage, halved if absorption value >= damage/2, and full if absorption value < damage/2. The absorption value is RES of the target if that is an object. For a character, the value equals to T2 damage. 
+\textbf{Damage absorption:} is when the same physical attack instance hits more than one target in a sequence. The damage is reduced after every target according to this rule. The attack's damage is zero if absorption value >= damage, halved if absorption value >= damage/2, and full if absorption value < damage/2. The absorption value is RES of the target if that is an object. For a character, the value equals to T2 damage.
 
 
 \subsection{Localized damage}
@@ -258,7 +262,7 @@ The list of afflictions is:
 % \item \textbf{Charmed:} Receives -1 Mental and behaves like permanently distracted. Cannot coexist with afraid or enraged.
 % \item \textbf{Distracted:} Receives -3 to Detection and -3 Cunning.
 \item \textbf{Confused:} Receives -3 Mental and must make a morale test every beginning of round. The confusion ends when the character succeeds on their Will test.
-\item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make a Will test to break out of domination whenever a command constitutes a severe compulsion. Outside of combat, can make a test once per ET.
+\item \textbf{Dominated:} Under the control of another character. Must obey commands for the duration but can make an Insight or Cunning test against the original DL to break out of domination whenever a command constitutes a severe compulsion. Outside of combat, can make a test once per ET.
 
 \item \textbf{Intoxicated I/II/III} -1/2/3 Mental.
 \item \textbf{Tired/Exhausted} Penalty of -1 mental/-2 mental. Becomes vulnerable to domination attacks. It is possible to be confused without being tired or exhausted, but extreme exhaustion causes confusion.
@@ -283,7 +287,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5 x STR xDM, but have an added cost of +1AP. Heavy II adds +1xSTR xDM, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5 x STR xDM, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
-\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules. If one character is behind another, only the closest is hit. Sweeping attacks do not hit fallen enemies. Sweeping attacks do not draw attacks of opportunity from any of its targets.
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. Sweeping attacks do not draw attacks of opportunity from any of its targets.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
@@ -405,7 +409,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \skill{Reflex}{ Ranged Combat }{ Used to react as quickly as possible to something. This can be used to avoid explosions, projectiles, and other effects that require quick reactions.
 
-\textbf{Evasion:} When the character is targeted by projectiles, they can spend 2 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
+\textbf{Evasion:} When the character is targeted by projectiles, they can spend 3 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
 
 \textbf{Guard:} character spends 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, use the absorption rules to reduce the damage. On a miss, block value is 50\% increased. Hits and crits damage the character directly.
 
@@ -413,7 +417,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run once. On a hit, they can jump once in any direction before the explosion occurs. On a graze, they can move 1 AP before the explosion. On a miss, they can move 2 AP after the explosion. It is possible to downgrade the movement action. Movement stamina costs for running and jumping are standard.
 
-\textbf{Explosion Block:} Can only be done with a shield. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets reduced by the defenses from the shield. The impact from explosions is unblockable. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
+\textbf{Explosion Block:} Can only be done with a shield and costs 2 AP. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets absorbed by the defenses from the shield. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
 }
 
 \section{Positioning and Visibility }
@@ -464,9 +468,11 @@ Adjust the damage as follows:
     \item \textbf{Armor:} Damage from objects of size equal or greater than the character ignore armor. Note: armor spreads damage, but large objects have enough force to damage even when energy is spread out.
 \end{proplist}
 
+\textbf{Attacking objects:} An object is always attacked in its SD. The size category of an object is its bulk category-2. Most objects are immobile, so they take the immobile penalty to SD. By default, breaking objects follows the gear breakage rules, in the gear section. Large objects can have IL and TGH, and function like a character.
+
 \skill{Prestidigitation}{ DEX }{ Represents a character's manual dexterity. It can be used to attempt to steal an object without being noticed, pick a lock, write neatly, conceal small objects, perform delicate operations with the hands, and other manual skills.
 
-\textbf{Standard Action:} The AP cost of a standard action is 3 AP. When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP. This is used to pick up items from the floor, open doors, throwing items with bulk smaller than character size by up to 10m, and perform other kinds of object interactions.
+\textbf{Standard Action:} The AP cost of a standard action is 3 AP. When Prestidigitation reaches 5, the cost of the standard action becomes 2. If it reaches 10, it becomes 1 AP. If Prestidigitation is less than -5, they cost 4 AP. This is used to pick up items from the floor, open doors, throwing items with bulk smaller than character size by up to 10m, hand an item to an ally, catch an item in the air, and perform other kinds of object interactions.
 
 \textbf{Drawing items in combat:} taking items from container slots takes 4 AP + a standard action. Small and Medium items in quick slots can be held in hand within a standard action during combat, large ones take two standard actions. Weapons with the draw property and all small items can be drawn with 0 AP cost as long as they are in a quick slot. 
 
@@ -791,6 +797,8 @@ Morale is the measure of the characters' stress tolerance. Stressful situations,
 
 \textbf{Morale test triggers:} at the beginning of a round when aggravating factors are at 5 or more, when under specific afflictions, or when specific social actions are used.
 
+\textbf{Limit stress actions:} happen at the beginning of the round, before anyone has had their turn. In case of many characters, the order is determined by the worst test result. Each character has their own limit stress action and should do what is described in it.
+
 \subsection{Social actions}
 
 Every social action costs 5 AP and counts as a Rest action, which can be done at the end of the round, just before the morale tests are triggered. They only work on creatures capable of communication.
@@ -803,9 +811,9 @@ Multiple intimidations and taunts don't stack. Only the highest one counts.
 
 \textbf{Rally:} Say something encouraging in combat. This decreases the DL of allies next morale test by $1 + character's charisma/2$. Multiple Rallies don't stack. Only the highest one counts.
 
-\textbf{Surrender:} An attempt to surrender. It is a persuasion test against the highest insight in the enemy team. On a hit or crit, nobody in the enemy team is allowed to target this character. Being perceived holding a weapon, attacking anyone, trying to hide, running away or doing anything to help their own team cancels the effect and increases the difficulty of surrendering by 5 for any subsequent attempts of anyone in the whole team.
+\textbf{Negotiation:} The negotiator forces an enemy to make an insight or cunning test against the negotiator's persuasion or deception. Only intelligent creatures capable of communication can accept this. Negotiation can be made against all surrendered characters at once. This can also be used for performing regular social actions, like explained in the story section.
 
-\textbf{Negotiation:} This is a persuasion test against the highest between insight or cunning of an enemy. It is a social test and adds IB, just like as explained in the Story chapter. Only intelligent creatures capable of communication can accept this. The point of persuasion is to propose a truce for further conversation or demand capitulation. 
+\textbf{Surrender:} An attempt to surrender that marks the character as surrendered. Any enemy can make a Negotiation test against the character. On a miss or graze, the enemy can tell the character to do something, and the character becomes dominated and must obey the command. On a hit or crit, the command is given either way, but the character can choose to obey or not. The character can unflag itself as surrendered at any time, as long as it is not dominated.
 
 \textbf{Feign Death:} The character becomes immobile and prone. Anyone trying to target them has to hit or crit on an insight or cunning test against deception + IB, or be forced to do something else. The IB equals -5 + injury penalty (injury makes IB better). Feign death only works once per combat. If the character is attacked, they can break out of immobility and react normally.
 
