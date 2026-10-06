@@ -90,11 +90,11 @@ effect={Learns to shoot with bows, removing the penalty and allowing quick shot 
 
 \abil{Elite Sniper I|II|III}{%
 usage=passive, cost={6 XP, DEX 2|4|6}, requirements=Archer,
-effect={Snipe gets +1|2|3 to hit. From level II, snipe costs 1 AP less.}}
+effect={Snipe gets +1|2|3 to hit. From level III, snipe costs 1 AP less.}}
 
 \abil{Quick Shooter I|II|III}{%
 usage=passive, cost={6 XP, DEX 2|4|6}, requirements=Archer,
-effect={I. Increases distance for shoot to 50m. II. Increases distance for quick shots to 30m. III. Reduces cost of quick shot by 1 AP.}}
+effect={I. Reduces distance penalty of quick shots to -2. II. Reduces distance penalty of normal shots to -1. III. Reduces AP cost of quick shots by 1.}}
 
 \abil{Crossbow and Shield}{%
 usage=passive, cost={4 XP, DEX 2},
@@ -674,14 +674,6 @@ effect={If the character is the first to take their turn in a round in combat, t
 usage=passive, cost={6 XP, INT 4},
 effect={The first time a prepared action is performed, it costs 1 AP less.}}
 
-% \abil{Guerrilla Tactics}{%
-% usage=passive, cost={6 XP, DEX 2},
-% effect={When making ranged attacks stealthily, reduces the penalties to stealth by 1 instead of 2.}}
-
-% \textbf{Backstab:} Melee attack stealth penalty is reduced by half while flanking.
-
-% \textbf{Guerrilla tactics:} is added as bonus to all ranged attacks when done from cover.
-
 \abil{Desperate Action}{%
 usage={reaction, 1 STA}, cost={6 XP, INT 3},
 effect={Can perform a defend, or reflex action even without sufficient AP, but must spend +1 STA over the normal cost of the action to do so. Cannot end up with less than -2 AP.}}
@@ -750,7 +742,7 @@ effect={Out of combat, costs 2 exhaustion per ET instead. I. Maintains an energy
 
 \abil{Blind Combat}{%
 usage=passive, cost={6 XP, INT 3}, requirements=Synesthesia I,
-effect={Uses synesthesia as an active sense. Does not receive any distance penalties and does not receive any penalty for using a closed helmet while synesthesia is active against characters within its range.}}
+effect={Uses synesthesia as a high quality active sense. Does not receive any distance penalties and does not receive any penalty for using a closed helmet while synesthesia is active against characters within its range.}}
 
 \abil{Martial Spirit}{%
 usage=2 STA, cost={6 XP, INT 3}, requirements=Spiritual Strike,
@@ -956,15 +948,15 @@ effect={Modifies the nose to become very sensitive and can transform it into a s
 
 \abil{Infrared Vision}{%
 usage=passive, cost=8 Karma,
-effect={Modifies the eyes to be able to see infrared light, allowing aiming at heat sources even through fog or in complete darkness.}}
+effect={Modifies the eyes to be able to see infrared light, allowing targeting at heat sources even through fog or in complete darkness.}}
 
 \abil{Owl Eyes}{%
 usage=passive, cost=12 Karma,
-effect={Modifies the eyes to be able to see well at night, but not absolute darkness.}}
+effect={Modifies the eyes to be able to cancel up to 3 points of sensory penalty to vision because of bad lighting.}}
 
 \abil{Bat Ears}{%
 usage=passive, cost=12 Karma,
-effect={Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense. This is not as good as vision as a dominant sense, so it leaves the character disoriented when used as the only active sense. This does not work in complete silence.}}
+effect={Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense, but take -2 sensory penalty when doing so.}}
 
 % \abil{Four Legs}{%
 % usage=passive, cost=12 Karma, requirements={racial or ritual, Biomancy 5},

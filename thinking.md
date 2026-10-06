@@ -25,7 +25,12 @@ review devotion abilities
 
 breaking armor too weak?
 
-ranged attacks without distance penalty may need reverting for app. shooting objects at a distance does not scale properly.
+# stealth
+
+who knows where hidden characters are? -- only active sense
+
+noisy gear needs value
+
 
 # CHANGE IN THE APP
 

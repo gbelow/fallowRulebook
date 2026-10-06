@@ -55,7 +55,7 @@
 
 \textbf{Severe compulsions:} Whenever a compulsion forces a character to perform an act that they perceive will cause physical harm to themselves, the compulsion is severe. In this case, the character has +10 to resist the compulsion. Less severe compulsions, like being forced to attack an ally, have +5 to resist. 
 
-\textbf{Adding more characters:} It is possible to add more characters to the combat after it has started. This can only be done at the turn of a round. If the added character is in stealth, make the appropriate stealth tests at the beginning of the round.
+\textbf{Adding more characters:} It is possible to add more characters to the combat after it has started. This can only be done at the turn of a round.
 
 \section{Movement}
 
@@ -229,11 +229,11 @@ Shocked & T3 blunt+smash & 5 & immobile\\
 
 \subsection{Afflictions}
 
-Afflictions are the negative conditions that can affect creatures. 
+Afflictions are the negative conditions that can affect creatures. Affliction penalties are categorized into 3 types: injury, sensory, and mental. Each type of affliction affects a different set of skills.
 
 \textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect TGH. It affects all other usages of attributes.
 
-\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation.
+\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Balance, Climb, Exploration, Stealth and Prestidigitation. Application is explained in the stealth section.
 
 \textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight, persuasion, deception and all Knowledges and all spellcasting.
 
@@ -246,10 +246,9 @@ The list of afflictions is:
 \item \textbf{Prone:} Can only crawl and stand up and cannot push nor drag. Other characters can pass through without trampling.
 \item \textbf{Grappled:} Movement requires pushing or dragging the other participants in the grapple.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
-\item \textbf{Disoriented:} Gives -2 to sensory penalties.
-\item \textbf{Oblivious:} Gives -5 to sensory penalties.
-\item \textbf{Blind:} Cannot use vision.
-\item \textbf{Deaf:} Cannot use hearing. 
+\item \textbf{Offuscated/Blind:} -3 to sensory penalties when using vision as active sense/ Cannot use vision.
+\item \textbf{Muffled/Deaf:} -3 to hearing and to sensory penalties when using hearing as active sense/ Cannot use hearing. 
+% \item \textbf{:} -3 to sensory penalties when using smell as a sense/ Cannot use smell. 
 % Requires a balance check for basic movement on any terrain.
 
 % \item \textbf{Burning:} Burning damage ignores armor insulation. Ends automatically at the beginning of the next round except when reapplied. 
@@ -364,17 +363,17 @@ Use the same rules for multiple characters as grapple, but use force instead of 
 
 \skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
 
+\textbf{Distance penalty:} There is a penalty of -2 per 10m of distance to the target in grid combat. Everything under 10m has no penalty. Maximum distance penalty is 5x the attacks's distance penalty.
+
 \textbf{Distance Measurement Recommendation:} Measuring distance is a time-consuming process, so it is more practical to estimate the distance intuitively and give the benefit of the doubt in favor of the shooter.
-
-\textbf{Vertical distance:} The vertical range of a ranged weapon is half the horizontal range.
-
-% \textbf{Canceling Attack:} It is possible to evade, dodge, or block while shooting, but the shot is canceled, and the costs of AP and STA are the greater of the defensive action or the shot.
 
 \textbf{Immobile Targets and Shooting Errors:} If a projectile misses on the test, it hits some adjacent space or a distance even greater for every 3 points the test is below the DL.
 
-\textbf{Moving Targets:} It is possible to shoot at moving targets as a reaction. The total amount of AP spent to shoot cannot exceed the amount of AP spent on movement. The AP count starts when the target becomes visible. The target's position at the moment of the shot is where it is at the end of the movement.
+\textbf{Vertical distance:} The vertical range of a ranged weapon is half the horizontal range.
 
-\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes visible. Prepared shot cannot be used at the same time as coordinated shots.
+% \textbf{Moving Targets:} It is possible to shoot at moving targets as a reaction any time they cross a 10m radius threshold around the shooter.
+
+\textbf{Prepared Shots:} If a character prepares a ranged attack, the shot occurs when the target becomes targetable. Prepared shot cannot be used at the same time as coordinated shots.
 
 \textbf{Coordinated Shots:} Whenever an ally shoots a target, it is possible to target the same target in the same action, as long as they are in range. The target defends all shots with a single action. 
 
@@ -382,15 +381,15 @@ Use the same rules for multiple characters as grapple, but use force instead of 
 
 Other types of ranged attacks will be available depending on the type of weapon used. The type of attack must be declared when used, and only one can be used at a time unless stated otherwise.
 
-\textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons leave the inventory once thrown.
+\textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons leave the inventory once thrown. Distance penalty of -2 per 10m of distance to the target.
 
-\textbf{Shoot:} Basic ranged attack with a shooting weapon. Shoot is only allowed against targets within 30m.
+\textbf{Shoot:} Basic ranged attack with a shooting weapon. Distance penalty of -2 per 10m of distance to the target.
 
-\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP, but allows shooting targets distance up to weapon range.
+\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP, but allows shooting even outside the combat area. Distance penalty of -1 per 10m of distance to the target.
 
-\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less, but can only be used within 10m of the target. 
+\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less. Distance penalty of -3 per 10m of distance to the target.
 
-\textbf{Ranged attacks outside the combat area:} Any ranged attacks with range higher than 50m can hit outside the combat area at a penalty of -5.
+\textbf{Ranged attacks outside the combat area:} Any ranged attacks with shooting range can hit outside the combat area at a penalty equal to 5x the shot's distance penalty.
 }
 
 \textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses power with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
@@ -409,7 +408,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \skill{Reflex}{ Ranged Combat }{ Used to react as quickly as possible to something. This can be used to avoid explosions, projectiles, and other effects that require quick reactions.
 
-\textbf{Evasion:} When the character is targeted by projectiles, they can spend 3 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they fail. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
+\textbf{Evasion:} When the character is targeted by projectiles, they can spend 3 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they dont't. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
 
 \textbf{Guard:} character spends 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, use the absorption rules to reduce the damage. On a miss, block value is 50\% increased. Hits and crits damage the character directly.
 
@@ -420,7 +419,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 \textbf{Explosion Block:} Can only be done with a shield and costs 2 AP. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets absorbed by the defenses from the shield. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
 }
 
-\section{Positioning and Visibility }
+\section{Positioning }
 
 \textbf{Flee:} It is possible to activate the movement surge as a reaction to prevent them from entering a 4m perimeter from the character, or after receiving a melee attack. This reaction interrupts the opponents turn, which is resumed after the flee. The flee action can only use actions allowed by movement surge. Everyone that declared that they want to flee do it in declaration order.
 
@@ -430,13 +429,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. One character no longer offers cover against ranged attacks to another if one is in front of the other against shots from the high ground. The melee reach is reduced by 1m unless the person on the lower ground targets the legs. The one on the high ground has the reach reduced to hit the legs of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. A difference in elevation is a defensive tactical resource where whoever has the high ground has a slight advantage.
 
-\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses. 
-
-\textbf{Visibility:} is a temporary characteristic of a target. Can be good, bad, or zero. Bad visibility applies -2 visibility penalties to anyone targeting them, as if they were disoriented. Zero visibility means that the target is untargetable through vision. The terrain can offer visibility status to those in it through fog, smoke and dim light.
-
-\textbf{Darkness and light:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. Anyone in the light radius is in good visibility and anyone out is considered at zero visibility. 
-
-\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 2m by default and makes them zero visibility to those outside. Standing at the edge of the area makes them bad visibility to those outside, but allows good visibility for the one inside.
+\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses.
 
 \textbf{Underwater Combat:} Any attack that does not have the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m. All explosions have half the radius, but blunt damage is doubled.
 
@@ -526,7 +519,7 @@ Gases can have several effects: Poison, explosion, suffocation, reduced visibili
 
 \begin{proplist}
     \item \textbf{Suffocation:} anyone that is inside a suffocating gas is suffocating by default. Abilities and items may allow breathing.
-    \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Positioning and Visibility section.
+    \item \textbf{Reduced visibility:} Fog and smoke disrupt visibility as explained in Stealth section.
     \item \textbf{Inhaled Poison:} Causes a poison effect to anyone who begins the round inside the gas or takes a Rest action. If the poison gas is noticed, it is possible to self inflict suffocation to avoid it. In order to detect poison gas, use an appropriate knowledge test to recognize that it is poison and/or a detection test to notice its smell if the smell is weak.
     \item \textbf{Blinding Gas:} Staying inside it for any amount of time calls for a health test to avoid blindness. Protective gear over the eyes also prevents blindness.
     \item \textbf{Explosion:} Some gases explode in contact with fire or electricity. The damage depends on the gas and uses the rules for explosions.
@@ -618,7 +611,7 @@ Ranged combat can happen over terrain features, benefiting either team.
 
 \textbf{Cover:} If a character has cover, they can decide not to leave it and stay untargetable, but then they cannot target any enemy with attacks or spells. For the ones who decide to shoot or move, cover is partial, with a bonus of +3 to reflexes by default.
 
-\textbf{Visibility:} If visibility is affected by fog or darkness, use bad visibility if at any point the opponent becomes targetable. In case they never become visible, they stay at zero visibility. 
+\textbf{Visibility:} can apply the effects of fog or darkness to either group. 
 
 \subsection{Hiding and Terrain}
 
@@ -642,7 +635,7 @@ Some terrain features can be obstacles. Traversing an obstacle works just like r
 
 \textbf{Stealth value:} The player rolls the d10 and adds their stealth skill, that is the stealth value that is used against every detection skill value until a new roll is called. 
 
-\textbf{Stealth events:} are a description given by the player of what exactly the character is trying to do with their stealth, which defines which senses the detectors are using and sets a bonus or penalty to the detection test. The usual values should stay between -15 and +15.
+\textbf{Stealth events:} are a description given by the player of what exactly the character is trying to do with their stealth, which defines which senses the detectors are using and sets a bonus or penalty to the detection test. The usual values should stay between -5 and +5. 
 
 An event could be trying to hide in a specific spot, trying to pass through somewhere undetected or taking some kind of action without being identified or located. A stealth event should take into consideration what noise the footsteps make in a path (altered by how fast characters are moving), how difficult it is not to bump into anything, how hard it is to avoid line of sight, how hard it is to stop gear from making noise, how close to a detector the path lies, how good a hiding spot is and how long you will be searched for if staying there.
 
@@ -663,26 +656,27 @@ Call for a new stealth test when the scene changes into combat, chase or interpr
 
 \textbf{Detection as defense:} Detection is used as a defense against stealth, meaning that it is used passively without rolling.
 
-\textbf{Group detection:} a single Detection value should be used for a whole group of characters, using the best Detection in the group for everybody. The group can be separated as desired, but then finding the best detection may involve using different distance bands for each group.
+\textbf{Group detection:} outisde combat, a single Detection value should be used for a whole group of characters, using the best Detection in the group for everybody. The group can be separated as desired, but then finding the best detection may involve using different distance bands for each group.
 
-\textbf{Senses:} Any detection event must target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses can be active or passive. 
+\textbf{Senses:} Any detection event must target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses are either active or passive.
 
-\textbf{Active senses:} are used to keep the detector in aware, meaning that after detection, the target is tracked by the detector and can be reacted to until a new stealth event occurs.
+\textbf{Active senses:} are used to perform any action or reaction. Lacking an available active sense for a given action causes sensory penalties.
 
-\textbf{Passive senses} can detect position, but they can't track it. If the character has no active senses available, they need to detect every event from a single source to be able to react to it. The character is considered disoriented for a reaction if only passive senses are available to detect. Detecting through a passive sense can focus any available active senses on the target, detecting them actively.
+\textbf{Passive senses} can be used only for reactions. Detecting through a passive sense can focus an available active one. Reacting only through a passive sense yields a sensory penalty to the reaction. 
 
-\textbf{Vision:} is an active sense. Vision gets blocked by cover and requires light. The field of vision covers 180 degrees, which is defined in the grid as within the arc defined by the directions of 3 adjacent hexes around a character.
+\textbf{Vision:} is an active sense. Vision requires light and line of sight.
 
-\textbf{Hearing:} is a passive sense and omnidirectional.
+\textbf{Hearing:} is a passive sense and omnidirectional. It is triggered by a sound event.
 
-\textbf{Smell:} is a passive sense. It requires a smell trail to trigger the sense. Humans have -5 to this sense. Sniffing something from very close gives +5 to this test.
+\textbf{Smell:} is a passive sense. It requires a smell trail to trigger the sense. It is triggered by standing in a place with a smell.
 
-\textbf{Touch:} is an active sense. Anything that touches a character is immediately detected and the character becomes alarmed to it. Projectiles that hit the character have their direction identified, not necessarily their source. Using only touch as an active sense makes the character disoriented against another involved in the grappling, and oblivious against characters in melee range that have been detected only through touch.
+\textbf{Touch:} is an active sense with 0m range. Anything that touches a character is immediately detected. Projectiles that hit the character have their direction identified, not necessarily their source.
 
-\textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection and cunning against everything other than the distraction. 
-% A character that has used its action surge is automatically distracted.
+% \textbf{Sensory penalties:} are applied to the character depending on the sense used for a particular action. 
 
-\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit against the object's DL. If Detection is equal or higher than DL, they find it. 
+% \textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection. 
+
+\textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit in detection against the object's DL.
 
 \textbf{Investigation:} When a character is looking for something that requires specific knowledge background, they use the value of Detection as skill, but use knowledge as an enabler.
 
@@ -739,45 +733,57 @@ Here's a list of possible modifiers. Many modifiers can be combined.
     \item \textbf{Basic movement:} -2 to Stealth vs. hearing and vision.
     \item \textbf{Running / Combat Sprint:} -5 to Stealth vs. hearing and vision.
 \end{proplist}
-    
-\textbf{Attacking from stealth:}
-\begin{proplist}
-    \item \textbf{Attacking in melee:} -3 to Stealth vs. hearing. Causes immediate automatic detection if within a detector's field of vision.
-    \item \textbf{Hitting in melee:} detected by touch. Detected by vision a moment later.
-    \item \textbf{Shooting a bow:} -2 to Stealth vs. hearing and vision.
-    \item \textbf{Hitting at distance:} -2 vs Vision. Direction is detected either way, so stealth cannot hit or crit.
-\end{proplist}
-
-\magic spellcasting is naturally undetectable without special detection. Only the spell's effects are detectable.
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection. Use luck to represent the character's lingering somewhere and giving luck a chance to ruin their stealth.
 
+
+
 \subsection{Stealth in combat}
 
-Stealth should not be free form in combat. The rules in combat situations are stricter to allow tactical planning.
+The rules in combat situations are stricter to allow tactical planning. 
 
-\textbf{Stealth test:} The stealth value is rolled in the beginning of the round for each character in stealth individually. This is only done for characters that started their round undetectable to any opponent active senses. Enemies cannot target the character unless their detection is higher than the stealth value (a miss in stealth), and cannot react to them if their detection is not 4 points lower, at most (a graze in stealth). The stealth value of any character in combat is public to everyone and must be checked against whenever someone tries to act or react against a stealthy character.
+\textbf{Active senses in combat:} any character that is not in their turn and is detectable by an available active sense is automatically detected. The only way not to be detected outside of one's turn is to be inside a stealth area.
 
-\textbf{Stealth penalties:} The stealthy character's actions change their stealth value. Their stealth value situational bonus is set as the sum of all penalties they received until a new stealth test is made. The situational bonus in combat are:
+\textbf{Passive senses in combat:} A character adds the value of their best available passive sense to awareness in detection tests.
+
+\textbf{Stealth test:} The stealth value is rolled for each character in stealth individually. The test can be made at any time, but only one test per round is made, and the value is recorded until the end of the round, then discarded.
+
+\textbf{Actions in stealth:} A character can only use the stealth value during its turn if it started it inside a stealth area. The stealthy character cannot be reacted against, unless their stealth value grazes or misses against the reactor's detection.
+
+Whenever performing an action in stealth, the following factors will be penalties to the stealth value of an action:
 
 \begin{proplist}
-    \item \textbf{Tier 1 - Careful movement and crawling:} 0, \textbf{Tier 2 - Normal movement:} -2, \textbf{Tier 3 - Running and jumping:} -4.
-    \item \textbf{Ranged attacks:} -2. \textbf{Melee attack:} -4.
+    \item \textbf{Movements:}\textbf{Tier 1 - Careful movement and crawling:} 0, \textbf{Tier 2 - Normal movement, swimming, climbing, standing up:} -2, \textbf{Tier 3 - Running, falling and jumping:} -4.
+    \item \textbf{Terrain noise:} The terrain may have a bonus or penalty to stealth based on what the floor is made of.
+    \item \textbf{Gear noise:} Some gear produces noise when moved or worn, which will be indicated in the gear description. When it does, it increases the penalties by the noisiness of the gear.
+    \item \textbf{Being detectable to an active sense:} is possible within a turn, as long as the turn started in stealth, but stealth gets -3 penalty outside.
 \end{proplist}
 
-\textbf{Staying in stealth:} The character must begin their turn undetectable through any active sense in order to be considered in stealth. They must go back to being undetectable to any enemy active senses and end their turn to continue in stealth. Failing to do so causes automatic detection by everyone (their stealth value disappears).
+\textbf{Repeated attacks:} It is always possible to react to a second attack from a stealthy character in the same turn, even if the first one was not detected, but one must do so at -5 penalty. This corresponds to the touch sense.
 
-\textbf{Attacking from stealth:} Being attacked automatically causes detection through touch after the attack, which means that a second attack can always be reacted to. Whoever is struck always knows where the attack came from, but cannot target the spot directly unless they detect the attacker through an active sense or has high enough detection. 
+\textbf{Characters without available active senses:} Generate a stealth test for anyone who draws a reaction from such a character and test their detection against it.
 
-\textbf{Searching actively:} A character can spend 3 AP to pay better attention to their surroundings. This increases their detection by +3 for the round. 
+\textbf{Attacking a location:} is possible, but any attacks made against it are made with a -5 penalty.
 
-\textbf{Staying undetectable:} A character must use cover, fog, darkness or camouflage to stay undetectable. 
+\textbf{Sensory Penalties:} Apply when acting under bad sensory conditions, such as inside some stealth areas or when affected by sensory afflictions. Values depend of the affliction or stealth area. The penalties add up.
 
-\textbf{Camouflage:} is necessary to stay stealthy in plain sight, and must be matched to the current environment. A camouflage item comes with a penalty to stealth that is added when the character is in plain sight. 
+\textbf{Active detection:} spend 2 AP to increase detection by + 3 for the turn. If that makes someone's stealth miss, their position is revealed and they can be targeted.
 
-\textbf{Floor noise:} The terrain may have a bonus or penalty to stealth based on what the floor is made of, which modify the penalties from movement. Some floors make noise when stepped on, some halls are echoey, some floors have leaves and branches that can make noise when stepped on. This must be drawn in the map and the GM must inform the players of the numerical values associated with the terrain. For example: Marble floor makes movement penalties to stealth increase in 1 per movement tier.
+\subsubsection{Stealth Areas}
 
-\textbf{Gear noise:} Some gear produces noise when moved or worn, which will be indicated in the gear description. When it does, it increases the penalties from movement by +1 per tier and also the penalties from attacking by +1.
+These areas impair at least one of the active senses from anyone trying to detect a target inside of it. They include cover, fog, smoke, darkness, camouflage. Other areas may include noisy places against echolocation, places with strong smells that impair smell, and others that may be created. If a character has an active sense that does not get impaired by the stealth area, it does not count as a stealth area for that character.
+
+
+\textbf{Visibility:} represents whether a character is detectable by vision and to what degree. It is a property of the terrain. Good visibility means the stealth area does not count for vision. Bad visibility means that those that rely on vision get a sensory penalty when targeting anything there. No visibility means that nothing can be targeted. 
+
+\textbf{Cover:} If a character is not within the line of sight of any enemy detectors, they are considered undetectable to vision. 
+
+\textbf{Darkness and light:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. Anyone in the light radius is visible and anyone out is not. Dim light means a sensory penalty to vision depending on the light.
+
+\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 2m by default and makes them zero visibility to those outside. Anyone inside the fog is in bad visibility to others inside the 2m radius.
+
+\textbf{Camouflage:} is necessary to stay stealthy in plain sight, and must be matched to the current environment. A camouflage item comes with a modifier to stealth that is added when the character is in plain sight. 
+
 
 \section{Morale}
 
@@ -788,10 +794,8 @@ Morale is the measure of the characters' stress tolerance. Stressful situations,
 \textbf{Combat morale DL = aggravating factors}
 
 \begin{proplist}
-    \item \textbf{Sensory deprivation (being oblivious):} +3
-    \item \textbf{Reduced sensory quality (being disoriented):} +2
     \item \textbf{Injured:} +2 per injury penalty
-    \item \textbf{Burning or suffocating:} +5
+    % \item \textbf{Burning or suffocating:} +5
     \item \textbf{Out of STA:} +2
 \end{proplist}
 
