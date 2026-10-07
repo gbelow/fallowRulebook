@@ -17,7 +17,7 @@
 \textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 4 AP +1STA to Rest and to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 }
 
-\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it does not detect its attacker before it begins attacking. 
+\textbf{Surprise:} A combat can start with characters being surprised. In this case, all characters who are surprised cannot use their action surge on the first turn. A character is surprised if it did not detect any enemies at the beginning of the combat.
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want to use later in the same round.
 
@@ -233,7 +233,7 @@ Afflictions are the negative conditions that can affect creatures. Affliction pe
 
 \textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect TGH. It affects all other usages of attributes.
 
-\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Balance, Climb, Exploration, Stealth and Prestidigitation. Application is explained in the stealth section.
+\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation. Application is explained in the stealth section.
 
 \textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight, persuasion, deception and all Knowledges and all spellcasting.
 
@@ -246,8 +246,8 @@ The list of afflictions is:
 \item \textbf{Prone:} Can only crawl and stand up and cannot push nor drag. Other characters can pass through without trampling.
 \item \textbf{Grappled:} Movement requires pushing or dragging the other participants in the grapple.
 \item \textbf{Immobile:} Cannot move and cannot use any combat or movement skills other than escape. The DL to hit an immobile target is -5-1*SM. 
-\item \textbf{Offuscated/Blind:} -3 to sensory penalties when using vision as active sense/ Cannot use vision.
-\item \textbf{Muffled/Deaf:} -3 to hearing and to sensory penalties when using hearing as active sense/ Cannot use hearing. 
+\item \textbf{Offuscated/Blind:} -3 to sensory penalties when using vision/ Cannot use vision.
+\item \textbf{Muffled/Deaf:} -3 to sensory penalties when using hearing/ Cannot use hearing. 
 % \item \textbf{:} -3 to sensory penalties when using smell as a sense/ Cannot use smell. 
 % Requires a balance check for basic movement on any terrain.
 
@@ -286,7 +286,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5 x STR xDM, but have an added cost of +1AP. Heavy II adds +1xSTR xDM, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5 x STR xDM, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
-\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. Sweeping attacks do not draw attacks of opportunity from any of its targets.
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. They do not draw attacks of opportunity from any of its targets. They can attack locations without any penalty.
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
@@ -639,7 +639,7 @@ Some terrain features can be obstacles. Traversing an obstacle works just like r
 
 An event could be trying to hide in a specific spot, trying to pass through somewhere undetected or taking some kind of action without being identified or located. A stealth event should take into consideration what noise the footsteps make in a path (altered by how fast characters are moving), how difficult it is not to bump into anything, how hard it is to avoid line of sight, how hard it is to stop gear from making noise, how close to a detector the path lies, how good a hiding spot is and how long you will be searched for if staying there.
 
-Each event adds a bonus or penalty to the stealth value relative to a detector, who uses the best sense available. On hits or crits, the character stays unnoticed. On grazes, active senses detect, but passive ones just draw the attention of active senses and possibly make characters go searching with the active ones. On misses, the character is detected. The stealth value is modified by events that change the situational bonus.
+Each event adds a bonus or penalty to the stealth value relative to a detector, who uses the best sense available. On hits or crits, the character stays unnoticed. On grazes, active senses detect, but reactive ones just draw the attention of active senses and possibly make characters go searching with the active ones. On misses, the character is detected. The stealth value is modified by events that change the situational bonus.
 
 Call for a new stealth test when the scene changes into combat, chase or interpretation. One failed test means that stealth is over, so repeating multiple tests will eventually lead to failure. This is why only one test is called for a scene. The variation comes from the player's actions in stealth events.
 
@@ -658,19 +658,19 @@ Call for a new stealth test when the scene changes into combat, chase or interpr
 
 \textbf{Group detection:} outisde combat, a single Detection value should be used for a whole group of characters, using the best Detection in the group for everybody. The group can be separated as desired, but then finding the best detection may involve using different distance bands for each group.
 
-\textbf{Senses:} Any detection event must target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses are either active or passive.
+\textbf{Senses:} Any detection event must target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses can be active and reactive.
 
-\textbf{Active senses:} are used to perform any action or reaction. Lacking an available active sense for a given action causes sensory penalties.
+\textbf{Active senses:} are used to perform any action. Low quality active senses cause sensory penalties when relied upon.
 
-\textbf{Passive senses} can be used only for reactions. Detecting through a passive sense can focus an available active one. Reacting only through a passive sense yields a sensory penalty to the reaction. 
+\textbf{Reactive senses} can be used for reactions. Detecting through a reacting sense can focus an available active one.
 
-\textbf{Vision:} is an active sense. Vision requires light and line of sight.
+\textbf{Vision:} is an active and reactive sense. Vision requires light and line of sight. Sensory penalty 0, by default.
 
-\textbf{Hearing:} is a passive sense and omnidirectional. It is triggered by a sound event.
+\textbf{Hearing:} is a reactive sense. It is triggered by a sound event. Sensory penalty -3, by default.
 
-\textbf{Smell:} is a passive sense. It requires a smell trail to trigger the sense. It is triggered by standing in a place with a smell.
+\textbf{Smell:} is an active sense. Range of smell is 0, by default. Sensory penalty -5 when relying on smell, by default. 
 
-\textbf{Touch:} is an active sense with 0m range. Anything that touches a character is immediately detected. Projectiles that hit the character have their direction identified, not necessarily their source.
+\textbf{Touch:} is an active and reactive sense with 0m range. Sensory penalty -3, by default.
 
 % \textbf{Sensory penalties:} are applied to the character depending on the sense used for a particular action. 
 
@@ -720,19 +720,7 @@ Here's a list of possible modifiers. Many modifiers can be combined.
     \item \textbf{Complete cover:} Automatically undetected to vision.
 \end{proplist}
 
-\textbf{Moving in stealth:} 
-\begin{proplist}
-    \item \textbf{Movement in the grass:} 0 vs. vision, -2 to Stealth vs. hearing.
-    \item \textbf{Movement on marble floor with standard boots:} -2 to Stealth vs. hearing.
-    \item \textbf{Movement on marble floor with muffled boots:} +0 to Stealth vs. hearing.
-    \item \textbf{Wearing noisy gear or carrying jingly objects:} -2 to -4 to Stealth vs. hearing. Metal armor is around -2.
-    \item \textbf{Wearing metallic armor:} -2 to Stealth vs. hearing.
-    \item \textbf{Carrying burden:} -2 to Stealth vs hearing per burden penalty.
-    \item \textbf{Moving on squeaking floorboards:} -3 to -5 to Stealth vs. hearing.
-    \item \textbf{Careful movement and crawling:} 0 to hearing and vision (Base Skill).
-    \item \textbf{Basic movement:} -2 to Stealth vs. hearing and vision.
-    \item \textbf{Running / Combat Sprint:} -5 to Stealth vs. hearing and vision.
-\end{proplist}
+\textbf{Moving in stealth:} Follow the rules in stealth in combat.
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection. Use luck to represent the character's lingering somewhere and giving luck a chance to ruin their stealth.
 
@@ -742,47 +730,41 @@ Here's a list of possible modifiers. Many modifiers can be combined.
 
 The rules in combat situations are stricter to allow tactical planning. 
 
-\textbf{Active senses in combat:} any character that is not in their turn and is detectable by an available active sense is automatically detected. The only way not to be detected outside of one's turn is to be inside a stealth area.
+Stealth in combat is all about utilizing environmental features to hide during combat. If none are present, they must be created with items.
 
-\textbf{Passive senses in combat:} A character adds the value of their best available passive sense to awareness in detection tests.
+\textbf{Active senses in combat:} any character that is not in their turn and is detectable by an unimpaired available active sense is automatically detected. The only way to remain undetected outside of one's turn is to be out of reach of any unimpaired active sense.
 
-\textbf{Stealth test:} The stealth value is rolled for each character in stealth individually. The test can be made at any time, but only one test per round is made, and the value is recorded until the end of the round, then discarded.
+\textbf{Detection:} A character adds the value of their best available sense to awareness in detection tests. Any sensory penalties to a sense are added too.
 
-\textbf{Actions in stealth:} A character can only use the stealth value during its turn if it started it inside a stealth area. The stealthy character cannot be reacted against, unless their stealth value grazes or misses against the reactor's detection.
+\textbf{Sensory Penalties:} Apply when acting under bad sensory conditions, such as inside some stealth areas, when affected by sensory afflictions. Values depend of the affliction or stealth area. The penalties add up.
 
-Whenever performing an action in stealth, the following factors will be penalties to the stealth value of an action:
+\textbf{Stealth test:} The stealth value is rolled for each character individually, when needed. Only one test per round is made, and the value is recorded until the end of the round, then discarded.
 
-\begin{proplist}
-    \item \textbf{Movements:}\textbf{Tier 1 - Careful movement and crawling:} 0, \textbf{Tier 2 - Normal movement, swimming, climbing, standing up:} -2, \textbf{Tier 3 - Running, falling and jumping:} -4.
-    \item \textbf{Terrain noise:} The terrain may have a bonus or penalty to stealth based on what the floor is made of.
-    \item \textbf{Gear noise:} Some gear produces noise when moved or worn, which will be indicated in the gear description. When it does, it increases the penalties by the noisiness of the gear.
-    \item \textbf{Being detectable to an active sense:} is possible within a turn, as long as the turn started in stealth, but stealth gets -3 penalty outside.
-\end{proplist}
+\textbf{Actions in stealth:} A character can only use the stealth value during its turn if it started undetected to the active senses of their reactors. The stealthy character cannot be reacted against, unless their stealth value grazes or misses against the reactor's detection. Detection uses the best sense available at the time of the reaction.
 
-\textbf{Repeated attacks:} It is always possible to react to a second attack from a stealthy character in the same turn, even if the first one was not detected, but one must do so at -5 penalty. This corresponds to the touch sense.
+Whenever performing an action in stealth, a cumulative penalty is added to the stealth value until the end of the turn. Careful movement and crawling add no penalty. All the other actions add -1 per AP spent.  The penalty is applied before the detection test, which happens before determining if a reaction is possible or not.
 
-\textbf{Characters without available active senses:} Generate a stealth test for anyone who draws a reaction from such a character and test their detection against it.
+Some features can change how much penalty per AP is gained. \textbf{Hearing:} Terrain noise and gear noise (penalty shown in gear or terrain).
+
+\textbf{Active Searching:} A character must move to place other characters in reach of their active senses to be able to see them.
 
 \textbf{Attacking a location:} is possible, but any attacks made against it are made with a -5 penalty.
-
-\textbf{Sensory Penalties:} Apply when acting under bad sensory conditions, such as inside some stealth areas or when affected by sensory afflictions. Values depend of the affliction or stealth area. The penalties add up.
-
-\textbf{Active detection:} spend 2 AP to increase detection by + 3 for the turn. If that makes someone's stealth miss, their position is revealed and they can be targeted.
 
 \subsubsection{Stealth Areas}
 
 These areas impair at least one of the active senses from anyone trying to detect a target inside of it. They include cover, fog, smoke, darkness, camouflage. Other areas may include noisy places against echolocation, places with strong smells that impair smell, and others that may be created. If a character has an active sense that does not get impaired by the stealth area, it does not count as a stealth area for that character.
 
+\textbf{Sensory impairment:} No sensory impairment means that active senses always detect outside the hider's turn. Partial impairment means that active senses require a detection test against the stealth value in order to detect. Total impairment means that the target is undetectable to an active sense.
 
-\textbf{Visibility:} represents whether a character is detectable by vision and to what degree. It is a property of the terrain. Good visibility means the stealth area does not count for vision. Bad visibility means that those that rely on vision get a sensory penalty when targeting anything there. No visibility means that nothing can be targeted. 
+\textbf{Visibility:} represents whether a character is detectable by vision and to what degree. It is a property of the terrain. Good visibility means that there is no impairment to vision. Bad visibility means that those that rely on vision get partial impairment and a sensory penalty when targeting anything there. No visibility means that vision has total impairment. 
 
-\textbf{Cover:} If a character is not within the line of sight of any enemy detectors, they are considered undetectable to vision. 
+\textbf{Cover:} If a character is not within the line of sight of a detector, they are considered at total impairment to vision. 
 
-\textbf{Darkness and light:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. Anyone in the light radius is visible and anyone out is not. Dim light means a sensory penalty to vision depending on the light.
+\textbf{Darkness and light:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. Anyone in the light radius is visible and anyone out is not. Dim light means partial impairment and a sensory penalty to vision depending on the light.
 
-\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 2m by default and makes them zero visibility to those outside. Anyone inside the fog is in bad visibility to others inside the 2m radius.
+\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 1m by default and makes them zero visibility to those outside. Anyone inside the fog is in bad visibility to others inside the 1m radius.
 
-\textbf{Camouflage:} is necessary to stay stealthy in plain sight, and must be matched to the current environment. A camouflage item comes with a modifier to stealth that is added when the character is in plain sight. 
+\textbf{Camouflage:} is an item necessary to turn an area into a stealth area with bad visibility for a camouflaged character, and must be matched to the current environment. The degree of bad visibility is a property of the camouflage item.
 
 
 \section{Morale}
