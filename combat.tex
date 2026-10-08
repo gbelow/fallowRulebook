@@ -233,7 +233,7 @@ Afflictions are the negative conditions that can affect creatures. Affliction pe
 
 \textbf{Injury (IL):} penalties affect STR, AGI, STA. This does not affect TGH. It affects all other usages of attributes.
 
-\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration, Stealth and Prestidigitation. Application is explained in the stealth section.
+\textbf{Sensory:} Strike, Defend, Accuracy, Reflex, Detection, Balance, Climb, Exploration and Prestidigitation. Application is explained in the stealth section.
 
 \textbf{Mental:} Penalties affect Exploration, Cunning, Will, Insight, persuasion, deception and all Knowledges and all spellcasting.
 
@@ -286,7 +286,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5 x STR xDM, but have an added cost of +1AP. Heavy II adds +1xSTR xDM, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5 x STR xDM, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
-\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. They do not draw attacks of opportunity from any of its targets. They can attack locations without any penalty.
+\textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. They do not draw attacks of opportunity from any of its targets. 
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
 
@@ -429,7 +429,9 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{High Ground:} This happens when one character is standing on terrain around 1m higher than its surroundings. One character no longer offers cover against ranged attacks to another if one is in front of the other against shots from the high ground. The melee reach is reduced by 1m unless the person on the lower ground targets the legs. The one on the high ground has the reach reduced to hit the legs of someone on the lower ground. Both receive a +2 bonus to their melee defense against each other. A difference in elevation is a defensive tactical resource where whoever has the high ground has a slight advantage.
 
-\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as an ally or a wall. Staying behind something acts as a shield, reducing the damage taken by a certain amount. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent. Cover can be partial. In that case, it does not block vision and provides a bonus, usually +3, for reflexes and absorbs damage as if it were a shield in the case of grazes and misses.
+\textbf{Cover:} A character can protect themselves against projectiles and explosion attacks by moving behind something, such as a wall. Staying behind something acts as a shield, absorbing the damage taken by a certain amount based on RES of the cover. A character has cover if the shortest path from the origin of the explosion or projectile to a destination passes through a space containing a blocking object. Cover blocks vision unless it is transparent.
+
+% \textbf{Partial Cover} does not block vision and provides a bonus of +3 to reflexes. On misses and grazes on evasion, the cover acts as full cover. On hits and crits from avoiding explosion too. Guard and explosion block work normally. 
 
 \textbf{Underwater Combat:} Any attack that does not have the grapple tag has its damage reduced by half. Fire, radiant and acid damages are also reduced by 50\%. The range of projectiles is reduced to 3m. All explosions have half the radius, but blunt damage is doubled.
 
@@ -660,9 +662,9 @@ Call for a new stealth test when the scene changes into combat, chase or interpr
 
 \textbf{Senses:} Any detection event must target a specific sense. The basic usable senses are vision, hearing, smell and touch. In each detection attempt, a sense must be chosen to determine how the detection happens. Senses can be active and reactive.
 
-\textbf{Active senses:} are used to perform any action. Low quality active senses cause sensory penalties when relied upon.
+\textbf{Active senses:} are used to perform any action.
 
-\textbf{Reactive senses} can be used for reactions. Detecting through a reacting sense can focus an available active one.
+\textbf{Reactive senses} can be used for reactions. 
 
 \textbf{Vision:} is an active and reactive sense. Vision requires light and line of sight. Sensory penalty 0, by default.
 
@@ -672,9 +674,7 @@ Call for a new stealth test when the scene changes into combat, chase or interpr
 
 \textbf{Touch:} is an active and reactive sense with 0m range. Sensory penalty -3, by default.
 
-% \textbf{Sensory penalties:} are applied to the character depending on the sense used for a particular action. 
-
-% \textbf{Distraction:} A character can be distracted by something, receiving -3 to Detection. 
+\textbf{Targeted actions:} Any actions that use any of the skills listed in sensory penalties require a sense to be used. They always use the best one available.
 
 \textbf{Looking for objects:} When trying to decide whether characters find an object, the object is found with a hit in detection against the object's DL.
 
@@ -696,7 +696,7 @@ If a player gives a description of something that absolutely should work, just l
 
 The factors that determine the difficulty to detect or hide are: distance, noise, signal strength and time.
 
-\textbf{Distance bands:} Detection is penalized by distance. It is convenient to design distance bands, as shown in the list. For each band over the first, add -3 penalty to vision, -5 to hearing and -5 to smell.
+\textbf{Distance bands:} Detection is penalized by distance. It is convenient to design distance bands, as shown in the list. For each band over the first, add -3 penalty to vision, -5 to hearing and -5 to smell. Things at large distance should only be detectable by vision, or by very loud sounds, or with a strong smell.
 
 \begin{proplist}
     \item immediate (within 10m), bonus instead of penalty
@@ -706,24 +706,15 @@ The factors that determine the difficulty to detect or hide are: distance, noise
     \item horizon
 \end{proplist}
 
-\textbf{Noise:} is the amount of conflicting signal in a given situation. For hearing, its the loudness and rhythm of other sounds. For vision, it is the amount of camouflage, as well as the amount of cover and the presence of very bright nearby objects. For smell, it is the variety and intensity of other smells. 
+\textbf{Noise:} is the amount of conflicting signal in a given situation. For hearing, its the loudness and rhythm of other sounds. For vision, it is the amount of camouflage, as well as the amount of cover and the presence of very bright nearby objects. For smell, it is the variety and intensity of other smells. The amount of attention given to something else, like a distraction is also factored in.
 
 \textbf{Signal Strength:} This is what the character is trying to minimize with their stealth skill. It is based on the character's gear and behavior. Items that help with stealth should influence the signal strength component. The item should provide a description of how it helps.
 
-Here's a list of possible modifiers. Many modifiers can be combined.
+\textbf{Hiding in stealth:} Only cares about active senses. 
 
-\textbf{Hiding in stealth:}
-\begin{proplist}
-    \item \textbf{Being in plain sight:} auto detect unless camouflaged or at far distance and beyond.
-    \item \textbf{Camouflage in plain sight:} +3 to Stealth vs vision. Varies with camouglage quality.
-    \item \textbf{Partial cover:} +3 to Stealth vs. vision.
-    \item \textbf{Complete cover:} Automatically undetected to vision.
-\end{proplist}
-
-\textbf{Moving in stealth:} Follow the rules in stealth in combat.
+\textbf{Moving in stealth:} Value depends on the terrain and gear noise. Moving faster should draw more attention from hearing.
 
 \textbf{Luck:} The longer one stays somewhere and someone looks for them, the easier it is to detect them. The greater the number of people searching and how much they are moving also factors into the odds of detection. The more distracted everyone is, the lower the chances of detection. Use luck to represent the character's lingering somewhere and giving luck a chance to ruin their stealth.
-
 
 
 \subsection{Stealth in combat}
@@ -736,7 +727,7 @@ Stealth in combat is all about utilizing environmental features to hide during c
 
 \textbf{Detection:} A character adds the value of their best available sense to awareness in detection tests. Any sensory penalties to a sense are added too.
 
-\textbf{Sensory Penalties:} Apply when acting under bad sensory conditions, such as inside some stealth areas, when affected by sensory afflictions. Values depend of the affliction or stealth area. The penalties add up.
+\textbf{Sensory Penalties:} Apply when acting under bad sensory conditions, such as inside some stealth areas and when affected by sensory afflictions. Values depend of the affliction or stealth area. The penalties add up.
 
 \textbf{Stealth test:} The stealth value is rolled for each character individually, when needed. Only one test per round is made, and the value is recorded until the end of the round, then discarded.
 
@@ -748,7 +739,7 @@ Some features can change how much penalty per AP is gained. \textbf{Hearing:} Te
 
 \textbf{Active Searching:} A character must move to place other characters in reach of their active senses to be able to see them.
 
-\textbf{Attacking a location:} is possible, but any attacks made against it are made with a -5 penalty.
+% \textbf{Attacking a location:} is possible, but any attacks made against it are made with a -5 penalty.
 
 \subsubsection{Stealth Areas}
 
@@ -756,13 +747,13 @@ These areas impair at least one of the active senses from anyone trying to detec
 
 \textbf{Sensory impairment:} No sensory impairment means that active senses always detect outside the hider's turn. Partial impairment means that active senses require a detection test against the stealth value in order to detect. Total impairment means that the target is undetectable to an active sense.
 
-\textbf{Visibility:} represents whether a character is detectable by vision and to what degree. It is a property of the terrain. Good visibility means that there is no impairment to vision. Bad visibility means that those that rely on vision get partial impairment and a sensory penalty when targeting anything there. No visibility means that vision has total impairment. 
+\textbf{Visibility:} represents whether a character is detectable by vision and to what degree. It is a property of the terrain. Good visibility means that there is no impairment to vision. Bad visibility means that those that rely on vision get partial impairment and a sensory penalty when targeting anything there, which is -2 by default, but can change. No visibility means that vision has total impairment. 
 
 \textbf{Cover:} If a character is not within the line of sight of a detector, they are considered at total impairment to vision. 
 
 \textbf{Darkness and light:} In a situation of darkness, the field of vision is determined by the light source. If light source is at a distance, consider that the field around it is visible. Anyone in the light radius is visible and anyone out is not. Dim light means partial impairment and a sensory penalty to vision depending on the light.
 
-\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 1m by default and makes them zero visibility to those outside. Anyone inside the fog is in bad visibility to others inside the 1m radius.
+\textbf{Fog and smoke:} Opaque gases reduce vision radius of anyone inside of it to 2m by default and makes them zero visibility to those outside. Anyone inside the fog is in bad visibility to others inside the 2m radius.
 
 \textbf{Camouflage:} is an item necessary to turn an area into a stealth area with bad visibility for a camouflaged character, and must be matched to the current environment. The degree of bad visibility is a property of the camouflage item.
 
@@ -773,17 +764,24 @@ Morale is the measure of the characters' stress tolerance. Stressful situations,
 
 \textbf{Combat morale test:} characters make a will test against the DL of the terror of the moment. A graze leaves the character afraid, and a miss activates the character's limit stress action. The limit stress action only triggers if there is an enemy within 30m. Morale tests can be done normally, safely or riskily, as the player decides.
 
-\textbf{Combat morale DL = aggravating factors}
+\textbf{Combat morale DL = 0 + aggravating factors}
 
 \begin{proplist}
-    \item \textbf{Injured:} +2 per injury penalty
-    % \item \textbf{Burning or suffocating:} +5
-    \item \textbf{Out of STA:} +2
+    \item \textbf{Injured:} +1 per injury penalty
+    \item \textbf{Mobility:} +3 when immobile, +2 when grappled
+    \item \textbf{Sensory limitation:} +2 when areas of total sensory impairment exist within a 10m radius.
+    \item \textbf{Suffocating:} +3 when suffocating.
+    \item \textbf{Out of STA:} +2 when STA is smaller than 3.
+    \item \textbf{Pressure:} Arbitrary factor that depends on who is winning, if the leader is alive, how scary the situation is, if escape is a real option, if reinforcements are expected soon, and other subjective factors.
 \end{proplist}
 
-\textbf{Morale test triggers:} at the beginning of a round when aggravating factors are at 5 or more, when under specific afflictions, or when specific social actions are used.
+\textbf{Morale test triggers:} at the beginning of a round when aggravating factors are at 3 or more, when under specific afflictions, or when specific social actions are used.
 
 \textbf{Limit stress actions:} happen at the beginning of the round, before anyone has had their turn. In case of many characters, the order is determined by the worst test result. Each character has their own limit stress action and should do what is described in it.
+
+\textbf{Simplifying:} the GM defines a number for pressure for each party in the scene, and that is all everyone rolls against. This DL is saved for the round.
+
+\textbf{What people fear:} are usually things that make them lose hope, have very dire consequences and small mistakes can cause them, or when they dont know how to react.
 
 \subsection{Social actions}
 
