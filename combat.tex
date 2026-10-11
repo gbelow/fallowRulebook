@@ -363,7 +363,7 @@ Use the same rules for multiple characters as grapple, but use force instead of 
 
 \skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
 
-\textbf{Distance penalty:} There is a penalty of -2 per 10m of distance to the target in grid combat. Everything under 10m has no penalty. Maximum distance penalty is 5x the attacks's distance penalty.
+\textbf{Distance penalty:} There is a penalty of -2 per 20m of distance to the target in grid combat. Everything under 10m has no penalty. Maximum distance penalty is 3x the attacks's distance penalty.
 
 \textbf{Distance Measurement Recommendation:} Measuring distance is a time-consuming process, so it is more practical to estimate the distance intuitively and give the benefit of the doubt in favor of the shooter.
 
@@ -381,15 +381,15 @@ Use the same rules for multiple characters as grapple, but use force instead of 
 
 Other types of ranged attacks will be available depending on the type of weapon used. The type of attack must be declared when used, and only one can be used at a time unless stated otherwise.
 
-\textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons leave the inventory once thrown. Distance penalty of -2 per 10m of distance to the target.
+\textbf{Throw:} Basic ranged attack with a throwable weapon. Throwable weapons leave the inventory once thrown. Distance penalty of -2 per 20m of distance to the target.
 
-\textbf{Shoot:} Basic ranged attack with a shooting weapon. Distance penalty of -2 per 10m of distance to the target.
+\textbf{Shoot:} Basic ranged attack with a shooting weapon. Distance penalty of -2 per 20m of distance to the target.
 
-\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP, but allows shooting even outside the combat area. Distance penalty of -1 per 10m of distance to the target.
+\textbf{Snipe:} Modifies Shoot to cost an additional 2 AP, but allows shooting even outside the combat area. Distance penalty of -1 per 20m of distance to the target.
 
-\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less. Distance penalty of -3 per 10m of distance to the target.
+\textbf{Quick Shot:} Modifies Shoot to cost 1 AP less. Distance penalty of -3 per 20m of distance to the target.
 
-\textbf{Ranged attacks outside the combat area:} Any ranged attacks with shooting range can hit outside the combat area at a penalty equal to 5x the shot's distance penalty.
+\textbf{Ranged attacks outside the combat area:} Any ranged attacks with shooting range can hit outside the combat area at a penalty equal to 3x the shot's distance penalty.
 }
 
 \textbf{\large Explosions:} This type of attack results from something like a bomb, which radiates from a central point and loses power with distance. Explosions are defended against with a reflex test. If the explosion comes from a projectile, the DL of the explosion is equal to the shooting skill. If the explosion occurs before being perceived, no test can be made. If the bomb is perceived, players receive a certain amount of AP to move away before it occurs.
@@ -568,46 +568,56 @@ There are four distance tiers: Combat, Shooting, Far and Horizon.
     \item \textbf{Combat:} This is under 50m distance. Can be smaller when indoors (a room) or in places with many obstacles.
     \item \textbf{Shooting:} This is from around 50m to 200m distance. This range can be smaller in a city, a dense forest or any other place with lots of hiding spots and obstacles.
     \item \textbf{Far:} This is from around 200m to 500m. This is the limit of what can be seen in many places. It will be smaller in places with many obstacles and hiding spots.
-    \item \textbf{Horizon:} This is from 500m and beyond. This distance is only used in open terrain.
+    \item \textbf{Horizon:} This is from 500m and beyond. This distance is only used in open terrain. An enemy can be spotted at this distance, but the chase has not yet begun.
 \end{proplist}
 
-\textbf{Chase actions:} Chase actions can be running and scouting, ranged combat or hiding. 
+\textbf{Chase actions:} Chase actions can be running, skirmish, or hiding. The quarry chooses what they want to do first. Then, the pursuer decides their action. Then quarry can choose to change their strategy, and that s final.
 
 \textbf{Escaping:} There are three ways to escape:
 
 \begin{proplist}
-    \item \textbf{Outrunning:} If the distance is already far or Horizon and the winner decides to increase the distance, the chase is over.
+    \item \textbf{Outrunning:} If the distance is already far and the winner decides to increase the distance, the chase is over.
     \item \textbf{Hiding:} If the distance is not combat and there is a stealth event, in which the quarry succeeds, it escapes.
     \item \textbf{Obstacle:} If there is an obstacle that the quarry traverses and that the pursuers cannot or do not want to traverse.
 \end{proplist}
 
+\textbf{Inverting chase:} If the quary decides to run towards the pursuers, and the pursuers decide to run away, they switch roles next round.
+
 \subsection{Running}
 
-Running is how both teams get closer or farther from each other. It works in rounds, where both teams compare their speeds, and the fastest decides to close the distance or move away.
+Running is how both teams get closer or farther from each other. It works in rounds, where both teams compare their speeds, and the fastest decides to close the distance or move away. Running can be in the direction of the pursuer or away from them. 
 
-\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint, spending STA to do it. Whoever has the highest AGI x running speed wins. A draw does not change distance tier, but spends STA from the movement surge.
+\textbf{Running at combat range:} This is a dash. Both sides use their movement surge to sprint, spending STA to do it. Whoever has the highest AGI x running speed wins. A draw does not change distance tier, but spends STA from the movement surge. This lasts around 30 seconds.
 
-\textbf{Running at longer ranges:} This is a sustained pace running. The running speed is STA + AGI. Whoever is higher wins. 50\% chance on a draw. If the character is bleeding, it bleeds as if they have used an action surge.
+\textbf{Running at longer ranges:} This is a sustained pace running. The running speed is STA + AGI. Whoever is higher wins. 50\% chance on a draw. If the character is bleeding, it bleeds as if they have used an action surge. This lasts 1 minute in shooting distance and 5 minutes at higher distances.
 
-\textbf{Catching:} The quarry is caught when one of its members does not have STA to run, or when it ends a round with any mobility affliction while in combat range. In this case, a combat or social situation starts. When the combat starts, the tokens can be arranged in any way, as long as the distance from the character who ended the chase is within 10m of one enemy and within 30m of any member of their team. If the catch happened over a grapple, the characters involved start adjacent to each other.
+\textbf{Catching:} The quarry is caught when one of its members does not have STA to run, when they decide to turn around and face the pursuer, or when it ends a round with any mobility affliction while in combat range. In this case, a combat or social situation starts. When the combat starts, the tokens can be arranged in any way, as long as the distance from the character who caused the end of the chase is 10m of at least one enemy and within 20m of every member of their team. If the catch happened over a grapple, the characters involved start adjacent to each other. The teams must be arranged each in one side of a semi-circle defined by the catched quarry, and the pursuers choose their position first.
 
-\textbf{ Routing :} When the pursuers are in combat range, but the quarry is not caught yet, everyone gets 6AP, but the pursuers have +2 bonus to all uses of strike,  accuracy and cunning. This works like normal combat, but no grid is pulled yet. Everyone is considered to be in range to attack or defend anyone. Once the AP are spent, the round is over and a new running test is made.
+\textbf{ Routing :} When the pursuers are in combat range, but the quarry is not caught yet, everyone gets 8 AP, but the pursuers have +2 bonus to all uses of strike, accuracy and cunning. This works like normal combat, but no grid is pulled yet. Everyone is considered to be in range to attack or defend anyone. Once the AP are spent, the round is over and a new running test is made. This lasts around 30 seconds.
 
-\textbf{Group chase:} In a group chase, use the speeds of the slowest in each group as the speed for the other team to beat.
+\subsection{Group chases}
 
-\textbf{Separating the group:} If one participant in the group is too slow, it is possible to leave them behind. From now on, the distant members are one distance tier away from their group. If combat starts, the distant group takes 2 full rounds to arrive, and when they do, they do it at 30m distance from a chosen ally.
+Every party runs at the speed of its slowest integrant. To increase party speed, the group must split, leaving the slow character behind.
+
+\textbf{Leave someone behind:} The slower member of a split party starts chasing the faster ones. Any original pursuers begin chasing the slower group.
+
+\textbf{Disconnected party:} Whoever is not being chased by anyone or pursuing anyone is out of the chase, and cannot rejoin unless scouted from someone within the chase or hand placed back into the chain by the GM. When that happens, they can choose to chase someone to stay in the chain.
+
+\textbf{Combat with split group:} If combat starts, any character from a group that is at shooting distance must spend one full round to arrive at the fight. When they do, they do it at no less than 50m away from any enemy. Anyone at far range or more is out.
+
+\textbf{Split chases:} If the chain is broken, and two groups are chasing each other, resolve the chains round by round.
+
+\textbf{Chain order of running:} the head of the chain is always the first to decide their action, then its pursuer decides what to do, and so on until the end of the chain. Then everyone confirms their actions from tail to head of the chain. Every chase round lasts the amount of time relative to the closest group's action. If there is anyone at combat range, characters dont do anything at far range, just keep the distance.
 
 \subsection{Skirmish}
 
-This stage can only happen at Shooting distance.
+This stage can only happen at Shooting distance or far distance. A round lasts 30 seconds.
 
 One team may decide to fight to attempt to injure the other before they get closer or to snipe enemies early. There are two possible situations: Both teams shoot at each other or one team shoots and the other attempts to close in. Either way, any weapon with a range higher than 50m can be used. Everyone is targetable by anyone, except when one whole team is invisible to the other.
 
-\textbf{Both teams shoot each other.} This happens until one team runs out of ammo, someone changes strategy and decides to run, or a whole team dies. Everyone has 12 AP to spend as they like per round.
+\textbf{Both teams shoot each other.} This can happen until one team runs out of ammo, someone changes strategy and decides to run or hide, or a whole team dies. Everyone has 18 AP to spend as they like per round. If two parties are not connected in the chain, use the distance of the largest link. 
 
-\textbf{One team attempts to approach.} The approaching team gets 6 AP and must spend a movement surge for running. The shooting team gets AP depending on the running speed of the slowest character of the approaching team. They get 18 AP for running speed 2m per 2 AP, 12 AP for 3m, and 9 AP for 4m or higher (Optionally, $36/speed$ AP). At the end, both teams will be in combat range. The approaching team can split and leave someone behind to shoot, in which case they get the same amount of AP as the attackers. 
-
-\textbf{Split team combat:} If two teams are engaging in combat range, anyone at shooting range can still shoot from far away. They have their turn normally and are considered to be outside the combat area for the ranged penalties. If someone wants to go after them, they must end the round 30m away from any enemies (or their corpses). The combat just gets two areas within the same round order, where the new combat area starts with the two groups 30m apart.
+\textbf{One team attempts to approach.} The approaching team gets 8 AP and must spend a movement surge for running. The shooting team gets 18 AP and spends their focus surge. At the end, both teams will get closer to each other. The approaching team can split and leave someone behind to shoot, in which case they get 18 AP. 
 
 Ranged combat can happen over terrain features, benefiting either team.
 
@@ -615,21 +625,24 @@ Ranged combat can happen over terrain features, benefiting either team.
 
 \textbf{Visibility:} can apply the effects of fog or darkness to either group. 
 
+
 \subsection{Hiding and Terrain}
 
-\textbf{Scouting:} The fugitives can look for a place to hide or a vantage point for combat using their detection skill. Only the fugitives can do this, since they are dictating where everybody is running. They will describe what they are looking for. The odds that such a place exists will be a test with DL between around -5 and 20, where 0 is obvious, 5 is easy, 10 is difficult, 20 is near impossible. Harder tests mean that the place is either very hard to find through some camouflage or are just very far away.
+\textbf{Scouting:} The fugitives can look for a place to hide or a vantage point for combat using their detection skill during running. Only the fugitives can do this, since they are dictating where everybody is running. They will describe what they are looking for. The odds that such a place exists will be a test with an arbitrary DL. Harder tests mean that the place is either very hard to find or very unlikely to exist. A crit arrives at the place in the following round, a hit puts it in shooting distance, and a graze or miss fails. The GM can decide to place anything anywhere at will. 
 
 The fugitives can only describe one thing that they are looking for per round. If the place is not found, resume the chase with running and adjust the distances. The terrain feature is at a set distance tier from where the characters are, and is approached one tier per round. 
 
-The terrain features can be: a bunch of objects to use as cover, buildings to hide in or barricade, a group of potential allies, a hole on the ground, a choke point, a river, a cloud of fog, a forest or anything else imaginable.
+Examples of what the terrain features can be: a bunch of objects to use as cover, buildings to hide in or barricade, a group of potential allies, a hole on the ground, a choke point, a river, a cloud of fog, a forest or anything else imaginable.
 
 Some terrain features can be obstacles. Traversing an obstacle works just like running, but with a balance, climb or swim test to determine the ability to traverse. Again, use the lowest skill in the group to determine traversal ability.
 
-\textbf{Hiding:} Hiding can be done at any distance greater than Combat in a Chase scene.
+\textbf{Hiding:} can be done at any distance greater than Combat in a Chase scene. Whatever happens, the chase turns into a stealth situation.
 
 \textbf{Hiding at far distances:} If a hiding spot is entered at Far or Horizon distances, the chase is over. Whether the pursuers will be able to follow depends on interpretation of the scene in question. Maybe the fugitives have disappeared into the forest and need to be tracked, but maybe they are inside a house and cant leave without being seen. It all depends on the scene.
 
 \textbf{Hiding at shooting distances:} The stealth test is done by the lowest stealth in the group, but splitting the group is possible. Stealth is done against the best of the opponent's detection. The hiding spot in question is relevant, since it can grant stealth bonuses. On a stealth miss or graze, the pursuers find the lowest stealth character and anyone that is with them. On a hit or crit, the pursuers follow some wrong track or give up.
+
+
 
 \section{Stealth}
 
