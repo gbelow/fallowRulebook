@@ -320,7 +320,7 @@ usage=passive, cost=0 XP, requirements=Ferocity 4,
 effect={The character ignores the effect of exhaustion and sickness during rage.}}
 \abil{\magic Spirit of Battle}{%
 usage=passive, cost=0 XP, requirements=Ferocity 4,
-effect={The character learns spiritual strike and martial spirit. Uses will instead of animancy against the opponent.}}
+effect={The character learns spiritual strike and martial spirit. Add +2 to the DL of spiritual strike. }}
 
 \subsection{Guardian }
 \textbf{Temperament - Order - Extrospective }
@@ -536,20 +536,20 @@ effect={Attempts to identify an unknown language. DL vs 2x linguistics knowledge
 \subsection{Medicine}
 
 \abil{First Aid}{%
-usage=full turn, cost=0 XP, requirements=Medicine 1,
+usage=8 AP concentration , cost=0 XP, requirements=Medicine 1,
 effect={Tries to stop bleeding through a tourniquet or pressure on self or other. Make a medicine test against a DL equal to 2x bleeding. On a hit or crit, prevents bleeding that turn completely. Reduces bleeding by 0/0/1/2.}}
 
 \abil{Cauterization}{%
-usage=4 AP, cost=0 XP, requirements={Medicine 1},
+usage=4 AP concentration, cost=0 XP, requirements={Medicine 1, burning item},
 effect={Requires a focus surge. Tries to stop bleeding through burning the area. Causes 10 fire damage that ignores armor and reduces bleeding by 2.}}
 
 \abil{Bone Setting}{%
 usage=1 ET, cost=0 XP, requirements={Medicine 1, Splint},
 effect={In one ET, make a medicine test DL 3 to allow a wound to heal with rest. It heals 0/1/2/2 per day. A crit does not spend the ET. The test only needs to be done once per wound. The patient is considered to be resting for the ET.}}
 
-\abil{Wound Triage}{%
-usage=1 ET, cost=0 XP, requirements={Medicine 1, Bandages},
-effect={In one ET, make a medicine test to prevent infection. It lowers the DL of the infection test by 2. One test can be used for the whole team and can be retried, but spends resources per character per attempt. The patient is considered to be resting for the ET.}}
+% \abil{Wound Triage}{%
+% usage=1 ET, cost=0 XP, requirements={Medicine 1, Bandages},
+% effect={In one ET, make a medicine test to prevent infection. It lowers the infection exposure by 2. One test can be used for the whole team and can be retried, but spends resources per character per attempt. The patient is considered to be resting for the ET.}}
 
 \abil{Diagnosis}{%
 usage=0 AP, cost=0 XP, requirements=Medicine 1,
@@ -745,11 +745,11 @@ usage=passive, cost={6 XP, INT 3}, requirements=Synesthesia I,
 effect={Uses synesthesia as a high quality active sense. Does not receive any distance penalties and does not receive any penalty for using a closed helmet while synesthesia is active against characters within its range.}}
 
 \abil{Martial Spirit}{%
-usage=2 STA, cost={6 XP, INT 3}, requirements=Spiritual Strike,
-effect={Learns to cast spiritual strike along with melee attacks without increasing the cost of AP, but with the STA cost added in.}}
+usage=1AP + 1 STA, cost={6 XP, INT 3}, requirements=Spiritual Strike,
+effect={Learns to use spiritual strike along with melee attacks without increasing the cost of AP, but with the STA cost added in. The spellcasting result is the same as the strike's.}}
 
 \abil{Counterspell}{%
-usage={reaction, 2 STA}, cost={6 XP, INT 3}, requirements=Spiritual Strike,
+usage={reaction, 1 STA}, cost={6 XP, INT 3}, requirements=Spiritual Strike,
 effect={Learns to cast spiritual strike as a reaction against anyone within synesthesia range.}}
 
 \abil{Magical Interpretation}{%

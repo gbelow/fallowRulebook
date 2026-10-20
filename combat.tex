@@ -12,7 +12,7 @@
 
 \textbf{Turn order:} It is defined by a "first to ask, first to play" rule. If several players want to play at the same time, all interested make a cunning test, and the one who rolls the highest goes first.
 
-\textbf{ Feint :} is a cunning against cunning test between two characters in melee. It must be initiated during one of the participants' turn. On a hit or crit, the target is forced to take their turn and use one action surge that they choose. On a miss or graze, the effect is reversed and the feinter must use its action surge. It is not possible to do this if either character already used their action surge.
+\textbf{ Feint :} is a cunning against cunning test between two characters in melee. It must be initiated during one of the participants' turn. On a hit or crit, the target is forced to take their turn and use an action surge, except focus surge. On a miss or graze, the effect is reversed and the feinter must use its action surge. It is not possible to do this if either character already used their action surge. If the character is incapable of performing a surge, feint does nothing.
 
 \textbf{Analyze:} Cunning can also be used to assess an enemy. Spend 4 AP +1STA to Rest and to make a cunning check against an enemy to try to obtain relevant information about them from visible equipment or physical characteristics. On a critical success, learn important information for combat, dangerous items they carry, or special abilities they may have. On a success, obtain a vague reference to a dangerous item or the opponent's power level. Grazes only provide obvious information, and failures provide nothing.
 }
@@ -27,7 +27,7 @@
     \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement and reactions immediately. Running costs no STA until the end of the turn. Ending the turn loses the surge AP.
     \item \textbf{Combat surge:} 3 STA to gain 4 AP that must be used for attacks, defenses, reflexes, movement, or any action within a grapple and must be used immediately. Ending the turn loses the surge AP.
     \item \textbf{Reaction surge:} 3 STA to gain 4 AP, but can only use reactions until the end of the round. Can be activated in order to perform a reaction.
-    \item \textbf{Focus surge:} Gains no AP, but this surge is required to use ranged attacks, casting spells and sustaining spells.
+    \item \textbf{Focus surge:} Gains no AP, but this surge is required to use actions that require concentration.
 \end{proplist}
 
 \textbf{End of the round:} A round ends when no one has AP left and the remaining agree to end the round. When the round ends, all characters get reset to 8 AP minus any negative AP they had. Any unspent AP is lost.
@@ -47,7 +47,9 @@
 
 \textbf{Reactions:} These are actions that can be performed on another character's turn but must be triggered by something. An example is trying to evade an attack, which is triggered when being attacked. A reaction takes effect before the action that caused it. 
 
-\textbf{Interruption:} If the character is in the middle of an action that is not movement, it must interrupt itself in order to use a reaction. The AP from the interrupted action can be repurposed for the reaction, but the amount spent must be the highest between the action and the reaction. The reaction gets -2 to its skill value in the event of an interruption. 
+\textbf{Give up action:} If the character is in the middle of an action that is not movement, it must interrupt itself in order to use a reaction. The AP from the interrupted action is refunded, but 1 AP is lost along with any STA costs spent. The reaction gets -2 to its skill value in the event of an interruption. 
+
+\textbf{Concentration:} Sometimes, a character wants to perform an action, but it does not have enough AP for it. In that case, they can maintain concentration after their turn. Any unspent AP is carried over to the next round while concentrating, and added to the next round's AP and spent before anyone's turn, completing the action. Focus surge is necessary to sustain concentration. If any condition for the completion of the spell is missing when it finishes, the action fails and no AP from the next turn is spent. Concentration is maintained while the action is not finished. If multiple concentration actions finish in the next round, make cunning tests for all contenders and apply effects from highest to lowest.
 
 \textbf{Preparing a reaction:} Any action can be prepared on a player's turn, but doing so costs 1 AP. This allows the player to create any trigger they can imagine for a reaction. They must have enough AP to perform the reaction when the trigger occurs. A prepared action can consist of 2 AP of movement and one other action, which can also be movement, and can be repeated multiple times as long as the trigger happens again. The movement part of the action can be skipped when performing the reaction, but the other action must be performed. Reacting to anything else while performing the prepared action will cancel it. An action stays prepared until the end of the round.
 
@@ -137,7 +139,7 @@ Note: DM is squared because large creatures suffer more from falling. For size 2
 
 \textbf{Healing Injuries:} characters heal by resting well and using potions or medicine. The details are explained in the exploration chapter.
 
-\textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving injuries. The table shows how much IL they receive from injuries at each tier. 
+\textbf{Damage:} Any time a character receives damage, it must compare the amount received with its TGH for the damage type to determine the injuries caused. Armor increases the amount of damage that can be received without receiving injuries. The table shows how much IL they receive from injuries at each tier. The minimum IL damage received if any tier is reached is 1.
 
 \textbf{Damage Tiers:} 
 
@@ -161,7 +163,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \textbf{Types of damage:} are: blunt, cutting, burning, electric, radiant, and corrosive. Objects and creatures may have resistance or vulnerability to each of these types of damage. Different types of damage cause different kinds of effects. 
 
-\textbf{Physical attacks:} have blunt and cutting damage components. If the weapon is not capable of cutting its target, the damage is blunt, otherwise, use the largest damage of the two, but apply the additional effects of both. 
+\textbf{Physical attacks:} have blunt and cutting damage components. Use the largest damage of the two, but apply the additional effects of both. If the weapon is not capable of cutting its target, the cutting damage is halved.
 
 \textbf{Blunt damage:} is defended by armor protection. Can cause interruption and stun.
 
@@ -169,7 +171,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \textbf{What cuts?} A weapon can cut something if their hardness is higher than their target's. There are 4 levels of material hardness. The first is for liquids. The second is for fabrics, flesh, and similar materials. The third is for wood, horns, bones and other solids. The fourth is for metals and rocks.
 
-\textbf{Bleed:} is caused by blunt and cutting damage. For every STA spent and at the end of every round in combat, the character receives +1 to their IL per bleed intensity. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
+\textbf{Bleed:} is caused by blunt and cutting damage. For every STA spent and at the beginning of every round in combat, the character receives +1 to their IL per bleed intensity. When combat/chase ends, bleeding causes 3x its current value and stops by itself when untreated.
 
 \textbf{Burning and radiant damage:} Their respective defense is INS. Every time burning damage is received, the burning counter is updated with the current burning value + incoming burning damage, and that total is used against INS to determine the injury. After the damage is applied, the burning counter is halved. Burning damage causes only half IL injury.
 
@@ -181,7 +183,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \subsection{Additional effects:}
 
-\textbf{Interruption:} receiving a tier 1+ blunt or electric injury causes any action and movement to be interrupted, except for running and jumping. The AP and STA costs of the action or movement are lost. 
+\textbf{Interruption:} receiving a tier 1+ blunt or electric injury causes any action and movement to be interrupted, except for running and jumping. All AP and STA costs of the action or movement that have already been spent are lost. 
 
 \textbf{Stun:} An interruption in which the target also loses 2 AP. It happens when blunt or electric damage causes Tier 3 injury or higher.
 
@@ -288,7 +290,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. They do not draw attacks of opportunity from any of its targets. 
 
-\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include casting spells, ranged attacks, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise.
+\textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include any actions that require concentration, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise. This can be triggered only at the declaration of a concentration action.
 
 \textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. On a hit, spend an additional +2AP and +1STA on top of the normal attack cost to get damage bonus of +1.5x STR x DM and trigger a trample.
 
@@ -312,7 +314,7 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Intercept:} uses 3 AP to intercept the blow. It requires the defender to be in short range and can be done with anything that has the DEF property. On a graze, interrupts the attack unless the attacker has 5 force higher than the defender. On a miss, interrupt it if the attacker has less than 8 force more than the defender. An intercept that stops the attack can start a grapple if the defender chooses and has an attack with grapple property available.
 
-\textbf{Protect:} It is possible to defend an ally by staying within one space distance of the line between attacker and target. The defender can block or intercept an attack directed at an ally.}
+\textbf{Protect:} It is possible to defend an ally by staying closer to the attacker than the attacker is from the target. The defender can block or intercept an attack directed at an ally. Intercept is allowed anywhere in short range.}
 
 %----------------------- Grapple
 
@@ -361,7 +363,7 @@ Use the same rules for multiple characters as grapple, but use force instead of 
 
 \section{Ranged Combat}
 
-\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects.
+\skill{Accuracy}{ Ranged Combat }{ Accuracy consists of a throw or shot directed at a target using the Accuracy skill test in ranged combat against the opponent's reflexes or their SD, should they choose not to react to the attack. The cost in AP depends on the weapon used and the type of attack performed. Grazes deal 50\% damage and misses do nothing. Hits deal full damage, and any extra points over a hit can be used to cause additional effects. Ranged attacks require concentration.
 
 \textbf{Distance penalty:} There is a penalty of -2 per 20m of distance to the target in grid combat. Everything under 10m has no penalty. Maximum distance penalty is 3x the attacks's distance penalty.
 
@@ -423,7 +425,7 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 \textbf{Flee:} It is possible to activate the movement surge as a reaction to prevent them from entering a 4m perimeter from the character, or after receiving a melee attack. This reaction interrupts the opponents turn, which is resumed after the flee. The flee action can only use actions allowed by movement surge. Everyone that declared that they want to flee do it in declaration order.
 
-\textbf{Follow:} A character can, as a reaction to any movement except running, follow another character who is already within melee range. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it.
+\textbf{Follow:} A character can mark a target that is in mellee range to follow them as a reaction to any movement except running. The action must be performed simultaneously with the triggering movement and cannot cost more AP than it. It is only possible to mark one target at a time.
 
 \textbf{Flanking:} when more than one character is within melee range, any attack against one of the surrounding characters triggers an attack of opportunity from the others, provided that they cannot be fit within a semi-circle centered on the triggering attack's target. Each opportunity attack is resolved in order defined by the flankers and can be voided if the target gets out of range. Opportunity attacks do not trigger other opportunity attacks.
 
