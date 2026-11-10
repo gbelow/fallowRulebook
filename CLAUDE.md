@@ -22,6 +22,12 @@ The system is designed to be played with or without magic.
 - `monsters.tex` — list of NPCs to throw into the game. Currently very limited and provisory.
 - `thinking.tex` — just a scratchpad. Not a part of the book. Disregard.
 
+## Companion app (read-only)
+
+`C:\Users\Administrator\code\chargenfallow` is a Next.js app that implements every rule of this system and is the curated source of the catalogs (items, abilities, spells, etc.) from now on. The rules live in `app/domain/` (pure TypeScript; `rules/` folders cite `.tex` lines, `tables.ts` holds rule tables, catalogs in `abilities.ts`, `spells.ts`, `item/`, etc.). Its own `CLAUDE.md` and `instructions/` describe the layout.
+
+**Read only.** Never edit, write, or run commands that modify anything in that directory (no git, pnpm, or build commands that write). Its purpose here is to keep the book and the app in sync and to inform design opinions: when analysing or reviewing a mechanic, check how the app implements it, since the code shows the real procedure, its bookkeeping, and the cases the text leaves open. When the app and the `.tex` disagree, flag the discrepancy rather than resolving it.
+
 ## Cross-cutting mechanics to know
 
 **Skill test resolution is universal, but lives in `play.tex`.** The core mechanic — skill test = d10 + skill value vs a difficulty level (DL), with degrees of success (critical ≥ +10, hit ≥ +5, graze ≥ +0, else failure), the exploding die, and safe/risky tests — is defined once in `play.tex` ("How skills work") but applies to every chapter: combat, intrigue, survival, and spellcasting all build on it. When a question touches skill tests, start there, not in the chapter that triggered the question. (The master skill list and value formulas, by contrast, live in `creating.tex`.)

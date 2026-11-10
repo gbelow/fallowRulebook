@@ -97,8 +97,8 @@ usage=passive, cost={6 XP, DEX 2|4|6}, requirements=Archer,
 effect={I. Reduces distance penalty of quick shots to -2. II. Reduces distance penalty of normal shots to -1. III. Reduces AP cost of quick shots by 1.}}
 
 \abil{Crossbow and Shield}{%
-usage=passive, cost={4 XP, DEX 2},
-effect={Allows the character to be in cover with a body shield while reloading a crossbow or arbalest.}}
+usage={1 Standard action}, cost={4 XP, DEX 2},
+effect={Allows the character to be in cover with a body shield while reloading a crossbow or arbalest. The shield is planted like a cover against everything in a 180 degree arc. Taking the shield back costs 1 standard action too.}}
 
 \abil{Steady Arms}{%
 usage=passive, cost={6 XP, DEX 3},
@@ -110,19 +110,19 @@ effect={Provides a strength bonus of +1|2 to meet the strength requirement of bo
 
 \abil{Archer's Reflexes}{%
 usage=passive, cost={6 XP, DEX 3}, requirements=Quick Shooter I,
-effect={Allows for a quick shot at any visible target in range as a reaction to any action of the target that triggers an opportunity attack and the shooter has perceived.}}
+effect={Allows for a quick shot at any visible target in range as a reaction to any action of the target that triggers an opportunity attack and the shooter has perceived, as long as the shooter has used focus surge that round.}}
 
-\abil{Precise Reflexes}{%
-usage={reaction, 1 AP}, cost={6 XP, DEX 4},
-effect={If the character uses reflexes without moving, reflexes only cost 1 AP.}}
+% \abil{Precise Reflexes}{%
+% usage={reaction, 1 AP}, cost={6 XP, DEX 4},
+% effect={When using reflexes against projectiles, the character can choose to use reflexes spending 1 AP, but getting -2 to the defense and losing the right to move.}}
 
 \abil{Quick Reload I|II}{%
 usage=passive, cost={6 XP, DEX 2|4},
 effect={Reloads weapons 1|2 AP faster.}}
 
 \abil{Jump Shot}{%
-usage=attack + 1 STA, cost={6 XP, DEX 4},
-effect={Spends 1 extra STA to jump backward and perform a quick shot or throw, avoiding opportunity attacks if the jump takes them out of range.}}
+usage=attack +1AP + 1 STA, cost={6 XP, DEX 4},
+effect={Spends 1 extra AP and 1 STA to jump backward and perform a quick shot or throw, avoiding opportunity attacks if the jump takes them out of range.}}
 
 \abil{Tactical Movement}{%
 usage=passive, cost={6 XP, DEX 2},
@@ -147,7 +147,7 @@ effect={After an intercept that stops the attack, the character can perform a di
 
 \abil{Grappling Combat}{%
 usage=passive, cost={6 XP, DEX 3},
-effect={Grants attacks for grappling that cost 4AP+1STA and inflict wounds directly, without IL damage. Spending 5 HOP after a hit allows choosing one special effect: Suffocate the enemy, cause broken hand, and broken leg. Broken limbs take 10 IL to heal. Hits can immobilize both characters if the attacker so chooses.}}
+effect={Grants attacks for grappling that cost 4AP+1STA and inflict wounds directly, without IL damage. Spending 5 HOP after a hit allows choosing one special effect: Suffocate the enemy, cause broken hand, and broken leg. Broken limbs take 10 IL to heal. Suffocating is an immobilization that also suffocates Hits can immobilize both characters if the attacker so chooses.}}
 
 \abil{Counterattack}{%
 usage={reaction, attack}, cost={6 XP, DEX 2},
@@ -175,11 +175,11 @@ effect={Sweeping attacks with two-handed weapons can cover up to 360 degrees.}}
 
 \abil{Charge}{%
 usage=passive, cost={6 XP, DEX 1},
-effect={Learns to perform one attack with the APs from a movement surge.}}
+effect={Learns to perform one attack with the APs from a movement surge, and loses the rest of the AP from the surge, if there is any.}}
 
 \abil{Tackle}{%
 usage=4 AP + 1 STA, cost={6 XP, DEX 1},
-effect={Learns to initiate a grapple and perform a trample or knockdown in the same action.}}
+effect={Learns to initiate a grapple and perform a knockdown in the same action.}}
 
 \abil{Jousting I|II}{%
 usage=passive, cost={6 XP, DEX 2|4}, requirements=Riding I,
@@ -197,9 +197,9 @@ effect={Combat surge gives +1|2 AP.}}
 usage=passive, cost={6 XP, DEX 2},
 effect={Allows you to jump for 1 STA while using an attack as an action and attack from the final position. This movement triggers opportunity attacks and braced attacks normally.}}
 
-\abil{Shield Wall}{%
-usage=passive, cost={6 XP, DEX 1},
-effect={Gains +2 to block if holding a shield and adjacent to another character with a shield.}}
+% \abil{Shield Wall}{%
+% usage=passive, cost={6 XP, DEX 1},
+% effect={Gains +2 to block if holding a shield and adjacent to another character with a shield.}}
 
 \abil{Pikeman}{%
 usage=passive, cost={6 XP, DEX 3},
@@ -207,11 +207,11 @@ effect={Reduces the AP cost of using braced attack as a reaction by 1 AP.}}
 
 \abil{Precise Evasion}{%
 usage={reaction, 1 AP}, cost={6 XP, DEX 4},
-effect={Learns to use evade with 1 AP, but takes -3 to defend in doing so. If the opponent grazes or misses, an opportunity attack is triggered.}}
+effect={Learns to use evade with 1 AP, but takes -3 to defend in doing so.}}
 
 \abil{Riposte}{%
 usage={reaction, attack}, cost={8 XP, DEX 2},
-effect={After defending a melee attack that misses or grazes, the character can make an attack with a +2 bonus to hit immediately after, if in range. The attack costs 1 AP less than the normal attack if made with an object different from the one used for defense. Riposte does not trigger opportunity attacks.}}
+effect={After defending a melee attack that misses or grazes, the character can make an attack with a +2 bonus to hit immediately after, if in range. The attack costs 1 AP less than the normal attack if made with an object different from the one used for defense. Riposte works like an opportunity attack.}}
 
 
 \section{SPI}
@@ -223,6 +223,7 @@ They believe that the universe is chaos and that those who do not adapt should b
 
 \textbf{Promoted Attitudes:} Learns to take any test in a risky manner. Gains 1XP each time they roll an 8 or a 9 on a risky test. \\
 \textbf{Prohibited Attitudes:} Loses 1 XP each time they fail or graze on a test that is not risky. \\
+
 \abil{Adaptive Learning}{%
 usage=passive, cost=0 XP, requirements=Adaptation 1,
 effect={Can use adaptation XP as any type of XP considering the character's talent +1. When doing this, the XP also increases the progress of Adaptation.}}
@@ -234,6 +235,7 @@ effect={Can use adaptation XP as any type of XP considering the character's tale
  
  \textbf{Promoted Attitudes:} Gains 1 XP each time a social action or the effect of affliction or compulsion hits or crits. At most, once per turn.
 \textbf{Prohibited Attitudes:} Loses 1 XP each time a social action, mental affliction or compulsion grazes by or fails. At most, once per turn.
+
 \abil{Silver Tongue}{%
 usage=passive, cost=0 XP, requirements=Domination 1,
 effect={Receives +1 in Deception and Persuasion.}}
@@ -254,7 +256,7 @@ effect={Gets +1 to all tests against characters affected by any mind altering st
 \textbf{Worldview - Order - Introspective }
 
 \textbf{Promoted Attitudes:} Gains 1 XP each time a prepared action crits.
-\textbf{Prohibited Attitudes:} Loses 1 XP each turn that they do not prepare any action.
+\textbf{Prohibited Attitudes:} Loses 1 XP each turn that they do not prepare any action, except when concentrating.
 \abil{Deliberate I|II}{%
 usage=passive, cost=0 XP, requirements=Stoicism 1|3,
 effect={Prepared actions gain +1|2 on the test of the prepared action.}}
@@ -285,12 +287,12 @@ They believe that life is simple and people overcomplicate things. They brave ev
 \abil{Iron Will I|II}{%
 usage=passive, cost=0 XP, requirements=Fatalism 1|3,
 effect={Receives +1|2 in Will. }}
-\abil{Quick Resolve}{%
+\abil{Fateful}{%
 usage=passive, cost=0 XP, requirements=Fatalism 1,
-effect={.}}
+effect={The character can spend 1 AP to reroll a will test once. The reroll must be taken.}}
 \abil{Unwearied I|II}{%
 usage=passive, cost=0 XP, requirements=Fatalism 2|4,
-effect={I. The character ignores the effect of tiredness. II. Ignores the effect of exhaustion.}}
+effect={I. The character ignores the effect of tiredness. II. Ignores the effect of exhausted.}}
 \abil{Grace Under Pressure}{%
 usage=passive, cost=0 XP, requirements=Fatalism 3,
 effect={The character gains +1 to all skills in any turn when the morale test aggravating factors are equal or higher than 5.}}
@@ -304,45 +306,54 @@ effect={The character has no limit stress action.}}
 
 They understand that everything can be resolved with more strength. 
 
-\textbf{Promoted Attitudes:} Receives 1 XP every time they are enraged, used combat surge and ended their turn with 0 AP.
-\textbf{ Prohibited Attitudes:} Loses 3 XP for surrendering or fleeing from an ongoing combat. Loses 1 XP for each turn that ends in fear.
-\abil{Fury}{%
+\textbf{Promoted Attitudes:} Receives 1 XP every time they are enraged and used combat surge.
+\textbf{ Prohibited Attitudes:} Loses 1 XP for any round that they are enraged and did not use combat surge.
+
+\abil{Hype up}{%
 usage=passive, cost=0 XP, requirements=Ferocity 1,
-effect={The mental penalty of rage is removed. Every time the character uses combat surge while enraged, intimidation uses the character's ferocity level instead of charisma.}}
-\abil{Voluntary Rage}{%
+effect={ The character can enrage themselves on a hit or crit in a morale test.}}
+
+\abil{Brutality}{%
+usage=passive, cost=0 XP, requirements=Ferocity 1,
+effect={ The character can use intimidation with combat surge while enraged, using the character's ferocity level instead of charisma.}}
+
+\abil{Furious}{%
 usage=passive, cost=0 XP, requirements=Ferocity 2,
-effect={Learns to enter a rage voluntarily with a morale test DL 5 at the beginning of a round. If the character is afraid, the DL is the same as what caused their fear.}}
-\abil{Unstoppable I|II}{%
-usage=passive, cost=0 XP, requirements=Ferocity 3|5,
-effect={I. The character cannot be interrupted by receiving tier 2 injuries while in rage. II. They are also not interrupted by receiving tier 3 injuries. Does not fall unconscious from IL.}}
+effect={ The character becomes enraged when they graze on a morale test, and only calm down on a crit.}}
+
 \abil{Rage Endurance}{%
-usage=passive, cost=0 XP, requirements=Ferocity 4,
-effect={The character ignores the effect of exhaustion and sickness during rage.}}
+usage=passive, cost=0 XP, requirements=Ferocity 3,
+effect={The character ignores the effect of exhaustion and sickness during rage. They also lose the mental penalties when enraged.}}
+
 \abil{\magic Spirit of Battle}{%
 usage=passive, cost=0 XP, requirements=Ferocity 4,
-effect={The character learns spiritual strike and martial spirit. Add +2 to the DL of spiritual strike. }}
+effect={The character learns spiritual strike and martial spirit. Add +2 to the DL of spiritual strike while enraged. }}
+
+\abil{Unstoppable}{%
+usage=passive, cost=0 XP, requirements=Ferocity 5,
+effect={ Does not become immobilized by shock nor by IL while enraged.}}
 
 \subsection{Guardian }
 \textbf{Temperament - Order - Extrospective }
 
-They believe that what exists should not be destroyed without reason.
+They protect their allies and are willing to sacrifice themselves for them. They are are compelled to preserve all that is important to them.
 
 \textbf{Promoted Attitudes:} Gains 1 XP each time they use their protection surge.  
-\textbf{Prohibited Attitudes:} Loses 2 XP whenever whoever they are protecting takes direct damage.
+\textbf{Prohibited Attitudes:} Loses 1 XP whenever they refuse to use their protection surge and an ally takes tier 2 damage or higher.
 
 % Minala
 \abil{Protection Surge}{%
 usage=passive, cost=0 XP, requirements=Guardian 0,
-effect={When they realize that an ally within 10m has been attacked, they can make a protection surge. This is just a surge that allows running to reposition immediately to assist the ally. It works like a compulsion, which interrupts the attacker's turn momentarily. The character's actions must necessarily heal the ally or be reactions to defend it.}}
+effect={When they realize that an ally within 10m has been attacked, they can make a protection surge. This is a reaction surge that allows repositioning immediately to assist the ally. It works like a compulsion, which interrupts the attacker's turn momentarily. The character's actions must necessarily be reactions to defend it.}}
 \abil{Bulwark I|II}{%
-usage=passive, cost=0 XP, requirements=Guardian 2|4,
-effect={Gains +1|2 to defend and reflex when making the protection surge to protect someone else. \magic Also gains +1|2 in sorcery for any healing action.}}
+usage=passive, cost=0 XP, requirements=Guardian 1|3,
+effect={Gains +1|2 to defend and reflex when making the protection surge to protect someone else.}}
 \abil{Rallying Guard}{%
-usage=passive, cost=0 XP, requirements=Guardian 3,
+usage=passive, cost=0 XP, requirements=Guardian 4,
 effect={Using protection surge automatically makes a rally.}}
 \abil{Guardian's Vigor I|II}{%
-usage=passive, cost=0 XP, requirements=Guardian 3|5,
-effect={Gain 1|2 AP extra when they use protection surge.}}
+usage=passive, cost=0 XP, requirements=Guardian 2|5,
+effect={Gain 1|2 AP extra when they use protection surge. II. The character can reposition themselves a second time during the round after using protection surge.}}
 
 
 \subsection{Hedonism}
@@ -696,9 +707,9 @@ Abilities in this section are part of the magic system ($\star$), except where a
 usage=passive, cost={10 XP, INT 1}, requirements=Literacy,
 effect={Allows learning and casting spells like a wizard. Learns two spells for which the character has knowledge. The descriptions are in the sorcery chapter.}}
 
-\abil{\magic Battle Mage I|II|III}{%
-usage=passive, cost={6 XP, INT 1|3|5},
-effect={I. Allows the caster to use careful movement while concentrating, repurposing the same action points used for the spell. II. The character can defend actively while concentrating, with AP costs paid separately. III. When interrupted, instead of losing the spell, redo the spellcasting test with a penalty of -3 and choose the worst result between the original and this one.}}
+\abil{\magic Battle Mage I|II}{%
+usage=passive, cost={6 XP, INT 1|3},
+effect={I. Quickening a spell increases DL only by 2. II. The character can defend actively while concentrating, with AP costs paid separately.}}
 
 \subsubsection{\magic Alchemy}
 %Combustão

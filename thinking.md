@@ -25,18 +25,19 @@ review devotion abilities
 
 breaking armor too weak?
 
-# stealth
+Must write the end of round phase
+1. social/concentration actions + gain AP
+2. Bleed
+3. environmental effects
+4. reinforcements
+5. morale
+6. limit actions
+7. chase start
 
-who knows where hidden characters are? -- only active sense
+## combat tweaks
+- blunt weapons need an advantage that is not damage = extra HOPs
+- bows need to penetrate more frequently, but not hit more frequently = extra HOPs
 
-noisy gear needs value
-
-
-# CHANGE IN THE APP
-
-afraid, confused, enraged.  - confused stacks with exhausted
-
-update changed abilities
 
 
 # product workflow - how to turn this into a game
