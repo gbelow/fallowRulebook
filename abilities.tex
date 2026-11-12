@@ -233,24 +233,26 @@ effect={Can use adaptation XP as any type of XP considering the character's tale
  
  They believe that most people are mediocre and incapable of acting in their own benefit. This justifies their control over others.
  
- \textbf{Promoted Attitudes:} Gains 1 XP each time a social action or the effect of affliction or compulsion hits or crits. At most, once per turn.
-\textbf{Prohibited Attitudes:} Loses 1 XP each time a social action, mental affliction or compulsion grazes by or fails. At most, once per turn.
+ \textbf{Promoted Attitudes:} Gains 1 XP each time an enemy triggers their limit stress action from a morale test the character weighed on with a social action, or from the character's spell. \\
+\textbf{Prohibited Attitudes:} Loses 1 XP each round that they finish afraid, confused or dominated.
 
 \abil{Silver Tongue}{%
 usage=passive, cost=0 XP, requirements=Domination 1,
-effect={Receives +1 in Deception and Persuasion.}}
+effect={ The character can learn charisma, insight, persuasion and deception with conviction XP. The XP also increases the progress of Domination.}}
 \abil{Overrule}{%
 usage=passive, cost=0 XP, requirements=Domination 2,
-effect={Can spend 2 AP as a reaction to another character's limit stress action to give them orders, substituting the target's limit stress action on a hit or crit in a persuasion vs morale DL that caused the limit stress action. \magic This cannot be used to stop magical effects.}}
+effect={Can spend 2 AP as a reaction to another character's limit stress action to give them orders, substituting the target's limit stress action on a hit or crit in a persuasion or deception vs will test. \magic This cannot be used to stop magical effects.}}
 \abil{Mockery}{%
 usage=passive, cost=0 XP, requirements=Domination 3,
-effect={Any time you crit in any action against someone in combat or when they miss in one, you can mock them at the same time for 1 extra AP, which works as provocation and gets +2 to the provocation test.}}
-\abil{\magic Backlash}{%
-usage=passive, cost=0 XP, requirements=Domination 4,
-effect={Whenever an opponent uses suggestion or command and get a miss, they lose 2 AP.}}
+effect={Any time you crit in any action against someone in combat or when they miss in one, you can mock them at the same time for 2 extra AP, which works as taunt and gets +1 to the provocation test.}}
+
 \abil{Exploit Weakness}{%
-usage=passive, cost=0 XP, requirements=Domination 5,
+usage=passive, cost=0 XP, requirements=Domination 4,
 effect={Gets +1 to all tests against characters affected by any mind altering status effects. \magic Also increases the DL of any spells used against such characters.}}
+
+\abil{Subjugate}{%
+usage=passive, cost=0 XP, requirements=Domination 5,
+effect={ Costs 3 AP to do the same as overrule, but give a command that leaves them dominated. }}
 
 \subsection{ Stoicism }
 \textbf{Worldview - Order - Introspective }
@@ -361,69 +363,70 @@ effect={Gain 1|2 AP extra when they use protection surge. II. The character can 
 
 They believe that life is meant to pursue good things and pleasure. They learn to seek happiness in all things and to enjoy them in the best way possible, without letting them destroy them. 
 
-\textbf{Promoted Attitudes:} Enjoying their vices.  
-\textbf{Prohibited Attitudes:} None.
+\textbf{Promoted Attitudes:} The character can perform celebrate and another downtime activity at the same time. Gains 1 XP each time they celebrate.
+\textbf{Prohibited Attitudes:} Loses 1 XP each time they spend 10 days of downtime without celebrating, when they could be.
 
 %Hedonism
-\abil{Self-Control I|II|III}{%
-usage=passive, cost=0 XP, requirements=Hedonism 1|3|5,
-effect={The character has +1|2|3 to will in any test that forces them to deny a vice.}}
-\abil{Tolerance I|II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2|4,
-effect={I. The mental penalty for being intoxicated decreases by 1|2. II. The character ignores the effect of tired and exhausted when intoxicated.}}
-\abil{Showman I|II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2|4,
-effect={Gains +1|2 to the persuasion test if they have the vice "center of attention."}}
-\abil{Light Fingers I|II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2|4,
-effect={Receives +1|2 for prestidigitation if they have the vice "Kleptomaniac."}}
-\abil{Seducer I|II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2|4,
-effect={Receives +1|2 for seduction tests if they have the vice "Nymphomaniac."}}
-\abil{Sharp Tongue I|II}{%
-usage=passive, cost=0 XP, requirements=Hedonism 2|4,
-effect={Receives +1|2 to charisma when taunting.}}
-\abil{Reveler}{%
-usage=passive, cost=0 XP, requirements=Hedonism 3,
-effect={Gains +2 bonus to celebrate.}}
-\abil{Rallying Taunt}{%
-usage=passive, cost=0 XP, requirements=Hedonism 3,
+
+\abil{Excitement}{%
+usage=passive, cost=0 XP, requirements=Hedonism 2,
+effect={+1 Hedonism XP for every specific knowledge level gained and spell learned from a grimoire.}}
+
+\abil{Sharp Tongue}{%
+usage=passive, cost=0 XP, requirements=Hedonism 4,
 effect={Also rallies their team when they taunt an enemy.}}
-% \abil{Lucky Streak}{%
-% usage=passive, cost=0 XP, requirements=Hedonism 3,
-% effect={Gains the ability to roll exploded die twice and pick the most extreme option.}}
-\abil{Bookworm}{%
-usage=passive, cost=0 XP, requirements=Hedonism 3,
-effect={+1 XP for each book read. Learning a spell from the grimoire counts as a book.}}
+
+\abil{Reveler I|II|III}{%
+usage=passive, cost=0 XP, requirements=Hedonism 1|3|5,
+effect={Gains +1/2/3 bonus to celebrate.}}
+
 
 \subsection{ Providentialism}
 \textbf{Worldview - Order - Extrospective }
 
-They believe and find comfort in the belief in a good universal order. If everyone acted correctly, according to the order, everything would work well.
+They believe and find comfort in a good universal order. If everyone acted correctly, everything would work well.
 
 \textbf{Promoted Attitudes:} Follow the moral code described in the providentialism abilities.  
-\textbf{Prohibited Attitudes:} The character loses 2 XP each time they lie. Loses 3 XP for allowing a creature with INT greater than or equal to 5 to be killed without granting the right to a trial. Self-defense or protection of the innocent does not count. Loses 6 XP if they unjustly kill with their own hands.
-\abil{Right to Trial}{%
+\textbf{Prohibited Attitudes:} Fail to follow the moral code described in the providentialism abilities.
+\abil{Justice}{%
+usage=passive, cost=0 XP, requirements=Providentialism 0,
+effect={Whenever a creature surrenders, they must grant it the right to a trial. Gains 2 XP at the end of a combat where everyone that surrendered survives. Loses 4 XP if they attack someone who has surrendered. Loses 1 XP if anyone else on the team attacks someone who has surrendered.}}
+
+\abil{Duty}{%
+usage=passive, cost=0 XP, requirements=Providentialism 0,
+effect={ The character gains XP equal to the karma gained from a mission when a mission is completed. If the mission fails, they lose 3 XP.}}
+
+% \abil{Honesty}{%
+% usage=passive, cost=0 XP, requirements=Providentialism 1,
+% effect={Whenever the character or someone on their team is lying, If they do not lie, regardless of passing the test, they gain 1 XP.}}
+
+% \abil{Steady Purpose}{%
+% usage=passive, cost=0 XP, requirements=Providentialism 2,
+% effect={Gains the ability to make any test safely and preferring numbers closer to 6 instead of 5 if the test is in line to complete a promise.}}
+
+% \abil{Judge}{%
+% usage=passive, cost=0 XP, requirements=Providentialism 3,
+% effect={Gains +2 in social actions whenever judging surrendered opponents. \magic Also gains +2 to mind altering spells against them.}}
+
+\abil{Leadership}{%
 usage=passive, cost=0 XP, requirements=Providentialism 1,
-effect={Whenever they are about to kill a creature considered intelligent, they must grant it the right to a trial. If it truly agrees to follow the moral code, the character is prohibited from killing it, mutilating it, putting it in life-threatening situations, or allowing others to do so. Gains 2 XP each time they spare someone or a group of people.}}
-\abil{Keeper of Promises}{%
-usage=passive, cost=0 XP, requirements=Providentialism 1,
-effect={Whenever they make a relevant promise and manage to fulfill it, they gain at least 1 XP. They can earn more for larger promises.}}
-\abil{Honesty}{%
-usage=passive, cost=0 XP, requirements=Providentialism 1,
-effect={Whenever the character or someone on their team is lying, make a Will test DL 5. If they succeed or crit, they must rectify the lie (this does not mean they are obliged to expose the truth). If they do not lie, regardless of passing the test, they gain 1 XP.}}
-\abil{Steady Purpose}{%
+effect={ The character gains +1 to all skills in a round when they rallied their team. Can rally after an ally triggered their limit stress action in the morale phase.}}
+
+\abil{Against the Odds}{%
 usage=passive, cost=0 XP, requirements=Providentialism 2,
-effect={Gains the ability to make any test safely and preferring numbers closer to 6 instead of 5 if the test is in line to complete a promise.}}
-\abil{Judge}{%
+effect={ Gains +1 AP in any round an opponent uses intimidation.}}
+
+\abil{Inspiring Deed}{%
 usage=passive, cost=0 XP, requirements=Providentialism 3,
-effect={Gains +2 in social actions whenever judging surrendered opponents. \magic Also gains +2 to mind altering spells against them.}}
-\abil{Inspiring Rally}{%
+effect={ Rallies their team any time they roll a 9 on the dice.}}
+
+\abil{Mercy}{%
 usage=passive, cost=0 XP, requirements=Providentialism 4,
-effect={Rally adds the full +Charisma to the next morale test of the team.}}
-\abil{Undaunted Oath}{%
+effect={ Enemies that trigger their limit stress action after being intimidated by the character are compelled to surrender until the end of the round.}}
+
+\abil{Oathbound}{%
 usage=passive, cost=0 XP, requirements=Providentialism 5,
-effect={When the character is trying to fulfill a promise and receives a wound, they can immediately perform an action surge, even if they have no STA.}}
+effect={ Gains +1 bonus to Charisma. A hit or crit in the morale test prevents the character from being immobile by shock or IL that round.}}
 
 % end -----------------------------------------------------------------------
 
@@ -458,51 +461,51 @@ effect={Gains the deity's divine intervention.}}
 usage=passive, cost=0 XP, requirements=Devotion 5,
 effect={A state that can use all the deity's abilities and spells with the deity's skill level. This works like a possession. The character is incapable of acting against the deity's principles and may have its actions vetoed by the GM.}}
 
-\subsection{Vices and Traumas}
+% \subsection{Vices and Traumas}
 
-\textbf{How to acquire:} the character can take a vice voluntarily and gain 6 karma  at character creation. When players fail a mission or something very bad happens, the GM may allow players to get the karma reward as long as they take on a vice.
+% \textbf{How to acquire:} the character can take a vice voluntarily and gain 6 karma  at character creation. When players fail a mission or something very bad happens, the GM may allow players to get the karma reward as long as they take on a vice.
 
-It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So vices are like shortcuts or borrowed advancement.
+% It is possible to have a maximum of 4 vices. Overcoming vices costs 6 karma. So vices are like shortcuts or borrowed advancement.
 
-\subsubsection{Vices}
+% \subsubsection{Vices}
 
-\abil{Alcoholic}{%
-usage=passive, cost=-6 Karma,
-effect={Penalty of -3 for morale tests if not intoxicated, bonus of +1 if intoxicated. Gains 1/2/3 Hedonism XP for entering combat while Intoxicated I/II/III, respectively.}}
+% \abil{Alcoholic}{%
+% usage=passive, cost=-6 Karma,
+% effect={Penalty of -3 for morale tests if not intoxicated, bonus of +1 if intoxicated. Gains 1/2/3 Hedonism XP for entering combat while Intoxicated I/II/III, respectively.}}
 
-\abil{Center of Attention}{%
-usage=passive, cost=-6 Karma,
-effect={+1 Hedonism XP for each time successfully distracting or provoking someone and -1 if failing.}}
+% \abil{Center of Attention}{%
+% usage=passive, cost=-6 Karma,
+% effect={+1 Hedonism XP for each time successfully distracting or provoking someone and -1 if failing.}}
 
-\abil{Kleptomaniac}{%
-usage=passive, cost=-6 Karma,
-effect={May be compelled to steal something. Must make a will test with a difficulty of 5 to avoid being compelled. Loses 1 XP if not stealing and gains 1 Hedonism XP if attempting to steal.}}
+% \abil{Kleptomaniac}{%
+% usage=passive, cost=-6 Karma,
+% effect={May be compelled to steal something. Must make a will test with a difficulty of 5 to avoid being compelled. Loses 1 XP if not stealing and gains 1 Hedonism XP if attempting to steal.}}
 
-\abil{Nymphomaniac}{%
-usage=passive, cost=-6 Karma,
-effect={Receives -3 to resist seduction tests. Gains 1 Hedonism XP each time they successfully seduce someone, but loses 1 XP whenever they fail.}}
+% \abil{Nymphomaniac}{%
+% usage=passive, cost=-6 Karma,
+% effect={Receives -3 to resist seduction tests. Gains 1 Hedonism XP each time they successfully seduce someone, but loses 1 XP whenever they fail.}}
 
-\abil{Glutton}{%
-usage=passive, cost=-6 Karma,
-effect={Receives -3 mental if suffering any distress from hunger.}}
+% \abil{Glutton}{%
+% usage=passive, cost=-6 Karma,
+% effect={Receives -3 mental if suffering any distress from hunger.}}
 
-\subsubsection{Traumas}
+% \subsubsection{Traumas}
 
-\abil{Explosive}{%
-usage=passive, cost=-6 Karma,
-effect={Receives -3 on any test to resist becoming angry or to calm down when already furious.}}
+% \abil{Explosive}{%
+% usage=passive, cost=-6 Karma,
+% effect={Receives -3 on any test to resist becoming angry or to calm down when already furious.}}
 
-\abil{Phobia}{%
-usage=passive, cost=-6 Karma,
-effect={Choose the object of the phobia. Has a morale penalty when in the presence of the phobia's object. Gains 1 Ferocity XP if incapacitating the target of fear.}}
+% \abil{Phobia}{%
+% usage=passive, cost=-6 Karma,
+% effect={Choose the object of the phobia. Has a morale penalty when in the presence of the phobia's object. Gains 1 Ferocity XP if incapacitating the target of fear.}}
 
-\abil{Fear of Heights}{%
-usage=passive, cost=-6 Karma,
-effect={Receives -5 for morale tests when in high places, with a risk of falling.}}
+% \abil{Fear of Heights}{%
+% usage=passive, cost=-6 Karma,
+% effect={Receives -5 for morale tests when in high places, with a risk of falling.}}
 
-\abil{Insomnia}{%
-usage=passive, cost=-6 Karma,
-effect={Receives -2 to health when trying to rest, but gains +2 to detection while unconscious.}}
+% \abil{Insomnia}{%
+% usage=passive, cost=-6 Karma,
+% effect={Receives -2 to health when trying to rest, but gains +2 to detection while unconscious.}}
 
 \section{INT}
 
@@ -748,20 +751,20 @@ effect={Taser costs 1 AP.}}
 
 %Animancy
 \abil{Synesthesia I|II|III}{%
-usage={sustained, 1 STA/turn}, cost={6 XP, INT 1|3|5}, range=Animancy meters radius, duration=instantaneous,
-effect={Out of combat, costs 2 exhaustion per ET instead. I. Maintains an energy perimeter that amplifies perception. This character can see invisible things as if they were visible within a sphere around them. The volume of perception is filled as if it were gas. Solid impermeable objects block the radius of synesthesia. II. Doubles the normal radius. III. Triples the normal and increased radius.}}
+usage={sustained, 1 STA/turn or 2 exhaustion/ET}, cost={6 XP, INT 1|3|5}, range=5|10|20 meters, duration=instantaneous,
+effect={Maintains an energy perimeter that amplifies perception, which is a passive sense with no sensory penalty. This character can detect invisible things within a sphere around them. The volume of perception is filled as if it were gas. Solid impermeable objects block the radius of synesthesia.}}
 
 \abil{Blind Combat}{%
 usage=passive, cost={6 XP, INT 3}, requirements=Synesthesia I,
-effect={Uses synesthesia as a high quality active sense. Does not receive any distance penalties and does not receive any penalty for using a closed helmet while synesthesia is active against characters within its range.}}
+effect={Uses synesthesia as an active sense. }}
 
 \abil{Martial Spirit}{%
 usage=1AP + 1 STA, cost={6 XP, INT 3}, requirements=Spiritual Strike,
 effect={Learns to use spiritual strike along with melee attacks without increasing the cost of AP, but with the STA cost added in. The spellcasting result is the same as the strike's.}}
 
 \abil{Counterspell}{%
-usage={reaction, 1 STA}, cost={6 XP, INT 3}, requirements=Spiritual Strike,
-effect={Learns to cast spiritual strike as a reaction against anyone within synesthesia range.}}
+usage={reaction, +1 STA}, cost={6 XP, INT 3}, requirements=Spiritual Strike,
+effect={Learns to cast spiritual strike as a reaction as a quickened spell against anyone within synesthesia range.}}
 
 \abil{Magical Interpretation}{%
 usage=passive, cost={6 XP, INT 3}, requirements=Synesthesia I,
@@ -963,11 +966,11 @@ effect={Modifies the eyes to be able to see infrared light, allowing targeting a
 
 \abil{Owl Eyes}{%
 usage=passive, cost=12 Karma,
-effect={Modifies the eyes to be able to cancel up to 3 points of sensory penalty to vision because of bad lighting.}}
+effect={Modifies the eyes to be able to see well at dim light, but not absolute darkness.}}
 
 \abil{Bat Ears}{%
 usage=passive, cost=12 Karma,
-effect={Modifies the ears to pick up a wide range of frequencies and become more sensitive. Turns ears into an active sense, but take -2 sensory penalty when doing so.}}
+effect={Modifies the ears to pick up a wide range of frequencies and become more sensitive. Reduces sensory penalty from hearing to -2. Hearing becomes an active sense during the character's turn, but has only 20m range.}}
 
 % \abil{Four Legs}{%
 % usage=passive, cost=12 Karma, requirements={racial or ritual, Biomancy 5},
