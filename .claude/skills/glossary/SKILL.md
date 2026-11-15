@@ -60,7 +60,7 @@ app.
 - **Concentration** — carry unspent AP to next round for an expensive action.
 - **Compulsion / severe compulsion** — forced action; severe (self-harming) gives +10 to resist.
 - **Standard action** — 3 AP (scales with Prestidigitation): pick up, draw, interact.
-- **Movement types** — basic, careful, running, jumping, crawling, swimming, trample, mounted.
+- **Movement types** — walk, tread, run, jump, crawl, swim, stand up, trample, ride.
 - **Trample / crash** — moving through an occupied space; Force vs Force.
 - **IL (injury level)** — accumulated damage; -1 penalty per 10. Collapse at 40 (**injury capacity**), death above 50.
 - **Damage tiers T0–T5** — thresholds armor + n × TGH; give IL and bleed.
