@@ -21,10 +21,10 @@
 
 \textbf{Ending a turn:} Once all desired actions have been performed or prepared, a character can end their turn. They can save as many AP as they want to use later in the same round.
 
-\textbf{Action surge:} All characters are entitled to one action surge per round. There are 5 basic types of action surges: movement, combat, reaction and focus.
+\textbf{Action surge:} All characters are entitled to one action surge per round. An action surge can be done at any time during the round. There are 5 basic types of action surges: movement, combat, reaction and focus.
 
 \begin{proplist}
-    \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement, escaping a grapple and reactions immediately. Running costs no STA until the end of the turn. Ending the turn loses the surge AP.
+    \item \textbf{Movement surge:} 3 STA to gain AGI/2 AP that must be used for movement, escaping a grapple and reactions immediately. Running costs no STA until the end of the turn. Ending the turn or the reaction loses the surge AP.
     \item \textbf{Combat surge:} 2 STA to gain 4 AP that must be used for attacks, defenses, reflexes, movement, or any action within a grapple and must be used immediately. Ending the turn loses the surge AP.
     \item \textbf{Reaction surge:} 2 STA to gain 4 AP, but can only use reactions until the end of the round. Can be activated in order to perform a reaction.
     \item \textbf{Focus surge:} Gains no AP, but this surge is required to use actions that require concentration.
@@ -135,7 +135,7 @@ Note: DM is squared because large creatures suffer more from falling. For size 2
 \begin{proplist}
 \item \textbf{Evades:} costs 2 AP to allow free passage, works automatically unless the trample is started by a strike, in which case a hit in the strike causes a crash. This allows 1 AP of walking in any direction that does not coincide with the trampler's.
 \item \textbf{Is prone:} free passage.
-\item \textbf{Crash:} Resolve as a Force vs Force comparison. Whoever is running adds their movement speed to their Force. On force differences lower than 5, both are stunned and the higher force gets to either block passage or pass through. A draw blocks passage. On greater differences, the winner does not get stunned and the loser falls prone if they are the target. The target can spend 2AP+1STA to get +3 in this comparison (automatic from braced attack reaction). A hit to the head adds +3 to the crash. If the attacker ends their movement in the same space as its target and wins, the defender is displaced to an adjacent space, of the attacker's choosing, unless there is none available, then the attacker stops short.
+\item \textbf{Crash:} Resolve as a Force vs Force comparison. Whoever is running adds their movement speed to their Force. On force differences lower than 5, both are interrupted and the higher force gets to either block passage or pass through. A draw blocks passage. On greater differences, the winner does not get interrupted and the loser is stunned and, if they are the target, falls prone too. The target can spend 2AP+1STA to get +3 in this comparison (automatic from braced attack reaction). If the attacker ends their movement in the same space as its target and wins, the defender is displaced to an adjacent space, of the attacker's choosing, unless there is none available, then the attacker stops short.
 \end{proplist}
 
 \textbf{Catch:} It is possible to try to start a grapple against a running target. Spend 3AP+1STA to do the grapple initiating attack and receive the +3 to the crash. If the target is not stopped, only a strike with 5 HOPs or more succeeds in the grapple.
@@ -205,11 +205,11 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
 
 \textbf{Electric damage:} It is also defended by INS. It causes interruptions and stuns. This damage only deals half IL damage per tier.
 
-\subsection{Additional effects:}
+\subsection{Additional effects}
 
 \textbf{Interruption:} receiving a tier 1+ blunt or electric injury causes any action and movement to be interrupted, except for running and jumping. All AP and STA costs of the action or movement that have already been spent are lost. 
 
-\textbf{Stun:} An interruption in which the target also loses 2 AP. It happens when blunt or electric damage causes Tier 3 injury or higher.
+\textbf{Stun:} An interruption in which the target also loses 2 AP. It happens when blunt or electric damage causes Tier 3 injury or higher. Stun instances caused by one action do not stack.
 
 \textbf{Deflection:} is how hard it is to land additional effects on a hit. The natural deflection of a human body is +4. Any time a character is wearing armor, use the armor's deflection instead. 
 
@@ -219,7 +219,7 @@ Tier 5 & armor+5xTGH & 50 & 4 \\
     % \item \textbf{Bypass:} This costs a number of HOP equal to the target's armor deflection and can only be done against rigid armor. It adds the value of 50\% RES or 50\% prot of the target armor to the damage, depending if the attack damage is blunt or cutting. Only attacks from weapons with the precise property can use this effect.
     \item \textbf{Bust:} Costs a number of HOPs equal to the target's deflection to deal full cutting damage against objects with the same hardness. This can only be done by weapons with the penetrating property.
     \item \textbf{Slice:} Costs a number of HOPs equal to the target's deflection to increase cutting damage by 25\%. Weapons with the bladed property get the full bonus damage, while others get only half. This can be bought multiple times.
-    \item \textbf{Smash:} Increases blunt damage by 1xDM per HOP.
+    \item \textbf{Smash:} Increases blunt damage by 1xDM per HOP if the weapon has the smasher property and half as much if it doesn't.
 \end{proplist}
 
 \textbf{Damage absorption:} is when the same physical attack instance hits more than one target in a sequence. The damage is reduced after every target according to this rule. The attack's damage is zero if absorption value >= damage, halved if absorption value >= damage/2, and full if absorption value < damage/2. The absorption value is RES of the target if that is an object. For a character, the value equals to T2 damage.
@@ -236,7 +236,7 @@ To illustrate, here are some targets for humanoids. There are 4 locations: chest
     \item \textbf{Chest:} Standard location, no penalty.
     \item \textbf{Hand:} -10 to the attack test. Attacks can switch target to the hand used for defense by spending 3 HOP when the target tries to block or intercept without a shield. Hands have no armor unless the character is wearing gauntlets. Maximum injury tier applied to the body is 2.
     \item \textbf{Leg:} 0 to the attack test. Maximum injury tier applied to the body is 3. 
-    \item \textbf{Head:} -5 to the attack test. Interrupts become stuns, and stuns become unconsciousness that lasts at least 1 minute without intervention. Tier 4 damage causes instant death.
+    \item \textbf{Head:} -5 to the attack test. Interrupts become stuns, and stuns become unconsciousness that lasts at least 1 minute without intervention. Tier 5 damage causes instant death.
 \end{proplist}
 
 Some creatures may have their vulnerable point out of reach of others, requiring long weapons, jumps, and proper positioning to reach. These special cases can be added where the GM deems it makes sense. The ones added here are the most common and most tactically relevant ones.
@@ -313,11 +313,13 @@ Other variations of melee attacks are available depending on the type of weapon 
 
 \textbf{Heavy Attack:} It is possible to make a heavy attack with weapons that have the "heavy" property. Heavy I increases damage of physical attacks by +0.5 x STR xDM, but have an added cost of +1AP. Heavy II adds +1xSTR xDM, costs +2AP+1STA, and gives a -2 penalty to hit. Heavy III adds +1.5 x STR xDM, costs +3AP+1STA, and gives a -3 penalty to hit. Bonus applies to blunt damage and cutting damage.
 
+\textbf{Bash:} costs 1 STA and must be used with any heavy attacks with the basher property. On a hit, a force comparison is made. If the attacker's force is higher, the target is interrupted. If it is higher by 3 or more, the target is stunned. Every 2 points spent on smash adds +1 to the force.
+
 \textbf{Sweeping Attack:} spends 1 additional AP on the attack and hits everything in a semicircle. Decide whether to attack from right to left or vice versa and attack the enemies in that order in a 180-degree arc, following the damage absorption rules and attacking one at a time, each with one strike test. If one character is behind another, only the closest is hit. Sweeping attacks do not hit prone enemies. They do not draw attacks of opportunity from any of its targets. 
 
 \textbf{Opportunity Attack:} A melee weapon attack that can be used as a reaction when an opponent attempts to perform a triggering action. Triggering actions include any actions that require concentration, standard actions, standing up in melee range, and moving towards a melee weapon while within its attack range. The attack occurs before the effect of the triggering action, unless stated otherwise. This can be triggered only at the declaration of a concentration action. An opportunity attack does not permit any reactions except a defense from the target.
 
-\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is moving towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. On a hit, spend an additional +2AP and +1STA on top of the normal attack cost to get damage bonus of +1.5x STR x DM and trigger a trample.
+\textbf{Braced Attack:} A melee attack with a weapon with the braced property that attempts to increase strength by firmly bracing the weapon. It can be used as a reaction when a target is running or jumping towards the weapon or as an action in situations where the attacker is mounted and running. The attack happens when movement is between two spaces within weapon range. On a hit, spend an additional +2AP and +1STA on top of the normal attack cost to get damage bonus of +1.5x STR x DM and trample the target.
 
 \textbf{Hook Attack:} A melee attack using a weapon with hook property that gets extra damage against moving targets. This can be used as an action or as a reaction against running targets that move away from the weapon within two spaces, which are both inside its melee range. On a hit, the character can spend +2 AP +1STA to get +STR/2 x DM damage if the opponent attempts to perform an evasive jump and +STR x DM if they are running. If the attack was aimed at the legs or head, the post hit effect is a knockdown attempt which cannot be reacted against if they are running or jumping.
 
@@ -411,15 +413,15 @@ The damage from explosions is 150\% on a critical, 100\% on a hit, 50\% on a gra
 
 %--------------------- REFLEX
 
-\skill{Reflex}{ Ranged Combat }{ Used to react as quickly as possible to something. This can be used to avoid explosions, projectiles, and other effects that require quick reactions.
+\skill{Reflex}{ Ranged Combat }{ Used to react as quickly as possible to something. This can be used to avoid explosions, projectiles, and other effects that require quick reactions. Using a movement surge gives a +3 bonus to reflexes for that round.
 
-\textbf{Evasion:} When the character is targeted by projectiles, they can spend 3 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they dont't. On a miss, the character does not take the attack and can spend their movement surge immediately to escape or do the same as in the graze. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
+\textbf{Evasion:} When the character is targeted by projectiles, they can spend 3 AP to react. This AP cost is used to move and does not need to be spent again, but any STA cost must be paid. Upon receiving a critical or hit, take the attack normally and then use up to 2 AP to move if not interrupted. On a graze, the character can jump to try to gain cover before being hit and only takes half damage if they dont't. On a miss, the character does not take the attack and they can spend their whole movement surge AP. In the event of coordinated shots, perform the movement according to the test result against the leading shot.
 
 \textbf{Guard:} character spends 2 AP to block ranged attacks against themselves or adjacent characters, as long as they are closer to the projectile source than the adjacent character. Shield Cover is added to guard as a bonus. On graze, use the absorption rules to reduce the damage. On a miss, block value is 50\% increased. Hits and crits damage the character directly.
 
 \textbf{Cover:} When using a body shield, it is possible to take total cover behind the shield after using guard. The cover is canceled if the character performs any action other than treading. 
 
-\textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run once. On a hit, they can jump once in any direction before the explosion occurs. On a graze, they can move 1 AP before the explosion. On a miss, they can move 2 AP after the explosion. It is possible to downgrade the movement action. Movement stamina costs for running and jumping are standard.
+\textbf{Avoiding an Explosion:} Spend 3 AP and make a reflex skill test against the DL of the explosion. On a critical, the character can run once. On a hit, they can jump once in any direction before the explosion occurs. On a graze, they can move 1 AP before the explosion. On a miss, they don't move. It is possible to downgrade the movement action. Movement stamina costs for running and jumping are standard.
 
 \textbf{Explosion Block:} Can only be done with a shield and costs 2 AP. Make an active reflex + shield Cover test against the DL of the explosion. If successful or critical, the explosion damage gets absorbed by the defenses from the shield. For explosions that deal cutting damage, the damage is not doubled and a hit blocks half of the damage instances and crits block all of them.
 }
